@@ -1,0 +1,2 @@
+Material(Normal): Allowable Stress,Brittle Fracture,Heatracement đang có trong UCMaterial nhưng chưa biết để vào form nào.
+		  Allowable Stress Riskwise 6 không lưu trong RW_Material nữa

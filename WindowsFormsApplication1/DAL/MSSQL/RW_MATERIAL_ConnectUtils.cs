@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_MATERIAL_ConnectUtils
     {
-        public void add(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature,float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic,int Temper,int CarbonLowAlloy, int NickelBased,int ChromeMoreEqual12,float AllowableStress,float CostFactor)
+        public void add(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature,float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased, int ChromeMoreEqual12, float AllowableStress, float YieldStrength, float TensileStrength, float CostFactor)
                        
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -40,7 +40,9 @@ namespace RBI.DAL.MSSQL
                            ",[NickelBased]" +
                            ",[ChromeMoreEqual12]" +
                            ",[AllowableStress]" +
-                           ",[CostFactor])"+
+                           ",[YieldStrength]"   +
+                           ",[TensileStrength]" +
+                           ",[CostFactor])" +
                            " VALUES" +
                            "(  '" + ID + "'" +
                             ", '" + MaterialName + "'" +
@@ -62,7 +64,9 @@ namespace RBI.DAL.MSSQL
                          ", '" + CarbonLowAlloy + "'" +
                             ", '" + NickelBased + "'" +
                            ", '" + ChromeMoreEqual12 + "'" +
-                           ", '" + AllowableStress + "'"+
+                           ", '" + AllowableStress + "'" +
+                           ", '" + YieldStrength + "'" +
+                           ", '" + TensileStrength + "'" +
                             ",'"+ CostFactor + "')";
             try
             {
@@ -81,7 +85,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature, float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased,int ChromeMoreEqual12, float AllowableStress, float CostFactor)
+        public void edit(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature, float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased,int ChromeMoreEqual12, float AllowableStress, float YieldStrength, float TensileStrength, float CostFactor)
                         
         {
             {
@@ -110,6 +114,8 @@ namespace RBI.DAL.MSSQL
                               ",[NickelBased]='"+NickelBased+"'"+
                               ",[ChromeMoreEqual12]='"+ ChromeMoreEqual12 +"'"+
                               ",[AllowableStress]='" + AllowableStress + "'" +
+                              ",[YieldStrength]='" + YieldStrength + "'" +
+                              ",[TensileStrength]='" + TensileStrength + "'" +
                               ",[CostFactor]='" + CostFactor + "'" +
                               " WHERE [ID] = '" + ID + "'";
                 try
@@ -216,6 +222,8 @@ namespace RBI.DAL.MSSQL
                         ",[NickelBased]" +
                         ",[ChromeMoreEqual12]" +
                         ",[AllowableStress]" +
+                        ",[YieldStrength]" +
+                        ",[TensileStrength]" +
                         ",[CostFactor]" +
                         "FROM [dbo].[RW_MATERIAL] ";
             try
@@ -287,7 +295,15 @@ namespace RBI.DAL.MSSQL
                             obj.NickelBased = reader.GetInt32(18);
                             obj.ChromeMoreEqual12 = reader.GetInt32(19);
                             obj.AllowableStress = reader.GetFloat(20);
-                            obj.CostFactor = reader.GetFloat(21);
+                            if (!reader.IsDBNull(21))
+                            {
+                                obj.YieldStrength = reader.GetFloat(21);
+                            }
+                            if (!reader.IsDBNull(22))
+                            {
+                                obj.TensileStrength = reader.GetFloat(22);
+                            }
+                            obj.CostFactor = reader.GetFloat(23);
                             list.Add(obj);
                         }
                     }
@@ -330,6 +346,8 @@ namespace RBI.DAL.MSSQL
                         ",[NickelBased]" +
                         ",[ChromeMoreEqual12]" +
                         ",[AllowableStress]" +
+                        ",[YieldStrength]" +
+                        ",[TensileStrength]" +
                         ",[CostFactor]" +
                         "FROM [dbo].[RW_MATERIAL] WHERE [ID] = '" + id + "'";
             try
@@ -400,7 +418,15 @@ namespace RBI.DAL.MSSQL
                             obj.NickelBased = Convert.ToInt32(reader.GetBoolean(18));
                             obj.ChromeMoreEqual12 = Convert.ToInt32(reader.GetBoolean(19));
                             obj.AllowableStress = (float)reader.GetDouble(20);
-                            obj.CostFactor = (float)reader.GetDouble(21);
+                            if (!reader.IsDBNull(21))
+                            {
+                                obj.YieldStrength = (float) reader.GetDouble(21);
+                            }
+                            if (!reader.IsDBNull(22))
+                            {
+                                obj.TensileStrength = (float) reader.GetDouble(22);
+                            }
+                            obj.CostFactor = (float)reader.GetDouble(23);
                         }
                     }
                 }
