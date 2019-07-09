@@ -38,6 +38,7 @@ namespace RBI.PRE.subForm.InputDataForm
             lblDesignPressure.Text = pressureUnit;
             lblCorrosion.Text = corrosionUnit;
             lblGoverningThickness.Text = thicknessUnit;
+
             string tem;
             switch (temperatureUnit)
             {
@@ -52,60 +53,6 @@ namespace RBI.PRE.subForm.InputDataForm
                     break;
             }
             lblMaxDesignTem.Text = lblMinDesignTem.Text = lblRefTem.Text = tem;
-        }
-        public void ShowDatatoControl(int id)
-        {
-            RW_MATERIAL_BUS BUS = new RW_MATERIAL_BUS();
-            RW_MATERIAL obj = BUS.getData(id);
-            txtMaterial.Text = obj.MaterialName;
-            txtDesignPressure.Text = obj.DesignPressure.ToString();
-            txtMaxDesignTemperature.Text = obj.DesignTemperature.ToString();
-            txtMinDesignTemperature.Text = obj.MinDesignTemperature.ToString();
-            txtBrittleFracture.Text = obj.BrittleFractureThickness.ToString();
-            txtCorrosionAllowance.Text = obj.CorrosionAllowance.ToString();
-            txtSigmaPhase.Text = obj.SigmaPhase.ToString();
-            for (int i = 0; i < itemsSulfurContent.Length; i++)
-            {
-                if (obj.SulfurContent == itemsSulfurContent[i])
-                {
-                    cbSulfurContent.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            for (int i = 0; i < itemsHeatTreatment.Length; i++)
-            {
-                if (obj.HeatTreatment == itemsHeatTreatment[i])
-                {
-                    cbHeatTreatment.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            txtReferenceTemperature.Text = obj.ReferenceTemperature.ToString();
-            for (int i = 0; i < itemsPTAMterial.Length; i++)
-            {
-                if (obj.PTAMaterialCode == itemsPTAMterial[i])
-                {
-                    cbPTAMaterialGrade.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            for (int i = 0; i < itemsHTHAMaterial.Length; i++)
-            {
-                if (obj.HTHAMaterialCode == itemsHTHAMaterial[i])
-                {
-                    cbHTHAMaterial.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            chkIsPTASeverity.Checked = Convert.ToBoolean(obj.IsPTA);
-            chkIsHTHASeverity.Checked = Convert.ToBoolean(obj.IsHTHA);
-            chkAusteniticSteel.Checked = Convert.ToBoolean(obj.Austenitic);
-            chkSusceptibleTemper.Checked = Convert.ToBoolean(obj.Temper);
-            chkCarbonLowAlloySteel.Checked = Convert.ToBoolean(obj.CarbonLowAlloy);
-            chkNickelAlloy.Checked = Convert.ToBoolean(obj.NickelBased);
-            chkChromium.Checked = Convert.ToBoolean(obj.ChromeMoreEqual12);
-            txtAllowableStress.Text = obj.AllowableStress.ToString();
-            txtMaterialCostFactor.Text = obj.CostFactor.ToString();
         }
 
         public void ShowDatatoControl(int id, string temperatureUnit, string pressureUnit, string stressUnit, string corrosionUnit, string thicknessUnit)
@@ -239,6 +186,8 @@ namespace RBI.PRE.subForm.InputDataForm
             chkCarbonLowAlloySteel.Checked = Convert.ToBoolean(obj.CarbonLowAlloy);
             chkNickelAlloy.Checked = Convert.ToBoolean(obj.NickelBased);
             chkChromium.Checked = Convert.ToBoolean(obj.ChromeMoreEqual12);
+            txtTensileStrength.Text = obj.TensileStrength.ToString();
+            txtYieldStrength.Text = obj.YieldStrength.ToString();
             txtMaterialCostFactor.Text = obj.CostFactor.ToString();
         }
 
@@ -348,6 +297,8 @@ namespace RBI.PRE.subForm.InputDataForm
             ma.NickelBased = chkNickelAlloy.Checked ? 1 : 0;
             ma.ChromeMoreEqual12 = chkChromium.Checked ? 1 : 0;
             ma.CostFactor = txtMaterialCostFactor.Text != "" ? float.Parse(txtMaterialCostFactor.Text) : 0;
+            ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) : 0;
+            ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) : 0;
             return ma;
         }
 
@@ -536,8 +487,128 @@ namespace RBI.PRE.subForm.InputDataForm
                 CtrlSPress++;
             }
         }
+
         #endregion
 
-        
+        #region Expand or Collapse Panel
+        private void lblGenericProperties_Click(object sender, EventArgs e)
+        {
+            if (lblGenericProperties.Text == "▼ Generic Properties")
+            {
+                pnlGenericProperties.Height = 180;
+                lblGenericProperties.Text = "▶ Generic Properties";
+
+                pnlGovThinningDf.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlGovSccDf.Top = pnlGovThinningDf.Top + pnlGovThinningDf.Height + 13;
+                pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+            else if (lblGenericProperties.Text == "▶ Generic Properties")
+            {
+                pnlGenericProperties.Height = 21;
+                lblGenericProperties.Text = "▼ Generic Properties";
+
+                pnlGovThinningDf.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlGovSccDf.Top = pnlGovThinningDf.Top + pnlGovThinningDf.Height + 13;
+                pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+        }
+
+        private void lblGovThinningDf_Click(object sender, EventArgs e)
+        {
+            if (lblGovThinningDf.Text == "▼ Governing Thinning Damage Factor Properties")
+            {
+                pnlGovThinningDf.Height = 61;
+                lblGovThinningDf.Text = "▶ Governing Thinning Damage Factor Properties";
+
+                pnlGovSccDf.Top = pnlGovThinningDf.Top + pnlGovThinningDf.Height + 13;
+                pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+            else if (lblGovThinningDf.Text == "▶ Governing Thinning Damage Factor Properties")
+            {
+                pnlGovThinningDf.Height = 21;
+                lblGovThinningDf.Text = "▼ Governing Thinning Damage Factor Properties";
+
+                pnlGovSccDf.Top = pnlGovThinningDf.Top + pnlGovThinningDf.Height + 13;
+                pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+        }
+
+        private void lblGovSccDf_Click(object sender, EventArgs e)
+        {
+            if (lblGovSccDf.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                pnlGovSccDf.Height = 190;
+                lblGovSccDf.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
+
+                pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;                
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+            else if (lblGovSccDf.Text == "▶ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                pnlGovSccDf.Height = 21;
+                lblGovSccDf.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
+
+                pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+        }
+
+        private void lblHTHADf_Click(object sender, EventArgs e)
+        {
+            if (lblHTHADf.Text == "▼ High Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                pnlHTHADf.Height = 101;
+                lblHTHADf.Text = "▶ High Temperature Hydrogen Attack Damage Factor Properties";
+
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+            else if (lblHTHADf.Text == "▶ High Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                pnlHTHADf.Height = 21;
+                lblHTHADf.Text = "▼ High Temperature Hydrogen Attack Damage Factor Properties";
+
+                pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+            }
+        }
+
+        private void lblGovBrittleFractureDf_Click(object sender, EventArgs e)
+        {
+            if (lblGovBrittleFractureDf.Text == "▼ Governing Brittle Fracture Damage Factor Properties")
+            {
+                pnlGovBrittleFractureDf.Height = 161;
+                lblGovBrittleFractureDf.Text = "▶ Governing Brittle Fracture Damage Factor Properties";
+            }
+            else if (lblGovBrittleFractureDf.Text == "▶ Governing Brittle Fracture Damage Factor Properties")
+            {
+                pnlGovBrittleFractureDf.Height = 21;
+                lblGovBrittleFractureDf.Text = "▼ Governing Brittle Fracture Damage Factor Properties";
+            }
+        }
+
+        private void UCMaterial_Load(object sender, EventArgs e)
+        {
+            // Collapse pannel
+            pnlGenericProperties.Height = 21;            
+            pnlGovThinningDf.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+
+            pnlGovThinningDf.Height = 21;
+            pnlGovSccDf.Top = pnlGovThinningDf.Top + pnlGovThinningDf.Height + 13;
+
+            pnlGovSccDf.Height = 21;
+            pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;
+
+            pnlHTHADf.Height = 21;
+            pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
+
+            pnlGovBrittleFractureDf.Height = 21;
+            
+            //
+        }
+        #endregion
+
     }
 }
