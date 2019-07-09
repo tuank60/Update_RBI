@@ -12,11 +12,11 @@ namespace RBI.BUS.BUSMSSQL
         RW_MATERIAL_ConnectUtils DAL = new RW_MATERIAL_ConnectUtils();
         public void add(RW_MATERIAL obj)
         {
-            DAL.add(obj.ID, obj.MaterialName, obj.DesignPressure, obj.DesignTemperature, obj.MinDesignTemperature, obj.BrittleFractureThickness, obj.CorrosionAllowance, obj.SigmaPhase, obj.SulfurContent, obj.HeatTreatment, obj.ReferenceTemperature, obj.PTAMaterialCode, obj.HTHAMaterialCode, obj.IsPTA, obj.IsHTHA, obj.Austenitic, obj.Temper, obj.CarbonLowAlloy, obj.NickelBased, obj.ChromeMoreEqual12, obj.AllowableStress, obj.CostFactor);
+            DAL.add(obj.ID, obj.MaterialName, obj.DesignPressure, obj.DesignTemperature, obj.MinDesignTemperature, obj.BrittleFractureThickness, obj.CorrosionAllowance, obj.SigmaPhase, obj.SulfurContent, obj.HeatTreatment, obj.ReferenceTemperature, obj.PTAMaterialCode, obj.HTHAMaterialCode, obj.IsPTA, obj.IsHTHA, obj.Austenitic, obj.Temper, obj.CarbonLowAlloy, obj.NickelBased, obj.ChromeMoreEqual12, obj.AllowableStress,obj.YieldStrength,obj.TensileStrength, obj.CostFactor);
         }
         public void edit(RW_MATERIAL obj)
         {
-            DAL.edit(obj.ID, obj.MaterialName, obj.DesignPressure, obj.DesignTemperature, obj.MinDesignTemperature, obj.BrittleFractureThickness, obj.CorrosionAllowance, obj.SigmaPhase, obj.SulfurContent, obj.HeatTreatment, obj.ReferenceTemperature, obj.PTAMaterialCode, obj.HTHAMaterialCode, obj.IsPTA, obj.IsHTHA, obj.Austenitic, obj.Temper, obj.CarbonLowAlloy, obj.NickelBased, obj.ChromeMoreEqual12, obj.AllowableStress, obj.CostFactor);
+            DAL.edit(obj.ID, obj.MaterialName, obj.DesignPressure, obj.DesignTemperature, obj.MinDesignTemperature, obj.BrittleFractureThickness, obj.CorrosionAllowance, obj.SigmaPhase, obj.SulfurContent, obj.HeatTreatment, obj.ReferenceTemperature, obj.PTAMaterialCode, obj.HTHAMaterialCode, obj.IsPTA, obj.IsHTHA, obj.Austenitic, obj.Temper, obj.CarbonLowAlloy, obj.NickelBased, obj.ChromeMoreEqual12, obj.AllowableStress,obj.YieldStrength,obj.TensileStrength,obj.CostFactor);
         }
         public void delete(RW_MATERIAL obj)
         {
