@@ -888,3 +888,6 @@ C:\Users\hai\Desktop\rbi project\Update_RBI\WindowsFormsApplication1\obj\Debug\R
 C:\Users\hai\Desktop\rbi project\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.WaitForm1.resources
 C:\Users\hai\Desktop\rbi project\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.GenerateResource.Cache
 C:\Users\hai\Desktop\rbi project\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.licenses
+C:\Users\Huy Thanh\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Huy Thanh\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Huy Thanh\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
