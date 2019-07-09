@@ -174,10 +174,16 @@ namespace RBI.PRE.subForm.InputDataForm
             eq.ThermalHistory = cbThermalHistory.Text;
             eq.YearLowestExpTemp = chkEquipmentOperatingManyYear.Checked ? 1 : 0;
             double equipVolume = 0;
-            if (volUnit == "m3") equipVolume = txtEquipmentVolume.Text != "" ? float.Parse(txtEquipmentVolume.Text) : 0;
-            else equipVolume = txtMinRequiredTemperature.Text != "" ? (float.Parse(txtEquipmentVolume.Text)*convUnit.ft3) : 0; // mai
+            if (volUnit == "m3")
+            {
+                equipVolume = txtEquipmentVolume.Text != "" ? float.Parse(txtEquipmentVolume.Text) : 0;
+            }
+            else
+            {
+                equipVolume = txtEquipmentVolume.Text != "" ? (float.Parse(txtEquipmentVolume.Text) * convUnit.ft3) : 0; // mai
+            }
             eq.Volume = (float)equipVolume;
-            eq.DistanceToGroundWater = float.Parse(txtDistanceGroundWater.Text);
+            eq.DistanceToGroundWater = txtDistanceGroundWater.Text != "" ? float.Parse(txtDistanceGroundWater.Text) : 0;
             //eq.CommissionDate = 
             return eq;
         }
