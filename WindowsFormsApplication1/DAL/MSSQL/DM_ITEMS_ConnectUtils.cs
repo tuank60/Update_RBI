@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class DM_ITEMS_ConnectUtils
     {
-        public void add(int DMItemID,String DMDescription,int DMSeq,int DMCategoryID,String DMCode,int HasDF,String FailureMode)
+        public void add(int DMItemID,String DMDescription,int DMSeq,int DMCategoryID,String DMCode,int HasDF,int HasRule,String FailureMode)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -24,6 +24,7 @@ namespace RBI.DAL.MSSQL
                             ",[DMCategoryID]" +
                             ",[DMCode]" +
                             ",[HasDF]" +
+                            ",[HasRule]" +
                             ",[FailureMode])" +
                             "VALUES" +
                             "('" + DMItemID + "'" +
@@ -32,6 +33,7 @@ namespace RBI.DAL.MSSQL
                             ",'" + DMCategoryID + "'" +
                             ",'" + DMCode + "'" +
                             ",'" + HasDF + "'" +
+                            ",'" + HasRule + "'" +
                             ",'" + FailureMode + "')";
             try
             {
@@ -50,7 +52,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int DMItemID,String DMDescription,int DMSeq,int DMCategoryID,String DMCode,int HasDF,String FailureMode)
+        public void edit(int DMItemID,String DMDescription,int DMSeq,int DMCategoryID,String DMCode,int HasDF,int HasRule,String FailureMode)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -62,6 +64,7 @@ namespace RBI.DAL.MSSQL
                                   ",[DMCategoryID] = '"+DMCategoryID+"'" +
                                   ",[DMCode] = '"+DMCode+"'" +
                                   ",[HasDF] = '"+HasDF+"'" +
+                                  ",[HasRule]= '"+HasRule+"'" +
                                   "WHERE [DMItemID] ='" + DMItemID + "'";
             try
             {
@@ -118,6 +121,7 @@ namespace RBI.DAL.MSSQL
                           ",[DMCategoryID]"+
                           ",[DMCode]"+
                           ",[HasDF]"+
+                          ",[HasRule]"+
                           ",[FailureMode]"+
                           "From [rbi].[dbo].[DM_ITEMS]";
             try
@@ -138,7 +142,8 @@ namespace RBI.DAL.MSSQL
                             obj.DMCategoryID = reader.GetInt32(3);
                             obj.DMCode = reader.GetString(4);
                             obj.HasDF = reader.GetInt32(5);
-                            obj.FailureMode = reader.GetString(6);
+                            obj.HasRule = reader.GetInt32(6);
+                            obj.FailureMode = reader.GetString(7);
                             list.Add(obj);
                         }
                     }

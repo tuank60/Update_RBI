@@ -13,14 +13,14 @@ namespace RBI.BUS.BUSMSSQL
         API_ComponentTypeConnectUtils DAL = new API_ComponentTypeConnectUtils();
         public void add (API_COMPONENT_TYPE obj)
         {
-            DAL.add(obj.APIComponentTypeID, obj.APIComponentTypeName, obj.GFFSmall,obj.GFFMedium,
+            DAL.add(obj.APIComponentTypeID, obj.APIComponentTypeName, obj.AliasAPIComponentType, obj.GFFSmall,obj.GFFMedium,
                         obj.GFFLarge, obj.GFFRupture, obj.GFFTotal, obj.HoleCostSmall, obj.HoleCostMedium,
                         obj.HoleCostLarge, obj.HoleCostRupture, obj.OutageSmall, obj.OutageMedium, obj.OutageLarge,
                         obj.OutageRupture);
         }
         public void edit(API_COMPONENT_TYPE obj)
         {
-            DAL.edit(obj.APIComponentTypeID, obj.APIComponentTypeName, obj.GFFSmall, obj.GFFMedium,
+            DAL.edit(obj.APIComponentTypeID, obj.APIComponentTypeName,obj.AliasAPIComponentType, obj.GFFSmall, obj.GFFMedium,
                         obj.GFFLarge, obj.GFFRupture, obj.GFFTotal, obj.HoleCostSmall, obj.HoleCostMedium,
                         obj.HoleCostLarge, obj.HoleCostRupture, obj.OutageSmall, obj.OutageMedium, obj.OutageLarge,
                         obj.OutageRupture);
