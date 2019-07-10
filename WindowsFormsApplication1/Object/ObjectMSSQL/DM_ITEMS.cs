@@ -14,6 +14,7 @@ namespace RBI.Object.ObjectMSSQL
         public int DMCategoryID { set; get; }
         public String DMCode { set; get; }
         public int HasDF { set; get; }
+        public int HasRule { set; get; }
         public String FailureMode { set; get; }
     }
 }

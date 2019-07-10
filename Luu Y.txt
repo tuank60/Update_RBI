@@ -1,2 +1,15 @@
+phase1:
 Material(Normal): Allowable Stress,Brittle Fracture,Heatracement đang có trong UCMaterial nhưng chưa biết để vào form nào.
 		  Allowable Stress Riskwise 6 không lưu trong RW_Material nữa
+		  Đã thêm Yield Strength và Tensile Strength
+phase2: Sua database
+APIComponentType: Table có thêm AliasAPIComponentType
+Chua co COF_FLUID
+COMPONENT_DETAIL: Giong table database riskwise5
+COMPONENT_MASTER: Giong table database riskwise5
+COMPONENT_MODELING: Giong database riskwise5
+COMPONENT_TYPE: Table có thêm Shape, ShapeFactor
+DESIGN_CODE: Giong table database riskwise5
+DM_CATEGORY: Giong table database riskwise5
+DM_EXPECTED_TYPE: Giong table database riskwise5
+DM_ITEMS: Table co them HasRule

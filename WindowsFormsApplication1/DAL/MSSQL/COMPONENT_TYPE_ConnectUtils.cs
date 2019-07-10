@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class COMPONENT_TYPE_ConnectUtils
     {
-        public void add(int ComponentTypeID, String ComponentTypeName, String ComponentTypeCode)
+        public void add(int ComponentTypeID, String ComponentTypeName, String ComponentTypeCode, String Shape, float ShapeFactor)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -21,10 +21,14 @@ namespace RBI.DAL.MSSQL
                             "([ComponentTypeID]" +
                             ",[ComponentTypeName]" +
                             ",[ComponentTypeCode])" +
+                            ",[Shape]" +
+                            ",[ShapeFactor]" +
                             "VALUES" +
                             "('"+ComponentTypeID+"'" +
                             ",'"+ComponentTypeName+"'" +
-                            ",'"+ComponentTypeCode+"')";
+                            ",'"+ComponentTypeCode+"'" +
+                            ",'"+Shape+"'"+
+                            ",'"+ShapeFactor+"')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -42,7 +46,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ComponentTypeID, String ComponentTypeName, String ComponentTypeCode)
+        public void edit(int ComponentTypeID, String ComponentTypeName, String ComponentTypeCode, String Shape, float ShapeFactor)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -51,6 +55,8 @@ namespace RBI.DAL.MSSQL
                             "SET [ComponentTypeID] = '" + ComponentTypeID + "'" +
                             ",[ComponentTypeName] = '" + ComponentTypeName + "'" +
                             ",[ComponentTypeCode] = '" + ComponentTypeCode + "'" +
+                            ",[Shape] = '" + Shape + "'" +
+                            ",[ShapeFactor] = '" + ShapeFactor + "'" +
                             ",[Modified] = '" + DateTime.Now + "'" +
                             " WHERE [ComponentTypeID] = '" + ComponentTypeID + "'";
             try
@@ -103,6 +109,8 @@ namespace RBI.DAL.MSSQL
             String sql = " Use [rbi] Select [ComponentTypeID]"+
                           ",[ComponentTypeName]"+
                           ",[ComponentTypeCode]"+
+                          ",[Shape]"+
+                          ",[ShapeFactor]"+
                           "From [rbi].[dbo].[COMPONENT_TYPE]";
             try
             {
@@ -119,6 +127,8 @@ namespace RBI.DAL.MSSQL
                             obj.ComponentTypeID = reader.GetInt32(0);
                             obj.ComponentTypeName = reader.GetString(1);
                             obj.ComponentTypeCode = reader.GetString(2);
+                            obj.Shape = reader.GetString(3);
+                            obj.ShapeFactor = (float)reader.GetDouble(4);
                             list.Add(obj);
                         }
                     }
@@ -176,6 +186,8 @@ namespace RBI.DAL.MSSQL
             String sql = " Use [rbi] Select [ComponentTypeID]" +
                           ",[ComponentTypeName]" +
                           ",[ComponentTypeCode]" +
+                          ",[Shape]" +
+                          ",[ShapeFactor]" +
                           "From [rbi].[dbo].[COMPONENT_TYPE] WHERE [ComponentTypeName] = '" + name + "'";
             try
             {
