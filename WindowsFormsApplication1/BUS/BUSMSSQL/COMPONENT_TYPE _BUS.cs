@@ -13,11 +13,11 @@ namespace RBI.BUS.BUSMSSQL
         COMPONENT_TYPE_ConnectUtils DAL = new COMPONENT_TYPE_ConnectUtils();
         public void add(COMPONENT_TYPE obj)
         {
-            DAL.add(obj.ComponentTypeID, obj.ComponentTypeName, obj.ComponentTypeCode);
+            DAL.add(obj.ComponentTypeID, obj.ComponentTypeName, obj.ComponentTypeCode, obj.Shape, obj.ShapeFactor);
         }
         public void edit(COMPONENT_TYPE obj)
         {
-            DAL.edit(obj.ComponentTypeID, obj.ComponentTypeName, obj.ComponentTypeCode);
+            DAL.edit(obj.ComponentTypeID, obj.ComponentTypeName, obj.ComponentTypeCode, obj.Shape, obj.ShapeFactor);
         }
         public void delete(COMPONENT_TYPE obj)
         {

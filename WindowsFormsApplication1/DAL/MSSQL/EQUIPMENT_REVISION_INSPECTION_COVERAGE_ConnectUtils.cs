@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class EQUIPMENT_REVISION_INSPECTION_COVERAGE_ConnectUtils
     {
-        public void add(int RevisionID, int CoverageID,String InspPlanName,DateTime InspPlanDate,String CoverageName,
+        public void add(int RevisionID, int EquipmentID,String InspPlanName,DateTime InspPlanDate,String CoverageName,
                        DateTime CoverageDate,String Remarks,String Findings,String FindingRTF)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -20,7 +20,7 @@ namespace RBI.DAL.MSSQL
             String sql = "USE [rbi] " +
                             " INSERT INTO[dbo].[EQUIPMENT_REVISION_INSPECTION_COVERAGE]" +
                             "([RevisionID]" +
-                            ",[CoverageID]" +
+                            ",[EquipmentID]" +
                             ",[InspPlanName]" +
                             ",[InspPlanDate]" +
                             ",[CoverageName]" +
@@ -30,7 +30,7 @@ namespace RBI.DAL.MSSQL
                             ",[FindingRTF])" +
                             "VALUES" +
                             "('" + RevisionID + "'" +
-                            ",'" + CoverageID + "'" +
+                            ",'" + EquipmentID + "'" +
                             ",'" + InspPlanName + "'" +
                             ",'" + InspPlanDate + "'" +
                             ",'" + CoverageName + "'" +
@@ -55,7 +55,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int RevisionID, int CoverageID,String InspPlanName,DateTime InspPlanDate,String CoverageName,
+        public void edit(int RevisionID, int EquipmentID,String InspPlanName,DateTime InspPlanDate,String CoverageName,
                        DateTime CoverageDate,String Remarks,String Findings,String FindingRTF)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -63,7 +63,7 @@ namespace RBI.DAL.MSSQL
             String sql = "USE [rbi]" +
                            " UPDATE[dbo].[EQUIPMENT_REVISION_INSPECTION_COVERAGE]" +
                                   "SET[RevisionID] ='"+RevisionID+"'" +
-                                  ",[CoverageID] = '"+CoverageID+"'" +
+                                  ",[EquipmentID] = '"+EquipmentID+"'" +
                                   ",[InspPlanName] = '"+InspPlanName+"'" +
                                   ",[InspPlanDate] = '"+InspPlanDate+"'" +
                                   ",[CoverageName] = '"+CoverageName+"'" +
@@ -72,7 +72,7 @@ namespace RBI.DAL.MSSQL
                                   ",[Findings] = '"+Findings+"'" +
                                   ",[FindingRTF] = '"+FindingRTF+"'" +
                                   "WHERE [RevisionID] ='" + RevisionID + "'" +
-                                  "AND [CoverageID] ='" + CoverageID + "'";
+                                  "AND [EquipmentID] ='" + EquipmentID + "'";
             
             try
             {
@@ -123,7 +123,7 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             String sql = "USE[rbi]" +
                         "SELECT [RevisionID]" +
-                        ",[CoverageID]" +
+                        ",[EquipmentID]" +
                         ",[InspPlanName]" +
                         ",[InspPlanDate]" +
                         ",[CoverageName]" +
@@ -145,7 +145,7 @@ namespace RBI.DAL.MSSQL
                         {
                             obj = new EQUIPMENT_REVISION_INSPECTION_COVERAGE();
                             obj.RevisionID = reader.GetInt32(0);
-                            obj.CoverageID = reader.GetInt32(1);
+                            obj.EquipmentID = reader.GetInt32(1);
                             obj.InspPlanName = reader.GetString(2);
                             if (!reader.IsDBNull(3))
                             {

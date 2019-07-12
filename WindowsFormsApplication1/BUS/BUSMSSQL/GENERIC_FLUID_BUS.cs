@@ -14,12 +14,12 @@ namespace RBI.BUS.BUSMSSQL
         GENERIC_FLUID_ConnectUtils DAL = new GENERIC_FLUID_ConnectUtils();
         public void add(GENERIC_FLUID obj)
         {
-            DAL.add(obj.GenericFluid, obj.NBP, obj.MW, obj.Density, obj.ChemicalFactor, obj.HealthDegree,
+            DAL.add(obj.GenericFluid, obj.ExamplesOfApplicable, obj.FluidType, obj.NBP, obj.MW, obj.Density, obj.AmbientState, obj.AutoIgnitionTemperature, obj.ChemicalFactor, obj.HealthDegree,
                        obj.Flammability, obj.Reactivity);
         }
         public void edit(GENERIC_FLUID obj)
         {
-            DAL.edit(obj.GenericFluidID, obj.GenericFluid, obj.NBP, obj.MW, obj.Density, obj.ChemicalFactor, obj.HealthDegree,
+            DAL.edit(obj.GenericFluidID, obj.GenericFluid, obj.ExamplesOfApplicable, obj.FluidType, obj.NBP, obj.MW, obj.Density, obj.AmbientState, obj.AutoIgnitionTemperature, obj.ChemicalFactor, obj.HealthDegree,
                        obj.Flammability, obj.Reactivity);
         }
         public void delete(GENERIC_FLUID obj)

@@ -12,22 +12,22 @@ namespace RBI.DAL.MSSQL
 {
     class INSPECTION_COVERAGE_ConnectUtils
     {
-        public void add(int PlanID, String CoverageName, DateTime CoverageDate, String Remarks, String Findings, String FindingRTF)
+        public void add(int PlanID, int EquipmentID, int ComponentID, String Remarks, String Findings, String FindingRTF)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
                         "INSERT INTO [dbo].[INSPECTION_COVERAGE]" +
                         "([PlanID]" +
-                        ",[CoverageName]" +
-                        ",[CoverageDate]" +
+                        ",[EquipmentID]" +
+                        ",[ComponentID]" +
                         ",[Remarks]" +
                         ",[Findings]" +
                         ",[FindingRTF])" +
                         "VALUES" +
                         "('" + PlanID + "'" +
-                        ",'" + CoverageName + "'" +
-                        ",'" + CoverageDate + "'" +
+                        ",'" + EquipmentID + "'" +
+                        ",'" + ComponentID + "'" +
                         ",'" + Remarks + "'" +
                         ",'" + Findings + "'" +
                         ",'" + FindingRTF + "')";
@@ -48,19 +48,19 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int CoverageID, int PlanID, String CoverageName, DateTime CoverageDate, String Remarks, String Findings, String FindingRTF)
+        public void edit(int ID, int PlanID, int EquipmentID, int ComponentID, String Remarks, String Findings, String FindingRTF)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi] " +
                         "UPDATE [dbo].[INSPECTION_COVERAGE]" +
                         "SET [PlanID] = '" + PlanID + "'" +
-                        ",[CoverageName] = '" + CoverageName + "'" +
-                        ",[CoverageDate] = '" + CoverageDate + "'" +
+                        ",[EquipmentID] = '" + EquipmentID + "'" +
+                        ",[ComponentID] = '" + ComponentID + "'" +
                         ",[Remarks] = '" + Remarks + "'" +
                         ",[Findings] = '" + Findings + "'" +
                         ",[FindingRTF] ='" + FindingRTF + "'" +
-                        "WHERE [CoverageID] = '" + CoverageID + "' ";
+                        "WHERE [ID] = '" + ID + "' ";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -108,10 +108,10 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             List<INSPECTION_COVERAGE> list = new List<INSPECTION_COVERAGE>();
             INSPECTION_COVERAGE obj = null;
-            String sql = " Use [rbi] Select [CoverageID]" +
+            String sql = " Use [rbi] Select [ID]" +
                           ",[PlanID]" +
-                          ",[CoverageName]" +
-                          ",[CoverageDate]" +
+                          ",[EquipmentID]" +
+                          ",[ComponentID]" +
                           ",[Remarks]" +
                           ",[Findings]" +
                           ",[FindingRTF]" +
@@ -128,14 +128,11 @@ namespace RBI.DAL.MSSQL
                         if (reader.HasRows)
                         {
                             obj = new INSPECTION_COVERAGE();
-                            obj.CoverageID = reader.GetInt32(0);
+                            obj.ID = reader.GetInt32(0);
                             obj.PlanID = reader.GetInt32(1);
-                            obj.CoverageName = reader.GetString(2);
-                            if (!reader.IsDBNull(3))
-                            {
-                                obj.CoverageDate = reader.GetDateTime(3);
-                            }
-                            if (!reader .IsDBNull (4))
+                            obj.EquipmentID = reader.GetInt32(2);
+                            obj.ComponentID = reader.GetInt32(3);
+                            if (!reader .IsDBNull(4))
                             {
                                 obj.Remarks = reader.GetString(4);
                             }

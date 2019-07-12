@@ -9,7 +9,7 @@ namespace RBI.Object.ObjectMSSQL
     class EQUIPMENT_REVISION_INSPECTION_COVERAGE
     {
         public int RevisionID { set; get; }
-        public int CoverageID { set; get; }
+        public int EquipmentID { set; get; }
         public String InspPlanName { set; get; }
         public DateTime InspPlanDate { set; get; }
         public String CoverageName { set; get; }

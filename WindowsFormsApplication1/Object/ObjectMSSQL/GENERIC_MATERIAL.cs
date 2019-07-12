@@ -28,5 +28,7 @@ namespace RBI.Object.ObjectMSSQL
         public int NickelBased { get; set; }
         public int ChromeMoreEqual12 { get; set; }
         public float CostFactor { get; set; }
+        public float YieldStrength { get; set; }
+        public float TensileStrength { get; set; }
     }
 }

@@ -17,14 +17,14 @@ namespace RBI.BUS.BUSMSSQL
             DAL.add(obj.MaterialName, obj.DesignPressure, obj.DesignTemperature, obj.MinDesignTemperature, obj.CorrosionAllowance,
                         obj.SigmaPhase, obj.SulfurContent, obj.HeatTreatment, obj.ReferenceTemperature, obj.PTAMaterialCode, obj.HTHAMaterialCode,
                         obj.IsPTA, obj.IsHTHA, obj.Austenitic, obj.Temper, obj.CarbonLowAlloy, obj.NickelBased,
-                        obj.ChromeMoreEqual12, obj.CostFactor);
+                        obj.ChromeMoreEqual12, obj.CostFactor, obj.YieldStrength, obj.TensileStrength);
         }
         public void edit(GENERIC_MATERIAL obj)
         {
             DAL.edit(obj.ID,obj.MaterialName, obj.DesignPressure, obj.DesignTemperature, obj.MinDesignTemperature, obj.CorrosionAllowance,
                         obj.SigmaPhase, obj.SulfurContent, obj.HeatTreatment, obj.ReferenceTemperature, obj.PTAMaterialCode, obj.HTHAMaterialCode,
                         obj.IsPTA, obj.IsHTHA, obj.Austenitic, obj.Temper, obj.CarbonLowAlloy, obj.NickelBased,
-                        obj.ChromeMoreEqual12, obj.CostFactor);
+                        obj.ChromeMoreEqual12, obj.CostFactor, obj.YieldStrength, obj.TensileStrength);
         }
         public void delete(GENERIC_MATERIAL obj)
         {
