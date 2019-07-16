@@ -14,11 +14,11 @@ namespace RBI.BUS.BUSMSSQL
         RW_ASSESSMENT_ConnectUtils DAL = new RW_ASSESSMENT_ConnectUtils();
         public void add(RW_ASSESSMENT obj)
         {
-            DAL.add(obj.EquipmentID, obj.ComponentID, obj.AssessmentDate, obj.AssessmentMethod, obj.RiskAnalysisPeriod, obj.IsEquipmentLinked, obj.RecordType, obj.ProposalNo, obj.RevisionNo, obj.IsRecommend, obj.ProposalOrRevision, obj.AdoptedBy, obj.AdoptedDate, obj.RecommendedBy, obj.RecommendedDate, obj.ProposalName, obj.AddByExcel);
+            DAL.add(obj.EquipmentID, obj.ComponentID, obj.AssessmentDate, obj.AssessmentMethod, obj.RiskAnalysisPeriod, obj.IsEquipmentLinked, obj.RecordType, obj.ProposalNo, obj.RevisionNo, obj.IsRecommend, obj.ProposalOrRevision, obj.AdoptedBy, obj.AdoptedDate, obj.RecommendedBy, obj.RecommendedDate);
         }
         public void edit(RW_ASSESSMENT obj)
         {
-            DAL.edit(obj.ID, obj.EquipmentID, obj.ComponentID, obj.AssessmentDate, obj.AssessmentMethod, obj.RiskAnalysisPeriod, obj.IsEquipmentLinked, obj.RecordType, obj.ProposalNo, obj.RevisionNo, obj.IsRecommend, obj.ProposalOrRevision, obj.AdoptedBy, obj.AdoptedDate, obj.RecommendedBy, obj.RecommendedDate, obj.ProposalName);
+            DAL.edit(obj.ID, obj.EquipmentID, obj.ComponentID, obj.AssessmentDate, obj.AssessmentMethod, obj.RiskAnalysisPeriod, obj.IsEquipmentLinked, obj.RecordType, obj.ProposalNo, obj.RevisionNo, obj.IsRecommend, obj.ProposalOrRevision, obj.AdoptedBy, obj.AdoptedDate, obj.RecommendedBy, obj.RecommendedDate);
         }
         public void delete(RW_ASSESSMENT obj)
         {

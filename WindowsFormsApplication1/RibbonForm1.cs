@@ -225,8 +225,8 @@ namespace RBI
                     RW_COMPONENT com = uc.ucComp.getData(IDProposal, diameter, thickness, corrosionRate); // mai
                     RW_STREAM stream = uc.ucStream.getData(IDProposal); //mai
                     RW_STREAM op = uc.ucOpera.getDataforStream(IDProposal,temperature, pressure, flowRate); // mai
-                    treeListProject.FocusedNode.SetValue(0, ass.ProposalName);
-                    xtraTabData.SelectedTabPage.Text = treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + ass.ProposalName + "]";
+                    treeListProject.FocusedNode.SetValue(0, ass.ProposalNo);
+                    xtraTabData.SelectedTabPage.Text = treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + ass.ProposalNo + "]";
                     //<gan full gia tri cho stream>
                     stream.FlowRate = op.FlowRate;
                     stream.MaxOperatingPressure = op.MaxOperatingPressure;
@@ -427,7 +427,7 @@ namespace RBI
             }
             foreach (RW_ASSESSMENT a in readListAssessment)
             {
-                listTree.Add(new TestData(a.ID + 400000, a.ComponentID + 300000, a.ProposalName));
+                listTree.Add(new TestData(a.ID + 400000, a.ComponentID + 300000, a.ProposalNo.ToString()));
             }
             treeListProject.DataSource = listTree;
             treeListProject.RefreshDataSource();
@@ -606,10 +606,10 @@ namespace RBI
             }
             rwass.RiskAnalysisPeriod = 36;
             rwass.AssessmentDate = DateTime.Now;
-            rwass.ProposalName = ProposalName;
+            //rwass.ProposalName = ProposalName;
             rwass.AdoptedDate = DateTime.Now;
             rwass.RecommendedDate = DateTime.Now;
-            rwass.AddByExcel = 0;
+            //rwass.AddByExcel = 0;
             busAssessment.add(rwass);
             List<RW_ASSESSMENT> listAss = busAssessment.getDataSource();
             int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);

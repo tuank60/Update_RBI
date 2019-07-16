@@ -17,7 +17,7 @@ namespace RBI.DAL.MSSQL
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             string name = null;
-            String sql = "select ProposalName from rbi.dbo.RW_ASSESSMENT where ID = '" + assID + "'";
+            String sql = "select ProposalNo from rbi.dbo.RW_ASSESSMENT where ID = '" + assID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -111,7 +111,7 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
-        public void add(int EquipmentID, int ComponentID,DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod,int IsEquipmentLinked,String RecordType,int ProposalNo,int RevisionNo,int IsRecommend,String ProposalOrRevision,String AdoptedBy,DateTime AdoptedDate, String RecommendedBy,DateTime RecommendedDate, String ProposalName, int AddByExcel)
+        public void add(int EquipmentID, int ComponentID,DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod,int IsEquipmentLinked,String RecordType,int ProposalNo,int RevisionNo,int IsRecommend,String ProposalOrRevision,String AdoptedBy,DateTime AdoptedDate, String RecommendedBy,DateTime RecommendedDate)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -133,8 +133,6 @@ namespace RBI.DAL.MSSQL
                         ",[AdoptedDate]" +
                         ",[RecommendedBy]" +
                         ",[RecommendedDate]" +
-                        ",[ProposalName]"+
-                        ",[AddByExcel])"+
                         "VALUES" +
                         "('" + EquipmentID + "'" +
                         ",'" + ComponentID + "'" +
@@ -150,9 +148,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + AdoptedBy + "'" +
                         ",'" + AdoptedDate + "'" +
                         ",'" + RecommendedBy + "'" +
-                        ",'" + RecommendedDate + "'" +
-                        ",'" + ProposalName + "'" +
-                        ",'" + AddByExcel + "')" +
+                        ",'" + RecommendedDate + "')" +
                         " ";
 
             try
@@ -172,7 +168,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID,int EquipmentID, int ComponentID, DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod, int IsEquipmentLinked, String RecordType, int ProposalNo, int RevisionNo, int IsRecommend, String ProposalOrRevision, String AdoptedBy, DateTime AdoptedDate, String RecommendedBy, DateTime RecommendedDate, String ProposalName)
+        public void edit(int ID,int EquipmentID, int ComponentID, DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod, int IsEquipmentLinked, String RecordType, int ProposalNo, int RevisionNo, int IsRecommend, String ProposalOrRevision, String AdoptedBy, DateTime AdoptedDate, String RecommendedBy, DateTime RecommendedDate)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -194,7 +190,6 @@ namespace RBI.DAL.MSSQL
                         ",[AdoptedDate] = '" + AdoptedDate + "'" +
                         ",[RecommendedBy] = '" + RecommendedBy + "'" +
                         ",[RecommendedDate] = '" + RecommendedDate + "'" +
-                        ",[ProposalName] = '"+ProposalName+"'"+
                         " WHERE [ID] = '" + ID + "'" +
                         " ";
             try
@@ -262,7 +257,6 @@ namespace RBI.DAL.MSSQL
                           ",[AdoptedDate]" +
                           ",[RecommendedBy]" +
                           ",[RecommendedDate]" +
-                          ",[ProposalName]" +
                           "From [dbo].[RW_ASSESSMENT]  ";
             try
             {
@@ -324,10 +318,6 @@ namespace RBI.DAL.MSSQL
                             if(!reader.IsDBNull (15))
                             {
                                 obj.RecommendedDate = reader.GetDateTime(15);
-                            }
-                            if(!reader.IsDBNull(16))
-                            {
-                                obj.ProposalName = reader.GetString(16);
                             }
                             list.Add(obj);
                         }
@@ -480,7 +470,7 @@ namespace RBI.DAL.MSSQL
             RW_ASSESSMENT ass = new RW_ASSESSMENT();
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "select ProposalName,AssessmentDate,RiskAnalysisPeriod from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
+            String sql = "select AssessmentDate,RiskAnalysisPeriod from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -492,7 +482,7 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-                            ass.ProposalName = reader.GetString(0);
+                            //ass.ProposalName = reader.GetString(0);
                             ass.AssessmentDate = reader.GetDateTime(1);
                             ass.RiskAnalysisPeriod = reader.GetInt32(2);
                         }
@@ -550,7 +540,7 @@ namespace RBI.DAL.MSSQL
             int[] data = new int[2];
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "SELECT AddByExcel,ID FROM rbi.dbo.RW_ASSESSMENT WHERE EquipmentID = '"+eqID+"' AND ComponentID='"+comID+"'";
+            String sql = "SELECT ID FROM rbi.dbo.RW_ASSESSMENT WHERE EquipmentID = '"+eqID+"' AND ComponentID='"+comID+"'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -562,7 +552,7 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-                            data[0] = Convert.ToInt32(reader.GetBoolean(0));
+                            //data[0] = Convert.ToInt32(reader.GetBoolean(0));
                             data[1] = reader.GetInt32(1);
                             temp.Add(data);
                         }

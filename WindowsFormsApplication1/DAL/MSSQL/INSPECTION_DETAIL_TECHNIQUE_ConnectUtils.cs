@@ -8,21 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RBI.Object.ObjectMSSQL;
+
 namespace RBI.DAL.MSSQL
 {
-    class INSPECTION_COVERAGE_EQUIPMENT_ConnectUtils
+    class INSPECTION_DETAIL_TECHNIQUE_ConnectUtils
     {
-        public void add(int CoverageID, int EquipmentID)
+        public void add(int CoverageID, int IMItemID, int IMTypeID, int InspectionType, int Coverage)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
-                        "INSERT INTO [dbo].[INSPECTION_COVERAGE_EQUIPMENT]" +
+                        "INSERT INTO [dbo].[INSPECTION_DETAIL_TECHNIQUE]" +
                         "([CoverageID]" +
-                        ",[EquipmentID])" +
+                        ",[IMItemID]" +
+                        ",[IMTypeID]" +
+                        ",[InspectionType]" +
+                        ",[Coverage])" +
                         "VALUES" +
                         "('" + CoverageID + "'" +
-                        ",'" + EquipmentID + "')";
+                        ",'" + IMItemID + "'" +
+                        ",'" + IMTypeID + "'" +
+                        ",'" + InspectionType + "'" +
+                        ",'" + Coverage + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -40,15 +47,19 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int CoverageID, int EquipmentID)
+        public void edit(int ID, int CoverageID, int IMItemID, int IMTypeID, int InspectionType, int Coverage)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
-                        "UPDATE [dbo].[INSPECTION_COVERAGE_EQUIPMENT]" +
+                        "UPDATE [dbo].[INSPECTION_DETAIL_TECHNIQUE]" +
                         "SET [CoverageID] = '" + CoverageID + "'" +
-                        ",[EquipmentID] = '" + EquipmentID + "'" +                      
-                        "WHERE [CoverageID] = '" + CoverageID + "' ";
+                        ",[IMItemID] = '" + IMItemID + "'" +
+                        ",[IMTypeID] = '" + IMTypeID + "'" +
+                        ",[InspectionType] = '" + InspectionType + "'" +
+                        ",[Coverage] = '" + Coverage + "'" +
+                        "WHERE [ID] = '" + ID + "'";
+
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -66,13 +77,13 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void delete(int CoverageID)
+        public void delete(int ID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
-                        "DELETE FROM [dbo].[INSPECTION_COVERAGE_EQUIPMENT]" +
-                        "WHERE [CoverageID] = '" + CoverageID + "' ";
+                        "DELETE FROM [dbo].[INSPECTION_DETAIL_TECHNIQUE]" +
+                        "WHERE [ID] = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -90,15 +101,19 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public List<INSPECTION_COVERAGE_EQUIPMENT> getDataSource()
+        public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            List<INSPECTION_COVERAGE_EQUIPMENT> list = new List<INSPECTION_COVERAGE_EQUIPMENT>();
-            INSPECTION_COVERAGE_EQUIPMENT obj = null;
-            String sql = " Use [rbi] Select [CoverageID]" +
-                          ",[EquipmentID]" +
-                          "From [dbo].[INSPECTION_COVERAGE_EQUIPMENT]";
+            List<INSPECTION_DETAIL_TECHNIQUE> list = new List<INSPECTION_DETAIL_TECHNIQUE>();
+            INSPECTION_DETAIL_TECHNIQUE obj = null;
+            String sql = " Use [rbi] Select [ID]" +
+                          ",[CoverageID]" +
+                          ",[IMItemID]" +
+                          ",[IMTypeID]" +
+                          ",[InspectionType]" +
+                          ",[Coverage]" +
+                          "From [dbo].[INSPECTION_DETAIL_TECHNIQUE]";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -110,10 +125,21 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-                            obj = new INSPECTION_COVERAGE_EQUIPMENT();
-                            obj.CoverageID = reader.GetInt32(0);
-                            obj.EquipmentID = reader.GetInt32(1);
-                           
+                            obj = new INSPECTION_DETAIL_TECHNIQUE();
+                            obj.ID = reader.GetInt32(0);
+                            obj.CoverageID = reader.GetInt32(1);
+                            if (!reader.IsDBNull(2))
+                            {
+                                obj.IMItemID = reader.GetInt32(2);
+                            }
+                            if (!reader.IsDBNull(3))
+                            {
+                                obj.IMTypeID = reader.GetInt32(3);
+                            }
+                            if (!reader.IsDBNull(4))
+                            {
+                                obj.InspectionType = reader.GetInt32(4);
+                            }
                             list.Add(obj);
                         }
                     }
@@ -130,6 +156,5 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
-
     }
 }

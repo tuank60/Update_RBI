@@ -269,7 +269,7 @@ namespace RBI.DAL.MSSQL
             int _ID = 0;
             SqlConnection con = MSSQLDBUtils.GetDBConnection();
             con.Open();
-            String sql = "SELECT APIComponentTypeId FROM [rbi].[dbo].[COMPONENT_MASTER] WHERE EquipmentID = '"+EqID+"'";
+            String sql = "SELECT APIComponentTypeID FROM [rbi].[dbo].[COMPONENT_MASTER] WHERE EquipmentID = '"+EqID+"'";
             try
             {
                 SqlCommand cmd = new SqlCommand();

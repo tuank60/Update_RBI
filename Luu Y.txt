@@ -46,3 +46,13 @@ MANUFACTURER: Giong table database riskwise5
 POINTS: Giong table database riskwise5
 PRD_?: table moi trong database riskwise6
 REPORT_TEMPLATE_?: Giong table database riskwise5
+phase3: Them moi nhung database con thieu
+COF_FLUID: la table 4.1 & 4.2 pg 39 Part3 
+INSPECTION_DETAIL_TECHNIQUE: Da them 
+Nhan xet:
+INSPECTION_DM_RULE: la table tinh toan trong API 581 them sau trong CAL
+PRD_DF_CLASSES: la table 7.10 pg 73 Part1
+PRD_DISCHARGE_LOCATION: la RecoveryFactor cong thuc 7.5.4 pg 55 Part1 va WeibullAdjustmentFactor cong thuc .. 	
+PRD_INSPECTION_EFFECTIVENESS,PRD_INSPECTION_RESULT,PRD_INSPECTION_CONFIDENCE: la table 7.8 pg 72 Part1
+PRD_OVERPRESSURE_DEMAND: la table 7.2 pg 64 Part1
+PRD_SERVICE_SEVERITY, PRD_TYPE, PRD_WEIBULL_PARAMETER: la table 7.5 pg 71 Part1
