@@ -515,7 +515,7 @@ namespace RBI.BUS.BUSExcel
                                 obj.RiskAnalysisPeriod = 36;
                             }
 
-                            obj.ProposalName = "New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1);
+                            //obj.ProposalName = "New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1);
                             obj.AdoptedDate = DateTime.Now;
                             obj.RecommendedDate = DateTime.Now;
                             list.Add(obj);

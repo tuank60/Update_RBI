@@ -12,6 +12,75 @@ namespace RBI.DAL.MSSQL
 {
     class RW_ASSESSMENT_ConnectUtils
     {
+<<<<<<< HEAD
+=======
+        public string getAssessmentName(int assID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            string name = null;
+            String sql = "select ProposalNo from rbi.dbo.RW_ASSESSMENT where ID = '" + assID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            name = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return name;
+        }
+        public List<string> AllName()
+        {
+            List<string> lstName = new List<string>();
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            string sql = "SELECT ProposalName FROM rbi.dbo.RW_ASSESSMENT";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using(DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        if(reader.HasRows)
+                        {
+                            lstName.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error " + ex.ToString(), "Cortek RBI");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return lstName;
+        }
+>>>>>>> b986e7873c47c3604423ce90851f37ad2b9115ab
         public List<int> getAllID()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -66,7 +135,11 @@ namespace RBI.DAL.MSSQL
                         ",[AdoptedBy]" +
                         ",[AdoptedDate]" +
                         ",[RecommendedBy]" +
+<<<<<<< HEAD
                         ",[RecommendedDate])" +
+=======
+                        ",[RecommendedDate]" +
+>>>>>>> b986e7873c47c3604423ce90851f37ad2b9115ab
                         "VALUES" +
                         "('" + EquipmentID + "'" +
                         ",'" + ComponentID + "'" +
@@ -122,7 +195,12 @@ namespace RBI.DAL.MSSQL
                         ",[ProposalOrRevision] = '" + ProposalOrRevision + "'" +
                         ",[AdoptedBy] = '" + AdoptedBy + "'" +
                         ",[AdoptedDate] = '" + AdoptedDate + "'" +
+<<<<<<< HEAD
                         ",[RecommendedBy] = '" + RecommendedBy + "'" +                    
+=======
+                        ",[RecommendedBy] = '" + RecommendedBy + "'" +
+                        ",[RecommendedDate] = '" + RecommendedDate + "'" +
+>>>>>>> b986e7873c47c3604423ce90851f37ad2b9115ab
                         " WHERE [ID] = '" + ID + "'" +
                         " ";
             try
@@ -415,8 +493,14 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
+<<<<<<< HEAD
                             ass.AssessmentDate = reader.GetDateTime(0);
                             ass.RiskAnalysisPeriod = reader.GetInt32(1);
+=======
+                            //ass.ProposalName = reader.GetString(0);
+                            ass.AssessmentDate = reader.GetDateTime(1);
+                            ass.RiskAnalysisPeriod = reader.GetInt32(2);
+>>>>>>> b986e7873c47c3604423ce90851f37ad2b9115ab
                         }
                     }
                 }
@@ -466,6 +550,45 @@ namespace RBI.DAL.MSSQL
             }
             return count;
         }
+<<<<<<< HEAD
+=======
+        public List<int[]> getCheckAddExcel_ID(int comID, int eqID)
+        {
+            List<int[]> temp = new List<int[]>();
+            int[] data = new int[2];
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "SELECT ID FROM rbi.dbo.RW_ASSESSMENT WHERE EquipmentID = '"+eqID+"' AND ComponentID='"+comID+"'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            //data[0] = Convert.ToInt32(reader.GetBoolean(0));
+                            data[1] = reader.GetInt32(1);
+                            temp.Add(data);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return temp;
+        }
+>>>>>>> b986e7873c47c3604423ce90851f37ad2b9115ab
         public int getLastID()
         {
             int temp = 0;

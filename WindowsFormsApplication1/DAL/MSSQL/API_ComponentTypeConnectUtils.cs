@@ -119,7 +119,7 @@ namespace RBI.DAL.MSSQL
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "USE [rbi]  DELETE FROM [dbo].[API_COMPONENT_TYPE] WHERE [dbo].[API_COMPONENT_TYPE] = '" + APIComponentTypeID + "'";
+            String sql = "USE [rbi]  DELETE FROM [dbo].[API_COMPONENT_TYPE] WHERE [APIComponentTypeID] = '" + APIComponentTypeID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();

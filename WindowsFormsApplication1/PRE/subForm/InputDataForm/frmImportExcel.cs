@@ -271,7 +271,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 }
                 else
                 {
-                    rwAss.AddByExcel = 1;
+                    //rwAss.AddByExcel = 1;
                     busAss.add(rwAss);
                     int assID = busAss.getLastID();
                     addExcel.Add(assID);

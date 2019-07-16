@@ -68,5 +68,13 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getAllIDbyComponentID(ID);
         }
+<<<<<<< HEAD
+=======
+        public List<string> AllName()
+        {
+            return DAL.AllName();
+        }
+        //thao
+>>>>>>> b986e7873c47c3604423ce90851f37ad2b9115ab
     }
 }
