@@ -12,28 +12,26 @@ namespace RBI.DAL.MSSQL
 {
     class INSPECTION_COVERAGE_DETAIL_ConnectUtils
     {
-        public void add(int CoverageID,int ComponentID,int DMItemID,int IMTypeID, DateTime InspectionDate, String EffectivenessCode, int CarriedOut, DateTime CarriedOutDate)
+        public void add(int CoverageID,int DMItemID, DateTime InspectionDate, String EffectivenessCode,String InspectionSummary, int IsCarriedOut, DateTime CarriedOutDate)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
                         "INSERT INTO [dbo].[INSPECTION_COVERAGE_DETAIL]" +
                         "([CoverageID]" +
-                        ",[ComponentID]" +
                         ",[DMItemID]" +
-                        ",[IMTypeID]" +
                         ",[InspectionDate]" +
                         ",[EffectivenessCode]" +
-                        ",[CarriedOut]" +
+                        ",[InspectionSummary]" +
+                        ",[IsCarriedOut]" +
                         ",[CarriedOutDate])" +
                         "VALUES" +
                         "('" + CoverageID + "'" +
-                        ",'" + ComponentID + "'" +
                         ",'" + DMItemID + "'" +
-                        ",'" + IMTypeID + "'" +
                         ",'" + InspectionDate + "'" +
                         ",'" + EffectivenessCode + "'" +
-                        ",'" + CarriedOut + "'" +
+                        ",'" + InspectionSummary + "'" +
+                        ",'" + IsCarriedOut + "'" +
                         ",'" + CarriedOutDate + "')";
             try
             {
@@ -52,21 +50,20 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int CoverageDetailID, int CoverageID, int ComponentID, int DMItemID, int IMTypeID, DateTime InspectionDate, String EffectivenessCode, int CarriedOut, DateTime CarriedOutDate)
+        public void edit(int ID, int CoverageID, int DMItemID, DateTime InspectionDate, String EffectivenessCode, String InspectionSummary, int IsCarriedOut, DateTime CarriedOutDate)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
                         "UPDATE [dbo].[INSPECTION_COVERAGE_DETAIL]" +
                         "SET [CoverageID] = '" + CoverageID + "'" +
-                        ",[ComponentID] = '" + ComponentID + "'" +
                         ",[DMItemID] = '" + DMItemID + "'" +
-                        ",[IMTypeID] ='" + IMTypeID + "'" +
                         ",[InspectionDate] = '" + InspectionDate + "'" +
                         ",[EffectivenessCode] = '" + EffectivenessCode + "'" +
-                        ",[CarriedOut] = '" + CarriedOut + "'" +
+                        ",[InspectionSummary] = '" + InspectionSummary + "'" +
+                        ",[IsCarriedOut] = '" + IsCarriedOut + "'" +
                         ",[CarriedOutDate] = '" + CarriedOutDate + "'" +                        
-                        "WHERE [CoverageDetailID] = '" + CoverageDetailID + "'";
+                        "WHERE [ID] = '" + ID + "'";
 
             try
             {
@@ -85,13 +82,13 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void delete(int CoverageDetailID)
+        public void delete(int ID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
                         "DELETE FROM [dbo].[INSPECTION_COVERAGE_DETAIL]" +
-                        "WHERE [CoverageDetailID] = '" + CoverageDetailID + "'";
+                        "WHERE [ID] = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -115,14 +112,13 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             List<INSPECTION_COVERAGE_DETAIL> list = new List<INSPECTION_COVERAGE_DETAIL>();
             INSPECTION_COVERAGE_DETAIL obj = null;
-            String sql = " Use [rbi] Select [CoverageDetailID]" +
+            String sql = " Use [rbi] Select [ID]" +
                           ",[CoverageID]" +
-                          ",[ComponentID]" +
                           ",[DMItemID]" +
-                          ",[IMTypeID]" +
                           ",[InspectionDate]" +
                           ",[EffectivenessCode]" +
-                          ",[CarriedOut]" +
+                          ",[InspectionSummary]" +
+                          ",[IsCarriedOut]" +
                           ",[CarriedOutDate]" +
                           "From [dbo].[INSPECTION_COVERAGE_DETAIL]";
             try
@@ -137,15 +133,14 @@ namespace RBI.DAL.MSSQL
                         if (reader.HasRows)
                         {
                             obj = new INSPECTION_COVERAGE_DETAIL();
-                            obj.CoverageDetailID = reader.GetInt32(0);
+                            obj.ID = reader.GetInt32(0);
                             obj.CoverageID = reader.GetInt32(1);
-                            obj.ComponentID = reader.GetInt32(2);
-                            obj.DMItemID = reader.GetInt32(3);
-                            obj.IMTypeID = reader.GetInt32(4);
-                            obj.InspectionDate = reader.GetDateTime(5);
-                            obj.EffectivenessCode = reader.GetString(6);
-                            obj.CarriedOut = reader.GetInt32(7);
-                            if (!reader.IsDBNull(8))
+                            obj.DMItemID = reader.GetInt32(2);
+                            obj.InspectionDate = reader.GetDateTime(4);
+                            obj.EffectivenessCode = reader.GetString(5);
+                            
+                            obj.IsCarriedOut = reader.GetInt32(6);
+                            if (!reader.IsDBNull(7))
                             {
                                 obj.CarriedOutDate = reader.GetDateTime(8);
                             }

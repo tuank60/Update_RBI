@@ -14,15 +14,15 @@ namespace RBI.BUS.BUSMSSQL
         INSPECTION_COVERAGE_DETAIL_ConnectUtils DAL = new INSPECTION_COVERAGE_DETAIL_ConnectUtils();
         public void add(INSPECTION_COVERAGE_DETAIL obj)
         {
-            DAL.add(obj.CoverageID, obj.ComponentID, obj.DMItemID, obj.IMTypeID, obj.InspectionDate, obj.EffectivenessCode, obj.CarriedOut, obj.CarriedOutDate);
+            DAL.add(obj.CoverageID, obj.DMItemID, obj.InspectionDate, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate);
         }
         public void edit(INSPECTION_COVERAGE_DETAIL obj)
         {
-            DAL.edit(obj.CoverageDetailID,obj.CoverageID, obj.ComponentID, obj.DMItemID, obj.IMTypeID, obj.InspectionDate, obj.EffectivenessCode, obj.CarriedOut, obj.CarriedOutDate);
+            DAL.edit(obj.ID,obj.CoverageID, obj.DMItemID, obj.InspectionDate, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate);
         }
         public void delete(INSPECTION_COVERAGE_DETAIL obj)
         {
-            DAL.delete(obj.CoverageDetailID);
+            DAL.delete(obj.ID);
         }
         public List<INSPECTION_COVERAGE_DETAIL> getDataSource()
         {

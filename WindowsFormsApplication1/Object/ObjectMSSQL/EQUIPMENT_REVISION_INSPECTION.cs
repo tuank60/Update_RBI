@@ -11,7 +11,7 @@ namespace RBI.Object.ObjectMSSQL
         public int RevisionID { set; get; }
         public int CoverageDetailID { set; get; }
         public String ComponentNumber { set; get; }
-        public int CoverageID { set; get; }
+        public int EquipmentID { set; get; }
         public int DMItemID { set; get; }
         public int IMTypeID { set; get; }
         public DateTime InspectionDate { set; get; }

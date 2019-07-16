@@ -13,11 +13,11 @@ namespace RBI.BUS.BUSMSSQL
         DM_ITEMS_ConnectUtils DAL = new DM_ITEMS_ConnectUtils();
         public void add(DM_ITEMS obj)
         {
-            DAL.add(obj.DMItemID, obj.DMDescription, obj.DMSeq, obj.DMCategoryID, obj.DMCode, obj.HasDF, obj.FailureMode);
+            DAL.add(obj.DMItemID, obj.DMDescription, obj.DMSeq, obj.DMCategoryID, obj.DMCode, obj.HasDF, obj.HasRule, obj.FailureMode);
         }
         public void edit(DM_ITEMS obj)
         {
-            DAL.edit(obj.DMItemID,obj.DMDescription,obj.DMSeq,obj.DMCategoryID,obj.DMCode,obj.HasDF,obj.FailureMode);
+            DAL.edit(obj.DMItemID,obj.DMDescription,obj.DMSeq,obj.DMCategoryID,obj.DMCode,obj.HasDF,obj.HasRule,obj.FailureMode);
         }
         public void delete(DM_ITEMS obj)
         {

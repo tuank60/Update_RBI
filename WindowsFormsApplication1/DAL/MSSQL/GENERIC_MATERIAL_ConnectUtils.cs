@@ -15,7 +15,7 @@ namespace RBI.DAL.MSSQL
         public void add(String MaterialName,float DesignPressure,float DesignTemperature,float MinDesignTemperature,float CorrosionAllowance,
                         float SigmaPhase,String SulfurContent,String HeatTreatment,float ReferenceTemperature,String PTAMaterialCode,String HTHAMaterialCode,
                         int IsPTA,int IsHTHA,int Austenitic,int Temper,int CarbonLowAlloy,int NickelBased,
-                        int ChromeMoreEqual12,float CostFactor)
+                        int ChromeMoreEqual12,float CostFactor,float YieldStrength, float TensileStrength)
         {
         
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -40,7 +40,9 @@ namespace RBI.DAL.MSSQL
                             ",[CarbonLowAlloy]" +
                             ",[NickelBased]" +
                             ",[ChromeMoreEqual12]" +
-                            ",[CostFactor])" +                          
+                            ",[CostFactor]" +
+                            ",[YieldStrength]" +
+                            ",[TensileStrength])" +                          
                             "VALUES" +
                             "('" + MaterialName + "'" +
                             ",'" + DesignPressure + "'" +
@@ -60,7 +62,9 @@ namespace RBI.DAL.MSSQL
                             ",'" + CarbonLowAlloy + "'" +
                             ",'" + NickelBased + "'" +
                             ",'" + ChromeMoreEqual12 + "'" +
-                            ",'" + CostFactor + "')";
+                            ",'" + CostFactor + "'" +
+                            ",'" + YieldStrength + "'" +
+                            ",'" + TensileStrength + "'" ;
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -82,7 +86,7 @@ namespace RBI.DAL.MSSQL
         public void edit(int ID,String MaterialName,float DesignPressure,float DesignTemperature,float MinDesignTemperature,float CorrosionAllowance,
                         float SigmaPhase,String SulfurContent,String HeatTreatment,float ReferenceTemperature,String PTAMaterialCode,String HTHAMaterialCode,
                         int IsPTA,int IsHTHA,int Austenitic,int Temper,int CarbonLowAlloy,int NickelBased,
-                        int ChromeMoreEqual12,float CostFactor)
+                        int ChromeMoreEqual12,float CostFactor,float YieldStrength, float TensileStrength)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -108,6 +112,8 @@ namespace RBI.DAL.MSSQL
                             "      ,[NickelBased] = '" + NickelBased + "'" +
                             "      ,[ChromeMoreEqual12] = '" + ChromeMoreEqual12 + "'" +
                             "      ,[CostFactor] = '" + CostFactor + "'" +
+                            "      ,[YieldStrength] = '" + YieldStrength + "'" +
+                            "      ,[TensileStrength] = '" + TensileStrength + "'" +       
                              " WHERE [ID] = '" + ID + "'";
             try
             {
@@ -174,7 +180,9 @@ namespace RBI.DAL.MSSQL
                             ",[CarbonLowAlloy]"+
                             ",[NickelBased]"+
                             ",[ChromeMoreEqual12]" +
-                            " ,[CostFactor]" +
+                            ",[CostFactor]" +
+                            ",[YieldStrength]" +
+                            ",[TensileStrength]" +
                           "From [dbo].[GENERIC_MATERIAL]";
             try
             {
@@ -239,12 +247,18 @@ namespace RBI.DAL.MSSQL
                             obj.NickelBased = reader.GetInt32(17);
                             obj.ChromeMoreEqual12 = reader.GetInt32(18);
                             
-                            if (!reader .IsDBNull(20))
+                            if (!reader.IsDBNull(20))
                             {
                                 obj.CostFactor = reader.GetFloat(20);
                             }
-
-
+                            if (!reader.IsDBNull(21))
+                            {
+                                obj.YieldStrength = reader.GetFloat(21);
+                            }
+                            if (!reader.IsDBNull(22))
+                            {
+                                obj.TensileStrength = reader.GetFloat(22);
+                            }
                             list.Add(obj);
                         }
                     }
