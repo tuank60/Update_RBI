@@ -80,5 +80,6 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.AllName();
         }
+        //thao
     }
 }
