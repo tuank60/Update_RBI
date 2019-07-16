@@ -13,11 +13,11 @@ namespace RBI.BUS.BUSMSSQL
         RW_FULL_COF_TANK_ConnectUtils DAL = new RW_FULL_COF_TANK_ConnectUtils();
         public void add(RW_FULL_COF_TANK obj)
         {
-            DAL.add(obj.ID, obj.CoFValue, obj.CoFCategory, obj.ProdCost, obj.CoFMatrixValue);
+            DAL.add(obj.ID, obj.CoFValue, obj.CoFCategory, obj.ProdCost, obj.EquipOutageMultiplier, obj.equipcost, obj.popdens, obj.injcost, obj.CoFMatrixValue);
         }
         public void edit(RW_FULL_COF_TANK obj)
         {
-            DAL.edit(obj.ID, obj.CoFValue, obj.CoFCategory, obj.ProdCost, obj.CoFMatrixValue);
+            DAL.edit(obj.ID, obj.CoFValue, obj.CoFCategory, obj.ProdCost, obj.EquipOutageMultiplier, obj.equipcost, obj.popdens, obj.injcost, obj.CoFMatrixValue);
         }
         public void delete(RW_FULL_COF_TANK obj)
         {

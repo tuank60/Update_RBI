@@ -23,13 +23,13 @@ namespace RBI.DAL.MSSQL
                            ",[MaterialName]" +
                            ",[DesignPressure]" +
                            ",[DesignTemperature]" +
-                            ",[MinDesignTemperature]" +
-                            ",[BrittleFractureThickness]" +
+                           ",[MinDesignTemperature]" +
+                           ",[BrittleFractureThickness]" +
                            ",[CorrosionAllowance]" +
                            ",[SigmaPhase]" +
                            ",[SulfurContent]" +
                            ",[HeatTreatment]" +
-                            ",[ReferenceTemperature]" +
+                           ",[ReferenceTemperature]" +
                            ",[PTAMaterialCode]" +
                            ",[HTHAMaterialCode]" +
                            ",[IsPTA]" +
@@ -45,29 +45,29 @@ namespace RBI.DAL.MSSQL
                            ",[CostFactor])" +
                            " VALUES" +
                            "(  '" + ID + "'" +
-                            ", '" + MaterialName + "'" +
-                            ",'" + DesignPressure + "'" +
-                            "," + DesignTemperature + "" +
-                             ", '" + MinDesignTemperature + "'" +
-                             ", '" + BrittleFractureThickness + "'" +
+                           ", '" + MaterialName + "'" +
+                           ", '" + DesignPressure + "'" +
+                           ", '" + DesignTemperature + "'" +
+                           ", '" + MinDesignTemperature + "'" +
+                           ", '" + BrittleFractureThickness + "'" +
                            ", '" + CorrosionAllowance + "'" +
                            ", '" + SigmaPhase + "'" +
                            ", '" + SulfurContent + "'" +
-                          ",'" + HeatTreatment + "'" +
-                              ", '" + ReferenceTemperature + "'" +
+                           ", '" + HeatTreatment + "'" +
+                           ", '" + ReferenceTemperature + "'" +
                            ", '" + PTAMaterialCode + "'" +
                            ", '" + HTHAMaterialCode + "'" +
-                          ",'" + IsPTA + "'" +
-                            ", '" + IsHTHA + "'" +
-                         ", '" + Austenitic + "'" +
-                               ", '" + Temper + "'" +
-                         ", '" + CarbonLowAlloy + "'" +
-                            ", '" + NickelBased + "'" +
+                           ", '" + IsPTA + "'" +
+                           ", '" + IsHTHA + "'" +
+                           ", '" + Austenitic + "'" +
+                           ", '" + Temper + "'" +
+                           ", '" + CarbonLowAlloy + "'" +
+                           ", '" + NickelBased + "'" +
                            ", '" + ChromeMoreEqual12 + "'" +
                            ", '" + AllowableStress + "'" +
                            ", '" + YieldStrength + "'" +
                            ", '" + TensileStrength + "'" +
-                            ",'"+ CostFactor + "')";
+                           ", '" + CostFactor + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -98,15 +98,15 @@ namespace RBI.DAL.MSSQL
                               ",[DesignPressure] = '" + DesignPressure + "'" +
                               ",[DesignTemperature] = '" + DesignTemperature + "'" +
                               ",[MinDesignTemperature] = '" + MinDesignTemperature + "'" +
-                             ",[BrittleFractureThickness] = '" + BrittleFractureThickness + "'" +
-                             ",[CorrosionAllowance] = '" + CorrosionAllowance + "'" +
+                              ",[BrittleFractureThickness] = '" + BrittleFractureThickness + "'" +
+                              ",[CorrosionAllowance] = '" + CorrosionAllowance + "'" +
                               ",[SigmaPhase] = '" + SigmaPhase + "'" +
                               ",[SulfurContent] = '" + SulfurContent + "'" +
                               ",[HeatTreatment] = '" + HeatTreatment + "'" +
                               ",[ReferenceTemperature] = '" + ReferenceTemperature + "'" +
                               ",[PTAMaterialCode] = '" + PTAMaterialCode + "'" +
-                             ",[HTHAMaterialCode] = '" + HTHAMaterialCode + "'" +
-                             ",[IsPTA] = '" + IsPTA + "'" +
+                              ",[HTHAMaterialCode] = '" + HTHAMaterialCode + "'" +
+                              ",[IsPTA] = '" + IsPTA + "'" +
                               ",[IsHTHA] = '" + IsHTHA + "'" +
                               ",[Austenitic] = '" + Austenitic + "'" +
                               ",[Temper] = '" + Temper + "'" +

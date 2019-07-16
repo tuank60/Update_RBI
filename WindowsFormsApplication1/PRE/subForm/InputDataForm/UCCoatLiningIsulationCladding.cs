@@ -28,7 +28,7 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_COATING coat = BUS.getData(ID);
             BUS_UNITS convUnit = new BUS_UNITS();
             String[] extQuality = { "No coating or poor quality", "Medium coating quality", "High coating quality" };
-            String[] inType = { "Organic", "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
+            String[] inType = { "Organic - Low Quality", "Qrganic - Medium Quality", "organic - High Quality", "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
             String[] inCon = { "Good", "Average", "Poor", "Unknown" };
             String[] extType = { "Foam Glass", "Pearlite", "Fibreglass", "Mineral Wool", "Calcium Silicate", "Asbestos" };
             String[] isuCon = { "Above average", "Average", "Below average" };
@@ -101,6 +101,7 @@ namespace RBI.PRE.subForm.InputDataForm
 
             if (corrosionRate == "mm/yr") txtCladdingCorrosionRate.Text = coat.CladdingCorrosionRate.ToString();
             else txtCladdingCorrosionRate.Text = (coat.CladdingCorrosionRate / convUnit.mil).ToString();
+
 
             if (coat.SupportConfigNotAllowCoatingMaint == 1)
                 chkSupport.Checked = true;
@@ -228,6 +229,21 @@ namespace RBI.PRE.subForm.InputDataForm
             {
                 CtrlSPress++;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCorrosionRate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbInternalLinerType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

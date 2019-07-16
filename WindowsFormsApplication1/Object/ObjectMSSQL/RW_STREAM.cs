@@ -36,6 +36,7 @@ namespace RBI.Object.ObjectMSSQL
         public int ModelFluidID { set; get; }
         public float NaOHConcentration { set; get; }
         public int NonFlameToxicFluidID { set; get; }
+        public float LiquidLevel { set; get; }
         public float ReleaseFluidPercentToxic { set; get; }
         public String StoragePhase { set; get; } //??
         public int ToxicFluidID { set; get; }

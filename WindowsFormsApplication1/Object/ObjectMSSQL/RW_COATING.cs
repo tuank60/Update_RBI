@@ -21,6 +21,7 @@ namespace RBI.Object.ObjectMSSQL
         public int InsulationContainsChloride { get; set; }
         public String InternalLinerCondition { get; set; }
         public String InternalLinerType { get; set; }
+        public float CladdingThickness { get; set; }
         public float CladdingCorrosionRate { get; set; }
         public int SupportConfigNotAllowCoatingMaint { get; set; }
     }

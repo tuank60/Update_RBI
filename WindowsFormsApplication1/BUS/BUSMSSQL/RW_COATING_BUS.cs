@@ -14,11 +14,11 @@ namespace RBI.BUS.BUSMSSQL
         RW_COATING_ConnectUtils DAL = new RW_COATING_ConnectUtils();
         public void add(RW_COATING obj)
         {
-            DAL.add(obj.ID, obj.ExternalCoating, obj.ExternalInsulation, obj.InternalCladding,obj.InternalCoating, obj.InternalLining, obj.ExternalCoatingDate, obj.ExternalCoatingQuality, obj.ExternalInsulationType, obj.InsulationCondition, obj.InsulationContainsChloride,obj.InternalLinerCondition,obj.InternalLinerType,obj.CladdingCorrosionRate,obj.SupportConfigNotAllowCoatingMaint);
+            DAL.add(obj.ID, obj.ExternalCoating, obj.ExternalInsulation, obj.InternalCladding,obj.InternalCoating, obj.InternalLining, obj.ExternalCoatingDate, obj.ExternalCoatingQuality, obj.ExternalInsulationType, obj.InsulationCondition, obj.InsulationContainsChloride,obj.InternalLinerCondition,obj.InternalLinerType, obj.CladdingThickness, obj.CladdingCorrosionRate,obj.SupportConfigNotAllowCoatingMaint);
         }
         public void edit(RW_COATING obj)
         {
-            DAL.edit(obj.ID, obj.ExternalCoating, obj.ExternalInsulation, obj.InternalCladding, obj.InternalCoating, obj.InternalLining, obj.ExternalCoatingDate, obj.ExternalCoatingQuality, obj.ExternalInsulationType, obj.InsulationCondition, obj.InsulationContainsChloride, obj.InternalLinerCondition, obj.InternalLinerType, obj.CladdingCorrosionRate, obj.SupportConfigNotAllowCoatingMaint);
+            DAL.edit(obj.ID, obj.ExternalCoating, obj.ExternalInsulation, obj.InternalCladding, obj.InternalCoating, obj.InternalLining, obj.ExternalCoatingDate, obj.ExternalCoatingQuality, obj.ExternalInsulationType, obj.InsulationCondition, obj.InsulationContainsChloride, obj.InternalLinerCondition, obj.InternalLinerType, obj.CladdingThickness, obj.CladdingCorrosionRate, obj.SupportConfigNotAllowCoatingMaint);
         }
         public void delete(RW_COATING obj)
         {

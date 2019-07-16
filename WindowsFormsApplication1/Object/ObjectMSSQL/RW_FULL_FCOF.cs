@@ -12,6 +12,7 @@ namespace RBI.Object.ObjectMSSQL
         public float FCoFValue { get; set; }
         public String FCoFCategory { get; set; }
         public int AIL { get; set; }
+        public float EquipOutageMultiplier { get; set; }
         public float envcost { get; set; }
         public float equipcost { get; set; }
         public float prodcost { get; set; }
