@@ -69,7 +69,7 @@ namespace RBI.BUS.BUSExcel
         {
             return exConn.connectionExcel(path);
         }
-        
+
 
         /// <summary>
         /// get data
@@ -515,7 +515,7 @@ namespace RBI.BUS.BUSExcel
                                 obj.RiskAnalysisPeriod = 36;
                             }
 
-                            //obj.ProposalName = "New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1);
+                            obj.ProposalName = "New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1);
                             obj.AdoptedDate = DateTime.Now;
                             obj.RecommendedDate = DateTime.Now;
                             list.Add(obj);
@@ -704,7 +704,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     list.Add(obj);
                                 }
-                           }
+                            }
                         }
                     }
                 }

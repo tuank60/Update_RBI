@@ -17,7 +17,7 @@ namespace RBI.DAL.MSSQL
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             string name = null;
-            String sql = "select ProposalNo from rbi.dbo.RW_ASSESSMENT where ID = '" + assID + "'";
+            String sql = "select ProposalName from rbi.dbo.RW_ASSESSMENT where ID = '" + assID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -56,18 +56,18 @@ namespace RBI.DAL.MSSQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandText = sql;
                 cmd.Connection = con;
-                using(DbDataReader reader = cmd.ExecuteReader())
+                using (DbDataReader reader = cmd.ExecuteReader())
                 {
-                    while(reader.Read())
+                    while (reader.Read())
                     {
-                        if(reader.HasRows)
+                        if (reader.HasRows)
                         {
                             lstName.Add(reader.GetString(0));
                         }
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex.ToString(), "Cortek RBI");
             }
@@ -111,7 +111,7 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
-        public void add(int EquipmentID, int ComponentID,DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod,int IsEquipmentLinked,String RecordType,int ProposalNo,int RevisionNo,int IsRecommend,String ProposalOrRevision,String AdoptedBy,DateTime AdoptedDate, String RecommendedBy,DateTime RecommendedDate)
+        public void add(int EquipmentID, int ComponentID, DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod, int IsEquipmentLinked, String RecordType, int ProposalNo, int RevisionNo, int IsRecommend, String ProposalOrRevision, String AdoptedBy, DateTime AdoptedDate, String RecommendedBy, DateTime RecommendedDate, String ProposalName, int AddByExcel)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -133,6 +133,8 @@ namespace RBI.DAL.MSSQL
                         ",[AdoptedDate]" +
                         ",[RecommendedBy]" +
                         ",[RecommendedDate]" +
+                        ",[ProposalName]" +
+                        ",[AddByExcel])" +
                         "VALUES" +
                         "('" + EquipmentID + "'" +
                         ",'" + ComponentID + "'" +
@@ -148,7 +150,9 @@ namespace RBI.DAL.MSSQL
                         ",'" + AdoptedBy + "'" +
                         ",'" + AdoptedDate + "'" +
                         ",'" + RecommendedBy + "'" +
-                        ",'" + RecommendedDate + "')" +
+                        ",'" + RecommendedDate + "'" +
+                        ",'" + ProposalName + "'" +
+                        ",'" + AddByExcel + "')" +
                         " ";
 
             try
@@ -168,7 +172,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID,int EquipmentID, int ComponentID, DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod, int IsEquipmentLinked, String RecordType, int ProposalNo, int RevisionNo, int IsRecommend, String ProposalOrRevision, String AdoptedBy, DateTime AdoptedDate, String RecommendedBy, DateTime RecommendedDate)
+        public void edit(int ID, int EquipmentID, int ComponentID, DateTime AssessmentDate, int AssessmentMethod, int RiskAnalysisPeriod, int IsEquipmentLinked, String RecordType, int ProposalNo, int RevisionNo, int IsRecommend, String ProposalOrRevision, String AdoptedBy, DateTime AdoptedDate, String RecommendedBy, DateTime RecommendedDate, String ProposalName)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -190,6 +194,7 @@ namespace RBI.DAL.MSSQL
                         ",[AdoptedDate] = '" + AdoptedDate + "'" +
                         ",[RecommendedBy] = '" + RecommendedBy + "'" +
                         ",[RecommendedDate] = '" + RecommendedDate + "'" +
+                        ",[ProposalName] = '" + ProposalName + "'" +
                         " WHERE [ID] = '" + ID + "'" +
                         " ";
             try
@@ -257,6 +262,7 @@ namespace RBI.DAL.MSSQL
                           ",[AdoptedDate]" +
                           ",[RecommendedBy]" +
                           ",[RecommendedDate]" +
+                          ",[ProposalName]" +
                           "From [dbo].[RW_ASSESSMENT]  ";
             try
             {
@@ -273,51 +279,55 @@ namespace RBI.DAL.MSSQL
                             obj.ID = reader.GetInt32(0);
                             obj.EquipmentID = reader.GetInt32(1);
                             obj.ComponentID = reader.GetInt32(2);
-                            if(!reader .IsDBNull (3))
+                            if (!reader.IsDBNull(3))
                             {
                                 obj.AssessmentDate = reader.GetDateTime(3);
                             }
-                            if(!reader .IsDBNull (4))
+                            if (!reader.IsDBNull(4))
                             {
                                 obj.AssessmentMethod = reader.GetInt32(4);
                             }
-                            if(!reader .IsDBNull (5))
+                            if (!reader.IsDBNull(5))
                             {
                                 obj.RiskAnalysisPeriod = reader.GetInt32(5);
                             }
                             obj.IsEquipmentLinked = reader.GetOrdinal("IsEquipmentLinked");
-                            if(!reader .IsDBNull (7))
+                            if (!reader.IsDBNull(7))
                             {
                                 obj.RecordType = reader.GetString(7);
                             }
-                            if(!reader .IsDBNull (8))
+                            if (!reader.IsDBNull(8))
                             {
                                 obj.ProposalNo = reader.GetInt32(8);
                             }
-                            if(!reader .IsDBNull (9))
+                            if (!reader.IsDBNull(9))
                             {
                                 obj.RevisionNo = reader.GetInt32(9);
                             }
                             obj.IsRecommend = reader.GetOrdinal("IsRecommend");
-                            if(!reader .IsDBNull (11))
+                            if (!reader.IsDBNull(11))
                             {
                                 obj.ProposalOrRevision = reader.GetString(11);
                             }
-                            if(!reader.IsDBNull (12))
+                            if (!reader.IsDBNull(12))
                             {
                                 obj.AdoptedBy = reader.GetString(12);
                             }
-                            if(!reader .IsDBNull (13))
+                            if (!reader.IsDBNull(13))
                             {
                                 obj.AdoptedDate = reader.GetDateTime(13);
                             }
-                            if(!reader.IsDBNull (14))
+                            if (!reader.IsDBNull(14))
                             {
                                 obj.RecommendedBy = reader.GetString(14);
                             }
-                            if(!reader.IsDBNull (15))
+                            if (!reader.IsDBNull(15))
                             {
                                 obj.RecommendedDate = reader.GetDateTime(15);
+                            }
+                            if (!reader.IsDBNull(16))
+                            {
+                                obj.ProposalName = reader.GetString(16);
                             }
                             list.Add(obj);
                         }
@@ -340,7 +350,7 @@ namespace RBI.DAL.MSSQL
             int eqID = 0;
             SqlConnection con = MSSQLDBUtils.GetDBConnection();
             con.Open();
-            String sql = "SELECT [EquipmentID] FROM [rbi].[dbo].[RW_ASSESSMENT] WHERE ID = '"+ID+"'";
+            String sql = "SELECT [EquipmentID] FROM [rbi].[dbo].[RW_ASSESSMENT] WHERE ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -357,7 +367,7 @@ namespace RBI.DAL.MSSQL
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Get Equipment ID Fail------->" + ex.ToString(), "Get Data Fail");
             }
@@ -373,7 +383,7 @@ namespace RBI.DAL.MSSQL
             DateTime assDate = DateTime.Now;
             SqlConnection con = MSSQLDBUtils.GetDBConnection();
             con.Open();
-            String sql = "select AssessmentDate from rbi.dbo.RW_ASSESSMENT where ID = '"+ID+"'";
+            String sql = "select AssessmentDate from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -406,7 +416,7 @@ namespace RBI.DAL.MSSQL
             Boolean IsExist = false;
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "select AssessmentDate from rbi.dbo.RW_ASSESSMENT where ID = '"+ID+"'";
+            String sql = "select AssessmentDate from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -439,7 +449,7 @@ namespace RBI.DAL.MSSQL
             int[] temp = { 0, 0 };
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "select EquipmentID, ComponentID from rbi.dbo.RW_ASSESSMENT where ID = '"+ID+"'";
+            String sql = "select EquipmentID, ComponentID from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -470,7 +480,7 @@ namespace RBI.DAL.MSSQL
             RW_ASSESSMENT ass = new RW_ASSESSMENT();
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "select AssessmentDate,RiskAnalysisPeriod from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
+            String sql = "select ProposalName,AssessmentDate,RiskAnalysisPeriod from rbi.dbo.RW_ASSESSMENT where ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -482,7 +492,7 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-                            //ass.ProposalName = reader.GetString(0);
+                            ass.ProposalName = reader.GetString(0);
                             ass.AssessmentDate = reader.GetDateTime(1);
                             ass.RiskAnalysisPeriod = reader.GetInt32(2);
                         }
@@ -540,7 +550,7 @@ namespace RBI.DAL.MSSQL
             int[] data = new int[2];
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "SELECT ID FROM rbi.dbo.RW_ASSESSMENT WHERE EquipmentID = '"+eqID+"' AND ComponentID='"+comID+"'";
+            String sql = "SELECT AddByExcel,ID FROM rbi.dbo.RW_ASSESSMENT WHERE EquipmentID = '" + eqID + "' AND ComponentID='" + comID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -552,7 +562,7 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-                            //data[0] = Convert.ToInt32(reader.GetBoolean(0));
+                            data[0] = Convert.ToInt32(reader.GetBoolean(0));
                             data[1] = reader.GetInt32(1);
                             temp.Add(data);
                         }
