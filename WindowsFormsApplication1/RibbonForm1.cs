@@ -36,7 +36,7 @@ using DevExpress.XtraTab;
 
 namespace RBI
 {
-    
+
     public partial class RibbonForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public RibbonForm1()
@@ -224,9 +224,9 @@ namespace RBI
                     eq.CommissionDate = busEquipmentMaster.getComissionDate(ass.EquipmentID);
                     RW_COMPONENT com = uc.ucComp.getData(IDProposal, diameter, thickness, corrosionRate); // mai
                     RW_STREAM stream = uc.ucStream.getData(IDProposal); //mai
-                    RW_STREAM op = uc.ucOpera.getDataforStream(IDProposal,temperature, pressure, flowRate); // mai
-                    treeListProject.FocusedNode.SetValue(0, ass.ProposalNo);
-                    xtraTabData.SelectedTabPage.Text = treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + ass.ProposalNo + "]";
+                    RW_STREAM op = uc.ucOpera.getDataforStream(IDProposal, temperature, pressure, flowRate); // mai
+                    treeListProject.FocusedNode.SetValue(0, ass.ProposalName);
+                    xtraTabData.SelectedTabPage.Text = treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + ass.ProposalName + "]";
                     //<gan full gia tri cho stream>
                     stream.FlowRate = op.FlowRate;
                     stream.MaxOperatingPressure = op.MaxOperatingPressure;
@@ -262,18 +262,18 @@ namespace RBI
                             break;
                         }
                     }
-                    
+
                     int[] eq_comID = busAssessment.getEquipmentID_ComponentID(IDProposal);
                     COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
-                    
+
                     String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
                     int APICompID = componentMaster.APIComponentTypeID;
-                    
+
                     String apiComName = busApiComponentType.getAPIComponentTypeName(APICompID);
                     UCAssessmentInfo uAssTest = uc.ucAss;
                     RW_ASSESSMENT ass = uAssTest.getData(IDProposal);
                     RW_EQUIPMENT eq = uc.ucEquipmentTank.getData(IDProposal, temperature, volume);
-                    RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal,diameter,thickness,corrosionRate);
+                    RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate);
                     RW_STREAM stream = uc.ucStreamTank.getData(IDProposal);
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate);
@@ -427,7 +427,7 @@ namespace RBI
             }
             foreach (RW_ASSESSMENT a in readListAssessment)
             {
-                listTree.Add(new TestData(a.ID + 400000, a.ComponentID + 300000, a.ProposalNo.ToString()));
+                listTree.Add(new TestData(a.ID + 400000, a.ComponentID + 300000, a.ProposalName));
             }
             treeListProject.DataSource = listTree;
             treeListProject.RefreshDataSource();
@@ -450,27 +450,27 @@ namespace RBI
             int nodeLevel = e.Node.Level;
             //foreach (TreeListNode item in node.Nodes)
             //{
-                switch(nodeLevel)
-                {
-                    case 0:
-                        e.Node.StateImageIndex = 0;
-                        break;
-                    case 1:
-                        e.Node.StateImageIndex = 1;
-                        break;
-                    case 2:
-                        e.Node.StateImageIndex = 2;
-                        break;
-                    case 3:
-                        e.Node.StateImageIndex = 3;
-                        break;
-                    case 4:
-                        e.Node.StateImageIndex = 4;
-                        break;
-                    default:
-                        e.Node.StateImageIndex = 5;
-                        break;
-                }
+            switch (nodeLevel)
+            {
+                case 0:
+                    e.Node.StateImageIndex = 0;
+                    break;
+                case 1:
+                    e.Node.StateImageIndex = 1;
+                    break;
+                case 2:
+                    e.Node.StateImageIndex = 2;
+                    break;
+                case 3:
+                    e.Node.StateImageIndex = 3;
+                    break;
+                case 4:
+                    e.Node.StateImageIndex = 4;
+                    break;
+                default:
+                    e.Node.StateImageIndex = 5;
+                    break;
+            }
             //}
             selectedLevel = nodeLevel;
         }
@@ -480,31 +480,31 @@ namespace RBI
             treeListProject.StateImageList = imageTreeList;
             //foreach (TreeListNode item in node.Nodes)
             //{
-                if (e.Node.Level == 0)
-                {
-                    e.Node.StateImageIndex = 0;
-                    e.Node.SelectImageIndex = 0;
-                }
-                else if (e.Node.Level == 1)
-                {
-                    e.Node.StateImageIndex = 1;
-                    e.Node.SelectImageIndex = 1;
-                }
-                else if (e.Node.Level == 2)
-                {
-                    e.Node.StateImageIndex = 2;
-                    e.Node.SelectImageIndex = 2;
-                }
-                else if (e.Node.Level == 3)
-                {
-                    e.Node.StateImageIndex = 3;
-                    e.Node.SelectImageIndex = 3;
-                }
-                else
-                {
-                    e.Node.StateImageIndex = 4;
-                    e.Node.SelectImageIndex = 4;
-                }
+            if (e.Node.Level == 0)
+            {
+                e.Node.StateImageIndex = 0;
+                e.Node.SelectImageIndex = 0;
+            }
+            else if (e.Node.Level == 1)
+            {
+                e.Node.StateImageIndex = 1;
+                e.Node.SelectImageIndex = 1;
+            }
+            else if (e.Node.Level == 2)
+            {
+                e.Node.StateImageIndex = 2;
+                e.Node.SelectImageIndex = 2;
+            }
+            else if (e.Node.Level == 3)
+            {
+                e.Node.StateImageIndex = 3;
+                e.Node.SelectImageIndex = 3;
+            }
+            else
+            {
+                e.Node.StateImageIndex = 4;
+                e.Node.SelectImageIndex = 4;
+            }
             //}
         }
         private void btn_add_Component_click(object sender, EventArgs e)
@@ -562,9 +562,9 @@ namespace RBI
             /*-----------------Tìm đuôi Proposal có giá trị lớn nhất-------------------*/
             List<string> lstProposalName = busAssessment.AllName();
             List<int> number = new List<int>();
-            for(int i = 0; i < lstProposalName.Count; i++)
+            for (int i = 0; i < lstProposalName.Count; i++)
             {
-                if(lstProposalName[i].Contains("New Proposal"))
+                if (lstProposalName[i].Contains("New Proposal"))
                 {
                     string b = lstProposalName[i].Substring(12);
                     int temp;
@@ -576,8 +576,8 @@ namespace RBI
             String ProposalName = "New Proposal ";
             if (lstProposalName.Count != 0)
             {
-                 k = number.Max();
-                  ProposalName += (k+1).ToString();
+                k = number.Max();
+                ProposalName += (k + 1).ToString();
             }
             else
             {
@@ -606,10 +606,10 @@ namespace RBI
             }
             rwass.RiskAnalysisPeriod = 36;
             rwass.AssessmentDate = DateTime.Now;
-            //rwass.ProposalName = ProposalName;
+            rwass.ProposalName = ProposalName;
             rwass.AdoptedDate = DateTime.Now;
             rwass.RecommendedDate = DateTime.Now;
-            //rwass.AddByExcel = 0;
+            rwass.AddByExcel = 0;
             busAssessment.add(rwass);
             List<RW_ASSESSMENT> listAss = busAssessment.getDataSource();
             int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);
@@ -632,7 +632,7 @@ namespace RBI
             busRiskGraph.add(rwRiskGraph);
             int[] eq_comID = busAssessment.getEquipmentID_ComponentID(ID);
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
-            
+
             String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
             if (componentTypeName == "Shell" || componentTypeName == "Tank Bottom")
             {
@@ -726,7 +726,7 @@ namespace RBI
                 List<XtraTabPage> temp = new List<XtraTabPage>();
                 foreach (XtraTabPage x in xtraTabData.TabPages)
                 {
-                    foreach(int i in lstAssessmentID)
+                    foreach (int i in lstAssessmentID)
                     {
                         if (x.Name == i.ToString())
                         {
@@ -734,7 +734,7 @@ namespace RBI
                         }
                     }
                 }
-                if(temp.Count != 0)
+                if (temp.Count != 0)
                 {
                     if (MessageBox.Show(temp.Count + " Record(s) are opening! Do you want close it?", "Cortek RBI", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
@@ -794,7 +794,7 @@ namespace RBI
             DialogResult da = MessageBox.Show("Do you want to delete equipment?\nAll data below will be loss", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (da == DialogResult.Yes)
             {
-                
+
                 List<XtraTabPage> temp = new List<XtraTabPage>();
                 foreach (XtraTabPage x in xtraTabData.TabPages)
                 {
@@ -845,7 +845,7 @@ namespace RBI
             }
             else return;
         }
-        
+
         private void deleteFacility(object sender, EventArgs e)
         {
             /*Cần xóa dữ liệu ở các bảng:
@@ -966,7 +966,7 @@ namespace RBI
                 int k = 0;
                 List<int> listFaciId = busFacility.getAllFaciIDbySiteID(IDNodeTreeList);
                 List<XtraTabPage> xtratab = new List<XtraTabPage>();
-                foreach(int i in listFaciId)
+                foreach (int i in listFaciId)
                 {
                     List<XtraTabPage> a = new List<XtraTabPage>();
                     k += CountAssessmentOpen(i, out a);
@@ -1031,7 +1031,7 @@ namespace RBI
         {
             TreeList tree = sender as TreeList;
             TreeListHitInfo hi = tree.CalcHitInfo(tree.PointToClient(Control.MousePosition));
-            
+
             if (treeListProject.Nodes.Count == 0) //tránh lỗi khi treelist rỗng
                 return;
             //<show edit equipment and component>
@@ -1097,8 +1097,8 @@ namespace RBI
                         //UCStream stream = new UCStream(IDProposal);
                         //UCCA ca =  new UCCA(IDProposal);
                         UCRiskFactor riskFactor = new UCRiskFactor(IDProposal);
-                        UCRiskSummary riskSummary =  new UCRiskSummary(IDProposal);
-                        UCDrawGraph drawGraph =  new UCDrawGraph(IDProposal);
+                        UCRiskSummary riskSummary = new UCRiskSummary(IDProposal);
+                        UCDrawGraph drawGraph = new UCDrawGraph(IDProposal);
                         UCInspectionHistorySubform inspection = new UCInspectionHistorySubform(IDProposal);
                         _ass.DataChanged += ThayDoiDuLieu;
                         _ass.CtrlS_Press += CtrlS_Press;
@@ -1120,7 +1120,7 @@ namespace RBI
 
                         stream.DataChanged += ThayDoiDuLieu;
                         stream.CtrlS_Press += CtrlS_Press;
-                        
+
                         checkTank = false;
                         ucTabNormal ucTabnormal = new ucTabNormal(IDProposal, _ass, equipment, component, op, coat, material, stream, ca, riskFactor, riskSummary, inspection, drawGraph);
                         listUC.Add(ucTabnormal);
@@ -1128,10 +1128,10 @@ namespace RBI
                     }
                     else
                     {
-                        
+
                         int componentTypeID = busComponentMaster.getComponentTypeID(treeListProject.FocusedNode.ParentNode.GetValue(0).ToString());
                         string type = null;
-                        switch(componentTypeID)
+                        switch (componentTypeID)
                         {
                             case 8:
                                 type = "Shell";
@@ -1261,11 +1261,11 @@ namespace RBI
                 int eqTypeID = busEquipmentMaster.getEqTypeID(eqID);
                 navBarRecord.Visible = true; //mai // Hien thi navbar
                 // set mau cac thuoc tinh ve mau den mac dinh
-                navAssessmentInfo.Appearance.ForeColor = navEquipment.Appearance.ForeColor = 
-                    navComponent.Appearance.ForeColor = navOperating.Appearance.ForeColor = 
-                    navMaterial.Appearance.ForeColor = navCoating.Appearance.ForeColor = 
-                    navNoInspection.Appearance.ForeColor = navStream.Appearance.ForeColor = 
-                    navRiskFactor.Appearance.ForeColor = navCA.Appearance.ForeColor = 
+                navAssessmentInfo.Appearance.ForeColor = navEquipment.Appearance.ForeColor =
+                    navComponent.Appearance.ForeColor = navOperating.Appearance.ForeColor =
+                    navMaterial.Appearance.ForeColor = navCoating.Appearance.ForeColor =
+                    navNoInspection.Appearance.ForeColor = navStream.Appearance.ForeColor =
+                    navRiskFactor.Appearance.ForeColor = navCA.Appearance.ForeColor =
                     navRiskSummary.Appearance.ForeColor =
                     navViewGraph.Appearance.ForeColor = Color.Black;
                 // end mai
@@ -1423,7 +1423,7 @@ namespace RBI
         }
         private void InitDictionaryDMMachenism()
         {
-            for(int i = 0; i < DM_ID.Length; i++)
+            for (int i = 0; i < DM_ID.Length; i++)
             {
                 damageMachenism.Add(DM_ID[i], DM_Name[i]);
             }
@@ -1431,14 +1431,14 @@ namespace RBI
         private void PoF(out RW_FULL_POF full_pof, out InputInspectionCalculation insplant, out MSSQL_DM_CAL calDM, out List<RW_DAMAGE_MECHANISM> DMmachenism, String ThinningType, String componentNumber, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem)
         {
             InputInspectionCalculation inspl = new InputInspectionCalculation();
-            
+
             #region PoF
             //get EquipmentID ----> get EquipmentTypeName and APIComponentType
             int equipmentID = busAssessment.getEquipmentID(IDProposal);
             String equipmentTypename = busEquipmentType.getEquipmentTypeName(busEquipmentMaster.getEquipmentTypeID(equipmentID));
             int apiID = busComponentMaster.getAPIComponentTypeID(equipmentID);
             string API_ComponentType_Name = busApiComponentType.getAPIComponentTypeName(apiID);
-            
+
             MSSQL_DM_CAL cal = new MSSQL_DM_CAL();
             cal.APIComponentType = API_ComponentType_Name;
             //<input thinning>
@@ -1642,7 +1642,7 @@ namespace RBI
                 age[i] = busInspectionHistory.getAge(componentNumber, DM_Name[i], busEquipmentMaster.getComissionDate(equipmentID), busAssessment.getAssessmentDate(IDProposal));
             }
             age[13] = busInspectionHistory.getAge(componentNumber, DM_Name[15], busEquipmentMaster.getComissionDate(equipmentID), busAssessment.getAssessmentDate(IDProposal));
-            
+
             Df[0] = cal.DF_THIN(age[0]);
             Df[1] = cal.DF_LINNING(age[1]);
             Df[2] = cal.DF_CAUSTIC(age[2]);
@@ -1665,7 +1665,7 @@ namespace RBI
             Df[19] = cal.DF_SIGMA();
             Df[20] = cal.DF_PIPE();
 
-            
+
             List<float> DFSCCAgePlus3 = new List<float>();
             List<float> DFSCCAgePlus6 = new List<float>();
             float[] thinningPlusAge = { 0, 0 };
@@ -1694,7 +1694,7 @@ namespace RBI
                     {
                         damage.LastInspDate = busEquipmentMaster.getComissionDate(equipmentID);
                     }
-                    
+
                     damage.DF1 = Df[i];
                     switch (i)
                     {
@@ -1860,7 +1860,7 @@ namespace RBI
              * Tính DF_Brit_Total
              * Df_Brit = Max((Df_britfract + Df_tempe), Df_885, Df_sigma)
              * 
-             */ 
+             */
             float DF_Brit_Total = Df[16] + Df[17]; //Df_brittle + Df_temp_Embrittle
             for (int i = 18; i < 21; i++)
             {
@@ -1868,8 +1868,8 @@ namespace RBI
                     DF_Brit_Total = Df[i];
             }
             float[] dftotal = { DF_Thin_Total[0], DF_SCC_Total[0], DF_Ext_Total, DF_Brit_Total };
-            
-            
+
+
             /*
              * Tính Df_Total
              * DF_Total = Max(Df_thinning, DF_ext) + DF_SCC + DF_HTHA + DF_Brit + DF_Pipe ---> if thinning is local 
@@ -1976,11 +1976,11 @@ namespace RBI
             float[] risk = new float[15];
             float[] DFtotal = new float[15];
             for (int i = 0; i < age.Length; i++)
-               Console.WriteLine("age jhsdjhn " + age[i]);
+                Console.WriteLine("age jhsdjhn " + age[i]);
             //int ageAssessment = 10;
             for (int i = 1; i < 16; i++)
             {
-                
+
                 tempDf[0] = cal.DF_THIN(age[0] + i);
                 tempDf[1] = cal.DF_LINNING(age[1] + i);
                 tempDf[2] = cal.DF_CAUSTIC(age[2] + i);
@@ -2021,21 +2021,21 @@ namespace RBI
                     if (maxBritt < tempDf[j])
                         maxBritt = tempDf[j];
                 }
-                DFtotal[i-1] = maxSCC + maxExt + maxThin + tempDf[15] + maxBritt;
+                DFtotal[i - 1] = maxSCC + maxExt + maxThin + tempDf[15] + maxBritt;
                 risk[i - 1] = fullpof.FMS * fullpof.GFFTotal * DFtotal[i - 1] * FC;
             }
-            for (int i = 1; i < 16; i++ )
+            for (int i = 1; i < 16; i++)
             {
-                if (DFtotal[i-1] >= DF_thamchieu)
+                if (DFtotal[i - 1] >= DF_thamchieu)
                 {
                     k = i;
                     break;
                 }
             }
-                for (int i = 0; i < risk.Length; i++)
-                {
-                    Console.WriteLine("asdjahdjhsd " + risk[i]);
-                }
+            for (int i = 0; i < risk.Length; i++)
+            {
+                Console.WriteLine("asdjahdjhsd " + risk[i]);
+            }
             riskGraph.Risk = risk;
             if (busRiskGraph.CheckExistID(riskGraph.ID))
                 busRiskGraph.edit(riskGraph);
@@ -2163,7 +2163,7 @@ namespace RBI
             //</Save to Database>
             #endregion
         }
-        private void CA_Tank(out float fc, string API_component, string componentTypeName,RW_EQUIPMENT eq, RW_MATERIAL ma, RW_INPUT_CA_TANK caTank)
+        private void CA_Tank(out float fc, string API_component, string componentTypeName, RW_EQUIPMENT eq, RW_MATERIAL ma, RW_INPUT_CA_TANK caTank)
         {
             #region CA
             MSSQL_CA_CAL CA = new MSSQL_CA_CAL();
@@ -2314,7 +2314,7 @@ namespace RBI
             float FC = 0;
             PoF(out fullpof, out inputInsp, out cacal, out DMmache, ThinningType, componentNumber, eq, com, ma, st, coat, tem);
             CA(out FC, inputInsp.ApiComponentType, com, ma, caInput);
-            InspectionPlan(fullpof,inputInsp, cacal, DMmache, FC);
+            InspectionPlan(fullpof, inputInsp, cacal, DMmache, FC);
         }
         private void Calculation_CA_TANK(String componentTypeName, String API_component, String ThinningType, String componentNumber, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
         {
@@ -2323,7 +2323,7 @@ namespace RBI
             List<RW_DAMAGE_MECHANISM> DMmachenism;
             float FC = 0;
             RW_FULL_POF fullpof;
-            PoF(out fullpof, out  insp, out  cacal, out DMmachenism,ThinningType, componentNumber, eq, com, ma, st, coat, tem);
+            PoF(out fullpof, out insp, out cacal, out DMmachenism, ThinningType, componentNumber, eq, com, ma, st, coat, tem);
             CA_Tank(out FC, API_component, componentTypeName, eq, ma, caTank);
             InspectionPlan(fullpof, insp, cacal, DMmachenism, FC);
         }
@@ -2434,7 +2434,7 @@ namespace RBI
                         break;
                 }
             }
-            
+
             if (xtraTabData.SelectedTabPageIndex == 0) return;
             if (xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Contains(u))
             {
@@ -2443,8 +2443,8 @@ namespace RBI
             else
             {
                 xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Clear();
-                
-                switch(Num)
+
+                switch (Num)
                 {   //3 UC cần được cập nhập lại dữ liệu sau mỗi lần tính toán
                     case 9:
                         UCRiskFactor rf = new UCRiskFactor(IDProposal);
@@ -2456,7 +2456,7 @@ namespace RBI
                         UCRiskSummary rs = new UCRiskSummary(IDProposal);
                         xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(rs);
                         //rs.Dock = DockStyle.Fill;
-                        
+
                         break;
                     case 12:
                         UCDrawGraph gr = new UCDrawGraph(IDProposal);
@@ -2466,14 +2466,14 @@ namespace RBI
                     default:
                         xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(u);
                         //u.Dock = DockStyle.Fill;
-                        
+
                         break;
                 }
-                
+
             }
         }
 
-        
+
 
         private void addNewTab(string tabname, UserControl uc)
         {
@@ -2539,11 +2539,11 @@ namespace RBI
                 workbook.Worksheets[0].Name = "Process Plant";
                 DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[0];
                 string[] header = { "Equipment", "Equipment Description", "Equipment Type", "Components",
-                                    "Represent.fluid", "Fluid phase", "Current Risk($/year)", "Cofcat.Flammable(ft2/failure)",	"Cofcat.People($/failure)",	"Cofcat.Asset($/failure)",
-	                                "Cofcat.Env($/failure)",	"Cofcat.Reputation($/failure)",	"Cofcat.Combined($/failure)",
-                                    "Component Material Glade","InitThinningPOF(failures/year)",	"InitEnv.Cracking(failures/year)",	"InitOtherPOF(failures/year)",	"InitPOF(failures/year)",	"ExtThinningPOF(failures/year)",
-	                                "ExtEnvCrackingProbability(failures/year)",	"ExtOtherPOF(failures/year)",	"ExtPOF(failures/year)",	"POF(failures/year)",
-	                                "Current Risk($/year)",	"Future Risk($/year)"};
+                                    "Represent.fluid", "Fluid phase", "Current Risk($/year)", "Cofcat.Flammable(ft2/failure)",  "Cofcat.People($/failure)", "Cofcat.Asset($/failure)",
+                                    "Cofcat.Env($/failure)",    "Cofcat.Reputation($/failure)", "Cofcat.Combined($/failure)",
+                                    "Component Material Glade","InitThinningPOF(failures/year)",    "InitEnv.Cracking(failures/year)",  "InitOtherPOF(failures/year)",  "InitPOF(failures/year)",   "ExtThinningPOF(failures/year)",
+                                    "ExtEnvCrackingProbability(failures/year)", "ExtOtherPOF(failures/year)",   "ExtPOF(failures/year)",    "POF(failures/year)",
+                                    "Current Risk($/year)", "Future Risk($/year)"};
                 //Merge Cells
                 worksheet.MergeCells(worksheet.Range["A1:D1"]);
                 worksheet.MergeCells(worksheet.Range["G1:M1"]);
@@ -2717,7 +2717,7 @@ namespace RBI
                     }
                 }
             }
-            catch 
+            catch
             {
                 MessageBox.Show("Cannot create file", "Cortek", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -2737,12 +2737,12 @@ namespace RBI
                 DevExpress.Spreadsheet.Worksheet worksheet1 = workbook.Worksheets[1];
                 workbook.Worksheets[1].Visible = false;
                 string[] header = { "System", "Equipment", "Damage Mechanism", "Method", "Coverage", "Availability", "Last Inspection Date", "Inspection Interval", "Due Date" };
-                string[] inspectionType = {"Inspection Type", "ACFM", "Angled Compression Wave", "Angled Shear Wave", "A-scan Thickness Survey", "B-scan", "Chime", 
-                                          "Compton Scatter", "Crack Detection", "C-scan", "Digital Ultrasonic Thickness Gauge", "Endoscopy", 
+                string[] inspectionType = {"Inspection Type", "ACFM", "Angled Compression Wave", "Angled Shear Wave", "A-scan Thickness Survey", "B-scan", "Chime",
+                                          "Compton Scatter", "Crack Detection", "C-scan", "Digital Ultrasonic Thickness Gauge", "Endoscopy",
                                           "Gamma Radiography", "Hardness Surveys", "Hydrotesting", "Leak Detection", "Liquid Penetrant Inspection",
-                                          "Lorus", "Low frequency", "Magnetic Fluorescent Inspection", "Magnetic Flux Leakage", "Magnetic Particle Inspection", 
-                                          "Microstructure Replication", "Naked Eye", "On-line Monitoring", "Passive Thermography", "Penetrant Leak Detection", 
-                                          "Pulsed", "Real-time Radiography", "Remote field", "Standard (flat coil)", "Surface Waves", "Teletest", "TOFD", 
+                                          "Lorus", "Low frequency", "Magnetic Fluorescent Inspection", "Magnetic Flux Leakage", "Magnetic Particle Inspection",
+                                          "Microstructure Replication", "Naked Eye", "On-line Monitoring", "Passive Thermography", "Penetrant Leak Detection",
+                                          "Pulsed", "Real-time Radiography", "Remote field", "Standard (flat coil)", "Surface Waves", "Teletest", "TOFD",
                                           "Transient Thermography", "Video", "X-Radiography" };
                 //data validation for worksheet1
                 for (int i = 0; i < inspectionType.Length; i++)
@@ -3079,7 +3079,7 @@ namespace RBI
         private void navBarItem1_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             xtraTabData.TabPages.TabControl.SelectedTabPageIndex = 0;
-            
+
         }
 
         private void navFullInspHis_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
@@ -3090,13 +3090,13 @@ namespace RBI
         }
         private void CheckAndShowTab(string tabname, int serial)
         {
-           
+
             int n = 0;
             if (int.TryParse(tabname, out n))
             {
                 ShowItemTabpage(n, serial, checkTank);
             }
-                
+
             else
                 return;
         }
@@ -3221,7 +3221,7 @@ namespace RBI
             }
         }
         //
-        
+
         private void navAssessmentInfo_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
             ChangeColorForNavLink(sender); //mai   
@@ -3291,11 +3291,11 @@ namespace RBI
         #endregion
 
         #region Parameters
-        
+
 
         //<input DM>
         private int[] DM_ID = { 8, 9, 61, 57, 73, 69, 60, 72, 62, 70, 67, 34, 32, 66, 63, 68, 2, 18, 1, 14, 10 };
-        private string[] DM_Name = { "Internal Thinning", "Internal Lining Degradation", "Caustic Stress Corrosion Cracking", 
+        private string[] DM_Name = { "Internal Thinning", "Internal Lining Degradation", "Caustic Stress Corrosion Cracking",
                                  "Amine Stress Corrosion Cracking", "Sulphide Stress Corrosion Cracking (H2S)", "HIC/SOHIC-H2S",
                                  "Carbonate Stress Corrosion Cracking", "Polythionic Acid Stress Corrosion Cracking",
                                  "Chloride Stress Corrosion Cracking", "Hydrogen Stress Cracking (HF)", "HF Produced HIC/SOHIC",
@@ -3375,7 +3375,7 @@ namespace RBI
         RW_INSPECTION_HISTORY_BUS busInspectionHistory = new RW_INSPECTION_HISTORY_BUS();
         FACILITY_RISK_TARGET_BUS busRiskTarget = new FACILITY_RISK_TARGET_BUS();
         RW_DAMAGE_MECHANISM_BUS busDamageMechanism = new RW_DAMAGE_MECHANISM_BUS();
-        RW_RISK_GRAPH_BUS busRiskGraph = new RW_RISK_GRAPH_BUS();        
+        RW_RISK_GRAPH_BUS busRiskGraph = new RW_RISK_GRAPH_BUS();
         //</BUS>
         #endregion
         #region Unit String
@@ -3393,12 +3393,12 @@ namespace RBI
         private List<UNITS> listUnit = new List<UNITS>();
         UNITS_BUS busUnit = new UNITS_BUS();
         #endregion
-      
+
         private void xtraTabData_KeyPress(object sender, KeyPressEventArgs e)
         {
             Console.WriteLine("Press");
             xtraTabData.SelectedTabPage.Text += "*";
-            
+
         }
 
         private void btnUnitSeting_ItemClick(object sender, ItemClickEventArgs e)
@@ -3406,15 +3406,71 @@ namespace RBI
             frmUnits uf = new frmUnits();
             uf.ShowInTaskbar = false;
             uf.ShowDialog();
-            if (uf.ButtonOKClicked) 
+            if (uf.ButtonOKClicked)
             {
                 initScheme();
-                DialogResult dlr =  MessageBox.Show("Your computer need to restart! \nDo you want to restart?", "Warning!", MessageBoxButtons.OKCancel);
-                if(dlr == DialogResult.OK)
-                System.Windows.Forms.Application.Restart();
+                DialogResult dlr = MessageBox.Show("Your computer need to restart! \nDo you want to restart?", "Warning!", MessageBoxButtons.OKCancel);
+                if (dlr == DialogResult.OK)
+                    System.Windows.Forms.Application.Restart();
             }
         }
-        
+
+        private void barCheckUCMaterial_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+                SplashScreenManager.ShowForm(typeof(WaitForm2));
+                if (!checkTank)
+                {
+
+                    int selectedID = int.Parse(this.xtraTabData.SelectedTabPage.Name);
+                    ucTabNormal uc = null;
+                    foreach (ucTabNormal u in listUC)
+                    {
+                        if (selectedID == u.ID)
+                        {
+                            uc = u;
+                            break;
+                        }
+                    }
+                    RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, stress, corrosion, thickness);
+                    MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //Save Data
+                    busMaterial.edit(ma);
+                }
+                else
+                {
+                    int selectedID = int.Parse(this.xtraTabData.SelectedTabPage.Name);
+                    ucTabTank uc = null;
+                    foreach (ucTabTank u in listUCTank)
+                    {
+                        if (selectedID == u.ID)
+                        {
+                            uc = u;
+                            break;
+                        }
+                    }
+                    RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, stress, thickness, corrosion);
+                    MessageBox.Show("Calculation finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    busMaterial.edit(ma);
+                }
+                // mai cop
+                navRiskFactor.Appearance.ForeColor = Color.Red;
+                navEquipment.Appearance.ForeColor = navComponent.Appearance.ForeColor =
+                    navOperating.Appearance.ForeColor = navMaterial.Appearance.ForeColor =
+                    navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
+                    navStream.Appearance.ForeColor = navAssessmentInfo.Appearance.ForeColor =
+                    navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
+                    navViewGraph.Appearance.ForeColor = Color.Black;
+                // cop xong
+                SplashScreenManager.CloseForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chưa tính được" + ex.ToString(), "Cortek RBI");
+                SplashScreenManager.CloseForm();
+            }
+        }
     }
-    
+
 }

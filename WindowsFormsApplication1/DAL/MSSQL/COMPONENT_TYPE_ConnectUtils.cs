@@ -127,7 +127,10 @@ namespace RBI.DAL.MSSQL
                             obj.ComponentTypeID = reader.GetInt32(0);
                             obj.ComponentTypeName = reader.GetString(1);
                             obj.ComponentTypeCode = reader.GetString(2);
-                            obj.Shape = reader.GetString(3);
+                            if (!reader.IsDBNull(3))
+                            {
+                                obj.Shape = reader.GetString(3);
+                            }
                             obj.ShapeFactor = (float)reader.GetDouble(4);
                             list.Add(obj);
                         }

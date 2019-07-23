@@ -80,8 +80,8 @@ namespace RBI.PRE.subForm.InputDataForm
             ass.IsEquipmentLinked = chkRiskLinksEquipmentRisk.Checked ? 1 : 0;
             ass.AssessmentMethod = cbAsessmentMethod.SelectedIndex;
             Console.WriteLine(cbAsessmentMethod.SelectedIndex);
-            //ass.RecordType = cbReportTemplate.Text;
-            //ass.ProposalName = txtAssessmentName.Text;
+            ass.RecordType = cbReportTemplate.Text;
+            ass.ProposalName = txtAssessmentName.Text;
             ass.AdoptedDate = DateTime.Now;
             ass.RecommendedDate = DateTime.Now;
             ass.EquipmentID = temp[0];
@@ -111,7 +111,7 @@ namespace RBI.PRE.subForm.InputDataForm
             EQUIPMENT_MASTER eqMa = equipmentMasterBus.getData(equipmentID_componentID[0]);
             COMPONENT_MASTER comMa = comMaBus.getData(equipmentID_componentID[1]);
             RW_ASSESSMENT ass = rwAssBus.getData(ID);
-            //txtAssessmentName.Text = ass.ProposalName;
+            txtAssessmentName.Text = ass.ProposalName;
             dateAssessmentDate.DateTime = ass.AssessmentDate;
             txtRiskAnalysisPeriod.Text = ass.RiskAnalysisPeriod.ToString();
 
