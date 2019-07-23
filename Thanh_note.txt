@@ -1,3 +1,10 @@
+16/7/2019
+-RW_PRD_X: them moi 											(chua lam)
+
+
+
+
+
 15/7/2019
 -RW_COATING: them truong CladdingThickness   								(da them vao DAL, BUS, Object)
 -RW_CF_MASTER: giong bang riskwise5
@@ -19,17 +26,17 @@
 -RW_SECONDARY_FLUID: giong bang riskwise 5
 -RW_SAFETY_FACTOR: giong bang riskwise 5
 -RW_RISK_TARGET: giong bang riskwise 5
--RW_RISK_GRAPH: xoa (chua lam)
+-RW_RISK_GRAPH: xoa 											(chua lam)
 -RW_REVISION_INSPECTION: giong bang riskwise 5
 -RW_PRIMARY_FLUID: giong bang riskwise 5
--RW_PRD_X: them moi (chua lam)
+-RW_PRD_X: them moi 											(chua lam)
 -RW_POINTS: giong bang riskwise 5
 -RW_MATERIAL: 	them truong SteelProductForm, YeildStrength, TensileStrength 				(thao dang lam)
 		xoa truong AllowableStress 
 -RW_LF_MASTER: giong bang riskwise 5
 -RW_LF_DETAIL: giong bang riskwise 5
--RW_INSPECTION_HISTORY: xoa (chua lam)
--RW_INSPECTION_DETAIL: them moi (chua lam)
+-RW_INSPECTION_HISTORY: xoa 										(chua lam)
+-RW_INSPECTION_DETAIL: them moi 									(chua lam)
 -RW_INPUT_CA_LEVEL1, RW_INPUT_CA_TANK: xoa 								(chua lam)	
 -RW_FULL_POF: giong bang riskwise 5
 -RW_FULL_FCOF: them truong EquipOutageMultiplier 							(da them vao DAL, BUS, Object)

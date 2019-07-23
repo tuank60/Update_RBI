@@ -1300,8 +1300,8 @@ namespace RBI
                         initDataforTreeList();
                         int[] comID = busAssessment.getEquipmentID_ComponentID(ID);
                         string comNum = busComponent.GetComponentNumber(comID[1]);
-                        string assName = busAssessment.getAssessmentName(ID);
-                        xtraTabData.SelectedTabPage.Text = comNum + "[" + assName + "]";
+                    
+                        xtraTabData.SelectedTabPage.Text = comNum ;
                     }
                     CtrlSPress_SaveData(c.Name, ID, c);
                     barStaticItem2.Caption = "Saved";
