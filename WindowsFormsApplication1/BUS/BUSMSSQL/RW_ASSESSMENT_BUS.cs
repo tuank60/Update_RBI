@@ -73,13 +73,15 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.AllName();
         }
-<<<<<<< HEAD
+
         public List<int[]> getCheckAddExcel_ID(int comID, int eqID)
         {
             return DAL.getCheckAddExcel_ID(comID, eqID);
         }
+        public string getAssessmentName(int assID)
+        {
+            return DAL.getAssessmentName(assID);
+        }
         //thao
-=======
->>>>>>> c91bda50a2a7aa341e5d609808052768e44e4d17
     }
 }

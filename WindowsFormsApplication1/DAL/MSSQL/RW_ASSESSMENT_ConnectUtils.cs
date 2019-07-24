@@ -494,14 +494,14 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-<<<<<<< HEAD
+
 
                             ass.AssessmentDate = reader.GetDateTime(0);
                             ass.RiskAnalysisPeriod = reader.GetInt32(1);
                             //ass.ProposalName = reader.GetString(0);
-=======
+
                             ass.ProposalName = reader.GetString(0);
->>>>>>> c91bda50a2a7aa341e5d609808052768e44e4d17
+
                             ass.AssessmentDate = reader.GetDateTime(1);
                             ass.RiskAnalysisPeriod = reader.GetInt32(2);
                         }

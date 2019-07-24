@@ -68,7 +68,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 risk.cofcatEnv = CA.FC_envi;//cofcat envroment
                 risk.cofcatReputation = 0; //cof reputation
                 risk.cofcatCombined = CA.FC_total; //combined
-                //risk.componentMaterialGrade; //component material glade
+                risk.componentMaterialGrade; //component material glade
                 risk.initThinningPoF = fullPoF.ThinningAP1;//Thinning POF
                 risk.initEnvCracking = fullPoF.SCCAP1;//Cracking env
                 risk.initOtherPoF = fullPoF.HTHA_AP1 + fullPoF.BrittleAP1;//OtherPOF
