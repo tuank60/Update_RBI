@@ -10,7 +10,6 @@ namespace RBI.Object.ObjectMSSQL
     {
         public int APIComponentTypeID { set; get; }
         public String APIComponentTypeName {set; get;}
-        public String AliasAPIComponentType { set; get; }
         public float GFFSmall {set; get;}
         public float GFFMedium {set; get;}
         public float GFFLarge {set; get;}

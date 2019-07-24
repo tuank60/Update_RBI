@@ -17,6 +17,7 @@ namespace RBI.Object.ObjectMSSQL
         public int IsEquipmentLinked { get; set; }
         public String RecordType { get; set; }
         public int ProposalNo { get; set; } //sua Number thanh String Name
+        public String ProposalName { set; get; }
         public int RevisionNo { get; set; }
         public int IsRecommend { get; set; }
         public String ProposalOrRevision { get; set; }
@@ -24,9 +25,6 @@ namespace RBI.Object.ObjectMSSQL
         public DateTime AdoptedDate { get; set; }
         public String RecommendedBy { get; set; }
         public DateTime RecommendedDate { get; set; }
-        public DateTime Created { set; get; }
-        public String CreatedBy { get; set; }
-        public DateTime Modified { get; set; }
-        public String ModifiedBy { get; set; }
+        public int AddByExcel { set; get; }
     }
 }
