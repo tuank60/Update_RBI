@@ -80,7 +80,7 @@ namespace RBI.PRE.subForm.InputDataForm
             ass.IsEquipmentLinked = chkRiskLinksEquipmentRisk.Checked ? 1 : 0;
             ass.AssessmentMethod = cbAsessmentMethod.SelectedIndex;
             Console.WriteLine(cbAsessmentMethod.SelectedIndex);
-            //ass.RecordType = cbReportTemplate.Text;
+            ass.RecordType = cbReportTemplate.Text;
             ass.ProposalName = txtAssessmentName.Text;
             ass.AdoptedDate = DateTime.Now;
             ass.RecommendedDate = DateTime.Now;

@@ -31,10 +31,24 @@ namespace RBI.Object.ObjectMSSQL
         public String ShakingAmount { get; set; }
         public int ShakingDetected { get; set; }
         public String ShakingTime { get; set; }
-        public int TrampElements { get; set; }
-        public float ShellHeight { get; set; }
+        public String SeverityOfVibration { get; set; }
         public int ReleasePreventionBarrier { get; set; }
         public int ConcreteFoundation { get; set; }
-        public String SeverityOfVibration { get; set; }
+        public float ShellHeight { get; set; }
+        public float AllowableStress { get; set; }
+        public float WeldJointEfficiency { get; set; }
+        public float ComponentVolume { get; set; }
+        public String ConfidenceCorrosionRate { get; set; }
+        public int MinimumStructuralThicknessGoverns { get; set; }
+        public float StructuralThickness { get; set; }
+        public String CracksCurrentCondition { get; set; }
+        public int FabricatedSteel { get; set; }
+        public int EquipmentSatisfied { get; set; }
+        public int NominalOperatingConditions { get; set; }
+        public int CETGreaterOrEqual { get; set; }
+        public int CyclicServiceFatigueVibration { get; set; }
+        public int EquipmentCircuitShock { get; set; }
+        public int HTHADamageObserved { get; set; }
+        public float BrittleFractureThickness { get; set; }
     }
 }

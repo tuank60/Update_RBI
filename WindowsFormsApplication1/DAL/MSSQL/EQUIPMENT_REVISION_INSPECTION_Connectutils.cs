@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class EQUIPMENT_REVISION_INSPECTION_Connectutils
     {
-        public void add(int RevisionID,int CoverageDetailID,String ComponentNumber,int CoverageID,int DMItemID,
+        public void add(int RevisionID,int CoverageDetailID,String ComponentNumber,int EquipmentID,int DMItemID,
                         int IMTypeID,DateTime InspectionDate,String EffectivenessCode,int CarriedOut,DateTime CarriedOutDate
                          )
         {
@@ -23,7 +23,7 @@ namespace RBI.DAL.MSSQL
                             "([RevisionID]" +
                             ",[CoverageDetailID]" +
                             ",[ComponentNumber]" +
-                            ",[CoverageID]" +
+                            ",[EquipmentID]" +
                             ",[DMItemID]" +
                             ",[IMTypeID]" +
                             ",[InspectionDate]" +
@@ -34,7 +34,7 @@ namespace RBI.DAL.MSSQL
                             "('" + RevisionID + "'" +
                             ",'" + CoverageDetailID + "'" +
                             ",'" + ComponentNumber + "'" +
-                            ",'" + CoverageID + "'" +
+                            ",'" + EquipmentID + "'" +
                             ",'" + DMItemID + "'" +
                             ",'" + IMTypeID + "'" +
                             ",'" + InspectionDate + "'" +
@@ -58,7 +58,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int RevisionID,int CoverageDetailID,String ComponentNumber,int CoverageID,int DMItemID,
+        public void edit(int RevisionID,int CoverageDetailID,String ComponentNumber,int EquipmentID,int DMItemID,
                         int IMTypeID,DateTime InspectionDate,String EffectivenessCode,int CarriedOut,DateTime CarriedOutDate)
                         
             {
@@ -68,10 +68,10 @@ namespace RBI.DAL.MSSQL
                            " UPDATE[dbo].[EQUIPMENT_REVISION_INSPECTION]" +
                                   "SET[RevisionID] ='"+RevisionID+"'" +
                                   ",[CoverageDetailID] ='"+CoverageDetailID+"'" +
-                                  ",[ComponentNumber] = '"+CoverageID+"'" +
+                                  ",[ComponentNumber] = '"+EquipmentID+"'" +
                                   ",[DMItemID] = '"+DMItemID+"'" +
                                   ",[IMTypeID] = '"+IMTypeID+"'" +
-                                  ",[CoverageID] = '"+CoverageID+"'" +
+                                  ",[EquipmentID] = '"+EquipmentID+ "'" +
                                   ",[InspectionDate] = '"+InspectionDate+"'" +
                                   ",[EffectivenessCode] = '"+EffectivenessCode+"'" +
                                   ",[CarriedOut] = '"+CarriedOut+"'" +
@@ -129,7 +129,7 @@ namespace RBI.DAL.MSSQL
                         "SELECT [RevisionID]" +
                         ",[CoverageDetailID]" +
                         ",[ComponentNumber]" +
-                        ",[CoverageID]" +
+                        ",[EquipmentID]" +
                         ",[DMItemID]" +
                         ",[IMTypeID]" +
                         ",[InspectionDate]" +
@@ -152,7 +152,7 @@ namespace RBI.DAL.MSSQL
                             obj.RevisionID = reader.GetInt32(0);
                             obj.CoverageDetailID = reader.GetInt32(1);
                             obj.ComponentNumber = reader.GetString(2);
-                            obj.CoverageID = reader.GetInt32(3);
+                            obj.EquipmentID = reader.GetInt32(3);
                             obj.DMItemID = reader.GetInt32(4);
                             obj.IMTypeID = reader.GetInt32(5);
                             obj.InspectionDate = reader.GetDateTime(6);

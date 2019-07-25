@@ -28,7 +28,7 @@ namespace RBI.DAL.MSSQL
                            ",[ValidReading]" +
                            ",[Comment])" +
                            " VALUES" +
-                           "(  '" + PointID + "'" +
+                           "( '" + PointID + "'" +
                            ", '" + ThicknessDate + "'" +
                            ", '" + Orientation + "'" +
                            ", '" + MaxReading + "'" +

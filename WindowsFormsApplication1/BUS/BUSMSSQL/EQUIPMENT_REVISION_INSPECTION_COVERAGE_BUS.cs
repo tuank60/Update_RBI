@@ -13,17 +13,17 @@ namespace RBI.BUS.BUSMSSQL
         EQUIPMENT_REVISION_INSPECTION_COVERAGE_ConnectUtils DAL = new EQUIPMENT_REVISION_INSPECTION_COVERAGE_ConnectUtils();
         public void add(EQUIPMENT_REVISION_INSPECTION_COVERAGE obj)
         {
-            DAL.add(obj.RevisionID, obj.CoverageID, obj.InspPlanName, obj.InspPlanDate, obj.CoverageName,
+            DAL.add(obj.RevisionID, obj.EquipmentID, obj.InspPlanName, obj.InspPlanDate, obj.CoverageName,
                        obj.CoverageDate, obj.Remarks, obj.Findings, obj.FindingRTF);
         }
         public void edit(EQUIPMENT_REVISION_INSPECTION_COVERAGE obj)
         {
-            DAL.edit(obj.RevisionID, obj.CoverageID, obj.InspPlanName, obj.InspPlanDate, obj.CoverageName,
+            DAL.edit(obj.RevisionID, obj.EquipmentID, obj.InspPlanName, obj.InspPlanDate, obj.CoverageName,
                        obj.CoverageDate, obj.Remarks, obj.Findings, obj.FindingRTF);
         }
         public void delete(EQUIPMENT_REVISION_INSPECTION_COVERAGE obj)
         {
-            DAL.delete(obj.RevisionID, obj.CoverageID);
+            DAL.delete(obj.RevisionID, obj.EquipmentID);
         }
         public List<EQUIPMENT_REVISION_INSPECTION_COVERAGE> getDataSource()
         {

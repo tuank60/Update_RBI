@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_COATING_ConnectUtils
     {
-        public void add(int ID, int ExternalCoating, int ExternalInsulation, int InternalCladding, int InternalCoating, int InternalLining, DateTime ExternalCoatingDate, String ExternalCoatingQuality, String ExternalInsulationType, String InsulationCondition, int InsulationContainsChloride, String InternalLinerCondition, String InternalLinerType, float CladdingCorrosionRate, int SupportConfigNotAllowCoatingMaint)
+        public void add(int ID, int ExternalCoating, int ExternalInsulation, int InternalCladding, int InternalCoating, int InternalLining, DateTime ExternalCoatingDate, String ExternalCoatingQuality, String ExternalInsulationType, String InsulationCondition, int InsulationContainsChloride, String InternalLinerCondition, String InternalLinerType, float CladdingThickness, float CladdingCorrosionRate, int SupportConfigNotAllowCoatingMaint)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -32,6 +32,7 @@ namespace RBI.DAL.MSSQL
                         ",[InsulationContainsChloride]" +
                         ",[InternalLinerCondition]" +
                         ",[InternalLinerType]" +
+                        ",[CladdingThickness]" +
                         ",[CladdingCorrosionRate]" +
                         ",[SupportConfigNotAllowCoatingMaint])" +
                         "VALUES" +
@@ -48,6 +49,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + InsulationContainsChloride + "'" +
                         ",'" + InternalLinerCondition + "'" +
                         ",'" + InternalLinerType + "'" +
+                        ",'" + CladdingThickness + "'" + 
                         ",'" + CladdingCorrosionRate + "'" +
                         ",'" + SupportConfigNotAllowCoatingMaint + "')" +
                         " ";
@@ -68,7 +70,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, int ExternalCoating, int ExternalInsulation, int InternalCladding, int InternalCoating, int InternalLining, DateTime ExternalCoatingDate, String ExternalCoatingQuality, String ExternalInsulationType, String InsulationCondition, int InsulationContainsChloride, String InternalLinerCondition, String InternalLinerType, float CladdingCorrosionRate, int SupportConfigNotAllowCoatingMaint)
+        public void edit(int ID, int ExternalCoating, int ExternalInsulation, int InternalCladding, int InternalCoating, int InternalLining, DateTime ExternalCoatingDate, String ExternalCoatingQuality, String ExternalInsulationType, String InsulationCondition, int InsulationContainsChloride, String InternalLinerCondition, String InternalLinerType, float CladdingThickness, float CladdingCorrosionRate, int SupportConfigNotAllowCoatingMaint)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -88,6 +90,7 @@ namespace RBI.DAL.MSSQL
                         ",[InsulationContainsChloride] = '" + InsulationContainsChloride + "'" +
                         ",[InternalLinerCondition] = '" + InternalLinerCondition + "'" +
                         ",[InternalLinerType] = '" + InternalLinerType + "'" +
+                        ",[CladdingThickness] = '" + CladdingThickness + "'" +
                         ",[CladdingCorrosionRate] = '" + CladdingCorrosionRate + "'" +
                         ",[SupportConfigNotAllowCoatingMaint] = '" + SupportConfigNotAllowCoatingMaint + "'" +
                         
@@ -155,6 +158,7 @@ namespace RBI.DAL.MSSQL
                           ",[InsulationContainsChloride]" +
                           ",[InternalLinerCondition]" +
                           ",[InternalLinerType]" +
+                          ",[CladdingThickness]" +
                           ",[CladdingCorrosionRate]" +
                           ",[ConfigNotAllowCoatingMaint]" +
                           "From [dbo].[RW_COATING]  ";
@@ -205,10 +209,14 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(13))
                             {
-                                obj.CladdingCorrosionRate = reader.GetFloat(13);
+                                obj.CladdingThickness = reader.GetFloat(13);
+                            }
+                            if (!reader.IsDBNull(14))
+                            {
+                                obj.CladdingCorrosionRate = reader.GetFloat(14);
                             }
 
-                            obj.SupportConfigNotAllowCoatingMaint = reader.GetInt32(14);
+                            obj.SupportConfigNotAllowCoatingMaint = reader.GetInt32(15);
                             
 
                             list.Add(obj);
@@ -244,6 +252,7 @@ namespace RBI.DAL.MSSQL
                           ",[InsulationContainsChloride]" +
                           ",[InternalLinerCondition]" +
                           ",[InternalLinerType]" +
+                          ",[CladdingThickness]" +
                           ",[CladdingCorrosionRate]" +
                           ",[SupportConfigNotAllowCoatingMaint]" +
                           "From [dbo].[RW_COATING] WHERE [ID] = '" + ID + "'";
@@ -293,10 +302,14 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(13))
                             {
-                                obj.CladdingCorrosionRate = (float)reader.GetDouble(13);
+                                obj.CladdingThickness = (float)reader.GetDouble(13);
+                            }
+                            if (!reader.IsDBNull(14))
+                            {
+                                obj.CladdingCorrosionRate = (float)reader.GetDouble(14);
                             }
 
-                            obj.SupportConfigNotAllowCoatingMaint = Convert.ToInt32(reader.GetBoolean(14));
+                            obj.SupportConfigNotAllowCoatingMaint = Convert.ToInt32(reader.GetBoolean(15));
                             Console.WriteLine(obj.ExternalCoatingQuality);
                         }
                     }

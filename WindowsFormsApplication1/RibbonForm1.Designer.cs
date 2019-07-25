@@ -720,7 +720,7 @@
             // 
             // ribStatusbar
             // 
-            this.ribStatusbar.Location = new System.Drawing.Point(0, 667);
+            this.ribStatusbar.Location = new System.Drawing.Point(0, 612);
             this.ribStatusbar.Name = "ribStatusbar";
             this.ribStatusbar.Ribbon = this.ribbon;
             this.ribStatusbar.Size = new System.Drawing.Size(1084, 23);
@@ -736,7 +736,7 @@
             this.xtraTabData.Location = new System.Drawing.Point(398, 147);
             this.xtraTabData.Name = "xtraTabData";
             this.xtraTabData.SelectedTabPage = this.xTabHome;
-            this.xtraTabData.Size = new System.Drawing.Size(686, 520);
+            this.xtraTabData.Size = new System.Drawing.Size(686, 465);
             this.xtraTabData.TabIndex = 2;
             this.xtraTabData.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabHome});
@@ -754,7 +754,7 @@
             this.xTabHome.Controls.Add(this.panel1);
             this.xTabHome.Name = "xTabHome";
             this.xTabHome.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.xTabHome.Size = new System.Drawing.Size(684, 493);
+            this.xTabHome.Size = new System.Drawing.Size(684, 438);
             this.xTabHome.Text = "Home";
             // 
             // panel1
@@ -764,7 +764,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(684, 493);
+            this.panel1.Size = new System.Drawing.Size(684, 438);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -784,7 +784,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treeListProject.Location = new System.Drawing.Point(3, 3);
             this.treeListProject.Name = "treeListProject";
-            this.treeListProject.Size = new System.Drawing.Size(198, 486);
+            this.treeListProject.Size = new System.Drawing.Size(198, 411);
             this.treeListProject.StateImageList = this.imageTreeList;
             this.treeListProject.TabIndex = 1;
             this.treeListProject.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListProject_FocusedNodeChanged);
@@ -826,11 +826,11 @@
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel2.ID = new System.Guid("1d634bbe-f85f-4ce6-b34c-06ba1b87d588");
-            this.dockPanel2.Location = new System.Drawing.Point(0, 147);
+            this.dockPanel2.Location = new System.Drawing.Point(187, 147);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel2.OriginalSize = new System.Drawing.Size(211, 161);
-            this.dockPanel2.Size = new System.Drawing.Size(211, 520);
+            this.dockPanel2.Size = new System.Drawing.Size(211, 465);
             this.dockPanel2.Text = "Items";
             // 
             // dockPanel2_Container
@@ -838,7 +838,7 @@
             this.dockPanel2_Container.Controls.Add(this.treeListProject);
             this.dockPanel2_Container.Location = new System.Drawing.Point(3, 25);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(204, 492);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(204, 437);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // dockPanel1
@@ -846,11 +846,11 @@
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("b4634cc6-3621-4a87-a427-cf55394912fb");
-            this.dockPanel1.Location = new System.Drawing.Point(211, 147);
+            this.dockPanel1.Location = new System.Drawing.Point(0, 147);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
             this.dockPanel1.OriginalSize = new System.Drawing.Size(187, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(187, 520);
+            this.dockPanel1.Size = new System.Drawing.Size(187, 465);
             this.dockPanel1.Text = "Main Menu";
             // 
             // dockPanel1_Container
@@ -858,7 +858,7 @@
             this.dockPanel1_Container.Controls.Add(this.navBarControl2);
             this.dockPanel1_Container.Location = new System.Drawing.Point(3, 25);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(180, 492);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(180, 437);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl2
@@ -951,7 +951,6 @@
             // navBarRecord
             // 
             this.navBarRecord.Caption = "Record";
-            this.navBarRecord.Expanded = true;
             this.navBarRecord.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navAssessmentInfo),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navEquipment),
@@ -1106,10 +1105,10 @@
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 690);
+            this.ClientSize = new System.Drawing.Size(1084, 635);
             this.Controls.Add(this.xtraTabData);
-            this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.dockPanel2);
+            this.Controls.Add(this.dockPanel1);
             this.Controls.Add(this.ribStatusbar);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;

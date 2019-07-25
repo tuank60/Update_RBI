@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class GENERIC_FLUID_ConnectUtils
     {
-        public void add(String GenericFluid,float NBP,float MW,float Density,int ChemicalFactor,int HealthDegree,
+        public void add(String GenericFluid,String ExamplesOfApplicable,int FluidType, float NBP,float MW,float Density,int AmbientState,int AutoIgnitionTemperature, int ChemicalFactor,int HealthDegree,
                        int Flammability,int Reactivity)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -20,18 +20,26 @@ namespace RBI.DAL.MSSQL
             String sql = "USE [rbi]" +
                             "INSERT INTO [dbo].[GENERIC_FLUID]" +
                             "([GenericFluid]" +
+                            "[ExamplesOfApplicable]" +
+                            "[FluidType]" +
                             ",[NBP]" +
                             ",[MW]" +
                             ",[Density]" +
+                            ",[AmbientState]" +
+                            ",[AutoIgnitionTemperature]" +
                             ",[ChemicalFactor]" +
                             ",[HealthDegree]" +
                             ",[Flammability]" +
                             ",[Reactivity])" +
                             "VALUES" +
                             "('" + GenericFluid + "'" +
+                            ",'" + ExamplesOfApplicable + "'" +
+                            ",'" + FluidType + "'" +
                             ",'" + NBP + "'" +
                             ",'" + MW + "'" +
                             ",'" + Density + "'" +
+                            ",'" + AmbientState + "'" +
+                            ",'" + AutoIgnitionTemperature + "'" +
                             ",'" + ChemicalFactor + "'" +
                             ",'" + HealthDegree + "'" +
                             ",'" + Flammability + "'" +
@@ -54,7 +62,7 @@ namespace RBI.DAL.MSSQL
             }
 
         }
-        public void edit(int GenericFluidID, String GenericFluid,float NBP,float MW,float Density,int ChemicalFactor,int HealthDegree,
+        public void edit(int GenericFluidID, String GenericFluid, String ExamplesOfApplicable, int FluidType, float NBP, float MW, float Density, int AmbientState, int AutoIgnitionTemperature, int ChemicalFactor, int HealthDegree,
                        int Flammability,int Reactivity)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -63,9 +71,13 @@ namespace RBI.DAL.MSSQL
                             "UPDATE [dbo].[GENERIC_FLUID]" +
                             "   SET [GenericFluidID] = '" + GenericFluidID + "'" +
                             "      ,[GenericFluid] = '" + GenericFluid + "'" +
+                            "      ,[ExamplesOfApplicable] = '" + ExamplesOfApplicable + "'" +
+                            "      ,[FluidType] = '" + FluidType + "'" +
                             "      ,[NBP] = '" + NBP + "'" +
                             "      ,[MW] = '" + MW + "'" +
                             "      ,[Density] = '" + Density + "'" +
+                            "      ,[AmbientState] = '" + AmbientState + "'" +
+                            "      ,[AutoIgnitionTemperature] = '" + AutoIgnitionTemperature + "'" +
                             "      ,[ChemicalFactor] = '" + ChemicalFactor + "'" +
                             "      ,[HealthDegree] = '" + HealthDegree + "'" +
                             "      ,[Flammability] = '" + Flammability + "'" +
@@ -121,9 +133,13 @@ namespace RBI.DAL.MSSQL
             GENERIC_FLUID obj = null;
             String sql = " Use [rbi] Select [GenericFluidID]" +                    
                           ",[GenericFluid]" +
+                          ",[ExamplesOfApplicable]" +
+                          ",[FluidType]" +
                           ",[NBP]" +
                           ",[MW]" +
                           ",[Density]" +
+                          ",[AmbientState]" +
+                          ",[AutoIgnitionTemperature]" +
                           ",[ChemicalFactor]" +
                           ",[HealthDegree]" +
                           ",[Flammability]" +
@@ -144,33 +160,43 @@ namespace RBI.DAL.MSSQL
                         obj = new GENERIC_FLUID();
                         obj.GenericFluidID = reader.GetInt32(0);
                         obj.GenericFluid = reader.GetString(1);
-                        if(!reader .IsDBNull(2))
+                        if(!reader.IsDBNull(2))
                         {
-                        obj.NBP = reader.GetFloat(2);
+                        obj.ExamplesOfApplicable = reader.GetString(2);
                         }
-                        if(!reader .IsDBNull(3))
-                        {
-                        obj.MW = reader.GetFloat(3);
-                        }
+                        obj.FluidType = reader.GetInt32(3);
                         if(!reader .IsDBNull(4))
                         {
-                        obj.Density = reader.GetFloat(4);
+                        obj.NBP = reader.GetFloat(4);
                         }
                         if(!reader .IsDBNull(5))
                         {
-                        obj.ChemicalFactor = reader.GetInt32(5);
+                        obj.MW = reader.GetFloat(5);
                         }
                         if(!reader .IsDBNull(6))
                         {
-                        obj.HealthDegree = reader.GetInt32(6);
+                        obj.Density = reader.GetFloat(6);
                         }
-                        if(!reader .IsDBNull(7))
+                        obj.AmbientState = reader.GetInt32(7);
+                        if(!reader.IsDBNull(8))
                         {
-                        obj.Flammability = reader.GetInt32(7);
+                        obj.AutoIgnitionTemperature = reader.GetInt32(8);
                         }
-                        if(!reader .IsDBNull(8))
+                        if (!reader .IsDBNull(9))
                         {
-                        obj.Reactivity = reader.GetInt32(8);
+                        obj.ChemicalFactor = reader.GetInt32(9);
+                        }
+                        if(!reader .IsDBNull(10))
+                        {
+                        obj.HealthDegree = reader.GetInt32(10);
+                        }
+                        if(!reader .IsDBNull(11))
+                        {
+                        obj.Flammability = reader.GetInt32(11);
+                        }
+                        if(!reader .IsDBNull(12))
+                        {
+                        obj.Reactivity = reader.GetInt32(12);
                         }
                         
                         

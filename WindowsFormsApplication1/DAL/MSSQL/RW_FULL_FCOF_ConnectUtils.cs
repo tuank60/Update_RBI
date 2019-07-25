@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_FULL_FCOF_ConnectUtils
     {
-        public void add(int ID, double FCoFValue, String FCoFCategory,int AIL,double envcost,double equipcost,double prodcost, double popdens,double injcost,double FCoFMatrixValue)
+        public void add(int ID, double FCoFValue, String FCoFCategory,int AIL, float EquipOutageMultiplier, double envcost,double equipcost,double prodcost, double popdens,double injcost,double FCoFMatrixValue)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -23,6 +23,7 @@ namespace RBI.DAL.MSSQL
                         ",[FCoFValue]" +
                         ",[FCoFCategory]" +
                         ",[AIL]" +
+                        ",[EquipOutageMultiplier" +
                         ",[envcost]" +
                         ",[equipcost]" +
                         ",[prodcost]" +
@@ -34,6 +35,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + FCoFValue + "'" +
                         ",'" + FCoFCategory + "'" +
                         ",'" + AIL + "'" +
+                        ",'" + EquipOutageMultiplier + "'" +
                         ",'" + envcost + "'" +
                         ",'" + equipcost + "'" +
                         ",'" + prodcost + "'" +
@@ -58,7 +60,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, double FCoFValue, String FCoFCategory, int AIL, double envcost, double equipcost, double prodcost, double popdens, double injcost, double FCoFMatrixValue)
+        public void edit(int ID, double FCoFValue, String FCoFCategory, int AIL, float EquipOutageMultiplier, double envcost, double equipcost, double prodcost, double popdens, double injcost, double FCoFMatrixValue)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -69,13 +71,13 @@ namespace RBI.DAL.MSSQL
                         ",[FCoFValue] = '" + FCoFValue + "'" +
                         ",[FCoFCategory] = '" + FCoFCategory + "'" +
                         ",[AIL] = '" + AIL + "'" +
+                        ",[EquipOutageMultiplier] = '" + EquipOutageMultiplier +"," + 
                         ",[envcost] = '" + envcost + "'" +
                         ",[equipcost] = '" + equipcost + "'" +
                         ",[prodcost] = '" + prodcost + "'" +
                         ",[popdens] = '" + popdens + "'" +
                         ",[injcost] = '" + injcost + "'" +
-                        ",[FCoFMatrixValue] = '" + FCoFMatrixValue + "'" +
-                        
+                        ",[FCoFMatrixValue] = '" + FCoFMatrixValue + "'" +                      
                         " WHERE [ID] = '" + ID + "'" +
                         " ";
             try
@@ -134,6 +136,7 @@ namespace RBI.DAL.MSSQL
                         ",[FCoFValue]" +
                         ",[FCoFCategory]" +
                         ",[AIL]" +
+                        ",[EquipOutagemultiplier]" +
                         ",[envcost]" +
                         ",[equipcost]" +
                         ",[prodcost]" +
@@ -165,27 +168,31 @@ namespace RBI.DAL.MSSQL
                             obj.AIL = reader.GetInt32(3);
                             if (!reader.IsDBNull(4))
                             {
-                                obj.envcost = reader.GetFloat(4);
+                                obj.EquipOutageMultiplier = reader.GetFloat(4);
                             }
                             if (!reader.IsDBNull(5))
                             {
-                                obj.equipcost = reader.GetFloat(5);
+                                obj.envcost = reader.GetFloat(5);
                             }
                             if (!reader.IsDBNull(6))
                             {
-                                obj.prodcost = reader.GetFloat(6);
+                                obj.equipcost = reader.GetFloat(6);
                             }
                             if (!reader.IsDBNull(7))
                             {
-                                obj.popdens = reader.GetFloat(7);
+                                obj.prodcost = reader.GetFloat(7);
                             }
                             if (!reader.IsDBNull(8))
                             {
-                                obj.injcost = reader.GetFloat(8);
+                                obj.popdens = reader.GetFloat(8);
                             }
                             if (!reader.IsDBNull(9))
                             {
-                                obj.FCoFMatrixValue = reader.GetFloat(9);
+                                obj.injcost = reader.GetFloat(9);
+                            }
+                            if (!reader.IsDBNull(10))
+                            {
+                                obj.FCoFMatrixValue = reader.GetFloat(10);
                             }
                             list.Add(obj);
 
@@ -214,7 +221,7 @@ namespace RBI.DAL.MSSQL
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             RW_FULL_FCOF obj = new RW_FULL_FCOF();
-            String sql = "SELECT ID,FCoFValue,FCoFCategory,AIL,envcost,equipcost,prodcost,popdens,injcost, FCoFMatrixValue FROM rbi.dbo.RW_FULL_FCOF WHERE ID = '"+ID+"'";
+            String sql = "SELECT ID,FCoFValue,FCoFCategory,AIL,EquipOutageMultiplier,envcost,equipcost,prodcost,popdens,injcost, FCoFMatrixValue FROM rbi.dbo.RW_FULL_FCOF WHERE ID = '"+ID+"'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -241,27 +248,31 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.envcost = (float)reader.GetDouble(4);
+                                obj.EquipOutageMultiplier = (float)reader.GetDouble(4);
                             }
                             if (!reader.IsDBNull(5))
                             {
-                                obj.equipcost = (float)reader.GetDouble(5);
+                                obj.envcost = (float)reader.GetDouble(5);
                             }
                             if (!reader.IsDBNull(6))
                             {
-                                obj.prodcost = (float)reader.GetDouble(6);
+                                obj.equipcost = (float)reader.GetDouble(6);
                             }
                             if (!reader.IsDBNull(7))
                             {
-                                obj.popdens = (float)reader.GetDouble(7);
+                                obj.prodcost = (float)reader.GetDouble(7);
                             }
                             if (!reader.IsDBNull(8))
                             {
-                                obj.injcost = (float)reader.GetDouble(8);
+                                obj.popdens = (float)reader.GetDouble(8);
                             }
                             if (!reader.IsDBNull(9))
                             {
-                                obj.FCoFMatrixValue = (float)reader.GetDouble(9);
+                                obj.injcost = (float)reader.GetDouble(9);
+                            }
+                            if (!reader.IsDBNull(10))
+                            {
+                                obj.FCoFMatrixValue = (float)reader.GetDouble(10);
                             }
                         }
                     }

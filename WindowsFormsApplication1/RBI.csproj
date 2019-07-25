@@ -147,7 +147,7 @@
     <Compile Include="BUS\BUSMSSQL\IM_TYPE_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\INSPECTION_COVERAGE_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\INSPECTION_COVERAGE_DETAIL_BUS.cs" />
-    <Compile Include="BUS\BUSMSSQL\INSPECTION_COVERAGE_EQUIPMENT_BUS.cs" />
+    <Compile Include="BUS\BUSMSSQL\INSPECTION_DETAIL_TECHNIQUE_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\INSPECTION_PLAN_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\ITEM_LIST_CONFIG_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\MANUFACTURER_BUS.cs" />
@@ -183,7 +183,6 @@
     <Compile Include="BUS\BUSMSSQL\RW_POINTS_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_PRIMARY_FLUID_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_REVISION_INSPECTION_BUS.cs" />
-    <Compile Include="BUS\BUSMSSQL\RW_RISK_GRAPH_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_RISK_TARGET_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_SAFETY_FACTOR_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_SECONDARY_FLUID_BUS.cs" />
@@ -239,12 +238,13 @@
     <Compile Include="DAL\MSSQL\IM_TYPE_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\INSPECTION_COVERAGE_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\INSPECTION_COVERAGE_DETAIL_ConnectUtils.cs" />
-    <Compile Include="DAL\MSSQL\INSPECTION_COVERAGE_EQUIPMENT_ConnectUtils.cs" />
+    <Compile Include="DAL\MSSQL\INSPECTION_DETAIL_TECHNIQUE_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\INSPECTION_PLAN_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\ITEM_LIST_CONFIG_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\MANUFACTURER_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\MSSQLDBUtils.cs" />
     <Compile Include="DAL\MSSQL\POINTS_ConnectUtils.cs" />
+    <Compile Include="DAL\MSSQL\PRD_COMPONENT_MASTER_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\REPORT_TEMPLATE_ASSESSMENT_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\REPORT_TEMPLATE_COMPONENT_DEFAULT_ConnectUtilscs.cs" />
     <Compile Include="DAL\MSSQL\REPORT_TEMPLATE_ConnectUtils.cs" />
@@ -277,7 +277,6 @@
     <Compile Include="DAL\MSSQL\RW_POINTS_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_PRIMARY_FLUID_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_REVISION_INSPECTION_ConnectUtils.cs" />
-    <Compile Include="DAL\MSSQL\RW_RISK_GRAPH_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_RISK_TARGET_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_SAFETY_FACTOR_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_SECONDARY_FLUID_ConnectUtils.cs" />
@@ -300,6 +299,7 @@
     <Compile Include="Object\InputInspectionCalculation.cs" />
     <Compile Include="Object\CtrlSPressEventArgs.cs" />
     <Compile Include="Object\ObjectMSSQL\API_COMPONENT_TYPE.cs" />
+    <Compile Include="Object\ObjectMSSQL\INSPECTION_DETAIL_TECHNIQUE.cs" />
     <Compile Include="Object\ObjectMSSQL\COMPONENT_DETAIL.cs" />
     <Compile Include="Object\ObjectMSSQL\COMPONENT_MASTER.cs" />
     <Compile Include="Object\ObjectMSSQL\COMPONENT_MODELLING.cs" />
@@ -332,7 +332,6 @@
     <Compile Include="Object\ObjectMSSQL\IM_TYPE.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_COVERAGE.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_COVERAGE_DETAIL.cs" />
-    <Compile Include="Object\ObjectMSSQL\INSPECTION_COVERAGE_EQUIPMENT.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_PLAN.cs" />
     <Compile Include="Object\ObjectMSSQL\ITEM_LIST_CONFIG.cs" />
     <Compile Include="Object\ObjectMSSQL\MANUFACTURER.cs" />
@@ -528,12 +527,6 @@
     </Compile>
     <Compile Include="PRE\subForm\InputDataForm\UCMaterialTank.Designer.cs">
       <DependentUpon>UCMaterialTank.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PRE\subForm\OutputDataForm\UCDrawGraph.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PRE\subForm\OutputDataForm\UCDrawGraph.Designer.cs">
-      <DependentUpon>UCDrawGraph.cs</DependentUpon>
     </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\UCInspectionHistory.cs">
       <SubType>UserControl</SubType>
@@ -739,9 +732,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\UCStream.resx">
       <DependentUpon>UCStream.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRE\subForm\OutputDataForm\UCDrawGraph.resx">
-      <DependentUpon>UCDrawGraph.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\UCInspectionHistory.resx">
       <DependentUpon>UCInspectionHistory.cs</DependentUpon>

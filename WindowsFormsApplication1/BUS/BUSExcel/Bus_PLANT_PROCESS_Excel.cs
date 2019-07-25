@@ -69,7 +69,7 @@ namespace RBI.BUS.BUSExcel
         {
             return exConn.connectionExcel(path);
         }
-        
+
 
         /// <summary>
         /// get data
@@ -704,7 +704,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     list.Add(obj);
                                 }
-                           }
+                            }
                         }
                     }
                 }
@@ -1051,11 +1051,11 @@ namespace RBI.BUS.BUSExcel
                                     obj.ShakingTime = reader[30].ToString();
                                     try
                                     {
-                                        obj.TrampElements = Convert.ToInt32(reader.GetBoolean(18));
+                                        //obj.TrampElements = Convert.ToInt32(reader.GetBoolean(18));
                                     }
                                     catch
                                     {
-                                        obj.TrampElements = 0;
+                                        //obj.TrampElements = 0;
                                     }
                                     list.Add(obj);
                                 }
@@ -1193,11 +1193,11 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.TrampElements = Convert.ToInt32(reader.GetBoolean(17));
+                                        //obj.TrampElements = Convert.ToInt32(reader.GetBoolean(17));
                                     }
                                     catch
                                     {
-                                        obj.TrampElements = 0;
+                                        //obj.TrampElements = 0;
                                     }
                                     list.Add(obj);
                                 }

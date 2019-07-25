@@ -10,9 +10,13 @@ namespace RBI.Object.ObjectMSSQL
     {
         public int GenericFluidID { get; set; }
         public String GenericFluid { get; set; } //gan bang Fluid
+        public String ExamplesOfApplicable { get; set; }
+        public int FluidType { get; set; }
         public float NBP { get; set; }
         public float MW { get; set; }
         public float Density { get; set; }
+        public int AmbientState { get; set; }
+        public int AutoIgnitionTemperature { get; set; }
         public int ChemicalFactor { get; set; }//mac dinh la bang 0
         public int HealthDegree { get; set; }
         public int Flammability { get; set; }

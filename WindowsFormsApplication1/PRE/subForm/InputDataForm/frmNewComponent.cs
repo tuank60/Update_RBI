@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,6 +76,7 @@ namespace RBI.PRE.subForm.InputDataForm
             //Equipment Type
             EQUIPMENT_TYPE_BUS eqTypeBus = new EQUIPMENT_TYPE_BUS();
             txtEquipmentType.Text = eqTypeBus.getEquipmentTypeName(equipmentBus.getEquipmentTypeID(eqID));
+            txtEquipmentType.ReadOnly = true;
             txtEquipmentType.Enabled = false;
             //Sites
             cbSites.Properties.Items.Add(siteBus.getSiteName(equipmentBus.getSiteID(eqID)), 0, 0);
