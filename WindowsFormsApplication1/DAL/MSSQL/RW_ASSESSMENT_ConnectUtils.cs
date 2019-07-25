@@ -152,8 +152,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + RecommendedBy + "'" +
                         ",'" + RecommendedDate + "'" +
                         ",'" + ProposalName + "'" +
-                        ",'" + AddByExcel + "')" +
-                        " ";
+                        ",'" + AddByExcel + "')";
 
             try
             {
@@ -195,8 +194,7 @@ namespace RBI.DAL.MSSQL
                         ",[RecommendedBy] = '" + RecommendedBy + "'" +
                         ",[RecommendedDate] = '" + RecommendedDate + "'" +
                         ",[ProposalName] = '" + ProposalName + "'" +
-                        " WHERE [ID] = '" + ID + "'" +
-                        " ";
+                        " WHERE [ID] = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -263,7 +261,7 @@ namespace RBI.DAL.MSSQL
                           ",[RecommendedBy]" +
                           ",[RecommendedDate]" +
                           ",[ProposalName]" +
-                          "From [dbo].[RW_ASSESSMENT]  ";
+                          "From [dbo].[RW_ASSESSMENT]";
             try
             {
                 SqlCommand cmd = new SqlCommand();
