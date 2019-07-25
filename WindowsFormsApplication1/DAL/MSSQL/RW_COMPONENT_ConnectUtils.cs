@@ -47,7 +47,7 @@ namespace RBI.DAL.MSSQL
                         ",[ConcreteFoundation]" +
                         ",[ShellHeight]" +
                         ",[AllowableStress]"+
-                        ",[WeldJointEfficieny]" +
+                        ",[WeldJointEfficiency]" +
                         ",[ComponentVolume]" +
                         ",[ConfidenceCorrosionRate]" +
                         ",[MinimumStructuralThicknessGoverns]" +
@@ -55,7 +55,7 @@ namespace RBI.DAL.MSSQL
                         ",[CracksCurrentCondition]" + 
                         ",[FabricatedSteel]" +
                         ",[EquipmentSatisfied]" +
-                        ",[NominalOperatingCondition]" +
+                        ",[NominalOperatingConditions]" +
                         ",[CETGreaterOrEqual]" +
                         ",[CyclicServiceFatigueVibration]" +
                         ",[EquipmentCircuitShock]" +
@@ -157,7 +157,7 @@ namespace RBI.DAL.MSSQL
                         ",[ConcreteFoundation] = '" + ConcreteFoundation + "'" +                      
                         ",[ShellHeight] = '" + ShellHeight + "'" +
                         ",[AllowableStress] = '" + AllowableStress + "'" +
-                        ",[WeldJointEfficieny] = '" + WeldJointEfficiency + "'" +
+                        ",[WeldJointEfficiency] = '" + WeldJointEfficiency + "'" +
                         ",[ComponentVolume] = '" + ComponentVolume + "'" +
                         ",[ConfidenceCorrosionRate] = '" + ConfidenceCorrosionRate + "'" +
                         ",[MinimumStructuralThicknessGoverns] = '" + MinimumStructuralThicknessGoverns + "'" +
@@ -250,7 +250,7 @@ namespace RBI.DAL.MSSQL
                           ",[ConcreteFoundation]" +
                           ",[ShellHeight]" +
                           ",[AllowableStress]" +
-                          ",[WeldJointEfficieny]" +
+                          ",[WeldJointEfficiency]" +
                           ",[ComponentVolume]" +
                           ",[ConfidenceCorrosionRate]" +
                           ",[MinimumStructuralThicknessGoverns]" +
@@ -258,7 +258,7 @@ namespace RBI.DAL.MSSQL
                           ",[CracksCurrentCondition]" +
                           ",[FabricatedSteel]" +
                           ",[EquipmentSatisfied]" +
-                          ",[NominalOperatingCondition]" +
+                          ",[NominalOperatingConditions]" +
                           ",[CETGreaterOrEqual]" +
                           ",[CyclicServiceFatigueVibration]" +
                           ",[EquipmentCircuitShock]" +
@@ -476,7 +476,7 @@ namespace RBI.DAL.MSSQL
                           ",[ConcreteFoundation]" +
                           ",[ShellHeight]" +
                           ",[AllowableStress]" +
-                          ",[WeldJointEfficieny]" +
+                          ",[WeldJointEfficiency]" +
                           ",[ComponentVolume]" +
                           ",[ConfidenceCorrosionRate]" +
                           ",[MinimumStructuralThicknessGoverns]" +
@@ -484,7 +484,7 @@ namespace RBI.DAL.MSSQL
                           ",[CracksCurrentCondition]" +
                           ",[FabricatedSteel]" +
                           ",[EquipmentSatisfied]" +
-                          ",[NominalOperatingCondition]" +
+                          ",[NominalOperatingConditions]" +
                           ",[CETGreaterOrEqual]" +
                           ",[CyclicServiceFatigueVibration]" +
                           ",[EquipmentCircuitShock]" +

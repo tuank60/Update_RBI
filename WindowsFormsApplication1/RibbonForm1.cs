@@ -629,7 +629,6 @@ namespace RBI
             busMaterial.add(rwMaterial);
             busStream.add(rwStream);
             busExtcorTemp.add(rwExtTemp);
-            busRiskGraph.add(rwRiskGraph);
             int[] eq_comID = busAssessment.getEquipmentID_ComponentID(ID);
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
 
@@ -682,7 +681,6 @@ namespace RBI
                         else return;
                     }
                 }
-                busRiskGraph.delete(IDNodeTreeList);
                 busEquipment.delete(IDNodeTreeList);
                 busComponent.delete(IDNodeTreeList);
                 busExtcorTemp.delete(IDNodeTreeList);
@@ -749,7 +747,6 @@ namespace RBI
                 allID = busAssessment.getAllIDbyComponentID(IDNodeTreeList);
                 foreach (int id in allID)
                 {
-                    busRiskGraph.delete(id);
                     busEquipment.delete(busEquipment.getData(id));
                     busComponent.delete(busComponent.getData(id));
                     busExtcorTemp.delete(id);
@@ -823,7 +820,7 @@ namespace RBI
                     List<int> allAssessID = busAssessment.getAllIDbyComponentID(compID);
                     foreach (int id in allAssessID)
                     {
-                        busRiskGraph.delete(id);
+                
                         busEquipment.delete(busEquipment.getData(id));
                         busComponent.delete(busComponent.getData(id));
                         busExtcorTemp.delete(id);
@@ -892,7 +889,7 @@ namespace RBI
                         List<int> allAssessID = busAssessment.getAllIDbyComponentID(compID);
                         foreach (int id in allAssessID)
                         {
-                            busRiskGraph.delete(id);
+                  
                             busEquipment.delete(busEquipment.getData(id));
                             busComponent.delete(busComponent.getData(id));
                             busExtcorTemp.delete(id);
@@ -995,7 +992,7 @@ namespace RBI
                             allID = busAssessment.getAllIDbyComponentID(compID);
                             foreach (int id in allID)
                             {
-                                busRiskGraph.delete(id);
+                          
                                 busEquipment.delete(busEquipment.getData(id));
                                 busComponent.delete(busComponent.getData(id));
                                 busExtcorTemp.delete(id);
@@ -1098,7 +1095,6 @@ namespace RBI
                         //UCCA ca =  new UCCA(IDProposal);
                         UCRiskFactor riskFactor = new UCRiskFactor(IDProposal);
                         UCRiskSummary riskSummary = new UCRiskSummary(IDProposal);
-                        UCDrawGraph drawGraph = new UCDrawGraph(IDProposal);
                         UCInspectionHistorySubform inspection = new UCInspectionHistorySubform(IDProposal);
                         _ass.DataChanged += ThayDoiDuLieu;
                         _ass.CtrlS_Press += CtrlS_Press;
@@ -1122,7 +1118,7 @@ namespace RBI
                         stream.CtrlS_Press += CtrlS_Press;
 
                         checkTank = false;
-                        ucTabNormal ucTabnormal = new ucTabNormal(IDProposal, _ass, equipment, component, op, coat, material, stream, ca, riskFactor, riskSummary, inspection, drawGraph);
+                        ucTabNormal ucTabnormal = new ucTabNormal(IDProposal, _ass, equipment, component, op, coat, material, stream, ca, riskFactor, riskSummary, inspection);
                         listUC.Add(ucTabnormal);
                         addNewTab(treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + treeListProject.FocusedNode.GetValue(0).ToString() + "]", ucTabnormal.ucAss);
                     }
@@ -1153,9 +1149,8 @@ namespace RBI
                         UCStreamTank streamTank = new UCStreamTank(IDProposal);
                         UCRiskFactor riskFactor = new UCRiskFactor(IDProposal);
                         UCRiskSummary riskSummary = new UCRiskSummary(IDProposal);
-                        UCDrawGraph drawGraph = new UCDrawGraph(IDProposal);
                         UCInspectionHistorySubform inspection = new UCInspectionHistorySubform(IDProposal);
-                        ucTabTank ucTank = new ucTabTank(IDProposal, assTank, eqTank, compTank, conTank, coat, materialTank, streamTank, riskFactor, riskSummary, inspection, drawGraph);
+                        ucTabTank ucTank = new ucTabTank(IDProposal, assTank, eqTank, compTank, conTank, coat, materialTank, streamTank, riskFactor, riskSummary, inspection);
                         listUCTank.Add(ucTank);
                         addNewTab(treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + treeListProject.FocusedNode.GetValue(0).ToString() + "]", ucTank.ucAss);
                     }
@@ -1300,8 +1295,8 @@ namespace RBI
                         initDataforTreeList();
                         int[] comID = busAssessment.getEquipmentID_ComponentID(ID);
                         string comNum = busComponent.GetComponentNumber(comID[1]);
-                    
-                        xtraTabData.SelectedTabPage.Text = comNum ;
+                        string assName = busAssessment.getAssessmentName(ID);
+                        xtraTabData.SelectedTabPage.Text = comNum + "[" + assName + "]";
                     }
                     CtrlSPress_SaveData(c.Name, ID, c);
                     barStaticItem2.Caption = "Saved";
@@ -2037,10 +2032,7 @@ namespace RBI
                 Console.WriteLine("asdjahdjhsd " + risk[i]);
             }
             riskGraph.Risk = risk;
-            if (busRiskGraph.CheckExistID(riskGraph.ID))
-                busRiskGraph.edit(riskGraph);
-            else
-                busRiskGraph.add(riskGraph);
+            
             foreach (RW_DAMAGE_MECHANISM d in DMmachenism)
             {
                 d.InspDueDate = DateTime.Now.AddYears(k);
@@ -2378,9 +2370,6 @@ namespace RBI
                     case 11:
                         u = uctab.ucInspectionHistory;
                         break;
-                    case 12:
-                        u = uctab.ucDrawGraph;
-                        break;
                     default:
                         break;
                 }
@@ -2427,9 +2416,6 @@ namespace RBI
                     case 11:
                         u = ucTabTank.ucInspHistory;
                         break;
-                    case 12:
-                        u = ucTabTank.ucDrawGraph;
-                        break;
                     default:
                         break;
                 }
@@ -2458,11 +2444,6 @@ namespace RBI
                         //rs.Dock = DockStyle.Fill;
 
                         break;
-                    case 12:
-                        UCDrawGraph gr = new UCDrawGraph(IDProposal);
-                        xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(gr);
-                        //u.Dock = DockStyle.Fill;
-                        return;
                     default:
                         xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(u);
                         //u.Dock = DockStyle.Fill;
@@ -3375,7 +3356,6 @@ namespace RBI
         RW_INSPECTION_HISTORY_BUS busInspectionHistory = new RW_INSPECTION_HISTORY_BUS();
         FACILITY_RISK_TARGET_BUS busRiskTarget = new FACILITY_RISK_TARGET_BUS();
         RW_DAMAGE_MECHANISM_BUS busDamageMechanism = new RW_DAMAGE_MECHANISM_BUS();
-        RW_RISK_GRAPH_BUS busRiskGraph = new RW_RISK_GRAPH_BUS();
         //</BUS>
         #endregion
         #region Unit String
@@ -3415,62 +3395,6 @@ namespace RBI
             }
         }
 
-        private void barCheckUCMaterial_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            try
-            {
-                SplashScreenManager.ShowForm(typeof(WaitForm2));
-                if (!checkTank)
-                {
-
-                    int selectedID = int.Parse(this.xtraTabData.SelectedTabPage.Name);
-                    ucTabNormal uc = null;
-                    foreach (ucTabNormal u in listUC)
-                    {
-                        if (selectedID == u.ID)
-                        {
-                            uc = u;
-                            break;
-                        }
-                    }
-                    RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, stress, corrosion, thickness);
-                    MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    //Save Data
-                    busMaterial.edit(ma);
-                }
-                else
-                {
-                    int selectedID = int.Parse(this.xtraTabData.SelectedTabPage.Name);
-                    ucTabTank uc = null;
-                    foreach (ucTabTank u in listUCTank)
-                    {
-                        if (selectedID == u.ID)
-                        {
-                            uc = u;
-                            break;
-                        }
-                    }
-                    RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, stress, thickness, corrosion);
-                    MessageBox.Show("Calculation finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    busMaterial.edit(ma);
-                }
-                // mai cop
-                navRiskFactor.Appearance.ForeColor = Color.Red;
-                navEquipment.Appearance.ForeColor = navComponent.Appearance.ForeColor =
-                    navOperating.Appearance.ForeColor = navMaterial.Appearance.ForeColor =
-                    navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
-                    navStream.Appearance.ForeColor = navAssessmentInfo.Appearance.ForeColor =
-                    navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                    navViewGraph.Appearance.ForeColor = Color.Black;
-                // cop xong
-                SplashScreenManager.CloseForm();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Chưa tính được" + ex.ToString(), "Cortek RBI");
-                SplashScreenManager.CloseForm();
-            }
-        }
     }
 
 }

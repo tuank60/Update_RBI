@@ -211,7 +211,6 @@
             this.btnUnitSeting,
             this.btnAssessmentMethod});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -222,7 +221,7 @@
             this.ribbonPage3});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMarqueeProgressBar1});
-            this.ribbon.Size = new System.Drawing.Size(1265, 187);
+            this.ribbon.Size = new System.Drawing.Size(1084, 147);
             this.ribbon.StatusBar = this.ribStatusbar;
             // 
             // btnPlant
@@ -721,11 +720,10 @@
             // 
             // ribStatusbar
             // 
-            this.ribStatusbar.Location = new System.Drawing.Point(0, 820);
-            this.ribStatusbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribStatusbar.Location = new System.Drawing.Point(0, 612);
             this.ribStatusbar.Name = "ribStatusbar";
             this.ribStatusbar.Ribbon = this.ribbon;
-            this.ribStatusbar.Size = new System.Drawing.Size(1265, 29);
+            this.ribStatusbar.Size = new System.Drawing.Size(1084, 23);
             // 
             // defaultLookAndFeel1
             // 
@@ -735,11 +733,10 @@
             // 
             this.xtraTabData.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageAndTabControlHeader;
             this.xtraTabData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabData.Location = new System.Drawing.Point(398, 187);
-            this.xtraTabData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xtraTabData.Location = new System.Drawing.Point(398, 147);
             this.xtraTabData.Name = "xtraTabData";
             this.xtraTabData.SelectedTabPage = this.xTabHome;
-            this.xtraTabData.Size = new System.Drawing.Size(867, 633);
+            this.xtraTabData.Size = new System.Drawing.Size(686, 465);
             this.xtraTabData.TabIndex = 2;
             this.xtraTabData.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabHome});
@@ -755,10 +752,9 @@
             this.xTabHome.AutoScroll = true;
             this.xTabHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.xTabHome.Controls.Add(this.panel1);
-            this.xTabHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xTabHome.Name = "xTabHome";
             this.xTabHome.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.xTabHome.Size = new System.Drawing.Size(865, 601);
+            this.xTabHome.Size = new System.Drawing.Size(684, 438);
             this.xTabHome.Text = "Home";
             // 
             // panel1
@@ -767,18 +763,17 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 601);
+            this.panel1.Size = new System.Drawing.Size(684, 438);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 17);
+            this.label1.Location = new System.Drawing.Point(80, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(653, 135);
+            this.label1.Size = new System.Drawing.Size(523, 108);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cortek RBI";
             // 
@@ -787,10 +782,9 @@
             this.treeListProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeListProject.Location = new System.Drawing.Point(3, 4);
-            this.treeListProject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.treeListProject.Location = new System.Drawing.Point(3, 3);
             this.treeListProject.Name = "treeListProject";
-            this.treeListProject.Size = new System.Drawing.Size(228, 706);
+            this.treeListProject.Size = new System.Drawing.Size(198, 411);
             this.treeListProject.StateImageList = this.imageTreeList;
             this.treeListProject.TabIndex = 1;
             this.treeListProject.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListProject_FocusedNodeChanged);
@@ -832,21 +826,19 @@
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel2.ID = new System.Guid("1d634bbe-f85f-4ce6-b34c-06ba1b87d588");
-            this.dockPanel2.Location = new System.Drawing.Point(187, 187);
-            this.dockPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel2.Location = new System.Drawing.Point(187, 147);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.Options.ShowCloseButton = false;
             this.dockPanel2.OriginalSize = new System.Drawing.Size(211, 161);
-            this.dockPanel2.Size = new System.Drawing.Size(211, 633);
+            this.dockPanel2.Size = new System.Drawing.Size(211, 465);
             this.dockPanel2.Text = "Items";
             // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.treeListProject);
-            this.dockPanel2_Container.Location = new System.Drawing.Point(4, 29);
-            this.dockPanel2_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel2_Container.Location = new System.Drawing.Point(3, 25);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(201, 600);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(204, 437);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // dockPanel1
@@ -854,21 +846,19 @@
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("b4634cc6-3621-4a87-a427-cf55394912fb");
-            this.dockPanel1.Location = new System.Drawing.Point(0, 187);
-            this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1.Location = new System.Drawing.Point(0, 147);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
             this.dockPanel1.OriginalSize = new System.Drawing.Size(187, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(187, 633);
+            this.dockPanel1.Size = new System.Drawing.Size(187, 465);
             this.dockPanel1.Text = "Main Menu";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navBarControl2);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 29);
-            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(3, 25);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(177, 600);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(180, 437);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl2
@@ -897,10 +887,9 @@
             this.navExportAllInsp,
             this.navViewGraph});
             this.navBarControl2.Location = new System.Drawing.Point(2, 0);
-            this.navBarControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBarControl2.Name = "navBarControl2";
-            this.navBarControl2.OptionsNavPane.ExpandedWidth = 204;
-            this.navBarControl2.Size = new System.Drawing.Size(204, 602);
+            this.navBarControl2.OptionsNavPane.ExpandedWidth = 175;
+            this.navBarControl2.Size = new System.Drawing.Size(175, 489);
             this.navBarControl2.TabIndex = 0;
             this.navBarControl2.Text = "navBarControl2";
             // 
@@ -962,7 +951,6 @@
             // navBarRecord
             // 
             this.navBarRecord.Caption = "Record";
-            this.navBarRecord.Expanded = true;
             this.navBarRecord.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navAssessmentInfo),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navEquipment),
@@ -1115,9 +1103,9 @@
             // RibbonForm1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 849);
+            this.ClientSize = new System.Drawing.Size(1084, 635);
             this.Controls.Add(this.xtraTabData);
             this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanel1);
@@ -1126,7 +1114,6 @@
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RibbonForm1";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

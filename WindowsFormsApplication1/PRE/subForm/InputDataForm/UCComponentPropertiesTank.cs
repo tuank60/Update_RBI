@@ -71,7 +71,7 @@ namespace RBI.PRE.subForm.InputDataForm
             chkConcreteAsphalt.Checked = com.ConcreteFoundation == 1 ? true : false;
             chkPresenceCracks.Checked = com.CracksPresent == 1 ? true : false;
             chkPreventionBarrier.Checked = com.ReleasePreventionBarrier == 1 ? true : false;
-            chkTrampElements.Checked = com.TrampElements == 1 ? true : false;
+            //chkTrampElements.Checked = com.TrampElements == 1 ? true : false;
             for(int i = 0; i<itemsBrinnellHardness.Length;i++)
             {
                 if(itemsBrinnellHardness[i] == com.BrinnelHardness)
@@ -135,7 +135,7 @@ namespace RBI.PRE.subForm.InputDataForm
             comp.ComplexityProtrusion = cbComplexityProtrusion.Text;
             comp.DamageFoundInspection = chkDamageFoundDuringInspection.Checked ? 1 : 0;
             comp.CracksPresent = chkPresenceCracks.Checked ? 1 : 0;
-            comp.TrampElements = chkTrampElements.Checked ? 1 : 0;
+            //comp.TrampElements = chkTrampElements.Checked ? 1 : 0;
             //kiem tra dieu kien API Component Type -> Disable control cua shell hoac cua bottom
             //tank Shell Course
             comp.ShellHeight = txtShellCourseHeight.Text != "" ? float.Parse(txtShellCourseHeight.Text) : 0;

@@ -132,7 +132,6 @@ namespace RBI.DAL.MSSQL
                         ",[AdoptedBy]" +
                         ",[AdoptedDate]" +
                         ",[RecommendedBy]" +
-                        ",[RecommendedDate])" +
                         ",[RecommendedDate]" +
                         ",[ProposalName]" +
                         ",[AddByExcel])" +
@@ -193,7 +192,6 @@ namespace RBI.DAL.MSSQL
                         ",[ProposalOrRevision] = '" + ProposalOrRevision + "'" +
                         ",[AdoptedBy] = '" + AdoptedBy + "'" +
                         ",[AdoptedDate] = '" + AdoptedDate + "'" +
-                        ",[RecommendedBy] = '" + RecommendedBy + "'" +                    
                         ",[RecommendedBy] = '" + RecommendedBy + "'" +
                         ",[RecommendedDate] = '" + RecommendedDate + "'" +
                         ",[ProposalName] = '" + ProposalName + "'" +
@@ -494,14 +492,7 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-
-
-                            ass.AssessmentDate = reader.GetDateTime(0);
-                            ass.RiskAnalysisPeriod = reader.GetInt32(1);
-                            //ass.ProposalName = reader.GetString(0);
-
                             ass.ProposalName = reader.GetString(0);
-
                             ass.AssessmentDate = reader.GetDateTime(1);
                             ass.RiskAnalysisPeriod = reader.GetInt32(2);
                         }

@@ -112,7 +112,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     chkDamageFoundDuringInspection.Checked = comp.DamageFoundInspection == 1 ? true : false;
                     txtDeltaFATT.Text = comp.DeltaFATT.ToString();
                     chkVisibleAudible.Checked = comp.ShakingDetected == 1 ? true : false;
-                    chkTrampElements.Checked = comp.TrampElements == 1 ? true : false;
+                    //chkTrampElements.Checked = comp.TrampElements == 1 ? true : false;
 
                     for (int i = 0; i < itemsAccumulatedTimeShaking.Length; i++)
                     {
@@ -224,7 +224,7 @@ namespace RBI.PRE.subForm.InputDataForm
             comp.ShakingAmount = cbAmountShakingPipe.Text;
             comp.ShakingDetected = chkVisibleAudible.Checked ? 1 : 0;
             comp.ShakingTime = cbAccumalatedTimeShakingPipe.Text;
-            comp.TrampElements = chkTrampElements.Checked ? 1 : 0;
+            //comp.TrampElements = chkTrampElements.Checked ? 1 : 0;
             //comp.ShellHeight cua shell
             //comp.ReleasePreventionBarrier =  cua tank
             //comp.ConcreteFoundation = cua tank bottom

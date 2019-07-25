@@ -19,7 +19,6 @@ namespace RBI.PRE.subForm.InputDataForm
         FACILITY_BUS facility = new FACILITY_BUS();
         SITES_BUS siteBus = new SITES_BUS();
         List<SITES> listSite = new List<SITES>();
-        RW_RISK_GRAPH_BUS busGraph = new RW_RISK_GRAPH_BUS();
         public bool doubleEditClicked { set; get; }
         public int facilityID = 0;
         public bool ButtonOKClicked { set; get; }

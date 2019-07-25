@@ -18,6 +18,7 @@ namespace RBI.Object.ObjectMSSQL
         public float SigmaPhase { set; get; }
         public String SulfurContent { set; get; }
         public String HeatTreatment { set; get; }
+        public String SteelProductForm { get; set; }
         public float ReferenceTemperature { set; get; }
         public String PTAMaterialCode { set; get; }
         public String HTHAMaterialCode { set; get; }
