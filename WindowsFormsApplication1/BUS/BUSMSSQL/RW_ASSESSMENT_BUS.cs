@@ -60,14 +60,6 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getAllID();
         }
-        public string getAssessmentName(int assID)
-        {
-            return DAL.getAssessmentName(assID);
-        }
-        public List<int[]> getCheckAddExcel_ID(int comID, int eqID)
-        {
-            return DAL.getCheckAddExcel_ID(comID, eqID);
-        }
         public int getLastID()
         {
             return DAL.getLastID();
@@ -76,9 +68,20 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getAllIDbyComponentID(ID);
         }
+
         public List<string> AllName()
         {
             return DAL.AllName();
         }
+
+        public List<int[]> getCheckAddExcel_ID(int comID, int eqID)
+        {
+            return DAL.getCheckAddExcel_ID(comID, eqID);
+        }
+        public string getAssessmentName(int assID)
+        {
+            return DAL.getAssessmentName(assID);
+        }
+        //thao
     }
 }

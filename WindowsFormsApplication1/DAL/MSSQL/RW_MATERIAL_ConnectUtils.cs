@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_MATERIAL_ConnectUtils
     {
-        public void add(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature,float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased, int ChromeMoreEqual12, float AllowableStress, float YieldStrength, float TensileStrength, float CostFactor)
+        public void add(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature,float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, String SteelProductForm, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased, int ChromeMoreEqual12, float YieldStrength, float TensileStrength, float CostFactor)
                        
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -23,13 +23,14 @@ namespace RBI.DAL.MSSQL
                            ",[MaterialName]" +
                            ",[DesignPressure]" +
                            ",[DesignTemperature]" +
-                            ",[MinDesignTemperature]" +
-                            ",[BrittleFractureThickness]" +
+                           ",[MinDesignTemperature]" +
+                           ",[BrittleFractureThickness]" +
                            ",[CorrosionAllowance]" +
                            ",[SigmaPhase]" +
                            ",[SulfurContent]" +
                            ",[HeatTreatment]" +
-                            ",[ReferenceTemperature]" +
+                           ",[SteelProductForm]" +
+                           ",[ReferenceTemperature]" +
                            ",[PTAMaterialCode]" +
                            ",[HTHAMaterialCode]" +
                            ",[IsPTA]" +
@@ -39,35 +40,34 @@ namespace RBI.DAL.MSSQL
                            ",[CarbonLowAlloy]" +
                            ",[NickelBased]" +
                            ",[ChromeMoreEqual12]" +
-                           ",[AllowableStress]" +
                            ",[YieldStrength]"   +
                            ",[TensileStrength]" +
                            ",[CostFactor])" +
                            " VALUES" +
                            "(  '" + ID + "'" +
-                            ", '" + MaterialName + "'" +
-                            ",'" + DesignPressure + "'" +
-                            "," + DesignTemperature + "" +
-                             ", '" + MinDesignTemperature + "'" +
-                             ", '" + BrittleFractureThickness + "'" +
+                           ", '" + MaterialName + "'" +
+                           ", '" + DesignPressure + "'" +
+                           ", '" + DesignTemperature + "'" +
+                           ", '" + MinDesignTemperature + "'" +
+                           ", '" + BrittleFractureThickness + "'" +
                            ", '" + CorrosionAllowance + "'" +
                            ", '" + SigmaPhase + "'" +
                            ", '" + SulfurContent + "'" +
-                          ",'" + HeatTreatment + "'" +
-                              ", '" + ReferenceTemperature + "'" +
+                           ", '" + HeatTreatment + "'" +
+                           ", '" + SteelProductForm + "'" +
+                           ", '" + ReferenceTemperature + "'" +
                            ", '" + PTAMaterialCode + "'" +
                            ", '" + HTHAMaterialCode + "'" +
-                          ",'" + IsPTA + "'" +
-                            ", '" + IsHTHA + "'" +
-                         ", '" + Austenitic + "'" +
-                               ", '" + Temper + "'" +
-                         ", '" + CarbonLowAlloy + "'" +
-                            ", '" + NickelBased + "'" +
+                           ", '" + IsPTA + "'" +
+                           ", '" + IsHTHA + "'" +
+                           ", '" + Austenitic + "'" +
+                           ", '" + Temper + "'" +
+                           ", '" + CarbonLowAlloy + "'" +
+                           ", '" + NickelBased + "'" +
                            ", '" + ChromeMoreEqual12 + "'" +
-                           ", '" + AllowableStress + "'" +
                            ", '" + YieldStrength + "'" +
                            ", '" + TensileStrength + "'" +
-                            ",'"+ CostFactor + "')";
+                           ", '" + CostFactor + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -85,7 +85,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature, float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased,int ChromeMoreEqual12, float AllowableStress, float YieldStrength, float TensileStrength, float CostFactor)
+        public void edit(int ID, String MaterialName, float DesignPressure, float DesignTemperature, float MinDesignTemperature, float BrittleFractureThickness, float CorrosionAllowance, float SigmaPhase, String SulfurContent, String HeatTreatment, String SteelProductForm, float ReferenceTemperature, String PTAMaterialCode, String HTHAMaterialCode, int IsPTA, int IsHTHA, int Austenitic, int Temper, int CarbonLowAlloy, int NickelBased,int ChromeMoreEqual12, float YieldStrength, float TensileStrength, float CostFactor)
                         
         {
             {
@@ -98,22 +98,22 @@ namespace RBI.DAL.MSSQL
                               ",[DesignPressure] = '" + DesignPressure + "'" +
                               ",[DesignTemperature] = '" + DesignTemperature + "'" +
                               ",[MinDesignTemperature] = '" + MinDesignTemperature + "'" +
-                             ",[BrittleFractureThickness] = '" + BrittleFractureThickness + "'" +
-                             ",[CorrosionAllowance] = '" + CorrosionAllowance + "'" +
+                              ",[BrittleFractureThickness] = '" + BrittleFractureThickness + "'" +
+                              ",[CorrosionAllowance] = '" + CorrosionAllowance + "'" +
                               ",[SigmaPhase] = '" + SigmaPhase + "'" +
                               ",[SulfurContent] = '" + SulfurContent + "'" +
                               ",[HeatTreatment] = '" + HeatTreatment + "'" +
+                              ",[SteelProductForm] = '" + SteelProductForm + "'" +
                               ",[ReferenceTemperature] = '" + ReferenceTemperature + "'" +
                               ",[PTAMaterialCode] = '" + PTAMaterialCode + "'" +
-                             ",[HTHAMaterialCode] = '" + HTHAMaterialCode + "'" +
-                             ",[IsPTA] = '" + IsPTA + "'" +
+                              ",[HTHAMaterialCode] = '" + HTHAMaterialCode + "'" +
+                              ",[IsPTA] = '" + IsPTA + "'" +
                               ",[IsHTHA] = '" + IsHTHA + "'" +
                               ",[Austenitic] = '" + Austenitic + "'" +
                               ",[Temper] = '" + Temper + "'" +
                               ",[CarbonLowAlloy]='"+CarbonLowAlloy+"'"+
                               ",[NickelBased]='"+NickelBased+"'"+
-                              ",[ChromeMoreEqual12]='"+ ChromeMoreEqual12 +"'"+
-                              ",[AllowableStress]='" + AllowableStress + "'" +
+                              ",[ChromeMoreEqual12]='"+ ChromeMoreEqual12 +"'"+                             
                               ",[YieldStrength]='" + YieldStrength + "'" +
                               ",[TensileStrength]='" + TensileStrength + "'" +
                               ",[CostFactor]='" + CostFactor + "'" +
@@ -211,6 +211,7 @@ namespace RBI.DAL.MSSQL
                         ",[SigmaPhase]" +
                         ",[SulfurContent]" +
                         ",[HeatTreatment]" +
+                        ",[SteelProductForm]" +
                         ",[ReferenceTemperature]" +
                         ",[PTAMaterialCode]" +
                         ",[HTHAMaterialCode]" +
@@ -221,7 +222,6 @@ namespace RBI.DAL.MSSQL
                         ",[CarbonLowAlloy]" +
                         ",[NickelBased]" +
                         ",[ChromeMoreEqual12]" +
-                        ",[AllowableStress]" +
                         ",[YieldStrength]" +
                         ",[TensileStrength]" +
                         ",[CostFactor]" +
@@ -277,24 +277,27 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(10))
                             {
-                                obj.ReferenceTemperature = reader.GetFloat(10);
+                                obj.SteelProductForm = reader.GetString(10);
                             }
                             if (!reader.IsDBNull(11))
                             {
-                                obj.PTAMaterialCode = reader.GetString(11);
+                                obj.ReferenceTemperature = reader.GetFloat(11);
                             }
                             if (!reader.IsDBNull(12))
                             {
-                                obj.HTHAMaterialCode = reader.GetString(12);
+                                obj.PTAMaterialCode = reader.GetString(12);
                             }
-                            obj.IsPTA = reader.GetInt32(13);
-                            obj.IsHTHA = reader.GetInt32(14);
-                            obj.Austenitic = reader.GetInt32(15);
-                            obj.Temper = reader.GetInt32(16);
-                            obj.CarbonLowAlloy = reader.GetInt32(17);
-                            obj.NickelBased = reader.GetInt32(18);
-                            obj.ChromeMoreEqual12 = reader.GetInt32(19);
-                            obj.AllowableStress = reader.GetFloat(20);
+                            if (!reader.IsDBNull(13))
+                            {
+                                obj.HTHAMaterialCode = reader.GetString(13);
+                            }
+                            obj.IsPTA = reader.GetInt32(14);
+                            obj.IsHTHA = reader.GetInt32(15);
+                            obj.Austenitic = reader.GetInt32(16);
+                            obj.Temper = reader.GetInt32(17);
+                            obj.CarbonLowAlloy = reader.GetInt32(18);
+                            obj.NickelBased = reader.GetInt32(19);
+                            obj.ChromeMoreEqual12 = reader.GetInt32(20);
                             if (!reader.IsDBNull(21))
                             {
                                 obj.YieldStrength = reader.GetFloat(21);
@@ -335,6 +338,7 @@ namespace RBI.DAL.MSSQL
                         ",[SigmaPhase]" +
                         ",[SulfurContent]" +
                         ",[HeatTreatment]" +
+                        ",[SteelProductForm]" +
                         ",[ReferenceTemperature]" +
                         ",[PTAMaterialCode]" +
                         ",[HTHAMaterialCode]" +
@@ -345,7 +349,6 @@ namespace RBI.DAL.MSSQL
                         ",[CarbonLowAlloy]" +
                         ",[NickelBased]" +
                         ",[ChromeMoreEqual12]" +
-                        ",[AllowableStress]" +
                         ",[YieldStrength]" +
                         ",[TensileStrength]" +
                         ",[CostFactor]" +
@@ -400,24 +403,27 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(10))
                             {
-                                obj.ReferenceTemperature = (float)reader.GetDouble(10);
+                                obj.SteelProductForm = reader.GetString(10);
                             }
                             if (!reader.IsDBNull(11))
                             {
-                                obj.PTAMaterialCode = reader.GetString(11);
+                                obj.ReferenceTemperature = (float)reader.GetDouble(11);
                             }
                             if (!reader.IsDBNull(12))
                             {
-                                obj.HTHAMaterialCode = reader.GetString(12);
+                                obj.PTAMaterialCode = reader.GetString(12);
                             }
-                            obj.IsPTA = Convert.ToInt32(reader.GetBoolean(13));
-                            obj.IsHTHA = Convert.ToInt32(reader.GetBoolean(14));
-                            obj.Austenitic = Convert.ToInt32(reader.GetBoolean(15));
-                            obj.Temper = Convert.ToInt32(reader.GetBoolean(16));
-                            obj.CarbonLowAlloy = Convert.ToInt32(reader.GetBoolean(17));
-                            obj.NickelBased = Convert.ToInt32(reader.GetBoolean(18));
-                            obj.ChromeMoreEqual12 = Convert.ToInt32(reader.GetBoolean(19));
-                            obj.AllowableStress = (float)reader.GetDouble(20);
+                            if (!reader.IsDBNull(13))
+                            {
+                                obj.HTHAMaterialCode = reader.GetString(13);
+                            }
+                            obj.IsPTA = Convert.ToInt32(reader.GetBoolean(14));
+                            obj.IsHTHA = Convert.ToInt32(reader.GetBoolean(15));
+                            obj.Austenitic = Convert.ToInt32(reader.GetBoolean(16));
+                            obj.Temper = Convert.ToInt32(reader.GetBoolean(17));
+                            obj.CarbonLowAlloy = Convert.ToInt32(reader.GetBoolean(18));
+                            obj.NickelBased = Convert.ToInt32(reader.GetBoolean(19));
+                            obj.ChromeMoreEqual12 = Convert.ToInt32(reader.GetBoolean(20));
                             if (!reader.IsDBNull(21))
                             {
                                 obj.YieldStrength = (float) reader.GetDouble(21);

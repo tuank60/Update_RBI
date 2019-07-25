@@ -13,11 +13,11 @@ namespace RBI.BUS.BUSMSSQL
         RW_FULL_FCOF_ConnectUtils DAL = new RW_FULL_FCOF_ConnectUtils();
         public void add(RW_FULL_FCOF obj)
         {
-            DAL.add(obj.ID, obj.FCoFValue, obj.FCoFCategory, obj.AIL, obj.envcost, obj.equipcost, obj.prodcost, obj.popdens, obj.injcost, obj.FCoFMatrixValue);
+            DAL.add(obj.ID, obj.FCoFValue, obj.FCoFCategory, obj.AIL, obj.EquipOutageMultiplier, obj.envcost, obj.equipcost, obj.prodcost, obj.popdens, obj.injcost, obj.FCoFMatrixValue);
         }
         public void edit(RW_FULL_FCOF obj)
         {
-            DAL.edit(obj.ID, obj.FCoFValue, obj.FCoFCategory, obj.AIL, obj.envcost, obj.equipcost, obj.prodcost, obj.popdens, obj.injcost, obj.FCoFMatrixValue);
+            DAL.edit(obj.ID, obj.FCoFValue, obj.FCoFCategory, obj.AIL, obj.EquipOutageMultiplier, obj.envcost, obj.equipcost, obj.prodcost, obj.popdens, obj.injcost, obj.FCoFMatrixValue);
         
         }
         public void delete(RW_FULL_FCOF obj)

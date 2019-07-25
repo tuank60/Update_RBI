@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_FULL_COF_TANK_ConnectUtils
     {
-        public void add(int ID, double CoFValue, String CoFCategory, double ProdCost, double CoFMatrixValue)
+        public void add(int ID, double CoFValue, String CoFCategory, double ProdCost, float EquipOutageMultiplier, float equipcost, float popdens, float injcost, double CoFMatrixValue)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -23,12 +23,20 @@ namespace RBI.DAL.MSSQL
                         ",[CoFValue]" +
                         ",[CoFCategory]" +
                         ",[ProdCost]" +
+                        ",[EquipOutageMultiplier]" +
+                        ",[equipcost]" +
+                        ",[popdens]" +
+                        ",[injcost]" +
                         ",[CoFMatrixValue])" +
                         "VALUES" +
                         "('" + ID + "'" +
                         ",'" + CoFValue + "'" +
                         ",'" + CoFCategory + "'" +
                         ",'" + ProdCost + "'" +
+                        ",'" + EquipOutageMultiplier + "'" +
+                        ",'" + equipcost + "'" +
+                        ",'" + popdens + "'" +
+                        ",'" + injcost + "'" +
                         ",'" + CoFMatrixValue + "')" +
                         " ";
             try
@@ -48,7 +56,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, double CoFValue, String CoFCategory, double ProdCost, double CoFMatrixValue)
+        public void edit(int ID, double CoFValue, String CoFCategory, double ProdCost, float EquipOutageMultiplier, float equipcost, float popdens, float injcost, double CoFMatrixValue)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -59,8 +67,11 @@ namespace RBI.DAL.MSSQL
                         ",[CoFValue] = '" + CoFValue + "'" +
                         ",[CoFCategory] = '" + CoFCategory + "'" +
                         ",[ProdCost] = '" + ProdCost + "'" +
-                        ",[CoFMatrixValue] = '" + CoFMatrixValue + "'" +
-                        
+                        ",[EquipOutageMultiplier] = '" + EquipOutageMultiplier + "'" +
+                        ",[equipcost] = '" + equipcost + "'" +
+                        ",[popdens] = '" + popdens + "'" +
+                        ",[injcost] = '" + injcost + "'" +
+                        ",[CoFMatrixValue] = '" + CoFMatrixValue + "'" +                     
                         " WHERE [ID] = '" + ID + "'" +
                         " ";
             try
@@ -117,6 +128,10 @@ namespace RBI.DAL.MSSQL
                         ",[CoFValue]" +
                         ",[CoFCategory]" +
                         ",[ProdCost]" +
+                        ",[EquipOutageMultiplier]" +
+                        ",[equipcost]" +
+                        ",[popdens]" +
+                        ",[injcost]" +
                         ",[CoFMatrixValue]" +
                           "From [dbo].[RW_FULL_COF_TANK]  ";
             try
@@ -147,7 +162,23 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.CoFMatrixValue = reader.GetFloat(4);
+                                obj.EquipOutageMultiplier = reader.GetFloat(4);
+                            }
+                            if (!reader.IsDBNull(5))
+                            {
+                                obj.equipcost = reader.GetFloat(5);
+                            }
+                            if (!reader.IsDBNull(6))
+                            {
+                                obj.popdens = reader.GetFloat(6);
+                            }
+                            if (!reader.IsDBNull(7))
+                            {
+                                obj.injcost = reader.GetFloat(7);
+                            }
+                            if (!reader.IsDBNull(8))
+                            {
+                                obj.CoFMatrixValue = reader.GetFloat(8);
                             }
                             list.Add(obj);
 

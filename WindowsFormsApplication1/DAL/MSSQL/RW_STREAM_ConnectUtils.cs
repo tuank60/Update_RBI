@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_STREAM_ConnectUtils
     {
-        public void add(int ID, String AmineSolution, int AqueousOperation, int AqueousShutdown, int ToxicConstituent, int Caustic, float Chloride, float CO3Concentration, int Cyanide, int ExposedToGasAmine, int ExposedToSulphur, String ExposureToAmine, int FlammableFluidID, float FlowRate, int H2S, float H2SInWater, int Hydrogen, float H2SPartialPressure, int Hydrofluoric, int MaterialExposedToClInt, float MaxOperatingPressure, float MaxOperatingTemperature, float MinOperatingPressure, float MinOperatingTemperature, float CriticalExposureTemperature, int ModelFluidID, float NaOHConcentration, int NonFlameToxicFluidID, float ReleaseFluidPercentToxic, String StoragePhase, int ToxicFluidID, float WaterpH, String TankFluidName, float FluidHeight, float FluidLeaveDikePercent, float FluidLeaveDikeRemainOnSitePercent, float FluidGoOffSitePercent)
+        public void add(int ID, String AmineSolution, int AqueousOperation, int AqueousShutdown, int ToxicConstituent, int Caustic, float Chloride, float CO3Concentration, int Cyanide, int ExposedToGasAmine, int ExposedToSulphur, String ExposureToAmine, int FlammableFluidID, float FlowRate, int H2S, float H2SInWater, int Hydrogen, float H2SPartialPressure, int Hydrofluoric, int MaterialExposedToClInt, float MaxOperatingPressure, float MaxOperatingTemperature, float MinOperatingPressure, float MinOperatingTemperature, float CriticalExposureTemperature, int ModelFluidID, float NaOHConcentration, int NonFlameToxicFluidID, float LiquidLevel, float ReleaseFluidPercentToxic, String StoragePhase, int ToxicFluidID, float WaterpH, String TankFluidName, float FluidHeight, float FluidLeaveDikePercent, float FluidLeaveDikeRemainOnSitePercent, float FluidGoOffSitePercent)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -22,7 +22,7 @@ namespace RBI.DAL.MSSQL
                            ",[AmineSolution]" +
                            ",[AqueousOperation]" +
                            ",[AqueousShutdown]" +
-                            ",[ToxicConstituent]" +
+                           ",[ToxicConstituent]" +
                            ",[Caustic]" +
                            ",[Chloride]" +
                            ",[CO3Concentration]" +
@@ -31,9 +31,9 @@ namespace RBI.DAL.MSSQL
                            ",[ExposedToSulphur]" +
                            ",[ExposureToAmine]" +
                            ",[FlammableFluidID]" +
-                            ",[FlowRate]" +
+                           ",[FlowRate]" +
                            ",[H2S]" +
-                            ",[H2SInWater]" +
+                           ",[H2SInWater]" +
                            ",[Hydrogen]" +
                            ",[H2SPartialPressure]" +
                            ",[Hydrofluoric]" +
@@ -41,11 +41,12 @@ namespace RBI.DAL.MSSQL
                            ",[MaxOperatingPressure]" +
                            ",[MaxOperatingTemperature]" +
                            ",[MinOperatingPressure]" +
-                            ",[MinOperatingTemperature]" +
+                           ",[MinOperatingTemperature]" +
                            ",[CriticalExposureTemperature]" +
                            ",[ModelFluidID]" +
                            ",[NaOHConcentration]" +
                            ",[NonFlameToxicFluidID ]"+
+                           ",[LiquidLevel]"+
                            ",[ReleaseFluidPercentToxic]" +
                            ",[StoragePhase]" +
                            ",[ToxicFluidID]" +
@@ -62,37 +63,38 @@ namespace RBI.DAL.MSSQL
                                  ", '" + AqueousShutdown + "'" +
                                  ", '" + ToxicConstituent + "'" +
                                  ", '" + Caustic + "'" +
-                                ", '" + Chloride + "'" +
-                                ", '" + CO3Concentration + "'"+
-                                ", '" + Cyanide + "'" +
-                                ", '" + ExposedToGasAmine + "'" +
-                                ", '" + ExposedToSulphur + "'" +
-                                ", '" + ExposureToAmine + "'"+
-                                ", '" + FlammableFluidID + "'" +
-                                ", '" + FlowRate + "'" +
-                                ", '" + H2S + "'" +
-                                ", '" + H2SInWater + "'" +
-                                ", '" + Hydrogen + "'" +
-                                ", '" + H2SPartialPressure + "'" +
-                                ", '" + Hydrofluoric + "'" +
-                                ", '" + MaterialExposedToClInt + "'"+
+                                 ", '" + Chloride + "'" +
+                                 ", '" + CO3Concentration + "'"+
+                                 ", '" + Cyanide + "'" +
+                                 ", '" + ExposedToGasAmine + "'" +
+                                 ", '" + ExposedToSulphur + "'" +
+                                 ", '" + ExposureToAmine + "'"+
+                                 ", '" + FlammableFluidID + "'" +
+                                 ", '" + FlowRate + "'" +
+                                 ", '" + H2S + "'" +
+                                 ", '" + H2SInWater + "'" +
+                                 ", '" + Hydrogen + "'" +
+                                 ", '" + H2SPartialPressure + "'" +
+                                 ", '" + Hydrofluoric + "'" +
+                                 ", '" + MaterialExposedToClInt + "'"+
                                  ", '" + MaxOperatingPressure + "'" +
-                                ", '" + MaxOperatingTemperature + "'" +
-                                ", '" + MinOperatingPressure + "'" +
-                                ", '" + MinOperatingTemperature + "'" +
+                                 ", '" + MaxOperatingTemperature + "'" +
+                                 ", '" + MinOperatingPressure + "'" +
+                                 ", '" + MinOperatingTemperature + "'" +
                                  ", '" + CriticalExposureTemperature + "'" +
-                                ", '" + ModelFluidID + "'" +
-                                ", '" + NaOHConcentration + "'"+
+                                 ", '" + ModelFluidID + "'" +
+                                 ", '" + NaOHConcentration + "'"+
                                  ", '" + NonFlameToxicFluidID + "'" +
+                                 ", '" + LiquidLevel + "'" +
                                  ", '" + ReleaseFluidPercentToxic + "'" +
-                                ", '" + StoragePhase + "'" +
+                                 ", '" + StoragePhase + "'" +
                                  ", '" + ToxicFluidID + "'" +
-                                ", '" + WaterpH + "'"+
-                                   ", '" + TankFluidName + "'" +
-                                ", '" + FluidHeight + "'" +
+                                 ", '" + WaterpH + "'"+
+                                 ", '" + TankFluidName + "'" +
+                                 ", '" + FluidHeight + "'" +
                                  ", '" + FluidLeaveDikePercent + "'" +
                                  ", '" + FluidLeaveDikeRemainOnSitePercent + "'" +
-                                ", '" + FluidGoOffSitePercent + "')";
+                                 ", '" + FluidGoOffSitePercent + "')";
                 try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -110,7 +112,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit( int ID , String AmineSolution , int AqueousOperation , int AqueousShutdown , int ToxicConstituent , int Caustic , float Chloride , float CO3Concentration , int Cyanide , int ExposedToGasAmine , int ExposedToSulphur , String ExposureToAmine , int FlammableFluidID , float FlowRate ,  int H2S , float H2SInWater , int Hydrogen ,  float H2SPartialPressure , int Hydrofluoric , int MaterialExposedToClInt , float MaxOperatingPressure , float MaxOperatingTemperature , float MinOperatingPressure , float MinOperatingTemperature , float CriticalExposureTemperature ,  int ModelFluidID , float NaOHConcentration , int NonFlameToxicFluidID , float ReleaseFluidPercentToxic , String StoragePhase ,  int ToxicFluidID , float WaterpH , String TankFluidName , float FluidHeight , float FluidLeaveDikePercent , float FluidLeaveDikeRemainOnSitePercent , float FluidGoOffSitePercent)
+        public void edit( int ID , String AmineSolution , int AqueousOperation , int AqueousShutdown , int ToxicConstituent , int Caustic , float Chloride , float CO3Concentration , int Cyanide , int ExposedToGasAmine , int ExposedToSulphur , String ExposureToAmine , int FlammableFluidID , float FlowRate ,  int H2S , float H2SInWater , int Hydrogen ,  float H2SPartialPressure , int Hydrofluoric , int MaterialExposedToClInt , float MaxOperatingPressure , float MaxOperatingTemperature , float MinOperatingPressure , float MinOperatingTemperature , float CriticalExposureTemperature ,  int ModelFluidID , float NaOHConcentration , int NonFlameToxicFluidID , float LiquidLevel, float ReleaseFluidPercentToxic , String StoragePhase ,  int ToxicFluidID , float WaterpH , String TankFluidName , float FluidHeight , float FluidLeaveDikePercent , float FluidLeaveDikeRemainOnSitePercent , float FluidGoOffSitePercent)
                         
         {
             {
@@ -121,38 +123,38 @@ namespace RBI.DAL.MSSQL
                               "SET[ID] = '" + ID + "'" +
                               ",[AmineSolution] = '" + AmineSolution + "'" +
                               ",[AqueousOperation] = '" + AqueousOperation + "'" +
-                               ",[AqueousShutdown] = '" + AqueousShutdown + "'" +
-                                ",[ToxicConstituent] = '" + ToxicConstituent + "'" +
-                               ",[Caustic] = '" + Caustic + "'" +
+                              ",[AqueousShutdown] = '" + AqueousShutdown + "'" +
+                              ",[ToxicConstituent] = '" + ToxicConstituent + "'" +
+                              ",[Caustic] = '" + Caustic + "'" +
                               ",[Chloride] = '" + Chloride + "'" +
                               ",[CO3Concentration] = '" + CO3Concentration + "'" +
                               ",[Cyanide] = '" + Cyanide + "'" +
                               ",[ExposedToGasAmine] = '" + ExposedToGasAmine + "'" +
                               ",[ExposedToSulphur] = '" + ExposedToSulphur + "'" +
                               ",[ExposureToAmine] = '" + ExposureToAmine + "'" +
-                               ",[FlammableFluidID] = '" + FlammableFluidID + "'" +
+                              ",[FlammableFluidID] = '" + FlammableFluidID + "'" +
                               ",[FlowRate] = '" + FlowRate + "'" +
-                               ",[H2S] = '" + H2S + "'" +
-                                ",[H2SInWater] = '" + H2SInWater + "'" +
-                               ",[Hydrogen] = '" + Hydrogen + "'" +
+                              ",[H2S] = '" + H2S + "'" +
+                              ",[H2SInWater] = '" + H2SInWater + "'" +
+                              ",[Hydrogen] = '" + Hydrogen + "'" +
                               ",[H2SPartialPressure] = '" + H2SPartialPressure + "'" +
                               ",[Hydrofluoric] = '" + Hydrofluoric + "'" +
                               ",[MaterialExposedToClInt] = '" + MaterialExposedToClInt + "'" +
-                                 ",[MaxOperatingPressure] = '" + MaxOperatingPressure + "'" +
+                              ",[MaxOperatingPressure] = '" + MaxOperatingPressure + "'" +
                               ",[MaxOperatingTemperature] = '" + MaxOperatingTemperature + "'" +
                               ",[MinOperatingPressure] = '" + MinOperatingPressure + "'" +
                               ",[MinOperatingTemperature] = '" + MinOperatingTemperature + "'" +
                               ",[CriticalExposureTemperature] = '" + CriticalExposureTemperature + "'" +
-
                               ",[ModelFluidID] = '" + ModelFluidID + "'" +
                               ",[NaOHConcentration] = '" + NaOHConcentration + "'" +
                               ",[NonFlameToxicFluidID] = '" + NonFlameToxicFluidID + "'" +
+                              ",[LiquidLevel] = '" + LiquidLevel + "'" +
                               ",[ReleaseFluidPercentToxic] = '" + ReleaseFluidPercentToxic + "'" +
                               ",[StoragePhase] = '" + StoragePhase + "'" +
                               ",[ToxicFluidID] = '" + ToxicFluidID + "'" +
                               ",[WaterpH] = '" + WaterpH + "'" +
                               ",[TankFluidName] = '" + TankFluidName + "'" +
-                               ",[FluidHeight] = '" + FluidHeight + "'" +
+                              ",[FluidHeight] = '" + FluidHeight + "'" +
                               ",[FluidLeaveDikePercent] = '" + FluidLeaveDikePercent + "'" +
                               ",[FluidLeaveDikeRemainOnSitePercent] = '" + FluidLeaveDikeRemainOnSitePercent + "'" +
                               ",[FluidGoOffSitePercent] = '" + FluidGoOffSitePercent + "'" +
@@ -238,6 +240,7 @@ namespace RBI.DAL.MSSQL
                         ",[ModelFluidID]" +
                         ",[NaOHConcentration]" +
                         ",[NonFlameToxicFluidID]" +
+                        ",[LiquidLevel]" +
                         ",[ReleaseFluidPercentToxic]" +
                         ",[StoragePhase]" +
                         ",[ToxicFluidID]" +
@@ -337,39 +340,43 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(28))
                             {
-                                obj.ReleaseFluidPercentToxic = reader.GetFloat(28);
+                                obj.LiquidLevel = reader.GetFloat(28);
                             }
                             if (!reader.IsDBNull(29))
                             {
-                                obj.StoragePhase = reader.GetString(29);
+                                obj.ReleaseFluidPercentToxic = reader.GetFloat(29);
                             }
                             if (!reader.IsDBNull(30))
                             {
-                                obj.ToxicFluidID = reader.GetInt32(30);
+                                obj.StoragePhase = reader.GetString(30);
                             }
                             if (!reader.IsDBNull(31))
                             {
-                                obj.WaterpH = reader.GetFloat(31);
+                                obj.ToxicFluidID = reader.GetInt32(31);
                             }
                             if (!reader.IsDBNull(32))
                             {
-                                obj.TankFluidName = reader.GetString(32);
+                                obj.WaterpH = reader.GetFloat(32);
                             }
                             if (!reader.IsDBNull(33))
                             {
-                                obj.FluidHeight = reader.GetFloat(33);
+                                obj.TankFluidName = reader.GetString(33);
                             }
                             if (!reader.IsDBNull(34))
                             {
-                                obj.FluidLeaveDikePercent = reader.GetFloat(34);
+                                obj.FluidHeight = reader.GetFloat(34);
                             }
                             if (!reader.IsDBNull(35))
                             {
-                                obj.FluidLeaveDikeRemainOnSitePercent = reader.GetFloat(35);
+                                obj.FluidLeaveDikePercent = reader.GetFloat(35);
                             }
                             if (!reader.IsDBNull(36))
                             {
-                                obj.FluidGoOffSitePercent = reader.GetFloat(36);
+                                obj.FluidLeaveDikeRemainOnSitePercent = reader.GetFloat(36);
+                            }
+                            if (!reader.IsDBNull(37))
+                            {
+                                obj.FluidGoOffSitePercent = reader.GetFloat(37);
                             }
                             list.Add(obj);
                         }
@@ -422,6 +429,7 @@ namespace RBI.DAL.MSSQL
                         ",[ModelFluidID]" +
                         ",[NaOHConcentration]" +
                         ",[NonFlameToxicFluidID]" +
+                        ",[LiquidLevel]" +
                         ",[ReleaseFluidPercentToxic]" +
                         ",[StoragePhase]" +
                         ",[ToxicFluidID]" +
@@ -524,39 +532,43 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(28))
                             {
-                                obj.ReleaseFluidPercentToxic = (float)reader.GetDouble(28);
+                                obj.LiquidLevel = (float)reader.GetDouble(28);
                             }
                             if (!reader.IsDBNull(29))
                             {
-                                obj.StoragePhase = reader.GetString(29);
+                                obj.ReleaseFluidPercentToxic = (float)reader.GetDouble(29);
                             }
                             if (!reader.IsDBNull(30))
                             {
-                                obj.ToxicFluidID = reader.GetInt32(30);
+                                obj.StoragePhase = reader.GetString(30);
                             }
                             if (!reader.IsDBNull(31))
                             {
-                                obj.WaterpH = (float)reader.GetDouble(31);
+                                obj.ToxicFluidID = reader.GetInt32(31);
                             }
                             if (!reader.IsDBNull(32))
                             {
-                                obj.TankFluidName = reader.GetString(32);
+                                obj.WaterpH = (float)reader.GetDouble(32);
                             }
                             if (!reader.IsDBNull(33))
                             {
-                                obj.FluidHeight = (float)reader.GetDouble(33);
+                                obj.TankFluidName = reader.GetString(33);
                             }
                             if (!reader.IsDBNull(34))
                             {
-                                obj.FluidLeaveDikePercent = (float)reader.GetDouble(34);
+                                obj.FluidHeight = (float)reader.GetDouble(34);
                             }
                             if (!reader.IsDBNull(35))
                             {
-                                obj.FluidLeaveDikeRemainOnSitePercent = (float)reader.GetDouble(35);
+                                obj.FluidLeaveDikePercent = (float)reader.GetDouble(35);
                             }
                             if (!reader.IsDBNull(36))
                             {
-                                obj.FluidGoOffSitePercent = (float)reader.GetDouble(36);
+                                obj.FluidLeaveDikeRemainOnSitePercent = (float)reader.GetDouble(36);
+                            }
+                            if (!reader.IsDBNull(37))
+                            {
+                                obj.FluidGoOffSitePercent = (float)reader.GetDouble(37);
                             }
                         }
                     }
