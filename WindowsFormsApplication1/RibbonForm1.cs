@@ -1027,7 +1027,7 @@ namespace RBI
         private void treeListProject_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             TreeList tree = sender as TreeList;
-            TreeListHitInfo hi = tree.CalcHitInfo(tree.PointToClient(Control.MousePosition));
+            TreeListHitInfo hi = tree.CalcHitInfo(tree.PointToClient(Control.MousePosition)); // no comment ?
 
             if (treeListProject.Nodes.Count == 0) //tránh lỗi khi treelist rỗng
                 return;
@@ -2459,7 +2459,7 @@ namespace RBI
         private void addNewTab(string tabname, UserControl uc)
         {
             string _tabID = IDProposal.ToString();
-            foreach (DevExpress.XtraTab.XtraTabPage tabpage in xtraTabData.TabPages)
+            foreach (DevExpress.XtraTab.XtraTabPage tabpage in xtraTabData.TabPages) //Kiemtraxem tabpage da co hay chua, neu co thi tra ve tab do
             {
                 if (tabpage.Name == _tabID)
                 {

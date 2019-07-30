@@ -30,8 +30,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public Boolean TankMaintain653 { set; get; }
         public String AdjustmentSettle { set; get; }
         public Boolean ComponentIsWeld { set; get; }
+        public float YieldStrength { set; get; }
+        public float TensileStrength { set; get; }
+        public float WeldJointEfficiency { set; get; }
+        public float AllowableStress { set; get; }
         //</Thinning>
-        
+
         //<Lining>
         public String LinningType { set; get; }
         public Boolean LINNER_ONLINE { set; get; }
@@ -257,9 +261,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
         /// <returns></returns>
         public String PoFCategory(float Df_Total) //table 4.1 page 1-19
         {
-            if (Df_Total <= 2)
+            if (Df_Total <= 1)
                 return "1";
-            else if (Df_Total <= 20)
+            else if (Df_Total <= 10)
                 return "2";
             else if (Df_Total <= 100)
                 return "3";
@@ -273,7 +277,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float t = 0;
             if (APIComponentType == "TANKBOTTOM")
             {
-                t = ProtectedBarrier ? 3.2f : 6.4f; //inc
+                t = ProtectedBarrier ? 2.54f : 1.27f; //mm
             }
             else
             {
@@ -283,22 +287,41 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         private float agerc()
         {
-            return Math.Max(Math.Abs((CurrentThick - NomalThick) / CorrosionRate), 0);
+            return Math.Max(Math.Abs((CurrentThick - NomalThick) / CladdingCorrosionRate), 0);
         }
         
-        public float Art(float age)
+        public float Art(float agetk)
         {
-            if (!InternalCladding)
+            if (APIComponentType == "TANKBOTTOM")
             {
-                Console.WriteLine("Art: " + Math.Max(1 - (CurrentThick - CorrosionRate * age) / (getTmin() + CA), 0));
-                return Math.Max(1 - (CurrentThick - CorrosionRate * age) / (getTmin() + CA), 0);
+                float x = Math.Max((1 - (NomalThick - (CorrosionRate * agetk)) / (getTmin() + CA)), 0);
+                Console.WriteLine("Art: " + x);
+                return x;
+            }
+            else if (!InternalCladding)
+            {
+                float x = (CorrosionRate * agetk) / NomalThick;
+                Console.WriteLine("Art: " + x);
+                return x;
             }
             else
             {
-                float x = 1 - (CurrentThick - CladdingCorrosionRate * agerc() - CorrosionRate * (age - agerc())) / (getTmin() + CA);
-                Console.WriteLine("Art: "+ x);
-                return Math.Max(x, 0);
+                if (agetk < agerc())
+                {
+                    float x = (CladdingCorrosionRate * agetk) / NomalThick;
+                    return x;
+                }
+                else
+                {
+                    float x = (CladdingCorrosionRate * agerc() + CorrosionRate * (agetk - agerc())) / NomalThick;
+                    return x;
+                }
             }
+        }
+
+        public float FlowStress()
+        {
+            return ((YieldStrength + TensileStrength) / 2) * WeldJointEfficiency * 1.1f;
         }
         public float API_ART(float a)
         {
