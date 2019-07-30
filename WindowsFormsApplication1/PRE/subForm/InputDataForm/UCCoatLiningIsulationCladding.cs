@@ -28,7 +28,7 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_COATING coat = BUS.getData(ID);
             BUS_UNITS convUnit = new BUS_UNITS();
             String[] extQuality = { "No coating or poor quality", "Medium coating quality", "High coating quality" };
-            String[] inType = { "Organic - Low Quality", "Qrganic - Medium Quality", "organic - High Quality", "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
+            String[] inType = { "Organic", "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
             String[] inCon = { "Good", "Average", "Poor", "Unknown" };
             String[] extType = { "Foam Glass", "Pearlite", "Fibreglass", "Mineral Wool", "Calcium Silicate", "Asbestos" };
             String[] isuCon = { "Above average", "Average", "Below average" };
@@ -102,7 +102,6 @@ namespace RBI.PRE.subForm.InputDataForm
             if (corrosionRate == "mm/yr") txtCladdingCorrosionRate.Text = coat.CladdingCorrosionRate.ToString();
             else txtCladdingCorrosionRate.Text = (coat.CladdingCorrosionRate / convUnit.mil).ToString();
 
-
             if (coat.SupportConfigNotAllowCoatingMaint == 1)
                 chkSupport.Checked = true;
             else
@@ -138,6 +137,7 @@ namespace RBI.PRE.subForm.InputDataForm
             else coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : (float.Parse(txtCladdingCorrosionRate.Text) * (float)convUnit.mil);
             coat.SupportConfigNotAllowCoatingMaint = chkSupport.Checked ? 1 : 0;
             coat.InsulationCondition = cbIsulationCondition.Text;
+            coat.CladdingThickness = float.Parse(txtCladdingThickness.Text);
             return coat;
         }
 
@@ -209,6 +209,9 @@ namespace RBI.PRE.subForm.InputDataForm
                     case "chkExternalIsulation":
                         cbExternalIsulation.Enabled = cbIsulationCondition.Enabled = chk.Checked ? true : false;
                         break;
+                    case "chkInternalCladding":
+                        txtCladdingCorrosionRate.Enabled = txtCladdingThickness.Enabled = chk.Checked ? true : false;
+                        break;
                     default:
                         break;
 
@@ -231,19 +234,46 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        #region Hidden Button
+        private void lblThinningDF_Click(object sender, EventArgs e)
         {
+            if (lblThinningDF.Text == "▼ Governing Thinning Damage Factor Properties")
+            {
+                pnlThinningDF.Height = 124;
+                lblThinningDF.Text = "▶ Governing Thinning Damage Factor Properties";
 
+                pnlExternal.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+            }
+            else if (lblThinningDF.Text == "▶ Governing Thinning Damage Factor Properties")
+            {
+                pnlThinningDF.Height = 21;
+                lblThinningDF.Text = "▼ Governing Thinning Damage Factor Properties";
+
+                pnlExternal.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+            }
+        }
+ 
+        private void lblExternal_Click(object sender, EventArgs e)
+        {
+            if (lblExternal.Text == "▼ Governing External Damage Factor Properties")
+            {
+                pnlExternal.Height = 196;
+                lblExternal.Text = "▶ Governing External Damage Factor Properties";
+            }
+            else if (lblExternal.Text == "▶ Governing External Damage Factor Properties")
+            {
+                pnlExternal.Height = 21;
+                lblExternal.Text = "▼ Governing External Damage Factor Properties";
+            }
         }
 
-        private void lblCorrosionRate_Click(object sender, EventArgs e)
+        private void UCCoatLiningIsulationCladding_Load(object sender, EventArgs e)
         {
+            pnlThinningDF.Height = 21;
+            pnlExternal.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
 
+            pnlExternal.Height = 21;
         }
-
-        private void cbInternalLinerType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        #endregion
     }
 }

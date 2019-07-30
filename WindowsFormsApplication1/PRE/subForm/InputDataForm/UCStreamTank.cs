@@ -63,7 +63,6 @@ namespace RBI.PRE.subForm.InputDataForm
             }
             chkEnviromentContainsH2S.Checked = Convert.ToBoolean(obj.H2S);
             txtH2SContent.Text = obj.H2SInWater.ToString();
-            chkProcessContainsHydrogen.Checked = Convert.ToBoolean(obj.Hydrogen);
             chkPresenceHydrofluoricAcid.Checked = Convert.ToBoolean(obj.Hydrofluoric);
             chkChlorine.Checked = Convert.ToBoolean(obj.MaterialExposedToClInt);
             txtNaOHConcentration.Text = obj.NaOHConcentration.ToString();
@@ -280,6 +279,48 @@ namespace RBI.PRE.subForm.InputDataForm
             {
                 CtrlSPress++;
             }
+        }
+        #endregion
+
+        #region Hidden Button
+        private void lbl1GenericProperties_Click(object sender, EventArgs e)
+        {
+            if (lblGenericProperties.Text == "▼ Generic Properties")
+            {
+                pnlGenericProperties.Height = 166;
+                lblGenericProperties.Text = "▶ Generic Properties";
+
+                pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+            }
+            else if (lblGenericProperties.Text == "▶ Generic Properties")
+            {
+                pnlGenericProperties.Height = 21;
+                lblGenericProperties.Text = "▼ Generic Properties";
+
+                pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+            }
+        }
+
+        private void lblStress_Click(object sender, EventArgs e)
+        {
+            if (lblStress.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                pnlStress.Height = 255;
+                lblStress.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
+            }
+            else if (lblStress.Text == "▶ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                pnlStress.Height = 21;
+                lblStress.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
+            }
+        }
+
+        private void UCStreamTank_Load(object sender, EventArgs e)
+        {
+            pnlGenericProperties.Height = 21;
+            pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+
+            pnlStress.Height = 21;
         }
         #endregion
     }

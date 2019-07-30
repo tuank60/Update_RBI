@@ -20,13 +20,13 @@ namespace RBI.PRE.subForm.InputDataForm
         //string[] itemsInsulationCondition = { "Above average", "Average", "Below average" };
         string[] itemsProtrusionComplexity = { "Above average", "Average", "Below average" };
         string[] itemsCyclicLoading = { "None", "PRV chatter", "Reciprocating machinery", "Valve with high pressure drop" };
-        string[] itemsBranchDiameter = {"Any branch less than or equal to 2\" Nominal OD", "All branches greater than 2\" Nominal OD"};
-        string[] itemsBranchJointType = {"None","Piping tee weldolets", "Saddle in fittings", "Sweepolets", "Threaded, socket welded, or saddle on"};
-        string[] itemsNumberPipeFittings = {"More than 10", "6 to 10", "Up to 5"};
-        string[] itemsPipeCondition = { "Broken gussets or gussets welded directly to pipe", "Good condition","Missing or damage supports, improper support"};
-        string[] itemsPreviousFailure = {"Greater than one", "None", "One"};
+        string[] itemsBranchDiameter = { "Any branch less than or equal to 2\" Nominal OD", "All branches greater than 2\" Nominal OD" };
+        string[] itemsBranchJointType = { "None", "Piping tee weldolets", "Saddle in fittings", "Sweepolets", "Threaded, socket welded, or saddle on" };
+        string[] itemsNumberPipeFittings = { "More than 10", "6 to 10", "Up to 5" };
+        string[] itemsPipeCondition = { "Broken gussets or gussets welded directly to pipe", "Good condition", "Missing or damage supports, improper support" };
+        string[] itemsPreviousFailure = { "Greater than one", "None", "One" };
         string[] itemsAmountShaking = { "Minor", "Moderate", "Severe" };
-        string[] itemsAccumulatedTimeShaking = {"13 to 52 weeks", "2 to 13 weeks", "Less than 2 weeks"};
+        string[] itemsAccumulatedTimeShaking = { "13 to 52 weeks", "2 to 13 weeks", "Less than 2 weeks" };
         string[] itemsCorrectiveAction = { "Engineering Analysis", "Experience", "None" };
         private int datachange = 0;
         private int ctrlSpress = 0;
@@ -34,24 +34,37 @@ namespace RBI.PRE.subForm.InputDataForm
 
         //public UCComponentProperties(int ID)
         //{
-          //   InitializeComponent();
-         //   additemsBrinnellHardness();
-         //   additemsProtrusionComplexity();
-         //   additemsCyclicLoading();
-         //  additemsBranchDiameter();
-            //additemsBranchJointType();
-            //additemsNumberPipeFittings();
-            //additemsPipeCondition();
-            //additemsPreviousFailure();
-            //additemsAmountShaking();
-            //additemsAccumulatedTimeShaking();
-            //additemsCorrectiveAction();
-            //ShowDatatoControl(ID);
-         //}
-        
+        //   InitializeComponent();
+        //   additemsBrinnellHardness();
+        //   additemsProtrusionComplexity();
+        //   additemsCyclicLoading();
+        //  additemsBranchDiameter();
+        //additemsBranchJointType();
+        //additemsNumberPipeFittings();
+        //additemsPipeCondition();
+        //additemsPreviousFailure();
+        //additemsAmountShaking();
+        //additemsAccumulatedTimeShaking();
+        //additemsCorrectiveAction();
+        //ShowDatatoControl(ID);
+        //}
+
         public UCComponentProperties(int ID, string diameterUnit, string thicknessUnit, string corrosionRateUnit)
         {
             InitializeComponent();
+            panel1.Height = 20;
+            panel2.Height = 20;
+            panel3.Height = 20;
+            panel4.Height = 20;
+            panel5.Height = 20;
+            panel6.Height = 20;
+            panel7.Height = 20;
+            panel1.Top = panel2.Top + panel2.Height + 20;
+            panel3.Top = panel1.Top + panel1.Height + 20;
+            panel4.Top = panel3.Top + panel3.Height + 20;
+            panel5.Top = panel4.Top + panel4.Height + 20;
+            panel6.Top = panel5.Top + panel5.Height + 20;
+            panel7.Top = panel6.Top + panel6.Height + 20;
             additemsBrinnellHardness();
             additemsProtrusionComplexity();
             additemsCyclicLoading();
@@ -81,8 +94,8 @@ namespace RBI.PRE.subForm.InputDataForm
                     ////// mai
                     if (diameter == "in") txtNominalDiameter.Text = (comp.NominalDiameter / convUnit.inch).ToString(); // converst mm sang in
                     else if (diameter == "mm") txtNominalDiameter.Text = comp.NominalDiameter.ToString(); // giữ nguyên
-                    else txtNominalDiameter.Text = (comp.NominalDiameter/1000).ToString(); // converst mm sang m
-                    if (thickness == "mm") 
+                    else txtNominalDiameter.Text = (comp.NominalDiameter / 1000).ToString(); // converst mm sang m
+                    if (thickness == "mm")
                     {
                         txtNominalThickness.Text = comp.NominalThickness.ToString(); //giữ nguyên
                         txtCurrentThickness.Text = comp.CurrentThickness.ToString();// giữ nguyên
@@ -97,12 +110,12 @@ namespace RBI.PRE.subForm.InputDataForm
                     else
                     {
                         txtNominalThickness.Text = (comp.NominalThickness / 1000).ToString(); // converst mm sang m
-                        txtCurrentThickness.Text = (comp.CurrentThickness/ 1000).ToString(); // converst mm sang m
+                        txtCurrentThickness.Text = (comp.CurrentThickness / 1000).ToString(); // converst mm sang m
                         txtMinRequiredThickness.Text = (comp.MinReqThickness / 1000).ToString(); // converst mm sang m
-                    } 
+                    }
 
                     if (corrosionRate == "mm/yr") txtCurrentCorrosionRate.Text = comp.CurrentCorrosionRate.ToString(); // converst mm sang mm
-                    else txtCurrentCorrosionRate.Text = (comp.CurrentCorrosionRate/convUnit.mil).ToString(); // converst mm sang mil
+                    else txtCurrentCorrosionRate.Text = (comp.CurrentCorrosionRate / convUnit.mil).ToString(); // converst mm sang mil
 
                     //// end mai
 
@@ -181,9 +194,9 @@ namespace RBI.PRE.subForm.InputDataForm
             comp.ID = ID;
             // mai
             if (diameter == "mm") comp.NominalDiameter = txtNominalDiameter.Text != "" ? float.Parse(txtNominalDiameter.Text) : 0;
-            else if (diameter == "in") comp.NominalDiameter = txtNominalDiameter.Text != "" ? (float)(double.Parse(txtNominalDiameter.Text)*convUnit.inch) : 0; // in sang mm
-            else comp.NominalDiameter = txtNominalDiameter.Text != "" ? float.Parse(txtNominalDiameter.Text)*1000 : 0; // m sang mm
-            
+            else if (diameter == "in") comp.NominalDiameter = txtNominalDiameter.Text != "" ? (float)(double.Parse(txtNominalDiameter.Text) * convUnit.inch) : 0; // in sang mm
+            else comp.NominalDiameter = txtNominalDiameter.Text != "" ? float.Parse(txtNominalDiameter.Text) * 1000 : 0; // m sang mm
+
             if (thickness == "mm")
             {
                 comp.NominalThickness = txtNominalThickness.Text != "" ? float.Parse(txtNominalThickness.Text) : 0;
@@ -205,7 +218,7 @@ namespace RBI.PRE.subForm.InputDataForm
 
             if (corrosionRate == "mm/yr") comp.CurrentCorrosionRate = txtCurrentCorrosionRate.Text != "" ? (float)double.Parse(txtCurrentCorrosionRate.Text) : 0;
             else comp.CurrentCorrosionRate = txtCurrentCorrosionRate.Text != "" ? (float)(double.Parse(txtCurrentCorrosionRate.Text) * convUnit.mil) : 0; // mil/yr sang mm/yr
-            
+
             // end mai
             comp.BranchDiameter = cbBranchDiameter.Text;
             comp.BranchJointType = cbJointTypeBranch.Text;
@@ -324,7 +337,7 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
         #endregion
-        
+
         #region Key Press Event
         private void keyPressEvent(TextBox textbox, KeyPressEventArgs ev)
         {
@@ -419,6 +432,152 @@ namespace RBI.PRE.subForm.InputDataForm
         }
         #endregion
 
-        
+        private void label8_Click(object sender, EventArgs e)
+        {
+            if (label8.Text == "▼ Generic Properties")
+            {
+                panel2.Height = 220;
+                label8.Text = "▶ Generic Properties";
+                panel1.Top = panel2.Top + panel2.Height + 20;
+                panel3.Top = panel1.Top + panel1.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+            }
+            else if (label8.Text == "▶ Generic Properties")
+            {
+                panel2.Height = 26;
+                label8.Text = "▼ Generic Properties";
+                panel1.Top = panel2.Top + panel2.Height + 20;
+                panel3.Top = panel1.Top + panel1.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            if (label9.Text == "▼ Governing Thinning Damage Factor Properties")
+            {
+                panel1.Height = 100;
+                label9.Text = "▶ Governing Thinning Damage Factor Properties";
+                panel3.Top = panel1.Top + panel1.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+            }
+            else if (label9.Text == "▶ Governing Thinning Damage Factor Properties")
+            {
+                panel1.Height = 26;
+                label9.Text = "▼ Governing Thinning Damage Factor Properties";
+                panel3.Top = panel1.Top + panel1.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+            }
+
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            if (label11.Text == "▼ Governing External Damage Factor Properties")
+            {
+                panel3.Height = 60;
+                label11.Text = "▶ Governing External Damage Factor Properties";
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+
+            }
+            else if (label11.Text == "▶ Governing External Damage Factor Properties")
+            {
+                panel3.Height = 26;
+                label11.Text = "▼ Governing External Damage Factor Properties";
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (label13.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                panel4.Height = 60;
+                label13.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+
+            }
+            else 
+            {
+                panel4.Height = 26;
+                label13.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+
+            }
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            if (label14.Text == "▼ High Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                panel5.Height = 60;
+                label14.Text = "▶ High Temperature Hydrogen Attack Damage Factor Properties";
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+
+            }
+            else 
+            {
+                panel5.Height = 26;
+                label14.Text = "▼ High Temperature Hydrogen Attack Damage Factor Properties";
+                panel6.Top = panel5.Top + panel5.Height + 20;
+                panel7.Top = panel6.Top + panel6.Height + 20;
+
+            }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            if (label7.Text == "▼ Governing Brittle Fracture Damage Factor Properties")
+            {
+                panel6.Height = 320;
+                label7.Text = "▶ Governing Brittle Fracture Damage Factor Properties";
+                panel7.Top = panel6.Top + panel6.Height + 20;
+            }
+            else if (label7.Text == "▶ Governing Brittle Fracture Damage Factor Properties")
+            {
+                panel6.Height = 26;
+                label7.Text = "▼ Governing Brittle Fracture Damage Factor Properties";
+                panel7.Top = panel6.Top + panel6.Height + 20;
+            }
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            if (label40.Text == "▼ Fatique Damage Factor Properties")
+            {
+                panel7.Height = 300;
+                label40.Text = "▶ Fatique Damage Factor Properties";
+            }
+            else if (label40.Text == "▶ Fatique Damage Factor Properties")
+            {
+                panel7.Height = 26;
+                label40.Text = "▼ Fatique Damage Factor Properties";
+            }
+        }
     }
 }

@@ -490,7 +490,7 @@ namespace RBI.PRE.subForm.InputDataForm
 
         #endregion
 
-        #region Expand or Collapse Panel
+        #region Hidden Button
         private void lblGenericProperties_Click(object sender, EventArgs e)
         {
             if (lblGenericProperties.Text == "▼ Generic Properties")

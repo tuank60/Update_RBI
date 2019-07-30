@@ -516,9 +516,69 @@ namespace RBI.PRE.subForm.InputDataForm
 
         #endregion
 
-        private void txtOp176_TextChanged_1(object sender, EventArgs e)
+        #region Hidden Button
+        private void lblGennericProperties_Click(object sender, EventArgs e)
         {
+            if (lblGennericProperties.Text == "▼ Generic Properties")
+            {
+                pnlGenericProperties.Height = 122;
+                lblGennericProperties.Text = "▶ Generic Properties";
 
+                pnlExternalDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlHydrogenAttackDF.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+            }
+            else if (lblGennericProperties.Text == "▶ Generic Properties")
+            {
+                pnlGenericProperties.Height = 21;
+                lblGennericProperties.Text = "▼ Generic Properties";
+
+                pnlExternalDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlHydrogenAttackDF.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+            }
         }
+
+        private void lblExternal_Click(object sender, EventArgs e)
+        {
+            if (lblExternal.Text == "▼ Govening External Damage Factor Properties")
+            {
+                pnlExternalDF.Height =301;
+                lblExternal.Text = "▶ Govening External Damage Factor Properties";
+
+                pnlHydrogenAttackDF.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+            }
+            else if (lblExternal.Text == "▶ Govening External Damage Factor Properties")
+            {
+                pnlExternalDF.Height = 21;
+                lblExternal.Text = "▼ Govening External Damage Factor Properties";
+
+                pnlHydrogenAttackDF.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+            }
+        }
+
+        private void lblHydrogenAttackDF_Click(object sender, EventArgs e)
+        {
+            if (lblHydrogenAttackDF.Text == "▼ High Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                pnlHydrogenAttackDF.Height = 62;
+                lblHydrogenAttackDF.Text = "▶ High Temperature Hydrogen Attack Damage Factor Properties";
+            }
+            else if (lblHydrogenAttackDF.Text == "▶ High Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                pnlHydrogenAttackDF.Height = 21;
+                lblHydrogenAttackDF.Text = "▼ High Temperature Hydrogen Attack Damage Factor Properties";
+            }
+        }
+
+        private void UCOperatingCondition_Load(object sender, EventArgs e)
+        {
+            pnlGenericProperties.Height = 21;
+            pnlExternalDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+
+            pnlExternalDF.Height = 21;
+            pnlHydrogenAttackDF.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+
+            pnlHydrogenAttackDF.Height = 21;
+        }
+        #endregion
     }
 }

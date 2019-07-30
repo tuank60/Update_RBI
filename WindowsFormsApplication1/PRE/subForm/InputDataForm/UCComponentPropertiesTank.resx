@@ -206,6 +206,9 @@
         fQx5AJc90S4AAAAASUVORK5CYIIL
 </value>
   </data>
+  <data name="label34.Text" xml:space="preserve">
+    <value>The nominal operating conditions have been essentially the same and consistent with the specificed design conditions for a significant period of time, and more severe conditions (i.e., lower temperature and/or higher stress) are not expected in the future.</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>71</value>
   </metadata>
