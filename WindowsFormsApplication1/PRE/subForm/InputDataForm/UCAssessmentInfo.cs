@@ -201,9 +201,10 @@ namespace RBI.PRE.subForm.InputDataForm
         #endregion
 
         #region Hidden Button
-        private void labelAS_Click(object sender, EventArgs e)
+
+        private void lblAssessment_Click(object sender, EventArgs e)
         {
-            if(lblAssessment.Text == "▼ Assessment")
+            if (lblAssessment.Text == "▼ Assessment")
             {
                 pnlAssessment.Height = 142;
                 lblAssessment.Text = "▶ Assessment";
@@ -212,7 +213,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
                 pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
-            else if(lblAssessment.Text == "▶ Assessment")
+            else if (lblAssessment.Text == "▶ Assessment")
             {
                 pnlAssessment.Height = 21;
                 lblAssessment.Text = "▼ Assessment";
@@ -222,9 +223,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
         }
-        
 
-        private void labelEQ_Click(object sender, EventArgs e)
+        private void lblEquipment_Click(object sender, EventArgs e)
         {
             if (lblEquipment.Text == "▼ Equipmemt")
             {
@@ -244,7 +244,7 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
 
-        private void label16_Click(object sender, EventArgs e)
+        private void lblComponent_Click(object sender, EventArgs e)
         {
             if (lblComponent.Text == "▼ Component")
             {
@@ -262,7 +262,7 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
 
-        private void labelRT_Click(object sender, EventArgs e)
+        private void lblReport_Click(object sender, EventArgs e)
         {
             if (lblReport.Text == "▼ Report Template ")
             {
@@ -289,6 +289,10 @@ namespace RBI.PRE.subForm.InputDataForm
 
             pnlReport.Height = 21;
         }
+
+
         #endregion
+
+        
     }
 }
