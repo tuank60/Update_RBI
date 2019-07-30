@@ -24,6 +24,17 @@ namespace RBI.PRE.subForm.InputDataForm
         public UCComponentPropertiesTank(int ID, string type, string diameterUnit, string thicknessUnit, string corrosionRateUnit)
         {
             InitializeComponent();
+            panel1.Height = 20;
+            panel2.Height = 20;
+            panel3.Height = 20;
+            panel4.Height = 20;
+            panel5.Height = 20;
+            panel6.Height = 20;
+            panel2.Top = panel1.Top + panel1.Height + 20;
+            panel3.Top = panel2.Top + panel2.Height + 20;
+            panel4.Top = panel3.Top + panel3.Height + 20;
+            panel5.Top = panel4.Top + panel4.Height + 20;
+            panel6.Top = panel5.Top + panel5.Height + 20;
             ShowDataToControl(ID, diameterUnit, thicknessUnit, corrosionRateUnit);
             if (type == "Shell")
             {
@@ -262,5 +273,119 @@ namespace RBI.PRE.subForm.InputDataForm
             KeyPress1(e);
         }
         #endregion
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            if (label7.Text == "▼ Generic Properties")
+            {
+                panel1.Height = 220;
+                label7.Text = "▶ Generic Properties";
+                panel2.Top = panel1.Top + panel1.Height + 20;
+                panel3.Top = panel2.Top + panel2.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+            else if (label7.Text == "▶ Generic Properties")
+            {
+                panel1.Height = 26;
+                label7.Text = "▼ Generic Properties";
+                panel2.Top = panel1.Top + panel1.Height + 20;
+                panel3.Top = panel2.Top + panel2.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            if (label8.Text == "▼ Governing External Damage Factor Properties")
+            {
+                panel2.Height = 50;
+                label8.Text = "▶ Governing External Damage Factor Properties";
+                panel3.Top = panel2.Top + panel2.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+            else if (label8.Text == "▶ Governing External Damage Factor Properties")
+            {
+                panel2.Height = 26;
+                label8.Text = "▼ Governing External Damage Factor Properties";
+                panel3.Top = panel2.Top + panel2.Height + 20;
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            if (label9.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                panel3.Height = 50;
+                label9.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+            else if (label9.Text == "▶ Governing Stress Corrosion Cracking Damage Factor Properties")
+            {
+                panel3.Height = 26;
+                label9.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
+                panel4.Top = panel3.Top + panel3.Height + 20;
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            if (label13.Text == "▼ Governing Brittle Fracture Damage Factor Properties")
+            {
+                panel4.Height = 320;
+                label13.Text = "▶ Governing Brittle Fracture Damage Factor Properties";
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+            else if (label13.Text == "▶ Governing Brittle Fracture Damage Factor Properties")
+            {
+                panel4.Height = 26;
+                label13.Text = "▼ Governing Brittle Fracture Damage Factor Properties";
+                panel5.Top = panel4.Top + panel4.Height + 20;
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+        }
+
+        private void label40_Click(object sender, EventArgs e)
+        {
+            if (label40.Text == "▼ Governing Fatique Damage Factor Properties")
+            {
+                panel5.Height = 60;
+                label40.Text = "▶ Governing Fatique Damage Factor Properties";
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+            else if (label40.Text == "▶ Governing Fatique Damage Factor Properties")
+            {
+                panel5.Height = 26;
+                label40.Text = "▼ Governing Fatique Damage Factor Properties";
+                panel6.Top = panel5.Top + panel5.Height + 20;
+            }
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+            if (label20.Text == "▼ Tank Consequence of Failure Properties")
+            {
+                panel6.Height = 120;
+                label20.Text = "▶ Tank Consequence of Failure Properties";
+            }
+            else if (label20.Text == "▶ Tank Consequence of Failure Properties")
+            {
+                panel6.Height = 26;
+                label20.Text = "▼ Tank Consequence of Failure Properties";
+            }
+        }
     }
 }

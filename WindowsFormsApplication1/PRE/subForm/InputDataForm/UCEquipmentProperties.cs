@@ -23,8 +23,8 @@ namespace RBI.PRE.subForm.InputDataForm
             addItemsThermalHistory();
             ShowDatatoControl(ID, temUnit, volumeUnit);
             changeUnit(temUnit, volumeUnit);
-            addAdjustmentSettlement();
-            addTypeOfSoil();
+            //addAdjustmentSettlement();
+            //addTypeOfSoil();
         }
 
         #region change unit
@@ -174,10 +174,15 @@ namespace RBI.PRE.subForm.InputDataForm
             eq.ThermalHistory = cbThermalHistory.Text;
             eq.YearLowestExpTemp = chkEquipmentOperatingManyYear.Checked ? 1 : 0;
             double equipVolume = 0;
-            if (volUnit == "m3") equipVolume = txtEquipmentVolume.Text != "" ? float.Parse(txtEquipmentVolume.Text) : 0;
-            else equipVolume = txtMinRequiredTemperature.Text != "" ? (float.Parse(txtEquipmentVolume.Text)*convUnit.ft3) : 0; // mai
+            if (volUnit == "m3")
+            {
+                equipVolume = txtEquipmentVolume.Text != "" ? float.Parse(txtEquipmentVolume.Text) : 0;
+            }
+            else
+            {
+                equipVolume = txtEquipmentVolume.Text != "" ? (float.Parse(txtEquipmentVolume.Text) * convUnit.ft3) : 0; // mai
+            }
             eq.Volume = (float)equipVolume;
-            eq.DistanceToGroundWater = float.Parse(txtDistanceGroundWater.Text);
             //eq.CommissionDate = 
             return eq;
         }
@@ -286,31 +291,7 @@ namespace RBI.PRE.subForm.InputDataForm
             {
                 cbThermalHistory.Properties.Items.Add(itemsThermalHistory[i], i, i);
             }
-        }
-        private void addAdjustmentSettlement()
-        {
-            cbAdjustmentSettlement.Properties.Items.Add("", -1, -1);
-            for (int i=0; i < itemsAdjustmentSettlement.Length; i++)
-            {
-                cbAdjustmentSettlement.Properties.Items.Add(itemsAdjustmentSettlement[i], i, i);
-            }
-        }
-        private void addTypeOfSoil()
-        {
-            cbTypeOfSoil.Properties.Items.Add("", -1, -1);
-            for(int i = 0; i < itemsTypeOfSoid.Length; i++)
-            {
-                cbTypeOfSoil.Properties.Items.Add(itemsTypeOfSoid[i], i, i);
-            }
-        }
-        private void addEnvironmentalSensitivity()
-        {
-            cbTypeOfSoil.Properties.Items.Add("", -1, -1);
-            for (int i= 0; i < itemsEnvironmentalSensitivity.Length; i++)
-            {
-                cbTypeOfSoil.Properties.Items.Add(itemsEnvironmentalSensitivity[i], i, i);
-            }
-        }
+        }  
         #endregion
 
         #region variable
@@ -353,17 +334,134 @@ namespace RBI.PRE.subForm.InputDataForm
                                             };
         string[] itemsExternalEnvironment = { "Arid/dry", "Marine", "Severe", "Temperate" };
         string[] itemsThermalHistory = { "None", "Solution Annealed", "Stabilised After Welding", "Stabilised Before Welding" };
-        string[] itemsAdjustmentSettlement = { "Recorded settlement exceeds API STD 653 criteria",
-                                               "Recorded settlement meets API STD 653 criteria",
-                                               "Settlement never evaluated",
-                                               "Concrete foundation, no settlement"};
-        string[] itemsTypeOfSoid = {"Coarse Sand","Fine Sand","Very Fine Sand","Silt","Sandy Clay","Clay","Concrete-Asphalt","Gravel"};
-        string[] itemsEnvironmentalSensitivity = {"Low","Medium","High"};
+        //string[] itemsAdjustmentSettlement = { "Recorded settlement exceeds API STD 653 criteria",
+                                               //"Recorded settlement meets API STD 653 criteria",
+                                               //"Settlement never evaluated",
+                                               //"Concrete foundation, no settlement"};
+        //string[] itemsTypeOfSoid = {"Coarse Sand","Fine Sand","Very Fine Sand","Silt","Sandy Clay","Clay","Concrete-Asphalt","Gravel"};
+        //string[] itemsEnvironmentalSensitivity = {"Low","Medium","High"};
         private int datachange = 0;
         private int ctrlSpress = 0;
-        
+
+
         #endregion
 
-        
+        #region Hidden Button
+        private void lblGenericProperties_Click(object sender, EventArgs e)
+        {
+            if (lblGenericProperties.Text == "▼ Generic Properties")
+            {
+                pnlGenericProperties.Height = 155;
+                lblGenericProperties.Text = "▶ Generic Properties";
+
+                pnlThinningDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+
+                
+            }
+            else if (lblGenericProperties.Text == "▶ Generic Properties")
+            {
+                pnlGenericProperties.Height = 21;
+                lblGenericProperties.Text = "▼ Generic Properties";
+
+                pnlThinningDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+            }
+        }
+
+        private void lblThinningDF_Click(object sender, EventArgs e)
+        {
+            if (lblThinningDF.Text == "▼ Governing Thinning Damage Factor Properties")
+            {
+                pnlThinningDF.Height = 56;
+                lblThinningDF.Text = "▶ Governing Thinning Damage Factor Properties";
+
+                pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+
+            }
+            else if (lblThinningDF.Text == "▶ Governing Thinning Damage Factor Properties")
+            {
+                pnlThinningDF.Height = 21;
+                lblThinningDF.Text = "▼ Governing Thinning Damage Factor Properties";
+
+                pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+            }
+        }
+
+        private void lblExternalDF_Click(object sender, EventArgs e)
+        {
+            if (lblExternalDF.Text == "▼ Governing External Damage Factor Properties")
+            {
+                pnlExternalDF.Height = 106;
+                lblExternalDF.Text = "▶ Governing External Damage Factor Properties";
+
+                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+
+            }
+            else if (lblExternalDF.Text == "▶ Governing External Damage Factor Properties")
+            {
+                pnlExternalDF.Height = 21;
+                lblExternalDF.Text = "▼ Governing External Damage Factor Properties";
+
+                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+            }
+        }
+
+        private void lblStressCorrosionCreackingDF_Click(object sender, EventArgs e)
+        {
+            if (lblStressCorrosionCreackingDF.Text == "▼ Governing Stress Corrosion Creacking Damage Factor Properties")
+            {
+                pnlStressCorrosionCreacking.Height = 162;
+                lblStressCorrosionCreackingDF.Text = "▶ Governing Stress Corrosion Creacking Damage Factor Properties";
+
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+            }
+            else if (lblStressCorrosionCreackingDF.Text== "▶ Governing Stress Corrosion Creacking Damage Factor Properties")
+            {
+                pnlStressCorrosionCreacking.Height = 21;
+                lblStressCorrosionCreackingDF.Text = "▼ Governing Stress Corrosion Creacking Damage Factor Properties";
+
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+            }
+        }
+
+        private void lblBrittleFractureDF_Click(object sender, EventArgs e)
+        {
+            if (lblBrittleFractureDF.Text == "▼ Governing Brittle Fracture Damage Factory Properties")
+            {
+                pnlBrittleFactureDF.Height = 107;
+                lblBrittleFractureDF.Text = "▶ Governing Brittle Fracture Damage Factory Properties";
+            }
+            else if (lblBrittleFractureDF.Text == "▶ Governing Brittle Fracture Damage Factory Properties")
+            {
+                pnlBrittleFactureDF.Height = 21;
+                lblBrittleFractureDF.Text = "▼ Governing Brittle Fracture Damage Factory Properties";
+            }
+        }       
+
+        private void UCEquipmentProperties_Load(object sender, EventArgs e)
+        {
+            pnlGenericProperties.Height = 21;
+            pnlThinningDF.Top = pnlGenericProperties.Top + pnlThinningDF.Height + 13;
+
+            pnlThinningDF.Height = 21;
+            pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
+
+            pnlStressCorrosionCreacking.Height = 21;
+            pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+
+            pnlBrittleFactureDF.Height = 21;
+        }
+        #endregion
     }
 }

@@ -80,7 +80,7 @@ namespace RBI.PRE.subForm.InputDataForm
             ass.IsEquipmentLinked = chkRiskLinksEquipmentRisk.Checked ? 1 : 0;
             ass.AssessmentMethod = cbAsessmentMethod.SelectedIndex;
             Console.WriteLine(cbAsessmentMethod.SelectedIndex);
-            ass.RecordType = cbReportTemplate.Text;
+            //ass.RecordType = cbReportTemplate.Text;
             ass.ProposalName = txtAssessmentName.Text;
             ass.AdoptedDate = DateTime.Now;
             ass.RecommendedDate = DateTime.Now;
@@ -203,73 +203,92 @@ namespace RBI.PRE.subForm.InputDataForm
         #region Hidden Button
         private void labelAS_Click(object sender, EventArgs e)
         {
-            if(labelAS.Text == "▼ Assessment")
+            if(lblAssessment.Text == "▼ Assessment")
             {
-                panelAS.Height = 0;
-                labelAS.Text = "▶ Assessment";
-                labelEQ.Top = panelAS.Top;
-                panelEQ.Top = labelEQ.Top + 20;
+                pnlAssessment.Height = 142;
+                lblAssessment.Text = "▶ Assessment";
+
+                pnlEquipment.Top = pnlAssessment.Top + pnlAssessment.Height + 13;
+                pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
+                pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
-            else if(labelAS.Text == "▶ Assessment")
+            else if(lblAssessment.Text == "▶ Assessment")
             {
-                panelAS.Height = 126;
-                labelAS.Text = "▼ Assessment";
-                labelEQ.Top = panelAS.Top + panelAS.Height;
-                panelEQ.Top = labelEQ.Top + 20;
+                pnlAssessment.Height = 21;
+                lblAssessment.Text = "▼ Assessment";
+
+                pnlEquipment.Top = pnlAssessment.Top + pnlAssessment.Height + 13;
+                pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
+                pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
         }
         
 
         private void labelEQ_Click(object sender, EventArgs e)
         {
-            if (labelEQ.Text == "▼ Equipmemt")
+            if (lblEquipment.Text == "▼ Equipmemt")
             {
-                panelEQ.Height = 0;
-                labelEQ.Text = "▶ Equipmemt";
-                labelCO.Top = panelEQ.Top;
-                panelEQ.Top = labelEQ.Top + 20;            
+                pnlEquipment.Height = 248;
+                lblEquipment.Text = "▶ Equipmemt";
+
+                pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
+                pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
-            else if (labelEQ.Text == "▶ Equipmemt")
+            else if (lblEquipment.Text == "▶ Equipmemt")
             {
-                panelEQ.Top = labelEQ.Top + 20;
-                panelEQ.Height = 824;
-                labelEQ.Text = "▼ Equipmemt";          
+                pnlEquipment.Height = 21;
+                lblEquipment.Text = "▼ Equipmemt";
+
+                pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
+                pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
         }
 
         private void label16_Click(object sender, EventArgs e)
         {
-            if (labelCO.Text == "▼ Component")
+            if (lblComponent.Text == "▼ Component")
             {
-                panelCO.Height = 0;
-                labelCO.Text = "▶ Component";
-                labelRT.Top = panelCO.Top;
-                panelCO.Top = labelCO.Top + 20;
+                pnlComponent.Height = 146;
+                lblComponent.Text = "▶ Component";
+
+                pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
-            else if (labelCO.Text == "▶ Component")
+            else if (lblComponent.Text == "▶ Component")
             {
-                panelCO.Top = labelCO.Top + 20;
-                panelCO.Height = 126;
-                labelCO.Text = "▼ Component";
+                pnlComponent.Height = 21;
+                lblComponent.Text = "▼ Component";
+
+                pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
             }
         }
 
         private void labelRT_Click(object sender, EventArgs e)
         {
-            if (labelRT.Text == "▼ Report Template ")
+            if (lblReport.Text == "▼ Report Template ")
             {
-                panelRT.Height = 0;
-                labelRT.Text = "▶ Report Template ";
-                panelRT.Top = labelRT.Top + 20;
+                pnlReport.Height = 62;
+                lblReport.Text = "▶ Report Template ";
             }
-            else if (labelRT.Text == "▶ Report Template ")
+            else if (lblReport.Text == "▶ Report Template ")
             {
-                panelRT.Top = labelCO.Top + 20;
-                panelRT.Height = 126;
-                labelRT.Text = "▼ Report Template ";
+                pnlReport.Height = 21;
+                lblReport.Text = "▼ Report Template ";
             }
         }
-        #endregion
 
+        private void UCAssessmentInfo_Load(object sender, EventArgs e)
+        {
+            pnlAssessment.Height = 21;
+            pnlEquipment.Top = pnlAssessment.Top + pnlAssessment.Height+13;
+
+            pnlEquipment.Height = 21;
+            pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
+
+            pnlComponent.Height = 21;
+            pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
+
+            pnlReport.Height = 21;
+        }
+        #endregion
     }
 }

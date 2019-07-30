@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlHydrogenAttackDF = new System.Windows.Forms.Panel();
+            this.lblHydrogenAttackDF = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblHydroPressure = new System.Windows.Forms.Label();
+            this.txtOperatingHydrogen = new System.Windows.Forms.TextBox();
+            this.pnlExternalDF = new System.Windows.Forms.Panel();
+            this.lblExternal = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtOp176 = new System.Windows.Forms.TextBox();
             this.lbOp10 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.lbOp1 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -61,8 +66,8 @@
             this.txtOp107 = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnlGenericProperties = new System.Windows.Forms.Panel();
+            this.lblGennericProperties = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCritExpoTem = new System.Windows.Forms.Label();
             this.txtMaximumOperatingTemp = new System.Windows.Forms.TextBox();
@@ -76,76 +81,142 @@
             this.txtMinOperatingPressure = new System.Windows.Forms.TextBox();
             this.lblmaxOpTem = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lblHydroPressure = new System.Windows.Forms.Label();
             this.txtFlowRate = new System.Windows.Forms.TextBox();
             this.txtCriticalExposure = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMinimumOperatingTemp = new System.Windows.Forms.TextBox();
-            this.txtOperatingHydrogen = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlHydrogenAttackDF.SuspendLayout();
+            this.pnlExternalDF.SuspendLayout();
+            this.pnlGenericProperties.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.pnlHydrogenAttackDF);
+            this.groupBox1.Controls.Add(this.pnlExternalDF);
+            this.groupBox1.Controls.Add(this.pnlGenericProperties);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(871, 555);
+            this.groupBox1.Size = new System.Drawing.Size(871, 671);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operating Condition";
             this.groupBox1.TextChanged += new System.EventHandler(this.txtMaximumOperatingTemp_TextChanged);
             // 
-            // panel2
+            // pnlHydrogenAttackDF
             // 
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txtOp176);
-            this.panel2.Controls.Add(this.lbOp10);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label26);
-            this.panel2.Controls.Add(this.lbOp1);
-            this.panel2.Controls.Add(this.label27);
-            this.panel2.Controls.Add(this.txtOp12);
-            this.panel2.Controls.Add(this.label28);
-            this.panel2.Controls.Add(this.txtOp8);
-            this.panel2.Controls.Add(this.label29);
-            this.panel2.Controls.Add(this.txtOp6);
-            this.panel2.Controls.Add(this.txtOp32);
-            this.panel2.Controls.Add(this.lbOp9);
-            this.panel2.Controls.Add(this.txtOp71);
-            this.panel2.Controls.Add(this.lbOp8);
-            this.panel2.Controls.Add(this.lbOp2);
-            this.panel2.Controls.Add(this.lbOp7);
-            this.panel2.Controls.Add(this.lbOp3);
-            this.panel2.Controls.Add(this.lbOp4);
-            this.panel2.Controls.Add(this.txtOp162);
-            this.panel2.Controls.Add(this.lbOp5);
-            this.panel2.Controls.Add(this.txtOp135);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.lbOp6);
-            this.panel2.Controls.Add(this.label18);
-            this.panel2.Controls.Add(this.txtOp121);
-            this.panel2.Controls.Add(this.label20);
-            this.panel2.Controls.Add(this.txtOp107);
-            this.panel2.Controls.Add(this.label24);
-            this.panel2.Controls.Add(this.label22);
-            this.panel2.Location = new System.Drawing.Point(24, 220);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(814, 301);
-            this.panel2.TabIndex = 9;
+            this.pnlHydrogenAttackDF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlHydrogenAttackDF.Controls.Add(this.lblHydrogenAttackDF);
+            this.pnlHydrogenAttackDF.Controls.Add(this.label3);
+            this.pnlHydrogenAttackDF.Controls.Add(this.lblHydroPressure);
+            this.pnlHydrogenAttackDF.Controls.Add(this.txtOperatingHydrogen);
+            this.pnlHydrogenAttackDF.Location = new System.Drawing.Point(21, 511);
+            this.pnlHydrogenAttackDF.Name = "pnlHydrogenAttackDF";
+            this.pnlHydrogenAttackDF.Size = new System.Drawing.Size(814, 62);
+            this.pnlHydrogenAttackDF.TabIndex = 10;
+            // 
+            // lblHydrogenAttackDF
+            // 
+            this.lblHydrogenAttackDF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblHydrogenAttackDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblHydrogenAttackDF.Location = new System.Drawing.Point(0, -1);
+            this.lblHydrogenAttackDF.Name = "lblHydrogenAttackDF";
+            this.lblHydrogenAttackDF.Size = new System.Drawing.Size(811, 18);
+            this.lblHydrogenAttackDF.TabIndex = 0;
+            this.lblHydrogenAttackDF.Text = "▼ High Temperature Hydrogen Attack Damage Factor Properties";
+            this.lblHydrogenAttackDF.Click += new System.EventHandler(this.lblHydrogenAttackDF_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(19, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Operating Hydrogen Partial Pressure";
+            // 
+            // lblHydroPressure
+            // 
+            this.lblHydroPressure.AutoSize = true;
+            this.lblHydroPressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHydroPressure.Location = new System.Drawing.Point(358, 33);
+            this.lblHydroPressure.Name = "lblHydroPressure";
+            this.lblHydroPressure.Size = new System.Drawing.Size(23, 15);
+            this.lblHydroPressure.TabIndex = 2;
+            this.lblHydroPressure.Text = "psi";
+            // 
+            // txtOperatingHydrogen
+            // 
+            this.txtOperatingHydrogen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOperatingHydrogen.Location = new System.Drawing.Point(235, 30);
+            this.txtOperatingHydrogen.Name = "txtOperatingHydrogen";
+            this.txtOperatingHydrogen.Size = new System.Drawing.Size(117, 21);
+            this.txtOperatingHydrogen.TabIndex = 3;
+            this.txtOperatingHydrogen.TextChanged += new System.EventHandler(this.txtMaximumOperatingTemp_TextChanged);
+            this.txtOperatingHydrogen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaximumOperatingTemp_KeyDown);
+            this.txtOperatingHydrogen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOperatingHydrogen_KeyPress);
+            // 
+            // pnlExternalDF
+            // 
+            this.pnlExternalDF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlExternalDF.Controls.Add(this.lblExternal);
+            this.pnlExternalDF.Controls.Add(this.label6);
+            this.pnlExternalDF.Controls.Add(this.txtOp176);
+            this.pnlExternalDF.Controls.Add(this.lbOp10);
+            this.pnlExternalDF.Controls.Add(this.label26);
+            this.pnlExternalDF.Controls.Add(this.lbOp1);
+            this.pnlExternalDF.Controls.Add(this.label27);
+            this.pnlExternalDF.Controls.Add(this.txtOp12);
+            this.pnlExternalDF.Controls.Add(this.label28);
+            this.pnlExternalDF.Controls.Add(this.txtOp8);
+            this.pnlExternalDF.Controls.Add(this.label29);
+            this.pnlExternalDF.Controls.Add(this.txtOp6);
+            this.pnlExternalDF.Controls.Add(this.txtOp32);
+            this.pnlExternalDF.Controls.Add(this.lbOp9);
+            this.pnlExternalDF.Controls.Add(this.txtOp71);
+            this.pnlExternalDF.Controls.Add(this.lbOp8);
+            this.pnlExternalDF.Controls.Add(this.lbOp2);
+            this.pnlExternalDF.Controls.Add(this.lbOp7);
+            this.pnlExternalDF.Controls.Add(this.lbOp3);
+            this.pnlExternalDF.Controls.Add(this.lbOp4);
+            this.pnlExternalDF.Controls.Add(this.txtOp162);
+            this.pnlExternalDF.Controls.Add(this.lbOp5);
+            this.pnlExternalDF.Controls.Add(this.txtOp135);
+            this.pnlExternalDF.Controls.Add(this.label16);
+            this.pnlExternalDF.Controls.Add(this.lbOp6);
+            this.pnlExternalDF.Controls.Add(this.label18);
+            this.pnlExternalDF.Controls.Add(this.txtOp121);
+            this.pnlExternalDF.Controls.Add(this.label20);
+            this.pnlExternalDF.Controls.Add(this.txtOp107);
+            this.pnlExternalDF.Controls.Add(this.label24);
+            this.pnlExternalDF.Controls.Add(this.label22);
+            this.pnlExternalDF.Location = new System.Drawing.Point(24, 183);
+            this.pnlExternalDF.Name = "pnlExternalDF";
+            this.pnlExternalDF.Size = new System.Drawing.Size(811, 301);
+            this.pnlExternalDF.TabIndex = 9;
+            // 
+            // lblExternal
+            // 
+            this.lblExternal.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblExternal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblExternal.Location = new System.Drawing.Point(-2, 0);
+            this.lblExternal.Name = "lblExternal";
+            this.lblExternal.Size = new System.Drawing.Size(813, 18);
+            this.lblExternal.TabIndex = 21;
+            this.lblExternal.Text = "▼ Govening External Damage Factor Properties";
+            this.lblExternal.Click += new System.EventHandler(this.lblExternal_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(425, 261);
+            this.label6.Location = new System.Drawing.Point(425, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(18, 15);
             this.label6.TabIndex = 20;
@@ -154,37 +225,27 @@
             // txtOp176
             // 
             this.txtOp176.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp176.Location = new System.Drawing.Point(235, 258);
+            this.txtOp176.Location = new System.Drawing.Point(235, 260);
             this.txtOp176.Name = "txtOp176";
             this.txtOp176.Size = new System.Drawing.Size(181, 21);
             this.txtOp176.TabIndex = 19;
-            this.txtOp176.TextChanged += new System.EventHandler(this.txtOp176_TextChanged_1);
             // 
             // lbOp10
             // 
             this.lbOp10.AutoSize = true;
             this.lbOp10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp10.ForeColor = System.Drawing.Color.Black;
-            this.lbOp10.Location = new System.Drawing.Point(17, 258);
+            this.lbOp10.Location = new System.Drawing.Point(17, 260);
             this.lbOp10.Name = "lbOp10";
             this.lbOp10.Size = new System.Drawing.Size(174, 15);
             this.lbOp10.TabIndex = 18;
             this.lbOp10.Text = "% Operating at 176⁰C or above";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(4, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(810, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Govening External Damage Factor Properties";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(422, 233);
+            this.label26.Location = new System.Drawing.Point(422, 235);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(18, 15);
             this.label26.TabIndex = 14;
@@ -195,7 +256,7 @@
             this.lbOp1.AutoSize = true;
             this.lbOp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp1.ForeColor = System.Drawing.Color.Black;
-            this.lbOp1.Location = new System.Drawing.Point(19, 30);
+            this.lbOp1.Location = new System.Drawing.Point(19, 32);
             this.lbOp1.Name = "lbOp1";
             this.lbOp1.Size = new System.Drawing.Size(166, 15);
             this.lbOp1.TabIndex = 0;
@@ -205,7 +266,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(422, 205);
+            this.label27.Location = new System.Drawing.Point(422, 207);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(18, 15);
             this.label27.TabIndex = 15;
@@ -214,7 +275,7 @@
             // txtOp12
             // 
             this.txtOp12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp12.Location = new System.Drawing.Point(235, 27);
+            this.txtOp12.Location = new System.Drawing.Point(235, 29);
             this.txtOp12.Name = "txtOp12";
             this.txtOp12.Size = new System.Drawing.Size(181, 21);
             this.txtOp12.TabIndex = 8;
@@ -226,7 +287,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(422, 181);
+            this.label28.Location = new System.Drawing.Point(422, 183);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(18, 15);
             this.label28.TabIndex = 16;
@@ -235,7 +296,7 @@
             // txtOp8
             // 
             this.txtOp8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp8.Location = new System.Drawing.Point(235, 53);
+            this.txtOp8.Location = new System.Drawing.Point(235, 55);
             this.txtOp8.Name = "txtOp8";
             this.txtOp8.Size = new System.Drawing.Size(181, 21);
             this.txtOp8.TabIndex = 9;
@@ -247,7 +308,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(422, 155);
+            this.label29.Location = new System.Drawing.Point(422, 157);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(18, 15);
             this.label29.TabIndex = 17;
@@ -256,7 +317,7 @@
             // txtOp6
             // 
             this.txtOp6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp6.Location = new System.Drawing.Point(235, 77);
+            this.txtOp6.Location = new System.Drawing.Point(235, 79);
             this.txtOp6.Name = "txtOp6";
             this.txtOp6.Size = new System.Drawing.Size(181, 21);
             this.txtOp6.TabIndex = 1;
@@ -267,7 +328,7 @@
             // txtOp32
             // 
             this.txtOp32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp32.Location = new System.Drawing.Point(235, 104);
+            this.txtOp32.Location = new System.Drawing.Point(235, 106);
             this.txtOp32.Name = "txtOp32";
             this.txtOp32.Size = new System.Drawing.Size(181, 21);
             this.txtOp32.TabIndex = 11;
@@ -280,7 +341,7 @@
             this.lbOp9.AutoSize = true;
             this.lbOp9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp9.ForeColor = System.Drawing.Color.Black;
-            this.lbOp9.Location = new System.Drawing.Point(17, 231);
+            this.lbOp9.Location = new System.Drawing.Point(17, 233);
             this.lbOp9.Name = "lbOp9";
             this.lbOp9.Size = new System.Drawing.Size(173, 15);
             this.lbOp9.TabIndex = 4;
@@ -289,7 +350,7 @@
             // txtOp71
             // 
             this.txtOp71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp71.Location = new System.Drawing.Point(235, 129);
+            this.txtOp71.Location = new System.Drawing.Point(235, 131);
             this.txtOp71.Name = "txtOp71";
             this.txtOp71.Size = new System.Drawing.Size(181, 21);
             this.txtOp71.TabIndex = 12;
@@ -302,7 +363,7 @@
             this.lbOp8.AutoSize = true;
             this.lbOp8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp8.ForeColor = System.Drawing.Color.Black;
-            this.lbOp8.Location = new System.Drawing.Point(19, 205);
+            this.lbOp8.Location = new System.Drawing.Point(19, 207);
             this.lbOp8.Name = "lbOp8";
             this.lbOp8.Size = new System.Drawing.Size(173, 15);
             this.lbOp8.TabIndex = 5;
@@ -313,7 +374,7 @@
             this.lbOp2.AutoSize = true;
             this.lbOp2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp2.ForeColor = System.Drawing.Color.Black;
-            this.lbOp2.Location = new System.Drawing.Point(19, 56);
+            this.lbOp2.Location = new System.Drawing.Point(19, 58);
             this.lbOp2.Name = "lbOp2";
             this.lbOp2.Size = new System.Drawing.Size(155, 15);
             this.lbOp2.TabIndex = 0;
@@ -324,7 +385,7 @@
             this.lbOp7.AutoSize = true;
             this.lbOp7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp7.ForeColor = System.Drawing.Color.Black;
-            this.lbOp7.Location = new System.Drawing.Point(19, 181);
+            this.lbOp7.Location = new System.Drawing.Point(19, 183);
             this.lbOp7.Name = "lbOp7";
             this.lbOp7.Size = new System.Drawing.Size(173, 15);
             this.lbOp7.TabIndex = 6;
@@ -335,7 +396,7 @@
             this.lbOp3.AutoSize = true;
             this.lbOp3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp3.ForeColor = System.Drawing.Color.Black;
-            this.lbOp3.Location = new System.Drawing.Point(19, 80);
+            this.lbOp3.Location = new System.Drawing.Point(19, 82);
             this.lbOp3.Name = "lbOp3";
             this.lbOp3.Size = new System.Drawing.Size(158, 15);
             this.lbOp3.TabIndex = 0;
@@ -346,7 +407,7 @@
             this.lbOp4.AutoSize = true;
             this.lbOp4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp4.ForeColor = System.Drawing.Color.Black;
-            this.lbOp4.Location = new System.Drawing.Point(17, 106);
+            this.lbOp4.Location = new System.Drawing.Point(17, 108);
             this.lbOp4.Name = "lbOp4";
             this.lbOp4.Size = new System.Drawing.Size(162, 15);
             this.lbOp4.TabIndex = 0;
@@ -355,7 +416,7 @@
             // txtOp162
             // 
             this.txtOp162.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp162.Location = new System.Drawing.Point(235, 230);
+            this.txtOp162.Location = new System.Drawing.Point(235, 232);
             this.txtOp162.Name = "txtOp162";
             this.txtOp162.Size = new System.Drawing.Size(181, 21);
             this.txtOp162.TabIndex = 16;
@@ -368,7 +429,7 @@
             this.lbOp5.AutoSize = true;
             this.lbOp5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp5.ForeColor = System.Drawing.Color.Black;
-            this.lbOp5.Location = new System.Drawing.Point(17, 132);
+            this.lbOp5.Location = new System.Drawing.Point(17, 134);
             this.lbOp5.Name = "lbOp5";
             this.lbOp5.Size = new System.Drawing.Size(166, 15);
             this.lbOp5.TabIndex = 0;
@@ -377,7 +438,7 @@
             // txtOp135
             // 
             this.txtOp135.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp135.Location = new System.Drawing.Point(235, 202);
+            this.txtOp135.Location = new System.Drawing.Point(235, 204);
             this.txtOp135.Name = "txtOp135";
             this.txtOp135.Size = new System.Drawing.Size(181, 21);
             this.txtOp135.TabIndex = 15;
@@ -389,7 +450,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(422, 30);
+            this.label16.Location = new System.Drawing.Point(422, 32);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(18, 15);
             this.label16.TabIndex = 2;
@@ -400,7 +461,7 @@
             this.lbOp6.AutoSize = true;
             this.lbOp6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbOp6.ForeColor = System.Drawing.Color.Black;
-            this.lbOp6.Location = new System.Drawing.Point(19, 155);
+            this.lbOp6.Location = new System.Drawing.Point(19, 157);
             this.lbOp6.Name = "lbOp6";
             this.lbOp6.Size = new System.Drawing.Size(173, 15);
             this.lbOp6.TabIndex = 7;
@@ -410,7 +471,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(422, 56);
+            this.label18.Location = new System.Drawing.Point(422, 58);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(18, 15);
             this.label18.TabIndex = 2;
@@ -419,7 +480,7 @@
             // txtOp121
             // 
             this.txtOp121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp121.Location = new System.Drawing.Point(235, 178);
+            this.txtOp121.Location = new System.Drawing.Point(235, 180);
             this.txtOp121.Name = "txtOp121";
             this.txtOp121.Size = new System.Drawing.Size(181, 21);
             this.txtOp121.TabIndex = 14;
@@ -431,7 +492,7 @@
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(422, 80);
+            this.label20.Location = new System.Drawing.Point(422, 82);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(18, 15);
             this.label20.TabIndex = 2;
@@ -440,7 +501,7 @@
             // txtOp107
             // 
             this.txtOp107.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOp107.Location = new System.Drawing.Point(235, 152);
+            this.txtOp107.Location = new System.Drawing.Point(235, 154);
             this.txtOp107.Name = "txtOp107";
             this.txtOp107.Size = new System.Drawing.Size(181, 21);
             this.txtOp107.TabIndex = 13;
@@ -452,7 +513,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(422, 108);
+            this.label24.Location = new System.Drawing.Point(422, 110);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(18, 15);
             this.label24.TabIndex = 2;
@@ -462,49 +523,49 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(422, 134);
+            this.label22.Location = new System.Drawing.Point(422, 136);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(18, 15);
             this.label22.TabIndex = 2;
             this.label22.Text = "%";
             // 
-            // panel1
+            // pnlGenericProperties
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.lblCritExpoTem);
-            this.panel1.Controls.Add(this.txtMaximumOperatingTemp);
-            this.panel1.Controls.Add(this.lblMinOpTem);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.lblFlowRate);
-            this.panel1.Controls.Add(this.txtMaxOperatingPressure);
-            this.panel1.Controls.Add(this.lblMinOpPressure);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.lblMaxOpPressure);
-            this.panel1.Controls.Add(this.txtMinOperatingPressure);
-            this.panel1.Controls.Add(this.lblmaxOpTem);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.lblHydroPressure);
-            this.panel1.Controls.Add(this.txtFlowRate);
-            this.panel1.Controls.Add(this.txtCriticalExposure);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtMinimumOperatingTemp);
-            this.panel1.Controls.Add(this.txtOperatingHydrogen);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(24, 38);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(814, 158);
-            this.panel1.TabIndex = 8;
+            this.pnlGenericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlGenericProperties.Controls.Add(this.lblGennericProperties);
+            this.pnlGenericProperties.Controls.Add(this.label1);
+            this.pnlGenericProperties.Controls.Add(this.lblCritExpoTem);
+            this.pnlGenericProperties.Controls.Add(this.txtMaximumOperatingTemp);
+            this.pnlGenericProperties.Controls.Add(this.lblMinOpTem);
+            this.pnlGenericProperties.Controls.Add(this.label8);
+            this.pnlGenericProperties.Controls.Add(this.lblFlowRate);
+            this.pnlGenericProperties.Controls.Add(this.txtMaxOperatingPressure);
+            this.pnlGenericProperties.Controls.Add(this.lblMinOpPressure);
+            this.pnlGenericProperties.Controls.Add(this.label11);
+            this.pnlGenericProperties.Controls.Add(this.lblMaxOpPressure);
+            this.pnlGenericProperties.Controls.Add(this.txtMinOperatingPressure);
+            this.pnlGenericProperties.Controls.Add(this.lblmaxOpTem);
+            this.pnlGenericProperties.Controls.Add(this.label13);
+            this.pnlGenericProperties.Controls.Add(this.txtFlowRate);
+            this.pnlGenericProperties.Controls.Add(this.txtCriticalExposure);
+            this.pnlGenericProperties.Controls.Add(this.label2);
+            this.pnlGenericProperties.Controls.Add(this.label4);
+            this.pnlGenericProperties.Controls.Add(this.txtMinimumOperatingTemp);
+            this.pnlGenericProperties.Location = new System.Drawing.Point(24, 38);
+            this.pnlGenericProperties.Name = "pnlGenericProperties";
+            this.pnlGenericProperties.Size = new System.Drawing.Size(814, 122);
+            this.pnlGenericProperties.TabIndex = 8;
             // 
-            // button1
+            // lblGennericProperties
             // 
-            this.button1.Location = new System.Drawing.Point(4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(807, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generic Propertic";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblGennericProperties.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblGennericProperties.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblGennericProperties.Location = new System.Drawing.Point(0, -1);
+            this.lblGennericProperties.Name = "lblGennericProperties";
+            this.lblGennericProperties.Size = new System.Drawing.Size(814, 18);
+            this.lblGennericProperties.TabIndex = 8;
+            this.lblGennericProperties.Text = "▼ Generic Properties";
+            this.lblGennericProperties.Click += new System.EventHandler(this.lblGennericProperties_Click);
             // 
             // label1
             // 
@@ -522,7 +583,7 @@
             this.lblCritExpoTem.AutoSize = true;
             this.lblCritExpoTem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCritExpoTem.ForeColor = System.Drawing.Color.Black;
-            this.lblCritExpoTem.Location = new System.Drawing.Point(358, 119);
+            this.lblCritExpoTem.Location = new System.Drawing.Point(358, 91);
             this.lblCritExpoTem.Name = "lblCritExpoTem";
             this.lblCritExpoTem.Size = new System.Drawing.Size(19, 15);
             this.lblCritExpoTem.TabIndex = 3;
@@ -649,16 +710,6 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Flow Rate";
             // 
-            // lblHydroPressure
-            // 
-            this.lblHydroPressure.AutoSize = true;
-            this.lblHydroPressure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHydroPressure.Location = new System.Drawing.Point(358, 93);
-            this.lblHydroPressure.Name = "lblHydroPressure";
-            this.lblHydroPressure.Size = new System.Drawing.Size(23, 15);
-            this.lblHydroPressure.TabIndex = 2;
-            this.lblHydroPressure.Text = "psi";
-            // 
             // txtFlowRate
             // 
             this.txtFlowRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -673,7 +724,7 @@
             // txtCriticalExposure
             // 
             this.txtCriticalExposure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCriticalExposure.Location = new System.Drawing.Point(235, 116);
+            this.txtCriticalExposure.Location = new System.Drawing.Point(235, 88);
             this.txtCriticalExposure.Name = "txtCriticalExposure";
             this.txtCriticalExposure.Size = new System.Drawing.Size(117, 21);
             this.txtCriticalExposure.TabIndex = 4;
@@ -697,7 +748,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(19, 119);
+            this.label4.Location = new System.Drawing.Point(19, 91);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(173, 15);
             this.label4.TabIndex = 0;
@@ -714,40 +765,21 @@
             this.txtMinimumOperatingTemp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaximumOperatingTemp_KeyDown);
             this.txtMinimumOperatingTemp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinimumOperatingTemp_KeyPress);
             // 
-            // txtOperatingHydrogen
-            // 
-            this.txtOperatingHydrogen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOperatingHydrogen.Location = new System.Drawing.Point(235, 90);
-            this.txtOperatingHydrogen.Name = "txtOperatingHydrogen";
-            this.txtOperatingHydrogen.Size = new System.Drawing.Size(117, 21);
-            this.txtOperatingHydrogen.TabIndex = 3;
-            this.txtOperatingHydrogen.TextChanged += new System.EventHandler(this.txtMaximumOperatingTemp_TextChanged);
-            this.txtOperatingHydrogen.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaximumOperatingTemp_KeyDown);
-            this.txtOperatingHydrogen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOperatingHydrogen_KeyPress);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(19, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(207, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Operating Hydrogen Partial Pressure";
-            // 
             // UCOperatingCondition
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UCOperatingCondition";
-            this.Size = new System.Drawing.Size(871, 555);
+            this.Size = new System.Drawing.Size(871, 671);
+            this.Load += new System.EventHandler(this.UCOperatingCondition_Load);
             this.groupBox1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlHydrogenAttackDF.ResumeLayout(false);
+            this.pnlHydrogenAttackDF.PerformLayout();
+            this.pnlExternalDF.ResumeLayout(false);
+            this.pnlExternalDF.PerformLayout();
+            this.pnlGenericProperties.ResumeLayout(false);
+            this.pnlGenericProperties.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -803,12 +835,14 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtMaxOperatingPressure;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlGenericProperties;
+        private System.Windows.Forms.Panel pnlExternalDF;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtOp176;
         private System.Windows.Forms.Label lbOp10;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblGennericProperties;
+        private System.Windows.Forms.Label lblExternal;
+        private System.Windows.Forms.Panel pnlHydrogenAttackDF;
+        private System.Windows.Forms.Label lblHydrogenAttackDF;
     }
 }

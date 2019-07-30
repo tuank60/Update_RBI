@@ -31,29 +31,20 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCEquipmentProperties));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.txtDistanceGroundWater = new System.Windows.Forms.TextBox();
-            this.cbEnvironmentalSensitivity = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgColThermalHistory = new DevExpress.Utils.ImageCollection(this.components);
-            this.label26 = new System.Windows.Forms.Label();
-            this.cbTypeOfSoil = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.label25 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.pnlBrittleFactureDF = new System.Windows.Forms.Panel();
+            this.lblBrittleFractureDF = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.chkPressurisationControlled = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblMinReqTem = new System.Windows.Forms.Label();
             this.txtMinRequiredTemperature = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pnlStressCorrosionCreacking = new System.Windows.Forms.Panel();
+            this.lblStressCorrosionCreackingDF = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.chkDowntimeProtection = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbThermalHistory = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imgColThermalHistory = new DevExpress.Utils.ImageCollection(this.components);
             this.chkSteamedOutPriorWaterFlushing = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.chkPresenceSulphideShutdown = new System.Windows.Forms.CheckBox();
@@ -62,8 +53,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pnlExternalDF = new System.Windows.Forms.Panel();
+            this.lblExternalDF = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.chkMaterialExposedFluid = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -71,20 +62,14 @@
             this.imgColExternalRnvironment = new DevExpress.Utils.ImageCollection(this.components);
             this.chkInterfaceSoilWater = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.DFThinning = new System.Windows.Forms.Panel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.chkComponentWelded = new System.Windows.Forms.CheckBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbAdjustmentSettlement = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.imgColOnlineMonitoring = new DevExpress.Utils.ImageCollection(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.FDThinning = new System.Windows.Forms.Button();
+            this.pnlThinningDF = new System.Windows.Forms.Panel();
+            this.lblThinningDF = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.chkLinerOnlineMonitoring = new System.Windows.Forms.CheckBox();
-            this.PNGennericProperties = new System.Windows.Forms.Panel();
-            this.GennericProperties = new System.Windows.Forms.Button();
+            this.pnlGenericProperties = new System.Windows.Forms.Panel();
+            this.lblGenericProperties = new System.Windows.Forms.Label();
             this.cbOnlineMonitoring = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.imgColOnlineMonitoring = new DevExpress.Utils.ImageCollection(this.components);
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.chkAministrativeControl = new System.Windows.Forms.CheckBox();
@@ -104,32 +89,27 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbEnvironmentalSensitivity.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgColThermalHistory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbTypeOfSoil.Properties)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlBrittleFactureDF.SuspendLayout();
+            this.pnlStressCorrosionCreacking.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbThermalHistory.Properties)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgColThermalHistory)).BeginInit();
+            this.pnlExternalDF.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbExternalEnvironment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgColExternalRnvironment)).BeginInit();
-            this.DFThinning.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbAdjustmentSettlement.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgColOnlineMonitoring)).BeginInit();
-            this.PNGennericProperties.SuspendLayout();
+            this.pnlThinningDF.SuspendLayout();
+            this.pnlGenericProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbOnlineMonitoring.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgColOnlineMonitoring)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSystemManagementFactor)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.DFThinning);
-            this.groupBox1.Controls.Add(this.PNGennericProperties);
+            this.groupBox1.Controls.Add(this.pnlBrittleFactureDF);
+            this.groupBox1.Controls.Add(this.pnlStressCorrosionCreacking);
+            this.groupBox1.Controls.Add(this.pnlExternalDF);
+            this.groupBox1.Controls.Add(this.pnlThinningDF);
+            this.groupBox1.Controls.Add(this.pnlGenericProperties);
             this.groupBox1.Controls.Add(this.chkEquipmentOperatingManyYear);
             this.groupBox1.Controls.Add(this.chkHighlyEffectiveInspection);
             this.groupBox1.Controls.Add(this.chkCylicOperation);
@@ -147,130 +127,30 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Equipment";
             // 
-            // panel4
+            // pnlBrittleFactureDF
             // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label28);
-            this.panel4.Controls.Add(this.label27);
-            this.panel4.Controls.Add(this.txtDistanceGroundWater);
-            this.panel4.Controls.Add(this.cbEnvironmentalSensitivity);
-            this.panel4.Controls.Add(this.label26);
-            this.panel4.Controls.Add(this.cbTypeOfSoil);
-            this.panel4.Controls.Add(this.label25);
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Location = new System.Drawing.Point(39, 779);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(738, 114);
-            this.panel4.TabIndex = 27;
+            this.pnlBrittleFactureDF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlBrittleFactureDF.Controls.Add(this.lblBrittleFractureDF);
+            this.pnlBrittleFactureDF.Controls.Add(this.label6);
+            this.pnlBrittleFactureDF.Controls.Add(this.chkPressurisationControlled);
+            this.pnlBrittleFactureDF.Controls.Add(this.label11);
+            this.pnlBrittleFactureDF.Controls.Add(this.lblMinReqTem);
+            this.pnlBrittleFactureDF.Controls.Add(this.txtMinRequiredTemperature);
+            this.pnlBrittleFactureDF.Location = new System.Drawing.Point(39, 589);
+            this.pnlBrittleFactureDF.Name = "pnlBrittleFactureDF";
+            this.pnlBrittleFactureDF.Size = new System.Drawing.Size(846, 107);
+            this.pnlBrittleFactureDF.TabIndex = 26;
             // 
-            // label28
+            // lblBrittleFractureDF
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(520, 83);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(15, 13);
-            this.label28.TabIndex = 12;
-            this.label28.Text = "m";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(15, 83);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(147, 15);
-            this.label27.TabIndex = 22;
-            this.label27.Text = "Distance to Ground Water";
-            // 
-            // txtDistanceGroundWater
-            // 
-            this.txtDistanceGroundWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDistanceGroundWater.Location = new System.Drawing.Point(375, 80);
-            this.txtDistanceGroundWater.Name = "txtDistanceGroundWater";
-            this.txtDistanceGroundWater.Size = new System.Drawing.Size(139, 21);
-            this.txtDistanceGroundWater.TabIndex = 13;
-            // 
-            // cbEnvironmentalSensitivity
-            // 
-            this.cbEnvironmentalSensitivity.Location = new System.Drawing.Point(375, 57);
-            this.cbEnvironmentalSensitivity.Name = "cbEnvironmentalSensitivity";
-            this.cbEnvironmentalSensitivity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbEnvironmentalSensitivity.Properties.SmallImages = this.imgColThermalHistory;
-            this.cbEnvironmentalSensitivity.Size = new System.Drawing.Size(251, 20);
-            this.cbEnvironmentalSensitivity.TabIndex = 21;
-            // 
-            // imgColThermalHistory
-            // 
-            this.imgColThermalHistory.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgColThermalHistory.ImageStream")));
-            this.imgColThermalHistory.Images.SetKeyName(0, "orange.png");
-            this.imgColThermalHistory.Images.SetKeyName(1, "yellow.png");
-            this.imgColThermalHistory.Images.SetKeyName(2, "green.png");
-            this.imgColThermalHistory.Images.SetKeyName(3, "red.png");
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(15, 58);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(142, 15);
-            this.label26.TabIndex = 20;
-            this.label26.Text = "Environmental Sensitivity";
-            // 
-            // cbTypeOfSoil
-            // 
-            this.cbTypeOfSoil.Location = new System.Drawing.Point(375, 35);
-            this.cbTypeOfSoil.Name = "cbTypeOfSoil";
-            this.cbTypeOfSoil.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbTypeOfSoil.Properties.SmallImages = this.imgColThermalHistory;
-            this.cbTypeOfSoil.Size = new System.Drawing.Size(251, 20);
-            this.cbTypeOfSoil.TabIndex = 19;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(15, 36);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(74, 15);
-            this.label25.TabIndex = 19;
-            this.label25.Text = "Type of Soid";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(729, 23);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Tank Consequence of Failure Propertoes  ";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.button3);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.chkPressurisationControlled);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.lblMinReqTem);
-            this.panel3.Controls.Add(this.txtMinRequiredTemperature);
-            this.panel3.Location = new System.Drawing.Point(39, 648);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(738, 107);
-            this.panel3.TabIndex = 26;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(732, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Governing Brittle Fracture Damage Factory Pro";
-            this.button3.UseVisualStyleBackColor = true;
+            this.lblBrittleFractureDF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblBrittleFractureDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblBrittleFractureDF.Location = new System.Drawing.Point(-3, 0);
+            this.lblBrittleFractureDF.Name = "lblBrittleFractureDF";
+            this.lblBrittleFractureDF.Size = new System.Drawing.Size(847, 18);
+            this.lblBrittleFractureDF.TabIndex = 12;
+            this.lblBrittleFractureDF.Text = "▼ Governing Brittle Fracture Damage Factory Properties";
+            this.lblBrittleFractureDF.Click += new System.EventHandler(this.lblBrittleFractureDF_Click);
             // 
             // label6
             // 
@@ -327,35 +207,37 @@
             this.txtMinRequiredTemperature.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
             this.txtMinRequiredTemperature.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinRequiredTemperature_KeyPress);
             // 
-            // panel2
+            // pnlStressCorrosionCreacking
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.chkDowntimeProtection);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.cbThermalHistory);
-            this.panel2.Controls.Add(this.chkSteamedOutPriorWaterFlushing);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.chkPresenceSulphideShutdown);
-            this.panel2.Controls.Add(this.chkPresenceSulphideOperation);
-            this.panel2.Controls.Add(this.chkHeatTraced);
-            this.panel2.Controls.Add(this.label16);
-            this.panel2.Controls.Add(this.label17);
-            this.panel2.Controls.Add(this.label19);
-            this.panel2.Location = new System.Drawing.Point(39, 468);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(737, 162);
-            this.panel2.TabIndex = 25;
+            this.pnlStressCorrosionCreacking.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlStressCorrosionCreacking.Controls.Add(this.lblStressCorrosionCreackingDF);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.label3);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.chkDowntimeProtection);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.label9);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.cbThermalHistory);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.chkSteamedOutPriorWaterFlushing);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.label4);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.chkPresenceSulphideShutdown);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.chkPresenceSulphideOperation);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.chkHeatTraced);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.label16);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.label17);
+            this.pnlStressCorrosionCreacking.Controls.Add(this.label19);
+            this.pnlStressCorrosionCreacking.Location = new System.Drawing.Point(39, 406);
+            this.pnlStressCorrosionCreacking.Name = "pnlStressCorrosionCreacking";
+            this.pnlStressCorrosionCreacking.Size = new System.Drawing.Size(846, 162);
+            this.pnlStressCorrosionCreacking.TabIndex = 25;
             // 
-            // button2
+            // lblStressCorrosionCreackingDF
             // 
-            this.button2.Location = new System.Drawing.Point(3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(731, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Governing Stress Corrosion Creacking Damage Factor Properties";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblStressCorrosionCreackingDF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblStressCorrosionCreackingDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStressCorrosionCreackingDF.Location = new System.Drawing.Point(-3, 0);
+            this.lblStressCorrosionCreackingDF.Name = "lblStressCorrosionCreackingDF";
+            this.lblStressCorrosionCreackingDF.Size = new System.Drawing.Size(847, 18);
+            this.lblStressCorrosionCreackingDF.TabIndex = 19;
+            this.lblStressCorrosionCreackingDF.Text = "▼ Governing Stress Corrosion Creacking Damage Factor Properties";
+            this.lblStressCorrosionCreackingDF.Click += new System.EventHandler(this.lblStressCorrosionCreackingDF_Click);
             // 
             // label3
             // 
@@ -400,6 +282,14 @@
             this.cbThermalHistory.TabIndex = 18;
             this.cbThermalHistory.SelectedIndexChanged += new System.EventHandler(this.txtMinRequiredTemperature_TextChanged);
             this.cbThermalHistory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
+            // 
+            // imgColThermalHistory
+            // 
+            this.imgColThermalHistory.ImageStream = ((DevExpress.Utils.ImageCollectionStreamer)(resources.GetObject("imgColThermalHistory.ImageStream")));
+            this.imgColThermalHistory.Images.SetKeyName(0, "orange.png");
+            this.imgColThermalHistory.Images.SetKeyName(1, "yellow.png");
+            this.imgColThermalHistory.Images.SetKeyName(2, "green.png");
+            this.imgColThermalHistory.Images.SetKeyName(3, "red.png");
             // 
             // chkSteamedOutPriorWaterFlushing
             // 
@@ -485,36 +375,38 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Thermal History";
             // 
-            // panel1
+            // pnlExternalDF
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.chkMaterialExposedFluid);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.cbExternalEnvironment);
-            this.panel1.Controls.Add(this.chkInterfaceSoilWater);
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Location = new System.Drawing.Point(39, 345);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(737, 106);
-            this.panel1.TabIndex = 24;
+            this.pnlExternalDF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlExternalDF.Controls.Add(this.lblExternalDF);
+            this.pnlExternalDF.Controls.Add(this.label14);
+            this.pnlExternalDF.Controls.Add(this.chkMaterialExposedFluid);
+            this.pnlExternalDF.Controls.Add(this.label5);
+            this.pnlExternalDF.Controls.Add(this.cbExternalEnvironment);
+            this.pnlExternalDF.Controls.Add(this.chkInterfaceSoilWater);
+            this.pnlExternalDF.Controls.Add(this.label18);
+            this.pnlExternalDF.Location = new System.Drawing.Point(38, 278);
+            this.pnlExternalDF.Name = "pnlExternalDF";
+            this.pnlExternalDF.Size = new System.Drawing.Size(847, 106);
+            this.pnlExternalDF.TabIndex = 24;
             // 
-            // button1
+            // lblExternalDF
             // 
-            this.button1.Location = new System.Drawing.Point(4, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(730, 24);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Governing External Damage Factor Properties";
-            this.button1.UseVisualStyleBackColor = true;
+            this.lblExternalDF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblExternalDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblExternalDF.Location = new System.Drawing.Point(0, 0);
+            this.lblExternalDF.Name = "lblExternalDF";
+            this.lblExternalDF.Size = new System.Drawing.Size(845, 17);
+            this.lblExternalDF.TabIndex = 18;
+            this.lblExternalDF.Text = "▼ Governing External Damage Factor Properties";
+            this.lblExternalDF.Click += new System.EventHandler(this.lblExternalDF_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(15, 31);
+            this.label14.Location = new System.Drawing.Point(15, 27);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(250, 30);
             this.label14.TabIndex = 0;
@@ -523,7 +415,7 @@
             // chkMaterialExposedFluid
             // 
             this.chkMaterialExposedFluid.AutoSize = true;
-            this.chkMaterialExposedFluid.Location = new System.Drawing.Point(375, 31);
+            this.chkMaterialExposedFluid.Location = new System.Drawing.Point(375, 27);
             this.chkMaterialExposedFluid.Name = "chkMaterialExposedFluid";
             this.chkMaterialExposedFluid.Size = new System.Drawing.Size(15, 14);
             this.chkMaterialExposedFluid.TabIndex = 13;
@@ -535,7 +427,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(15, 61);
+            this.label5.Location = new System.Drawing.Point(15, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 15);
             this.label5.TabIndex = 0;
@@ -543,7 +435,7 @@
             // 
             // cbExternalEnvironment
             // 
-            this.cbExternalEnvironment.Location = new System.Drawing.Point(375, 80);
+            this.cbExternalEnvironment.Location = new System.Drawing.Point(375, 76);
             this.cbExternalEnvironment.Name = "cbExternalEnvironment";
             this.cbExternalEnvironment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -564,7 +456,7 @@
             // chkInterfaceSoilWater
             // 
             this.chkInterfaceSoilWater.AutoSize = true;
-            this.chkInterfaceSoilWater.Location = new System.Drawing.Point(375, 63);
+            this.chkInterfaceSoilWater.Location = new System.Drawing.Point(375, 59);
             this.chkInterfaceSoilWater.Name = "chkInterfaceSoilWater";
             this.chkInterfaceSoilWater.Size = new System.Drawing.Size(15, 14);
             this.chkInterfaceSoilWater.TabIndex = 5;
@@ -576,76 +468,97 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(15, 81);
+            this.label18.Location = new System.Drawing.Point(15, 77);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(124, 15);
             this.label18.TabIndex = 0;
             this.label18.Text = "External Environment";
             // 
-            // DFThinning
+            // pnlThinningDF
             // 
-            this.DFThinning.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.DFThinning.Controls.Add(this.label24);
-            this.DFThinning.Controls.Add(this.checkBox1);
-            this.DFThinning.Controls.Add(this.chkComponentWelded);
-            this.DFThinning.Controls.Add(this.label23);
-            this.DFThinning.Controls.Add(this.cbAdjustmentSettlement);
-            this.DFThinning.Controls.Add(this.label10);
-            this.DFThinning.Controls.Add(this.FDThinning);
-            this.DFThinning.Controls.Add(this.label15);
-            this.DFThinning.Controls.Add(this.chkLinerOnlineMonitoring);
-            this.DFThinning.Location = new System.Drawing.Point(39, 194);
-            this.DFThinning.Name = "DFThinning";
-            this.DFThinning.Size = new System.Drawing.Size(738, 130);
-            this.DFThinning.TabIndex = 23;
+            this.pnlThinningDF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlThinningDF.Controls.Add(this.lblThinningDF);
+            this.pnlThinningDF.Controls.Add(this.label15);
+            this.pnlThinningDF.Controls.Add(this.chkLinerOnlineMonitoring);
+            this.pnlThinningDF.Location = new System.Drawing.Point(39, 199);
+            this.pnlThinningDF.Name = "pnlThinningDF";
+            this.pnlThinningDF.Size = new System.Drawing.Size(846, 56);
+            this.pnlThinningDF.TabIndex = 23;
             // 
-            // label24
+            // lblThinningDF
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(15, 101);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(261, 15);
-            this.label24.TabIndex = 26;
-            this.label24.Text = "Tank is Maintained in Accordance with API 653";
+            this.lblThinningDF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblThinningDF.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblThinningDF.Location = new System.Drawing.Point(-2, 0);
+            this.lblThinningDF.Name = "lblThinningDF";
+            this.lblThinningDF.Size = new System.Drawing.Size(846, 18);
+            this.lblThinningDF.TabIndex = 16;
+            this.lblThinningDF.Text = "▼ Governing Thinning Damage Factor Properties";
+            this.lblThinningDF.Click += new System.EventHandler(this.lblThinningDF_Click);
             // 
-            // checkBox1
+            // label15
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(375, 101);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 25;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(13, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(136, 15);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Liner Online Monitoring";
             // 
-            // chkComponentWelded
+            // chkLinerOnlineMonitoring
             // 
-            this.chkComponentWelded.AutoSize = true;
-            this.chkComponentWelded.Location = new System.Drawing.Point(375, 81);
-            this.chkComponentWelded.Name = "chkComponentWelded";
-            this.chkComponentWelded.Size = new System.Drawing.Size(15, 14);
-            this.chkComponentWelded.TabIndex = 24;
-            this.chkComponentWelded.UseVisualStyleBackColor = true;
+            this.chkLinerOnlineMonitoring.AutoSize = true;
+            this.chkLinerOnlineMonitoring.Location = new System.Drawing.Point(373, 32);
+            this.chkLinerOnlineMonitoring.Name = "chkLinerOnlineMonitoring";
+            this.chkLinerOnlineMonitoring.Size = new System.Drawing.Size(15, 14);
+            this.chkLinerOnlineMonitoring.TabIndex = 15;
+            this.chkLinerOnlineMonitoring.UseVisualStyleBackColor = true;
+            this.chkLinerOnlineMonitoring.CheckedChanged += new System.EventHandler(this.txtMinRequiredTemperature_TextChanged);
+            this.chkLinerOnlineMonitoring.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
             // 
-            // label23
+            // pnlGenericProperties
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(15, 79);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(128, 15);
-            this.label23.TabIndex = 23;
-            this.label23.Text = "Component is Welded";
+            this.pnlGenericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlGenericProperties.Controls.Add(this.lblGenericProperties);
+            this.pnlGenericProperties.Controls.Add(this.cbOnlineMonitoring);
+            this.pnlGenericProperties.Controls.Add(this.label13);
+            this.pnlGenericProperties.Controls.Add(this.label1);
+            this.pnlGenericProperties.Controls.Add(this.chkAministrativeControl);
+            this.pnlGenericProperties.Controls.Add(this.numSystemManagementFactor);
+            this.pnlGenericProperties.Controls.Add(this.chkPWHT);
+            this.pnlGenericProperties.Controls.Add(this.txtEquipmentVolume);
+            this.pnlGenericProperties.Controls.Add(this.label20);
+            this.pnlGenericProperties.Controls.Add(this.label22);
+            this.pnlGenericProperties.Controls.Add(this.lblVolume);
+            this.pnlGenericProperties.Controls.Add(this.label21);
+            this.pnlGenericProperties.Location = new System.Drawing.Point(39, 22);
+            this.pnlGenericProperties.Name = "pnlGenericProperties";
+            this.pnlGenericProperties.Size = new System.Drawing.Size(846, 155);
+            this.pnlGenericProperties.TabIndex = 22;
             // 
-            // cbAdjustmentSettlement
+            // lblGenericProperties
             // 
-            this.cbAdjustmentSettlement.Location = new System.Drawing.Point(375, 54);
-            this.cbAdjustmentSettlement.Name = "cbAdjustmentSettlement";
-            this.cbAdjustmentSettlement.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.lblGenericProperties.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblGenericProperties.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblGenericProperties.Location = new System.Drawing.Point(0, 0);
+            this.lblGenericProperties.Name = "lblGenericProperties";
+            this.lblGenericProperties.Size = new System.Drawing.Size(844, 17);
+            this.lblGenericProperties.TabIndex = 22;
+            this.lblGenericProperties.Text = "▼ Generic Properties";
+            this.lblGenericProperties.Click += new System.EventHandler(this.lblGenericProperties_Click);
+            // 
+            // cbOnlineMonitoring
+            // 
+            this.cbOnlineMonitoring.Location = new System.Drawing.Point(375, 46);
+            this.cbOnlineMonitoring.Name = "cbOnlineMonitoring";
+            this.cbOnlineMonitoring.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbAdjustmentSettlement.Properties.SmallImages = this.imgColOnlineMonitoring;
-            this.cbAdjustmentSettlement.Size = new System.Drawing.Size(345, 20);
-            this.cbAdjustmentSettlement.TabIndex = 22;
+            this.cbOnlineMonitoring.Properties.SmallImages = this.imgColOnlineMonitoring;
+            this.cbOnlineMonitoring.Size = new System.Drawing.Size(345, 20);
+            this.cbOnlineMonitoring.TabIndex = 19;
+            this.cbOnlineMonitoring.SelectedIndexChanged += new System.EventHandler(this.txtMinRequiredTemperature_TextChanged);
+            this.cbOnlineMonitoring.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
             // 
             // imgColOnlineMonitoring
             // 
@@ -686,87 +599,6 @@
             this.imgColOnlineMonitoring.Images.SetKeyName(33, "yellow.png");
             this.imgColOnlineMonitoring.Images.SetKeyName(34, "green.png");
             this.imgColOnlineMonitoring.Images.SetKeyName(35, "green3.png");
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(147, 15);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Adjustment for Settlement";
-            // 
-            // FDThinning
-            // 
-            this.FDThinning.Location = new System.Drawing.Point(4, 3);
-            this.FDThinning.Name = "FDThinning";
-            this.FDThinning.Size = new System.Drawing.Size(732, 22);
-            this.FDThinning.TabIndex = 0;
-            this.FDThinning.Text = "Governing Thinning Damage Factor Properties";
-            this.FDThinning.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(15, 28);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(136, 15);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Liner Online Monitoring";
-            // 
-            // chkLinerOnlineMonitoring
-            // 
-            this.chkLinerOnlineMonitoring.AutoSize = true;
-            this.chkLinerOnlineMonitoring.Location = new System.Drawing.Point(375, 31);
-            this.chkLinerOnlineMonitoring.Name = "chkLinerOnlineMonitoring";
-            this.chkLinerOnlineMonitoring.Size = new System.Drawing.Size(15, 14);
-            this.chkLinerOnlineMonitoring.TabIndex = 15;
-            this.chkLinerOnlineMonitoring.UseVisualStyleBackColor = true;
-            this.chkLinerOnlineMonitoring.CheckedChanged += new System.EventHandler(this.txtMinRequiredTemperature_TextChanged);
-            this.chkLinerOnlineMonitoring.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
-            // 
-            // PNGennericProperties
-            // 
-            this.PNGennericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PNGennericProperties.Controls.Add(this.GennericProperties);
-            this.PNGennericProperties.Controls.Add(this.cbOnlineMonitoring);
-            this.PNGennericProperties.Controls.Add(this.label13);
-            this.PNGennericProperties.Controls.Add(this.label1);
-            this.PNGennericProperties.Controls.Add(this.chkAministrativeControl);
-            this.PNGennericProperties.Controls.Add(this.numSystemManagementFactor);
-            this.PNGennericProperties.Controls.Add(this.chkPWHT);
-            this.PNGennericProperties.Controls.Add(this.txtEquipmentVolume);
-            this.PNGennericProperties.Controls.Add(this.label20);
-            this.PNGennericProperties.Controls.Add(this.label22);
-            this.PNGennericProperties.Controls.Add(this.lblVolume);
-            this.PNGennericProperties.Controls.Add(this.label21);
-            this.PNGennericProperties.Location = new System.Drawing.Point(39, 22);
-            this.PNGennericProperties.Name = "PNGennericProperties";
-            this.PNGennericProperties.Size = new System.Drawing.Size(738, 155);
-            this.PNGennericProperties.TabIndex = 22;
-            // 
-            // GennericProperties
-            // 
-            this.GennericProperties.Location = new System.Drawing.Point(4, 4);
-            this.GennericProperties.Name = "GennericProperties";
-            this.GennericProperties.Size = new System.Drawing.Size(731, 21);
-            this.GennericProperties.TabIndex = 0;
-            this.GennericProperties.Text = "Genneric Properties";
-            this.GennericProperties.UseVisualStyleBackColor = true;
-            // 
-            // cbOnlineMonitoring
-            // 
-            this.cbOnlineMonitoring.Location = new System.Drawing.Point(375, 46);
-            this.cbOnlineMonitoring.Name = "cbOnlineMonitoring";
-            this.cbOnlineMonitoring.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbOnlineMonitoring.Properties.SmallImages = this.imgColOnlineMonitoring;
-            this.cbOnlineMonitoring.Size = new System.Drawing.Size(345, 20);
-            this.cbOnlineMonitoring.TabIndex = 19;
-            this.cbOnlineMonitoring.SelectedIndexChanged += new System.EventHandler(this.txtMinRequiredTemperature_TextChanged);
-            this.cbOnlineMonitoring.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
             // 
             // label13
             // 
@@ -981,29 +813,25 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "UCEquipmentProperties";
             this.Size = new System.Drawing.Size(924, 1249);
+            this.Load += new System.EventHandler(this.UCEquipmentProperties_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbEnvironmentalSensitivity.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgColThermalHistory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbTypeOfSoil.Properties)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlBrittleFactureDF.ResumeLayout(false);
+            this.pnlBrittleFactureDF.PerformLayout();
+            this.pnlStressCorrosionCreacking.ResumeLayout(false);
+            this.pnlStressCorrosionCreacking.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbThermalHistory.Properties)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgColThermalHistory)).EndInit();
+            this.pnlExternalDF.ResumeLayout(false);
+            this.pnlExternalDF.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbExternalEnvironment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgColExternalRnvironment)).EndInit();
-            this.DFThinning.ResumeLayout(false);
-            this.DFThinning.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbAdjustmentSettlement.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgColOnlineMonitoring)).EndInit();
-            this.PNGennericProperties.ResumeLayout(false);
-            this.PNGennericProperties.PerformLayout();
+            this.pnlThinningDF.ResumeLayout(false);
+            this.pnlThinningDF.PerformLayout();
+            this.pnlGenericProperties.ResumeLayout(false);
+            this.pnlGenericProperties.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbOnlineMonitoring.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgColOnlineMonitoring)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSystemManagementFactor)).EndInit();
             this.ResumeLayout(false);
 
@@ -1017,7 +845,6 @@
         private System.Windows.Forms.TextBox txtMinRequiredTemperature;
         private System.Windows.Forms.CheckBox chkPresenceSulphideOperation;
         private System.Windows.Forms.CheckBox chkPresenceSulphideShutdown;
-        private System.Windows.Forms.CheckBox chkLinerOnlineMonitoring;
         private System.Windows.Forms.CheckBox chkMaterialExposedFluid;
         private System.Windows.Forms.CheckBox chkEquipmentOperatingManyYear;
         private System.Windows.Forms.CheckBox chkPressurisationControlled;
@@ -1036,7 +863,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
@@ -1059,30 +885,17 @@
         private DevExpress.Utils.ImageCollection imgColExternalRnvironment;
         private DevExpress.Utils.ImageCollection imgColThermalHistory;
         private DevExpress.Utils.ImageCollection imgColOnlineMonitoring;
-        private System.Windows.Forms.Panel PNGennericProperties;
-        private System.Windows.Forms.Button GennericProperties;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel DFThinning;
-        private System.Windows.Forms.Button FDThinning;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
-        private DevExpress.XtraEditors.ImageComboBoxEdit cbAdjustmentSettlement;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox chkComponentWelded;
-        private System.Windows.Forms.Label label23;
-        private DevExpress.XtraEditors.ImageComboBoxEdit cbTypeOfSoil;
-        private System.Windows.Forms.Label label25;
-        private DevExpress.XtraEditors.ImageComboBoxEdit cbEnvironmentalSensitivity;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtDistanceGroundWater;
+        private System.Windows.Forms.Panel pnlGenericProperties;
+        private System.Windows.Forms.Panel pnlExternalDF;
+        private System.Windows.Forms.Panel pnlBrittleFactureDF;
+        private System.Windows.Forms.Panel pnlStressCorrosionCreacking;
+        private System.Windows.Forms.Panel pnlThinningDF;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox chkLinerOnlineMonitoring;
+        private System.Windows.Forms.Label lblThinningDF;
+        private System.Windows.Forms.Label lblGenericProperties;
+        private System.Windows.Forms.Label lblExternalDF;
+        private System.Windows.Forms.Label lblBrittleFractureDF;
+        private System.Windows.Forms.Label lblStressCorrosionCreackingDF;
     }
 }

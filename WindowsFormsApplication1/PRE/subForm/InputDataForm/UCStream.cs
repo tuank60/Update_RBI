@@ -274,5 +274,70 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
         #endregion
+
+        #region Hidden Button
+        private void lblGenericProperties_Click(object sender, EventArgs e)
+        {
+            if (lblGenericProperties.Text == "▼ Generic Properties")
+            {
+                pnlGenericProperties.Height = 155;
+                lblGenericProperties.Text = "▶ Generic Properties";
+
+                pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlHydrogen.Top = pnlStress.Top + pnlStress.Height + 13;
+            }
+            else if (lblGenericProperties.Text == "▶ Generic Properties")
+            {
+                pnlGenericProperties.Height = 21;
+                lblGenericProperties.Text = "▼ Generic Properties";
+
+                pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+                pnlHydrogen.Top = pnlStress.Top + pnlStress.Height + 13;
+            }
+        }
+
+        private void lblStress_Click(object sender, EventArgs e)
+        {
+            if (lblStress.Text == "▼ Governing Stress Corosion Cracking Damahe Factor Properties")
+            {
+                pnlStress.Height = 264;
+                lblStress.Text = "▶ Governing Stress Corosion Cracking Damahe Factor Properties";
+
+                pnlHydrogen.Top = pnlStress.Top + pnlStress.Height + 13;
+            }
+            else if (lblStress.Text == "▶ Governing Stress Corosion Cracking Damahe Factor Properties")
+            {
+                pnlStress.Height = 21;
+                lblStress.Text = "▼ Governing Stress Corosion Cracking Damahe Factor Properties";
+
+                pnlHydrogen.Top = pnlStress.Top + pnlStress.Height + 13;
+            }
+        }
+
+        private void lblHydrogen_Click(object sender, EventArgs e)
+        {
+            if (lblHydrogen.Text == "▼ Hight Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                pnlHydrogen.Height = 62;
+                lblHydrogen.Text = "▶ Hight Temperature Hydrogen Attack Damage Factor Properties";
+            }
+            else if (lblHydrogen.Text == "▶ Hight Temperature Hydrogen Attack Damage Factor Properties")
+            {
+                pnlHydrogen.Height = 21;
+                lblHydrogen.Text = "▼ Hight Temperature Hydrogen Attack Damage Factor Properties";
+            }
+        }
+
+        private void UCStream_Load(object sender, EventArgs e)
+        {
+            pnlGenericProperties.Height = 21;
+            pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
+
+            pnlStress.Height = 21;
+            pnlHydrogen.Top = pnlStress.Top + pnlStress.Height + 13;
+
+            pnlHydrogen.Height = 21;
+        }
+        #endregion
     }
 }
