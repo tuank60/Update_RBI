@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling1 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling2 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling3 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling4 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling5 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling6 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling7 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling8 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling9 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling10 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling11 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling12 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling13 = new DevExpress.XtraSpellChecker.OptionsSpelling();
-            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling14 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling71 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling72 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling73 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling74 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling75 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling76 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling77 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling78 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling79 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling80 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling81 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling82 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling83 = new DevExpress.XtraSpellChecker.OptionsSpelling();
+            DevExpress.XtraSpellChecker.OptionsSpelling optionsSpelling84 = new DevExpress.XtraSpellChecker.OptionsSpelling();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlReport = new System.Windows.Forms.Panel();
             this.lblReport = new System.Windows.Forms.Label();
@@ -207,7 +207,7 @@
             this.lblReport.Size = new System.Drawing.Size(822, 16);
             this.lblReport.TabIndex = 10;
             this.lblReport.Text = "▼ Report Template ";
-            this.lblReport.Click += new System.EventHandler(this.labelRT_Click);
+            this.lblReport.Click += new System.EventHandler(this.lblReport_Click);
             // 
             // cbReportTemplate
             // 
@@ -299,7 +299,7 @@
             this.lblComponent.Size = new System.Drawing.Size(822, 16);
             this.lblComponent.TabIndex = 9;
             this.lblComponent.Text = "▼ Component";
-            this.lblComponent.Click += new System.EventHandler(this.label16_Click);
+            this.lblComponent.Click += new System.EventHandler(this.lblComponent_Click);
             // 
             // label23
             // 
@@ -327,8 +327,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtComponentName.Name = "txtComponentName";
             this.txtComponentName.ReadOnly = true;
+<<<<<<< HEAD
             this.txtComponentName.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtComponentName, optionsSpelling1);
+=======
+            this.txtComponentName.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtComponentName, optionsSpelling71);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtComponentName.TabIndex = 1;
             // 
             // label22
@@ -357,8 +362,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtAPIComponentType.Name = "txtAPIComponentType";
             this.txtAPIComponentType.ReadOnly = true;
+<<<<<<< HEAD
             this.txtAPIComponentType.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtAPIComponentType, optionsSpelling2);
+=======
+            this.txtAPIComponentType.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtAPIComponentType, optionsSpelling72);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtAPIComponentType.TabIndex = 1;
             // 
             // label21
@@ -387,8 +397,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtComponentType.Name = "txtComponentType";
             this.txtComponentType.ReadOnly = true;
+<<<<<<< HEAD
             this.txtComponentType.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtComponentType, optionsSpelling3);
+=======
+            this.txtComponentType.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtComponentType, optionsSpelling73);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtComponentType.TabIndex = 1;
             // 
             // label20
@@ -417,8 +432,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtComponentNumber.Name = "txtComponentNumber";
             this.txtComponentNumber.ReadOnly = true;
+<<<<<<< HEAD
             this.txtComponentNumber.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtComponentNumber, optionsSpelling4);
+=======
+            this.txtComponentNumber.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtComponentNumber, optionsSpelling74);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtComponentNumber.TabIndex = 1;
             // 
             // label19
@@ -523,8 +543,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtProcessDesciption.Name = "txtProcessDesciption";
             this.txtProcessDesciption.ReadOnly = true;
+<<<<<<< HEAD
             this.txtProcessDesciption.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtProcessDesciption, optionsSpelling5);
+=======
+            this.txtProcessDesciption.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtProcessDesciption, optionsSpelling75);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtProcessDesciption.TabIndex = 1;
             // 
             // lblEquipment
@@ -536,7 +561,7 @@
             this.lblEquipment.Size = new System.Drawing.Size(822, 16);
             this.lblEquipment.TabIndex = 8;
             this.lblEquipment.Text = "▼ Equipmemt";
-            this.lblEquipment.Click += new System.EventHandler(this.labelEQ_Click);
+            this.lblEquipment.Click += new System.EventHandler(this.lblEquipment_Click);
             // 
             // label10
             // 
@@ -564,8 +589,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtEquipmentName.Name = "txtEquipmentName";
             this.txtEquipmentName.ReadOnly = true;
+<<<<<<< HEAD
             this.txtEquipmentName.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtEquipmentName, optionsSpelling6);
+=======
+            this.txtEquipmentName.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtEquipmentName, optionsSpelling76);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtEquipmentName.TabIndex = 1;
             // 
             // label9
@@ -594,8 +624,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.ReadOnly = true;
+<<<<<<< HEAD
             this.txtManufacturer.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtManufacturer, optionsSpelling7);
+=======
+            this.txtManufacturer.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtManufacturer, optionsSpelling77);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtManufacturer.TabIndex = 1;
             // 
             // label8
@@ -624,8 +659,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtFacility.Name = "txtFacility";
             this.txtFacility.ReadOnly = true;
+<<<<<<< HEAD
             this.txtFacility.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtFacility, optionsSpelling8);
+=======
+            this.txtFacility.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtFacility, optionsSpelling78);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtFacility.TabIndex = 1;
             // 
             // label7
@@ -654,8 +694,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtSites.Name = "txtSites";
             this.txtSites.ReadOnly = true;
+<<<<<<< HEAD
             this.txtSites.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtSites, optionsSpelling9);
+=======
+            this.txtSites.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtSites, optionsSpelling79);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtSites.TabIndex = 1;
             // 
             // label11
@@ -684,8 +729,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtDesignCode.Name = "txtDesignCode";
             this.txtDesignCode.ReadOnly = true;
+<<<<<<< HEAD
             this.txtDesignCode.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtDesignCode, optionsSpelling10);
+=======
+            this.txtDesignCode.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtDesignCode, optionsSpelling80);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtDesignCode.TabIndex = 1;
             // 
             // label12
@@ -714,8 +764,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtEquipmentType.Name = "txtEquipmentType";
             this.txtEquipmentType.ReadOnly = true;
+<<<<<<< HEAD
             this.txtEquipmentType.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtEquipmentType, optionsSpelling11);
+=======
+            this.txtEquipmentType.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtEquipmentType, optionsSpelling81);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtEquipmentType.TabIndex = 1;
             // 
             // label13
@@ -744,8 +799,13 @@
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtEquipmentNumber.Name = "txtEquipmentNumber";
             this.txtEquipmentNumber.ReadOnly = true;
+<<<<<<< HEAD
             this.txtEquipmentNumber.Size = new System.Drawing.Size(319, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtEquipmentNumber, optionsSpelling12);
+=======
+            this.txtEquipmentNumber.Size = new System.Drawing.Size(240, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtEquipmentNumber, optionsSpelling82);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtEquipmentNumber.TabIndex = 1;
             // 
             // label14
@@ -875,7 +935,7 @@
             this.lblAssessment.Size = new System.Drawing.Size(822, 16);
             this.lblAssessment.TabIndex = 7;
             this.lblAssessment.Text = "▼ Assessment";
-            this.lblAssessment.Click += new System.EventHandler(this.labelAS_Click);
+            this.lblAssessment.Click += new System.EventHandler(this.lblAssessment_Click);
             // 
             // txtRiskAnalysisPeriod
             // 
@@ -887,8 +947,13 @@
             this.txtRiskAnalysisPeriod.Location = new System.Drawing.Point(329, 113);
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtRiskAnalysisPeriod.Name = "txtRiskAnalysisPeriod";
+<<<<<<< HEAD
             this.txtRiskAnalysisPeriod.Size = new System.Drawing.Size(159, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtRiskAnalysisPeriod, optionsSpelling13);
+=======
+            this.txtRiskAnalysisPeriod.Size = new System.Drawing.Size(120, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtRiskAnalysisPeriod, optionsSpelling83);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtRiskAnalysisPeriod.TabIndex = 3;
             this.txtRiskAnalysisPeriod.Text = "36";
             this.txtRiskAnalysisPeriod.TextChanged += new System.EventHandler(this.txtRiskAnalysisPeriod_TextChanged);
@@ -920,8 +985,13 @@
             this.txtAssessmentName.Location = new System.Drawing.Point(329, 31);
 >>>>>>> 422c3855530e5697bd9b0c045117ba7e889d940a
             this.txtAssessmentName.Name = "txtAssessmentName";
+<<<<<<< HEAD
             this.txtAssessmentName.Size = new System.Drawing.Size(355, 26);
             this.spellChecker1.SetSpellCheckerOptions(this.txtAssessmentName, optionsSpelling14);
+=======
+            this.txtAssessmentName.Size = new System.Drawing.Size(267, 22);
+            this.spellChecker1.SetSpellCheckerOptions(this.txtAssessmentName, optionsSpelling84);
+>>>>>>> d5c600da543a8c1dc8521a45e3a5250960489588
             this.txtAssessmentName.TabIndex = 1;
             this.txtAssessmentName.TextChanged += new System.EventHandler(this.txtAssessmentName_TextChanged);
             this.txtAssessmentName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAssessmentName_KeyDown);
