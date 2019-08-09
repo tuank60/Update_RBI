@@ -28,7 +28,7 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_COATING coat = BUS.getData(ID);
             BUS_UNITS convUnit = new BUS_UNITS();
             String[] extQuality = { "No coating or poor quality", "Medium coating quality", "High coating quality" };
-            String[] inType = { "Organic", "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
+            String[] inType = { "Organic - High Quality", "Organic - Medium Quality", "Organic - Low Quality" , "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
             String[] inCon = { "Good", "Average", "Poor", "Unknown" };
             String[] extType = { "Foam Glass", "Pearlite", "Fibreglass", "Mineral Wool", "Calcium Silicate", "Asbestos" };
             String[] isuCon = { "Above average", "Average", "Below average" };
@@ -137,7 +137,7 @@ namespace RBI.PRE.subForm.InputDataForm
             else coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : (float.Parse(txtCladdingCorrosionRate.Text) * (float)convUnit.mil);
             coat.SupportConfigNotAllowCoatingMaint = chkSupport.Checked ? 1 : 0;
             coat.InsulationCondition = cbIsulationCondition.Text;
-            coat.CladdingThickness = float.Parse(txtCladdingThickness.Text);
+            coat.CladdingThickness = txtCladdingThickness.Text!= "" ? float.Parse(txtCladdingThickness.Text) : 0;
             return coat;
         }
 

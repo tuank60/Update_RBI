@@ -31,13 +31,10 @@ namespace RBI.PRE.subForm.InputDataForm
             txtMaterial.Enabled = false;
             addSulfurContent();
             addMaterialGradeHTHA();
-            addHeatTreatment();
             addPTAMterial();
             ShowDatatoControl(ID, temperatureUnit, pressureUnit, stressUnit, corrosionUnit, thicknessUnit);
-            lblAllowableStress.Text = stressUnit;
             lblDesignPressure.Text = pressureUnit;
             lblCorrosion.Text = corrosionUnit;
-            lblGoverningThickness.Text = thicknessUnit;
 
             string tem;
             switch (temperatureUnit)
@@ -101,41 +98,6 @@ namespace RBI.PRE.subForm.InputDataForm
                     txtDesignPressure.Text = (obj.DesignPressure / convUnit.NpCM2).ToString();
                     break;
             }
-            switch(stressUnit)
-            {
-                case "psi":
-                    txtAllowableStress.Text = obj.AllowableStress.ToString();
-                    break;
-                case "KSI":
-                    txtAllowableStress.Text = (obj.AllowableStress / convUnit.ksi).ToString();
-                    break;
-                case "bar":
-                    txtAllowableStress.Text = (obj.AllowableStress / convUnit.bar).ToString();
-                    break;
-                case "MPa":
-                    txtAllowableStress.Text = (obj.AllowableStress / convUnit.MPa).ToString();
-                    break;
-                case "N/m2":
-                    txtAllowableStress.Text = (obj.AllowableStress / convUnit.NpM2).ToString();
-                    break;
-                case "N/cm2":
-                    txtAllowableStress.Text = (obj.AllowableStress / convUnit.NpCM2).ToString();
-                    break;
-            }
-
-            switch(thicknessUnit)
-            {
-                case "mm":
-                    txtBrittleFracture.Text = obj.BrittleFractureThickness.ToString();
-                    break;
-                case "in":
-                    txtBrittleFracture.Text = (obj.BrittleFractureThickness / convUnit.inch).ToString();
-                    break;
-                case "m":
-                    txtBrittleFracture.Text = (obj.BrittleFractureThickness / convUnit.meter).ToString();
-                    break;
-                    
-            }
             
             switch(corrosionUnit)
             {
@@ -152,14 +114,6 @@ namespace RBI.PRE.subForm.InputDataForm
                 if (obj.SulfurContent == itemsSulfurContent[i])
                 {
                     cbSulfurContent.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            for (int i = 0; i < itemsHeatTreatment.Length; i++)
-            {
-                if (obj.HeatTreatment == itemsHeatTreatment[i])
-                {
-                    cbHeatTreatment.SelectedIndex = i + 1;
                     break;
                 }
             }
@@ -236,29 +190,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 case "N/cm2":
                     ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.NpCM2: 0;
                     break;
-            }
-            
-            switch(stressUnit)
-            {
-                case "psi":
-                    ma.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) : 0;
-                    break;
-                case "KSI":
-                    ma.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) * (float)convUnit.ksi : 0;
-                    break;
-                case "bar":
-                    ma.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) * (float)convUnit.bar : 0;
-                    break;
-                case "MPa":
-                    ma.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) * (float)convUnit.MPa : 0;
-                    break;
-                case "N/m2":
-                    ma.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) * (float)convUnit.NpM2 : 0;
-                    break;
-                case "N/cm2":
-                    ma.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) * (float)convUnit.NpCM2 : 0;
-                    break;
-            }
+            }            
             
             switch(corrosionUnit)
             {
@@ -269,24 +201,9 @@ namespace RBI.PRE.subForm.InputDataForm
                     ma.CorrosionAllowance = txtCorrosionAllowance.Text != "" ? float.Parse(txtCorrosionAllowance.Text) * (float)convUnit.mil : 0;
                     break;
             }
-
-            switch(thicknessUnit)
-            {
-                case "mm":
-                    ma.BrittleFractureThickness = txtBrittleFracture.Text != "" ? float.Parse(txtBrittleFracture.Text) : 0;
-                    break;
-                case "in":
-                    ma.BrittleFractureThickness = txtBrittleFracture.Text != "" ? float.Parse(txtBrittleFracture.Text) * (float)convUnit.inch : 0;
-                    break;
-                case "m":
-                    ma.BrittleFractureThickness = txtBrittleFracture.Text != "" ? float.Parse(txtBrittleFracture.Text) * (float)convUnit.meter : 0;
-                    break;
-
-            }
                
             ma.SigmaPhase = txtSigmaPhase.Text != "" ? float.Parse(txtSigmaPhase.Text) : 0;
-            ma.SulfurContent = cbSulfurContent.Text;
-            ma.HeatTreatment = cbHeatTreatment.Text;           
+            ma.SulfurContent = cbSulfurContent.Text;       
             ma.PTAMaterialCode = cbPTAMaterialGrade.Text;
             ma.HTHAMaterialCode = cbHTHAMaterial.Text;
             ma.IsPTA = chkIsPTASeverity.Checked ? 1 : 0;
@@ -316,14 +233,6 @@ namespace RBI.PRE.subForm.InputDataForm
             for (int i = 0; i < itemsSulfurContent.Length; i++)
             {
                 cbSulfurContent.Properties.Items.Add(itemsSulfurContent[i], i, i);
-            }
-        }
-        private void addHeatTreatment()
-        {
-            cbHeatTreatment.Properties.Items.Add("", -1, -1);
-            for (int i = 0; i < itemsHeatTreatment.Length; i++)
-            {
-                cbHeatTreatment.Properties.Items.Add(itemsHeatTreatment[i], i, i);
             }
         }
         private void addMaterialGradeHTHA()
@@ -390,11 +299,6 @@ namespace RBI.PRE.subForm.InputDataForm
             keyPressEvent(txtDesignPressure, e, false);
         }
 
-        private void txtAllowableStress_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            keyPressEvent(txtAllowableStress, e, false);
-        }
-
         private void txtCorrosionAllowance_KeyPress(object sender, KeyPressEventArgs e)
         {
             keyPressEvent(txtCorrosionAllowance, e, false);
@@ -408,11 +312,6 @@ namespace RBI.PRE.subForm.InputDataForm
         private void txtReferenceTemperature_KeyPress(object sender, KeyPressEventArgs e)
         {
             keyPressEvent(txtReferenceTemperature, e, true);
-        }
-
-        private void txtBrittleFracture_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            keyPressEvent(txtBrittleFracture, e, false);
         }
 
         private void txtSigmaPhase_KeyPress(object sender, KeyPressEventArgs e)

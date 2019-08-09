@@ -34,6 +34,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float TensileStrength { set; get; }
         public float WeldJointEfficiency { set; get; }
         public float AllowableStress { set; get; }
+        public float StructualThickness { set; get; }
+        public Boolean MinStructThick { set; get; }
+        public float ShapeFactor { set; get; }
+        public float DesignPressure { set; get; }
+        public float MaxOperatingPressure { set; get; }
+
         //</Thinning>
 
         //<Lining>
@@ -322,6 +328,27 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float FlowStress()
         {
             return ((YieldStrength + TensileStrength) / 2) * WeldJointEfficiency * 1.1f;
+        }
+
+        public float StrengRatio()
+        {
+            return (AllowableStress * WeldJointEfficiency * Math.Max(getTmin(), StructualThickness)) / (FlowStress() * NomalThick); // test equation 2.17
+        }
+        public float getTBL45PriorProbability(string levelConfidenceCorrosionrate, int NumberOrder)
+        {
+            return 2;
+        }
+        public float getTBL46ConditionalProbability(string typeInspection, int NumberOrder)
+        {
+            return 2;
+        }
+        public float InspectionEffectiveFactor(string levelConfidenceCorrosionrate,int NumberInspectionTypeA, int NumberInspectionTypeB, int NumberInspectionTypeC, int NumberInspectionTypeD, int NumberOrder)
+        {
+            return getTBL45PriorProbability(levelConfidenceCorrosionrate, NumberOrder) * (float)Math.Pow(getTBL46ConditionalProbability("A", NumberOrder), NumberInspectionTypeA) * (float)Math.Pow(getTBL46ConditionalProbability("B", NumberOrder), NumberInspectionTypeB) * (float)Math.Pow(getTBL46ConditionalProbability("C", NumberOrder), NumberInspectionTypeC) * (float)Math.Pow(getTBL46ConditionalProbability("D", NumberOrder), NumberInspectionTypeD);
+        }
+        public float PosteriorProbability(string levelConfidenceCorrosionrate, int NumberInspectionTypeA, int NumberInspectionTypeB, int NumberInspectionTypeC, int NumberInspectionTypeD, int NumberOrder)
+        {
+            return InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, NumberOrder) / (InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, 1) + InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, 2) + InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, 3));
         }
         public float API_ART(float a)
         {

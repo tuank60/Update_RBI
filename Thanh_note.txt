@@ -1,4 +1,4 @@
-16/7/2019
+	16/7/2019
 -RW_PRD_X: them moi 											(chua lam)
 
 
@@ -60,7 +60,7 @@
 			HTHADamageObserved, BrittleFractureThickness.
 			
 
-
+(CrackCurrentCondition ko thay trong form)
 
 10/7/2019
 -USERS: giong table riskwise5

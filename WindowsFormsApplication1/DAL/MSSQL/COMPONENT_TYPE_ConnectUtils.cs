@@ -219,5 +219,38 @@ namespace RBI.DAL.MSSQL
             }
             return ID;
         }
+        public float getShapeFactor(int typeID)
+        {
+            float ShapeFactor = 0;
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "select ShapeFactor from rbi.dbo.COMPONENT_TYPE where ComponentTypeID = '" + typeID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ShapeFactor = (float)reader.GetDouble(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return ShapeFactor;
+        }
     }
 }

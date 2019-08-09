@@ -42,9 +42,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 chkPreventionBarrier.Enabled = false;
             }
             else
-                txtShellCourseHeight.Enabled = false;
             lblDiameter.Text = diameterUnit;
-            lblCurrentThickness.Text = lblNominalThickness.Text = lblMinReqThickness.Text = thicknessUnit;
             lblCorrosionRate.Text = corrosionRateUnit;
         }
         private void ShowDataToControl(int ID, string diameter, string thickness, string corrosionRate)
@@ -77,12 +75,9 @@ namespace RBI.PRE.subForm.InputDataForm
 
             if (corrosionRate == "mm/yr") txtCurrentCorrosionRate.Text = com.CurrentCorrosionRate.ToString(); // converst mm sang mm
             else txtCurrentCorrosionRate.Text = (com.CurrentCorrosionRate / convUnit.mil).ToString(); // converst mm sang mil
-            txtShellCourseHeight.Text = com.ShellHeight.ToString();
-            chkDamageFoundDuringInspection.Checked = com.DamageFoundInspection == 1 ? true : false;
             chkConcreteAsphalt.Checked = com.ConcreteFoundation == 1 ? true : false;
             chkPresenceCracks.Checked = com.CracksPresent == 1 ? true : false;
             chkPreventionBarrier.Checked = com.ReleasePreventionBarrier == 1 ? true : false;
-            //chkTrampElements.Checked = com.TrampElements == 1 ? true : false;
             for(int i = 0; i<itemsBrinnellHardness.Length;i++)
             {
                 if(itemsBrinnellHardness[i] == com.BrinnelHardness)
@@ -113,45 +108,56 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_COMPONENT comp = new RW_COMPONENT();
             comp.ID = ID;
             BUS_UNITS convUnit = new BUS_UNITS();
+            //Generic Properties
             if (diameter == "mm") comp.NominalDiameter = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) : 0;
             else if (diameter == "in") comp.NominalDiameter = txtTankDiameter.Text != "" ? (float)(double.Parse(txtTankDiameter.Text) * convUnit.inch) : 0; // in sang mm
             else comp.NominalDiameter = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) * 1000 : 0; // m sang mm
-            //comp.NominalDiameter = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) : 0;
             if (thickness == "mm")
             {
                 comp.NominalThickness = txtNominalThickness.Text != "" ? float.Parse(txtNominalThickness.Text) : 0;
-                comp.CurrentThickness = txtCurrentThickness.Text != "" ? float.Parse(txtCurrentThickness.Text) : 0;
                 comp.MinReqThickness = txtMinRequiredThickness.Text != "" ? float.Parse(txtMinRequiredThickness.Text) : 0;
+                comp.BrittleFractureThickness = txtBrittleFractureThickness.Text != "" ? float.Parse(txtBrittleFractureThickness.Text) : 0;
+                comp.StructuralThickness = txtStructuralThickness.Text != "" ? float.Parse(txtStructuralThickness.Text) : 0;
+
             }
             else if (thickness == "in")
             {
                 comp.NominalThickness = txtNominalThickness.Text != "" ? (float)(double.Parse(txtNominalThickness.Text) * convUnit.inch) : 0; // in sang mm
-                comp.CurrentThickness = txtCurrentThickness.Text != "" ? (float)(double.Parse(txtCurrentThickness.Text) * convUnit.inch) : 0; // in sang mm
                 comp.MinReqThickness = txtMinRequiredThickness.Text != "" ? (float)(double.Parse(txtMinRequiredThickness.Text) * convUnit.inch) : 0;// in sang mm
+                comp.BrittleFractureThickness = txtBrittleFractureThickness.Text != "" ? (float)(double.Parse(txtBrittleFractureThickness.Text) * convUnit.inch) : 0;
+                comp.StructuralThickness = txtStructuralThickness.Text != "" ? (float)(double.Parse(txtStructuralThickness.Text) * convUnit.inch) : 0;
             }
             else
             {
                 comp.NominalThickness = txtNominalThickness.Text != "" ? (float)(double.Parse(txtNominalThickness.Text) * 1000) : 0; // m sang mm
-                comp.CurrentThickness = txtCurrentThickness.Text != "" ? (float)(double.Parse(txtCurrentThickness.Text) * 1000) : 0; // m sang mm
                 comp.MinReqThickness = txtMinRequiredThickness.Text != "" ? (float)(double.Parse(txtMinRequiredThickness.Text) * 1000) : 0;// m sang mm
+                comp.BrittleFractureThickness = txtBrittleFractureThickness.Text != "" ? (float)(double.Parse(txtBrittleFractureThickness.Text) * 1000) : 0;
+                comp.StructuralThickness = txtStructuralThickness.Text != "" ? (float)(double.Parse(txtStructuralThickness.Text) *1000): 0;
             }
-            //comp.NominalThickness = txtNominalThickness.Text != "" ? float.Parse(txtNominalThickness.Text) : 0;
-            //comp.CurrentThickness = txtCurrentThickness.Text != "" ? float.Parse(txtCurrentThickness.Text) : 0;
-            //comp.MinReqThickness = txtMinRequiredThickness.Text != "" ? float.Parse(txtMinRequiredThickness.Text) : 0;
             if (corrosionRate == "mm/yr") comp.CurrentCorrosionRate = txtCurrentCorrosionRate.Text != "" ? (float)double.Parse(txtCurrentCorrosionRate.Text) : 0;
             else comp.CurrentCorrosionRate = txtCurrentCorrosionRate.Text != "" ? (float)(double.Parse(txtCurrentCorrosionRate.Text) * convUnit.mil) : 0; // mil/yr sang mm/yr
-            //comp.CurrentCorrosionRate = txtCurrentCorrosionRate.Text != "" ? float.Parse(txtCurrentCorrosionRate.Text) : 0;
-            comp.BrinnelHardness = cbMaxBrillnessHardness.Text;
-            comp.SeverityOfVibration = cbSeverityVibration.Text;
-            comp.ComplexityProtrusion = cbComplexityProtrusion.Text;
-            comp.DamageFoundInspection = chkDamageFoundDuringInspection.Checked ? 1 : 0;
+            comp.AllowableStress = txtAllowableStress.Text != "" ? float.Parse(txtAllowableStress.Text) : 0;
+            comp.WeldJointEfficiency = txtWeldJointEfficiency.Text != "" ? float.Parse(txtWeldJointEfficiency.Text) : 0;
+            comp.ComponentVolume = txtComponentVolume.Text != "" ? float.Parse(txtComponentVolume.Text) : 0;
+            comp.ConfidenceCorrosionRate = cbConfidenceCorrosionRate.Text;
             comp.CracksPresent = chkPresenceCracks.Checked ? 1 : 0;
-            //comp.TrampElements = chkTrampElements.Checked ? 1 : 0;
-            //kiem tra dieu kien API Component Type -> Disable control cua shell hoac cua bottom
-            //tank Shell Course
-            comp.ShellHeight = txtShellCourseHeight.Text != "" ? float.Parse(txtShellCourseHeight.Text) : 0;
-            //tank bottom
+            comp.MinimumStructuralThicknessGoverns = chkMinimumStructuralThicknessGoverns.Checked ? 1 : 0;
+            //Governing Stress Corrosion Cracking Damage Factor
+            comp.BrinnelHardness = cbMaxBrillnessHardness.Text;
+            //Governing Brittle Fracture Damage Factor
+            comp.FabricatedSteel = chkFabricatedSteel.Checked ? 1 : 0;
+            comp.EquipmentSatisfied = chkEquipmentSatisfied.Checked ? 1 : 0;
+            comp.NominalOperatingConditions = chkNominalOperatingConditions.Checked ? 1 : 0;
+            comp.CETGreaterOrEqual = chkCETGreaterOrEqual.Checked ? 1 : 0;
+            comp.CyclicServiceFatigueVibration = chkCyclicServiceFatigueVibration.Checked ? 1 : 0;
+            comp.EquipmentCircuitShock = chkEquipmentCircuitShock.Checked ? 1 : 0;
+            //Governing Fatigue Damage Factor
+            comp.SeverityOfVibration = cbSeverityVibration.Text;
+            //Governing External Damage Factor
+            comp.ComplexityProtrusion = cbComplexityProtrusion.Text;
+            //Tank Consequence of Falure
             comp.ConcreteFoundation = chkConcreteAsphalt.Checked ? 1 : 0;
+            comp.ShellHeight = txtShellHeight.Text != "" ? float.Parse(txtShellHeight.Text) : 0;
             comp.ReleasePreventionBarrier = chkPreventionBarrier.Checked ? 1 : 0;
             return comp;
         }
@@ -166,7 +172,6 @@ namespace RBI.PRE.subForm.InputDataForm
             else tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) * 1000 : 0; // m sang mm
             tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) : 0;
             tank.Prevention_Barrier = chkPreventionBarrier.Checked ? 1 : 0;
-            tank.SHELL_COURSE_HEIGHT = txtShellCourseHeight.Text != "" ? float.Parse(txtShellCourseHeight.Text) : 0;
             return tank;
         }
         private void addItemsBrinnellHardness()
@@ -205,11 +210,6 @@ namespace RBI.PRE.subForm.InputDataForm
         private void txtCurrentCorrosionRate_KeyPress(object sender, KeyPressEventArgs e)
         {
             keyPressEvent(txtCurrentCorrosionRate, e);
-        }
-
-        private void txtShellCourseHeight_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            keyPressEvent(txtShellCourseHeight, e);
         }
 
         private void txtNominalThickness_KeyPress(object sender, KeyPressEventArgs e)

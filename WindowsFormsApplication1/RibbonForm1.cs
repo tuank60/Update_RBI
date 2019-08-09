@@ -1027,7 +1027,7 @@ namespace RBI
         private void treeListProject_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             TreeList tree = sender as TreeList;
-            TreeListHitInfo hi = tree.CalcHitInfo(tree.PointToClient(Control.MousePosition)); // no comment ?
+            TreeListHitInfo hi = tree.CalcHitInfo(tree.PointToClient(Control.MousePosition));
 
             if (treeListProject.Nodes.Count == 0) //tránh lỗi khi treelist rỗng
                 return;

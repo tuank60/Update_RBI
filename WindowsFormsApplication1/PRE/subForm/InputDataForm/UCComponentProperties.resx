@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label34.Text" xml:space="preserve">
+    <value>The nominal operating conditions have been essentially the same and consistent with the specificed design conditions for a significant period of time, and more severe conditions (i.e., lower temperature and/or higher stress) are not expected in the future.</value>
+  </data>
   <metadata name="imgColCyclicLoad.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>175, 7</value>
   </metadata>
@@ -303,9 +306,6 @@
         khiMbADjPzRJYjBVXUAWHjVg1AAQpswAh/8Azps9/dX0WBgAAAAASUVORK5CYIIL
 </value>
   </data>
-  <data name="label34.Text" xml:space="preserve">
-    <value>The nominal operating conditions have been essentially the same and consistent with the specificed design conditions for a significant period of time, and more severe conditions (i.e., lower temperature and/or higher stress) are not expected in the future.</value>
-  </data>
   <metadata name="imgColMaxBrinHard.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>14, 7</value>
   </metadata>
@@ -347,6 +347,6 @@
 </value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>78</value>
+    <value>25</value>
   </metadata>
 </root>

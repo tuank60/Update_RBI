@@ -94,8 +94,10 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(964, 506);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(1285, 623);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stream";
@@ -139,9 +141,10 @@
             this.pnlStress.Controls.Add(this.label15);
             this.pnlStress.Controls.Add(this.label17);
             this.pnlStress.Controls.Add(this.label20);
-            this.pnlStress.Location = new System.Drawing.Point(27, 216);
+            this.pnlStress.Location = new System.Drawing.Point(36, 266);
+            this.pnlStress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlStress.Name = "pnlStress";
-            this.pnlStress.Size = new System.Drawing.Size(915, 255);
+            this.pnlStress.Size = new System.Drawing.Size(1219, 313);
             this.pnlStress.TabIndex = 3;
             // 
             // lblStress
@@ -149,21 +152,23 @@
             this.lblStress.BackColor = System.Drawing.SystemColors.Highlight;
             this.lblStress.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblStress.Location = new System.Drawing.Point(0, -1);
+            this.lblStress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStress.Name = "lblStress";
-            this.lblStress.Size = new System.Drawing.Size(915, 17);
+            this.lblStress.Size = new System.Drawing.Size(1220, 21);
             this.lblStress.TabIndex = 24;
             this.lblStress.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
             this.lblStress.Click += new System.EventHandler(this.lblStress_Click);
             // 
             // cbAmineSolutionComposition
             // 
-            this.cbAmineSolutionComposition.Location = new System.Drawing.Point(709, 111);
+            this.cbAmineSolutionComposition.Location = new System.Drawing.Point(945, 137);
+            this.cbAmineSolutionComposition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbAmineSolutionComposition.Name = "cbAmineSolutionComposition";
             this.cbAmineSolutionComposition.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAmineSolutionComposition.Properties.Appearance.Options.UseFont = true;
             this.cbAmineSolutionComposition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbAmineSolutionComposition.Size = new System.Drawing.Size(186, 20);
+            this.cbAmineSolutionComposition.Size = new System.Drawing.Size(248, 24);
             this.cbAmineSolutionComposition.TabIndex = 14;
             this.cbAmineSolutionComposition.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.cbAmineSolutionComposition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -171,9 +176,10 @@
             // txtReleaseFluidPercent
             // 
             this.txtReleaseFluidPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReleaseFluidPercent.Location = new System.Drawing.Point(709, 226);
+            this.txtReleaseFluidPercent.Location = new System.Drawing.Point(945, 278);
+            this.txtReleaseFluidPercent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtReleaseFluidPercent.Name = "txtReleaseFluidPercent";
-            this.txtReleaseFluidPercent.Size = new System.Drawing.Size(186, 21);
+            this.txtReleaseFluidPercent.Size = new System.Drawing.Size(247, 24);
             this.txtReleaseFluidPercent.TabIndex = 9;
             this.txtReleaseFluidPercent.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtReleaseFluidPercent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -183,18 +189,20 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(450, 229);
+            this.label7.Location = new System.Drawing.Point(600, 282);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 15);
+            this.label7.Size = new System.Drawing.Size(219, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "Release Fluid Percent Toxic (%)";
             // 
             // txtCO3ConcentrationWater
             // 
             this.txtCO3ConcentrationWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCO3ConcentrationWater.Location = new System.Drawing.Point(709, 182);
+            this.txtCO3ConcentrationWater.Location = new System.Drawing.Point(945, 224);
+            this.txtCO3ConcentrationWater.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCO3ConcentrationWater.Name = "txtCO3ConcentrationWater";
-            this.txtCO3ConcentrationWater.Size = new System.Drawing.Size(186, 21);
+            this.txtCO3ConcentrationWater.Size = new System.Drawing.Size(247, 24);
             this.txtCO3ConcentrationWater.TabIndex = 10;
             this.txtCO3ConcentrationWater.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtCO3ConcentrationWater.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -203,9 +211,10 @@
             // txtH2SContent
             // 
             this.txtH2SContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtH2SContent.Location = new System.Drawing.Point(709, 204);
+            this.txtH2SContent.Location = new System.Drawing.Point(945, 251);
+            this.txtH2SContent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtH2SContent.Name = "txtH2SContent";
-            this.txtH2SContent.Size = new System.Drawing.Size(186, 21);
+            this.txtH2SContent.Size = new System.Drawing.Size(247, 24);
             this.txtH2SContent.TabIndex = 8;
             this.txtH2SContent.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtH2SContent.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -216,9 +225,10 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(450, 113);
+            this.label13.Location = new System.Drawing.Point(600, 139);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(162, 15);
+            this.label13.Size = new System.Drawing.Size(196, 18);
             this.label13.TabIndex = 0;
             this.label13.Text = "Amine Solution Composition";
             // 
@@ -226,21 +236,23 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(450, 207);
+            this.label6.Location = new System.Drawing.Point(600, 255);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(160, 15);
+            this.label6.Size = new System.Drawing.Size(195, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "H2S Content in Water (ppm)";
             // 
             // cbExposureAmine
             // 
-            this.cbExposureAmine.Location = new System.Drawing.Point(709, 89);
+            this.cbExposureAmine.Location = new System.Drawing.Point(945, 110);
+            this.cbExposureAmine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbExposureAmine.Name = "cbExposureAmine";
             this.cbExposureAmine.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbExposureAmine.Properties.Appearance.Options.UseFont = true;
             this.cbExposureAmine.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbExposureAmine.Size = new System.Drawing.Size(186, 20);
+            this.cbExposureAmine.Size = new System.Drawing.Size(248, 24);
             this.cbExposureAmine.TabIndex = 13;
             this.cbExposureAmine.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.cbExposureAmine.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -249,18 +261,20 @@
             // 
             this.label.AutoSize = true;
             this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label.Location = new System.Drawing.Point(450, 185);
+            this.label.Location = new System.Drawing.Point(600, 228);
+            this.label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(194, 15);
+            this.label.Size = new System.Drawing.Size(238, 18);
             this.label.TabIndex = 0;
             this.label.Text = "CO3 Concentration in Water (ppm)";
             // 
             // txtpHWater
             // 
             this.txtpHWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpHWater.Location = new System.Drawing.Point(299, 32);
+            this.txtpHWater.Location = new System.Drawing.Point(399, 39);
+            this.txtpHWater.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtpHWater.Name = "txtpHWater";
-            this.txtpHWater.Size = new System.Drawing.Size(134, 21);
+            this.txtpHWater.Size = new System.Drawing.Size(177, 24);
             this.txtpHWater.TabIndex = 11;
             this.txtpHWater.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtpHWater.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -271,18 +285,20 @@
             this.labelph.AutoSize = true;
             this.labelph.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelph.ForeColor = System.Drawing.Color.Red;
-            this.labelph.Location = new System.Drawing.Point(19, 35);
+            this.labelph.Location = new System.Drawing.Point(25, 43);
+            this.labelph.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelph.Name = "labelph";
-            this.labelph.Size = new System.Drawing.Size(71, 15);
+            this.labelph.Size = new System.Drawing.Size(88, 18);
             this.labelph.TabIndex = 0;
             this.labelph.Text = "pH of Water";
             // 
             // chkPresenceCyanides
             // 
             this.chkPresenceCyanides.AutoSize = true;
-            this.chkPresenceCyanides.Location = new System.Drawing.Point(709, 71);
+            this.chkPresenceCyanides.Location = new System.Drawing.Point(945, 87);
+            this.chkPresenceCyanides.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPresenceCyanides.Name = "chkPresenceCyanides";
-            this.chkPresenceCyanides.Size = new System.Drawing.Size(15, 14);
+            this.chkPresenceCyanides.Size = new System.Drawing.Size(18, 17);
             this.chkPresenceCyanides.TabIndex = 17;
             this.chkPresenceCyanides.UseVisualStyleBackColor = true;
             this.chkPresenceCyanides.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -291,9 +307,10 @@
             // txtChlorideIon
             // 
             this.txtChlorideIon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChlorideIon.Location = new System.Drawing.Point(709, 158);
+            this.txtChlorideIon.Location = new System.Drawing.Point(945, 194);
+            this.txtChlorideIon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtChlorideIon.Name = "txtChlorideIon";
-            this.txtChlorideIon.Size = new System.Drawing.Size(186, 21);
+            this.txtChlorideIon.Size = new System.Drawing.Size(247, 24);
             this.txtChlorideIon.TabIndex = 7;
             this.txtChlorideIon.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtChlorideIon.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -304,9 +321,10 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(450, 91);
+            this.label12.Location = new System.Drawing.Point(600, 112);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 15);
+            this.label12.Size = new System.Drawing.Size(133, 18);
             this.label12.TabIndex = 0;
             this.label12.Text = "Exposure to Amine";
             // 
@@ -314,18 +332,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(450, 161);
+            this.label5.Location = new System.Drawing.Point(600, 198);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 15);
+            this.label5.Size = new System.Drawing.Size(130, 18);
             this.label5.TabIndex = 0;
             this.label5.Text = "Chloride Ion (ppm)";
             // 
             // chkChlorine
             // 
             this.chkChlorine.AutoSize = true;
-            this.chkChlorine.Location = new System.Drawing.Point(709, 34);
+            this.chkChlorine.Location = new System.Drawing.Point(945, 42);
+            this.chkChlorine.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkChlorine.Name = "chkChlorine";
-            this.chkChlorine.Size = new System.Drawing.Size(15, 14);
+            this.chkChlorine.Size = new System.Drawing.Size(18, 17);
             this.chkChlorine.TabIndex = 19;
             this.chkChlorine.UseVisualStyleBackColor = true;
             this.chkChlorine.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -335,17 +355,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(403, 165);
+            this.label3.Location = new System.Drawing.Point(537, 203);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(0, 17);
             this.label3.TabIndex = 0;
             // 
             // txtNaOHConcentration
             // 
             this.txtNaOHConcentration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNaOHConcentration.Location = new System.Drawing.Point(709, 134);
+            this.txtNaOHConcentration.Location = new System.Drawing.Point(945, 165);
+            this.txtNaOHConcentration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNaOHConcentration.Name = "txtNaOHConcentration";
-            this.txtNaOHConcentration.Size = new System.Drawing.Size(186, 21);
+            this.txtNaOHConcentration.Size = new System.Drawing.Size(247, 24);
             this.txtNaOHConcentration.TabIndex = 6;
             this.txtNaOHConcentration.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtNaOHConcentration.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -354,9 +376,10 @@
             // chkExposedSulphurBearing
             // 
             this.chkExposedSulphurBearing.AutoSize = true;
-            this.chkExposedSulphurBearing.Location = new System.Drawing.Point(299, 225);
+            this.chkExposedSulphurBearing.Location = new System.Drawing.Point(399, 277);
+            this.chkExposedSulphurBearing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkExposedSulphurBearing.Name = "chkExposedSulphurBearing";
-            this.chkExposedSulphurBearing.Size = new System.Drawing.Size(15, 14);
+            this.chkExposedSulphurBearing.Size = new System.Drawing.Size(18, 17);
             this.chkExposedSulphurBearing.TabIndex = 23;
             this.chkExposedSulphurBearing.UseVisualStyleBackColor = true;
             this.chkExposedSulphurBearing.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -367,9 +390,10 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(19, 57);
+            this.label10.Location = new System.Drawing.Point(25, 70);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(205, 15);
+            this.label10.Size = new System.Drawing.Size(249, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "Exposed to Acid Gas Treating Amine";
             // 
@@ -377,18 +401,20 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(450, 137);
+            this.label4.Location = new System.Drawing.Point(600, 169);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 15);
+            this.label4.Size = new System.Drawing.Size(174, 18);
             this.label4.TabIndex = 0;
             this.label4.Text = "NaOH Concentration (%)";
             // 
             // chkPresenceHydrofluoricAcid
             // 
             this.chkPresenceHydrofluoricAcid.AutoSize = true;
-            this.chkPresenceHydrofluoricAcid.Location = new System.Drawing.Point(299, 167);
+            this.chkPresenceHydrofluoricAcid.Location = new System.Drawing.Point(399, 206);
+            this.chkPresenceHydrofluoricAcid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkPresenceHydrofluoricAcid.Name = "chkPresenceHydrofluoricAcid";
-            this.chkPresenceHydrofluoricAcid.Size = new System.Drawing.Size(15, 14);
+            this.chkPresenceHydrofluoricAcid.Size = new System.Drawing.Size(18, 17);
             this.chkPresenceHydrofluoricAcid.TabIndex = 21;
             this.chkPresenceHydrofluoricAcid.UseVisualStyleBackColor = true;
             this.chkPresenceHydrofluoricAcid.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -399,18 +425,20 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(450, 69);
+            this.label18.Location = new System.Drawing.Point(600, 85);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(125, 15);
+            this.label18.Size = new System.Drawing.Size(153, 18);
             this.label18.TabIndex = 0;
             this.label18.Text = "Presence of Cyanides";
             // 
             // chkEnvironmentContainsCaustic
             // 
             this.chkEnvironmentContainsCaustic.AutoSize = true;
-            this.chkEnvironmentContainsCaustic.Location = new System.Drawing.Point(299, 198);
+            this.chkEnvironmentContainsCaustic.Location = new System.Drawing.Point(399, 244);
+            this.chkEnvironmentContainsCaustic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkEnvironmentContainsCaustic.Name = "chkEnvironmentContainsCaustic";
-            this.chkEnvironmentContainsCaustic.Size = new System.Drawing.Size(15, 14);
+            this.chkEnvironmentContainsCaustic.Size = new System.Drawing.Size(18, 17);
             this.chkEnvironmentContainsCaustic.TabIndex = 18;
             this.chkEnvironmentContainsCaustic.UseVisualStyleBackColor = true;
             this.chkEnvironmentContainsCaustic.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -419,9 +447,10 @@
             // chkExposedAcidGas
             // 
             this.chkExposedAcidGas.AutoSize = true;
-            this.chkExposedAcidGas.Location = new System.Drawing.Point(299, 59);
+            this.chkExposedAcidGas.Location = new System.Drawing.Point(399, 73);
+            this.chkExposedAcidGas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkExposedAcidGas.Name = "chkExposedAcidGas";
-            this.chkExposedAcidGas.Size = new System.Drawing.Size(15, 14);
+            this.chkExposedAcidGas.Size = new System.Drawing.Size(18, 17);
             this.chkExposedAcidGas.TabIndex = 12;
             this.chkExposedAcidGas.UseVisualStyleBackColor = true;
             this.chkExposedAcidGas.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -432,9 +461,10 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Red;
-            this.label22.Location = new System.Drawing.Point(450, 32);
+            this.label22.Location = new System.Drawing.Point(600, 39);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(219, 30);
+            this.label22.Size = new System.Drawing.Size(267, 36);
             this.label22.TabIndex = 0;
             this.label22.Text = "Material is Exposed to Fluids, Mists, or \r\nSoilds Containing Chlorine Internally";
             // 
@@ -443,18 +473,20 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(19, 81);
+            this.label14.Location = new System.Drawing.Point(25, 100);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(190, 15);
+            this.label14.Size = new System.Drawing.Size(228, 18);
             this.label14.TabIndex = 0;
             this.label14.Text = "Aqueous Phase During Operation";
             // 
             // chkAqueousPhaseDuringOperation
             // 
             this.chkAqueousPhaseDuringOperation.AutoSize = true;
-            this.chkAqueousPhaseDuringOperation.Location = new System.Drawing.Point(299, 83);
+            this.chkAqueousPhaseDuringOperation.Location = new System.Drawing.Point(399, 102);
+            this.chkAqueousPhaseDuringOperation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkAqueousPhaseDuringOperation.Name = "chkAqueousPhaseDuringOperation";
-            this.chkAqueousPhaseDuringOperation.Size = new System.Drawing.Size(15, 14);
+            this.chkAqueousPhaseDuringOperation.Size = new System.Drawing.Size(18, 17);
             this.chkAqueousPhaseDuringOperation.TabIndex = 15;
             this.chkAqueousPhaseDuringOperation.UseVisualStyleBackColor = true;
             this.chkAqueousPhaseDuringOperation.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -465,9 +497,10 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(19, 223);
+            this.label21.Location = new System.Drawing.Point(25, 274);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(231, 15);
+            this.label21.Size = new System.Drawing.Size(278, 18);
             this.label21.TabIndex = 0;
             this.label21.Text = "Exposed to Sulphur-Bearing Compounds";
             // 
@@ -476,18 +509,20 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(19, 108);
+            this.label16.Location = new System.Drawing.Point(25, 133);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(196, 15);
+            this.label16.Size = new System.Drawing.Size(236, 18);
             this.label16.TabIndex = 0;
             this.label16.Text = "Aqueous Phase During Shut Down";
             // 
             // chkEnviromentContainsH2S
             // 
             this.chkEnviromentContainsH2S.AutoSize = true;
-            this.chkEnviromentContainsH2S.Location = new System.Drawing.Point(299, 137);
+            this.chkEnviromentContainsH2S.Location = new System.Drawing.Point(399, 169);
+            this.chkEnviromentContainsH2S.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkEnviromentContainsH2S.Name = "chkEnviromentContainsH2S";
-            this.chkEnviromentContainsH2S.Size = new System.Drawing.Size(15, 14);
+            this.chkEnviromentContainsH2S.Size = new System.Drawing.Size(18, 17);
             this.chkEnviromentContainsH2S.TabIndex = 16;
             this.chkEnviromentContainsH2S.UseVisualStyleBackColor = true;
             this.chkEnviromentContainsH2S.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -496,9 +531,10 @@
             // chkAqueousPhaseShutdown
             // 
             this.chkAqueousPhaseShutdown.AutoSize = true;
-            this.chkAqueousPhaseShutdown.Location = new System.Drawing.Point(299, 110);
+            this.chkAqueousPhaseShutdown.Location = new System.Drawing.Point(399, 135);
+            this.chkAqueousPhaseShutdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chkAqueousPhaseShutdown.Name = "chkAqueousPhaseShutdown";
-            this.chkAqueousPhaseShutdown.Size = new System.Drawing.Size(15, 14);
+            this.chkAqueousPhaseShutdown.Size = new System.Drawing.Size(18, 17);
             this.chkAqueousPhaseShutdown.TabIndex = 20;
             this.chkAqueousPhaseShutdown.UseVisualStyleBackColor = true;
             this.chkAqueousPhaseShutdown.CheckedChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
@@ -509,9 +545,10 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(19, 135);
+            this.label15.Location = new System.Drawing.Point(25, 166);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(147, 15);
+            this.label15.Size = new System.Drawing.Size(179, 18);
             this.label15.TabIndex = 0;
             this.label15.Text = "Enviroment Contains H2S";
             // 
@@ -520,9 +557,10 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Red;
-            this.label17.Location = new System.Drawing.Point(19, 165);
+            this.label17.Location = new System.Drawing.Point(25, 203);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(166, 15);
+            this.label17.Size = new System.Drawing.Size(204, 18);
             this.label17.TabIndex = 0;
             this.label17.Text = "Presence of Hydrofluoric Acid";
             // 
@@ -531,9 +569,10 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(19, 196);
+            this.label20.Location = new System.Drawing.Point(25, 241);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(277, 15);
+            this.label20.Size = new System.Drawing.Size(340, 18);
             this.label20.TabIndex = 0;
             this.label20.Text = "Enviroment Contains Caustic in Any Concentration";
             // 
@@ -552,9 +591,10 @@
             this.pnlGenericProperties.Controls.Add(this.label23);
             this.pnlGenericProperties.Controls.Add(this.label2);
             this.pnlGenericProperties.Controls.Add(this.label9);
-            this.pnlGenericProperties.Location = new System.Drawing.Point(27, 30);
+            this.pnlGenericProperties.Location = new System.Drawing.Point(36, 37);
+            this.pnlGenericProperties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlGenericProperties.Name = "pnlGenericProperties";
-            this.pnlGenericProperties.Size = new System.Drawing.Size(915, 166);
+            this.pnlGenericProperties.Size = new System.Drawing.Size(1219, 203);
             this.pnlGenericProperties.TabIndex = 2;
             // 
             // lblGenericProperties
@@ -562,8 +602,9 @@
             this.lblGenericProperties.BackColor = System.Drawing.SystemColors.Highlight;
             this.lblGenericProperties.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblGenericProperties.Location = new System.Drawing.Point(0, 0);
+            this.lblGenericProperties.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGenericProperties.Name = "lblGenericProperties";
-            this.lblGenericProperties.Size = new System.Drawing.Size(915, 19);
+            this.lblGenericProperties.Size = new System.Drawing.Size(1220, 23);
             this.lblGenericProperties.TabIndex = 6;
             this.lblGenericProperties.Text = "▼ Generic Properties";
             this.lblGenericProperties.Click += new System.EventHandler(this.lbl1GenericProperties_Click);
@@ -571,9 +612,10 @@
             // txtPercentageFluidGoingOffsite
             // 
             this.txtPercentageFluidGoingOffsite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentageFluidGoingOffsite.Location = new System.Drawing.Point(360, 135);
+            this.txtPercentageFluidGoingOffsite.Location = new System.Drawing.Point(480, 166);
+            this.txtPercentageFluidGoingOffsite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPercentageFluidGoingOffsite.Name = "txtPercentageFluidGoingOffsite";
-            this.txtPercentageFluidGoingOffsite.Size = new System.Drawing.Size(100, 21);
+            this.txtPercentageFluidGoingOffsite.Size = new System.Drawing.Size(132, 24);
             this.txtPercentageFluidGoingOffsite.TabIndex = 5;
             this.txtPercentageFluidGoingOffsite.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtPercentageFluidGoingOffsite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -581,11 +623,12 @@
             // 
             // cbFluidTank
             // 
-            this.cbFluidTank.Location = new System.Drawing.Point(360, 37);
+            this.cbFluidTank.Location = new System.Drawing.Point(480, 46);
+            this.cbFluidTank.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbFluidTank.Name = "cbFluidTank";
             this.cbFluidTank.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbFluidTank.Size = new System.Drawing.Size(267, 20);
+            this.cbFluidTank.Size = new System.Drawing.Size(356, 22);
             this.cbFluidTank.TabIndex = 1;
             this.cbFluidTank.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.cbFluidTank.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -593,9 +636,10 @@
             // txtPercentageLeavingRemainsOnSite
             // 
             this.txtPercentageLeavingRemainsOnSite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentageLeavingRemainsOnSite.Location = new System.Drawing.Point(360, 109);
+            this.txtPercentageLeavingRemainsOnSite.Location = new System.Drawing.Point(480, 134);
+            this.txtPercentageLeavingRemainsOnSite.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPercentageLeavingRemainsOnSite.Name = "txtPercentageLeavingRemainsOnSite";
-            this.txtPercentageLeavingRemainsOnSite.Size = new System.Drawing.Size(100, 21);
+            this.txtPercentageLeavingRemainsOnSite.Size = new System.Drawing.Size(132, 24);
             this.txtPercentageLeavingRemainsOnSite.TabIndex = 3;
             this.txtPercentageLeavingRemainsOnSite.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtPercentageLeavingRemainsOnSite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -605,18 +649,20 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(19, 138);
+            this.label24.Location = new System.Drawing.Point(25, 170);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(186, 15);
+            this.label24.Size = new System.Drawing.Size(226, 18);
             this.label24.TabIndex = 0;
             this.label24.Text = "Percentage of Fluid Going Offsite\r\n";
             // 
             // txtPercentageLeavingDike
             // 
             this.txtPercentageLeavingDike.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPercentageLeavingDike.Location = new System.Drawing.Point(360, 85);
+            this.txtPercentageLeavingDike.Location = new System.Drawing.Point(480, 105);
+            this.txtPercentageLeavingDike.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPercentageLeavingDike.Name = "txtPercentageLeavingDike";
-            this.txtPercentageLeavingDike.Size = new System.Drawing.Size(100, 21);
+            this.txtPercentageLeavingDike.Size = new System.Drawing.Size(132, 24);
             this.txtPercentageLeavingDike.TabIndex = 4;
             this.txtPercentageLeavingDike.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtPercentageLeavingDike.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -626,9 +672,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(19, 112);
+            this.label8.Location = new System.Drawing.Point(25, 138);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(321, 15);
+            this.label8.Size = new System.Drawing.Size(384, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "Percentage of Fluid Leaving the Dike but Remains on Site";
             // 
@@ -636,18 +683,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 38);
+            this.label1.Location = new System.Drawing.Point(25, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 15);
+            this.label1.Size = new System.Drawing.Size(84, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Model Fluid";
             // 
             // txtFluidHeight
             // 
             this.txtFluidHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFluidHeight.Location = new System.Drawing.Point(360, 60);
+            this.txtFluidHeight.Location = new System.Drawing.Point(480, 74);
+            this.txtFluidHeight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFluidHeight.Name = "txtFluidHeight";
-            this.txtFluidHeight.Size = new System.Drawing.Size(146, 21);
+            this.txtFluidHeight.Size = new System.Drawing.Size(193, 24);
             this.txtFluidHeight.TabIndex = 2;
             this.txtFluidHeight.TextChanged += new System.EventHandler(this.cbFluidTank_TextChanged);
             this.txtFluidHeight.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbFluidTank_KeyDown);
@@ -657,9 +706,10 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(19, 88);
+            this.label23.Location = new System.Drawing.Point(25, 108);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(207, 15);
+            this.label23.Size = new System.Drawing.Size(247, 18);
             this.label23.TabIndex = 0;
             this.label23.Text = "Percentage of Fluid Leaving the Dike";
             // 
@@ -667,9 +717,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 63);
+            this.label2.Location = new System.Drawing.Point(25, 78);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 15);
+            this.label2.Size = new System.Drawing.Size(85, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Fluid Height";
             // 
@@ -677,19 +728,21 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(512, 63);
+            this.label9.Location = new System.Drawing.Point(683, 78);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 15);
+            this.label9.Size = new System.Drawing.Size(21, 18);
             this.label9.TabIndex = 0;
             this.label9.Text = "m";
             // 
             // UCStreamTank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCStreamTank";
-            this.Size = new System.Drawing.Size(964, 506);
+            this.Size = new System.Drawing.Size(1285, 623);
             this.Load += new System.EventHandler(this.UCStreamTank_Load);
             this.groupBox1.ResumeLayout(false);
             this.pnlStress.ResumeLayout(false);

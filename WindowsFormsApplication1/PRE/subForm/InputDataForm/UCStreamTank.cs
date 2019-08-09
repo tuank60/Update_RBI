@@ -323,5 +323,6 @@ namespace RBI.PRE.subForm.InputDataForm
             pnlStress.Height = 21;
         }
         #endregion
+
     }
 }

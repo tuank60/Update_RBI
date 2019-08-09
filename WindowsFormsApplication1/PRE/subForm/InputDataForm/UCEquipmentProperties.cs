@@ -65,15 +65,11 @@ namespace RBI.PRE.subForm.InputDataForm
                 if (e.ID == ID)
                 {
                     chkAministrativeControl.Checked = e.AdminUpsetManagement == 1 ? true : false;
-                    chkHighlyEffectiveInspection.Checked = e.HighlyDeadlegInsp == 1 ? true : false;
                     chkDowntimeProtection.Checked = e.DowntimeProtectionUsed == 1 ? true : false;
                     chkHeatTraced.Checked = e.HeatTraced == 1 ? true : false;
                     chkInterfaceSoilWater.Checked = e.InterfaceSoilWater == 1 ? true : false;
-                    chkEquipmentOperatingManyYear.Checked = e.YearLowestExpTemp == 1 ? true : false;
                     chkMaterialExposedFluid.Checked = e.MaterialExposedToClExt == 1 ? true : false;
                     chkPresenceSulphideOperation.Checked = e.PresenceSulphidesO2 == 1 ? true : false;
-                    chkContainsDeadlegs.Checked = e.ContainsDeadlegs == 1 ? true : false;
-                    chkCylicOperation.Checked = e.CyclicOperation == 1 ? true : false;
                     chkSteamedOutPriorWaterFlushing.Checked = e.SteamOutWaterFlush == 1 ? true : false;
                     chkPWHT.Checked = e.PWHT == 1 ? true : false;
                     chkLinerOnlineMonitoring.Checked = e.LinerOnlineMonitoring == 1 ? true : false;
@@ -116,9 +112,6 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_ASSESSMENT_BUS assBus = new RW_ASSESSMENT_BUS();
             eq.ID = ID;
             eq.AdminUpsetManagement = chkAministrativeControl.Checked ? 1 : 0;
-            eq.ContainsDeadlegs = chkContainsDeadlegs.Checked ? 1 : 0;
-            eq.CyclicOperation = chkCylicOperation.Checked ? 1 : 0;
-            eq.HighlyDeadlegInsp = chkHighlyEffectiveInspection.Checked ? 1 : 0;
             eq.DowntimeProtectionUsed = chkDowntimeProtection.Checked ? 1 : 0;
             eq.ExternalEnvironment = cbExternalEnvironment.Text;
             eq.HeatTraced = chkHeatTraced.Checked ? 1 : 0;
@@ -134,7 +127,6 @@ namespace RBI.PRE.subForm.InputDataForm
             eq.SteamOutWaterFlush = chkSteamedOutPriorWaterFlushing.Checked ? 1 : 0;
             eq.ManagementFactor = (float)numSystemManagementFactor.Value;
             eq.ThermalHistory = cbThermalHistory.Text;
-            eq.YearLowestExpTemp = chkEquipmentOperatingManyYear.Checked ? 1 : 0;
             eq.Volume = txtEquipmentVolume.Text != "" ? float.Parse(txtEquipmentVolume.Text) : 0;
             //eq.CommissionDate = 
             return eq;
@@ -148,9 +140,6 @@ namespace RBI.PRE.subForm.InputDataForm
             BUS_UNITS convUnit = new BUS_UNITS();
             eq.ID = ID;
             eq.AdminUpsetManagement = chkAministrativeControl.Checked ? 1 : 0;
-            eq.ContainsDeadlegs = chkContainsDeadlegs.Checked ? 1 : 0;
-            eq.CyclicOperation = chkCylicOperation.Checked ? 1 : 0;
-            eq.HighlyDeadlegInsp = chkHighlyEffectiveInspection.Checked ? 1 : 0;
             eq.DowntimeProtectionUsed = chkDowntimeProtection.Checked ? 1 : 0;
             eq.ExternalEnvironment = cbExternalEnvironment.Text;
             eq.HeatTraced = chkHeatTraced.Checked ? 1 : 0;
@@ -172,7 +161,6 @@ namespace RBI.PRE.subForm.InputDataForm
             float FMS = busFacility.getFMS(busEquipmentMaster.getFacilityID(equipmentID));
             eq.ManagementFactor = FMS;
             eq.ThermalHistory = cbThermalHistory.Text;
-            eq.YearLowestExpTemp = chkEquipmentOperatingManyYear.Checked ? 1 : 0;
             double equipVolume = 0;
             if (volUnit == "m3")
             {
@@ -356,8 +344,8 @@ namespace RBI.PRE.subForm.InputDataForm
 
                 pnlThinningDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
                 pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
-                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
 
                 
             }
@@ -368,8 +356,8 @@ namespace RBI.PRE.subForm.InputDataForm
 
                 pnlThinningDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
                 pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
-                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
         }
 
@@ -381,8 +369,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 lblThinningDF.Text = "▶ Governing Thinning Damage Factor Properties";
 
                 pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
-                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
 
             }
             else if (lblThinningDF.Text == "▶ Governing Thinning Damage Factor Properties")
@@ -391,8 +379,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 lblThinningDF.Text = "▼ Governing Thinning Damage Factor Properties";
 
                 pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
-                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
         }
 
@@ -403,8 +391,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 pnlExternalDF.Height = 106;
                 lblExternalDF.Text = "▶ Governing External Damage Factor Properties";
 
-                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
 
             }
             else if (lblExternalDF.Text == "▶ Governing External Damage Factor Properties")
@@ -412,26 +400,26 @@ namespace RBI.PRE.subForm.InputDataForm
                 pnlExternalDF.Height = 21;
                 lblExternalDF.Text = "▼ Governing External Damage Factor Properties";
 
-                pnlStressCorrosionCreacking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
         }
 
         private void lblStressCorrosionCreackingDF_Click(object sender, EventArgs e)
         {
-            if (lblStressCorrosionCreackingDF.Text == "▼ Governing Stress Corrosion Creacking Damage Factor Properties")
+            if (lblStressCorrosionCrackingDF.Text == "▼ Governing Stress Corrosion Creacking Damage Factor Properties")
             {
-                pnlStressCorrosionCreacking.Height = 162;
-                lblStressCorrosionCreackingDF.Text = "▶ Governing Stress Corrosion Creacking Damage Factor Properties";
+                pnlStressCorrosionCracking.Height = 162;
+                lblStressCorrosionCrackingDF.Text = "▶ Governing Stress Corrosion Creacking Damage Factor Properties";
 
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
-            else if (lblStressCorrosionCreackingDF.Text== "▶ Governing Stress Corrosion Creacking Damage Factor Properties")
+            else if (lblStressCorrosionCrackingDF.Text== "▶ Governing Stress Corrosion Creacking Damage Factor Properties")
             {
-                pnlStressCorrosionCreacking.Height = 21;
-                lblStressCorrosionCreackingDF.Text = "▼ Governing Stress Corrosion Creacking Damage Factor Properties";
+                pnlStressCorrosionCracking.Height = 21;
+                lblStressCorrosionCrackingDF.Text = "▼ Governing Stress Corrosion Creacking Damage Factor Properties";
 
-                pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+                pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
         }
 
@@ -452,13 +440,16 @@ namespace RBI.PRE.subForm.InputDataForm
         private void UCEquipmentProperties_Load(object sender, EventArgs e)
         {
             pnlGenericProperties.Height = 21;
-            pnlThinningDF.Top = pnlGenericProperties.Top + pnlThinningDF.Height + 13;
+            pnlThinningDF.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
 
             pnlThinningDF.Height = 21;
             pnlExternalDF.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;
 
-            pnlStressCorrosionCreacking.Height = 21;
-            pnlBrittleFactureDF.Top = pnlStressCorrosionCreacking.Top + pnlStressCorrosionCreacking.Height + 13;
+            pnlExternalDF.Height = 21;
+            pnlStressCorrosionCracking.Top = pnlExternalDF.Top + pnlExternalDF.Height + 13;
+
+            pnlStressCorrosionCracking.Height = 21;
+            pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
 
             pnlBrittleFactureDF.Height = 21;
         }

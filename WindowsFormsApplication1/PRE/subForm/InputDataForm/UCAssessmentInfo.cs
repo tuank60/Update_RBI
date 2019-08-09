@@ -279,7 +279,7 @@ namespace RBI.PRE.subForm.InputDataForm
         private void UCAssessmentInfo_Load(object sender, EventArgs e)
         {
             pnlAssessment.Height = 21;
-            pnlEquipment.Top = pnlAssessment.Top + pnlAssessment.Height+13;
+            pnlEquipment.Top = pnlAssessment.Top + pnlAssessment.Height + 13;
 
             pnlEquipment.Height = 21;
             pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;

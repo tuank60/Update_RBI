@@ -44,7 +44,6 @@ namespace RBI.PRE.subForm.InputDataForm
             }
             chkAqueousPhaseDuringOperation.Checked = Convert.ToBoolean(obj.AqueousOperation);
             chkAqueousPhaseShutdown.Checked = Convert.ToBoolean(obj.AqueousShutdown);
-            chkToxicConstituents.Checked = Convert.ToBoolean(obj.ToxicConstituent);
             chkEnvironmentContainsCaustic.Checked = Convert.ToBoolean(obj.Caustic);
             txtChlorideIon.Text = obj.Chloride.ToString();
             txtCO3ConcentrationWater.Text = obj.CO3Concentration.ToString();
@@ -65,7 +64,6 @@ namespace RBI.PRE.subForm.InputDataForm
             chkPresenceHydrofluoricAcid.Checked = Convert.ToBoolean(obj.Hydrofluoric);
             chkChlorine.Checked = Convert.ToBoolean(obj.MaterialExposedToClInt);
             txtNaOHConcentration.Text = obj.NaOHConcentration.ToString();
-            txtReleaseFluidPercent.Text = obj.ReleaseFluidPercentToxic.ToString();
             txtpHWater.Text = obj.WaterpH.ToString();
         }
         public RW_STREAM getData(int ID)
@@ -76,7 +74,6 @@ namespace RBI.PRE.subForm.InputDataForm
             stream.AmineSolution = cbAmineSolutionComposition.Text;
             stream.AqueousOperation = chkAqueousPhaseDuringOperation.Checked ? 1 : 0;
             stream.AqueousShutdown = chkAqueousPhaseShutdown.Checked ? 1 : 0;
-            stream.ToxicConstituent = chkToxicConstituents.Checked ? 1 : 0;
             stream.Caustic = chkEnvironmentContainsCaustic.Checked ? 1 : 0;
             stream.Chloride = txtChlorideIon.Text != "" ? float.Parse(txtChlorideIon.Text) : 0;
             stream.CO3Concentration = txtCO3ConcentrationWater.Text != "" ? float.Parse(txtCO3ConcentrationWater.Text) : 0;
@@ -100,7 +97,6 @@ namespace RBI.PRE.subForm.InputDataForm
             //stream.ModelFluidID
             stream.NaOHConcentration = txtNaOHConcentration.Text != "" ? float.Parse(txtNaOHConcentration.Text) : 0;
             //stream.NonFlameToxicFluidID
-            stream.ReleaseFluidPercentToxic = txtReleaseFluidPercent.Text != "" ? float.Parse(txtReleaseFluidPercent.Text) : 0;
             //stream.StoragePhase
             //stream.ToxicFluidID
             stream.WaterpH = txtpHWater.Text != "" ? float.Parse(txtpHWater.Text) : 0;
@@ -159,11 +155,6 @@ namespace RBI.PRE.subForm.InputDataForm
             keyPressEvent(txtH2SContentInWater, e);
         }
 
-        private void txtReleaseFluidPercent_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-            keyPressEvent(txtReleaseFluidPercent, e);
-        }
 
         private void txtCO3ConcentrationWater_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -194,22 +185,6 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
 
-        private void txtReleaseFluidPercent_TextChanged(object sender, EventArgs e)
-        {
-            DataChange++;
-            try
-            {
-                if (float.Parse(txtReleaseFluidPercent.Text) > 100)
-                {
-                    MessageBox.Show("Invalid value", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtReleaseFluidPercent.Text = "100";
-                }
-            }
-            catch
-            {
-                txtReleaseFluidPercent.Text = "0";
-            }
-        }
 
         private void txtpHWater_TextChanged(object sender, EventArgs e)
         {
