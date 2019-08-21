@@ -184,7 +184,7 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             List<RW_EQUIPMENT> list = new List<RW_EQUIPMENT>();
             RW_EQUIPMENT obj = null;
-            String sql = "Use[rbi] Select[ID]" +
+            String sql = "Use[rbi] Select [ID]" +
                          ",[CommissionDate]" +
                         ",[AdminUpsetManagement]" +
                         ",[ContainsDeadlegs]" +

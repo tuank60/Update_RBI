@@ -51,7 +51,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label40 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
+            this.lblBrittleFractureThickness = new System.Windows.Forms.Label();
             this.txtBrittleFractureThickness = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -68,6 +68,8 @@
             this.label32 = new System.Windows.Forms.Label();
             this.chkFabricatedSteel = new System.Windows.Forms.CheckBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtShellHeight = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -76,10 +78,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.lblComponentVolume = new System.Windows.Forms.Label();
             this.txtComponentVolume = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.lblStructuralThickness = new System.Windows.Forms.Label();
             this.txtStructuralThickness = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.chkMinimumStructuralThicknessGoverns = new System.Windows.Forms.CheckBox();
@@ -88,13 +90,13 @@
             this.label24 = new System.Windows.Forms.Label();
             this.txtCurrentCorrosionRate = new System.Windows.Forms.TextBox();
             this.txtMinRequiredThickness = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblAllowableStress = new System.Windows.Forms.Label();
             this.txtAllowableStress = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.txtWeldJointEfficiency = new System.Windows.Forms.TextBox();
             this.txtNominalThickness = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblMiniumMeasuredThickness = new System.Windows.Forms.Label();
             this.txtTankDiameter = new System.Windows.Forms.TextBox();
             this.txtCurrentThickness = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -105,8 +107,6 @@
             this.lblDiameter = new System.Windows.Forms.Label();
             this.lblNominalThickness = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtShellHeight = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgColMaxBrinnHardness)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgColSeverity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgColComplexity)).BeginInit();
@@ -225,7 +225,7 @@
             // 
             this.chkConcreteAsphalt.AutoSize = true;
             this.chkConcreteAsphalt.Location = new System.Drawing.Point(284, 111);
-            this.chkConcreteAsphalt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkConcreteAsphalt.Margin = new System.Windows.Forms.Padding(4);
             this.chkConcreteAsphalt.Name = "chkConcreteAsphalt";
             this.chkConcreteAsphalt.Size = new System.Drawing.Size(18, 17);
             this.chkConcreteAsphalt.TabIndex = 8;
@@ -237,7 +237,7 @@
             // 
             this.chkPresenceCracks.AutoSize = true;
             this.chkPresenceCracks.Location = new System.Drawing.Point(293, 230);
-            this.chkPresenceCracks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPresenceCracks.Margin = new System.Windows.Forms.Padding(4);
             this.chkPresenceCracks.Name = "chkPresenceCracks";
             this.chkPresenceCracks.Size = new System.Drawing.Size(18, 17);
             this.chkPresenceCracks.TabIndex = 9;
@@ -249,7 +249,7 @@
             // 
             this.chkPreventionBarrier.AutoSize = true;
             this.chkPreventionBarrier.Location = new System.Drawing.Point(285, 41);
-            this.chkPreventionBarrier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPreventionBarrier.Margin = new System.Windows.Forms.Padding(4);
             this.chkPreventionBarrier.Name = "chkPreventionBarrier";
             this.chkPreventionBarrier.Size = new System.Drawing.Size(18, 17);
             this.chkPreventionBarrier.TabIndex = 11;
@@ -260,7 +260,7 @@
             // cbComplexityProtrusion
             // 
             this.cbComplexityProtrusion.Location = new System.Drawing.Point(292, 30);
-            this.cbComplexityProtrusion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbComplexityProtrusion.Margin = new System.Windows.Forms.Padding(4);
             this.cbComplexityProtrusion.Name = "cbComplexityProtrusion";
             this.cbComplexityProtrusion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -278,7 +278,7 @@
             // cbSeverityVibration
             // 
             this.cbSeverityVibration.Location = new System.Drawing.Point(292, 39);
-            this.cbSeverityVibration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSeverityVibration.Margin = new System.Windows.Forms.Padding(4);
             this.cbSeverityVibration.Name = "cbSeverityVibration";
             this.cbSeverityVibration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -296,7 +296,7 @@
             // cbMaxBrillnessHardness
             // 
             this.cbMaxBrillnessHardness.Location = new System.Drawing.Point(292, 23);
-            this.cbMaxBrillnessHardness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbMaxBrillnessHardness.Margin = new System.Windows.Forms.Padding(4);
             this.cbMaxBrillnessHardness.Name = "cbMaxBrillnessHardness";
             this.cbMaxBrillnessHardness.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -334,9 +334,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1287, 1277);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -349,7 +349,7 @@
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.cbSeverityVibration);
             this.panel5.Location = new System.Drawing.Point(4, 938);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1256, 75);
             this.panel5.TabIndex = 29;
@@ -369,7 +369,7 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label35);
+            this.panel4.Controls.Add(this.lblBrittleFractureThickness);
             this.panel4.Controls.Add(this.txtBrittleFractureThickness);
             this.panel4.Controls.Add(this.label38);
             this.panel4.Controls.Add(this.label13);
@@ -386,27 +386,27 @@
             this.panel4.Controls.Add(this.label32);
             this.panel4.Controls.Add(this.chkFabricatedSteel);
             this.panel4.Location = new System.Drawing.Point(4, 519);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1256, 398);
             this.panel4.TabIndex = 24;
             // 
-            // label35
+            // lblBrittleFractureThickness
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(772, 356);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(34, 18);
-            this.label35.TabIndex = 27;
-            this.label35.Text = "mm";
+            this.lblBrittleFractureThickness.AutoSize = true;
+            this.lblBrittleFractureThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrittleFractureThickness.Location = new System.Drawing.Point(772, 356);
+            this.lblBrittleFractureThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrittleFractureThickness.Name = "lblBrittleFractureThickness";
+            this.lblBrittleFractureThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblBrittleFractureThickness.TabIndex = 27;
+            this.lblBrittleFractureThickness.Text = "mm";
             // 
             // txtBrittleFractureThickness
             // 
             this.txtBrittleFractureThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBrittleFractureThickness.Location = new System.Drawing.Point(597, 352);
-            this.txtBrittleFractureThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBrittleFractureThickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtBrittleFractureThickness.Name = "txtBrittleFractureThickness";
             this.txtBrittleFractureThickness.Size = new System.Drawing.Size(165, 24);
             this.txtBrittleFractureThickness.TabIndex = 28;
@@ -447,7 +447,7 @@
             // 
             this.chkEquipmentCircuitShock.AutoSize = true;
             this.chkEquipmentCircuitShock.Location = new System.Drawing.Point(597, 332);
-            this.chkEquipmentCircuitShock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkEquipmentCircuitShock.Margin = new System.Windows.Forms.Padding(4);
             this.chkEquipmentCircuitShock.Name = "chkEquipmentCircuitShock";
             this.chkEquipmentCircuitShock.Size = new System.Drawing.Size(18, 17);
             this.chkEquipmentCircuitShock.TabIndex = 23;
@@ -468,7 +468,7 @@
             // 
             this.chkCyclicServiceFatigueVibration.AutoSize = true;
             this.chkCyclicServiceFatigueVibration.Location = new System.Drawing.Point(597, 278);
-            this.chkCyclicServiceFatigueVibration.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkCyclicServiceFatigueVibration.Margin = new System.Windows.Forms.Padding(4);
             this.chkCyclicServiceFatigueVibration.Name = "chkCyclicServiceFatigueVibration";
             this.chkCyclicServiceFatigueVibration.Size = new System.Drawing.Size(18, 17);
             this.chkCyclicServiceFatigueVibration.TabIndex = 21;
@@ -489,7 +489,7 @@
             // 
             this.chkCETGreaterOrEqual.AutoSize = true;
             this.chkCETGreaterOrEqual.Location = new System.Drawing.Point(597, 230);
-            this.chkCETGreaterOrEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkCETGreaterOrEqual.Margin = new System.Windows.Forms.Padding(4);
             this.chkCETGreaterOrEqual.Name = "chkCETGreaterOrEqual";
             this.chkCETGreaterOrEqual.Size = new System.Drawing.Size(18, 17);
             this.chkCETGreaterOrEqual.TabIndex = 19;
@@ -509,7 +509,7 @@
             // 
             this.chkNominalOperatingConditions.AutoSize = true;
             this.chkNominalOperatingConditions.Location = new System.Drawing.Point(599, 139);
-            this.chkNominalOperatingConditions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkNominalOperatingConditions.Margin = new System.Windows.Forms.Padding(4);
             this.chkNominalOperatingConditions.Name = "chkNominalOperatingConditions";
             this.chkNominalOperatingConditions.Size = new System.Drawing.Size(18, 17);
             this.chkNominalOperatingConditions.TabIndex = 17;
@@ -530,7 +530,7 @@
             // 
             this.chkEquipmentSatisfied.AutoSize = true;
             this.chkEquipmentSatisfied.Location = new System.Drawing.Point(597, 91);
-            this.chkEquipmentSatisfied.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkEquipmentSatisfied.Margin = new System.Windows.Forms.Padding(4);
             this.chkEquipmentSatisfied.Name = "chkEquipmentSatisfied";
             this.chkEquipmentSatisfied.Size = new System.Drawing.Size(18, 17);
             this.chkEquipmentSatisfied.TabIndex = 15;
@@ -551,7 +551,7 @@
             // 
             this.chkFabricatedSteel.AutoSize = true;
             this.chkFabricatedSteel.Location = new System.Drawing.Point(597, 43);
-            this.chkFabricatedSteel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkFabricatedSteel.Margin = new System.Windows.Forms.Padding(4);
             this.chkFabricatedSteel.Name = "chkFabricatedSteel";
             this.chkFabricatedSteel.Size = new System.Drawing.Size(18, 17);
             this.chkFabricatedSteel.TabIndex = 13;
@@ -569,10 +569,30 @@
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.chkConcreteAsphalt);
             this.panel6.Location = new System.Drawing.Point(4, 1038);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1256, 138);
             this.panel6.TabIndex = 27;
+            // 
+            // txtShellHeight
+            // 
+            this.txtShellHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShellHeight.Location = new System.Drawing.Point(284, 68);
+            this.txtShellHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtShellHeight.Name = "txtShellHeight";
+            this.txtShellHeight.Size = new System.Drawing.Size(165, 24);
+            this.txtShellHeight.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(459, 71);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(21, 18);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "m";
             // 
             // label39
             // 
@@ -604,7 +624,7 @@
             this.panel3.Controls.Add(this.cbMaxBrillnessHardness);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(4, 420);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1256, 57);
             this.panel3.TabIndex = 22;
@@ -628,7 +648,7 @@
             this.panel2.Controls.Add(this.cbComplexityProtrusion);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Location = new System.Drawing.Point(4, 325);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1256, 62);
             this.panel2.TabIndex = 20;
@@ -649,11 +669,11 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label30);
-            this.panel1.Controls.Add(this.label31);
+            this.panel1.Controls.Add(this.lblComponentVolume);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtComponentVolume);
             this.panel1.Controls.Add(this.label28);
-            this.panel1.Controls.Add(this.label29);
+            this.panel1.Controls.Add(this.lblStructuralThickness);
             this.panel1.Controls.Add(this.txtStructuralThickness);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.chkMinimumStructuralThicknessGoverns);
@@ -663,14 +683,14 @@
             this.panel1.Controls.Add(this.txtCurrentCorrosionRate);
             this.panel1.Controls.Add(this.txtMinRequiredThickness);
             this.panel1.Controls.Add(this.chkPresenceCracks);
-            this.panel1.Controls.Add(this.label25);
+            this.panel1.Controls.Add(this.lblAllowableStress);
             this.panel1.Controls.Add(this.txtAllowableStress);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.txtWeldJointEfficiency);
             this.panel1.Controls.Add(this.txtNominalThickness);
             this.panel1.Controls.Add(this.label21);
-            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.lblMiniumMeasuredThickness);
             this.panel1.Controls.Add(this.txtTankDiameter);
             this.panel1.Controls.Add(this.txtCurrentThickness);
             this.panel1.Controls.Add(this.label3);
@@ -682,7 +702,7 @@
             this.panel1.Controls.Add(this.lblNominalThickness);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Location = new System.Drawing.Point(4, 26);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1256, 267);
             this.panel1.TabIndex = 18;
@@ -698,22 +718,22 @@
             this.label30.TabIndex = 26;
             this.label30.Text = "Component Volume";
             // 
-            // label31
+            // lblComponentVolume
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(1155, 222);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(29, 18);
-            this.label31.TabIndex = 27;
-            this.label31.Text = "m3";
+            this.lblComponentVolume.AutoSize = true;
+            this.lblComponentVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComponentVolume.Location = new System.Drawing.Point(1155, 222);
+            this.lblComponentVolume.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComponentVolume.Name = "lblComponentVolume";
+            this.lblComponentVolume.Size = new System.Drawing.Size(29, 18);
+            this.lblComponentVolume.TabIndex = 27;
+            this.lblComponentVolume.Text = "m3";
             // 
             // txtComponentVolume
             // 
             this.txtComponentVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComponentVolume.Location = new System.Drawing.Point(980, 218);
-            this.txtComponentVolume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtComponentVolume.Margin = new System.Windows.Forms.Padding(4);
             this.txtComponentVolume.Name = "txtComponentVolume";
             this.txtComponentVolume.Size = new System.Drawing.Size(165, 24);
             this.txtComponentVolume.TabIndex = 28;
@@ -729,22 +749,22 @@
             this.label28.TabIndex = 23;
             this.label28.Text = "Structural Thickness";
             // 
-            // label29
+            // lblStructuralThickness
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(1155, 183);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(34, 18);
-            this.label29.TabIndex = 24;
-            this.label29.Text = "mm";
+            this.lblStructuralThickness.AutoSize = true;
+            this.lblStructuralThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStructuralThickness.Location = new System.Drawing.Point(1155, 183);
+            this.lblStructuralThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStructuralThickness.Name = "lblStructuralThickness";
+            this.lblStructuralThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblStructuralThickness.TabIndex = 24;
+            this.lblStructuralThickness.Text = "mm";
             // 
             // txtStructuralThickness
             // 
             this.txtStructuralThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStructuralThickness.Location = new System.Drawing.Point(980, 180);
-            this.txtStructuralThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStructuralThickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtStructuralThickness.Name = "txtStructuralThickness";
             this.txtStructuralThickness.Size = new System.Drawing.Size(165, 24);
             this.txtStructuralThickness.TabIndex = 25;
@@ -764,7 +784,7 @@
             // 
             this.chkMinimumStructuralThicknessGoverns.AutoSize = true;
             this.chkMinimumStructuralThicknessGoverns.Location = new System.Drawing.Point(980, 145);
-            this.chkMinimumStructuralThicknessGoverns.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkMinimumStructuralThicknessGoverns.Margin = new System.Windows.Forms.Padding(4);
             this.chkMinimumStructuralThicknessGoverns.Name = "chkMinimumStructuralThicknessGoverns";
             this.chkMinimumStructuralThicknessGoverns.Size = new System.Drawing.Size(18, 17);
             this.chkMinimumStructuralThicknessGoverns.TabIndex = 22;
@@ -784,7 +804,7 @@
             // cbConfidenceCorrosionRate
             // 
             this.cbConfidenceCorrosionRate.Location = new System.Drawing.Point(980, 106);
-            this.cbConfidenceCorrosionRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbConfidenceCorrosionRate.Margin = new System.Windows.Forms.Padding(4);
             this.cbConfidenceCorrosionRate.Name = "cbConfidenceCorrosionRate";
             this.cbConfidenceCorrosionRate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -812,7 +832,7 @@
             // 
             this.txtCurrentCorrosionRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCurrentCorrosionRate.Location = new System.Drawing.Point(292, 145);
-            this.txtCurrentCorrosionRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCurrentCorrosionRate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCurrentCorrosionRate.Name = "txtCurrentCorrosionRate";
             this.txtCurrentCorrosionRate.Size = new System.Drawing.Size(165, 24);
             this.txtCurrentCorrosionRate.TabIndex = 3;
@@ -824,7 +844,7 @@
             // 
             this.txtMinRequiredThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMinRequiredThickness.Location = new System.Drawing.Point(292, 188);
-            this.txtMinRequiredThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMinRequiredThickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtMinRequiredThickness.Name = "txtMinRequiredThickness";
             this.txtMinRequiredThickness.Size = new System.Drawing.Size(165, 24);
             this.txtMinRequiredThickness.TabIndex = 6;
@@ -832,22 +852,22 @@
             this.txtMinRequiredThickness.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
             this.txtMinRequiredThickness.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMinRequiredThickness_KeyPress);
             // 
-            // label25
+            // lblAllowableStress
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(1151, 70);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(39, 18);
-            this.label25.TabIndex = 17;
-            this.label25.Text = "MPa";
+            this.lblAllowableStress.AutoSize = true;
+            this.lblAllowableStress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAllowableStress.Location = new System.Drawing.Point(1151, 70);
+            this.lblAllowableStress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAllowableStress.Name = "lblAllowableStress";
+            this.lblAllowableStress.Size = new System.Drawing.Size(39, 18);
+            this.lblAllowableStress.TabIndex = 17;
+            this.lblAllowableStress.Text = "MPa";
             // 
             // txtAllowableStress
             // 
             this.txtAllowableStress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAllowableStress.Location = new System.Drawing.Point(980, 66);
-            this.txtAllowableStress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAllowableStress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAllowableStress.Name = "txtAllowableStress";
             this.txtAllowableStress.Size = new System.Drawing.Size(165, 24);
             this.txtAllowableStress.TabIndex = 18;
@@ -867,7 +887,7 @@
             // 
             this.txtWeldJointEfficiency.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWeldJointEfficiency.Location = new System.Drawing.Point(980, 33);
-            this.txtWeldJointEfficiency.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtWeldJointEfficiency.Margin = new System.Windows.Forms.Padding(4);
             this.txtWeldJointEfficiency.Name = "txtWeldJointEfficiency";
             this.txtWeldJointEfficiency.Size = new System.Drawing.Size(165, 24);
             this.txtWeldJointEfficiency.TabIndex = 15;
@@ -876,7 +896,7 @@
             // 
             this.txtNominalThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNominalThickness.Location = new System.Drawing.Point(292, 75);
-            this.txtNominalThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNominalThickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtNominalThickness.Name = "txtNominalThickness";
             this.txtNominalThickness.Size = new System.Drawing.Size(165, 24);
             this.txtNominalThickness.TabIndex = 5;
@@ -895,22 +915,22 @@
             this.label21.TabIndex = 10;
             this.label21.Text = "Minimum Measured Thickness";
             // 
-            // label22
+            // lblMiniumMeasuredThickness
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(467, 116);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 18);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "mm";
+            this.lblMiniumMeasuredThickness.AutoSize = true;
+            this.lblMiniumMeasuredThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMiniumMeasuredThickness.Location = new System.Drawing.Point(467, 116);
+            this.lblMiniumMeasuredThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMiniumMeasuredThickness.Name = "lblMiniumMeasuredThickness";
+            this.lblMiniumMeasuredThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblMiniumMeasuredThickness.TabIndex = 11;
+            this.lblMiniumMeasuredThickness.Text = "mm";
             // 
             // txtTankDiameter
             // 
             this.txtTankDiameter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTankDiameter.Location = new System.Drawing.Point(293, 41);
-            this.txtTankDiameter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTankDiameter.Margin = new System.Windows.Forms.Padding(4);
             this.txtTankDiameter.Name = "txtTankDiameter";
             this.txtTankDiameter.Size = new System.Drawing.Size(165, 24);
             this.txtTankDiameter.TabIndex = 1;
@@ -922,7 +942,7 @@
             // 
             this.txtCurrentThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCurrentThickness.Location = new System.Drawing.Point(292, 112);
-            this.txtCurrentThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCurrentThickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtCurrentThickness.Name = "txtCurrentThickness";
             this.txtCurrentThickness.Size = new System.Drawing.Size(165, 24);
             this.txtCurrentThickness.TabIndex = 12;
@@ -1015,32 +1035,12 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Nominal Thickness";
             // 
-            // txtShellHeight
-            // 
-            this.txtShellHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShellHeight.Location = new System.Drawing.Point(284, 68);
-            this.txtShellHeight.Margin = new System.Windows.Forms.Padding(4);
-            this.txtShellHeight.Name = "txtShellHeight";
-            this.txtShellHeight.Size = new System.Drawing.Size(165, 24);
-            this.txtShellHeight.TabIndex = 28;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(459, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 18);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "m";
-            // 
             // UCComponentPropertiesTank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCComponentPropertiesTank";
             this.Size = new System.Drawing.Size(1287, 1277);
             ((System.ComponentModel.ISupportInitialize)(this.imgColMaxBrinnHardness)).EndInit();
@@ -1112,10 +1112,10 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label lblComponentVolume;
         private System.Windows.Forms.TextBox txtComponentVolume;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label lblStructuralThickness;
         private System.Windows.Forms.TextBox txtStructuralThickness;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.CheckBox chkMinimumStructuralThicknessGoverns;
@@ -1124,13 +1124,13 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtCurrentCorrosionRate;
         private System.Windows.Forms.TextBox txtMinRequiredThickness;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblAllowableStress;
         private System.Windows.Forms.TextBox txtAllowableStress;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtWeldJointEfficiency;
         private System.Windows.Forms.TextBox txtNominalThickness;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblMiniumMeasuredThickness;
         private System.Windows.Forms.TextBox txtTankDiameter;
         private System.Windows.Forms.TextBox txtCurrentThickness;
         private System.Windows.Forms.Label label3;
@@ -1143,7 +1143,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label lblBrittleFractureThickness;
         private System.Windows.Forms.TextBox txtBrittleFractureThickness;
         private System.Windows.Forms.TextBox txtShellHeight;
         private System.Windows.Forms.Label label2;

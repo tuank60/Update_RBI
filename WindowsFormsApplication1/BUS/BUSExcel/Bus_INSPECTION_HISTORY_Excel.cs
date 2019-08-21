@@ -12,15 +12,15 @@ namespace RBI.BUS.BUSExcel
 {
     class Bus_INSPECTION_HISTORY_Excel
     {
-        RW_INSPECTION_HISTORY obj;
+        RW_INSPECTION_DETAIL obj;
         ExcelConnect exConn = new ExcelConnect();
         public OleDbConnection getConnect(String path)
         {
             return exConn.connectionExcel(path);
         }
-        public List<RW_INSPECTION_HISTORY> getListInsp(String path)
+        public List<RW_INSPECTION_DETAIL> getListInsp(String path)
         {
-            List<RW_INSPECTION_HISTORY> list = new List<RW_INSPECTION_HISTORY>();
+            List<RW_INSPECTION_DETAIL> list = new List<RW_INSPECTION_DETAIL>();
             OleDbConnection conn = getConnect(path);
             try
             {
@@ -34,14 +34,14 @@ namespace RBI.BUS.BUSExcel
                     {
                         if (!(reader.IsDBNull(2) || reader.IsDBNull(3) || reader.IsDBNull(4) || reader.IsDBNull(6)))
                         {
-                            obj = new RW_INSPECTION_HISTORY();
+                            obj = new RW_INSPECTION_DETAIL();
                             //obj.ID = 1;
-                            obj.InspectionPlanName = reader[0].ToString();
-                            obj.InspectionCoverageName = reader[1].ToString();
-                            obj.EquipmentNumber = reader[2].ToString();
-                            obj.ComponentNumber = reader[3].ToString();
-                            obj.DM = reader[4].ToString();
-                            obj.InspectionType = reader[5].ToString();
+                            obj.InspPlanName = reader[0].ToString();
+                            //obj.Ins = reader[1].ToString();
+                            //obj.EquipmentID = reader[2].ToInt32();
+                            //obj.ComponentID = reader[3].ToInt32();
+                            //obj.DMItemID = reader[4]();
+                            //obj.InspectionDate = reader[5].ToString();
                             try
                             {
                                 obj.InspectionDate = Convert.ToDateTime(reader[6].ToString());
@@ -52,11 +52,11 @@ namespace RBI.BUS.BUSExcel
                             }
                             try
                             {
-                                obj.InspectionEffective = reader[7].ToString();
+                                //obj.InspectionEffective = reader[7].ToString();
                             }
                             catch
                             {
-                                obj.InspectionEffective = "E";
+                                //obj.InspectionEffective = "E";
                             }
                             list.Add(obj);
                         }

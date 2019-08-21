@@ -42,7 +42,6 @@
             this.rbtnStressKSI = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
-            this.rbtnThicknessM = new System.Windows.Forms.RadioButton();
             this.rbtnThicknessMM = new System.Windows.Forms.RadioButton();
             this.rbtnThicknessIn = new System.Windows.Forms.RadioButton();
             this.groupControl11 = new DevExpress.XtraEditors.GroupControl();
@@ -66,7 +65,6 @@
             this.rbtnPressureBAR = new System.Windows.Forms.RadioButton();
             this.rbtnPressurePSI = new System.Windows.Forms.RadioButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.rbtnDiameterM = new System.Windows.Forms.RadioButton();
             this.rbtnDiameterMM = new System.Windows.Forms.RadioButton();
             this.rbtnDiameterInch = new System.Windows.Forms.RadioButton();
             this.rbtnPressureKSI = new System.Windows.Forms.RadioButton();
@@ -103,9 +101,10 @@
             // 
             this.rbtnDimensionMM.AutoSize = true;
             this.rbtnDimensionMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDimensionMM.Location = new System.Drawing.Point(75, 24);
+            this.rbtnDimensionMM.Location = new System.Drawing.Point(87, 30);
+            this.rbtnDimensionMM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnDimensionMM.Name = "rbtnDimensionMM";
-            this.rbtnDimensionMM.Size = new System.Drawing.Size(48, 20);
+            this.rbtnDimensionMM.Size = new System.Drawing.Size(58, 24);
             this.rbtnDimensionMM.TabIndex = 1;
             this.rbtnDimensionMM.TabStop = true;
             this.rbtnDimensionMM.Text = "mm";
@@ -115,9 +114,10 @@
             // 
             this.rbtnMil.AutoSize = true;
             this.rbtnMil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMil.Location = new System.Drawing.Point(19, 24);
+            this.rbtnMil.Location = new System.Drawing.Point(22, 30);
+            this.rbtnMil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnMil.Name = "rbtnMil";
-            this.rbtnMil.Size = new System.Drawing.Size(43, 20);
+            this.rbtnMil.Size = new System.Drawing.Size(52, 24);
             this.rbtnMil.TabIndex = 0;
             this.rbtnMil.TabStop = true;
             this.rbtnMil.Text = "mil";
@@ -127,9 +127,10 @@
             // 
             this.groupControl7.Controls.Add(this.rbtnCrMMperYr);
             this.groupControl7.Controls.Add(this.rbtnCrMilPerYr);
-            this.groupControl7.Location = new System.Drawing.Point(196, 423);
+            this.groupControl7.Location = new System.Drawing.Point(229, 521);
+            this.groupControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl7.Name = "groupControl7";
-            this.groupControl7.Size = new System.Drawing.Size(175, 60);
+            this.groupControl7.Size = new System.Drawing.Size(204, 74);
             this.groupControl7.TabIndex = 28;
             this.groupControl7.Text = "Corrosion Rate";
             // 
@@ -137,9 +138,10 @@
             // 
             this.rbtnCrMMperYr.AutoSize = true;
             this.rbtnCrMMperYr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCrMMperYr.Location = new System.Drawing.Point(101, 25);
+            this.rbtnCrMMperYr.Location = new System.Drawing.Point(118, 31);
+            this.rbtnCrMMperYr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnCrMMperYr.Name = "rbtnCrMMperYr";
-            this.rbtnCrMMperYr.Size = new System.Drawing.Size(63, 20);
+            this.rbtnCrMMperYr.Size = new System.Drawing.Size(77, 24);
             this.rbtnCrMMperYr.TabIndex = 1;
             this.rbtnCrMMperYr.TabStop = true;
             this.rbtnCrMMperYr.Text = "mm/yr";
@@ -149,9 +151,10 @@
             // 
             this.rbtnCrMilPerYr.AutoSize = true;
             this.rbtnCrMilPerYr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCrMilPerYr.Location = new System.Drawing.Point(19, 25);
+            this.rbtnCrMilPerYr.Location = new System.Drawing.Point(22, 31);
+            this.rbtnCrMilPerYr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnCrMilPerYr.Name = "rbtnCrMilPerYr";
-            this.rbtnCrMilPerYr.Size = new System.Drawing.Size(58, 20);
+            this.rbtnCrMilPerYr.Size = new System.Drawing.Size(71, 24);
             this.rbtnCrMilPerYr.TabIndex = 0;
             this.rbtnCrMilPerYr.TabStop = true;
             this.rbtnCrMilPerYr.Text = "mil/yr";
@@ -165,9 +168,10 @@
             this.groupControl9.Controls.Add(this.rbtnStressBAR);
             this.groupControl9.Controls.Add(this.rbtnStressPSI);
             this.groupControl9.Controls.Add(this.rbtnStressKSI);
-            this.groupControl9.Location = new System.Drawing.Point(12, 158);
+            this.groupControl9.Location = new System.Drawing.Point(14, 194);
+            this.groupControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl9.Name = "groupControl9";
-            this.groupControl9.Size = new System.Drawing.Size(359, 60);
+            this.groupControl9.Size = new System.Drawing.Size(419, 74);
             this.groupControl9.TabIndex = 17;
             this.groupControl9.Text = "Stress";
             // 
@@ -175,9 +179,10 @@
             // 
             this.rbtnStressNpcm2.AutoSize = true;
             this.rbtnStressNpcm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStressNpcm2.Location = new System.Drawing.Point(288, 24);
+            this.rbtnStressNpcm2.Location = new System.Drawing.Point(336, 30);
+            this.rbtnStressNpcm2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnStressNpcm2.Name = "rbtnStressNpcm2";
-            this.rbtnStressNpcm2.Size = new System.Drawing.Size(65, 20);
+            this.rbtnStressNpcm2.Size = new System.Drawing.Size(81, 24);
             this.rbtnStressNpcm2.TabIndex = 5;
             this.rbtnStressNpcm2.TabStop = true;
             this.rbtnStressNpcm2.Text = "N/cm² ";
@@ -187,9 +192,10 @@
             // 
             this.rbtnStressNpm2.AutoSize = true;
             this.rbtnStressNpm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStressNpm2.Location = new System.Drawing.Point(224, 24);
+            this.rbtnStressNpm2.Location = new System.Drawing.Point(261, 30);
+            this.rbtnStressNpm2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnStressNpm2.Name = "rbtnStressNpm2";
-            this.rbtnStressNpm2.Size = new System.Drawing.Size(58, 20);
+            this.rbtnStressNpm2.Size = new System.Drawing.Size(72, 24);
             this.rbtnStressNpm2.TabIndex = 4;
             this.rbtnStressNpm2.TabStop = true;
             this.rbtnStressNpm2.Text = "N/m² ";
@@ -199,9 +205,10 @@
             // 
             this.rbtnStressMPa.AutoSize = true;
             this.rbtnStressMPa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStressMPa.Location = new System.Drawing.Point(164, 24);
+            this.rbtnStressMPa.Location = new System.Drawing.Point(191, 30);
+            this.rbtnStressMPa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnStressMPa.Name = "rbtnStressMPa";
-            this.rbtnStressMPa.Size = new System.Drawing.Size(54, 20);
+            this.rbtnStressMPa.Size = new System.Drawing.Size(64, 24);
             this.rbtnStressMPa.TabIndex = 3;
             this.rbtnStressMPa.TabStop = true;
             this.rbtnStressMPa.Text = "MPa";
@@ -211,9 +218,10 @@
             // 
             this.rbtnStressBAR.AutoSize = true;
             this.rbtnStressBAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStressBAR.Location = new System.Drawing.Point(112, 24);
+            this.rbtnStressBAR.Location = new System.Drawing.Point(131, 30);
+            this.rbtnStressBAR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnStressBAR.Name = "rbtnStressBAR";
-            this.rbtnStressBAR.Size = new System.Drawing.Size(46, 20);
+            this.rbtnStressBAR.Size = new System.Drawing.Size(54, 24);
             this.rbtnStressBAR.TabIndex = 2;
             this.rbtnStressBAR.TabStop = true;
             this.rbtnStressBAR.Text = "bar";
@@ -223,9 +231,10 @@
             // 
             this.rbtnStressPSI.AutoSize = true;
             this.rbtnStressPSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStressPSI.Location = new System.Drawing.Point(62, 24);
+            this.rbtnStressPSI.Location = new System.Drawing.Point(72, 30);
+            this.rbtnStressPSI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnStressPSI.Name = "rbtnStressPSI";
-            this.rbtnStressPSI.Size = new System.Drawing.Size(44, 20);
+            this.rbtnStressPSI.Size = new System.Drawing.Size(52, 24);
             this.rbtnStressPSI.TabIndex = 1;
             this.rbtnStressPSI.TabStop = true;
             this.rbtnStressPSI.Text = "psi";
@@ -235,9 +244,10 @@
             // 
             this.rbtnStressKSI.AutoSize = true;
             this.rbtnStressKSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnStressKSI.Location = new System.Drawing.Point(10, 24);
+            this.rbtnStressKSI.Location = new System.Drawing.Point(12, 30);
+            this.rbtnStressKSI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnStressKSI.Name = "rbtnStressKSI";
-            this.rbtnStressKSI.Size = new System.Drawing.Size(46, 20);
+            this.rbtnStressKSI.Size = new System.Drawing.Size(56, 24);
             this.rbtnStressKSI.TabIndex = 0;
             this.rbtnStressKSI.TabStop = true;
             this.rbtnStressKSI.Text = "KSI";
@@ -247,42 +257,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 3);
+            this.label1.Location = new System.Drawing.Point(24, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 39);
+            this.label1.Size = new System.Drawing.Size(33, 48);
             this.label1.TabIndex = 29;
             this.label1.Text = " ";
             // 
             // groupControl10
             // 
-            this.groupControl10.Controls.Add(this.rbtnThicknessM);
             this.groupControl10.Controls.Add(this.rbtnThicknessMM);
             this.groupControl10.Controls.Add(this.rbtnThicknessIn);
-            this.groupControl10.Location = new System.Drawing.Point(12, 290);
+            this.groupControl10.Location = new System.Drawing.Point(14, 357);
+            this.groupControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl10.Name = "groupControl10";
-            this.groupControl10.Size = new System.Drawing.Size(175, 60);
+            this.groupControl10.Size = new System.Drawing.Size(204, 74);
             this.groupControl10.TabIndex = 24;
             this.groupControl10.Text = "Thickness";
-            // 
-            // rbtnThicknessM
-            // 
-            this.rbtnThicknessM.AutoSize = true;
-            this.rbtnThicknessM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnThicknessM.Location = new System.Drawing.Point(133, 24);
-            this.rbtnThicknessM.Name = "rbtnThicknessM";
-            this.rbtnThicknessM.Size = new System.Drawing.Size(37, 20);
-            this.rbtnThicknessM.TabIndex = 2;
-            this.rbtnThicknessM.TabStop = true;
-            this.rbtnThicknessM.Text = "m";
-            this.rbtnThicknessM.UseVisualStyleBackColor = true;
             // 
             // rbtnThicknessMM
             // 
             this.rbtnThicknessMM.AutoSize = true;
             this.rbtnThicknessMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnThicknessMM.Location = new System.Drawing.Point(75, 24);
+            this.rbtnThicknessMM.Location = new System.Drawing.Point(118, 29);
+            this.rbtnThicknessMM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnThicknessMM.Name = "rbtnThicknessMM";
-            this.rbtnThicknessMM.Size = new System.Drawing.Size(48, 20);
+            this.rbtnThicknessMM.Size = new System.Drawing.Size(58, 24);
             this.rbtnThicknessMM.TabIndex = 1;
             this.rbtnThicknessMM.TabStop = true;
             this.rbtnThicknessMM.Text = "mm";
@@ -292,9 +291,10 @@
             // 
             this.rbtnThicknessIn.AutoSize = true;
             this.rbtnThicknessIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnThicknessIn.Location = new System.Drawing.Point(22, 24);
+            this.rbtnThicknessIn.Location = new System.Drawing.Point(26, 30);
+            this.rbtnThicknessIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnThicknessIn.Name = "rbtnThicknessIn";
-            this.rbtnThicknessIn.Size = new System.Drawing.Size(36, 20);
+            this.rbtnThicknessIn.Size = new System.Drawing.Size(43, 24);
             this.rbtnThicknessIn.TabIndex = 0;
             this.rbtnThicknessIn.TabStop = true;
             this.rbtnThicknessIn.Text = "in";
@@ -305,9 +305,10 @@
             this.groupControl11.Controls.Add(this.rbtnDimensionM);
             this.groupControl11.Controls.Add(this.rbtnDimensionMM);
             this.groupControl11.Controls.Add(this.rbtnDimensionIn);
-            this.groupControl11.Location = new System.Drawing.Point(193, 290);
+            this.groupControl11.Location = new System.Drawing.Point(225, 357);
+            this.groupControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl11.Name = "groupControl11";
-            this.groupControl11.Size = new System.Drawing.Size(181, 60);
+            this.groupControl11.Size = new System.Drawing.Size(211, 74);
             this.groupControl11.TabIndex = 23;
             this.groupControl11.Text = "Dimension";
             // 
@@ -315,9 +316,10 @@
             // 
             this.rbtnDimensionM.AutoSize = true;
             this.rbtnDimensionM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDimensionM.Location = new System.Drawing.Point(133, 24);
+            this.rbtnDimensionM.Location = new System.Drawing.Point(155, 30);
+            this.rbtnDimensionM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnDimensionM.Name = "rbtnDimensionM";
-            this.rbtnDimensionM.Size = new System.Drawing.Size(37, 20);
+            this.rbtnDimensionM.Size = new System.Drawing.Size(44, 24);
             this.rbtnDimensionM.TabIndex = 2;
             this.rbtnDimensionM.TabStop = true;
             this.rbtnDimensionM.Text = "m";
@@ -327,9 +329,10 @@
             // 
             this.rbtnDimensionIn.AutoSize = true;
             this.rbtnDimensionIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDimensionIn.Location = new System.Drawing.Point(22, 24);
+            this.rbtnDimensionIn.Location = new System.Drawing.Point(26, 30);
+            this.rbtnDimensionIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnDimensionIn.Name = "rbtnDimensionIn";
-            this.rbtnDimensionIn.Size = new System.Drawing.Size(36, 20);
+            this.rbtnDimensionIn.Size = new System.Drawing.Size(43, 24);
             this.rbtnDimensionIn.TabIndex = 0;
             this.rbtnDimensionIn.TabStop = true;
             this.rbtnDimensionIn.Text = "in";
@@ -339,9 +342,10 @@
             // 
             this.rbtnCorrosionMM.AutoSize = true;
             this.rbtnCorrosionMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCorrosionMM.Location = new System.Drawing.Point(101, 25);
+            this.rbtnCorrosionMM.Location = new System.Drawing.Point(118, 31);
+            this.rbtnCorrosionMM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnCorrosionMM.Name = "rbtnCorrosionMM";
-            this.rbtnCorrosionMM.Size = new System.Drawing.Size(48, 20);
+            this.rbtnCorrosionMM.Size = new System.Drawing.Size(58, 24);
             this.rbtnCorrosionMM.TabIndex = 1;
             this.rbtnCorrosionMM.TabStop = true;
             this.rbtnCorrosionMM.Text = "mm";
@@ -351,9 +355,10 @@
             // 
             this.groupControl6.Controls.Add(this.rbtnCorrosionMM);
             this.groupControl6.Controls.Add(this.rbtnMil);
-            this.groupControl6.Location = new System.Drawing.Point(12, 423);
+            this.groupControl6.Location = new System.Drawing.Point(14, 521);
+            this.groupControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(175, 60);
+            this.groupControl6.Size = new System.Drawing.Size(204, 74);
             this.groupControl6.TabIndex = 25;
             this.groupControl6.Text = "Corrosion Alowance";
             // 
@@ -361,9 +366,10 @@
             // 
             this.groupControl5.Controls.Add(this.rbtnM3pHr);
             this.groupControl5.Controls.Add(this.rbtnFt3pHr);
-            this.groupControl5.Location = new System.Drawing.Point(193, 356);
+            this.groupControl5.Location = new System.Drawing.Point(225, 438);
+            this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(178, 61);
+            this.groupControl5.Size = new System.Drawing.Size(208, 75);
             this.groupControl5.TabIndex = 26;
             this.groupControl5.Text = "Flow Rate";
             // 
@@ -371,9 +377,10 @@
             // 
             this.rbtnM3pHr.AutoSize = true;
             this.rbtnM3pHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnM3pHr.Location = new System.Drawing.Point(93, 24);
+            this.rbtnM3pHr.Location = new System.Drawing.Point(108, 30);
+            this.rbtnM3pHr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnM3pHr.Name = "rbtnM3pHr";
-            this.rbtnM3pHr.Size = new System.Drawing.Size(56, 20);
+            this.rbtnM3pHr.Size = new System.Drawing.Size(70, 24);
             this.rbtnM3pHr.TabIndex = 1;
             this.rbtnM3pHr.TabStop = true;
             this.rbtnM3pHr.Text = "m³/hr";
@@ -383,9 +390,10 @@
             // 
             this.rbtnFt3pHr.AutoSize = true;
             this.rbtnFt3pHr.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFt3pHr.Location = new System.Drawing.Point(22, 24);
+            this.rbtnFt3pHr.Location = new System.Drawing.Point(26, 30);
+            this.rbtnFt3pHr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnFt3pHr.Name = "rbtnFt3pHr";
-            this.rbtnFt3pHr.Size = new System.Drawing.Size(51, 20);
+            this.rbtnFt3pHr.Size = new System.Drawing.Size(66, 24);
             this.rbtnFt3pHr.TabIndex = 0;
             this.rbtnFt3pHr.TabStop = true;
             this.rbtnFt3pHr.Text = "ft³/hr";
@@ -396,9 +404,10 @@
             this.groupControl3.Controls.Add(this.rbtnKen);
             this.groupControl3.Controls.Add(this.rbtnFa);
             this.groupControl3.Controls.Add(this.rbtnCel);
-            this.groupControl3.Location = new System.Drawing.Point(12, 224);
+            this.groupControl3.Location = new System.Drawing.Point(14, 276);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(175, 60);
+            this.groupControl3.Size = new System.Drawing.Size(204, 74);
             this.groupControl3.TabIndex = 20;
             this.groupControl3.Text = "Temperature";
             // 
@@ -406,9 +415,10 @@
             // 
             this.rbtnKen.AutoSize = true;
             this.rbtnKen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnKen.Location = new System.Drawing.Point(133, 24);
+            this.rbtnKen.Location = new System.Drawing.Point(155, 30);
+            this.rbtnKen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnKen.Name = "rbtnKen";
-            this.rbtnKen.Size = new System.Drawing.Size(34, 20);
+            this.rbtnKen.Size = new System.Drawing.Size(41, 24);
             this.rbtnKen.TabIndex = 2;
             this.rbtnKen.TabStop = true;
             this.rbtnKen.Text = "K";
@@ -418,9 +428,10 @@
             // 
             this.rbtnFa.AutoSize = true;
             this.rbtnFa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFa.Location = new System.Drawing.Point(77, 24);
+            this.rbtnFa.Location = new System.Drawing.Point(90, 30);
+            this.rbtnFa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnFa.Name = "rbtnFa";
-            this.rbtnFa.Size = new System.Drawing.Size(38, 20);
+            this.rbtnFa.Size = new System.Drawing.Size(46, 24);
             this.rbtnFa.TabIndex = 1;
             this.rbtnFa.TabStop = true;
             this.rbtnFa.Text = "⁰F";
@@ -430,9 +441,10 @@
             // 
             this.rbtnCel.AutoSize = true;
             this.rbtnCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnCel.Location = new System.Drawing.Point(19, 24);
+            this.rbtnCel.Location = new System.Drawing.Point(22, 30);
+            this.rbtnCel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnCel.Name = "rbtnCel";
-            this.rbtnCel.Size = new System.Drawing.Size(39, 20);
+            this.rbtnCel.Size = new System.Drawing.Size(48, 24);
             this.rbtnCel.TabIndex = 0;
             this.rbtnCel.TabStop = true;
             this.rbtnCel.Text = "⁰C";
@@ -442,9 +454,10 @@
             // 
             this.rbtnPressureNpcm2.AutoSize = true;
             this.rbtnPressureNpcm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPressureNpcm2.Location = new System.Drawing.Point(288, 25);
+            this.rbtnPressureNpcm2.Location = new System.Drawing.Point(336, 31);
+            this.rbtnPressureNpcm2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnPressureNpcm2.Name = "rbtnPressureNpcm2";
-            this.rbtnPressureNpcm2.Size = new System.Drawing.Size(65, 20);
+            this.rbtnPressureNpcm2.Size = new System.Drawing.Size(81, 24);
             this.rbtnPressureNpcm2.TabIndex = 5;
             this.rbtnPressureNpcm2.TabStop = true;
             this.rbtnPressureNpcm2.Text = "N/cm² ";
@@ -454,9 +467,10 @@
             // 
             this.rbtnPressureNpm2.AutoSize = true;
             this.rbtnPressureNpm2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPressureNpm2.Location = new System.Drawing.Point(224, 25);
+            this.rbtnPressureNpm2.Location = new System.Drawing.Point(261, 31);
+            this.rbtnPressureNpm2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnPressureNpm2.Name = "rbtnPressureNpm2";
-            this.rbtnPressureNpm2.Size = new System.Drawing.Size(58, 20);
+            this.rbtnPressureNpm2.Size = new System.Drawing.Size(72, 24);
             this.rbtnPressureNpm2.TabIndex = 4;
             this.rbtnPressureNpm2.TabStop = true;
             this.rbtnPressureNpm2.Text = "N/m² ";
@@ -466,9 +480,10 @@
             // 
             this.groupControl4.Controls.Add(this.rbtnM3);
             this.groupControl4.Controls.Add(this.rbtnFt3);
-            this.groupControl4.Location = new System.Drawing.Point(12, 356);
+            this.groupControl4.Location = new System.Drawing.Point(14, 438);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(175, 61);
+            this.groupControl4.Size = new System.Drawing.Size(204, 75);
             this.groupControl4.TabIndex = 22;
             this.groupControl4.Text = "Volume";
             // 
@@ -476,9 +491,10 @@
             // 
             this.rbtnM3.AutoSize = true;
             this.rbtnM3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnM3.Location = new System.Drawing.Point(101, 24);
+            this.rbtnM3.Location = new System.Drawing.Point(118, 30);
+            this.rbtnM3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnM3.Name = "rbtnM3";
-            this.rbtnM3.Size = new System.Drawing.Size(41, 20);
+            this.rbtnM3.Size = new System.Drawing.Size(50, 24);
             this.rbtnM3.TabIndex = 1;
             this.rbtnM3.TabStop = true;
             this.rbtnM3.Text = "m³";
@@ -488,9 +504,10 @@
             // 
             this.rbtnFt3.AutoSize = true;
             this.rbtnFt3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFt3.Location = new System.Drawing.Point(19, 24);
+            this.rbtnFt3.Location = new System.Drawing.Point(22, 30);
+            this.rbtnFt3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnFt3.Name = "rbtnFt3";
-            this.rbtnFt3.Size = new System.Drawing.Size(36, 20);
+            this.rbtnFt3.Size = new System.Drawing.Size(46, 24);
             this.rbtnFt3.TabIndex = 0;
             this.rbtnFt3.TabStop = true;
             this.rbtnFt3.Text = "ft³";
@@ -500,9 +517,10 @@
             // 
             this.rbtnPressureMPa.AutoSize = true;
             this.rbtnPressureMPa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPressureMPa.Location = new System.Drawing.Point(164, 25);
+            this.rbtnPressureMPa.Location = new System.Drawing.Point(191, 31);
+            this.rbtnPressureMPa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnPressureMPa.Name = "rbtnPressureMPa";
-            this.rbtnPressureMPa.Size = new System.Drawing.Size(54, 20);
+            this.rbtnPressureMPa.Size = new System.Drawing.Size(64, 24);
             this.rbtnPressureMPa.TabIndex = 3;
             this.rbtnPressureMPa.TabStop = true;
             this.rbtnPressureMPa.Text = "MPa";
@@ -512,9 +530,10 @@
             // 
             this.rbtnPressureBAR.AutoSize = true;
             this.rbtnPressureBAR.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPressureBAR.Location = new System.Drawing.Point(112, 25);
+            this.rbtnPressureBAR.Location = new System.Drawing.Point(131, 31);
+            this.rbtnPressureBAR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnPressureBAR.Name = "rbtnPressureBAR";
-            this.rbtnPressureBAR.Size = new System.Drawing.Size(46, 20);
+            this.rbtnPressureBAR.Size = new System.Drawing.Size(54, 24);
             this.rbtnPressureBAR.TabIndex = 2;
             this.rbtnPressureBAR.TabStop = true;
             this.rbtnPressureBAR.Text = "bar";
@@ -524,9 +543,10 @@
             // 
             this.rbtnPressurePSI.AutoSize = true;
             this.rbtnPressurePSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPressurePSI.Location = new System.Drawing.Point(62, 25);
+            this.rbtnPressurePSI.Location = new System.Drawing.Point(72, 31);
+            this.rbtnPressurePSI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnPressurePSI.Name = "rbtnPressurePSI";
-            this.rbtnPressurePSI.Size = new System.Drawing.Size(44, 20);
+            this.rbtnPressurePSI.Size = new System.Drawing.Size(52, 24);
             this.rbtnPressurePSI.TabIndex = 1;
             this.rbtnPressurePSI.TabStop = true;
             this.rbtnPressurePSI.Text = "psi";
@@ -534,34 +554,23 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.rbtnDiameterM);
             this.groupControl2.Controls.Add(this.rbtnDiameterMM);
             this.groupControl2.Controls.Add(this.rbtnDiameterInch);
-            this.groupControl2.Location = new System.Drawing.Point(193, 224);
+            this.groupControl2.Location = new System.Drawing.Point(225, 276);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(178, 60);
+            this.groupControl2.Size = new System.Drawing.Size(208, 74);
             this.groupControl2.TabIndex = 21;
             this.groupControl2.Text = "Diameter";
-            // 
-            // rbtnDiameterM
-            // 
-            this.rbtnDiameterM.AutoSize = true;
-            this.rbtnDiameterM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDiameterM.Location = new System.Drawing.Point(133, 24);
-            this.rbtnDiameterM.Name = "rbtnDiameterM";
-            this.rbtnDiameterM.Size = new System.Drawing.Size(37, 20);
-            this.rbtnDiameterM.TabIndex = 2;
-            this.rbtnDiameterM.TabStop = true;
-            this.rbtnDiameterM.Text = "m";
-            this.rbtnDiameterM.UseVisualStyleBackColor = true;
             // 
             // rbtnDiameterMM
             // 
             this.rbtnDiameterMM.AutoSize = true;
             this.rbtnDiameterMM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDiameterMM.Location = new System.Drawing.Point(75, 24);
+            this.rbtnDiameterMM.Location = new System.Drawing.Point(87, 30);
+            this.rbtnDiameterMM.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnDiameterMM.Name = "rbtnDiameterMM";
-            this.rbtnDiameterMM.Size = new System.Drawing.Size(48, 20);
+            this.rbtnDiameterMM.Size = new System.Drawing.Size(58, 24);
             this.rbtnDiameterMM.TabIndex = 1;
             this.rbtnDiameterMM.TabStop = true;
             this.rbtnDiameterMM.Text = "mm";
@@ -571,9 +580,10 @@
             // 
             this.rbtnDiameterInch.AutoSize = true;
             this.rbtnDiameterInch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnDiameterInch.Location = new System.Drawing.Point(22, 24);
+            this.rbtnDiameterInch.Location = new System.Drawing.Point(26, 30);
+            this.rbtnDiameterInch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnDiameterInch.Name = "rbtnDiameterInch";
-            this.rbtnDiameterInch.Size = new System.Drawing.Size(36, 20);
+            this.rbtnDiameterInch.Size = new System.Drawing.Size(43, 24);
             this.rbtnDiameterInch.TabIndex = 0;
             this.rbtnDiameterInch.TabStop = true;
             this.rbtnDiameterInch.Text = "in";
@@ -583,9 +593,10 @@
             // 
             this.rbtnPressureKSI.AutoSize = true;
             this.rbtnPressureKSI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnPressureKSI.Location = new System.Drawing.Point(10, 25);
+            this.rbtnPressureKSI.Location = new System.Drawing.Point(12, 31);
+            this.rbtnPressureKSI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rbtnPressureKSI.Name = "rbtnPressureKSI";
-            this.rbtnPressureKSI.Size = new System.Drawing.Size(46, 20);
+            this.rbtnPressureKSI.Size = new System.Drawing.Size(56, 24);
             this.rbtnPressureKSI.TabIndex = 0;
             this.rbtnPressureKSI.TabStop = true;
             this.rbtnPressureKSI.Text = "KSI";
@@ -593,7 +604,8 @@
             // 
             // cbScheme
             // 
-            this.cbScheme.Location = new System.Drawing.Point(100, 64);
+            this.cbScheme.Location = new System.Drawing.Point(117, 79);
+            this.cbScheme.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbScheme.Name = "cbScheme";
             this.cbScheme.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbScheme.Properties.Appearance.Options.UseFont = true;
@@ -603,7 +615,7 @@
             "Custom",
             "US",
             "European"});
-            this.cbScheme.Size = new System.Drawing.Size(114, 22);
+            this.cbScheme.Size = new System.Drawing.Size(133, 26);
             this.cbScheme.TabIndex = 19;
             this.cbScheme.SelectedIndexChanged += new System.EventHandler(this.cbScheme_SelectedIndexChanged);
             // 
@@ -611,9 +623,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(22, 67);
+            this.labelControl2.Location = new System.Drawing.Point(26, 82);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(53, 16);
+            this.labelControl2.Size = new System.Drawing.Size(63, 20);
             this.labelControl2.TabIndex = 18;
             this.labelControl2.Text = "Scheme:";
             // 
@@ -621,9 +634,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(54, 16);
+            this.labelControl1.Location = new System.Drawing.Point(63, 20);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(157, 24);
+            this.labelControl1.Size = new System.Drawing.Size(197, 29);
             this.labelControl1.TabIndex = 16;
             this.labelControl1.Text = "Select your Units";
             // 
@@ -631,9 +645,10 @@
             // 
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
-            this.btnCancel.Location = new System.Drawing.Point(290, 531);
+            this.btnCancel.Location = new System.Drawing.Point(338, 654);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(87, 28);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -642,9 +657,10 @@
             // 
             this.btnOK.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.Appearance.Options.UseFont = true;
-            this.btnOK.Location = new System.Drawing.Point(198, 531);
+            this.btnOK.Location = new System.Drawing.Point(231, 654);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.Size = new System.Drawing.Size(87, 28);
             this.btnOK.TabIndex = 14;
             this.btnOK.Text = "OK";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
@@ -657,17 +673,18 @@
             this.groupControl1.Controls.Add(this.rbtnPressureBAR);
             this.groupControl1.Controls.Add(this.rbtnPressurePSI);
             this.groupControl1.Controls.Add(this.rbtnPressureKSI);
-            this.groupControl1.Location = new System.Drawing.Point(12, 92);
+            this.groupControl1.Location = new System.Drawing.Point(14, 113);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(359, 60);
+            this.groupControl1.Size = new System.Drawing.Size(419, 74);
             this.groupControl1.TabIndex = 13;
             this.groupControl1.Text = "Pressure";
             // 
             // frmUnits
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 566);
+            this.ClientSize = new System.Drawing.Size(454, 697);
             this.Controls.Add(this.groupControl7);
             this.Controls.Add(this.groupControl9);
             this.Controls.Add(this.label1);
@@ -684,6 +701,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.groupControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmUnits";
             this.Text = "Units";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
@@ -738,7 +756,6 @@
         private System.Windows.Forms.RadioButton rbtnStressKSI;
         private System.Windows.Forms.Label label1;
         private DevExpress.XtraEditors.GroupControl groupControl10;
-        private System.Windows.Forms.RadioButton rbtnThicknessM;
         private System.Windows.Forms.RadioButton rbtnThicknessMM;
         private System.Windows.Forms.RadioButton rbtnThicknessIn;
         private DevExpress.XtraEditors.GroupControl groupControl11;
@@ -762,7 +779,6 @@
         private System.Windows.Forms.RadioButton rbtnPressureBAR;
         private System.Windows.Forms.RadioButton rbtnPressurePSI;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private System.Windows.Forms.RadioButton rbtnDiameterM;
         private System.Windows.Forms.RadioButton rbtnDiameterMM;
         private System.Windows.Forms.RadioButton rbtnDiameterInch;
         private System.Windows.Forms.RadioButton rbtnPressureKSI;

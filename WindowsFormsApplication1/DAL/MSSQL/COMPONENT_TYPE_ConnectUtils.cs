@@ -243,7 +243,7 @@ namespace RBI.DAL.MSSQL
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+                MessageBox.Show(e.ToString(), "GET COMPONENT TYPE DATA FAIL!");
             }
             finally
             {

@@ -58,7 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pnlThinningDF = new System.Windows.Forms.Panel();
             this.txtCladdingThickness = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblCladdingThickness = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.lblThinningDF = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -100,9 +100,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1195, 533);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -133,7 +133,7 @@
             this.pnlExternal.Controls.Add(this.chkExternalCoat);
             this.pnlExternal.Controls.Add(this.label1);
             this.pnlExternal.Location = new System.Drawing.Point(32, 225);
-            this.pnlExternal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlExternal.Margin = new System.Windows.Forms.Padding(4);
             this.pnlExternal.Name = "pnlExternal";
             this.pnlExternal.Size = new System.Drawing.Size(1121, 240);
             this.pnlExternal.TabIndex = 5;
@@ -154,7 +154,7 @@
             // 
             this.chkSupport.AutoSize = true;
             this.chkSupport.Location = new System.Drawing.Point(335, 188);
-            this.chkSupport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSupport.Margin = new System.Windows.Forms.Padding(4);
             this.chkSupport.Name = "chkSupport";
             this.chkSupport.Size = new System.Drawing.Size(18, 17);
             this.chkSupport.TabIndex = 5;
@@ -166,7 +166,7 @@
             // 
             this.cbIsulationCondition.Enabled = false;
             this.cbIsulationCondition.Location = new System.Drawing.Point(879, 158);
-            this.cbIsulationCondition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbIsulationCondition.Margin = new System.Windows.Forms.Padding(4);
             this.cbIsulationCondition.Name = "cbIsulationCondition";
             this.cbIsulationCondition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -203,7 +203,7 @@
             // 
             this.cbExternalIsulation.Enabled = false;
             this.cbExternalIsulation.Location = new System.Drawing.Point(879, 128);
-            this.cbExternalIsulation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbExternalIsulation.Margin = new System.Windows.Forms.Padding(4);
             this.cbExternalIsulation.Name = "cbExternalIsulation";
             this.cbExternalIsulation.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -259,7 +259,7 @@
             // 
             this.cbExternalCoatQuality.Enabled = false;
             this.cbExternalCoatQuality.Location = new System.Drawing.Point(335, 153);
-            this.cbExternalCoatQuality.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbExternalCoatQuality.Margin = new System.Windows.Forms.Padding(4);
             this.cbExternalCoatQuality.Name = "cbExternalCoatQuality";
             this.cbExternalCoatQuality.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -308,7 +308,7 @@
             // 
             this.chkExternalIsulation.AutoSize = true;
             this.chkExternalIsulation.Location = new System.Drawing.Point(879, 102);
-            this.chkExternalIsulation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkExternalIsulation.Margin = new System.Windows.Forms.Padding(4);
             this.chkExternalIsulation.Name = "chkExternalIsulation";
             this.chkExternalIsulation.Size = new System.Drawing.Size(18, 17);
             this.chkExternalIsulation.TabIndex = 11;
@@ -332,7 +332,7 @@
             this.chkInsulationContainsChlorides.AutoSize = true;
             this.chkInsulationContainsChlorides.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkInsulationContainsChlorides.Location = new System.Drawing.Point(879, 73);
-            this.chkInsulationContainsChlorides.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkInsulationContainsChlorides.Margin = new System.Windows.Forms.Padding(4);
             this.chkInsulationContainsChlorides.Name = "chkInsulationContainsChlorides";
             this.chkInsulationContainsChlorides.Size = new System.Drawing.Size(18, 17);
             this.chkInsulationContainsChlorides.TabIndex = 12;
@@ -357,7 +357,7 @@
             this.dateExternalCoating.EditValue = null;
             this.dateExternalCoating.Enabled = false;
             this.dateExternalCoating.Location = new System.Drawing.Point(335, 123);
-            this.dateExternalCoating.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateExternalCoating.Margin = new System.Windows.Forms.Padding(4);
             this.dateExternalCoating.Name = "dateExternalCoating";
             this.dateExternalCoating.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -396,7 +396,7 @@
             // 
             this.chkInternalCoat.AutoSize = true;
             this.chkInternalCoat.Location = new System.Drawing.Point(335, 100);
-            this.chkInternalCoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkInternalCoat.Margin = new System.Windows.Forms.Padding(4);
             this.chkInternalCoat.Name = "chkInternalCoat";
             this.chkInternalCoat.Size = new System.Drawing.Size(18, 17);
             this.chkInternalCoat.TabIndex = 1;
@@ -419,7 +419,7 @@
             // 
             this.chkExternalCoat.AutoSize = true;
             this.chkExternalCoat.Location = new System.Drawing.Point(335, 73);
-            this.chkExternalCoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkExternalCoat.Margin = new System.Windows.Forms.Padding(4);
             this.chkExternalCoat.Name = "chkExternalCoat";
             this.chkExternalCoat.Size = new System.Drawing.Size(18, 17);
             this.chkExternalCoat.TabIndex = 2;
@@ -442,7 +442,7 @@
             // 
             this.pnlThinningDF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlThinningDF.Controls.Add(this.txtCladdingThickness);
-            this.pnlThinningDF.Controls.Add(this.label17);
+            this.pnlThinningDF.Controls.Add(this.lblCladdingThickness);
             this.pnlThinningDF.Controls.Add(this.label18);
             this.pnlThinningDF.Controls.Add(this.lblThinningDF);
             this.pnlThinningDF.Controls.Add(this.label12);
@@ -459,7 +459,7 @@
             this.pnlThinningDF.Controls.Add(this.label7);
             this.pnlThinningDF.Controls.Add(this.chkInternalCladding);
             this.pnlThinningDF.Location = new System.Drawing.Point(32, 38);
-            this.pnlThinningDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlThinningDF.Margin = new System.Windows.Forms.Padding(4);
             this.pnlThinningDF.Name = "pnlThinningDF";
             this.pnlThinningDF.Size = new System.Drawing.Size(1121, 152);
             this.pnlThinningDF.TabIndex = 4;
@@ -469,21 +469,21 @@
             this.txtCladdingThickness.Enabled = false;
             this.txtCladdingThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCladdingThickness.Location = new System.Drawing.Point(285, 86);
-            this.txtCladdingThickness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCladdingThickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtCladdingThickness.Name = "txtCladdingThickness";
             this.txtCladdingThickness.Size = new System.Drawing.Size(132, 23);
             this.txtCladdingThickness.TabIndex = 7;
             // 
-            // label17
+            // lblCladdingThickness
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(428, 90);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 18);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "mm";
+            this.lblCladdingThickness.AutoSize = true;
+            this.lblCladdingThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCladdingThickness.Location = new System.Drawing.Point(428, 90);
+            this.lblCladdingThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCladdingThickness.Name = "lblCladdingThickness";
+            this.lblCladdingThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblCladdingThickness.TabIndex = 12;
+            this.lblCladdingThickness.Text = "mm";
             // 
             // label18
             // 
@@ -523,7 +523,7 @@
             // 
             this.cbInternalLinerType.Enabled = false;
             this.cbInternalLinerType.Location = new System.Drawing.Point(808, 87);
-            this.cbInternalLinerType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbInternalLinerType.Margin = new System.Windows.Forms.Padding(4);
             this.cbInternalLinerType.Name = "cbInternalLinerType";
             this.cbInternalLinerType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -560,7 +560,7 @@
             this.txtCladdingCorrosionRate.Enabled = false;
             this.txtCladdingCorrosionRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCladdingCorrosionRate.Location = new System.Drawing.Point(285, 117);
-            this.txtCladdingCorrosionRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCladdingCorrosionRate.Margin = new System.Windows.Forms.Padding(4);
             this.txtCladdingCorrosionRate.Name = "txtCladdingCorrosionRate";
             this.txtCladdingCorrosionRate.Size = new System.Drawing.Size(132, 23);
             this.txtCladdingCorrosionRate.TabIndex = 7;
@@ -572,7 +572,7 @@
             // 
             this.cbInternalLinerCondition.Enabled = false;
             this.cbInternalLinerCondition.Location = new System.Drawing.Point(808, 117);
-            this.cbInternalLinerCondition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbInternalLinerCondition.Margin = new System.Windows.Forms.Padding(4);
             this.cbInternalLinerCondition.Name = "cbInternalLinerCondition";
             this.cbInternalLinerCondition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -658,7 +658,7 @@
             // 
             this.chkInternalLining.AutoSize = true;
             this.chkInternalLining.Location = new System.Drawing.Point(824, 63);
-            this.chkInternalLining.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkInternalLining.Margin = new System.Windows.Forms.Padding(4);
             this.chkInternalLining.Name = "chkInternalLining";
             this.chkInternalLining.Size = new System.Drawing.Size(18, 17);
             this.chkInternalLining.TabIndex = 8;
@@ -692,7 +692,7 @@
             // 
             this.chkInternalCladding.AutoSize = true;
             this.chkInternalCladding.Location = new System.Drawing.Point(285, 63);
-            this.chkInternalCladding.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkInternalCladding.Margin = new System.Windows.Forms.Padding(4);
             this.chkInternalCladding.Name = "chkInternalCladding";
             this.chkInternalCladding.Size = new System.Drawing.Size(18, 17);
             this.chkInternalCladding.TabIndex = 6;
@@ -705,7 +705,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCCoatLiningIsulationCladding";
             this.Size = new System.Drawing.Size(1195, 533);
             this.Load += new System.EventHandler(this.UCCoatLiningIsulationCladding_Load);
@@ -776,7 +776,7 @@
         private System.Windows.Forms.Label lblExternal;
         private System.Windows.Forms.Label lblThinningDF;
         private System.Windows.Forms.TextBox txtCladdingThickness;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblCladdingThickness;
         private System.Windows.Forms.Label label18;
     }
 }

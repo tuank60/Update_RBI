@@ -8,12 +8,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
 {
     class BUS_UNITS
     {
-        public double NpM2 = 0.00014503773773; // mặc định psi
+        public double NpM2 = Math.Pow(10,-6); // mặc định MPA
         public double meter = 1000;
-        public double NpCM2 = 1.4503773773; // psi
-        public double MPa = 145.03773773; // psi áp suất
-        public double bar = 14.503773773; // psi áp suất
-        public double ksi = 1000; // psi  kg/in
+        public double NpCM2 = 0.01; // MPA
+        public double psi = 0.00689476; // MPA áp suất
+        public double bar = 0.1; // MPA áp suất
+        public double ksi = 6.89476; // MPA  kg/in
         public double inch = 25.4; // mm
         public double mil = 0.0254; // mm mặc định: đổi mil sang mm
         public double ft3 = 0.028316846592; //m3

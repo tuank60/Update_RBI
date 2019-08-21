@@ -33,8 +33,8 @@ namespace RBI.PRE.subForm.OutputDataForm
                 RiskSummary risk = new RiskSummary();
                 RW_FULL_POF_BUS busPoF = new RW_FULL_POF_BUS();
                 RW_FULL_POF fullPoF = busPoF.getData(allIDAssessment[i]);
-                RW_CA_LEVEL_1_BUS busCA = new RW_CA_LEVEL_1_BUS();
-                RW_CA_LEVEL_1 CA = busCA.getData(allIDAssessment[i]);
+                //RW_CA_LEVEL_1_BUS busCA = new RW_CA_LEVEL_1_BUS();
+                //RW_CA_LEVEL_1 CA = busCA.getData(allIDAssessment[i]);
                 //get EquipmentID ----> get EquipmentTypeName and APIComponentType
                 int equipmentID = assBus.getEquipmentID(allIDAssessment[i]);
                 EQUIPMENT_MASTER_BUS eqMaBus = new EQUIPMENT_MASTER_BUS();
@@ -62,12 +62,12 @@ namespace RBI.PRE.subForm.OutputDataForm
                 risk.RepresentFluid = inputCA.API_FLUID; //Represent fluid
                 risk.FluidPhase = inputCA.SYSTEM;  //fluid phase
                 risk.currentRisk = 0;//current risk
-                risk.cofcatFlammable = CA.CA_inj_flame; //cofcat. Flammable
-                risk.cofcatPeople = CA.FC_inj;//cofcat people
-                risk.cofcatAsset = CA.FC_prod;//cofcat assessment
-                risk.cofcatEnv = CA.FC_envi;//cofcat envroment
-                risk.cofcatReputation = 0; //cof reputation
-                risk.cofcatCombined = CA.FC_total; //combined
+                //risk.cofcatFlammable = CA.CA_inj_flame; //cofcat. Flammable
+                //risk.cofcatPeople = CA.FC_inj;//cofcat people
+                //risk.cofcatAsset = CA.FC_prod;//cofcat assessment
+                //risk.cofcatEnv = CA.FC_envi;//cofcat envroment
+                //risk.cofcatReputation = 0; //cof reputation
+                //risk.cofcatCombined = CA.FC_total; //combined
                 //risk.componentMaterialGrade; //component material glade
                 risk.initThinningPoF = fullPoF.ThinningAP1;//Thinning POF
                 risk.initEnvCracking = fullPoF.SCCAP1;//Cracking env
@@ -78,8 +78,8 @@ namespace RBI.PRE.subForm.OutputDataForm
                 risk.extOtherPoF = 0;//Ext Other POF
                 risk.extPoF = risk.extThinningPoF + risk.extEnvCrackingPoF + risk.extOtherPoF; //Ext POF
                 risk.PoF = risk.initPoF + risk.extPoF;//POF
-                risk.CurrentRiskCalculation = fullPoF.PoFAP1 * CA.FC_total; //Current risk
-                risk.futureRisk = fullPoF.PoFAP2 * CA.FC_total;
+                //risk.CurrentRiskCalculation = fullPoF.PoFAP1 * CA.FC_total; //Current risk
+                //risk.futureRisk = fullPoF.PoFAP2 * CA.FC_total;
                 dataRisk.Add(risk);
             }
             return dataRisk;

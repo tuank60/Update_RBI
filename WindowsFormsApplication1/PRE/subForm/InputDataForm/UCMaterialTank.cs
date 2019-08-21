@@ -25,19 +25,62 @@ namespace RBI.PRE.subForm.InputDataForm
                                 "L Grade 300 series Stainless Steels",
                                 "Not Applicable"};
  
-        public UCMaterialTank(int ID, string temUnit, string pressureUnit, string stressUnit, string thicknessUnit, string corrosionUnit)
+        public UCMaterialTank(int ID, string temUnit, string pressureUnit, string corrosionUnit)
         {
             InitializeComponent();
             txtMaterial.Enabled = false;
             addSulfurContent();
             addPTAMterial();
-            ShowDataToControl(ID, temUnit, pressureUnit, stressUnit, thicknessUnit, corrosionUnit);
-            lblDesignPressure.Text = pressureUnit;
-            lblCorrosion.Text = corrosionUnit;
-            lblMaxDesignTem.Text = lblMinDesignTem.Text = lblRefTem.Text = temUnit;
+            ShowDataToControl(ID, temUnit, pressureUnit, corrosionUnit);
+            string changeUnit = "";
+            switch (temUnit)
+            {
+                case "DEG_C":
+                    changeUnit = "⁰C";
+                    break;
+                case "DEG_F":
+                    changeUnit = "⁰F";
+                    break;
+                case "K":
+                    changeUnit = "K";
+                    break;
+            }
+            lblMaxDesignTem.Text = lblMinDesignTem.Text = lblRefTem.Text = changeUnit;
+            switch (pressureUnit)
+            {
+                case "PSI":
+                    changeUnit = "psi";
+                    break;
+                case "KSI":
+                    changeUnit = "KSI";
+                    break;
+                case "BAR":
+                    changeUnit = "bar";
+                    break;
+                case "MPA":
+                    changeUnit = "MPa";
+                    break;
+                case "NM2":
+                    changeUnit = "N/m²";
+                    break;
+                case "NCM2":
+                    changeUnit = "N/cm²";
+                    break;
+            }
+            lblDesignPressure.Text = lblYieldStrength.Text = lblTensileStrength.Text = changeUnit;
+            switch (corrosionUnit)
+            {
+                case "MM":
+                    changeUnit = "mm";
+                    break;
+                case "MIL":
+                    changeUnit = "mil";
+                    break;
+            }
+            lblCorrosion.Text = changeUnit;
         }
         
-        public void ShowDataToControl(int ID, string temUnit, string pressureUnit, string stressUnit, string thicknessUnit, string corrosionUnit)
+        public void ShowDataToControl(int ID, string temUnit, string pressureUnit, string corrosionUnit)
         {
             RW_MATERIAL_BUS BUS = new RW_MATERIAL_BUS();
             RW_MATERIAL obj = BUS.getData(ID);
@@ -62,29 +105,39 @@ namespace RBI.PRE.subForm.InputDataForm
                     txtReferenceTemperature.Text = (convUnit.CelToKenvin(obj.ReferenceTemperature)).ToString();
                     break;
             }
-
-            switch(pressureUnit)
+            switch (pressureUnit)
             {
-                case "psi":
-                    txtDesignPressure.Text = obj.DesignPressure.ToString();
+                case "PSI":
+                    txtDesignPressure.Text = (obj.DesignPressure / convUnit.psi).ToString();
+                    txtYieldStrength.Text = (obj.YieldStrength / convUnit.psi).ToString();
+                    txtTensileStrength.Text = (obj.TensileStrength / convUnit.psi).ToString();
                     break;
                 case "KSI":
                     txtDesignPressure.Text = (obj.DesignPressure / convUnit.ksi).ToString();
+                    txtYieldStrength.Text = (obj.YieldStrength / convUnit.ksi).ToString();
+                    txtTensileStrength.Text = (obj.TensileStrength / convUnit.ksi).ToString();
                     break;
-                case "bar":
+                case "BAR":
                     txtDesignPressure.Text = (obj.DesignPressure / convUnit.bar).ToString();
+                    txtYieldStrength.Text = (obj.YieldStrength / convUnit.bar).ToString();
+                    txtTensileStrength.Text = (obj.TensileStrength / convUnit.bar).ToString();
                     break;
-                case "MPa":
-                    txtDesignPressure.Text = (obj.DesignPressure / convUnit.MPa).ToString();
+                case "MPA":
+                    txtDesignPressure.Text = (obj.DesignPressure).ToString();
+                    txtYieldStrength.Text = (obj.YieldStrength).ToString();
+                    txtTensileStrength.Text = (obj.TensileStrength).ToString();
                     break;
-                case "N/m2":
+                case "NM2":
                     txtDesignPressure.Text = (obj.DesignPressure / convUnit.NpM2).ToString();
+                    txtYieldStrength.Text = (obj.YieldStrength / convUnit.NpM2).ToString();
+                    txtTensileStrength.Text = (obj.TensileStrength / convUnit.NpM2).ToString();
                     break;
-                case "N/cm2":
+                case "NCM2":
                     txtDesignPressure.Text = (obj.DesignPressure / convUnit.NpCM2).ToString();
+                    txtYieldStrength.Text = (obj.YieldStrength / convUnit.NpCM2).ToString();
+                    txtTensileStrength.Text = (obj.TensileStrength / convUnit.NpCM2).ToString();
                     break;
             }
-
             switch (corrosionUnit)
             {
                 case "mm":
@@ -94,7 +147,6 @@ namespace RBI.PRE.subForm.InputDataForm
                     txtCorrosionAllowance.Text = (obj.CorrosionAllowance / convUnit.mil).ToString();
                     break;
             }
-
             txtMaterial.Text = obj.MaterialName;                    
             for (int i = 0; i < itemsSulfurContent.Length; i++)
             {
@@ -121,7 +173,7 @@ namespace RBI.PRE.subForm.InputDataForm
             txtMaterialCostFactor.Text = obj.CostFactor.ToString();
         }
 
-        public RW_MATERIAL getData(int ID, string temUnit, string pressureUnit, string stressUnit, string thicknessUnit, string corrosionUnit)
+        public RW_MATERIAL getData(int ID, string temUnit, string pressureUnit, string corrosionUnit)
         {
             RW_MATERIAL ma = new RW_MATERIAL();
             BUS_UNITS convUnit = new BUS_UNITS();
@@ -148,22 +200,34 @@ namespace RBI.PRE.subForm.InputDataForm
 
             switch (pressureUnit)
             {
-                case "psi":
-                    ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) : 0;
+                case "PSI":
+                    ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) * (float)convUnit.psi : 0;
+                    ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) * (float)convUnit.psi : 0;
+                    ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.psi : 0;
                     break;
                 case "KSI":
+                    ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) * (float)convUnit.ksi : 0;
+                    ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) * (float)convUnit.ksi : 0;
                     ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.ksi : 0;
                     break;
-                case "bar":
+                case "BAR":
+                    ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) * (float)convUnit.bar : 0;
+                    ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) * (float)convUnit.bar : 0;
                     ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.bar : 0;
                     break;
-                case "MPa":
-                    ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.MPa : 0;
+                case "MPA":
+                    ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) : 0;
+                    ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) : 0;
+                    ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) : 0;
                     break;
-                case "N/m2":
+                case "NM2":
+                    ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) * (float)convUnit.NpM2 : 0;
+                    ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) * (float)convUnit.NpM2 : 0;
                     ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.NpM2 : 0;
                     break;
-                case "N/cm2":
+                case "NCM2":
+                    ma.YieldStrength = txtYieldStrength.Text != "" ? float.Parse(txtYieldStrength.Text) * (float)convUnit.NpCM2 : 0;
+                    ma.TensileStrength = txtTensileStrength.Text != "" ? float.Parse(txtTensileStrength.Text) * (float)convUnit.NpCM2 : 0;
                     ma.DesignPressure = txtDesignPressure.Text != "" ? float.Parse(txtDesignPressure.Text) * (float)convUnit.NpCM2 : 0;
                     break;
             }

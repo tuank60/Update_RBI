@@ -37,20 +37,20 @@ namespace RBI.PRE.subForm.InputDataForm
                 if (obj.UnitName == "Pressure")
                 {
                     if (obj.SelectedUnit == "KSI") rbtnPressureKSI.Checked = true;
-                    else if (obj.SelectedUnit == "bar") rbtnPressureBAR.Checked = true;
-                    else if (obj.SelectedUnit == "psi") rbtnPressurePSI.Checked = true;
-                    else if (obj.SelectedUnit == "N/cm2") rbtnPressureNpcm2.Checked = true;
-                    else if (obj.SelectedUnit == "N/m2") rbtnPressureNpm2.Checked = true;
-                    else if (obj.SelectedUnit == "MPa") rbtnPressureMPa.Checked = true;
+                    else if (obj.SelectedUnit == "BAR") rbtnPressureBAR.Checked = true;
+                    else if (obj.SelectedUnit == "PSI") rbtnPressurePSI.Checked = true;
+                    else if (obj.SelectedUnit == "NCM2") rbtnPressureNpcm2.Checked = true;
+                    else if (obj.SelectedUnit == "NM2") rbtnPressureNpm2.Checked = true;
+                    else if (obj.SelectedUnit == "MPA") rbtnPressureMPa.Checked = true;
                 }
                 else if (obj.UnitName == "Stress")
                 {
                     if (obj.SelectedUnit == "KSI") rbtnStressKSI.Checked = true;
-                    else if (obj.SelectedUnit == "bar") rbtnStressBAR.Checked = true;
-                    else if (obj.SelectedUnit == "psi") rbtnStressPSI.Checked = true;
-                    else if (obj.SelectedUnit == "N/cm2") rbtnStressNpcm2.Checked = true;
-                    else if (obj.SelectedUnit == "N/m2") rbtnStressNpm2.Checked = true;
-                    else if (obj.SelectedUnit == "MPa") rbtnStressMPa.Checked = true;
+                    else if (obj.SelectedUnit == "BAR") rbtnStressBAR.Checked = true;
+                    else if (obj.SelectedUnit == "PSI") rbtnStressPSI.Checked = true;
+                    else if (obj.SelectedUnit == "NCM2") rbtnStressNpcm2.Checked = true;
+                    else if (obj.SelectedUnit == "NM2") rbtnStressNpm2.Checked = true;
+                    else if (obj.SelectedUnit == "MPA") rbtnStressMPa.Checked = true;
                 }
                 else if (obj.UnitName == "Temperature")
                 {
@@ -60,41 +60,39 @@ namespace RBI.PRE.subForm.InputDataForm
                 }
                 else if (obj.UnitName == "Diameter")
                 {
-                    if (obj.SelectedUnit == "in") rbtnDiameterInch.Checked = true;
-                    else if (obj.SelectedUnit == "mm") rbtnDiameterMM.Checked = true;
-                    else if (obj.SelectedUnit == "m") rbtnDiameterM.Checked = true;
+                    if (obj.SelectedUnit == "INCH") rbtnDiameterInch.Checked = true;
+                    else if (obj.SelectedUnit == "MM") rbtnDiameterMM.Checked = true;
                 }
                 else if (obj.UnitName == "Thickness")
                 {
-                    if (obj.SelectedUnit == "in") rbtnThicknessIn.Checked = true;
-                    else if (obj.SelectedUnit == "mm") rbtnThicknessMM.Checked = true;
-                    else if (obj.SelectedUnit == "m") rbtnThicknessM.Checked = true;
+                    if (obj.SelectedUnit == "INCH") rbtnThicknessIn.Checked = true;
+                    else if (obj.SelectedUnit == "MM") rbtnThicknessMM.Checked = true;
                 }
                 else if (obj.UnitName == "Dimensions")
                 {
-                    if (obj.SelectedUnit == "in") rbtnDimensionIn.Checked = true;
-                    else if (obj.SelectedUnit == "m") rbtnDimensionM.Checked = true;
-                    else if (obj.SelectedUnit == "mm") rbtnDimensionMM.Checked = true;
+                    if (obj.SelectedUnit == "INCH") rbtnDimensionIn.Checked = true;
+                    else if (obj.SelectedUnit == "M") rbtnDimensionM.Checked = true;
+                    else if (obj.SelectedUnit == "MM") rbtnDimensionMM.Checked = true;
                 }
                 else if (obj.UnitName == "Volume")
                 {
-                    if (obj.SelectedUnit == "m3") rbtnM3.Checked = true;
-                    else if (obj.SelectedUnit == "ft3") rbtnFt3.Checked = true;
+                    if (obj.SelectedUnit == "M3") rbtnM3.Checked = true;
+                    else if (obj.SelectedUnit == "FT3") rbtnFt3.Checked = true;
                 }
                 else if (obj.UnitName == "FlowRate")
                 {
-                    if (obj.SelectedUnit == "m3/hr") rbtnM3pHr.Checked = true;
-                    else if (obj.SelectedUnit == "ft3/hr") rbtnFt3pHr.Checked = true;
+                    if (obj.SelectedUnit == "M3HR") rbtnM3pHr.Checked = true;
+                    else if (obj.SelectedUnit == "FT3HR") rbtnFt3pHr.Checked = true;
                 }
                 else if (obj.UnitName == "CorrosionRate")
                 {
-                    if (obj.SelectedUnit == "mm/yr") rbtnCrMMperYr.Checked = true;
-                    else if (obj.SelectedUnit == "mil/yr") rbtnCrMilPerYr.Checked = true;
+                    if (obj.SelectedUnit == "MMYR") rbtnCrMMperYr.Checked = true;
+                    else if (obj.SelectedUnit == "MILYR") rbtnCrMilPerYr.Checked = true;
                 }
                 else if (obj.UnitName == "Corrosion")
                 {
-                    if (obj.SelectedUnit == "mm") rbtnCorrosionMM.Checked = true;
-                    else if (obj.SelectedUnit == "mil") rbtnMil.Checked = true;
+                    if (obj.SelectedUnit == "MM") rbtnCorrosionMM.Checked = true;
+                    else if (obj.SelectedUnit == "MIL") rbtnMil.Checked = true;
                 }
                 else if (obj.UnitName == "Scheme")
                 {
@@ -192,22 +190,22 @@ namespace RBI.PRE.subForm.InputDataForm
             string scheme = "";
             #endregion
             #region set pressure
-            if (rbtnPressureBAR.Checked) pressure = "bar";
+            if (rbtnPressureBAR.Checked) pressure = "BAR";
             else if (rbtnPressureKSI.Checked) pressure = "KSI";
-            else if (rbtnPressureMPa.Checked) pressure = "MPa";
-            else if (rbtnPressureNpcm2.Checked) pressure = "N/cm2";
-            else if (rbtnPressureNpm2.Checked) pressure = "N/m2";
-            else if (rbtnPressurePSI.Checked) pressure = "psi";
+            else if (rbtnPressureMPa.Checked) pressure = "MPA";
+            else if (rbtnPressureNpcm2.Checked) pressure = "NCM2";
+            else if (rbtnPressureNpm2.Checked) pressure = "NM2";
+            else if (rbtnPressurePSI.Checked) pressure = "PSI";
 
             listUnit.Add(pressure);
             #endregion
             #region set stress
-            if (rbtnStressBAR.Checked) stress = "bar";
+            if (rbtnStressBAR.Checked) stress = "BAR";
             else if (rbtnStressKSI.Checked) stress = "KSI";
-            else if (rbtnStressMPa.Checked) stress = "MPa";
-            else if (rbtnStressNpcm2.Checked) stress = "N/cm2";
-            else if (rbtnStressNpm2.Checked) stress = "N/m2";
-            else if (rbtnStressPSI.Checked) stress = "psi";
+            else if (rbtnStressMPa.Checked) stress = "MPA";
+            else if (rbtnStressNpcm2.Checked) stress = "NCM2";
+            else if (rbtnStressNpm2.Checked) stress = "NM2";
+            else if (rbtnStressPSI.Checked) stress = "PSI";
 
             listUnit.Add(stress);
             #endregion
@@ -219,47 +217,45 @@ namespace RBI.PRE.subForm.InputDataForm
             listUnit.Add(temperature);
             #endregion
             #region set diameter
-            if (rbtnDiameterInch.Checked) diameter = "in";
-            else if (rbtnDiameterM.Checked) diameter = "m";
-            else if (rbtnDiameterMM.Checked) diameter = "mm";
+            if (rbtnDiameterInch.Checked) diameter = "INCH";
+            else if (rbtnDiameterMM.Checked) diameter = "MM";
 
             listUnit.Add(diameter);
             #endregion
             #region set thickness
-            if (rbtnThicknessIn.Checked) thickness = "in";
-            else if (rbtnThicknessM.Checked) thickness = "m";
-            else if (rbtnThicknessMM.Checked) thickness = "mm";
+            if (rbtnThicknessIn.Checked) thickness = "INCH";
+            else if (rbtnThicknessMM.Checked) thickness = "MM";
 
             listUnit.Add(thickness);
             #endregion
             #region set dimension
-            if (rbtnDimensionIn.Checked) dimension = "in";
-            else if (rbtnDimensionM.Checked) dimension = "m";
-            else if (rbtnDimensionMM.Checked) dimension = "mm";
+            if (rbtnDimensionIn.Checked) dimension = "INCH";
+            else if (rbtnDimensionM.Checked) dimension = "M";
+            else if (rbtnDimensionMM.Checked) dimension = "MM";
 
             listUnit.Add(dimension);
             #endregion
             #region set volume
-            if (rbtnM3.Checked) volume = "m3";
-            else if (rbtnFt3.Checked) volume = "ft3";
+            if (rbtnM3.Checked) volume = "M3";
+            else if (rbtnFt3.Checked) volume = "FT3";
 
             listUnit.Add(volume);
             #endregion
             #region set Flow Rate
-            if (rbtnFt3pHr.Checked) flowRate = "ft3/hr";
-            else if (rbtnM3pHr.Checked) flowRate = "m3/hr";
+            if (rbtnFt3pHr.Checked) flowRate = "FT3HR";
+            else if (rbtnM3pHr.Checked) flowRate = "M3HR";
 
             listUnit.Add(flowRate);
             #endregion
             #region set Corrosion
-            if (rbtnCorrosionMM.Checked) corrosion = "mm";
-            else if (rbtnMil.Checked) corrosion = "mil";
+            if (rbtnCorrosionMM.Checked) corrosion = "MM";
+            else if (rbtnMil.Checked) corrosion = "MIL";
 
             listUnit.Add(corrosion);
             #endregion
             #region set Corrrosion Rate
-            if (rbtnCrMMperYr.Checked) corrosionRate = "mm/yr";
-            else if (rbtnCrMilPerYr.Checked) corrosionRate = "mil/yr";
+            if (rbtnCrMMperYr.Checked) corrosionRate = "MMYR";
+            else if (rbtnCrMilPerYr.Checked) corrosionRate = "MILYR";
 
             listUnit.Add(corrosionRate);
             #endregion

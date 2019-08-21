@@ -44,10 +44,10 @@ namespace RBI.PRE.subForm.InputDataForm
             }
             switch (volumeUnit)
             {
-                case "m3":
+                case "M3":
                     lblVolume.Text = "m³";
                     break;
-                case "ft3":
+                case "FT3":
                     lblVolume.Text = "ft³";
                     break;
             }
@@ -146,11 +146,10 @@ namespace RBI.PRE.subForm.InputDataForm
             eq.InterfaceSoilWater = chkInterfaceSoilWater.Checked ? 1 : 0;
             eq.LinerOnlineMonitoring = chkLinerOnlineMonitoring.Checked ? 1 : 0;
             eq.MaterialExposedToClExt = chkMaterialExposedFluid.Checked ? 1 : 0;
-            double minReqTem = 0;
-            if (temUnit == "DEG_C") minReqTem = txtMinRequiredTemperature.Text != "" ? double.Parse(txtMinRequiredTemperature.Text) : 0;
-            else if (temUnit == "DEG_F") minReqTem = txtMinRequiredTemperature.Text != "" ? convUnit.FahToCel(double.Parse(txtMinRequiredTemperature.Text)) : 0; // mai
-            else minReqTem = txtMinRequiredTemperature.Text != "" ? convUnit.KenvinToCel(double.Parse(txtMinRequiredTemperature.Text)) : 0; // mai
-            eq.MinReqTemperaturePressurisation = (float)minReqTem;
+
+            if (temUnit == "DEG_C") eq.MinReqTemperaturePressurisation = txtMinRequiredTemperature.Text != "" ? float.Parse(txtMinRequiredTemperature.Text) : 0;
+            else if (temUnit == "DEG_F") eq.MinReqTemperaturePressurisation = txtMinRequiredTemperature.Text != "" ? (float)convUnit.FahToCel(double.Parse(txtMinRequiredTemperature.Text)) : 0; // mai
+            else eq.MinReqTemperaturePressurisation = txtMinRequiredTemperature.Text != "" ? (float)convUnit.KenvinToCel(double.Parse(txtMinRequiredTemperature.Text)) : 0; // mai
             eq.OnlineMonitoring = cbOnlineMonitoring.Text;
             eq.PresenceSulphidesO2 = chkPresenceSulphideOperation.Checked ? 1 : 0;
             eq.PresenceSulphidesO2Shutdown = chkPresenceSulphideShutdown.Checked ? 1 : 0;
@@ -162,7 +161,7 @@ namespace RBI.PRE.subForm.InputDataForm
             eq.ManagementFactor = FMS;
             eq.ThermalHistory = cbThermalHistory.Text;
             double equipVolume = 0;
-            if (volUnit == "m3")
+            if (volUnit == "M3")
             {
                 equipVolume = txtEquipmentVolume.Text != "" ? float.Parse(txtEquipmentVolume.Text) : 0;
             }

@@ -103,15 +103,15 @@ namespace RBI.PRE.subForm.OutputDataForm
             //RW_CA_TANK ca = busTank.getData(ID);
             //txtCA.Text = ca.ConsequenceCategory;
             //txtFC.Text = ca.Consequence.ToString();
-            RW_CA_LEVEL_1_BUS busCA = new RW_CA_LEVEL_1_BUS();
-            RW_CA_LEVEL_1 ca = busCA.getData(ID);
-            txtCAcmd.Text = ca.CA_cmd.ToString();
-            txtCAinj.Text = ca.CA_inj_flame.ToString();
-            txtFCcmd.Text = ca.FC_cmd.ToString();
-            txtFCinj.Text = ca.FC_inj.ToString();
-            txtFCaffa.Text = ca.FC_affa.ToString();
-            txtFCprod.Text = ca.FC_prod.ToString();
-            txtFCenviron.Text = ca.FC_envi.ToString();
+            //RW_CA_LEVEL_1_BUS busCA = new RW_CA_LEVEL_1_BUS();
+            //RW_CA_LEVEL_1 ca = busCA.getData(ID);
+            //txtCAcmd.Text = ca.CA_cmd.ToString();
+            //txtCAinj.Text = ca.CA_inj_flame.ToString();
+            //txtFCcmd.Text = ca.FC_cmd.ToString();
+            //txtFCinj.Text = ca.FC_inj.ToString();
+            //txtFCaffa.Text = ca.FC_affa.ToString();
+            //txtFCprod.Text = ca.FC_prod.ToString();
+            //txtFCenviron.Text = ca.FC_envi.ToString();
         }
 
         private void cbThinningType_SelectedIndexChanged(object sender, EventArgs e)

@@ -63,7 +63,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label30 = new System.Windows.Forms.Label();
+            this.lblBrittleFractureThickness = new System.Windows.Forms.Label();
             this.txtBrittleFractureThickness = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -117,7 +117,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.txtNominalThickness = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
+            this.lblStructuralThickness = new System.Windows.Forms.Label();
             this.lblCorrosionRate = new System.Windows.Forms.Label();
             this.txtCurrentCorrosionRate = new System.Windows.Forms.TextBox();
             this.txtStructuralThickness = new System.Windows.Forms.TextBox();
@@ -540,7 +540,7 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.label30);
+            this.panel6.Controls.Add(this.lblBrittleFractureThickness);
             this.panel6.Controls.Add(this.txtBrittleFractureThickness);
             this.panel6.Controls.Add(this.label38);
             this.panel6.Controls.Add(this.label7);
@@ -564,16 +564,16 @@
             this.panel6.Size = new System.Drawing.Size(1291, 424);
             this.panel6.TabIndex = 29;
             // 
-            // label30
+            // lblBrittleFractureThickness
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(788, 393);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(34, 18);
-            this.label30.TabIndex = 25;
-            this.label30.Text = "mm";
+            this.lblBrittleFractureThickness.AutoSize = true;
+            this.lblBrittleFractureThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrittleFractureThickness.Location = new System.Drawing.Point(788, 393);
+            this.lblBrittleFractureThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrittleFractureThickness.Name = "lblBrittleFractureThickness";
+            this.lblBrittleFractureThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblBrittleFractureThickness.TabIndex = 25;
+            this.lblBrittleFractureThickness.Text = "mm";
             // 
             // txtBrittleFractureThickness
             // 
@@ -994,7 +994,7 @@
             this.panel2.Controls.Add(this.label39);
             this.panel2.Controls.Add(this.txtNominalThickness);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label41);
+            this.panel2.Controls.Add(this.lblStructuralThickness);
             this.panel2.Controls.Add(this.lblCorrosionRate);
             this.panel2.Controls.Add(this.txtCurrentCorrosionRate);
             this.panel2.Controls.Add(this.txtStructuralThickness);
@@ -1056,9 +1056,9 @@
             this.label31.Location = new System.Drawing.Point(668, 218);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(127, 18);
+            this.label31.Size = new System.Drawing.Size(140, 18);
             this.label31.TabIndex = 41;
-            this.label31.Text = "Coponent Volume";
+            this.label31.Text = "Component Volume";
             // 
             // label8
             // 
@@ -1182,16 +1182,16 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Current Corrosion Rate";
             // 
-            // label41
+            // lblStructuralThickness
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(1188, 183);
-            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(34, 18);
-            this.label41.TabIndex = 39;
-            this.label41.Text = "mm";
+            this.lblStructuralThickness.AutoSize = true;
+            this.lblStructuralThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStructuralThickness.Location = new System.Drawing.Point(1188, 183);
+            this.lblStructuralThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStructuralThickness.Name = "lblStructuralThickness";
+            this.lblStructuralThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblStructuralThickness.TabIndex = 39;
+            this.lblStructuralThickness.Text = "mm";
             // 
             // lblCorrosionRate
             // 
@@ -1512,13 +1512,13 @@
         private System.Windows.Forms.CheckBox chkFabricatedSteel;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblBrittleFractureThickness;
         private System.Windows.Forms.TextBox txtBrittleFractureThickness;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label lblComponentVolume;
         private System.Windows.Forms.TextBox txtComponentVolume;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label lblStructuralThickness;
         private System.Windows.Forms.TextBox txtStructuralThickness;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.CheckBox chkMinimumStructuralThicknessGoverns;

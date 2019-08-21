@@ -467,56 +467,92 @@ namespace RBI.DAL.MSSQL_CAL
             }
             return list;
         }
-        // get DATA FROM TBL_511
-        public int GET_TBL_511(float ART, int INSP, String Effective)
+        // Thinning
+        // get DATA FROM TBL_45
+        public float[] GET_TBL_45(String levelConfidence)
         {
-            int data = 0;
-            conn = MSSQLDBUtils.GetDBConnection();
-            conn.Open();
-            String sql = null;
-            if (Effective == "E")
+            float[] data = { 0, 0, 0 };
+            for (int i = 0; i <= 2; i++)
             {
-                sql = "USE[rbi] SELECT [E] FROM [rbi].[dbo].[TBL_511_DFB_THIN] WHERE [art] ='" + ART + "'";
-            }
-            else
-            {
-                sql = "USE[rbi] SELECT [" + Effective + "] FROM [rbi].[dbo].[TBL_511_DFB_THIN] WHERE [art] ='" + ART + "' AND [insp] = '" + INSP + "'";
-            }
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = sql;
-                cmd.Connection = conn;
-                using (DbDataReader reader = cmd.ExecuteReader())
+                int NumberOrder = i + 1;
+                conn = MSSQLDBUtils.GetDBConnection();
+                conn.Open();
+
+                String sql = "USE[rbi] SELECT [PriorProbability] FROM [rbi].[dbo].[TBL_45_DM_THIN] WHERE [NumberOrder] ='" + NumberOrder + "' and [LevelConfidence]='" + levelConfidence + "'";
+                try
                 {
-                    while (reader.Read())
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = sql;
+                    cmd.Connection = conn;
+                    using (DbDataReader reader = cmd.ExecuteReader())
                     {
-                        if (reader.HasRows)
+                        while (reader.Read())
                         {
-                            data = reader.GetInt32(0);
+                            if (reader.HasRows)
+                            {
+                                data[i] = (float)reader.GetDouble(0);
+                            }
                         }
                     }
                 }
-
-            }
-            catch
-            {
-                MessageBox.Show("GET DF_THIN FAIL!");
-            }
-            finally
-            {
-                conn.Close();
-                conn.Dispose();
+                catch
+                {
+                    MessageBox.Show("GET TBL_45_DF_THIN FAIL!");
+                }
+                finally
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
             }
             return data;
         }
-        // get DATA FROM TBL_512
-        public int GET_TBL_512(double ART, String Effective)
+        // get DATA FROM TBL_46
+        public float[] GET_TBL_46(String Effective)
         {
-            int data = 0;
+            float[] data = { 0, 0, 0 };
+            for (int i = 0; i <= 2; i++)
+            {
+                int NumberOrder = i + 1;
+                conn = MSSQLDBUtils.GetDBConnection();
+                conn.Open();
+
+                String sql = "USE[rbi] SELECT [ConditionalProbability] FROM [rbi].[dbo].[TBL_46_DM_THIN] WHERE [EffectivenessCode] ='" + Effective + "' and [NumberOrder] ='" + NumberOrder + "'";
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = sql;
+                    cmd.Connection = conn;
+                    using (DbDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.HasRows)
+                            {
+                                data[i] = (float)reader.GetDouble(0);
+                            }
+                        }
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("GET TBL_46_DF_THIN FAIL!");
+                }
+                finally
+                {
+                    conn.Close();
+                    conn.Dispose();
+                }
+            }
+            return data;
+        }
+        // get DATA FROM TBL_47
+        public float GET_TBL_47(double ART, String Effective)
+        {
+            float data = 0;
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "USE[rbi] SELECT [" + Effective + "] FROM [rbi].[dbo].[TBL_512_DFB_THIN_TANK_BOTTOM] WHERE [art] ='" + ART + "'";
+            String sql = "USE[rbi] SELECT [" + Effective + "] FROM [rbi].[dbo].[TBL_47_DM_THIN_TANK] WHERE [Art] ='" + ART + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -528,14 +564,14 @@ namespace RBI.DAL.MSSQL_CAL
                     {
                         if (reader.HasRows)
                         {
-                            data = reader.GetInt32(0);
+                            data = reader.GetFloat(0);
                         }
                     }
                 }
             }
             catch
             {
-                MessageBox.Show("GET DF_THIN FAIL!");
+                MessageBox.Show("GET TBL_47_DF_THIN FAIL!");
             }
             finally
             {

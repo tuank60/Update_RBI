@@ -10,48 +10,52 @@ namespace RBI.BUS.BUSMSSQL
 {
     class RW_INSPECTION_HISTORY_BUS
     {
-        RW_INSPECTION_HISTORY_ConnUtils DAL = new RW_INSPECTION_HISTORY_ConnUtils();
-        public void add(RW_INSPECTION_HISTORY obj)
+        RW_INSPECTION_DETAIL_ConnUtils DAL = new RW_INSPECTION_DETAIL_ConnUtils();
+        public void add(RW_INSPECTION_DETAIL obj)
         {
-            DAL.add( obj.InspectionPlanName, obj.InspectionCoverageName, obj.EquipmentNumber, obj.ComponentNumber, obj.DM, obj.InspectionType, obj.InspectionDate, obj.InspectionEffective);
+            DAL.add( obj.DetailID, obj.EquipmentID, obj.ComponentID, obj.Coverage_DetailID, obj.InspPlanName, obj.InspectionDate, obj.DMItemID, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate, obj.IsActive);
         }
-        public void edit(RW_INSPECTION_HISTORY obj)
+        public void edit(RW_INSPECTION_DETAIL obj)
         {
-            DAL.edit(obj.ID, obj.InspectionPlanName, obj.InspectionCoverageName, obj.EquipmentNumber, obj.ComponentNumber, obj.DM, obj.InspectionType, obj.InspectionDate, obj.InspectionEffective);
+            DAL.edit(obj.ID, obj.DetailID, obj.EquipmentID, obj.ComponentID, obj.Coverage_DetailID, obj.InspPlanName, obj.InspectionDate, obj.DMItemID, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate, obj.IsActive);
         }
-        public void delete(RW_INSPECTION_HISTORY obj)
+        public void delete(RW_INSPECTION_DETAIL obj)
         {
             DAL.delete(obj.ID);
         }
-        public List<RW_INSPECTION_HISTORY> getDataSource()
+        public List<RW_INSPECTION_DETAIL> getDataSource()
         {
             return DAL.getDataSource();
         }
-        public List<RW_INSPECTION_HISTORY> getDataComp(String comNum)
+        public List<RW_INSPECTION_DETAIL> getDataComp(int CompID)
         {
-            return DAL.getDataComp(comNum);
+            return DAL.getDataComp(CompID);
         }
-        public Boolean checkExist(RW_INSPECTION_HISTORY obj)
+        public Boolean checkExist(RW_INSPECTION_DETAIL obj)
         {
-            return DAL.checkExist(obj.ComponentNumber, obj.DM, obj.InspectionDate);
+            return DAL.checkExist(obj.ComponentID, obj.DMItemID, obj.InspectionDate);
         }
-        public DateTime getLastInsp(String compNum, String DM, DateTime comissionDate)
+        public DateTime getLastInsp(int compID, int DMItemID, DateTime comissionDate)
         {
-            return DAL.getLastInspDate(compNum, DM, comissionDate);
+            return DAL.getLastInspDate(compID, DMItemID, comissionDate);
         }
-        public float getAge(String compNum, String DM, DateTime comissionDate, DateTime AssessmentDate)
+        public float getAge(int compID, int DMItemID, DateTime comissionDate, DateTime AssessmentDate)
         {
-            TimeSpan TICK_SPAN = AssessmentDate.Subtract(DAL.getLastInspDate(compNum, DM, comissionDate));
+            TimeSpan TICK_SPAN = AssessmentDate.Subtract(DAL.getLastInspDate(compID, DMItemID, comissionDate));
             float DATA = (float)Math.Round((double)TICK_SPAN.Days / 365, 2);
             return DATA;
         }
-        public String getHighestInspEffec(String compNum, String DM)
+        public String getHighestInspEffec(int compID, int DMItemID)
         {
-            return DAL.getMaxInspEffec(compNum, DM);
+            return DAL.getMaxInspEffec(compID, DMItemID);
         }
-        public int InspectionNumber(String comNum, String DM)
+        public int InspectionNumber(int compID, int DMItemID)
         {
-            return DAL.InspectionNumber(comNum, DM);
+            return DAL.InspectionNumber(compID, DMItemID);
+        }
+        public int InspectionTypeNumber(int compID,int DMItemID, String type)
+        {
+            return DAL.InspectionTypeNumber(compID, DMItemID, type);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace RBI
             treeListProject.OptionsBehavior.Editable = false;
             treeListProject.OptionsView.ShowIndicator = false;
             treeListProject.OptionsView.ShowColumns = false;
-            treeListProject.OptionsView.ShowHorzLines = true;
+            treeListProject.OptionsView.ShowHorzLines = false;
             treeListProject.OptionsView.ShowVertLines = false;
             treeListProject.ExpandAll();
             InitDictionaryDMMachenism();
@@ -222,7 +222,7 @@ namespace RBI
                     RW_ASSESSMENT ass = uAssTest.getData(IDProposal);
                     RW_EQUIPMENT eq = uc.ucEq.getData(IDProposal, temperature, volume); // mai
                     eq.CommissionDate = busEquipmentMaster.getComissionDate(ass.EquipmentID);
-                    RW_COMPONENT com = uc.ucComp.getData(IDProposal, diameter, thickness, corrosionRate); // mai
+                    RW_COMPONENT com = uc.ucComp.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress); // mai
                     RW_STREAM stream = uc.ucStream.getData(IDProposal); //mai
                     RW_STREAM op = uc.ucOpera.getDataforStream(IDProposal, temperature, pressure, flowRate); // mai
                     treeListProject.FocusedNode.SetValue(0, ass.ProposalName);
@@ -237,16 +237,16 @@ namespace RBI
                     stream.H2SPartialPressure = op.H2SPartialPressure;
                     //</object stream>
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
-                    RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate);
-                    RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, stress, corrosion, thickness);
-                    RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
+                    RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
+                    RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, corrosion);
+                    //RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
-                    Calculation(ThinningType, componentNumber, eq, com, ma, stream, coat, extTemp, caInput);
+                    Calculation(ThinningType, ass.ComponentID, eq, com, ma, stream, coat, extTemp);
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
-                    SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caInput);
+                    SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     showUCinTabpage(resultRisk);
                 }
@@ -273,11 +273,11 @@ namespace RBI
                     UCAssessmentInfo uAssTest = uc.ucAss;
                     RW_ASSESSMENT ass = uAssTest.getData(IDProposal);
                     RW_EQUIPMENT eq = uc.ucEquipmentTank.getData(IDProposal, temperature, volume);
-                    RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate);
+                    RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress);
                     RW_STREAM stream = uc.ucStreamTank.getData(IDProposal);
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
-                    RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate);
-                    RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, stress, thickness, corrosion);
+                    RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
+                    RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, corrosion);
                     RW_INPUT_CA_TANK caTank = new RW_INPUT_CA_TANK();
                     RW_INPUT_CA_TANK caTank1 = uc.ucEquipmentTank.getDataforTank(IDProposal);
                     RW_INPUT_CA_TANK caTank2 = uc.ucStreamTank.getDataforTank(IDProposal);
@@ -296,7 +296,7 @@ namespace RBI
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
-                    Calculation_CA_TANK(componentTypeName, apiComName, ThinningType, componentNumber, eq, com, ma, stream, coat, extTemp, caTank);
+                    Calculation_CA_TANK(componentTypeName, apiComName, ThinningType, ass.ComponentID, eq, com, ma, stream, coat, extTemp, caTank);
                     MessageBox.Show("Calculation finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank);
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
@@ -553,7 +553,7 @@ namespace RBI
             RW_STREAM rwStream = new RW_STREAM();
             RW_MATERIAL rwMaterial = new RW_MATERIAL();
             RW_COATING rwCoat = new RW_COATING();
-            RW_CA_LEVEL_1 rwCA = new RW_CA_LEVEL_1();
+            //RW_CA_LEVEL_1 rwCA = new RW_CA_LEVEL_1();
             RW_FULL_POF rwFullPoF = new RW_FULL_POF();
             RW_INPUT_CA_LEVEL_1 rwCALevel1 = new RW_INPUT_CA_LEVEL_1();
             RW_CA_TANK rwCATank = new RW_CA_TANK();
@@ -642,10 +642,10 @@ namespace RBI
             }
             else
             {
-                rwCA.ID = ID;
+                //rwCA.ID = ID;
                 rwCALevel1.ID = ID;
                 busInputCALevel1.add(rwCALevel1);
-                busCALevel1.add(rwCA);
+                //busCALevel1.add(rwCA);
             }
             initDataforTreeList();
         }
@@ -688,7 +688,7 @@ namespace RBI
                 busMaterial.delete(IDNodeTreeList);
                 busInputCALevel1.delete(IDNodeTreeList);
                 busCATank.delete(IDNodeTreeList);
-                busCALevel1.delete(IDNodeTreeList);
+                //busCALevel1.delete(IDNodeTreeList);
                 busCATank.delete(IDNodeTreeList);
                 busFullPoF.delete(IDNodeTreeList);
                 busStream.delete(IDNodeTreeList);
@@ -754,7 +754,7 @@ namespace RBI
                     busMaterial.delete(id);
                     busInputCALevel1.delete(id);
                     busInputCATank.delete(id);
-                    busCALevel1.delete(id);
+                    //busCALevel1.delete(id);
                     busCATank.delete(id);
                     busFullPoF.delete(id);
                     busStream.delete(id);
@@ -828,7 +828,7 @@ namespace RBI
                         busMaterial.delete(id);
                         busInputCALevel1.delete(id);
                         busInputCATank.delete(id);
-                        busCALevel1.delete(id);
+                        //busCALevel1.delete(id);
                         busCATank.delete(id);
                         busFullPoF.delete(id);
                         busStream.delete(id);
@@ -897,7 +897,7 @@ namespace RBI
                             busMaterial.delete(id);
                             busInputCALevel1.delete(id);
                             busInputCATank.delete(id);
-                            busCALevel1.delete(id);
+                            //busCALevel1.delete(id);
                             busCATank.delete(id);
                             busFullPoF.delete(id);
                             busStream.delete(id);
@@ -1000,7 +1000,7 @@ namespace RBI
                                 busMaterial.delete(id);
                                 busInputCALevel1.delete(id);
                                 busInputCATank.delete(id);
-                                busCALevel1.delete(id);
+                                //busCALevel1.delete(id);
                                 busCATank.delete(id);
                                 busFullPoF.delete(id);
                                 busStream.delete(id);
@@ -1084,10 +1084,10 @@ namespace RBI
                     {
                         UCAssessmentInfo _ass = new UCAssessmentInfo(IDProposal);
                         UCEquipmentProperties equipment = new UCEquipmentProperties(IDProposal, temperature, volume);
-                        UCComponentProperties component = new UCComponentProperties(IDProposal, diameter, thickness, corrosionRate);
+                        UCComponentProperties component = new UCComponentProperties(IDProposal, diameter, thickness, corrosionRate, volume, stress);
                         UCOperatingCondition op = new UCOperatingCondition(IDProposal, temperature, pressure, flowRate);
-                        UCCoatLiningIsulationCladding coat = new UCCoatLiningIsulationCladding(IDProposal, corrosionRate);
-                        UCMaterial material = new UCMaterial(IDProposal, temperature, pressure, stress, corrosion, thickness);
+                        UCCoatLiningIsulationCladding coat = new UCCoatLiningIsulationCladding(IDProposal, corrosionRate, thickness);
+                        UCMaterial material = new UCMaterial(IDProposal, temperature, pressure, corrosion);
                         UCStream stream = new UCStream(IDProposal);
                         UCCA ca = new UCCA(IDProposal, finacialUnit);
                         //UCMaterial material = new UCMaterial(IDProposal);
@@ -1142,10 +1142,10 @@ namespace RBI
                         checkTank = true;
                         UCAssessmentInfo assTank = new UCAssessmentInfo(IDProposal);
                         UCEquipmentPropertiesTank eqTank = new UCEquipmentPropertiesTank(IDProposal, type, temperature, volume);
-                        UCComponentPropertiesTank compTank = new UCComponentPropertiesTank(IDProposal, type, diameter, thickness, corrosionRate);
+                        UCComponentPropertiesTank compTank = new UCComponentPropertiesTank(IDProposal, type, diameter, thickness, corrosionRate, volume, stress);
                         UCOperatingCondition conTank = new UCOperatingCondition(IDProposal, temperature, pressure, flowRate);
-                        UCCoatLiningIsulationCladding coat = new UCCoatLiningIsulationCladding(IDProposal, corrosionRate);
-                        UCMaterialTank materialTank = new UCMaterialTank(IDProposal, temperature, pressure, stress, thickness, corrosion);
+                        UCCoatLiningIsulationCladding coat = new UCCoatLiningIsulationCladding(IDProposal, corrosionRate, thickness);
+                        UCMaterialTank materialTank = new UCMaterialTank(IDProposal, temperature, pressure, corrosion);
                         UCStreamTank streamTank = new UCStreamTank(IDProposal);
                         UCRiskFactor riskFactor = new UCRiskFactor(IDProposal);
                         UCRiskSummary riskSummary = new UCRiskSummary(IDProposal);
@@ -1331,22 +1331,22 @@ namespace RBI
                     break;
                 case "UCComponentProperties":
                     UCComponentProperties com = uc as UCComponentProperties;
-                    RW_COMPONENT rwCom = com.getData(ID, diameter, thickness, corrosionRate);
+                    RW_COMPONENT rwCom = com.getData(ID, diameter, thickness, corrosionRate, volume, stress);
                     busComponent.edit(rwCom);
                     break;
                 case "UCComponentPropertiesTank":
                     UCComponentPropertiesTank com1 = uc as UCComponentPropertiesTank;
-                    RW_COMPONENT rwCom1 = com1.getData(ID, diameter, thickness, corrosionRate);
+                    RW_COMPONENT rwCom1 = com1.getData(ID, diameter, thickness, corrosionRate, volume, stress);
                     busComponent.edit(rwCom1);
                     break;
                 case "UCMaterial":
                     UCMaterial ma = uc as UCMaterial;
-                    RW_MATERIAL rwMa = ma.getData(ID, temperature, pressure, stress, corrosion, thickness);
+                    RW_MATERIAL rwMa = ma.getData(ID, temperature, pressure, corrosion);
                     busMaterial.edit(rwMa);
                     break;
                 case "UCMaterialTank":
                     UCMaterialTank ma1 = uc as UCMaterialTank;
-                    RW_MATERIAL rwMa1 = ma1.getData(ID, temperature, pressure, stress, thickness, corrosion);
+                    RW_MATERIAL rwMa1 = ma1.getData(ID, temperature, pressure, corrosion);
                     busMaterial.edit(rwMa1);
                     break;
                 case "UCOperatingCondition":
@@ -1423,12 +1423,14 @@ namespace RBI
                 damageMachenism.Add(DM_ID[i], DM_Name[i]);
             }
         }
-        private void PoF(out RW_FULL_POF full_pof, out InputInspectionCalculation insplant, out MSSQL_DM_CAL calDM, out List<RW_DAMAGE_MECHANISM> DMmachenism, String ThinningType, String componentNumber, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem)
+        private void PoF(out RW_FULL_POF full_pof, out InputInspectionCalculation insplant, out MSSQL_DM_CAL calDM, out List<RW_DAMAGE_MECHANISM> DMmachenism, String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem)
         {
             InputInspectionCalculation inspl = new InputInspectionCalculation();
 
             #region PoF
             //get EquipmentID ----> get EquipmentTypeName and APIComponentType
+            COMPONENT_MASTER componentMaster = busComponentMaster.getData(componentID);
+            float ShapeFactor = busComponentType.getShapeFactor(componentMaster.ComponentTypeID);
             int equipmentID = busAssessment.getEquipmentID(IDProposal);
             String equipmentTypename = busEquipmentType.getEquipmentTypeName(busEquipmentMaster.getEquipmentTypeID(equipmentID));
             int apiID = busComponentMaster.getAPIComponentTypeID(equipmentID);
@@ -1437,17 +1439,30 @@ namespace RBI
             MSSQL_DM_CAL cal = new MSSQL_DM_CAL();
             cal.APIComponentType = API_ComponentType_Name;
             //<input thinning>
+            cal.ShapeFactor = ShapeFactor;
             cal.Diametter = com.NominalDiameter;
             cal.NomalThick = com.NominalThickness;
             cal.CurrentThick = com.CurrentThickness;
             cal.MinThickReq = com.MinReqThickness;
             cal.CorrosionRate = com.CurrentCorrosionRate;
+            cal.AllowableStress = com.AllowableStress;
+            cal.WeldJointEfficiency = com.WeldJointEfficiency;
+            cal.DesignPressure = ma.DesignPressure;
+            cal.MinStructThick = com.MinimumStructuralThicknessGoverns == 1 ? true : false;
             cal.ProtectedBarrier = eq.DowntimeProtectionUsed == 1 ? true : false; //xem lai
             cal.CladdingCorrosionRate = coat.CladdingCorrosionRate;
+            cal.TensileStrength = ma.TensileStrength;
+            cal.YieldStrength = ma.YieldStrength;
             cal.InternalCladding = coat.InternalCladding == 1 ? true : false;
-            cal.NoINSP_THINNING = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[0]);
+            cal.NoINSP_THINNING = busInspectionHistory.InspectionNumber(componentID, DM_ID[0]);
+            cal.ConfidenceCorrosionRate = com.ConfidenceCorrosionRate;
+            cal.NumberInspectionTypeA = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "A");
+            cal.NumberInspectionTypeB = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "B");
+            cal.NumberInspectionTypeC = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "C");
+            cal.NumberInspectionTypeD = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "D");
+        
             Console.WriteLine("noInspection:" + cal.NoINSP_THINNING);
-            cal.EFF_THIN = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[0]);
+            cal.EFF_THIN = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[0]);
             cal.OnlineMonitoring = eq.OnlineMonitoring;
             cal.HighlyEffectDeadleg = eq.HighlyDeadlegInsp == 1 ? true : false;
             cal.ContainsDeadlegs = eq.ContainsDeadlegs == 1 ? true : false;
@@ -1462,13 +1477,13 @@ namespace RBI
             cal.LINNER_ONLINE = eq.LinerOnlineMonitoring == 1 ? true : false;
             cal.LINNER_CONDITION = coat.InternalLinerCondition;
             cal.INTERNAL_LINNING = coat.InternalLining == 1 ? true : false;
-            TimeSpan year = busAssessment.getAssessmentDate(IDProposal) - busInspectionHistory.getLastInsp(componentNumber, DM_Name[1], busEquipmentMaster.getComissionDate(equipmentID));
+            TimeSpan year = busAssessment.getAssessmentDate(IDProposal) - busInspectionHistory.getLastInsp(componentID, DM_ID[1], busEquipmentMaster.getComissionDate(equipmentID));
             cal.YEAR_IN_SERVICE = (int)(year.Days / 365); //Yearinservice hiệu tham số giữa lần tính toán và ngày cài đặt hệ thống
             //</input linning>
 
             //<input SCC CAUSTIC>
-            cal.CAUSTIC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[2]);
-            cal.CAUSTIC_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[2]);
+            cal.CAUSTIC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[2]);
+            cal.CAUSTIC_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[2]);
             cal.HEAT_TREATMENT = ma.HeatTreatment;
             cal.NaOHConcentration = st.NaOHConcentration;
             cal.HEAT_TRACE = eq.HeatTraced == 1 ? true : false;
@@ -1476,8 +1491,8 @@ namespace RBI
             //</SCC CAUSTIC>
 
             //<input SCC Amine>
-            cal.AMINE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[3]);
-            cal.AMINE_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[3]);
+            cal.AMINE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[3]);
+            cal.AMINE_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[3]);
             cal.AMINE_EXPOSED = st.ExposedToGasAmine == 1 ? true : false;
             cal.AMINE_SOLUTION = st.AmineSolution;
             //</input SCC Amine>
@@ -1486,8 +1501,8 @@ namespace RBI
             cal.ENVIRONMENT_H2S_CONTENT = st.H2S == 1 ? true : false;
             cal.AQUEOUS_OPERATOR = st.AqueousOperation == 1 ? true : false;
             cal.AQUEOUS_SHUTDOWN = st.AqueousShutdown == 1 ? true : false;
-            cal.SULPHIDE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[4]);
-            cal.SULPHIDE_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[4]);
+            cal.SULPHIDE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[4]);
+            cal.SULPHIDE_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[4]);
             cal.H2SContent = st.H2SInWater;
             cal.PH = st.WaterpH;
             cal.PRESENT_CYANIDE = st.Cyanide == 1 ? true : false;
@@ -1495,23 +1510,23 @@ namespace RBI
             //</Sulphide Stress Cracking>
 
             //<input HIC/SOHIC-H2S>
-            cal.SULFUR_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[5]);
-            cal.SULFUR_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[5]);
+            cal.SULFUR_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[5]);
+            cal.SULFUR_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[5]);
             cal.SULFUR_CONTENT = ma.SulfurContent;
             //</HIC/SOHIC-H2S>
 
             //<input SCC Damage Factor Carbonate Cracking>
             cal.CO3_CONCENTRATION = st.CO3Concentration;
-            cal.CACBONATE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[6]);
-            cal.CACBONATE_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[6]);
+            cal.CACBONATE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[6]);
+            cal.CACBONATE_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[6]);
             //</SCC Damage Factor Carbonate Cracking>
 
             //<input PTA Cracking>
             cal.PTA_SUSCEP = ma.IsPTA == 1 ? true : false;
             cal.NICKEL_ALLOY = ma.NickelBased == 1 ? true : false;
             cal.EXPOSED_SULFUR = st.ExposedToSulphur == 1 ? true : false;
-            cal.PTA_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[7]);
-            cal.PTA_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[7]);
+            cal.PTA_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[7]);
+            cal.PTA_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[7]);
             cal.ExposedSH2OOperation = eq.PresenceSulphidesO2 == 1 ? true : false;
             cal.ExposedSH2OShutdown = eq.PresenceSulphidesO2Shutdown == 1 ? true : false;
             cal.ThermalHistory = eq.ThermalHistory;
@@ -1520,26 +1535,26 @@ namespace RBI
             //</PTA Cracking>
 
             //<input CLSCC>
-            cal.CLSCC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[8]);
-            cal.CLSCC_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[8]);
+            cal.CLSCC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[8]);
+            cal.CLSCC_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[8]);
             cal.EXTERNAL_EXPOSED_FLUID_MIST = eq.MaterialExposedToClExt == 1 ? true : false;
             cal.INTERNAL_EXPOSED_FLUID_MIST = st.MaterialExposedToClInt == 1 ? true : false;
             cal.CHLORIDE_ION_CONTENT = st.Chloride;
             //</CLSCC>
 
             //<input HSC-HF>
-            cal.HSC_HF_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[9]);
-            cal.HSC_HF_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[9]);
+            cal.HSC_HF_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[9]);
+            cal.HSC_HF_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[9]);
             //</HSC-HF>
 
             //<input External Corrosion>
-            cal.EXTERNAL_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[11]);
-            cal.EXTERNAL_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[11]);
+            cal.EXTERNAL_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[11]);
+            cal.EXTERNAL_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[11]);
             //</External Corrosion>
 
             //<input HIC/SOHIC-HF>
-            cal.HICSOHIC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[10]);
-            cal.HICSOHIC_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[10]);
+            cal.HICSOHIC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[10]);
+            cal.HICSOHIC_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[10]);
             cal.HF_PRESENT = st.Hydrofluoric == 1 ? true : false;
             //</HIC/SOHIC-HF>
 
@@ -1547,8 +1562,8 @@ namespace RBI
             cal.INTERFACE_SOIL_WATER = eq.InterfaceSoilWater == 1 ? true : false;
             cal.SUPPORT_COATING = coat.SupportConfigNotAllowCoatingMaint == 1 ? true : false;
             cal.INSULATION_TYPE = coat.ExternalInsulationType;
-            cal.CUI_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[12]);
-            cal.CUI_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[12]);
+            cal.CUI_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[12]);
+            cal.CUI_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[12]);
             cal.CUI_INSP_DATE = coat.ExternalCoatingDate;
             cal.CUI_PERCENT_1 = tem.Minus12ToMinus8;
             cal.CUI_PERCENT_2 = tem.Minus8ToPlus6;
@@ -1563,13 +1578,13 @@ namespace RBI
             //</CUI DM>
 
             //<input External CLSCC>
-            cal.EXTERN_CLSCC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[13]);
-            cal.EXTERN_CLSCC_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[13]);
+            cal.EXTERN_CLSCC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[13]);
+            cal.EXTERN_CLSCC_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[13]);
             //</External CLSCC>
 
             //<input External CUI CLSCC>
-            cal.EXTERN_CLSCC_CUI_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[14]);
-            cal.EXTERN_CLSCC_CUI_INSP_NUM = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[14]);
+            cal.EXTERN_CLSCC_CUI_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[14]);
+            cal.EXTERN_CLSCC_CUI_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[14]);
             cal.EXTERNAL_INSULATION = coat.ExternalInsulation == 1 ? true : false;
             cal.COMPONENT_INSTALL_DATE = eq.CommissionDate;
             cal.CRACK_PRESENT = com.CracksPresent == 1 ? true : false;
@@ -1581,8 +1596,8 @@ namespace RBI
             //</External CUI CLSCC>
 
             //<input HTHA>
-            cal.HTHA_EFFECT = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[15]);
-            cal.HTHA_NUM_INSP = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[15]);
+            cal.HTHA_EFFECT = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[15]);
+            cal.HTHA_NUM_INSP = busInspectionHistory.InspectionNumber(componentID, DM_ID[15]);
             cal.MATERIAL_SUSCEP_HTHA = ma.IsHTHA == 1 ? true : false;
             cal.HTHA_MATERIAL = ma.HTHAMaterialCode; //check lai
             cal.HTHA_PRESSURE = st.H2SPartialPressure * 0.006895f;
@@ -1634,9 +1649,9 @@ namespace RBI
             float[] age = new float[14];
             for (int i = 0; i < 13; i++)
             {
-                age[i] = busInspectionHistory.getAge(componentNumber, DM_Name[i], busEquipmentMaster.getComissionDate(equipmentID), busAssessment.getAssessmentDate(IDProposal));
+                age[i] = busInspectionHistory.getAge(componentID, DM_ID[i], busEquipmentMaster.getComissionDate(equipmentID), busAssessment.getAssessmentDate(IDProposal));
             }
-            age[13] = busInspectionHistory.getAge(componentNumber, DM_Name[15], busEquipmentMaster.getComissionDate(equipmentID), busAssessment.getAssessmentDate(IDProposal));
+            age[13] = busInspectionHistory.getAge(componentID, DM_ID[15], busEquipmentMaster.getComissionDate(equipmentID), busAssessment.getAssessmentDate(IDProposal));
 
             Df[0] = cal.DF_THIN(age[0]);
             Df[1] = cal.DF_LINNING(age[1]);
@@ -1680,10 +1695,10 @@ namespace RBI
                     damage.ID = IDProposal;
                     damage.DMItemID = DM_ID[i];
                     damage.IsActive = 1;
-                    damage.HighestInspectionEffectiveness = busInspectionHistory.getHighestInspEffec(componentNumber, DM_Name[i]);
+                    damage.HighestInspectionEffectiveness = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[i]);
                     damage.SecondInspectionEffectiveness = damage.HighestInspectionEffectiveness;
-                    damage.NumberOfInspections = busInspectionHistory.InspectionNumber(componentNumber, DM_Name[i]);
-                    damage.LastInspDate = busInspectionHistory.getLastInsp(componentNumber, DM_Name[i], eq.CommissionDate);
+                    damage.NumberOfInspections = busInspectionHistory.InspectionNumber(componentID, DM_ID[i]);
+                    damage.LastInspDate = busInspectionHistory.getLastInsp(componentID, DM_ID[i], eq.CommissionDate);
 
                     if (damage.LastInspDate.Year < 1753)
                     {
@@ -1930,7 +1945,7 @@ namespace RBI
             fullPOF.PoFAP2 = fullPOF.PoFAP2 > 1 ? 1 : fullPOF.PoFAP2;
             fullPOF.PoFAP3 = fullPOF.PoFAP3 > 1 ? 1 : fullPOF.PoFAP3;
             full_pof = fullPOF;
-            inspl.ComponentNumber = componentNumber;
+            inspl.ComponentID = componentID;
             inspl.ApiComponentType = API_ComponentType_Name;
             inspl.EquipmentID = equipmentID;
             inspl.Age = age;
@@ -2053,10 +2068,10 @@ namespace RBI
                     insp.Method = "No Name";
                     insp.Coverage = "N/A";
                     insp.Availability = "Online";
-                    insp.LastInspectionDate = Convert.ToString(busInspectionHistory.getLastInsp(inspl.ComponentNumber, DM_Name[1], busEquipmentMaster.getComissionDate(inspl.EquipmentID)));
+                    insp.LastInspectionDate = Convert.ToString(busInspectionHistory.getLastInsp(inspl.ComponentID, DM_ID[1], busEquipmentMaster.getComissionDate(inspl.EquipmentID)));
                     insp.InspectionInterval = k.ToString();
                     //thay get last inspection = assessment date
-                    insp.DueDate = Convert.ToString(busInspectionHistory.getLastInsp(inspl.ComponentNumber, DM_Name[1], busEquipmentMaster.getComissionDate(inspl.EquipmentID)).AddYears(k));
+                    insp.DueDate = Convert.ToString(busInspectionHistory.getLastInsp(inspl.ComponentID, DM_ID[1], busEquipmentMaster.getComissionDate(inspl.EquipmentID)).AddYears(k));
                     switch (i)
                     {
                         case 0:
@@ -2077,81 +2092,76 @@ namespace RBI
             }
             #endregion
         }
-        private void CA(out float fc, string apiComponentTypeName, RW_COMPONENT com, RW_MATERIAL ma, RW_INPUT_CA_LEVEL_1 caInput)
+        private void CA(out float fc, string apiComponentTypeName, RW_COMPONENT com, RW_MATERIAL ma)
         {
             #region CA
-            MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+            //MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
             //<input CA Lavel 1>
-            CA_CAL.NominalDiameter = com.NominalDiameter;
-            CA_CAL.MATERIAL_COST = ma.CostFactor;
-            CA_CAL.FLUID = caInput.API_FLUID;
-            CA_CAL.FLUID_PHASE = caInput.SYSTEM;
-            CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
-            CA_CAL.DETECTION_TYPE = caInput.Detection_Type;
-            CA_CAL.ISULATION_TYPE = caInput.Isulation_Type;
-            CA_CAL.STORED_PRESSURE = caInput.Stored_Pressure;
-            CA_CAL.ATMOSPHERIC_PRESSURE = 101;
-            CA_CAL.STORED_TEMP = caInput.Stored_Temp;
-            CA_CAL.MASS_INVERT = caInput.Mass_Inventory;
-            CA_CAL.MASS_COMPONENT = caInput.Mass_Component;
-            CA_CAL.MITIGATION_SYSTEM = caInput.Mitigation_System;
-            CA_CAL.TOXIC_PERCENT = caInput.Toxic_Percent;
-            CA_CAL.RELEASE_DURATION = caInput.Release_Duration;
-            CA_CAL.PRODUCTION_COST = caInput.Production_Cost;
-            CA_CAL.INJURE_COST = caInput.Injure_Cost;
-            CA_CAL.ENVIRON_COST = caInput.Environment_Cost;
-            CA_CAL.PERSON_DENSITY = caInput.Personal_Density;
-            CA_CAL.EQUIPMENT_COST = caInput.Equipment_Cost;
+            //CA_CAL.NominalDiameter = com.NominalDiameter;
+            //CA_CAL.MATERIAL_COST = ma.CostFactor;
+            //CA_CAL.FLUID = caInput.API_FLUID;
+            //CA_CAL.FLUID_PHASE = caInput.SYSTEM;
+            //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+            //CA_CAL.DETECTION_TYPE = caInput.Detection_Type;
+            //CA_CAL.ISULATION_TYPE = caInput.Isulation_Type;
+            //CA_CAL.STORED_PRESSURE = caInput.Stored_Pressure;
+            //CA_CAL.ATMOSPHERIC_PRESSURE = 101;
+            //CA_CAL.STORED_TEMP = caInput.Stored_Temp;
+            //CA_CAL.MASS_INVERT = caInput.Mass_Inventory;
+            //CA_CAL.MASS_COMPONENT = caInput.Mass_Component;
+            //CA_CAL.MITIGATION_SYSTEM = caInput.Mitigation_System;
+            //CA_CAL.TOXIC_PERCENT = caInput.Toxic_Percent;
+            //CA_CAL.RELEASE_DURATION = caInput.Release_Duration;
+            //CA_CAL.PRODUCTION_COST = caInput.Production_Cost;
+            //CA_CAL.INJURE_COST = caInput.Injure_Cost;
+            //CA_CAL.ENVIRON_COST = caInput.Environment_Cost;
+            //CA_CAL.PERSON_DENSITY = caInput.Personal_Density;
+            //CA_CAL.EQUIPMENT_COST = caInput.Equipment_Cost;
             //</CA Level 1>
-
+            fc = 0;
             //<calculate CA>
-            RW_CA_LEVEL_1 caLvl1 = new RW_CA_LEVEL_1();
-            caLvl1.ID = caInput.ID;
-            caLvl1.Release_Phase = CA_CAL.GET_RELEASE_PHASE();
-            caLvl1.fact_di = CA_CAL.fact_di();
-            caLvl1.fact_mit = CA_CAL.fact_mit();
-            caLvl1.fact_ait = CA_CAL.fact_ait();
-            caLvl1.CA_cmd = float.IsNaN(CA_CAL.ca_cmd()) ? 0 : CA_CAL.ca_cmd();
-            caLvl1.CA_inj_flame = float.IsNaN(CA_CAL.ca_inj_flame()) ? 0 : CA_CAL.ca_inj_flame();
-            caLvl1.CA_inj_toxic = float.IsNaN(CA_CAL.ca_inj_tox()) ? 0 : CA_CAL.ca_inj_tox();
-            caLvl1.CA_inj_ntnf = float.IsNaN(CA_CAL.ca_inj_nfnt()) ? 0 : CA_CAL.ca_inj_nfnt();
-            caLvl1.FC_cmd = float.IsNaN(CA_CAL.fc_cmd()) ? 0 : CA_CAL.fc_cmd();
-            caLvl1.FC_affa = float.IsNaN(CA_CAL.fc_affa()) ? 0 : CA_CAL.fc_affa();
-            caLvl1.FC_prod = float.IsNaN(CA_CAL.fc_prod()) ? 0 : CA_CAL.fc_prod();
-            caLvl1.FC_inj = float.IsNaN(CA_CAL.fc_inj()) ? 0 : CA_CAL.fc_inj();
-            caLvl1.FC_envi = float.IsNaN(CA_CAL.fc_environ()) ? 0 : CA_CAL.fc_environ();
-            caLvl1.FC_total = float.IsNaN(CA_CAL.fc()) ? 100000000 : CA_CAL.fc();
-            fc = caLvl1.FC_total;
-            if (caLvl1.FC_total == 0)
-            {
-                caLvl1.FC_total = 100000000;
-            }
+            //RW_CA_LEVEL_1 caLvl1 = new RW_CA_LEVEL_1();
+            //caLvl1.ID = caInput.ID;
+            //caLvl1.Release_Phase = CA_CAL.GET_RELEASE_PHASE();
+            //caLvl1.fact_di = CA_CAL.fact_di();
+            //caLvl1.fact_mit = CA_CAL.fact_mit();
+            //caLvl1.fact_ait = CA_CAL.fact_ait();
+            //caLvl1.CA_cmd = float.IsNaN(CA_CAL.ca_cmd()) ? 0 : CA_CAL.ca_cmd();
+            //caLvl1.CA_inj_flame = float.IsNaN(CA_CAL.ca_inj_flame()) ? 0 : CA_CAL.ca_inj_flame();
+            //caLvl1.CA_inj_toxic = float.IsNaN(CA_CAL.ca_inj_tox()) ? 0 : CA_CAL.ca_inj_tox();
+            //caLvl1.CA_inj_ntnf = float.IsNaN(CA_CAL.ca_inj_nfnt()) ? 0 : CA_CAL.ca_inj_nfnt();
+            //caLvl1.FC_cmd = float.IsNaN(CA_CAL.fc_cmd()) ? 0 : CA_CAL.fc_cmd();
+            //caLvl1.FC_affa = float.IsNaN(CA_CAL.fc_affa()) ? 0 : CA_CAL.fc_affa();
+            //caLvl1.FC_prod = float.IsNaN(CA_CAL.fc_prod()) ? 0 : CA_CAL.fc_prod();
+            //caLvl1.FC_inj = float.IsNaN(CA_CAL.fc_inj()) ? 0 : CA_CAL.fc_inj();
+            //caLvl1.FC_envi = float.IsNaN(CA_CAL.fc_environ()) ? 0 : CA_CAL.fc_environ();
+            //caLvl1.FC_total = float.IsNaN(CA_CAL.fc()) ? 100000000 : CA_CAL.fc();
+            //fc = caLvl1.FC_total;
+            //if (caLvl1.FC_total == 0)
+            //{
+            //    caLvl1.FC_total = 100000000;
+            //}
 
-            caLvl1.FCOF_Category = CA_CAL.FC_Category(caLvl1.FC_total);
-            RW_FULL_FCOF fullFCoF = new RW_FULL_FCOF();
-            fullFCoF.ID = caLvl1.ID;
-            fullFCoF.FCoFValue = caLvl1.FC_total;
-            fullFCoF.FCoFCategory = caLvl1.FCOF_Category;
+            //caLvl1.FCOF_Category = CA_CAL.FC_Category(caLvl1.FC_total);
+            //RW_FULL_FCOF fullFCoF = new RW_FULL_FCOF();
+            //fullFCoF.ID = caInput.ID;
+            //fullFCoF.FCoFValue = caLvl1.FC_total;
+            //fullFCoF.FCoFCategory = caLvl1.FCOF_Category;
 
             //fullFCoF.AIL = 
-            fullFCoF.envcost = CA_CAL.ENVIRON_COST;
-            fullFCoF.equipcost = CA_CAL.EQUIPMENT_COST;
-            fullFCoF.prodcost = CA_CAL.PRODUCTION_COST;
-            fullFCoF.popdens = CA_CAL.PERSON_DENSITY;
-            fullFCoF.injcost = CA_CAL.INJURE_COST;
+            //fullFCoF.envcost = CA_CAL.ENVIRON_COST;
+            //fullFCoF.equipcost = CA_CAL.EQUIPMENT_COST;
+            //fullFCoF.prodcost = CA_CAL.PRODUCTION_COST;
+            //fullFCoF.popdens = CA_CAL.PERSON_DENSITY;
+            //fullFCoF.injcost = CA_CAL.INJURE_COST;
             //fullFCoF.FCoFMatrixValue
             //</calculate CA>
 
             //<Save to Database>
-            if (busCALevel1.checkExist(caLvl1.ID))
-                busCALevel1.edit(caLvl1);
-            else
-                busCALevel1.add(caLvl1);
-
-            if (busFullFCoF.checkExist(fullFCoF.ID))
-                busFullFCoF.edit(fullFCoF);
-            else
-                busFullFCoF.add(fullFCoF);
+            //if (busFullFCoF.checkExist(fullFCoF.ID))
+            //    busFullFCoF.edit(fullFCoF);
+            //else
+            //    busFullFCoF.add(fullFCoF);
             //</Save to Database>
             #endregion
         }
@@ -2297,25 +2307,25 @@ namespace RBI
                 busFullFCoF.add(fullFCoF);
             #endregion
         }
-        private void Calculation(String ThinningType, String componentNumber, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_LEVEL_1 caInput)
+        private void Calculation(String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem)
         {
             InputInspectionCalculation inputInsp;
             MSSQL_DM_CAL cacal;
             List<RW_DAMAGE_MECHANISM> DMmache;
             RW_FULL_POF fullpof;
             float FC = 0;
-            PoF(out fullpof, out inputInsp, out cacal, out DMmache, ThinningType, componentNumber, eq, com, ma, st, coat, tem);
-            CA(out FC, inputInsp.ApiComponentType, com, ma, caInput);
+            PoF(out fullpof, out inputInsp, out cacal, out DMmache, ThinningType, componentID, eq, com, ma, st, coat, tem);
+            CA(out FC, inputInsp.ApiComponentType, com, ma);
             InspectionPlan(fullpof, inputInsp, cacal, DMmache, FC);
         }
-        private void Calculation_CA_TANK(String componentTypeName, String API_component, String ThinningType, String componentNumber, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
+        private void Calculation_CA_TANK(String componentTypeName, String API_component, String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
         {
             InputInspectionCalculation insp;
             MSSQL_DM_CAL cacal;
             List<RW_DAMAGE_MECHANISM> DMmachenism;
             float FC = 0;
             RW_FULL_POF fullpof;
-            PoF(out fullpof, out insp, out cacal, out DMmachenism, ThinningType, componentNumber, eq, com, ma, st, coat, tem);
+            PoF(out fullpof, out insp, out cacal, out DMmachenism, ThinningType, componentID, eq, com, ma, st, coat, tem);
             CA_Tank(out FC, API_component, componentTypeName, eq, ma, caTank);
             InspectionPlan(fullpof, insp, cacal, DMmachenism, FC);
         }
@@ -2561,7 +2571,7 @@ namespace RBI
                 //init Data for Excel
                 RiskSummary risk = new RiskSummary();
                 RW_FULL_POF fullPoF = busFullPoF.getData(IDProposal);
-                RW_CA_LEVEL_1 CA = busCALevel1.getData(IDProposal);
+                //RW_CA_LEVEL_1 CA = busCALevel1.getData(IDProposal);
                 RW_CA_TANK CATank = busCATank.getData(IDProposal);
 
                 RW_ASSESSMENT_BUS assBus = new RW_ASSESSMENT_BUS();
@@ -2584,11 +2594,11 @@ namespace RBI
                 {
                     risk.RepresentFluid = inputCA.API_FLUID; //Represent fluid
                     risk.FluidPhase = inputCA.SYSTEM;  //fluid phase
-                    risk.cofcatFlammable = CA.CA_inj_flame; //cofcat. Flammable
-                    risk.cofcatPeople = CA.FC_inj;//cofcat people
-                    risk.cofcatAsset = CA.FC_prod;//cofcat assessment
-                    risk.cofcatEnv = CA.FC_envi;//cofcat envroment
-                    risk.cofcatCombined = CA.FC_total; //combined
+                    //risk.cofcatFlammable = CA.CA_inj_flame; //cofcat. Flammable
+                    //risk.cofcatPeople = CA.FC_inj;//cofcat people
+                    //risk.cofcatAsset = CA.FC_prod;//cofcat assessment
+                    //risk.cofcatEnv = CA.FC_envi;//cofcat envroment
+                    //risk.cofcatCombined = CA.FC_total; //combined
                 }
                 else
                 {
@@ -2612,8 +2622,8 @@ namespace RBI
                 risk.extOtherPoF = 0;//Ext Other POF
                 risk.extPoF = risk.extThinningPoF + risk.extEnvCrackingPoF + risk.extOtherPoF; //Ext POF
                 risk.PoF = risk.initPoF + risk.extPoF;//POF
-                risk.CurrentRiskCalculation = fullPoF.PoFAP1 * CA.FC_total; //Current risk
-                risk.futureRisk = fullPoF.PoFAP2 * CA.FC_total;
+                //risk.CurrentRiskCalculation = fullPoF.PoFAP1 * CA.FC_total; //Current risk
+                //risk.futureRisk = fullPoF.PoFAP2 * CA.FC_total;
 
                 MSSQL_CA_CAL riskCal = new MSSQL_CA_CAL();
                 //Write Data to Cells
@@ -2874,7 +2884,7 @@ namespace RBI
                 //init Data for Excel
                 RiskSummary risk = new RiskSummary();
                 RW_FULL_POF fullPoF = busFullPoF.getData(IDProposal);
-                RW_CA_LEVEL_1 CA = busCALevel1.getData(IDProposal);
+                //RW_CA_LEVEL_1 CA = busCALevel1.getData(IDProposal);
                 //get EquipmentID ----> get EquipmentTypeName and APIComponentType
                 int equipmentID = busAssessment.getEquipmentID(IDProposal);
                 String equipmentTypename = busEquipmentType.getEquipmentTypeName(busEquipmentMaster.getEquipmentTypeID(equipmentID));
@@ -2889,12 +2899,12 @@ namespace RBI
                 risk.RepresentFluid = inputCA.API_FLUID; //Represent fluid
                 risk.FluidPhase = inputCA.SYSTEM;  //fluid phase
                 risk.currentRisk = 0;//current risk
-                risk.cofcatFlammable = CA.CA_inj_flame; //cofcat. Flammable
-                risk.cofcatPeople = caTank.FC_Environ_Leak;
-                risk.cofcatAsset = CA.FC_prod;//cofcat assessment
-                risk.cofcatEnv = CA.FC_envi;//cofcat envroment
-                risk.cofcatReputation = 0; //cof reputation
-                risk.cofcatCombined = CA.FC_total; //combined
+                //risk.cofcatFlammable = CA.CA_inj_flame; //cofcat. Flammable
+                //risk.cofcatPeople = caTank.FC_Environ_Leak;
+                //risk.cofcatAsset = CA.FC_prod;//cofcat assessment
+                //risk.cofcatEnv = CA.FC_envi;//cofcat envroment
+                //risk.cofcatReputation = 0; //cof reputation
+                //risk.cofcatCombined = CA.FC_total; //combined
                 //risk.componentMaterialGrade; //component material glade
                 risk.initThinningPoF = fullPoF.ThinningAP1;//Thinning POF
                 risk.initEnvCracking = fullPoF.SCCAP1;//Cracking env
@@ -2905,8 +2915,8 @@ namespace RBI
                 risk.extOtherPoF = 0;//Ext Other POF
                 risk.extPoF = risk.extThinningPoF + risk.extEnvCrackingPoF + risk.extOtherPoF; //Ext POF
                 risk.PoF = risk.initPoF + risk.extPoF;//POF
-                risk.CurrentRiskCalculation = fullPoF.PoFAP1 * CA.FC_total; //Current risk
-                risk.futureRisk = fullPoF.PoFAP2 * CA.FC_total;
+                //risk.CurrentRiskCalculation = fullPoF.PoFAP1 * CA.FC_total; //Current risk
+                //risk.futureRisk = fullPoF.PoFAP2 * CA.FC_total;
 
                 MSSQL_CA_CAL riskCal = new MSSQL_CA_CAL();
                 //Write Data to Cells
@@ -2998,7 +3008,7 @@ namespace RBI
         }
 
         //Thiet bi thuong
-        private void SaveDatatoDatabase(RW_ASSESSMENT ass, RW_EQUIPMENT eq, RW_COMPONENT com, RW_STREAM stream, RW_EXTCOR_TEMPERATURE extTemp, RW_COATING coat, RW_MATERIAL ma, RW_INPUT_CA_LEVEL_1 ca)
+        private void SaveDatatoDatabase(RW_ASSESSMENT ass, RW_EQUIPMENT eq, RW_COMPONENT com, RW_STREAM stream, RW_EXTCOR_TEMPERATURE extTemp, RW_COATING coat, RW_MATERIAL ma)
         {
             busAssessment.edit(ass);
             busEquipment.edit(eq);
@@ -3007,7 +3017,7 @@ namespace RBI
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
-            busInputCALevel1.edit(ca);
+            //busInputCALevel1.edit(ca);
 
         }
         //thiet bi tank
@@ -3348,7 +3358,7 @@ namespace RBI
         RW_COATING_BUS busCoating = new RW_COATING_BUS();
         RW_INPUT_CA_LEVEL_1_BUS busInputCALevel1 = new RW_INPUT_CA_LEVEL_1_BUS();
         RW_INPUT_CA_TANK_BUS busInputCATank = new RW_INPUT_CA_TANK_BUS();
-        RW_CA_LEVEL_1_BUS busCALevel1 = new RW_CA_LEVEL_1_BUS();
+        //RW_CA_LEVEL_1_BUS busCALevel1 = new RW_CA_LEVEL_1_BUS();
         RW_CA_TANK_BUS busCATank = new RW_CA_TANK_BUS();
         RW_FULL_POF_BUS busFullPoF = new RW_FULL_POF_BUS();
         RW_FULL_FCOF_BUS busFullFCoF = new RW_FULL_FCOF_BUS();

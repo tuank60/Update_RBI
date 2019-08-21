@@ -35,5 +35,9 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getIDbyName(name);
         }
+        public float getShapeFactor(int typeID)
+        {
+            return DAL.getShapeFactor(typeID);
+        }
     }
 }

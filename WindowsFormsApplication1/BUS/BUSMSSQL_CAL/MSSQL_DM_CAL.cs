@@ -23,6 +23,15 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float CladdingCorrosionRate { set; get; }
         public Boolean InternalCladding { set; get; }
         public int NoINSP_THINNING { set; get; }
+        public int NumberInspectionTypeA { set; get; }
+        public int NumberInspectionTypeB { set; get; }
+        public int NumberInspectionTypeC { set; get; }
+        public int NumberInspectionTypeD { set; get; }
+        public float[] PriorProb { set; get; }
+        public float[] ConditionalProbA { set; get; }
+        public float[] ConditionalProbB { set; get; }
+        public float[] ConditionalProbC { set; get; }
+        public float[] ConditionalProbD { set; get; }
         public String EFF_THIN { set; get; }
         public String OnlineMonitoring { set; get; }
         public Boolean HighlyEffectDeadleg { set; get; }
@@ -39,7 +48,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float ShapeFactor { set; get; }
         public float DesignPressure { set; get; }
         public float MaxOperatingPressure { set; get; }
-
+        public String ConfidenceCorrosionRate { set; get; }
         //</Thinning>
 
         //<Lining>
@@ -327,119 +336,124 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
         public float FlowStress()
         {
-            return ((YieldStrength + TensileStrength) / 2) * WeldJointEfficiency * 1.1f;
+            return ((YieldStrength + TensileStrength) / 2) * WeldJointEfficiency * 1.1f; // MPA la don vi chuan
         }
 
         public float StrengRatio()
         {
-            return (AllowableStress * WeldJointEfficiency * Math.Max(getTmin(), StructualThickness)) / (FlowStress() * NomalThick); // test equation 2.17
-        }
-        public float getTBL45PriorProbability(string levelConfidenceCorrosionrate, int NumberOrder)
-        {
-            return 2;
-        }
-        public float getTBL46ConditionalProbability(string typeInspection, int NumberOrder)
-        {
-            return 2;
-        }
-        public float InspectionEffectiveFactor(string levelConfidenceCorrosionrate,int NumberInspectionTypeA, int NumberInspectionTypeB, int NumberInspectionTypeC, int NumberInspectionTypeD, int NumberOrder)
-        {
-            return getTBL45PriorProbability(levelConfidenceCorrosionrate, NumberOrder) * (float)Math.Pow(getTBL46ConditionalProbability("A", NumberOrder), NumberInspectionTypeA) * (float)Math.Pow(getTBL46ConditionalProbability("B", NumberOrder), NumberInspectionTypeB) * (float)Math.Pow(getTBL46ConditionalProbability("C", NumberOrder), NumberInspectionTypeC) * (float)Math.Pow(getTBL46ConditionalProbability("D", NumberOrder), NumberInspectionTypeD);
-        }
-        public float PosteriorProbability(string levelConfidenceCorrosionrate, int NumberInspectionTypeA, int NumberInspectionTypeB, int NumberInspectionTypeC, int NumberInspectionTypeD, int NumberOrder)
-        {
-            return InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, NumberOrder) / (InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, 1) + InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, 2) + InspectionEffectiveFactor(levelConfidenceCorrosionrate, NumberInspectionTypeA, NumberInspectionTypeB, NumberInspectionTypeC, NumberInspectionTypeD, 3));
-        }
-        public float API_ART(float a)
-        {
-            float art = 0;
-            if (APIComponentType != "TANKBOTTOM")
+            if (MinStructThick)
             {
-                float[] data = { 0.02f, 0.04f, 0.06f, 0.08f, 0.1f, 0.12f, 0.14f, 0.16f, 0.18f, 0.2f, 0.25f, 0.3f, 0.35f, 0.4f, 0.45f, 0.5f, 0.55f, 0.6f, 0.65f };
-                if (a < (data[0] + data[1]) / 2)
-                    art = data[0];
-                else if (a < (data[1] + data[2]) / 2)
-                    art = data[1];
-                else if (a < (data[2] + data[3]) / 2)
-                    art = data[2];
-                else if (a < (data[3] + data[4]) / 2)
-                    art = data[3];
-                else if (a < (data[4] + data[5]) / 2)
-                    art = data[4];
-                else if (a < (data[5] + data[6]) / 2)
-                    art = data[5];
-                else if (a < (data[6] + data[7]) / 2)
-                    art = data[6];
-                else if (a < (data[7] + data[8]) / 2)
-                    art = data[7];
-                else if (a < (data[8] + data[9]) / 2)
-                    art = data[8];
-                else if (a < (data[9] + data[10]) / 2)
-                    art = data[9];
-                else if (a < (data[10] + data[11]) / 2)
-                    art = data[10];
-                else if (a < (data[11] + data[12]) / 2)
-                    art = data[11];
-                else if (a < (data[12] + data[13]) / 2)
-                    art = data[12];
-                else if (a < (data[13] + data[14]) / 2)
-                    art = data[13];
-                else if (a < (data[14] + data[15]) / 2)
-                    art = data[14];
-                else if (a < (data[15] + data[16]) / 2)
-                    art = data[15];
-                else if (a < (data[16] + data[17]) / 2)
-                    art = data[16];
-                else if (a < (data[17] + data[18]) / 2)
-                    art = data[17];
-                else art = data[18];
+                return (AllowableStress * WeldJointEfficiency * Math.Max(getTmin(), StructualThickness)) / (FlowStress() * NomalThick);
             }
             else
             {
-                float[] data = { 0.05f, 0.1f, 0.15f, 0.2f, 0.25f, 0.3f, 0.35f, 0.4f, 0.45f, 0.5f, 0.55f, 0.6f, 0.65f, 0.7f, 0.75f, 0.8f, 0.85f, 0.9f, 0.95f, 1f };
-                if (a < (data[0] + data[1]) / 2)
-                    art = data[0];
-                else if (a < (data[1] + data[2]) / 2)
-                    art = data[1];
-                else if (a < (data[2] + data[3]) / 2)
-                    art = data[2];
-                else if (a < (data[3] + data[4]) / 2)
-                    art = data[3];
-                else if (a < (data[4] + data[5]) / 2)
-                    art = data[4];
-                else if (a < (data[5] + data[6]) / 2)
-                    art = data[5];
-                else if (a < (data[6] + data[7]) / 2)
-                    art = data[6];
-                else if (a < (data[7] + data[8]) / 2)
-                    art = data[7];
-                else if (a < (data[8] + data[9]) / 2)
-                    art = data[8];
-                else if (a < (data[9] + data[10]) / 2)
-                    art = data[9];
-                else if (a < (data[10] + data[11]) / 2)
-                    art = data[10];
-                else if (a < (data[11] + data[12]) / 2)
-                    art = data[11];
-                else if (a < (data[12] + data[13]) / 2)
-                    art = data[12];
-                else if (a < (data[13] + data[14]) / 2)
-                    art = data[13];
-                else if (a < (data[14] + data[15]) / 2)
-                    art = data[14];
-                else if (a < (data[15] + data[16]) / 2)
-                    art = data[15];
-                else if (a < (data[16] + data[17]) / 2)
-                    art = data[16];
-                else if (a < (data[17] + data[18]) / 2)
-                    art = data[17];
-                else if (a < (data[18] + data[19]) / 2)
-                    art = data[18];
-                else art = data[19];
+                return (DesignPressure * Diametter) / (ShapeFactor * FlowStress() * NomalThick);
+            }                
+        }
+        public float[] InspEffectFactor()
+        {
+            ConditionalProbA = DAL_CAL.GET_TBL_46("A");
+            ConditionalProbB = DAL_CAL.GET_TBL_46("B");
+            ConditionalProbC = DAL_CAL.GET_TBL_46("C");
+            ConditionalProbD = DAL_CAL.GET_TBL_46("D");
+            PriorProb = DAL_CAL.GET_TBL_45(ConfidenceCorrosionRate);
+            float[] Insp = { 0, 0, 0 };
+            for (int i =0; i <=2; i++)
+            {
+                Insp[i] = PriorProb[i] * (float)(Math.Pow(ConditionalProbA[i], NumberInspectionTypeA) * Math.Pow(ConditionalProbB[i], NumberInspectionTypeB) * Math.Pow(ConditionalProbC[i], NumberInspectionTypeC) * Math.Pow(ConditionalProbD[0], NumberInspectionTypeD));
             }
+            
+            return Insp;
+        }
+        public float[] PosteriorProbab()
+        {
+            float[] Po = { 0, 0, 0 };
+            float[] Insp = InspEffectFactor();
+            for ( int i =0; i <= 2; i++)
+            {
+                Po[i]= Insp[i] / (Insp[0] + Insp[1] + Insp[2]);   
+            }
+            return Po;
+        }
+        public double[] Parameter(float age)
+        {
+            double Ds = 0;
+            double[] Pa = { 0, 0, 0 };
+            for (int i =0; i <=2; i ++)
+            {
+                Ds = Math.Pow(2, i);
+                Pa[i]= (1 - Ds * Art(age) - StrengRatio()) / Math.Sqrt(Math.Pow(Ds * Art(age) * 0.2, 2) + Math.Pow((1 - Ds * Art(age)) * 0.2, 2) + Math.Pow(StrengRatio() * 0.05, 2));
+            }
+            return Pa;
+        } 
+        public float API_ART(float a)
+        {
+            float art = 0;
+            float[] data = { 0.05f, 0.1f, 0.15f, 0.2f, 0.25f, 0.3f, 0.35f, 0.4f, 0.45f, 0.5f, 0.55f, 0.6f, 0.65f, 0.7f, 0.75f, 0.8f, 0.85f, 0.9f, 0.95f, 1f };
+            if (a < (data[0] + data[1]) / 2)
+                art = data[0];
+            else if (a < (data[1] + data[2]) / 2)
+                art = data[1];
+            else if (a < (data[2] + data[3]) / 2)
+                art = data[2];
+            else if (a < (data[3] + data[4]) / 2)
+                art = data[3];
+            else if (a < (data[4] + data[5]) / 2)
+                art = data[4];
+            else if (a < (data[5] + data[6]) / 2)
+                art = data[5];
+            else if (a < (data[6] + data[7]) / 2)
+                art = data[6];
+            else if (a < (data[7] + data[8]) / 2)
+                art = data[7];
+            else if (a < (data[8] + data[9]) / 2)
+                art = data[8];
+            else if (a < (data[9] + data[10]) / 2)
+                art = data[9];
+            else if (a < (data[10] + data[11]) / 2)
+                art = data[10];
+            else if (a < (data[11] + data[12]) / 2)
+                art = data[11];
+            else if (a < (data[12] + data[13]) / 2)
+                art = data[12];
+            else if (a < (data[13] + data[14]) / 2)
+                art = data[13];
+            else if (a < (data[14] + data[15]) / 2)
+                art = data[14];
+            else if (a < (data[15] + data[16]) / 2)
+                art = data[15];
+            else if (a < (data[16] + data[17]) / 2)
+                art = data[16];
+            else if (a < (data[17] + data[18]) / 2)
+                art = data[17];
+            else if (a < (data[18] + data[19]) / 2)
+                art = data[18];
+            else art = data[19];
             return art;
         }
-        public int DFB_THIN(float age)
+        public float Phi(double x) //NORM CDF
+        {
+            // constants
+            double a1 = 0.254829592;
+            double a2 = -0.284496736;
+            double a3 = 1.421413741;
+            double a4 = -1.453152027;
+            double a5 = 1.061405429;
+            double p = 0.3275911;
+
+            // Save the sign of x
+            int sign = 1;
+            if (x < 0)
+                sign = -1;
+            x = Math.Abs(x) / Math.Sqrt(2.0);
+
+            // A&S formula 7.1.26
+            double t = 1.0 / (1.0 + p * x);
+            double y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.Exp(-x * x);
+
+            return  (float) (0.5 * (1.0 + sign * y));
+        }
+        public float DFB_THIN(float age)
         {
             if (EFF_THIN == null || EFF_THIN == "")
                 EFF_THIN = "E";
@@ -448,18 +462,22 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (NomalThick == 0 || CurrentThick == 0)
                     return 1390;
                 else
-                    Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_512(API_ART(Art(age)), EFF_THIN));
-                    return DAL_CAL.GET_TBL_512(API_ART(Art(age)), EFF_THIN);
+                    Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art(age)), EFF_THIN));
+                return DAL_CAL.GET_TBL_47(API_ART(Art(age)), EFF_THIN);
             }
             else
             {
+                float[] Po = PosteriorProbab();
+                double[] Pa = Parameter(age);
                 if (NomalThick == 0 || CurrentThick == 0)
                     return 1900;
                 else
-                    Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_511(API_ART(Art(age)), NoINSP_THINNING, EFF_THIN));
-                    return DAL_CAL.GET_TBL_511(API_ART(Art(age)), NoINSP_THINNING, EFF_THIN);
-            }
+                {
+                    Console.WriteLine("Para: " + Pa[1]);
+                    return (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
 
+                }
+            }
         }
         public float DF_THIN(float age)
         {
@@ -539,7 +557,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     break;
             }
             Console.WriteLine("Df thin: " + DFB_THIN(age));
-            return DFB_THIN(age) * Fip * Fdl * Fwd * Fsm * Fam / Fom;
+            return (float) Math.Max(DFB_THIN(age) * Fip * Fdl * Fwd * Fsm * Fam / Fom, 0.1);
         }
 
         /// <summary>
@@ -1361,14 +1379,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     if (NomalThick == 0 || CurrentThick == 0)
                         return 1390;
                     else
-                        return DAL_CAL.GET_TBL_512(API_ART_EXTERNAL(age), EXTERNAL_INSP_EFF);
+                        return DAL_CAL.GET_TBL_47(API_ART_EXTERNAL(age), EXTERNAL_INSP_EFF);
                 }
                 else
                 {
                     if (NomalThick == 0 || CurrentThick == 0)
                         return 1900;
                     else
-                        return DAL_CAL.GET_TBL_511(API_ART_EXTERNAL(age), EXTERNAL_INSP_NUM, EXTERNAL_INSP_EFF);
+                        return 0;
                 }
             }
             else
@@ -1563,14 +1581,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (NomalThick == 0 || CurrentThick == 0)
                     return 1390;
                 else
-                    return DAL_CAL.GET_TBL_512(API_ART_CUI(age), CUI_INSP_EFF);
+                    return DAL_CAL.GET_TBL_47(API_ART_CUI(age), CUI_INSP_EFF);
             }
             else
             {
                 if (NomalThick == 0 || CurrentThick == 0)
                     return 1900;
                 else
-                    return DAL_CAL.GET_TBL_511(API_ART_CUI(age), CUI_INSP_NUM, CUI_INSP_EFF);
+                    return 0;
             }
         }
 

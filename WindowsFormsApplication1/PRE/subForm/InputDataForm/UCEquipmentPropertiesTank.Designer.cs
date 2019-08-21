@@ -46,7 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.chkPressurisationControlled = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblMinReqTem = new System.Windows.Forms.Label();
             this.txtMinRequiredTemperature = new System.Windows.Forms.TextBox();
             this.pnlStressCorrosionCrackingDF = new System.Windows.Forms.Panel();
             this.lblStressCorrosionCrackingDF = new System.Windows.Forms.Label();
@@ -92,7 +92,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.numSystemManagementFactor = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
+            this.lblVolume = new System.Windows.Forms.Label();
             this.txtEquipmentVolume = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,9 +130,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1237, 1078);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -149,7 +149,7 @@
             this.pnlTankConsequence.Controls.Add(this.label24);
             this.pnlTankConsequence.Controls.Add(this.txtDistanceGroundWater);
             this.pnlTankConsequence.Location = new System.Drawing.Point(39, 912);
-            this.pnlTankConsequence.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTankConsequence.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTankConsequence.Name = "pnlTankConsequence";
             this.pnlTankConsequence.Size = new System.Drawing.Size(1153, 121);
             this.pnlTankConsequence.TabIndex = 31;
@@ -180,7 +180,7 @@
             // cbTypeSoild
             // 
             this.cbTypeSoild.Location = new System.Drawing.Point(543, 33);
-            this.cbTypeSoild.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTypeSoild.Margin = new System.Windows.Forms.Padding(4);
             this.cbTypeSoild.Name = "cbTypeSoild";
             this.cbTypeSoild.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -213,7 +213,7 @@
             // cbEnvironmentalSensitivity
             // 
             this.cbEnvironmentalSensitivity.Location = new System.Drawing.Point(543, 62);
-            this.cbEnvironmentalSensitivity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEnvironmentalSensitivity.Margin = new System.Windows.Forms.Padding(4);
             this.cbEnvironmentalSensitivity.Name = "cbEnvironmentalSensitivity";
             this.cbEnvironmentalSensitivity.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -257,7 +257,7 @@
             // 
             this.txtDistanceGroundWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDistanceGroundWater.Location = new System.Drawing.Point(543, 89);
-            this.txtDistanceGroundWater.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDistanceGroundWater.Margin = new System.Windows.Forms.Padding(4);
             this.txtDistanceGroundWater.Name = "txtDistanceGroundWater";
             this.txtDistanceGroundWater.Size = new System.Drawing.Size(184, 24);
             this.txtDistanceGroundWater.TabIndex = 8;
@@ -272,10 +272,10 @@
             this.pnlBrittle.Controls.Add(this.label6);
             this.pnlBrittle.Controls.Add(this.chkPressurisationControlled);
             this.pnlBrittle.Controls.Add(this.label11);
-            this.pnlBrittle.Controls.Add(this.label10);
+            this.pnlBrittle.Controls.Add(this.lblMinReqTem);
             this.pnlBrittle.Controls.Add(this.txtMinRequiredTemperature);
             this.pnlBrittle.Location = new System.Drawing.Point(39, 770);
-            this.pnlBrittle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBrittle.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBrittle.Name = "pnlBrittle";
             this.pnlBrittle.Size = new System.Drawing.Size(1157, 117);
             this.pnlBrittle.TabIndex = 30;
@@ -307,7 +307,7 @@
             // 
             this.chkPressurisationControlled.AutoSize = true;
             this.chkPressurisationControlled.Location = new System.Drawing.Point(544, 30);
-            this.chkPressurisationControlled.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPressurisationControlled.Margin = new System.Windows.Forms.Padding(4);
             this.chkPressurisationControlled.Name = "chkPressurisationControlled";
             this.chkPressurisationControlled.Size = new System.Drawing.Size(18, 17);
             this.chkPressurisationControlled.TabIndex = 10;
@@ -328,23 +328,23 @@
             this.label11.Text = "Min. Required Temperature Before Pressurisation Allowed by \r\nAdmin (incl. Upset M" +
     "anagement Temperature,\r\nShutdown Temperature)";
             // 
-            // label10
+            // lblMinReqTem
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(737, 59);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 17);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "⁰C";
+            this.lblMinReqTem.AutoSize = true;
+            this.lblMinReqTem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinReqTem.ForeColor = System.Drawing.Color.Black;
+            this.lblMinReqTem.Location = new System.Drawing.Point(737, 59);
+            this.lblMinReqTem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMinReqTem.Name = "lblMinReqTem";
+            this.lblMinReqTem.Size = new System.Drawing.Size(22, 17);
+            this.lblMinReqTem.TabIndex = 0;
+            this.lblMinReqTem.Text = "⁰C";
             // 
             // txtMinRequiredTemperature
             // 
             this.txtMinRequiredTemperature.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMinRequiredTemperature.Location = new System.Drawing.Point(544, 55);
-            this.txtMinRequiredTemperature.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMinRequiredTemperature.Margin = new System.Windows.Forms.Padding(4);
             this.txtMinRequiredTemperature.Name = "txtMinRequiredTemperature";
             this.txtMinRequiredTemperature.Size = new System.Drawing.Size(184, 24);
             this.txtMinRequiredTemperature.TabIndex = 11;
@@ -369,7 +369,7 @@
             this.pnlStressCorrosionCrackingDF.Controls.Add(this.label17);
             this.pnlStressCorrosionCrackingDF.Controls.Add(this.label19);
             this.pnlStressCorrosionCrackingDF.Location = new System.Drawing.Point(39, 567);
-            this.pnlStressCorrosionCrackingDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlStressCorrosionCrackingDF.Margin = new System.Windows.Forms.Padding(4);
             this.pnlStressCorrosionCrackingDF.Name = "pnlStressCorrosionCrackingDF";
             this.pnlStressCorrosionCrackingDF.Size = new System.Drawing.Size(1161, 178);
             this.pnlStressCorrosionCrackingDF.TabIndex = 29;
@@ -401,7 +401,7 @@
             // 
             this.chkDowntimeProtection.AutoSize = true;
             this.chkDowntimeProtection.Location = new System.Drawing.Point(544, 33);
-            this.chkDowntimeProtection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkDowntimeProtection.Margin = new System.Windows.Forms.Padding(4);
             this.chkDowntimeProtection.Name = "chkDowntimeProtection";
             this.chkDowntimeProtection.Size = new System.Drawing.Size(18, 17);
             this.chkDowntimeProtection.TabIndex = 2;
@@ -425,7 +425,7 @@
             // 
             this.chkSteamedOutPriorWaterFlushing.AutoSize = true;
             this.chkSteamedOutPriorWaterFlushing.Location = new System.Drawing.Point(544, 55);
-            this.chkSteamedOutPriorWaterFlushing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkSteamedOutPriorWaterFlushing.Margin = new System.Windows.Forms.Padding(4);
             this.chkSteamedOutPriorWaterFlushing.Name = "chkSteamedOutPriorWaterFlushing";
             this.chkSteamedOutPriorWaterFlushing.Size = new System.Drawing.Size(18, 17);
             this.chkSteamedOutPriorWaterFlushing.TabIndex = 6;
@@ -447,7 +447,7 @@
             // cbThermalHistory
             // 
             this.cbThermalHistory.Location = new System.Drawing.Point(544, 146);
-            this.cbThermalHistory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbThermalHistory.Margin = new System.Windows.Forms.Padding(4);
             this.cbThermalHistory.Name = "cbThermalHistory";
             this.cbThermalHistory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -469,7 +469,7 @@
             // 
             this.chkHeatTraced.AutoSize = true;
             this.chkHeatTraced.Location = new System.Drawing.Point(544, 78);
-            this.chkHeatTraced.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkHeatTraced.Margin = new System.Windows.Forms.Padding(4);
             this.chkHeatTraced.Name = "chkHeatTraced";
             this.chkHeatTraced.Size = new System.Drawing.Size(18, 17);
             this.chkHeatTraced.TabIndex = 3;
@@ -492,7 +492,7 @@
             // 
             this.chkPresenceSulphideOperation.AutoSize = true;
             this.chkPresenceSulphideOperation.Location = new System.Drawing.Point(544, 101);
-            this.chkPresenceSulphideOperation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPresenceSulphideOperation.Margin = new System.Windows.Forms.Padding(4);
             this.chkPresenceSulphideOperation.Name = "chkPresenceSulphideOperation";
             this.chkPresenceSulphideOperation.Size = new System.Drawing.Size(18, 17);
             this.chkPresenceSulphideOperation.TabIndex = 14;
@@ -504,7 +504,7 @@
             // 
             this.chkPresenceSulphideShutdown.AutoSize = true;
             this.chkPresenceSulphideShutdown.Location = new System.Drawing.Point(544, 126);
-            this.chkPresenceSulphideShutdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPresenceSulphideShutdown.Margin = new System.Windows.Forms.Padding(4);
             this.chkPresenceSulphideShutdown.Name = "chkPresenceSulphideShutdown";
             this.chkPresenceSulphideShutdown.Size = new System.Drawing.Size(18, 17);
             this.chkPresenceSulphideShutdown.TabIndex = 17;
@@ -545,7 +545,7 @@
             this.pnlExternalDF.Controls.Add(this.cbExternalEnviroment);
             this.pnlExternalDF.Controls.Add(this.label26);
             this.pnlExternalDF.Location = new System.Drawing.Point(39, 416);
-            this.pnlExternalDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlExternalDF.Margin = new System.Windows.Forms.Padding(4);
             this.pnlExternalDF.Name = "pnlExternalDF";
             this.pnlExternalDF.Size = new System.Drawing.Size(1161, 125);
             this.pnlExternalDF.TabIndex = 28;
@@ -578,7 +578,7 @@
             // 
             this.chkMaterialExposedFluid.AutoSize = true;
             this.chkMaterialExposedFluid.Location = new System.Drawing.Point(460, 26);
-            this.chkMaterialExposedFluid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkMaterialExposedFluid.Margin = new System.Windows.Forms.Padding(4);
             this.chkMaterialExposedFluid.Name = "chkMaterialExposedFluid";
             this.chkMaterialExposedFluid.Size = new System.Drawing.Size(18, 17);
             this.chkMaterialExposedFluid.TabIndex = 13;
@@ -601,7 +601,7 @@
             // 
             this.chkInterfaceSoilWater.AutoSize = true;
             this.chkInterfaceSoilWater.Location = new System.Drawing.Point(461, 65);
-            this.chkInterfaceSoilWater.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkInterfaceSoilWater.Margin = new System.Windows.Forms.Padding(4);
             this.chkInterfaceSoilWater.Name = "chkInterfaceSoilWater";
             this.chkInterfaceSoilWater.Size = new System.Drawing.Size(18, 17);
             this.chkInterfaceSoilWater.TabIndex = 4;
@@ -612,7 +612,7 @@
             // cbExternalEnviroment
             // 
             this.cbExternalEnviroment.Location = new System.Drawing.Point(461, 86);
-            this.cbExternalEnviroment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbExternalEnviroment.Margin = new System.Windows.Forms.Padding(4);
             this.cbExternalEnviroment.Name = "cbExternalEnviroment";
             this.cbExternalEnviroment.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -654,7 +654,7 @@
             this.pnlThinningDF.Controls.Add(this.label25);
             this.pnlThinningDF.Controls.Add(this.chkTankMaintainedAccordance);
             this.pnlThinningDF.Location = new System.Drawing.Point(36, 246);
-            this.pnlThinningDF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlThinningDF.Margin = new System.Windows.Forms.Padding(4);
             this.pnlThinningDF.Name = "pnlThinningDF";
             this.pnlThinningDF.Size = new System.Drawing.Size(1164, 144);
             this.pnlThinningDF.TabIndex = 27;
@@ -686,7 +686,7 @@
             // 
             this.chkLinerOnlineMonitoring.AutoSize = true;
             this.chkLinerOnlineMonitoring.Location = new System.Drawing.Point(464, 41);
-            this.chkLinerOnlineMonitoring.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkLinerOnlineMonitoring.Margin = new System.Windows.Forms.Padding(4);
             this.chkLinerOnlineMonitoring.Name = "chkLinerOnlineMonitoring";
             this.chkLinerOnlineMonitoring.Size = new System.Drawing.Size(18, 17);
             this.chkLinerOnlineMonitoring.TabIndex = 16;
@@ -708,7 +708,7 @@
             // cbAdjustmentSettlement
             // 
             this.cbAdjustmentSettlement.Location = new System.Drawing.Point(464, 62);
-            this.cbAdjustmentSettlement.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbAdjustmentSettlement.Margin = new System.Windows.Forms.Padding(4);
             this.cbAdjustmentSettlement.Name = "cbAdjustmentSettlement";
             this.cbAdjustmentSettlement.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -741,7 +741,7 @@
             // 
             this.chkComponentWelded.AutoSize = true;
             this.chkComponentWelded.Location = new System.Drawing.Point(464, 92);
-            this.chkComponentWelded.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkComponentWelded.Margin = new System.Windows.Forms.Padding(4);
             this.chkComponentWelded.Name = "chkComponentWelded";
             this.chkComponentWelded.Size = new System.Drawing.Size(18, 17);
             this.chkComponentWelded.TabIndex = 15;
@@ -765,7 +765,7 @@
             // 
             this.chkTankMaintainedAccordance.AutoSize = true;
             this.chkTankMaintainedAccordance.Location = new System.Drawing.Point(464, 116);
-            this.chkTankMaintainedAccordance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkTankMaintainedAccordance.Margin = new System.Windows.Forms.Padding(4);
             this.chkTankMaintainedAccordance.Name = "chkTankMaintainedAccordance";
             this.chkTankMaintainedAccordance.Size = new System.Drawing.Size(18, 17);
             this.chkTankMaintainedAccordance.TabIndex = 18;
@@ -783,13 +783,13 @@
             this.pnlGenericProperties.Controls.Add(this.label20);
             this.pnlGenericProperties.Controls.Add(this.label22);
             this.pnlGenericProperties.Controls.Add(this.numSystemManagementFactor);
-            this.pnlGenericProperties.Controls.Add(this.label23);
+            this.pnlGenericProperties.Controls.Add(this.lblVolume);
             this.pnlGenericProperties.Controls.Add(this.txtEquipmentVolume);
             this.pnlGenericProperties.Controls.Add(this.label21);
             this.pnlGenericProperties.Controls.Add(this.label1);
             this.pnlGenericProperties.Controls.Add(this.chkAministrativeControl);
             this.pnlGenericProperties.Location = new System.Drawing.Point(36, 37);
-            this.pnlGenericProperties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlGenericProperties.Margin = new System.Windows.Forms.Padding(4);
             this.pnlGenericProperties.Name = "pnlGenericProperties";
             this.pnlGenericProperties.Size = new System.Drawing.Size(1164, 187);
             this.pnlGenericProperties.TabIndex = 26;
@@ -821,7 +821,7 @@
             // cbOnlineMonitoring
             // 
             this.cbOnlineMonitoring.Location = new System.Drawing.Point(463, 63);
-            this.cbOnlineMonitoring.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbOnlineMonitoring.Margin = new System.Windows.Forms.Padding(4);
             this.cbOnlineMonitoring.Name = "cbOnlineMonitoring";
             this.cbOnlineMonitoring.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -875,7 +875,7 @@
             // 
             this.chkPWHT.AutoSize = true;
             this.chkPWHT.Location = new System.Drawing.Point(463, 41);
-            this.chkPWHT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkPWHT.Margin = new System.Windows.Forms.Padding(4);
             this.chkPWHT.Name = "chkPWHT";
             this.chkPWHT.Size = new System.Drawing.Size(18, 17);
             this.chkPWHT.TabIndex = 7;
@@ -915,7 +915,7 @@
             0,
             131072});
             this.numSystemManagementFactor.Location = new System.Drawing.Point(463, 127);
-            this.numSystemManagementFactor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numSystemManagementFactor.Margin = new System.Windows.Forms.Padding(4);
             this.numSystemManagementFactor.Maximum = new decimal(new int[] {
             10,
             0,
@@ -933,22 +933,22 @@
             this.numSystemManagementFactor.ValueChanged += new System.EventHandler(this.txtDistanceGroundWater_TextChanged);
             this.numSystemManagementFactor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.chkAministrativeControl_KeyDown);
             // 
-            // label23
+            // lblVolume
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(631, 96);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(29, 18);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "m3";
+            this.lblVolume.AutoSize = true;
+            this.lblVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVolume.Location = new System.Drawing.Point(631, 96);
+            this.lblVolume.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVolume.Name = "lblVolume";
+            this.lblVolume.Size = new System.Drawing.Size(29, 18);
+            this.lblVolume.TabIndex = 0;
+            this.lblVolume.Text = "m3";
             // 
             // txtEquipmentVolume
             // 
             this.txtEquipmentVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEquipmentVolume.Location = new System.Drawing.Point(463, 94);
-            this.txtEquipmentVolume.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEquipmentVolume.Margin = new System.Windows.Forms.Padding(4);
             this.txtEquipmentVolume.Name = "txtEquipmentVolume";
             this.txtEquipmentVolume.Size = new System.Drawing.Size(159, 26);
             this.txtEquipmentVolume.TabIndex = 25;
@@ -982,7 +982,7 @@
             // 
             this.chkAministrativeControl.AutoSize = true;
             this.chkAministrativeControl.Location = new System.Drawing.Point(463, 158);
-            this.chkAministrativeControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkAministrativeControl.Margin = new System.Windows.Forms.Padding(4);
             this.chkAministrativeControl.Name = "chkAministrativeControl";
             this.chkAministrativeControl.Size = new System.Drawing.Size(18, 17);
             this.chkAministrativeControl.TabIndex = 1;
@@ -995,7 +995,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCEquipmentPropertiesTank";
             this.Size = new System.Drawing.Size(1237, 1078);
             this.Load += new System.EventHandler(this.UCEquipmentPropertiesTank_Load);
@@ -1046,7 +1046,7 @@
         private System.Windows.Forms.CheckBox chkPWHT;
         private System.Windows.Forms.CheckBox chkSteamedOutPriorWaterFlushing;
         private System.Windows.Forms.CheckBox chkAministrativeControl;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label lblVolume;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
@@ -1061,7 +1061,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblMinReqTem;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;

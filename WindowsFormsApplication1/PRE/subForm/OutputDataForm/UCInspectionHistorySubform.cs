@@ -33,8 +33,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             string[] title = { "Inspection Plan Name", "Inspection Coverage Name",  "Equipment Number", "Component Number" , "Damage Mechanisms", "Inspection Type", "Inspection Date", "Inspection Effectiveness"};
             string[] Header = { "InspectionPlanName", "InspectionCoverageName", "EquipmentNumber", "ComponentNumber", "DamageMechanisms", "InspectionType", "InspectionDate", "InspectionEffectiveness" };
             int[] ComID = assessmentBus.getEquipmentID_ComponentID(ID);
-            String comNum = comMasterBus.getComponentNumber(ComID[1]);
-            List<RW_INSPECTION_HISTORY> list = inspectionHistoryBus.getDataComp(comNum);
+            List<RW_INSPECTION_DETAIL> list = inspectionHistoryBus.getDataComp(ComID[1]);
             if(list.Count > 0)
             {
                 gridControl1.DataSource = list;

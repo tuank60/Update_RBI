@@ -13,6 +13,5 @@ namespace RBI.Object.ObjectMSSQL
         public String ComponentTypeCode { set; get; }
         public String Shape { set; get; }
         public float ShapeFactor { set; get; }
-
     }
 }

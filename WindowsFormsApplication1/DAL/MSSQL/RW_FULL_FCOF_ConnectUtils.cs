@@ -23,7 +23,7 @@ namespace RBI.DAL.MSSQL
                         ",[FCoFValue]" +
                         ",[FCoFCategory]" +
                         ",[AIL]" +
-                        ",[EquipOutageMultiplier" +
+                        ",[EquipOutageMultiplier]" +
                         ",[envcost]" +
                         ",[equipcost]" +
                         ",[prodcost]" +

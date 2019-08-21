@@ -165,7 +165,7 @@ namespace RBI.DAL.MSSQL
                         ",[CracksCurrentCondition] = '" + CracksCurrentCondition + "'" +
                         ",[FabricatedSteel] = '" + FabricatedSteel + "'" +
                         ",[EquipmentSatisfied] = '" + EquipmentSatisfied + "'" +
-                        ",[NominalOperatingCondition] = '" + NominalOperatingConditions + "'" +
+                        ",[NominalOperatingConditions] = '" + NominalOperatingConditions + "'" +
                         ",[CETGreaterOrEqual] = '" + CETGreaterOrEqual + "'" +
                         ",[CyclicServiceFatigueVibration] = '" + CyclicServiceFatigueVibration + "'" +
                         ",[EquipmentCircuitShock] = '" + EquipmentCircuitShock + "'" +

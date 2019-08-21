@@ -129,7 +129,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     }
                     Bus_INSPECTION_HISTORY_Excel excelBus = new Bus_INSPECTION_HISTORY_Excel();
                     RW_INSPECTION_HISTORY_BUS busHistory = new RW_INSPECTION_HISTORY_BUS();
-                    List<RW_INSPECTION_HISTORY> list = excelBus.getListInsp(txtPath.Text);
+                    List<RW_INSPECTION_DETAIL> list = excelBus.getListInsp(txtPath.Text);
                     for (int i = 0; i < list.Count; i++)
                     {
                         busHistory.add(list[i]);

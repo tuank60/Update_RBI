@@ -15,14 +15,35 @@ namespace RBI.PRE.subForm.InputDataForm
 {
     public partial class UCCoatLiningIsulationCladding : UserControl
     {       
-        public UCCoatLiningIsulationCladding(int ID, string corrosionRateUnit)
+        public UCCoatLiningIsulationCladding(int ID, string corrosionRateUnit, string thicknessUnit)
         {
             InitializeComponent();
-            ShowDatatoControl(ID, corrosionRateUnit);
-            lblCorrosionRate.Text = corrosionRateUnit;
+            ShowDatatoControl(ID, corrosionRateUnit, thicknessUnit);
+
+            string changeUnit = "";
+            switch(corrosionRateUnit)
+            {
+                case "MILYR":
+                    changeUnit = "mil/yr";
+                    break;
+                case "MMYR":
+                    changeUnit = "mm/yr";
+                    break;
+            }
+            lblCorrosionRate.Text = changeUnit;
+            switch(thicknessUnit)
+            {
+                case "INCH":
+                    changeUnit = "in";
+                    break;
+                case "MM":
+                    changeUnit = "mm";
+                    break;
+            }
+            lblCladdingThickness.Text = changeUnit;
         }
 
-        public void ShowDatatoControl(int ID, string corrosionRate)
+        public void ShowDatatoControl(int ID, string corrosionRate, string thicknessUnit)
         {
             RW_COATING_BUS BUS = new RW_COATING_BUS();
             RW_COATING coat = BUS.getData(ID);
@@ -98,8 +119,10 @@ namespace RBI.PRE.subForm.InputDataForm
                     break;
                 }
             }
+            if (thicknessUnit == "INCH") txtCladdingThickness.Text = (coat.CladdingThickness / convUnit.inch).ToString();
+            else txtCladdingThickness.Text = coat.CladdingThickness.ToString();
 
-            if (corrosionRate == "mm/yr") txtCladdingCorrosionRate.Text = coat.CladdingCorrosionRate.ToString();
+            if (corrosionRate == "MMYR") txtCladdingCorrosionRate.Text = coat.CladdingCorrosionRate.ToString();
             else txtCladdingCorrosionRate.Text = (coat.CladdingCorrosionRate / convUnit.mil).ToString();
 
             if (coat.SupportConfigNotAllowCoatingMaint == 1)
@@ -117,7 +140,7 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
 
-        public RW_COATING getData(int ID, string corrosionRate)
+        public RW_COATING getData(int ID, string corrosionRate, string thicknessUnit)
         {
             RW_COATING coat = new RW_COATING();
             BUS_UNITS convUnit = new BUS_UNITS();
@@ -133,7 +156,9 @@ namespace RBI.PRE.subForm.InputDataForm
             coat.InternalLinerCondition = cbInternalLinerCondition.Text;
             coat.InsulationContainsChloride = chkInsulationContainsChlorides.Checked ? 1 : 0;
             coat.InternalLinerType = cbInternalLinerType.Text;
-            if (corrosionRate == "mm/yr") coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : float.Parse(txtCladdingCorrosionRate.Text);
+            if (thicknessUnit == "INCH") coat.CladdingThickness = txtCladdingThickness.Text == "" ? 0 : (float.Parse(txtCladdingThickness.Text) * (float)convUnit.inch);
+            else coat.CladdingThickness = txtCladdingThickness.Text == "" ? 0 : float.Parse(txtCladdingThickness.Text);
+            if (corrosionRate == "MMYR") coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : float.Parse(txtCladdingCorrosionRate.Text);
             else coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : (float.Parse(txtCladdingCorrosionRate.Text) * (float)convUnit.mil);
             coat.SupportConfigNotAllowCoatingMaint = chkSupport.Checked ? 1 : 0;
             coat.InsulationCondition = cbIsulationCondition.Text;

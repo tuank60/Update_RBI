@@ -11,7 +11,7 @@ namespace RBI.Object
         public int EquipmentID { set; get; }
         public float GFFTotal { set; get; }
         public float FMS { set; get; }
-        public string ComponentNumber { set; get; }
+        public int ComponentID { set; get; }
         public string ApiComponentType { set; get; }
         public float[] DFTotal { set; get; }
         public float[] DF 
