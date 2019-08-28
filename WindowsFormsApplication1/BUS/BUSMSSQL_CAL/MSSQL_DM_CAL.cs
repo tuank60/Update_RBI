@@ -597,18 +597,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private float DFB_LINNING(float age)
         {
             String SUSCEP_LINNING;
-            //if (LinningType == "Organic")
-            //{
-            //    if (age <= 3)
-            //        SUSCEP_LINNING = "WithinLast3Years";
-            //    else if ((age > 3) && (age <= 6))
-            //        SUSCEP_LINNING = "WithinLast6Years";
-            //    else
-            //        SUSCEP_LINNING = "MoreThan6Years";
-            //    YEAR_IN_SERVICE = YEAR_IN_SERVICE > 25 ? 25 : YEAR_IN_SERVICE;
-             // return DAL_CAL.GET_TBL_65(YEAR_IN_SERVICE, SUSCEP_LINNING);
-            //}
-            //YEAR_IN_SERVICE = YEAR_IN_SERVICE > 25 ? 25 : YEAR_IN_SERVICE;
             YEAR_IN_SERVICE = (int)Math.Ceiling(age);
             if (LinningType == "Organic - Low Quality")
             {
