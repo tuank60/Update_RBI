@@ -644,12 +644,12 @@ namespace RBI.DAL.MSSQL_CAL
             return data;
         }
         // get DATA FROM TBL_74
-        public int GET_TBL_74(int SVI, String FIELD)
+        public int GET_TBL_63(int SVI, String FIELD)
         {
             int data = 1;
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "USE[rbi] SELECT [" + FIELD + "] FROM [dbo].[TBL_74_SCC_DM_PWHT] WHERE [SVI] ='" + SVI + "'";
+            String sql = "USE[rbi] SELECT [" + FIELD + "] FROM [dbo].[TBL_63_SCC_DM_PWHT] WHERE [SVI] ='" + SVI + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();

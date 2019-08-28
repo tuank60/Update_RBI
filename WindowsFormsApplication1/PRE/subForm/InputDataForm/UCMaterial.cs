@@ -445,7 +445,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblGenericProperties.Text == "▼ Generic Properties")
             {
-                pnlGenericProperties.Height = 180;
+                pnlGenericProperties.Height = 156;
                 lblGenericProperties.Text = "▶ Generic Properties";
 
                 pnlGovThinningDf.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;
@@ -469,7 +469,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblGovThinningDf.Text == "▼ Governing Thinning Damage Factor Properties")
             {
-                pnlGovThinningDf.Height = 61;
+                pnlGovThinningDf.Height = 64;
                 lblGovThinningDf.Text = "▶ Governing Thinning Damage Factor Properties";
 
                 pnlGovSccDf.Top = pnlGovThinningDf.Top + pnlGovThinningDf.Height + 13;
@@ -491,7 +491,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblGovSccDf.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
             {
-                pnlGovSccDf.Height = 190;
+                pnlGovSccDf.Height = 166;
                 lblGovSccDf.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
 
                 pnlHTHADf.Top = pnlGovSccDf.Top + pnlGovSccDf.Height + 13;                
@@ -511,7 +511,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblHTHADf.Text == "▼ High Temperature Hydrogen Attack Damage Factor Properties")
             {
-                pnlHTHADf.Height = 101;
+                pnlHTHADf.Height = 90;
                 lblHTHADf.Text = "▶ High Temperature Hydrogen Attack Damage Factor Properties";
 
                 pnlGovBrittleFractureDf.Top = pnlHTHADf.Top + pnlHTHADf.Height + 13;
@@ -529,7 +529,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblGovBrittleFractureDf.Text == "▼ Governing Brittle Fracture Damage Factor Properties")
             {
-                pnlGovBrittleFractureDf.Height = 161;
+                pnlGovBrittleFractureDf.Height = 141;
                 lblGovBrittleFractureDf.Text = "▶ Governing Brittle Fracture Damage Factor Properties";
             }
             else if (lblGovBrittleFractureDf.Text == "▶ Governing Brittle Fracture Damage Factor Properties")

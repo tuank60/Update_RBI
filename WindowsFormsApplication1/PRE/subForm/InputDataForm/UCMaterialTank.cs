@@ -408,9 +408,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 CtrlSPress++;
             }
         }
+
+
         #endregion
-
-        
-
     }
 }

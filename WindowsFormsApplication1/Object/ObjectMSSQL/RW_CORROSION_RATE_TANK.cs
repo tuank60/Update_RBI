@@ -9,7 +9,7 @@ namespace RBI.Object.ObjectMSSQL
     class RW_CORROSION_RATE_TANK
     {
         public float ID { get; set; }
-        public String CorrosionID { get; set; }
+        public int CorrosionID { get; set; }
         public float SoilSideCorrosionRate { get; set; }
         public float ProductSideCorrosionRate { get; set; }
         public String PotentialCorrosion { get; set; }

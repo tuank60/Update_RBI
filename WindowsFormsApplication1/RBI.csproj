@@ -201,6 +201,7 @@
     <Compile Include="BUS\BUSMSSQL\USER_PERMISSION_LIST_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_TOXIC.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_UNITS.cs" />
+    <Compile Include="BUS\BUSMSSQL_CAL\Corrosion_Rate.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_DM_CAL.cs" />
     <Compile Include="BUS\BUSXML\ReadXML.cs" />
@@ -527,6 +528,12 @@
     <Compile Include="PRE\subForm\InputDataForm\UCMaterialTank.Designer.cs">
       <DependentUpon>UCMaterialTank.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.Designer.cs">
+      <DependentUpon>UCCorrosionRateTank.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\UCInspectionHistory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -707,6 +714,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\UCMaterialTank.resx">
       <DependentUpon>UCMaterialTank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.resx">
+      <DependentUpon>UCCorrosionRateTank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\UCDamageMechanism.resx">
       <DependentUpon>UCDamageMechanism.cs</DependentUpon>

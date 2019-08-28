@@ -255,7 +255,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblGenericProperties.Text == "▼ Generic Properties")
             {
-                pnlGenericProperties.Height = 155;
+                pnlGenericProperties.Height = 156;
                 lblGenericProperties.Text = "▶ Generic Properties";
 
                 pnlStress.Top = pnlGenericProperties.Top + pnlGenericProperties.Height + 13;

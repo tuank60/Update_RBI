@@ -35,8 +35,7 @@ namespace RBI.DAL.MSSQL
                         ",[ProductSideTemp]" +
                         ",[SteamCoil]" +
                         ",[WaterDrawOff]" +
-                        ",[ProductCondition]" +
-                        ",[ProductSideTemp]" +
+                        ",[ProductSideBottom]" +
                         ",[ModifiedSoilSideCorrosionRate]" +
                         ",[ModifiedProductSideCorrosionRate]" +
                         ",[FinalEstimatedCorrosionRate])" +
@@ -54,8 +53,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + ProductSideTemp + "'" +
                         ",'" + SteamCoil + "'" +
                         ",'" + WaterDrawOff + "'" +
-                        ",'" + ProductCondition + "'" +
-                        ",'" + ProductSideTemp + "'" +
+                        ",'" + ProductSideBottom + "'" +
                         ",'" + ModifiedSoilSideCorrosionRate + "'" +
                         ",'" + ModifiedProductSideCorrosionRate + "'" +
                         ",'" + FinalEstimatedCorrosionRate + "')" +
@@ -160,8 +158,9 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             List<RW_CORROSION_RATE_TANK> list = new List<RW_CORROSION_RATE_TANK>();
             RW_CORROSION_RATE_TANK obj = null;
-            String sql = "Use[rbi] Select[ID]" +
-                          ",[SoilSideCorrosionRate]" +
+            String sql = "USE[rbi] SELECT [ID]" +
+                        ",[CorrosionID]" +
+                        ",[SoilSideCorrosionRate]" +
                         ",[ProductSideCorrosionRate]" +
                         ",[PotentialCorrosion]" +
                         ",[TankPadMaterial]" +
@@ -173,12 +172,11 @@ namespace RBI.DAL.MSSQL
                         ",[ProductSideTemp]" +
                         ",[SteamCoil]" +
                         ",[WaterDrawOff]" +
-                        ",[ProductCondition]" +
-                        ",[ProductSideTemp]" +
+                        ",[ProductSideBottom]" +
                         ",[ModifiedSoilSideCorrosionRate]" +
                         ",[ModifiedProductSideCorrosionRate]" +
-                        ",[FinalEstimatedCorrosionRate])" +
-                          "From [dbo].[RW_CORROSION]  ";
+                        ",[FinalEstimatedCorrosionRate]" +
+                        " FROM [rbi].[dbo].[RW_CORROSION_RATE_TANK] ";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -192,70 +190,71 @@ namespace RBI.DAL.MSSQL
                         {
                             obj = new RW_CORROSION_RATE_TANK();
                             obj.ID = reader.GetInt32(0);
-                            if (!reader.IsDBNull(1))
-                            {
-                                obj.SoilSideCorrosionRate = reader.GetFloat(1);
-                            }
+                            obj.CorrosionID = reader.GetInt32(1); 
                             if (!reader.IsDBNull(2))
                             {
-                                obj.ProductSideCorrosionRate = reader.GetFloat(2);
+                                obj.SoilSideCorrosionRate = (float)reader.GetDouble(2);
                             }
                             if (!reader.IsDBNull(3))
                             {
-                                obj.PotentialCorrosion = reader.GetString(3);
+                                obj.ProductSideCorrosionRate = (float)reader.GetDouble(3);
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.TankPadMaterial = reader.GetString(4);
+                                obj.PotentialCorrosion = reader.GetString(4);
                             }
                             if (!reader.IsDBNull(5))
                             {
-                                obj.TankDrainageType = reader.GetString(5);
+                                obj.TankPadMaterial = reader.GetString(5);
                             }
                             if (!reader.IsDBNull(6))
                             {
-                                obj.CathodicProtectionType = reader.GetString(6);
+                                obj.TankDrainageType = reader.GetString(6);
                             }
                             if (!reader.IsDBNull(7))
                             {
-                                obj.TankBottomType = reader.GetString(7);
+                                obj.CathodicProtectionType = reader.GetString(7);
                             }
                             if (!reader.IsDBNull(8))
                             {
-                                obj.SoilSideTemperature = reader.GetString(8);
+                                obj.TankBottomType = reader.GetString(8);
                             }
                             if (!reader.IsDBNull(9))
                             {
-                                obj.ProductCondition = reader.GetString(9);
-
+                                obj.SoilSideTemperature = reader.GetString(9);
                             }
                             if (!reader.IsDBNull(10))
                             {
-                                obj.ProductSideTemp = reader.GetString(10);
+                                obj.ProductCondition = reader.GetString(10);
+
                             }
                             if (!reader.IsDBNull(11))
                             {
-                                obj.SteamCoil = reader.GetString(11);
+                                obj.ProductSideTemp = reader.GetString(11);
                             }
                             if (!reader.IsDBNull(12))
                             {
-                                obj.WaterDrawOff = reader.GetString(12);
+                                obj.SteamCoil = reader.GetString(12);
                             }
                             if (!reader.IsDBNull(13))
                             {
-                                obj.ProductSideBottom = reader.GetString(13);
+                                obj.WaterDrawOff = reader.GetString(13);
                             }
                             if (!reader.IsDBNull(14))
                             {
-                                obj.ModifiedSoilSideCorrosionRate = reader.GetFloat(14);
+                                obj.ProductSideBottom = reader.GetString(14);
                             }
                             if (!reader.IsDBNull(15))
                             {
-                                obj.ModifiedSoilSideCorrosionRate = reader.GetFloat(15);
+                                obj.ModifiedSoilSideCorrosionRate = (float)reader.GetDouble(15);
                             }
                             if (!reader.IsDBNull(16))
                             {
-                                obj.FinalEstimatedCorrosionRate = reader.GetFloat(16);
+                                obj.ModifiedProductSideCorrosionRate = (float)reader.GetDouble(16);
+                            }
+                            if (!reader.IsDBNull(17))
+                            {
+                                obj.FinalEstimatedCorrosionRate = (float)reader.GetDouble(17);
                             }
                             list.Add(obj);
                         }

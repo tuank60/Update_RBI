@@ -228,7 +228,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblEquipment.Text == "▼ Equipmemt")
             {
-                pnlEquipment.Height = 248;
+                pnlEquipment.Height = 273;
                 lblEquipment.Text = "▶ Equipmemt";
 
                 pnlComponent.Top = pnlEquipment.Top + pnlEquipment.Height + 13;
@@ -248,7 +248,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblComponent.Text == "▼ Component")
             {
-                pnlComponent.Height = 146;
+                pnlComponent.Height = 173;
                 lblComponent.Text = "▶ Component";
 
                 pnlReport.Top = pnlComponent.Top + pnlComponent.Height + 13;
@@ -266,7 +266,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblReport.Text == "▼ Report Template ")
             {
-                pnlReport.Height = 62;
+                pnlReport.Height = 67;
                 lblReport.Text = "▶ Report Template ";
             }
             else if (lblReport.Text == "▶ Report Template ")
@@ -289,10 +289,6 @@ namespace RBI.PRE.subForm.InputDataForm
 
             pnlReport.Height = 21;
         }
-
-
         #endregion
-
-        
     }
 }

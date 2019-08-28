@@ -159,10 +159,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1, 37);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(19, 30);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 18);
+            this.label5.Size = new System.Drawing.Size(154, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "Release Prevention Barrier";
             // 
@@ -170,10 +169,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(1, 108);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(19, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(217, 18);
+            this.label6.Size = new System.Drawing.Size(178, 15);
             this.label6.TabIndex = 0;
             this.label6.Text = "Concrete or Asphalt Foundation";
             // 
@@ -181,10 +179,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 226);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(19, 157);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(140, 18);
+            this.label15.Size = new System.Drawing.Size(112, 15);
             this.label15.TabIndex = 0;
             this.label15.Text = "Presence of Cracks";
             // 
@@ -192,10 +189,9 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 25);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(19, 29);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(248, 18);
+            this.label17.Size = new System.Drawing.Size(208, 15);
             this.label17.TabIndex = 0;
             this.label17.Text = "Maximum Brinnell Hardness of Weld";
             // 
@@ -203,10 +199,9 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(7, 33);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(19, 29);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(179, 18);
+            this.label18.Size = new System.Drawing.Size(145, 15);
             this.label18.TabIndex = 0;
             this.label18.Text = "Complexity of Protrusions";
             // 
@@ -214,20 +209,18 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(7, 43);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(19, 30);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(138, 18);
+            this.label12.Size = new System.Drawing.Size(113, 15);
             this.label12.TabIndex = 0;
             this.label12.Text = "Severity of Vibration";
             // 
             // chkConcreteAsphalt
             // 
             this.chkConcreteAsphalt.AutoSize = true;
-            this.chkConcreteAsphalt.Location = new System.Drawing.Point(284, 111);
-            this.chkConcreteAsphalt.Margin = new System.Windows.Forms.Padding(4);
+            this.chkConcreteAsphalt.Location = new System.Drawing.Point(469, 80);
             this.chkConcreteAsphalt.Name = "chkConcreteAsphalt";
-            this.chkConcreteAsphalt.Size = new System.Drawing.Size(18, 17);
+            this.chkConcreteAsphalt.Size = new System.Drawing.Size(15, 14);
             this.chkConcreteAsphalt.TabIndex = 8;
             this.chkConcreteAsphalt.UseVisualStyleBackColor = true;
             this.chkConcreteAsphalt.CheckedChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
@@ -236,10 +229,9 @@
             // chkPresenceCracks
             // 
             this.chkPresenceCracks.AutoSize = true;
-            this.chkPresenceCracks.Location = new System.Drawing.Point(293, 230);
-            this.chkPresenceCracks.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPresenceCracks.Location = new System.Drawing.Point(212, 159);
             this.chkPresenceCracks.Name = "chkPresenceCracks";
-            this.chkPresenceCracks.Size = new System.Drawing.Size(18, 17);
+            this.chkPresenceCracks.Size = new System.Drawing.Size(15, 14);
             this.chkPresenceCracks.TabIndex = 9;
             this.chkPresenceCracks.UseVisualStyleBackColor = true;
             this.chkPresenceCracks.CheckedChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
@@ -248,10 +240,9 @@
             // chkPreventionBarrier
             // 
             this.chkPreventionBarrier.AutoSize = true;
-            this.chkPreventionBarrier.Location = new System.Drawing.Point(285, 41);
-            this.chkPreventionBarrier.Margin = new System.Windows.Forms.Padding(4);
+            this.chkPreventionBarrier.Location = new System.Drawing.Point(469, 32);
             this.chkPreventionBarrier.Name = "chkPreventionBarrier";
-            this.chkPreventionBarrier.Size = new System.Drawing.Size(18, 17);
+            this.chkPreventionBarrier.Size = new System.Drawing.Size(15, 14);
             this.chkPreventionBarrier.TabIndex = 11;
             this.chkPreventionBarrier.UseVisualStyleBackColor = true;
             this.chkPreventionBarrier.CheckedChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
@@ -259,8 +250,7 @@
             // 
             // cbComplexityProtrusion
             // 
-            this.cbComplexityProtrusion.Location = new System.Drawing.Point(292, 30);
-            this.cbComplexityProtrusion.Margin = new System.Windows.Forms.Padding(4);
+            this.cbComplexityProtrusion.Location = new System.Drawing.Point(469, 28);
             this.cbComplexityProtrusion.Name = "cbComplexityProtrusion";
             this.cbComplexityProtrusion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -270,15 +260,14 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Average", ((short)(1)), 1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Below Average", ((short)(2)), 2)});
             this.cbComplexityProtrusion.Properties.SmallImages = this.imgColComplexity;
-            this.cbComplexityProtrusion.Size = new System.Drawing.Size(491, 22);
+            this.cbComplexityProtrusion.Size = new System.Drawing.Size(368, 20);
             this.cbComplexityProtrusion.TabIndex = 13;
             this.cbComplexityProtrusion.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.cbComplexityProtrusion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
             // 
             // cbSeverityVibration
             // 
-            this.cbSeverityVibration.Location = new System.Drawing.Point(292, 39);
-            this.cbSeverityVibration.Margin = new System.Windows.Forms.Padding(4);
+            this.cbSeverityVibration.Location = new System.Drawing.Point(469, 29);
             this.cbSeverityVibration.Name = "cbSeverityVibration";
             this.cbSeverityVibration.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -288,15 +277,14 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Medium", ((short)(2)), 2),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("High", ((short)(3)), 3)});
             this.cbSeverityVibration.Properties.SmallImages = this.imgColSeverity;
-            this.cbSeverityVibration.Size = new System.Drawing.Size(491, 22);
+            this.cbSeverityVibration.Size = new System.Drawing.Size(368, 20);
             this.cbSeverityVibration.TabIndex = 14;
             this.cbSeverityVibration.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.cbSeverityVibration.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
             // 
             // cbMaxBrillnessHardness
             // 
-            this.cbMaxBrillnessHardness.Location = new System.Drawing.Point(292, 23);
-            this.cbMaxBrillnessHardness.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMaxBrillnessHardness.Location = new System.Drawing.Point(469, 28);
             this.cbMaxBrillnessHardness.Name = "cbMaxBrillnessHardness";
             this.cbMaxBrillnessHardness.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -306,7 +294,7 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Between 200 and 237", ((short)(1)), 1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Greater than 237", ((short)(2)), 2)});
             this.cbMaxBrillnessHardness.Properties.SmallImages = this.imgColMaxBrinnHardness;
-            this.cbMaxBrillnessHardness.Size = new System.Drawing.Size(491, 22);
+            this.cbMaxBrillnessHardness.Size = new System.Drawing.Size(368, 20);
             this.cbMaxBrillnessHardness.TabIndex = 12;
             this.cbMaxBrillnessHardness.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.cbMaxBrillnessHardness.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
@@ -315,10 +303,9 @@
             // 
             this.label7.BackColor = System.Drawing.SystemColors.Highlight;
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(-3, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(-2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(1257, 22);
+            this.label7.Size = new System.Drawing.Size(888, 18);
             this.label7.TabIndex = 17;
             this.label7.Text = "▼ Generic Properties";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -334,10 +321,8 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1287, 1277);
+            this.groupBox1.Size = new System.Drawing.Size(929, 963);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Component";
@@ -348,20 +333,18 @@
             this.panel5.Controls.Add(this.label40);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.cbSeverityVibration);
-            this.panel5.Location = new System.Drawing.Point(4, 938);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(22, 751);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1256, 75);
+            this.panel5.Size = new System.Drawing.Size(888, 64);
             this.panel5.TabIndex = 29;
             // 
             // label40
             // 
             this.label40.BackColor = System.Drawing.SystemColors.Highlight;
             this.label40.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label40.Location = new System.Drawing.Point(-3, 0);
-            this.label40.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label40.Location = new System.Drawing.Point(-2, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(1257, 21);
+            this.label40.Size = new System.Drawing.Size(883, 17);
             this.label40.TabIndex = 28;
             this.label40.Text = "▼ Governing Fatique Damage Factor Properties";
             this.label40.Click += new System.EventHandler(this.label40_Click);
@@ -385,39 +368,35 @@
             this.panel4.Controls.Add(this.chkEquipmentSatisfied);
             this.panel4.Controls.Add(this.label32);
             this.panel4.Controls.Add(this.chkFabricatedSteel);
-            this.panel4.Location = new System.Drawing.Point(4, 519);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(22, 416);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1256, 398);
+            this.panel4.Size = new System.Drawing.Size(888, 315);
             this.panel4.TabIndex = 24;
             // 
             // lblBrittleFractureThickness
             // 
             this.lblBrittleFractureThickness.AutoSize = true;
             this.lblBrittleFractureThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrittleFractureThickness.Location = new System.Drawing.Point(772, 356);
-            this.lblBrittleFractureThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrittleFractureThickness.Location = new System.Drawing.Point(720, 277);
             this.lblBrittleFractureThickness.Name = "lblBrittleFractureThickness";
-            this.lblBrittleFractureThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblBrittleFractureThickness.Size = new System.Drawing.Size(29, 15);
             this.lblBrittleFractureThickness.TabIndex = 27;
             this.lblBrittleFractureThickness.Text = "mm";
             // 
             // txtBrittleFractureThickness
             // 
             this.txtBrittleFractureThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBrittleFractureThickness.Location = new System.Drawing.Point(597, 352);
-            this.txtBrittleFractureThickness.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBrittleFractureThickness.Location = new System.Drawing.Point(469, 274);
             this.txtBrittleFractureThickness.Name = "txtBrittleFractureThickness";
-            this.txtBrittleFractureThickness.Size = new System.Drawing.Size(165, 24);
+            this.txtBrittleFractureThickness.Size = new System.Drawing.Size(245, 21);
             this.txtBrittleFractureThickness.TabIndex = 28;
             // 
             // label38
             // 
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(7, 358);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(19, 277);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(521, 20);
+            this.label38.Size = new System.Drawing.Size(391, 16);
             this.label38.TabIndex = 24;
             this.label38.Text = "Brittle Fracture Governing Thickness";
             // 
@@ -426,9 +405,8 @@
             this.label13.BackColor = System.Drawing.SystemColors.Highlight;
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label13.Location = new System.Drawing.Point(-1, 0);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1256, 22);
+            this.label13.Size = new System.Drawing.Size(887, 18);
             this.label13.TabIndex = 23;
             this.label13.Text = "▼ Governing Brittle Fracture Damage Factor Properties";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -436,30 +414,27 @@
             // label37
             // 
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(7, 330);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Location = new System.Drawing.Point(19, 252);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(521, 20);
+            this.label37.Size = new System.Drawing.Size(391, 16);
             this.label37.TabIndex = 22;
             this.label37.Text = "The equipment  or circuit is not subject to shock chilling";
             // 
             // chkEquipmentCircuitShock
             // 
             this.chkEquipmentCircuitShock.AutoSize = true;
-            this.chkEquipmentCircuitShock.Location = new System.Drawing.Point(597, 332);
-            this.chkEquipmentCircuitShock.Margin = new System.Windows.Forms.Padding(4);
+            this.chkEquipmentCircuitShock.Location = new System.Drawing.Point(469, 254);
             this.chkEquipmentCircuitShock.Name = "chkEquipmentCircuitShock";
-            this.chkEquipmentCircuitShock.Size = new System.Drawing.Size(18, 17);
+            this.chkEquipmentCircuitShock.Size = new System.Drawing.Size(15, 14);
             this.chkEquipmentCircuitShock.TabIndex = 23;
             this.chkEquipmentCircuitShock.UseVisualStyleBackColor = true;
             // 
             // label36
             // 
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(7, 276);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Location = new System.Drawing.Point(19, 210);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(521, 39);
+            this.label36.Size = new System.Drawing.Size(391, 32);
             this.label36.TabIndex = 20;
             this.label36.Text = "Cyclic service, fatigue or vibration service is not a design requirement per desi" +
     "gn code";
@@ -467,20 +442,18 @@
             // chkCyclicServiceFatigueVibration
             // 
             this.chkCyclicServiceFatigueVibration.AutoSize = true;
-            this.chkCyclicServiceFatigueVibration.Location = new System.Drawing.Point(597, 278);
-            this.chkCyclicServiceFatigueVibration.Margin = new System.Windows.Forms.Padding(4);
+            this.chkCyclicServiceFatigueVibration.Location = new System.Drawing.Point(469, 212);
             this.chkCyclicServiceFatigueVibration.Name = "chkCyclicServiceFatigueVibration";
-            this.chkCyclicServiceFatigueVibration.Size = new System.Drawing.Size(18, 17);
+            this.chkCyclicServiceFatigueVibration.Size = new System.Drawing.Size(15, 14);
             this.chkCyclicServiceFatigueVibration.TabIndex = 21;
             this.chkCyclicServiceFatigueVibration.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(7, 228);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(19, 171);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(521, 48);
+            this.label14.Size = new System.Drawing.Size(391, 39);
             this.label14.TabIndex = 18;
             this.label14.Text = "The CET at the MAWP is greater than or equal to -29C (-20F) if it is a pressure v" +
     "essel or -104C (-155F) if it is  a piping circuit.";
@@ -488,40 +461,36 @@
             // chkCETGreaterOrEqual
             // 
             this.chkCETGreaterOrEqual.AutoSize = true;
-            this.chkCETGreaterOrEqual.Location = new System.Drawing.Point(597, 230);
-            this.chkCETGreaterOrEqual.Margin = new System.Windows.Forms.Padding(4);
+            this.chkCETGreaterOrEqual.Location = new System.Drawing.Point(469, 173);
             this.chkCETGreaterOrEqual.Name = "chkCETGreaterOrEqual";
-            this.chkCETGreaterOrEqual.Size = new System.Drawing.Size(18, 17);
+            this.chkCETGreaterOrEqual.Size = new System.Drawing.Size(15, 14);
             this.chkCETGreaterOrEqual.TabIndex = 19;
             this.chkCETGreaterOrEqual.UseVisualStyleBackColor = true;
             // 
             // label34
             // 
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(7, 137);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Location = new System.Drawing.Point(18, 104);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(521, 80);
+            this.label34.Size = new System.Drawing.Size(391, 65);
             this.label34.TabIndex = 16;
             this.label34.Text = resources.GetString("label34.Text");
             // 
             // chkNominalOperatingConditions
             // 
             this.chkNominalOperatingConditions.AutoSize = true;
-            this.chkNominalOperatingConditions.Location = new System.Drawing.Point(599, 139);
-            this.chkNominalOperatingConditions.Margin = new System.Windows.Forms.Padding(4);
+            this.chkNominalOperatingConditions.Location = new System.Drawing.Point(469, 106);
             this.chkNominalOperatingConditions.Name = "chkNominalOperatingConditions";
-            this.chkNominalOperatingConditions.Size = new System.Drawing.Size(18, 17);
+            this.chkNominalOperatingConditions.Size = new System.Drawing.Size(15, 14);
             this.chkNominalOperatingConditions.TabIndex = 17;
             this.chkNominalOperatingConditions.UseVisualStyleBackColor = true;
             // 
             // label33
             // 
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(7, 86);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(19, 68);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(521, 48);
+            this.label33.Size = new System.Drawing.Size(391, 39);
             this.label33.TabIndex = 14;
             this.label33.Text = "The equipment satisfied all requirements of a recognized code or standard at the " +
     "time of fabrication.";
@@ -529,20 +498,18 @@
             // chkEquipmentSatisfied
             // 
             this.chkEquipmentSatisfied.AutoSize = true;
-            this.chkEquipmentSatisfied.Location = new System.Drawing.Point(597, 91);
-            this.chkEquipmentSatisfied.Margin = new System.Windows.Forms.Padding(4);
+            this.chkEquipmentSatisfied.Location = new System.Drawing.Point(469, 70);
             this.chkEquipmentSatisfied.Name = "chkEquipmentSatisfied";
-            this.chkEquipmentSatisfied.Size = new System.Drawing.Size(18, 17);
+            this.chkEquipmentSatisfied.Size = new System.Drawing.Size(15, 14);
             this.chkEquipmentSatisfied.TabIndex = 15;
             this.chkEquipmentSatisfied.UseVisualStyleBackColor = true;
             // 
             // label32
             // 
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(7, 38);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(18, 31);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(521, 48);
+            this.label32.Size = new System.Drawing.Size(391, 39);
             this.label32.TabIndex = 12;
             this.label32.Text = "It is fabricated from P-1 and P-3 steels where the design temperature is less tha" +
     "n or equa to 343 C (650 F).";
@@ -550,10 +517,9 @@
             // chkFabricatedSteel
             // 
             this.chkFabricatedSteel.AutoSize = true;
-            this.chkFabricatedSteel.Location = new System.Drawing.Point(597, 43);
-            this.chkFabricatedSteel.Margin = new System.Windows.Forms.Padding(4);
+            this.chkFabricatedSteel.Location = new System.Drawing.Point(469, 33);
             this.chkFabricatedSteel.Name = "chkFabricatedSteel";
-            this.chkFabricatedSteel.Size = new System.Drawing.Size(18, 17);
+            this.chkFabricatedSteel.Size = new System.Drawing.Size(15, 14);
             this.chkFabricatedSteel.TabIndex = 13;
             this.chkFabricatedSteel.UseVisualStyleBackColor = true;
             // 
@@ -568,29 +534,26 @@
             this.panel6.Controls.Add(this.chkPreventionBarrier);
             this.panel6.Controls.Add(this.label6);
             this.panel6.Controls.Add(this.chkConcreteAsphalt);
-            this.panel6.Location = new System.Drawing.Point(4, 1038);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(22, 835);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1256, 138);
+            this.panel6.Size = new System.Drawing.Size(888, 109);
             this.panel6.TabIndex = 27;
             // 
             // txtShellHeight
             // 
             this.txtShellHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtShellHeight.Location = new System.Drawing.Point(284, 68);
-            this.txtShellHeight.Margin = new System.Windows.Forms.Padding(4);
+            this.txtShellHeight.Location = new System.Drawing.Point(468, 53);
             this.txtShellHeight.Name = "txtShellHeight";
-            this.txtShellHeight.Size = new System.Drawing.Size(165, 24);
+            this.txtShellHeight.Size = new System.Drawing.Size(125, 21);
             this.txtShellHeight.TabIndex = 28;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(459, 71);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(599, 56);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 18);
+            this.label2.Size = new System.Drawing.Size(18, 15);
             this.label2.TabIndex = 27;
             this.label2.Text = "m";
             // 
@@ -598,10 +561,9 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(1, 71);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Location = new System.Drawing.Point(19, 56);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(197, 18);
+            this.label39.Size = new System.Drawing.Size(162, 15);
             this.label39.TabIndex = 12;
             this.label39.Text = "Height Of Each Shell Course";
             // 
@@ -609,10 +571,9 @@
             // 
             this.label20.BackColor = System.Drawing.SystemColors.Highlight;
             this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(-3, 0);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(-2, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(1257, 23);
+            this.label20.Size = new System.Drawing.Size(888, 19);
             this.label20.TabIndex = 26;
             this.label20.Text = "▼ Tank Consequence of Failure Properties";
             this.label20.Click += new System.EventHandler(this.label20_Click);
@@ -623,20 +584,18 @@
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.cbMaxBrillnessHardness);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(4, 420);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(22, 331);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1256, 57);
+            this.panel3.Size = new System.Drawing.Size(888, 64);
             this.panel3.TabIndex = 22;
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.SystemColors.Highlight;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(-3, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(-2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(1257, 20);
+            this.label9.Size = new System.Drawing.Size(888, 16);
             this.label9.TabIndex = 21;
             this.label9.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -647,20 +606,18 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.cbComplexityProtrusion);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(4, 325);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(22, 250);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1256, 62);
+            this.panel2.Size = new System.Drawing.Size(888, 63);
             this.panel2.TabIndex = 20;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.SystemColors.Highlight;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(-3, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(-2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1257, 20);
+            this.label8.Size = new System.Drawing.Size(888, 16);
             this.label8.TabIndex = 19;
             this.label8.Text = "▼ Governing External Damage Factor Properties";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -701,20 +658,18 @@
             this.panel1.Controls.Add(this.lblDiameter);
             this.panel1.Controls.Add(this.lblNominalThickness);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Location = new System.Drawing.Point(4, 26);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(22, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1256, 267);
+            this.panel1.Size = new System.Drawing.Size(888, 198);
             this.panel1.TabIndex = 18;
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(639, 226);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(431, 162);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(140, 18);
+            this.label30.Size = new System.Drawing.Size(116, 15);
             this.label30.TabIndex = 26;
             this.label30.Text = "Component Volume";
             // 
@@ -722,30 +677,27 @@
             // 
             this.lblComponentVolume.AutoSize = true;
             this.lblComponentVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComponentVolume.Location = new System.Drawing.Point(1155, 222);
-            this.lblComponentVolume.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblComponentVolume.Location = new System.Drawing.Point(843, 162);
             this.lblComponentVolume.Name = "lblComponentVolume";
-            this.lblComponentVolume.Size = new System.Drawing.Size(29, 18);
+            this.lblComponentVolume.Size = new System.Drawing.Size(25, 15);
             this.lblComponentVolume.TabIndex = 27;
             this.lblComponentVolume.Text = "m3";
             // 
             // txtComponentVolume
             // 
             this.txtComponentVolume.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComponentVolume.Location = new System.Drawing.Point(980, 218);
-            this.txtComponentVolume.Margin = new System.Windows.Forms.Padding(4);
+            this.txtComponentVolume.Location = new System.Drawing.Point(690, 159);
             this.txtComponentVolume.Name = "txtComponentVolume";
-            this.txtComponentVolume.Size = new System.Drawing.Size(165, 24);
+            this.txtComponentVolume.Size = new System.Drawing.Size(147, 21);
             this.txtComponentVolume.TabIndex = 28;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(639, 188);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(433, 135);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(143, 18);
+            this.label28.Size = new System.Drawing.Size(117, 15);
             this.label28.TabIndex = 23;
             this.label28.Text = "Structural Thickness";
             // 
@@ -753,40 +705,36 @@
             // 
             this.lblStructuralThickness.AutoSize = true;
             this.lblStructuralThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStructuralThickness.Location = new System.Drawing.Point(1155, 183);
-            this.lblStructuralThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStructuralThickness.Location = new System.Drawing.Point(843, 135);
             this.lblStructuralThickness.Name = "lblStructuralThickness";
-            this.lblStructuralThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblStructuralThickness.Size = new System.Drawing.Size(29, 15);
             this.lblStructuralThickness.TabIndex = 24;
             this.lblStructuralThickness.Text = "mm";
             // 
             // txtStructuralThickness
             // 
             this.txtStructuralThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStructuralThickness.Location = new System.Drawing.Point(980, 180);
-            this.txtStructuralThickness.Margin = new System.Windows.Forms.Padding(4);
+            this.txtStructuralThickness.Location = new System.Drawing.Point(690, 132);
             this.txtStructuralThickness.Name = "txtStructuralThickness";
-            this.txtStructuralThickness.Size = new System.Drawing.Size(165, 24);
+            this.txtStructuralThickness.Size = new System.Drawing.Size(147, 21);
             this.txtStructuralThickness.TabIndex = 25;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(635, 145);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(431, 107);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(269, 18);
+            this.label27.Size = new System.Drawing.Size(221, 15);
             this.label27.TabIndex = 21;
             this.label27.Text = "Minimum Structural Thickness Governs";
             // 
             // chkMinimumStructuralThicknessGoverns
             // 
             this.chkMinimumStructuralThicknessGoverns.AutoSize = true;
-            this.chkMinimumStructuralThicknessGoverns.Location = new System.Drawing.Point(980, 145);
-            this.chkMinimumStructuralThicknessGoverns.Margin = new System.Windows.Forms.Padding(4);
+            this.chkMinimumStructuralThicknessGoverns.Location = new System.Drawing.Point(690, 109);
             this.chkMinimumStructuralThicknessGoverns.Name = "chkMinimumStructuralThicknessGoverns";
-            this.chkMinimumStructuralThicknessGoverns.Size = new System.Drawing.Size(18, 17);
+            this.chkMinimumStructuralThicknessGoverns.Size = new System.Drawing.Size(15, 14);
             this.chkMinimumStructuralThicknessGoverns.TabIndex = 22;
             this.chkMinimumStructuralThicknessGoverns.UseVisualStyleBackColor = true;
             // 
@@ -794,17 +742,15 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(635, 110);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(431, 81);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(262, 18);
+            this.label26.Size = new System.Drawing.Size(214, 15);
             this.label26.TabIndex = 19;
             this.label26.Text = "Level Of Confidence In Corrosion Rate";
             // 
             // cbConfidenceCorrosionRate
             // 
-            this.cbConfidenceCorrosionRate.Location = new System.Drawing.Point(980, 106);
-            this.cbConfidenceCorrosionRate.Margin = new System.Windows.Forms.Padding(4);
+            this.cbConfidenceCorrosionRate.Location = new System.Drawing.Point(690, 79);
             this.cbConfidenceCorrosionRate.Name = "cbConfidenceCorrosionRate";
             this.cbConfidenceCorrosionRate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -814,27 +760,25 @@
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Average", ((short)(1)), 1),
             new DevExpress.XtraEditors.Controls.ImageComboBoxItem("Below Average", ((short)(2)), 2)});
             this.cbConfidenceCorrosionRate.Properties.SmallImages = this.imgColComplexity;
-            this.cbConfidenceCorrosionRate.Size = new System.Drawing.Size(204, 22);
+            this.cbConfidenceCorrosionRate.Size = new System.Drawing.Size(147, 20);
             this.cbConfidenceCorrosionRate.TabIndex = 20;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(635, 74);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(431, 54);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(307, 18);
+            this.label24.Size = new System.Drawing.Size(253, 15);
             this.label24.TabIndex = 16;
             this.label24.Text = "Allowable Stress at Assessment Temperature";
             // 
             // txtCurrentCorrosionRate
             // 
             this.txtCurrentCorrosionRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentCorrosionRate.Location = new System.Drawing.Point(292, 145);
-            this.txtCurrentCorrosionRate.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCurrentCorrosionRate.Location = new System.Drawing.Point(212, 105);
             this.txtCurrentCorrosionRate.Name = "txtCurrentCorrosionRate";
-            this.txtCurrentCorrosionRate.Size = new System.Drawing.Size(165, 24);
+            this.txtCurrentCorrosionRate.Size = new System.Drawing.Size(125, 21);
             this.txtCurrentCorrosionRate.TabIndex = 3;
             this.txtCurrentCorrosionRate.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.txtCurrentCorrosionRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
@@ -843,10 +787,9 @@
             // txtMinRequiredThickness
             // 
             this.txtMinRequiredThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMinRequiredThickness.Location = new System.Drawing.Point(292, 188);
-            this.txtMinRequiredThickness.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMinRequiredThickness.Location = new System.Drawing.Point(212, 132);
             this.txtMinRequiredThickness.Name = "txtMinRequiredThickness";
-            this.txtMinRequiredThickness.Size = new System.Drawing.Size(165, 24);
+            this.txtMinRequiredThickness.Size = new System.Drawing.Size(125, 21);
             this.txtMinRequiredThickness.TabIndex = 6;
             this.txtMinRequiredThickness.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.txtMinRequiredThickness.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
@@ -856,49 +799,44 @@
             // 
             this.lblAllowableStress.AutoSize = true;
             this.lblAllowableStress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllowableStress.Location = new System.Drawing.Point(1151, 70);
-            this.lblAllowableStress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAllowableStress.Location = new System.Drawing.Point(843, 51);
             this.lblAllowableStress.Name = "lblAllowableStress";
-            this.lblAllowableStress.Size = new System.Drawing.Size(39, 18);
+            this.lblAllowableStress.Size = new System.Drawing.Size(33, 15);
             this.lblAllowableStress.TabIndex = 17;
             this.lblAllowableStress.Text = "MPa";
             // 
             // txtAllowableStress
             // 
             this.txtAllowableStress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAllowableStress.Location = new System.Drawing.Point(980, 66);
-            this.txtAllowableStress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAllowableStress.Location = new System.Drawing.Point(690, 51);
             this.txtAllowableStress.Name = "txtAllowableStress";
-            this.txtAllowableStress.Size = new System.Drawing.Size(165, 24);
+            this.txtAllowableStress.Size = new System.Drawing.Size(147, 21);
             this.txtAllowableStress.TabIndex = 18;
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(635, 41);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(431, 28);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(145, 18);
+            this.label23.Size = new System.Drawing.Size(118, 15);
             this.label23.TabIndex = 13;
             this.label23.Text = "Weld Joint Efficiency";
             // 
             // txtWeldJointEfficiency
             // 
             this.txtWeldJointEfficiency.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeldJointEfficiency.Location = new System.Drawing.Point(980, 33);
-            this.txtWeldJointEfficiency.Margin = new System.Windows.Forms.Padding(4);
+            this.txtWeldJointEfficiency.Location = new System.Drawing.Point(690, 25);
             this.txtWeldJointEfficiency.Name = "txtWeldJointEfficiency";
-            this.txtWeldJointEfficiency.Size = new System.Drawing.Size(165, 24);
+            this.txtWeldJointEfficiency.Size = new System.Drawing.Size(147, 21);
             this.txtWeldJointEfficiency.TabIndex = 15;
             // 
             // txtNominalThickness
             // 
             this.txtNominalThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNominalThickness.Location = new System.Drawing.Point(292, 75);
-            this.txtNominalThickness.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNominalThickness.Location = new System.Drawing.Point(212, 51);
             this.txtNominalThickness.Name = "txtNominalThickness";
-            this.txtNominalThickness.Size = new System.Drawing.Size(165, 24);
+            this.txtNominalThickness.Size = new System.Drawing.Size(125, 21);
             this.txtNominalThickness.TabIndex = 5;
             this.txtNominalThickness.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.txtNominalThickness.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
@@ -908,10 +846,9 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(5, 119);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(18, 81);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(211, 18);
+            this.label21.Size = new System.Drawing.Size(177, 15);
             this.label21.TabIndex = 10;
             this.label21.Text = "Minimum Measured Thickness";
             // 
@@ -919,20 +856,18 @@
             // 
             this.lblMiniumMeasuredThickness.AutoSize = true;
             this.lblMiniumMeasuredThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMiniumMeasuredThickness.Location = new System.Drawing.Point(467, 116);
-            this.lblMiniumMeasuredThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMiniumMeasuredThickness.Location = new System.Drawing.Point(343, 81);
             this.lblMiniumMeasuredThickness.Name = "lblMiniumMeasuredThickness";
-            this.lblMiniumMeasuredThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblMiniumMeasuredThickness.Size = new System.Drawing.Size(29, 15);
             this.lblMiniumMeasuredThickness.TabIndex = 11;
             this.lblMiniumMeasuredThickness.Text = "mm";
             // 
             // txtTankDiameter
             // 
             this.txtTankDiameter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTankDiameter.Location = new System.Drawing.Point(293, 41);
-            this.txtTankDiameter.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTankDiameter.Location = new System.Drawing.Point(212, 25);
             this.txtTankDiameter.Name = "txtTankDiameter";
-            this.txtTankDiameter.Size = new System.Drawing.Size(165, 24);
+            this.txtTankDiameter.Size = new System.Drawing.Size(125, 21);
             this.txtTankDiameter.TabIndex = 1;
             this.txtTankDiameter.TextChanged += new System.EventHandler(this.txtTankDiameter_TextChanged);
             this.txtTankDiameter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTankDiameter_KeyDown);
@@ -941,20 +876,18 @@
             // txtCurrentThickness
             // 
             this.txtCurrentThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCurrentThickness.Location = new System.Drawing.Point(292, 112);
-            this.txtCurrentThickness.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCurrentThickness.Location = new System.Drawing.Point(212, 78);
             this.txtCurrentThickness.Name = "txtCurrentThickness";
-            this.txtCurrentThickness.Size = new System.Drawing.Size(165, 24);
+            this.txtCurrentThickness.Size = new System.Drawing.Size(125, 21);
             this.txtCurrentThickness.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(5, 154);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(18, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 18);
+            this.label3.Size = new System.Drawing.Size(132, 15);
             this.label3.TabIndex = 0;
             this.label3.Text = "Current Corrosion Rate";
             // 
@@ -962,10 +895,9 @@
             // 
             this.lblMinReqThickness.AutoSize = true;
             this.lblMinReqThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinReqThickness.Location = new System.Drawing.Point(467, 192);
-            this.lblMinReqThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMinReqThickness.Location = new System.Drawing.Point(343, 135);
             this.lblMinReqThickness.Name = "lblMinReqThickness";
-            this.lblMinReqThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblMinReqThickness.Size = new System.Drawing.Size(29, 15);
             this.lblMinReqThickness.TabIndex = 0;
             this.lblMinReqThickness.Text = "mm";
             // 
@@ -973,10 +905,9 @@
             // 
             this.lblCorrosionRate.AutoSize = true;
             this.lblCorrosionRate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorrosionRate.Location = new System.Drawing.Point(467, 145);
-            this.lblCorrosionRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCorrosionRate.Location = new System.Drawing.Point(343, 108);
             this.lblCorrosionRate.Name = "lblCorrosionRate";
-            this.lblCorrosionRate.Size = new System.Drawing.Size(50, 18);
+            this.lblCorrosionRate.Size = new System.Drawing.Size(41, 15);
             this.lblCorrosionRate.TabIndex = 0;
             this.lblCorrosionRate.Text = "mm/yr";
             // 
@@ -984,10 +915,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 49);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(18, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 18);
+            this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tank Diameter";
             // 
@@ -995,10 +925,9 @@
             // 
             this.lb7.AutoSize = true;
             this.lb7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb7.Location = new System.Drawing.Point(7, 188);
-            this.lb7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb7.Location = new System.Drawing.Point(19, 135);
             this.lb7.Name = "lb7";
-            this.lb7.Size = new System.Drawing.Size(171, 18);
+            this.lb7.Size = new System.Drawing.Size(143, 15);
             this.lb7.TabIndex = 0;
             this.lb7.Text = "Min. Required Thickness";
             // 
@@ -1006,10 +935,9 @@
             // 
             this.lblDiameter.AutoSize = true;
             this.lblDiameter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiameter.Location = new System.Drawing.Point(468, 44);
-            this.lblDiameter.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDiameter.Location = new System.Drawing.Point(343, 28);
             this.lblDiameter.Name = "lblDiameter";
-            this.lblDiameter.Size = new System.Drawing.Size(21, 18);
+            this.lblDiameter.Size = new System.Drawing.Size(18, 15);
             this.lblDiameter.TabIndex = 0;
             this.lblDiameter.Text = "m";
             // 
@@ -1017,10 +945,9 @@
             // 
             this.lblNominalThickness.AutoSize = true;
             this.lblNominalThickness.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNominalThickness.Location = new System.Drawing.Point(467, 79);
-            this.lblNominalThickness.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNominalThickness.Location = new System.Drawing.Point(343, 54);
             this.lblNominalThickness.Name = "lblNominalThickness";
-            this.lblNominalThickness.Size = new System.Drawing.Size(34, 18);
+            this.lblNominalThickness.Size = new System.Drawing.Size(29, 15);
             this.lblNominalThickness.TabIndex = 0;
             this.lblNominalThickness.Text = "mm";
             // 
@@ -1028,21 +955,19 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(8, 82);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(18, 55);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(135, 18);
+            this.label10.Size = new System.Drawing.Size(112, 15);
             this.label10.TabIndex = 0;
             this.label10.Text = "Nominal Thickness";
             // 
             // UCComponentPropertiesTank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCComponentPropertiesTank";
-            this.Size = new System.Drawing.Size(1287, 1277);
+            this.Size = new System.Drawing.Size(929, 963);
             ((System.ComponentModel.ISupportInitialize)(this.imgColMaxBrinnHardness)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgColSeverity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgColComplexity)).EndInit();

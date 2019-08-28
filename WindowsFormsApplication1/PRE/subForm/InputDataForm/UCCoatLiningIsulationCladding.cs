@@ -264,7 +264,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (lblThinningDF.Text == "▼ Governing Thinning Damage Factor Properties")
             {
-                pnlThinningDF.Height = 124;
+                pnlThinningDF.Height = 139;
                 lblThinningDF.Text = "▶ Governing Thinning Damage Factor Properties";
 
                 pnlExternal.Top = pnlThinningDF.Top + pnlThinningDF.Height + 13;

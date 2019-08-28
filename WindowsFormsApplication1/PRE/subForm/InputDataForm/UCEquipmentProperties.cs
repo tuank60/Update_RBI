@@ -305,6 +305,8 @@ namespace RBI.PRE.subForm.InputDataForm
                                             "Other corrosion - Corrosion coupons",
                                             "Other corrosion - Electrical resistance probes",
                                             "Other corrosion - Key process variable",
+                                            "Other corrosion - Hydrogen probes",
+                                            "Other corrosion - Key process variable and Hydrogen probes",
                                             "Sour water high velocity corrosion - Corrosion coupons",
                                             "Sour water high velocity corrosion - Electrical resistance probes",
                                             "Sour water high velocity corrosion - Key process variable",
@@ -406,17 +408,17 @@ namespace RBI.PRE.subForm.InputDataForm
 
         private void lblStressCorrosionCreackingDF_Click(object sender, EventArgs e)
         {
-            if (lblStressCorrosionCrackingDF.Text == "▼ Governing Stress Corrosion Creacking Damage Factor Properties")
+            if (lblStressCorrosionCrackingDF.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
             {
                 pnlStressCorrosionCracking.Height = 162;
-                lblStressCorrosionCrackingDF.Text = "▶ Governing Stress Corrosion Creacking Damage Factor Properties";
+                lblStressCorrosionCrackingDF.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
 
                 pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
-            else if (lblStressCorrosionCrackingDF.Text== "▶ Governing Stress Corrosion Creacking Damage Factor Properties")
+            else if (lblStressCorrosionCrackingDF.Text== "▶ Governing Stress Corrosion Cracking Damage Factor Properties")
             {
                 pnlStressCorrosionCracking.Height = 21;
-                lblStressCorrosionCrackingDF.Text = "▼ Governing Stress Corrosion Creacking Damage Factor Properties";
+                lblStressCorrosionCrackingDF.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
 
                 pnlBrittleFactureDF.Top = pnlStressCorrosionCracking.Top + pnlStressCorrosionCracking.Height + 13;
             }
