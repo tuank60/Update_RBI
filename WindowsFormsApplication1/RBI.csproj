@@ -405,6 +405,12 @@
     <Compile Include="PRE\subForm\InputDataForm\frmUnits.Designer.cs">
       <DependentUpon>frmUnits.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\CorrosionRateTank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\CorrosionRateTank.Designer.cs">
+      <DependentUpon>CorrosionRateTank.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\frm_backup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -654,6 +660,9 @@
     </Compile>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmUnits.resx">
       <DependentUpon>frmUnits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\CorrosionRateTank.resx">
+      <DependentUpon>CorrosionRateTank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\frm_backup.resx">
       <DependentUpon>frm_backup.cs</DependentUpon>

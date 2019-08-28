@@ -326,7 +326,6 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
-        
     }
 }
 
