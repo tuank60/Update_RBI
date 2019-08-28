@@ -230,7 +230,7 @@
             this.lblStressCorrosionCrackingDF.Size = new System.Drawing.Size(1129, 22);
             this.lblStressCorrosionCrackingDF.TabIndex = 19;
             this.lblStressCorrosionCrackingDF.Text = "▼ Governing Stress Corrosion Cracking Damage Factor Properties";
-            this.lblStressCorrosionCrackingDF.Click += new System.EventHandler(this.lblStressCorrosionCreackingDF_Click);
+            this.lblStressCorrosionCrackingDF.Click += new System.EventHandler(this.lblStressCorrosionCrackingDF_Click);
             // 
             // label3
             // 

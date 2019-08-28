@@ -1456,10 +1456,10 @@ namespace RBI
             cal.InternalCladding = coat.InternalCladding == 1 ? true : false;
             cal.NoINSP_THINNING = busInspectionHistory.InspectionNumber(componentID, DM_ID[0]);
             cal.ConfidenceCorrosionRate = com.ConfidenceCorrosionRate;
-            cal.NumberInspectionTypeA = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "A");
-            cal.NumberInspectionTypeB = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "B");
-            cal.NumberInspectionTypeC = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "C");
-            cal.NumberInspectionTypeD = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "D");
+            cal.N_A_Thinning = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "A");
+            cal.N_B_Thinning = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "B");
+            cal.N_C_Thinning = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "C");
+            cal.N_D_Thinning = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "D");
         
             Console.WriteLine("noInspection:" + cal.NoINSP_THINNING);
             cal.EFF_THIN = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[0]);
@@ -1548,6 +1548,12 @@ namespace RBI
             //</HSC-HF>
 
             //<input External Corrosion>
+            cal.N_A_Extcor = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[11], "A");
+            cal.N_B_Extcor = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[11], "B");
+            cal.N_C_Extcor = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[11], "C");
+            cal.N_D_Extcor = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[11], "D");
+            cal.EXTERNAL_COATING_DATE = coat.ExternalCoatingDate;
+            cal.ASSESSMENT_DATE = busAssessment.getAssessmentDate(IDProposal);
             cal.EXTERNAL_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[11]);
             cal.EXTERNAL_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[11]);
             //</External Corrosion>
@@ -1578,6 +1584,7 @@ namespace RBI
             //</CUI DM>
 
             //<input External CLSCC>
+            cal.EXTERNAL_COATING_DATE = coat.ExternalCoatingDate;
             cal.EXTERN_CLSCC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[13]);
             cal.EXTERN_CLSCC_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[13]);
             //</External CLSCC>

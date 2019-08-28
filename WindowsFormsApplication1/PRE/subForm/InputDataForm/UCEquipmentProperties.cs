@@ -404,7 +404,7 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
 
-        private void lblStressCorrosionCreackingDF_Click(object sender, EventArgs e)
+        private void lblStressCorrosionCrackingDF_Click(object sender, EventArgs e)
         {
             if (lblStressCorrosionCrackingDF.Text == "▼ Governing Stress Corrosion Creacking Damage Factor Properties")
             {

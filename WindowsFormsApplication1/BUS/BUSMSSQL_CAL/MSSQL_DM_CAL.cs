@@ -23,10 +23,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float CladdingCorrosionRate { set; get; }
         public Boolean InternalCladding { set; get; }
         public int NoINSP_THINNING { set; get; }
-        public int NumberInspectionTypeA { set; get; }
-        public int NumberInspectionTypeB { set; get; }
-        public int NumberInspectionTypeC { set; get; }
-        public int NumberInspectionTypeD { set; get; }
+        public int N_A_Thinning { set; get; }
+        public int N_B_Thinning { set; get; }
+        public int N_C_Thinning { set; get; }
+        public int N_D_Thinning { set; get; }
         public float[] PriorProb { set; get; }
         public float[] ConditionalProbA { set; get; }
         public float[] ConditionalProbB { set; get; }
@@ -153,6 +153,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
         //<HICSOHIC_HF>
 
         //<EXTERNAL CORROSION>
+        public DateTime ASSESSMENT_DATE { set; get; }
+        public int N_A_Extcor { set; get; }
+        public int N_B_Extcor { set; get; }
+        public int N_C_Extcor { set; get; }
+        public int N_D_Extcor { set; get; }
+        public DateTime EXTERNAL_COATING_DATE { set; get; }
         public int EXTERNAL_INSP_NUM { set; get; }
         public String EXTERNAL_INSP_EFF { set; get; }
         //</EXTERNAL CORROSION>
@@ -305,7 +311,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             return Math.Max(Math.Abs((CurrentThick - NomalThick) / CladdingCorrosionRate), 0);
         }
         
-        public float Art(float agetk)
+        public float Art_THIN(float agetk)
         {
             if (APIComponentType == "TANKBOTTOM")
             {
@@ -350,39 +356,62 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return (DesignPressure * Diametter) / (ShapeFactor * FlowStress() * NomalThick);
             }                
         }
-        public float[] InspEffectFactor()
+        public float[] InspEffectFactor(int DM_ID)
         {
+            int N_A = 0, N_B = 0, N_C = 0, N_D = 0;
+            float[] Insp = { 0, 0, 0 };
+            if (DM_ID == 8)
+            {
+                N_A = N_A_Thinning;
+                N_B = N_B_Thinning;
+                N_C = N_C_Thinning;
+                N_D = N_D_Thinning;
+            }
+            else if (DM_ID == 34)
+            {
+                N_A = N_A_Extcor;
+                N_B = N_B_Extcor;
+                N_C = N_C_Extcor;
+                N_D = N_D_Extcor;
+            }
             ConditionalProbA = DAL_CAL.GET_TBL_46("A");
             ConditionalProbB = DAL_CAL.GET_TBL_46("B");
             ConditionalProbC = DAL_CAL.GET_TBL_46("C");
             ConditionalProbD = DAL_CAL.GET_TBL_46("D");
             PriorProb = DAL_CAL.GET_TBL_45(ConfidenceCorrosionRate);
-            float[] Insp = { 0, 0, 0 };
-            for (int i =0; i <=2; i++)
+            for (int i = 0; i <= 2; i++)
             {
-                Insp[i] = PriorProb[i] * (float)(Math.Pow(ConditionalProbA[i], NumberInspectionTypeA) * Math.Pow(ConditionalProbB[i], NumberInspectionTypeB) * Math.Pow(ConditionalProbC[i], NumberInspectionTypeC) * Math.Pow(ConditionalProbD[0], NumberInspectionTypeD));
+                Insp[i] = PriorProb[i] * (float)(Math.Pow(ConditionalProbA[i], N_A) * Math.Pow(ConditionalProbB[i], N_B) * Math.Pow(ConditionalProbC[i], N_C) * Math.Pow(ConditionalProbD[0], N_D));
             }
-            
             return Insp;
         }
-        public float[] PosteriorProbab()
+        public float[] PosteriorProbab(int DM_ID)
         {
             float[] Po = { 0, 0, 0 };
-            float[] Insp = InspEffectFactor();
+            float[] Insp = InspEffectFactor(DM_ID);
             for ( int i =0; i <= 2; i++)
             {
                 Po[i]= Insp[i] / (Insp[0] + Insp[1] + Insp[2]);   
             }
             return Po;
         }
-        public double[] Parameter(float age)
+        public double[] Parameter(float age, int DM_ID)
         {
+            float Art = 0;
+            if (DM_ID == 8)
+            {
+                Art = Art_THIN(age);
+            }
+            else if (DM_ID == 34)
+            {
+                Art = ART_EXTERNAL(age);
+            }
             double Ds = 0;
             double[] Pa = { 0, 0, 0 };
             for (int i =0; i <=2; i ++)
             {
                 Ds = Math.Pow(2, i);
-                Pa[i]= (1 - Ds * Art(age) - StrengRatio()) / Math.Sqrt(Math.Pow(Ds * Art(age) * 0.2, 2) + Math.Pow((1 - Ds * Art(age)) * 0.2, 2) + Math.Pow(StrengRatio() * 0.05, 2));
+                Pa[i]= (1 - Ds * Art - StrengRatio()) / Math.Sqrt(Math.Pow(Ds * Art * 0.2, 2) + Math.Pow((1 - Ds * Art) * 0.2, 2) + Math.Pow(StrengRatio() * 0.05, 2));
             }
             return Pa;
         } 
@@ -462,18 +491,18 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (NomalThick == 0 || CurrentThick == 0)
                     return 1390;
                 else
-                    Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art(age)), EFF_THIN));
-                return DAL_CAL.GET_TBL_47(API_ART(Art(age)), EFF_THIN);
+                    Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN));
+                return DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN);
             }
             else
             {
-                float[] Po = PosteriorProbab();
-                double[] Pa = Parameter(age);
+                float[] Po = PosteriorProbab(8);
+                double[] Pa = Parameter(age,8);
                 if (NomalThick == 0 || CurrentThick == 0)
-                    return 1900;
+                    return 6500;
                 else
                 {
-                    Console.WriteLine("Para: " + Pa[1]);
+                    Console.WriteLine("Strength ratio: " + StrengRatio());
                     return (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
 
                 }
@@ -671,7 +700,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CAUSTIC_INSP_NUM + CAUSTIC_INSP_EFF;
-                float DFB_CAUSTIC = DAL_CAL.GET_TBL_74(SVI_CAUSTIC(), FIELD);
+                float DFB_CAUSTIC = 0;
                 return DFB_CAUSTIC * (float)Math.Pow(age, 1.1);
             }
             else
@@ -728,7 +757,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else
                     FIELD = AMINE_INSP_NUM + AMINE_INSP_EFF;
 
-                float DFB_AMIN = DAL_CAL.GET_TBL_74(SVI_AMINE(), FIELD);
+                float DFB_AMIN = 0;
                 return DFB_AMIN * (float)Math.Pow(age, 1.1);
             }
             else
@@ -823,7 +852,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else
                     FIELD = SULPHIDE_INSP_NUM + SULPHIDE_INSP_EFF;
 
-                float DFB_SULPHIDE = DAL_CAL.GET_TBL_74(SVI_SULPHIDE(), FIELD);
+                float DFB_SULPHIDE = 0;
                 return DFB_SULPHIDE * (float)Math.Pow(age, 1.1);
             }
             else
@@ -924,7 +953,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULFUR_INSP_NUM + SULFUR_INSP_EFF;
-                float DFB_SULFUR = DAL_CAL.GET_TBL_74(SVI_HICSOHIC_H2S(), FIELD);
+                float DFB_SULFUR = 0;
                 return DFB_SULFUR * (float)Math.Pow(age, 1.1);
             }
             else
@@ -969,7 +998,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CACBONATE_INSP_NUM + CACBONATE_INSP_EFF;
-                float DFB_CACBONATE = DAL_CAL.GET_TBL_74(SVI_CARBONATE(), FIELD);
+                float DFB_CACBONATE = 0;
                 return DFB_CACBONATE * (float)Math.Pow(age, 1.1);
             }
             else
@@ -1088,7 +1117,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else
                     FIELD = PTA_INSP_NUM + PTA_INSP_EFF;
 
-                float DFB_PTA = DAL_CAL.GET_TBL_74(SVI_PTA(), FIELD);
+                float DFB_PTA = 0;
                 return DFB_PTA * (float)Math.Pow(age, 1.1);
             }
             else
@@ -1144,7 +1173,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CLSCC_INSP_NUM + CLSCC_INSP_EFF;
-                float DFB_CLSCC = DAL_CAL.GET_TBL_74(SVI_CLSCC(), FIELD);
+                float DFB_CLSCC = 0;
                 return DFB_CLSCC * (float)Math.Pow(age, 1.1);
             }
             else
@@ -1190,7 +1219,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HSC_HF_INSP_NUM + HSC_HF_INSP_EFF;
-                float DFB_HSCHF = DAL_CAL.GET_TBL_74(SVI_HSCHF(), FIELD);
+                float DFB_HSCHF = 0;
                 return DFB_HSCHF * (float)Math.Pow(age, 1.1);
             }
             else
@@ -1232,7 +1261,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HICSOHIC_INSP_NUM + HICSOHIC_INSP_EFF;
-                float DFB_HICSOHIC_HF = DAL_CAL.GET_TBL_74(SVI_HICSOHIC_HF(), FIELD);
+                float DFB_HICSOHIC_HF = 0;
                 return DFB_HICSOHIC_HF * (float)Math.Pow(age, 1.1);
             }
             else
@@ -1352,7 +1381,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 CR_EXTERN = 0;
             return CR_EXTERN;
         }
-        private float API_ART_EXTERNAL(float age)
+        private float ART_EXTERNAL(float age)
         {
             float FPS = 1, FIP = 1;
             if (SUPPORT_COATING)
@@ -1365,32 +1394,62 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else
                 FIP = 1;
             float CR = API_CORROSION_RATE() * Math.Max(FPS, FIP);
-            float ART_EXT = Math.Max(1 - (CurrentThick - CR * AGE_CUI(age)) / (getTmin() + CA), 0);
-            return API_ART(ART_EXT);
+            float ART_EXT = (CR * (age - AGE_COAT())) / NomalThick;
+            return ART_EXT;
         }
+        public float AGE_COAT()
+        {
+            TimeSpan TICK_SPAN = EXTERNAL_COATING_DATE.Subtract(ASSESSMENT_DATE);
+            float DATA = (float)Math.Round((double)TICK_SPAN.Days / 365, 2);
+            return DATA;
+        }
+        public float COATING_ADJUSTMENT(float age)
+        {
+            float Coat_adj = 0;
+            if (age >= AGE_COAT())
+            {
+                if (EXTERN_COAT_QUALITY == "High coating quality")
+                    Coat_adj = Math.Min(15, AGE_COAT());
+                else if (EXTERN_COAT_QUALITY == "Medium coating quality")
+                    Coat_adj = Math.Min(5, AGE_COAT());
+                else
+                    Coat_adj = 0;
+            }
+            else
+            {
+                if (EXTERN_COAT_QUALITY == "High coating quality")
+                    Coat_adj = Math.Min(15, AGE_COAT()) - Math.Min(15, AGE_COAT() - age);
+                else if (EXTERN_COAT_QUALITY == "Medium coating quality")
+                    Coat_adj = Math.Min(5, AGE_COAT()) - Math.Min(5, AGE_COAT() - age);
+                else
+                    Coat_adj = 0;
+            }
+            return Coat_adj;
+        } 
         public float DF_EXTERNAL_CORROSION(float age)
         {
-            if (EXTERNAL_EXPOSED_FLUID_MIST || (CARBON_ALLOY && !(MAX_OP_TEMP < -23 || MIN_OP_TEMP > 121)))
+            if (EXTERNAL_EXPOSED_FLUID_MIST || (CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177)))
             {
                 if (EXTERNAL_INSP_EFF == "" || EXTERNAL_INSP_EFF == null || EXTERNAL_INSP_NUM == 0)
                     EXTERNAL_INSP_EFF = "E";
-                if (APIComponentType == "TANKBOTTOM")
-                {
-                    if (NomalThick == 0 || CurrentThick == 0)
-                        return 1390;
-                    else
-                        return DAL_CAL.GET_TBL_47(API_ART_EXTERNAL(age), EXTERNAL_INSP_EFF);
-                }
+
+                if (NomalThick == 0 || CurrentThick == 0)
+                    return 6500;
                 else
                 {
-                    if (NomalThick == 0 || CurrentThick == 0)
-                        return 1900;
-                    else
-                        return 0;
+                    float[] Po = PosteriorProbab(34);
+                    double[] Pa = Parameter(age, 34);
+                    float DF_Extcor = (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
+                    Console.WriteLine("Df External Corrosion = " + DF_Extcor);
+                    return DF_Extcor;
                 }
-            }
+            }            
             else
+            {
+                Console.WriteLine("Df External Corrosion");
                 return 0;
+            }
+
         }
 
         ///<summary>
@@ -1654,7 +1713,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else
                 FIELD = EXTERN_CLSCC_INSP_NUM + EXTERN_CLSCC_INSP_EFF;
 
-            return DAL_CAL.GET_TBL_74(SVI, FIELD);
+            return 0;
         }
         public float DF_EXTERN_CLSCC()
         {
@@ -1818,7 +1877,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else
                 FIELD = EXTERN_CLSCC_CUI_INSP_NUM + EXTERN_CLSCC_CUI_INSP_EFF;
 
-            return DAL_CAL.GET_TBL_74(SVI, FIELD);
+            return 0;
         }
         public float DF_CUI_CLSCC()
         {
