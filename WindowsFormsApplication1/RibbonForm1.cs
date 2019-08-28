@@ -1478,9 +1478,9 @@ namespace RBI
             cal.LINNER_CONDITION = coat.InternalLinerCondition;
             cal.INTERNAL_LINNING = coat.InternalLining == 1 ? true : false;
             TimeSpan year = busAssessment.getAssessmentDate(IDProposal) - busInspectionHistory.getLastInsp(componentID, DM_ID[1], busEquipmentMaster.getComissionDate(equipmentID));
-            cal.YEAR_IN_SERVICE = (int)(year.Days / 365); //Yearinservice hiệu tham số giữa lần tính toán và ngày cài đặt hệ thống
+            cal.YEAR_IN_SERVICE = (int)Math.Ceiling((decimal)year.Days / 365); //Yearinservice hiệu tham số giữa lần tính toán và ngày cài đặt hệ thống
             //</input linning>
-
+      
             //<input SCC CAUSTIC>
             cal.CAUSTIC_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[2]);
             cal.CAUSTIC_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[2]);

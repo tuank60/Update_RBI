@@ -373,6 +373,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 Po[i]= Insp[i] / (Insp[0] + Insp[1] + Insp[2]);   
             }
+            Console.WriteLine("Posterior =" + Po[0]);
             return Po;
         }
         public double[] Parameter(float age)
@@ -567,21 +568,39 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private float DFB_LINNING(float age)
         {
             String SUSCEP_LINNING;
-            if (LinningType == "Organic")
+            //if (LinningType == "Organic")
+            //{
+            //    if (age <= 3)
+            //        SUSCEP_LINNING = "WithinLast3Years";
+            //    else if ((age > 3) && (age <= 6))
+            //        SUSCEP_LINNING = "WithinLast6Years";
+            //    else
+            //        SUSCEP_LINNING = "MoreThan6Years";
+            //    YEAR_IN_SERVICE = YEAR_IN_SERVICE > 25 ? 25 : YEAR_IN_SERVICE;
+             // return DAL_CAL.GET_TBL_65(YEAR_IN_SERVICE, SUSCEP_LINNING);
+            //}
+            //YEAR_IN_SERVICE = YEAR_IN_SERVICE > 25 ? 25 : YEAR_IN_SERVICE;
+            YEAR_IN_SERVICE = (int)Math.Ceiling(age);
+            if (LinningType == "Organic - Low Quality")
             {
-                if (age <= 3)
-                    SUSCEP_LINNING = "WithinLast3Years";
-                else if ((age > 3) && (age <= 6))
-                    SUSCEP_LINNING = "WithinLast6Years";
-                else
-                    SUSCEP_LINNING = "MoreThan6Years";
-                YEAR_IN_SERVICE = YEAR_IN_SERVICE > 25 ? 25 : YEAR_IN_SERVICE;
-                return DAL_CAL.GET_TBL_65(YEAR_IN_SERVICE, SUSCEP_LINNING);
+                SUSCEP_LINNING = "LowQuality";
+                Console.WriteLine("LowQUality=" + DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING));
+                return DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING);
+            }
+            else if (LinningType == "Organic - Medium Quality")
+            {
+                SUSCEP_LINNING = "MediumQuality";
+                return DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING);
+            }
+            else if (LinningType == "Organic - High Quality")
+            {
+                SUSCEP_LINNING = "HighQuality";
+                return DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING);
             }
             else
             {
                 age = age > 25 ? 25 : age;
-                return DAL_CAL.GET_TBL_64((int)age, LinningType);
+                return DAL_CAL.GET_TBL_54((int)age, LinningType);
             }
         }
         public float DF_LINNING(float age)
@@ -599,6 +618,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     Fom = 0.1f;
                 else
                     Fom = 1;
+                Console.WriteLine("linning=" + DFB_LINNING(age) * Fom * Fdl);
                 return DFB_LINNING(age) * Fom * Fdl;
             }
             else
