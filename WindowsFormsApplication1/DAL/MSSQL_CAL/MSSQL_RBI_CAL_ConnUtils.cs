@@ -580,13 +580,13 @@ namespace RBI.DAL.MSSQL_CAL
             }
             return data;
         }
-        // get DATA FROM TBL_64
-        public float GET_TBL_64(int YEAR, String SUSCEP)
+        // get DATA FROM TBL_54
+        public float GET_TBL_54(int YEAR, String SUSCEP)
         {
             float data = 0;
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "USE[rbi] SELECT [" + SUSCEP + "] FROM [rbi].[dbo].[TBL_64_DM_LINNING_INORGANIC] WHERE [YearsSinceLastInspection] = '" + YEAR + "'";
+            String sql = "USE[rbi] SELECT [" + SUSCEP + "] FROM [rbi].[dbo].[TBL_54_DM_LINNING_INORGANIC] WHERE [YearsSinceLastInspection] = '" + YEAR + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -614,13 +614,13 @@ namespace RBI.DAL.MSSQL_CAL
             }
             return data;
         }
-        // get DATA FROM TBL_65
-        public float GET_TBL_65(int YEAR, String SUSCEP)
+        // get DATA FROM TBL_55
+        public float GET_TBL_55(int YEAR, String SUSCEP)
         {
             float data = 0;
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "SELECT "+SUSCEP+" FROM dbo.TBL_65_DM_LINNING_ORGANIC WHERE YearInService = '"+YEAR+"'";
+            String sql = "SELECT "+SUSCEP+" FROM dbo.TBL_55_DM_LINNING_ORGANIC WHERE YearInService = '"+YEAR+"'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
