@@ -311,7 +311,7 @@ namespace RBI
                     navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                     navStream.Appearance.ForeColor = navAssessmentInfo.Appearance.ForeColor =
                     navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                    navViewGraph.Appearance.ForeColor = Color.Black;
+                    navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                 // cop xong
                 SplashScreenManager.CloseForm();
             }
@@ -1096,6 +1096,7 @@ namespace RBI
                         UCRiskFactor riskFactor = new UCRiskFactor(IDProposal);
                         UCRiskSummary riskSummary = new UCRiskSummary(IDProposal);
                         UCInspectionHistorySubform inspection = new UCInspectionHistorySubform(IDProposal);
+                        UCCorrosionRateTank corrate = new UCCorrosionRateTank(IDProposal);
                         _ass.DataChanged += ThayDoiDuLieu;
                         _ass.CtrlS_Press += CtrlS_Press;
 
@@ -1117,8 +1118,11 @@ namespace RBI
                         stream.DataChanged += ThayDoiDuLieu;
                         stream.CtrlS_Press += CtrlS_Press;
 
+                        corrate.DataChanged += ThayDoiDuLieu;
+                        corrate.CtrlS_Press += CtrlS_Press;
+
                         checkTank = false;
-                        ucTabNormal ucTabnormal = new ucTabNormal(IDProposal, _ass, equipment, component, op, coat, material, stream, ca, riskFactor, riskSummary, inspection);
+                        ucTabNormal ucTabnormal = new ucTabNormal(IDProposal, _ass, equipment, component, op, coat, material, stream, ca, riskFactor, riskSummary, inspection, corrate);
                         listUC.Add(ucTabnormal);
                         addNewTab(treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + treeListProject.FocusedNode.GetValue(0).ToString() + "]", ucTabnormal.ucAss);
                     }
@@ -1149,8 +1153,9 @@ namespace RBI
                         UCStreamTank streamTank = new UCStreamTank(IDProposal);
                         UCRiskFactor riskFactor = new UCRiskFactor(IDProposal);
                         UCRiskSummary riskSummary = new UCRiskSummary(IDProposal);
+                        UCCorrosionRateTank corrate = new UCCorrosionRateTank(IDProposal);
                         UCInspectionHistorySubform inspection = new UCInspectionHistorySubform(IDProposal);
-                        ucTabTank ucTank = new ucTabTank(IDProposal, assTank, eqTank, compTank, conTank, coat, materialTank, streamTank, riskFactor, riskSummary, inspection);
+                        ucTabTank ucTank = new ucTabTank(IDProposal, assTank, eqTank, compTank, conTank, coat, materialTank, streamTank, riskFactor, riskSummary, inspection, corrate);
                         listUCTank.Add(ucTank);
                         addNewTab(treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + treeListProject.FocusedNode.GetValue(0).ToString() + "]", ucTank.ucAss);
                     }
@@ -1262,7 +1267,7 @@ namespace RBI
                     navNoInspection.Appearance.ForeColor = navStream.Appearance.ForeColor =
                     navRiskFactor.Appearance.ForeColor = navCA.Appearance.ForeColor =
                     navRiskSummary.Appearance.ForeColor =
-                    navViewGraph.Appearance.ForeColor = Color.Black;
+                    navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                 // end mai
                 switch (eqTypeID)
                 {
@@ -1494,6 +1499,7 @@ namespace RBI
             cal.AMINE_INSP_EFF = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[3]);
             cal.AMINE_INSP_NUM = busInspectionHistory.InspectionNumber(componentID, DM_ID[3]);
             cal.AMINE_EXPOSED = st.ExposedToGasAmine == 1 ? true : false;
+            //Console.WriteLine("EP = "+st.ExposureToAmine);
             cal.AMINE_SOLUTION = st.AmineSolution;
             //</input SCC Amine>
 
@@ -2387,6 +2393,9 @@ namespace RBI
                     case 11:
                         u = uctab.ucInspectionHistory;
                         break;
+                    case 13:
+                        u = uctab.ucCorRate;
+                        break;
                     default:
                         break;
                 }
@@ -2432,6 +2441,9 @@ namespace RBI
                         break;
                     case 11:
                         u = ucTabTank.ucInspHistory;
+                        break;
+                    case 13:
+                        u = ucTabTank.ucCorrosion;
                         break;
                     default:
                         break;
@@ -3112,7 +3124,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor =Color.Black;
                     break;
                 case "navEquipment":
                     navEquipment.Appearance.ForeColor = Color.Red;
@@ -3121,7 +3133,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navComponent":
                     navComponent.Appearance.ForeColor = Color.Red;
@@ -3130,7 +3142,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
 
                 case "navOperating":
@@ -3140,7 +3152,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navMaterial":
                     navMaterial.Appearance.ForeColor = Color.Red;
@@ -3149,7 +3161,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navCoating":
                     navCoating.Appearance.ForeColor = Color.Red;
@@ -3158,7 +3170,7 @@ namespace RBI
                         navAssessmentInfo.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navNoInspection":
                     navNoInspection.Appearance.ForeColor = Color.Red;
@@ -3167,7 +3179,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navAssessmentInfo.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navStream":
                     navStream.Appearance.ForeColor = Color.Red;
@@ -3176,7 +3188,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navAssessmentInfo.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navRiskFactor":
                     navRiskFactor.Appearance.ForeColor = Color.Red;
@@ -3185,7 +3197,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navAssessmentInfo.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navCA":
                     navCA.Appearance.ForeColor = Color.Red;
@@ -3194,7 +3206,7 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navAssessmentInfo.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navRiskSummary":
                     navRiskSummary.Appearance.ForeColor = Color.Red;
@@ -3203,11 +3215,21 @@ namespace RBI
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
                         navCA.Appearance.ForeColor = navAssessmentInfo.Appearance.ForeColor =
-                        navViewGraph.Appearance.ForeColor = Color.Black;
+                        navViewGraph.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
                     break;
                 case "navViewGraph":
                     navViewGraph.Appearance.ForeColor = Color.Red;
                     navEquipment.Appearance.ForeColor = navComponent.Appearance.ForeColor =
+                        navOperating.Appearance.ForeColor = navMaterial.Appearance.ForeColor =
+                        navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
+                        navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
+                        navCA.Appearance.ForeColor = navRiskSummary.Appearance.ForeColor =
+                        navAssessmentInfo.Appearance.ForeColor = navCorrosionRate.Appearance.ForeColor = Color.Black;
+                    break;
+                case "navCorrosionRate":
+                    navCorrosionRate.Appearance.ForeColor = Color.Red;
+                    navViewGraph.Appearance.ForeColor = navEquipment.Appearance.ForeColor = 
+                        navComponent.Appearance.ForeColor =
                         navOperating.Appearance.ForeColor = navMaterial.Appearance.ForeColor =
                         navCoating.Appearance.ForeColor = navNoInspection.Appearance.ForeColor =
                         navStream.Appearance.ForeColor = navRiskFactor.Appearance.ForeColor =
@@ -3285,6 +3307,11 @@ namespace RBI
         {
             ChangeColorForNavLink(sender); //mai
             CheckAndShowTab(this.xtraTabData.SelectedTabPage.Name, 12);
+        }
+        private void navBarItem2_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
+        {
+            ChangeColorForNavLink(sender);
+            CheckAndShowTab(this.xtraTabData.SelectedTabPage.Name, 13);
         }
         #endregion
 
@@ -3411,7 +3438,6 @@ namespace RBI
                     System.Windows.Forms.Application.Restart();
             }
         }
-
     }
 
 }

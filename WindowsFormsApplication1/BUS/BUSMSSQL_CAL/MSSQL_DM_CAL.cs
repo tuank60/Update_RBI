@@ -316,13 +316,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (APIComponentType == "TANKBOTTOM")
             {
                 float x = Math.Max((1 - (NomalThick - (CorrosionRate * agetk)) / (getTmin() + CA)), 0);
-                Console.WriteLine("Art: " + x);
+                //Console.WriteLine("Art: " + x);
                 return x;
             }
             else if (!InternalCladding)
             {
                 float x = (CorrosionRate * agetk) / NomalThick;
-                Console.WriteLine("Art: " + x);
+                //Console.WriteLine("Art: " + x);
                 return x;
             }
             else
@@ -586,7 +586,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     Fom = 1;
                     break;
             }
-            Console.WriteLine("Df thin: " + DFB_THIN(age));
+            //Console.WriteLine("Df thin: " + DFB_THIN(age));
             return (float) Math.Max(DFB_THIN(age) * Fip * Fdl * Fwd * Fsm * Fam / Fom, 0.1);
         }
 
@@ -643,30 +643,79 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
 
         /// <summary>
-        /// CAL CAUSTIC
+        /// CAL CAUSTIC - ok
         /// </summary>
         /// <returns></returns>
-        private char plotinArea() //tinh lai
+        private string plotinArea() //tinh lai
         {
-            char k = 'B';
-            if (MAX_OP_TEMP < 80)
+            string k = "B";
+            if (NaOHConcentration < 10)
             {
-                k = 'A';
+                if (MAX_OP_TEMP < 80)
+                {
+                    k = "A";
+                }
+                else
+                {
+                    k = "B";
+                }
+            }
+            else if (NaOHConcentration < 20)
+            {
+                if (MAX_OP_TEMP < 75)
+                {
+                    k = "A";
+                }
+                else
+                {
+                    k = "B";
+                }
+            }
+            else if (NaOHConcentration < 30)
+            {
+                if (MAX_OP_TEMP < 70)
+                {
+                    k = "A";
+                }
+                else
+                {
+                    k = "B";
+                }
+            }
+            else if (NaOHConcentration < 40)
+            {
+                if (MAX_OP_TEMP < 60)
+                {
+                    k = "A";
+                }
+                else
+                {
+                    k = "B";
+                }
             }
             else
             {
-                k = 'B';
+                if (MAX_OP_TEMP < 50)
+                {
+                    k = "A";
+                }
+                else
+                {
+                    k = "B";
+                }
             }
+            Console.WriteLine("CAUSTIC K:"+k);
+            Console.WriteLine(NaOHConcentration + ":" + MAX_OP_TEMP);
             return k;
         }
         private string getSusceptibility_Caustic()
         {
             string sus = null;
             if (CRACK_PRESENT) sus = "High";
-            else if (HEAT_TREATMENT == "Stress Relieved") sus = "None";
+            else if (PWHT) sus = "None";
             else
             {
-                if (plotinArea() == 'A')
+                if (plotinArea().ToString() == "A")
                 {
                     if (NaOHConcentration < 5)
                     {
@@ -677,6 +726,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     else if (HEAT_TRACE) sus = "High";
                     else if (STEAM_OUT) sus = "Medium";
                     else sus = "None";
+                    Console.WriteLine("plotinArea = A");
                 }
                 else
                 {
@@ -684,7 +734,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     else sus = "High";
                 }
             }
-
+            //Console.WriteLine(plotinArea());
+            //Console.WriteLine("CRACK_PRESENT:"+ CRACK_PRESENT+ "HEAT_TREATMENT:"+ HEAT_TREATMENT+ "HEAT_TRACE:"+ HEAT_TRACE+ "STEAM_OUT:"+ STEAM_OUT);
+            //Console.WriteLine("CAUSTIC SUS:" + sus);
             return sus;
         }
         private int SVI_CAUSTIC()
@@ -695,7 +747,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 case "High": sev = 5000; break;
                 case "Medium": sev = 500; break;
                 case "Low": sev = 50; break;
-                default: sev = 1; break;
+                default: sev = 0; break;
             }
             return sev;
         }
@@ -708,21 +760,22 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CAUSTIC_INSP_NUM + CAUSTIC_INSP_EFF;
-                float DFB_CAUSTIC = 0;
-                return DFB_CAUSTIC * (float)Math.Pow(age, 1.1);
+                    float DFB_CAUSTIC = DAL_CAL.GET_TBL_63(SVI_CAUSTIC(), FIELD);
+                    //Console.WriteLine("CAUSTIC_INSP_NUM:"+CAUSTIC_INSP_NUM + "CAUSTIC:"+DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
+                    return DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
                 return 0;
         }
 
         ///<summary>
-        /// CAL SCC AMINE
+        /// CAL SCC AMINE - ok 
         ///</summary>
         private string getSusceptibility_Amine()
         {
             string sus = null;
             if (CRACK_PRESENT) sus = "High";
-            else if (HEAT_TREATMENT == "Stress Relieved") sus = "None";
+            else if (PWHT) sus = "None";
             else if (!AMINE_EXPOSED) sus = "None";
             else
             {
@@ -743,6 +796,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     sus = ((MAX_OP_TEMP > 82.22f) || HEAT_TRACE || STEAM_OUT) ? "Low" : "None";
                 }
             }
+            //Console.WriteLine(AMINE_EXPOSED);
+            //Console.WriteLine("AMINE SUS = " + sus);
             return sus;
         }
         private int SVI_AMINE()
@@ -752,7 +807,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 case "High": return 1000;
                 case "Medium": return 100;
                 case "Low": return 10;
-                default: return 1;
+                default: return 0;
             }
         }
         public float DF_AMINE(float age)
@@ -764,16 +819,16 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = AMINE_INSP_NUM + AMINE_INSP_EFF;
-
-                float DFB_AMIN = 0;
-                return DFB_AMIN * (float)Math.Pow(age, 1.1);
+                float DFB_AMIN = DAL_CAL.GET_TBL_63(SVI_AMINE(), FIELD);
+                //Console.WriteLine("AMINE DF = "+DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
+                return DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
                 return 0;
         }
 
         ///<summary>
-        /// CAL Sulphide stress cracking
+        /// CAL Sulphide stress cracking - ok 
         ///</summary>
         private string GET_ENVIRONMENTAL_SEVERITY()
         {
@@ -807,7 +862,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (H2SContent <= 1000) env = "Moderate";
                 else env = "High";
             }
-
+            Console.WriteLine("Sulphide env = "+env);
             return env;
         }
         private string GET_SUSCEPTIBILITY_SULPHIDE()
@@ -839,6 +894,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     sus = (env == "Low") ? "Medium" : "High";
                 }
             }
+            Console.WriteLine("Sulphide sus = " + sus);
             return sus;
         }
         private int SVI_SULPHIDE()
@@ -847,7 +903,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 case "High": return 100;
                 case "Medium": return 10;
-                default: return 1;
+                case "Low": return 1;
+                default: return 0;
             }
         }
         public float DF_SULPHIDE(float age)
@@ -859,16 +916,17 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULPHIDE_INSP_NUM + SULPHIDE_INSP_EFF;
+                float DFB_SULPHIDE = DAL_CAL.GET_TBL_63(SVI_SULPHIDE(), FIELD);
+                Console.WriteLine("DF_SULPHIDE = " + DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
+                return DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
 
-                float DFB_SULPHIDE = 0;
-                return DFB_SULPHIDE * (float)Math.Pow(age, 1.1);
             }
             else
                 return 0;
         }
 
         ///<summary>
-        /// CAL HIC/SOHIC H2S
+        /// CAL HIC/SOHIC H2S - ok
         ///</summary>
         private string GET_ENVIROMENTAL_HICSOHIC_H2S()
         {
@@ -949,11 +1007,27 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 case "High": return 100;
                 case "Medium": return 10;
-                default: return 1;
+                case "Low": return 1;
+                default: return 0;
             }
         }
         public float DF_HICSOHIC_H2S(float age)
         {
+            float Fom = 0;
+            switch (OnlineMonitoring)
+            {
+                case "Other corrosion - Key process variable":
+                case "Other corrosion - Hydrogen probes":
+                    Fom = 2;
+                    break;
+                case "Other corrosion - Key process variable and Hydrogen probes":
+                    Fom = 4;
+                    break;
+                default:
+                    Fom = 1;
+                    break;
+            }
+            Console.WriteLine(Fom);
             if (CARBON_ALLOY && AQUEOUS_OPERATOR && ENVIRONMENT_H2S_CONTENT)
             {
                 String FIELD = null;
@@ -961,8 +1035,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULFUR_INSP_NUM + SULFUR_INSP_EFF;
-                float DFB_SULFUR = 0;
-                return DFB_SULFUR * (float)Math.Pow(age, 1.1);
+
+                float DFB_SULFUR = DAL_CAL.GET_TBL_63(SVI_HICSOHIC_H2S(), FIELD);
+                Console.WriteLine("HIC/SOHIC H2S = " + (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom);
+                return (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
             }
             else
                 return 0;
@@ -975,15 +1051,16 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             string sus = "None";
             if (CRACK_PRESENT) sus = "High";
+            else if (PWHT)
+            {
+                sus = "None";
+            }
             else
             {
-                if (CO3_CONCENTRATION < 100) sus = "Low";
-                else if (CO3_CONCENTRATION <= 500)
-                    sus = (PH >= 9.0) ? "Medium" : "Low";
-                else if (CO3_CONCENTRATION <= 1000)
-                    sus = (PH >= 9.0) ? "High" : ((PH > 8.3) ? "Medium" : "Low");
+                if (CO3_CONCENTRATION < 100)
+                    sus = (PH >= 9.0) ? "High" : ((PH >= 7.5) ? "Low" : "None");
                 else
-                    sus = (PH >= 7.6 && PH <= 8.3) ? "Medium" : "High";
+                    sus = (PH >= 8.0) ? "High" : ((PH >= 7.5) ? "Medium" : "None");
             }
             return sus;
         }
@@ -994,7 +1071,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 case "High": return 1000;
                 case "Medium": return 100;
                 case "Low": return 10;
-                default: return 1;
+                default: return 0;
             }
         }
         public float DF_CACBONATE(float age)
@@ -1006,8 +1083,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CACBONATE_INSP_NUM + CACBONATE_INSP_EFF;
-                float DFB_CACBONATE = 0;
-                return DFB_CACBONATE * (float)Math.Pow(age, 1.1);
+                float DFB_CACBONATE = DAL_CAL.GET_TBL_63(SVI_CARBONATE(), FIELD);
+                return DFB_CACBONATE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
                 return 0;
@@ -1112,7 +1189,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 case "High": return 5000;
                 case "Medium": return 500;
                 case "Low": return 50;
-                default: return 1;
+                default: return 0;
             }
         }
         public float DF_PTA(float age)
@@ -1124,9 +1201,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = PTA_INSP_NUM + PTA_INSP_EFF;
-
-                float DFB_PTA = 0;
-                return DFB_PTA * (float)Math.Pow(age, 1.1);
+                float DFB_PTA = DAL_CAL.GET_TBL_63(SVI_PTA(), FIELD);
+                return DFB_PTA * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
                 return 0;
@@ -1139,26 +1215,44 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             string sus = "None";
             if (CRACK_PRESENT) { sus = "High"; return sus; }
-            if (PH > 10)
+            if (PH <= 10)
             {
                 sus = (MAX_OP_TEMP >= 93 && MAX_OP_TEMP <= 149 && CHLORIDE_ION_CONTENT > 1000) ? "Medium" : "Low";
-            }
-            else
-            {
-                if (MAX_OP_TEMP <= 66 && MAX_OP_TEMP > 38)
+                if (MAX_OP_TEMP <= 38)
+                {
+                    sus = (CHLORIDE_ION_CONTENT <= 1000) ? "Low" : "Medium";
+                }
+                else if (MAX_OP_TEMP > 38 && MAX_OP_TEMP <= 66)
                 {
                     sus = (CHLORIDE_ION_CONTENT <= 10) ? "Low" : ((CHLORIDE_ION_CONTENT <= 1000) ? "Medium" : "High");
                 }
-                else if (MAX_OP_TEMP <= 93 && MAX_OP_TEMP > 66)
+                else if (MAX_OP_TEMP > 66 && MAX_OP_TEMP <= 93)
                 {
                     sus = (CHLORIDE_ION_CONTENT <= 100) ? "Medium" : "High";
                 }
                 else if (MAX_OP_TEMP > 93 && MAX_OP_TEMP <= 149)
                 {
-                    sus = (CHLORIDE_ION_CONTENT < 10) ? "Medium" : "High";
+                    sus = (CHLORIDE_ION_CONTENT <= 10) ? "Medium" : "High";
                 }
                 else
+                    sus = "High";
+            }
+            else
+            {
+                if (MAX_OP_TEMP <= 38)
+                {
                     sus = "None";
+                }
+                else if (MAX_OP_TEMP > 38 && MAX_OP_TEMP <= 93)
+                {
+                    sus = "Low";
+                }
+                else if (MAX_OP_TEMP > 93 && MAX_OP_TEMP <= 149)
+                {
+                    sus = (CHLORIDE_ION_CONTENT <= 1000) ? "Low" : "Medium";
+                }
+                else
+                    sus = (CHLORIDE_ION_CONTENT <= 1000) ? "Medium" : "High";
             }
             return sus;
         }
@@ -1169,7 +1263,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 case "High": return 5000;
                 case "Medium": return 500;
                 case "Low": return 50;
-                default: return 1;
+                default: return 0;
             }
         }
         public float DF_CLSCC(float age)
@@ -1181,8 +1275,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CLSCC_INSP_NUM + CLSCC_INSP_EFF;
-                float DFB_CLSCC = 0;
-                return DFB_CLSCC * (float)Math.Pow(age, 1.1);
+                float DFB_CLSCC = DAL_CAL.GET_TBL_63(SVI_CLSCC(), FIELD);
+                return DFB_CLSCC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
                 return 0;
@@ -1215,7 +1309,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 case "High": return 100;
                 case "Medium": return 10;
-                default: return 1;
+                case "Low": return 1;
+                default: return 0;
             }
         }
         public float DF_HSCHF(float age)
@@ -1227,8 +1322,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HSC_HF_INSP_NUM + HSC_HF_INSP_EFF;
-                float DFB_HSCHF = 0;
-                return DFB_HSCHF * (float)Math.Pow(age, 1.1);
+                float DFB_HSCHF = DAL_CAL.GET_TBL_63(SVI_HSCHF(), FIELD);
+                return DFB_HSCHF * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
                 return 0;
@@ -1243,11 +1338,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (!HF_PRESENT || !CARBON_ALLOY) return "None";
             if (PWHT)
             {
-                sus = (SULFUR_CONTENT == "High > 0.01%") ? "High" : ((SULFUR_CONTENT == "Low 0.002 - 0.01%") ? "Medium" : "Low");
+                sus = (SULFUR_CONTENT == "High > 0.01%") ? "High" : ((SULFUR_CONTENT == "Low ≤ 0.01%") ? "Medium" : "Low");
             }
             else
             {
-                sus = (SULFUR_CONTENT == "High > 0.01%" || SULFUR_CONTENT == "Low 0.002 - 0.01%") ? "High" : "Medium";
+                sus = (SULFUR_CONTENT == "High > 0.01%" || SULFUR_CONTENT == "Low ≤ 0.01%") ? "High" : "Low";
             }
             return sus;
         }
@@ -1257,11 +1352,26 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 case "High": return 100;
                 case "Medium": return 10;
-                default: return 1;
+                case "Low": return 1;
+                default: return 0;
             }
         }
         public float DF_HIC_SOHIC_HF(float age)
         {
+            float Fom = 0;
+            switch (OnlineMonitoring)
+            {
+                case "Other corrosion - Key process variable":
+                case "Other corrosion - Hydrogen probes":
+                    Fom = 2;
+                    break;
+                case "Other corrosion - Key process variable and Hydrogen probes":
+                    Fom = 4;
+                    break;
+                default:
+                    Fom = 1;
+                    break;
+            }
             if (CARBON_ALLOY && HF_PRESENT)
             {
                 String FIELD = null;
@@ -1269,8 +1379,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HICSOHIC_INSP_NUM + HICSOHIC_INSP_EFF;
-                float DFB_HICSOHIC_HF = 0;
-                return DFB_HICSOHIC_HF * (float)Math.Pow(age, 1.1);
+                float DFB_HICSOHIC_HF = DAL_CAL.GET_TBL_63(SVI_HICSOHIC_HF(), FIELD);
+                return (DFB_HICSOHIC_HF * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
             }
             else
                 return 0;
@@ -1721,7 +1831,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else
                 FIELD = EXTERN_CLSCC_INSP_NUM + EXTERN_CLSCC_INSP_EFF;
 
-            return 0;
+            return DAL_CAL.GET_TBL_63(SVI, FIELD);
         }
         public float DF_EXTERN_CLSCC()
         {
@@ -1884,8 +1994,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 FIELD = "E";
             else
                 FIELD = EXTERN_CLSCC_CUI_INSP_NUM + EXTERN_CLSCC_CUI_INSP_EFF;
-
-            return 0;
+            return DAL_CAL.GET_TBL_63(SVI, FIELD);
         }
         public float DF_CUI_CLSCC()
         {

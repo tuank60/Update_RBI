@@ -130,6 +130,7 @@
             this.navCA = new DevExpress.XtraNavBar.NavBarItem();
             this.navRiskSummary = new DevExpress.XtraNavBar.NavBarItem();
             this.navViewGraph = new DevExpress.XtraNavBar.NavBarItem();
+            this.navCorrosionRate = new DevExpress.XtraNavBar.NavBarItem();
             this.imageCollection1 = new DevExpress.Utils.ImageCollection(this.components);
             this.navGrRecord = new DevExpress.XtraNavBar.NavBarGroup();
             this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::RBI.WaitForm1), true, true);
@@ -211,7 +212,6 @@
             this.btnUnitSeting,
             this.btnAssessmentMethod});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -222,7 +222,7 @@
             this.ribbonPage3});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMarqueeProgressBar1});
-            this.ribbon.Size = new System.Drawing.Size(1265, 187);
+            this.ribbon.Size = new System.Drawing.Size(1084, 147);
             this.ribbon.StatusBar = this.ribStatusbar;
             // 
             // btnPlant
@@ -716,16 +716,14 @@
             // 
             // repositoryItemMarqueeProgressBar1
             // 
-            this.repositoryItemMarqueeProgressBar1.LookAndFeel.SkinName = "Visual Studio 2013 Light";
             this.repositoryItemMarqueeProgressBar1.Name = "repositoryItemMarqueeProgressBar1";
             // 
             // ribStatusbar
             // 
-            this.ribStatusbar.Location = new System.Drawing.Point(0, 753);
-            this.ribStatusbar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribStatusbar.Location = new System.Drawing.Point(0, 612);
             this.ribStatusbar.Name = "ribStatusbar";
             this.ribStatusbar.Ribbon = this.ribbon;
-            this.ribStatusbar.Size = new System.Drawing.Size(1265, 29);
+            this.ribStatusbar.Size = new System.Drawing.Size(1084, 23);
             // 
             // defaultLookAndFeel1
             // 
@@ -735,11 +733,10 @@
             // 
             this.xtraTabData.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageAndTabControlHeader;
             this.xtraTabData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabData.Location = new System.Drawing.Point(398, 187);
-            this.xtraTabData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.xtraTabData.Location = new System.Drawing.Point(390, 147);
             this.xtraTabData.Name = "xtraTabData";
             this.xtraTabData.SelectedTabPage = this.xTabHome;
-            this.xtraTabData.Size = new System.Drawing.Size(867, 566);
+            this.xtraTabData.Size = new System.Drawing.Size(694, 465);
             this.xtraTabData.TabIndex = 2;
             this.xtraTabData.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xTabHome});
@@ -755,10 +752,9 @@
             this.xTabHome.AutoScroll = true;
             this.xTabHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.xTabHome.Controls.Add(this.panel1);
-            this.xTabHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xTabHome.Name = "xTabHome";
             this.xTabHome.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.xTabHome.Size = new System.Drawing.Size(865, 534);
+            this.xTabHome.Size = new System.Drawing.Size(692, 438);
             this.xTabHome.Text = "Home";
             // 
             // panel1
@@ -767,18 +763,17 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 534);
+            this.panel1.Size = new System.Drawing.Size(692, 438);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(93, 17);
+            this.label1.Location = new System.Drawing.Point(80, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(653, 135);
+            this.label1.Size = new System.Drawing.Size(523, 108);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cortek RBI";
             // 
@@ -787,10 +782,9 @@
             this.treeListProject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treeListProject.Location = new System.Drawing.Point(3, 4);
-            this.treeListProject.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.treeListProject.Location = new System.Drawing.Point(3, 3);
             this.treeListProject.Name = "treeListProject";
-            this.treeListProject.Size = new System.Drawing.Size(228, 602);
+            this.treeListProject.Size = new System.Drawing.Size(190, 393);
             this.treeListProject.StateImageList = this.imageTreeList;
             this.treeListProject.TabIndex = 1;
             this.treeListProject.FocusedNodeChanged += new DevExpress.XtraTreeList.FocusedNodeChangedEventHandler(this.treeListProject_FocusedNodeChanged);
@@ -832,21 +826,20 @@
             this.dockPanel2.Controls.Add(this.dockPanel2_Container);
             this.dockPanel2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel2.ID = new System.Guid("1d634bbe-f85f-4ce6-b34c-06ba1b87d588");
-            this.dockPanel2.Location = new System.Drawing.Point(187, 187);
-            this.dockPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel2.Location = new System.Drawing.Point(0, 147);
             this.dockPanel2.Name = "dockPanel2";
             this.dockPanel2.Options.ShowCloseButton = false;
-            this.dockPanel2.OriginalSize = new System.Drawing.Size(211, 161);
-            this.dockPanel2.Size = new System.Drawing.Size(211, 566);
+            this.dockPanel2.OriginalSize = new System.Drawing.Size(203, 161);
+            this.dockPanel2.SavedSizeFactor = 0D;
+            this.dockPanel2.Size = new System.Drawing.Size(203, 465);
             this.dockPanel2.Text = "Items";
             // 
             // dockPanel2_Container
             // 
             this.dockPanel2_Container.Controls.Add(this.treeListProject);
-            this.dockPanel2_Container.Location = new System.Drawing.Point(4, 29);
-            this.dockPanel2_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel2_Container.Location = new System.Drawing.Point(3, 25);
             this.dockPanel2_Container.Name = "dockPanel2_Container";
-            this.dockPanel2_Container.Size = new System.Drawing.Size(201, 533);
+            this.dockPanel2_Container.Size = new System.Drawing.Size(196, 437);
             this.dockPanel2_Container.TabIndex = 0;
             // 
             // dockPanel1
@@ -854,21 +847,20 @@
             this.dockPanel1.Controls.Add(this.dockPanel1_Container);
             this.dockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel1.ID = new System.Guid("b4634cc6-3621-4a87-a427-cf55394912fb");
-            this.dockPanel1.Location = new System.Drawing.Point(0, 187);
-            this.dockPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1.Location = new System.Drawing.Point(203, 147);
             this.dockPanel1.Name = "dockPanel1";
             this.dockPanel1.Options.ShowCloseButton = false;
             this.dockPanel1.OriginalSize = new System.Drawing.Size(187, 200);
-            this.dockPanel1.Size = new System.Drawing.Size(187, 566);
+            this.dockPanel1.SavedSizeFactor = 0D;
+            this.dockPanel1.Size = new System.Drawing.Size(187, 465);
             this.dockPanel1.Text = "Main Menu";
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.navBarControl2);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(4, 29);
-            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(3, 25);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(177, 533);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(180, 437);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // navBarControl2
@@ -895,12 +887,12 @@
             this.navRiskSummaryMainMenu,
             this.navFullInspHis,
             this.navExportAllInsp,
-            this.navViewGraph});
+            this.navViewGraph,
+            this.navCorrosionRate});
             this.navBarControl2.Location = new System.Drawing.Point(2, 0);
-            this.navBarControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.navBarControl2.Name = "navBarControl2";
-            this.navBarControl2.OptionsNavPane.ExpandedWidth = 204;
-            this.navBarControl2.Size = new System.Drawing.Size(204, 602);
+            this.navBarControl2.OptionsNavPane.ExpandedWidth = 175;
+            this.navBarControl2.Size = new System.Drawing.Size(175, 489);
             this.navBarControl2.TabIndex = 0;
             this.navBarControl2.Text = "navBarControl2";
             // 
@@ -920,48 +912,49 @@
             // navBarItem1
             // 
             this.navBarItem1.Caption = "Home";
+            this.navBarItem1.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.ImageOptions.SmallImage")));
             this.navBarItem1.Name = "navBarItem1";
-            this.navBarItem1.SmallImage = ((System.Drawing.Image)(resources.GetObject("navBarItem1.SmallImage")));
             this.navBarItem1.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem1_LinkClicked);
             // 
             // navAddNewSite
             // 
             this.navAddNewSite.Caption = "Add New Site";
+            this.navAddNewSite.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navAddNewSite.ImageOptions.SmallImage")));
             this.navAddNewSite.Name = "navAddNewSite";
-            this.navAddNewSite.SmallImage = ((System.Drawing.Image)(resources.GetObject("navAddNewSite.SmallImage")));
             this.navAddNewSite.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navAddNewSite_LinkClicked);
             // 
             // navAddNewFacility
             // 
             this.navAddNewFacility.Caption = "Add New Facility";
+            this.navAddNewFacility.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navAddNewFacility.ImageOptions.SmallImage")));
             this.navAddNewFacility.Name = "navAddNewFacility";
-            this.navAddNewFacility.SmallImage = ((System.Drawing.Image)(resources.GetObject("navAddNewFacility.SmallImage")));
             this.navAddNewFacility.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navAddNewFacility_LinkClicked);
             // 
             // navRiskSummaryMainMenu
             // 
             this.navRiskSummaryMainMenu.Caption = "Risk Summary";
+            this.navRiskSummaryMainMenu.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navRiskSummaryMainMenu.ImageOptions.SmallImage")));
             this.navRiskSummaryMainMenu.Name = "navRiskSummaryMainMenu";
-            this.navRiskSummaryMainMenu.SmallImage = ((System.Drawing.Image)(resources.GetObject("navRiskSummaryMainMenu.SmallImage")));
             this.navRiskSummaryMainMenu.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navRiskSummaryMainMenu_LinkClicked);
             // 
             // navFullInspHis
             // 
             this.navFullInspHis.Caption = "Inspection History";
+            this.navFullInspHis.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFullInspHis.ImageOptions.SmallImage")));
             this.navFullInspHis.Name = "navFullInspHis";
-            this.navFullInspHis.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFullInspHis.SmallImage")));
             this.navFullInspHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFullInspHis_LinkClicked);
             // 
             // navExportAllInsp
             // 
             this.navExportAllInsp.Caption = "Export All Inspection";
+            this.navExportAllInsp.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navExportAllInsp.ImageOptions.SmallImage")));
             this.navExportAllInsp.Name = "navExportAllInsp";
-            this.navExportAllInsp.SmallImage = ((System.Drawing.Image)(resources.GetObject("navExportAllInsp.SmallImage")));
             this.navExportAllInsp.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navExportAllInsp_LinkClicked);
             // 
             // navBarRecord
             // 
             this.navBarRecord.Caption = "Record";
+            this.navBarRecord.Expanded = true;
             this.navBarRecord.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
             new DevExpress.XtraNavBar.NavBarItemLink(this.navAssessmentInfo),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navEquipment),
@@ -974,94 +967,102 @@
             new DevExpress.XtraNavBar.NavBarItemLink(this.navRiskFactor),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navCA),
             new DevExpress.XtraNavBar.NavBarItemLink(this.navRiskSummary),
-            new DevExpress.XtraNavBar.NavBarItemLink(this.navViewGraph)});
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navViewGraph),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.navCorrosionRate)});
             this.navBarRecord.Name = "navBarRecord";
             this.navBarRecord.Visible = false;
             // 
             // navAssessmentInfo
             // 
             this.navAssessmentInfo.Caption = "Assessment Info";
+            this.navAssessmentInfo.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navAssessmentInfo.ImageOptions.SmallImage")));
             this.navAssessmentInfo.Name = "navAssessmentInfo";
-            this.navAssessmentInfo.SmallImage = ((System.Drawing.Image)(resources.GetObject("navAssessmentInfo.SmallImage")));
             this.navAssessmentInfo.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navAssessmentInfo_LinkClicked);
             // 
             // navEquipment
             // 
             this.navEquipment.Caption = "Equipment Properties";
+            this.navEquipment.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navEquipment.ImageOptions.SmallImage")));
             this.navEquipment.Name = "navEquipment";
-            this.navEquipment.SmallImage = ((System.Drawing.Image)(resources.GetObject("navEquipment.SmallImage")));
             this.navEquipment.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navEquipment_LinkClicked);
             // 
             // navComponent
             // 
             this.navComponent.Caption = "Component Properties";
+            this.navComponent.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navComponent.ImageOptions.SmallImage")));
             this.navComponent.Name = "navComponent";
-            this.navComponent.SmallImage = ((System.Drawing.Image)(resources.GetObject("navComponent.SmallImage")));
             this.navComponent.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navComponent_LinkClicked);
             // 
             // navOperating
             // 
             this.navOperating.Caption = "Operating Condition";
+            this.navOperating.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navOperating.ImageOptions.SmallImage")));
             this.navOperating.Name = "navOperating";
-            this.navOperating.SmallImage = ((System.Drawing.Image)(resources.GetObject("navOperating.SmallImage")));
             this.navOperating.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navOperating_LinkClicked);
             // 
             // navMaterial
             // 
             this.navMaterial.Caption = "Material";
+            this.navMaterial.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navMaterial.ImageOptions.SmallImage")));
             this.navMaterial.Name = "navMaterial";
-            this.navMaterial.SmallImage = ((System.Drawing.Image)(resources.GetObject("navMaterial.SmallImage")));
             this.navMaterial.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navMaterial_LinkClicked);
             // 
             // navCoating
             // 
             this.navCoating.Caption = "Coating, Cladding";
+            this.navCoating.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCoating.ImageOptions.SmallImage")));
             this.navCoating.Name = "navCoating";
-            this.navCoating.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCoating.SmallImage")));
             this.navCoating.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCoating_LinkClicked);
             // 
             // navNoInspection
             // 
             this.navNoInspection.Caption = "Inspection History";
+            this.navNoInspection.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navNoInspection.ImageOptions.SmallImage")));
             this.navNoInspection.Name = "navNoInspection";
-            this.navNoInspection.SmallImage = ((System.Drawing.Image)(resources.GetObject("navNoInspection.SmallImage")));
             this.navNoInspection.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navNoInspection_LinkClicked);
             // 
             // navStream
             // 
             this.navStream.Caption = "Stream";
+            this.navStream.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navStream.ImageOptions.SmallImage")));
             this.navStream.Name = "navStream";
-            this.navStream.SmallImage = ((System.Drawing.Image)(resources.GetObject("navStream.SmallImage")));
             this.navStream.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navStream_LinkClicked);
             // 
             // navRiskFactor
             // 
             this.navRiskFactor.Caption = "Risk Factor";
+            this.navRiskFactor.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navRiskFactor.ImageOptions.SmallImage")));
             this.navRiskFactor.Name = "navRiskFactor";
-            this.navRiskFactor.SmallImage = ((System.Drawing.Image)(resources.GetObject("navRiskFactor.SmallImage")));
             this.navRiskFactor.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navRiskFactor_LinkClicked);
             // 
             // navCA
             // 
             this.navCA.Caption = "Consequen Analysis";
-            this.navCA.LargeImage = ((System.Drawing.Image)(resources.GetObject("navCA.LargeImage")));
+            this.navCA.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("navCA.ImageOptions.LargeImage")));
+            this.navCA.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCA.ImageOptions.SmallImage")));
             this.navCA.Name = "navCA";
-            this.navCA.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCA.SmallImage")));
             this.navCA.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navCA_LinkClicked);
             // 
             // navRiskSummary
             // 
             this.navRiskSummary.Caption = "Risk Summary";
+            this.navRiskSummary.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navRiskSummary.ImageOptions.SmallImage")));
             this.navRiskSummary.Name = "navRiskSummary";
-            this.navRiskSummary.SmallImage = ((System.Drawing.Image)(resources.GetObject("navRiskSummary.SmallImage")));
             this.navRiskSummary.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navRiskSummary_LinkClicked);
             // 
             // navViewGraph
             // 
             this.navViewGraph.Caption = "View Graph";
+            this.navViewGraph.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navViewGraph.ImageOptions.SmallImage")));
             this.navViewGraph.Name = "navViewGraph";
-            this.navViewGraph.SmallImage = ((System.Drawing.Image)(resources.GetObject("navViewGraph.SmallImage")));
             this.navViewGraph.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navViewGraph_LinkClicked);
+            // 
+            // navCorrosionRate
+            // 
+            this.navCorrosionRate.Caption = "Corrosion Rate";
+            this.navCorrosionRate.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navCorrosionRate.ImageOptions.SmallImage")));
+            this.navCorrosionRate.Name = "navCorrosionRate";
+            this.navCorrosionRate.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem2_LinkClicked);
             // 
             // imageCollection1
             // 
@@ -1114,18 +1115,17 @@
             // RibbonForm1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1265, 782);
+            this.ClientSize = new System.Drawing.Size(1084, 635);
             this.Controls.Add(this.xtraTabData);
-            this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.dockPanel1);
+            this.Controls.Add(this.dockPanel2);
             this.Controls.Add(this.ribStatusbar);
             this.Controls.Add(this.ribbon);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RibbonForm1";
             this.Ribbon = this.ribbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1268,5 +1268,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem21;
         private DevExpress.XtraBars.BarButtonItem btnUnitSeting;
         private DevExpress.XtraBars.BarButtonItem btnAssessmentMethod;
+        private DevExpress.XtraNavBar.NavBarItem navCorrosionRate;
     }
 }

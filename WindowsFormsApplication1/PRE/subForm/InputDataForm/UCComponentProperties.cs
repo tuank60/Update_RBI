@@ -511,7 +511,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label8.Text == "▼ Generic Properties")
             {
-                panel2.Height = 220;
+                panel2.Height = 198;
                 label8.Text = "▶ Generic Properties";
                 panel1.Top = panel2.Top + panel2.Height + 13;
                 panel3.Top = panel1.Top + panel1.Height + 13;
@@ -537,7 +537,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label9.Text == "▼ Governing Thinning Damage Factor Properties")
             {
-                panel1.Height = 100;
+                panel1.Height = 83;
                 label9.Text = "▶ Governing Thinning Damage Factor Properties";
                 panel3.Top = panel1.Top + panel1.Height + 13;
                 panel4.Top = panel3.Top + panel3.Height + 13;
@@ -563,7 +563,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label11.Text == "▼ Governing External Damage Factor Properties")
             {
-                panel3.Height = 60;
+                panel3.Height = 64;
                 label11.Text = "▶ Governing External Damage Factor Properties";
                 panel4.Top = panel3.Top + panel3.Height + 13;
                 panel5.Top = panel4.Top + panel4.Height + 13;
@@ -587,7 +587,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label13.Text == "▼ Governing Stress Corrosion Cracking Damage Factor Properties")
             {
-                panel4.Height = 60;
+                panel4.Height = 64;
                 label13.Text = "▶ Governing Stress Corrosion Cracking Damage Factor Properties";
                 panel5.Top = panel4.Top + panel4.Height + 13;
                 panel6.Top = panel5.Top + panel5.Height + 13;
@@ -609,7 +609,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label14.Text == "▼ High Temperature Hydrogen Attack Damage Factor Properties")
             {
-                panel5.Height = 60;
+                panel5.Height = 64;
                 label14.Text = "▶ High Temperature Hydrogen Attack Damage Factor Properties";
                 panel6.Top = panel5.Top + panel5.Height + 13;
                 panel7.Top = panel6.Top + panel6.Height + 13;
@@ -629,7 +629,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label7.Text == "▼ Governing Brittle Fracture Damage Factor Properties")
             {
-                panel6.Height = 313;
+                panel6.Height = 345;
                 label7.Text = "▶ Governing Brittle Fracture Damage Factor Properties";
                 panel7.Top = panel6.Top + panel6.Height + 13;
             }
@@ -645,7 +645,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             if (label40.Text == "▼ Fatique Damage Factor Properties")
             {
-                panel7.Height = 300;
+                panel7.Height = 289;
                 label40.Text = "▶ Fatique Damage Factor Properties";
             }
             else if (label40.Text == "▶ Fatique Damage Factor Properties")
