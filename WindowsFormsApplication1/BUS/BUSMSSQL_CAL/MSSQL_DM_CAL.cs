@@ -492,13 +492,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (NomalThick == 0 || CurrentThick == 0)
                     return 1390;
                 else
-<<<<<<< HEAD
-                    //Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art(age)), EFF_THIN));
-                return DAL_CAL.GET_TBL_47(API_ART(Art(age)), EFF_THIN);
-=======
                     Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN));
                 return DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
             {
@@ -508,11 +503,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     return 6500;
                 else
                 {
-<<<<<<< HEAD
-                    //Console.WriteLine("Para: " + Pa[1]);
-=======
                     Console.WriteLine("Strength ratio: " + StrengRatio());
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
                     return (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
 
                 }
@@ -769,14 +760,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CAUSTIC_INSP_NUM + CAUSTIC_INSP_EFF;
-<<<<<<< HEAD
                     float DFB_CAUSTIC = DAL_CAL.GET_TBL_63(SVI_CAUSTIC(), FIELD);
                     //Console.WriteLine("CAUSTIC_INSP_NUM:"+CAUSTIC_INSP_NUM + "CAUSTIC:"+DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                     return DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_CAUSTIC = 0;
-                return DFB_CAUSTIC * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -833,15 +819,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = AMINE_INSP_NUM + AMINE_INSP_EFF;
-
-<<<<<<< HEAD
                 float DFB_AMIN = DAL_CAL.GET_TBL_63(SVI_AMINE(), FIELD);
                 //Console.WriteLine("AMINE DF = "+DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                 return DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_AMIN = 0;
-                return DFB_AMIN * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -936,15 +916,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULPHIDE_INSP_NUM + SULPHIDE_INSP_EFF;
-
-<<<<<<< HEAD
                 float DFB_SULPHIDE = DAL_CAL.GET_TBL_63(SVI_SULPHIDE(), FIELD);
                 Console.WriteLine("DF_SULPHIDE = " + DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                 return DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_SULPHIDE = 0;
-                return DFB_SULPHIDE * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
+
             }
             else
                 return 0;
@@ -1060,14 +1035,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULFUR_INSP_NUM + SULFUR_INSP_EFF;
-<<<<<<< HEAD
+
                 float DFB_SULFUR = DAL_CAL.GET_TBL_63(SVI_HICSOHIC_H2S(), FIELD);
                 Console.WriteLine("HIC/SOHIC H2S = " + (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom);
                 return (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
-=======
-                float DFB_SULFUR = 0;
-                return DFB_SULFUR * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -1112,13 +1083,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CACBONATE_INSP_NUM + CACBONATE_INSP_EFF;
-<<<<<<< HEAD
                 float DFB_CACBONATE = DAL_CAL.GET_TBL_63(SVI_CARBONATE(), FIELD);
                 return DFB_CACBONATE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_CACBONATE = 0;
-                return DFB_CACBONATE * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -1235,14 +1201,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = PTA_INSP_NUM + PTA_INSP_EFF;
-
-<<<<<<< HEAD
                 float DFB_PTA = DAL_CAL.GET_TBL_63(SVI_PTA(), FIELD);
                 return DFB_PTA * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_PTA = 0;
-                return DFB_PTA * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -1315,13 +1275,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CLSCC_INSP_NUM + CLSCC_INSP_EFF;
-<<<<<<< HEAD
                 float DFB_CLSCC = DAL_CAL.GET_TBL_63(SVI_CLSCC(), FIELD);
                 return DFB_CLSCC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_CLSCC = 0;
-                return DFB_CLSCC * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -1367,13 +1322,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HSC_HF_INSP_NUM + HSC_HF_INSP_EFF;
-<<<<<<< HEAD
                 float DFB_HSCHF = DAL_CAL.GET_TBL_63(SVI_HSCHF(), FIELD);
                 return DFB_HSCHF * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
-=======
-                float DFB_HSCHF = 0;
-                return DFB_HSCHF * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -1429,13 +1379,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HICSOHIC_INSP_NUM + HICSOHIC_INSP_EFF;
-<<<<<<< HEAD
                 float DFB_HICSOHIC_HF = DAL_CAL.GET_TBL_63(SVI_HICSOHIC_HF(), FIELD);
                 return (DFB_HICSOHIC_HF * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
-=======
-                float DFB_HICSOHIC_HF = 0;
-                return DFB_HICSOHIC_HF * (float)Math.Pow(age, 1.1);
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
             }
             else
                 return 0;
@@ -1886,11 +1831,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else
                 FIELD = EXTERN_CLSCC_INSP_NUM + EXTERN_CLSCC_INSP_EFF;
 
-<<<<<<< HEAD
             return DAL_CAL.GET_TBL_63(SVI, FIELD);
-=======
-            return 0;
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
         }
         public float DF_EXTERN_CLSCC()
         {
@@ -2053,12 +1994,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 FIELD = "E";
             else
                 FIELD = EXTERN_CLSCC_CUI_INSP_NUM + EXTERN_CLSCC_CUI_INSP_EFF;
-
-<<<<<<< HEAD
             return DAL_CAL.GET_TBL_63(SVI, FIELD);
-=======
-            return 0;
->>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
         }
         public float DF_CUI_CLSCC()
         {

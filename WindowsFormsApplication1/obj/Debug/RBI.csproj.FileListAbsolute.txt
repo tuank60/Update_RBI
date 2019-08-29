@@ -545,3 +545,5 @@ C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\Wi
 C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
 >>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
+C:\Users\DO ANH TUAN\Desktop\lab411\Code update 21-8-2019\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.CorrosionRateTank.resources
+C:\Users\DO ANH TUAN\Desktop\lab411\Code update 21-8-2019\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserControl1.resources
