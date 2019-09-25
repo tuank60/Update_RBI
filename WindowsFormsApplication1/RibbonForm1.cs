@@ -239,6 +239,7 @@ namespace RBI
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, corrosion);
+                    
                     //RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
@@ -247,6 +248,12 @@ namespace RBI
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
+                    //Save Data Corrosion Rate
+                    for (int i = 0; i < uc.ucCorRate.LengthRow(); i++)
+                    {
+                        RW_CORROSION_RATE_TANK rate = uc.ucCorRate.getData(i);
+                        SaveDataCorrosionRate(rate);
+                    }
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     showUCinTabpage(resultRisk);
                 }
@@ -3036,6 +3043,7 @@ namespace RBI
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
+            //busCorrosionRate.edit(corate);
             //busInputCALevel1.edit(ca);
 
         }
@@ -3050,6 +3058,11 @@ namespace RBI
             busCoating.edit(coat);
             busMaterial.edit(ma);
             busInputCATank.edit(ca);
+        }
+
+        private void SaveDataCorrosionRate(RW_CORROSION_RATE_TANK corate)
+        {
+            busCorrosionRate.edit(corate);
         }
         private void showUCinTabpage(UserControl uc)
         {
@@ -3390,6 +3403,7 @@ namespace RBI
         RW_EXTCOR_TEMPERATURE_BUS busExtcorTemp = new RW_EXTCOR_TEMPERATURE_BUS();
         RW_MATERIAL_BUS busMaterial = new RW_MATERIAL_BUS();
         RW_COATING_BUS busCoating = new RW_COATING_BUS();
+        RW_CORROSION_RATE_TANK_BUS busCorrosionRate = new RW_CORROSION_RATE_TANK_BUS();
         RW_INPUT_CA_LEVEL_1_BUS busInputCALevel1 = new RW_INPUT_CA_LEVEL_1_BUS();
         RW_INPUT_CA_TANK_BUS busInputCATank = new RW_INPUT_CA_TANK_BUS();
         //RW_CA_LEVEL_1_BUS busCALevel1 = new RW_CA_LEVEL_1_BUS();

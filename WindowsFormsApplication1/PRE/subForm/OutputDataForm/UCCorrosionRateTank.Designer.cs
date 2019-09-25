@@ -52,7 +52,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(838, 521);
+            this.groupBox1.Size = new System.Drawing.Size(959, 521);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Points";
@@ -64,7 +64,7 @@
             this.panel2.Controls.Add(this.btnAddRow);
             this.panel2.Location = new System.Drawing.Point(11, 26);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(817, 36);
+            this.panel2.Size = new System.Drawing.Size(942, 36);
             this.panel2.TabIndex = 5;
             // 
             // button3
@@ -98,7 +98,7 @@
             // 
             // btnCalculateCorrosionRate
             // 
-            this.btnCalculateCorrosionRate.Location = new System.Drawing.Point(593, 484);
+            this.btnCalculateCorrosionRate.Location = new System.Drawing.Point(718, 484);
             this.btnCalculateCorrosionRate.Name = "btnCalculateCorrosionRate";
             this.btnCalculateCorrosionRate.Size = new System.Drawing.Size(235, 25);
             this.btnCalculateCorrosionRate.TabIndex = 4;
@@ -111,7 +111,7 @@
             this.panel1.Controls.Add(this.gridControl1);
             this.panel1.Location = new System.Drawing.Point(11, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 410);
+            this.panel1.Size = new System.Drawing.Size(942, 410);
             this.panel1.TabIndex = 0;
             // 
             // gridControl1
@@ -120,8 +120,8 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(817, 410);
-            this.gridControl1.TabIndex = 4;
+            this.gridControl1.Size = new System.Drawing.Size(942, 410);
+            this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -137,7 +137,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UCCorrosionRateTank";
-            this.Size = new System.Drawing.Size(845, 524);
+            this.Size = new System.Drawing.Size(979, 524);
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

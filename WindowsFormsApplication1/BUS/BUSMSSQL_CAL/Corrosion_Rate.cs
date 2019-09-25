@@ -9,6 +9,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 {
     class Corrosion_Rate
     {
+        public int CorrosionID { get; set; }
         public float SoilSideCorrosionRate { get; set; }
         public float ProductSideCorrosionRate { get; set; }
         public String PotentialCorrosion { get; set; }

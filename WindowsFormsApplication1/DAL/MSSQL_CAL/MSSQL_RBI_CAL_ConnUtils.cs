@@ -326,7 +326,7 @@ namespace RBI.DAL.MSSQL_CAL
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             float data = 0;
-            String sql = "USE [rbi] SELECT [" + Size + "] FROM[rbi].[dbo].[TBL_214_DM_NOT_PWHT] WHERE [Tmin-Tref] = '" + DeltaT + "'";
+            String sql = "USE [rbi] SELECT [" + Size + "] FROM[rbi].[dbo].[TBL_204_DM_NOT_PWHT] WHERE [CET-Tref] = '" + DeltaT + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -345,7 +345,7 @@ namespace RBI.DAL.MSSQL_CAL
             }
             catch
             {
-                MessageBox.Show("GET DATA TBL_214 FAIL!");
+                MessageBox.Show("GET DATA TBL_204 FAIL!");
             }
             finally
             {
@@ -360,7 +360,7 @@ namespace RBI.DAL.MSSQL_CAL
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             float data = 0;
-            String sql = "USE [rbi] SELECT [" + Size + "] FROM[rbi].[dbo].[TBL_215_DM_PWHT] WHERE [Tmin-Tref] = '" + DeltaT + "'";
+            String sql = "USE [rbi] SELECT [" + Size + "] FROM[rbi].[dbo].[TBL_205_DM_PWHT] WHERE [CET-Tref] = '" + DeltaT + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -379,7 +379,7 @@ namespace RBI.DAL.MSSQL_CAL
             }
             catch
             {
-                MessageBox.Show("GET TBL_215 FAIL!");
+                MessageBox.Show("GET TBL_205 FAIL!");
             }
             finally
             {

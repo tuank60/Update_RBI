@@ -18,10 +18,10 @@ namespace RBI.PRE.subForm.OutputDataForm
         public UCCorrosionRateTank(int ID)
         {
             InitializeComponent();
-            unitdata();
+            unitdata(showData());
         }
 
-        private RW_CORROSION_RATE_TANK getData(int row)
+        public RW_CORROSION_RATE_TANK getData(int row)
         {
             RW_CORROSION_RATE_TANK CorRate = new RW_CORROSION_RATE_TANK();
             RW_CORROSION_RATE_TANK_BUS busCorRate = new RW_CORROSION_RATE_TANK_BUS();
@@ -77,13 +77,19 @@ namespace RBI.PRE.subForm.OutputDataForm
             return listdata;
         }
 
-        private void unitdata()
+        public int LengthRow()
+        {
+            int[] selectedRowHandles = gridView1.GetSelectedRows();
+            return selectedRowHandles.Length;
+        }
+
+        private void unitdata(List<RW_CORROSION_RATE_TANK> listdata)
         {
             SplashScreenManager.ShowForm(typeof(WaitForm2));
             string[] header = {"CorrosionID","Soil Side Base Corrosion Rate", "Product Side Base Corrosion Rate", "Potential Corrosion Activity(Resistivity)", "Tank Pad Meterial", "Tank Drainage Type", "Cathodic Protection Type", "Tank bottom Type", "Soid Side Temperature", "Product Side Condition", "Product Side Temperature", "Stram Coil", "Water Draw-off", "Product Side Bottom Corrosion", "Modified Soil Side Corrosion Rate", "Modified Product Side Corrosion Rate", "Final Estimated Corrosion Rate" };
             try
             {
-                gridControl1.DataSource = showData();
+                gridControl1.DataSource = listdata;
                 gridView1.Columns.Remove(gridView1.Columns["ID"]);
                 //gridView1.Columns.Remove(gridView1.Columns["CorrosionID"]);
                 for (int i = 0; i < header.Length; i++)
@@ -212,7 +218,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);
             obj.ID = ID;
             busConRate.add(obj);
-            unitdata();
+            unitdata(showData());
         }
 
         private void binDeleteRow_Click(object sender, EventArgs e)
@@ -232,6 +238,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         {
             RW_CORROSION_RATE_TANK CorTank = new RW_CORROSION_RATE_TANK();
             Corrosion_Rate CorRate = new Corrosion_Rate();
+            List<RW_CORROSION_RATE_TANK> list = new List<RW_CORROSION_RATE_TANK>();
             int[] selectedRowHandles = gridView1.GetSelectedRows();
 
             for (int i = 0; i <= selectedRowHandles.Length; i++)
@@ -253,13 +260,17 @@ namespace RBI.PRE.subForm.OutputDataForm
                 CorRate.ModifiedSoilSideCorrosionRate = CorRate.CRS_Bottom();
                 CorRate.ModifiedProductSideCorrosionRate = CorRate.CRP_Bottom();
                 CorRate.FinalEstimatedCorrosionRate = CorRate.Final_CR();
-                MessageBox.Show(CorTank.PotentialCorrosion.ToString());
+                CorTank.ModifiedSoilSideCorrosionRate = CorRate.CRS_Bottom();
+                CorTank.ModifiedProductSideCorrosionRate = CorRate.CRP_Bottom();
+                CorTank.FinalEstimatedCorrosionRate = CorRate.Final_CR();
+                //MessageBox.Show(CorTank.PotentialCorrosion.ToString());
                 //MessageBox.Show("SR="+CorRate.F_SR().ToString()+" PA= "+CorRate.F_PA().ToString()+" ID="+CorRate.F_ID().ToString()+" CP="+CorRate.F_CP().ToString()+" TB="+CorRate.F_TB().ToString()+" ST="+CorRate.F_ST().ToString());
-                MessageBox.Show(CorRate.ModifiedSoilSideCorrosionRate.ToString() +"::"+ CorRate.ModifiedProductSideCorrosionRate.ToString() +"::"+ CorRate.FinalEstimatedCorrosionRate.ToString());
-                gridView1.SetRowCellValue(i, "aaa", gridView1.Columns[14]);
-                gridView1.SetRowCellValue(i, "aaa", gridView1.Columns[15]);
-                gridView1.SetRowCellValue(i, "aaa", gridView1.Columns[16]);
+                Console.WriteLine(CorTank.SoilSideCorrosionRate);
+                MessageBox.Show(CorTank.ModifiedSoilSideCorrosionRate.ToString() +"::"+ CorTank.ModifiedProductSideCorrosionRate.ToString() +"::"+ CorTank.FinalEstimatedCorrosionRate.ToString());
+                list.Add(CorTank);
+                Console.WriteLine("update ok");  
             }
+            unitdata(list);
         }
     }
 }
