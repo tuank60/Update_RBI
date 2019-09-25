@@ -103,8 +103,6 @@ namespace RBI.DAL.MSSQL
                         "[ModifiedSoilSideCorrosionRate] = '" + ModifiedSoilSideCorrosionRate + "'" +
                         "[ModifiedProductSideCorrosionRate] = '" + ModifiedProductSideCorrosionRate + "'" +
                         "[FinalEstimatedCorrosionRate] = '" + FinalEstimatedCorrosionRate + "'" +
-                       
-                        
                         " WHERE [CorrosionID] ='" + CorrosionID + "' " +
                         " ";
             try
