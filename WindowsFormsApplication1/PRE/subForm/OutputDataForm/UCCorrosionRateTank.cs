@@ -21,7 +21,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             unitdata(showData());
         }
 
-        public RW_CORROSION_RATE_TANK getData(int row)
+        private RW_CORROSION_RATE_TANK getData(int row)
         {
             RW_CORROSION_RATE_TANK CorRate = new RW_CORROSION_RATE_TANK();
             RW_CORROSION_RATE_TANK_BUS busCorRate = new RW_CORROSION_RATE_TANK_BUS();

@@ -249,11 +249,6 @@ namespace RBI
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
                     //Save Data Corrosion Rate
-                    for (int i = 0; i < uc.ucCorRate.LengthRow(); i++)
-                    {
-                        RW_CORROSION_RATE_TANK rate = uc.ucCorRate.getData(i);
-                        SaveDataCorrosionRate(rate);
-                    }
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     showUCinTabpage(resultRisk);
                 }
