@@ -14,10 +14,22 @@ using RBI.BUS.BUSMSSQL_CAL;
 namespace RBI.PRE.subForm.InputDataForm
 {
     public partial class UCCoatLiningIsulationCladding : UserControl
-    {       
+    {
+        #region Parameter
+        String[] itemsExtQuality = { "No coating or poor quality", "Medium coating quality", "High coating quality" };
+        String[] ItemsLinnerType = { "Organic - High Quality", "Organic - Medium Quality", "Organic - Low Quality", "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
+        String[] itemsLinerCon = { "Good", "Average", "Poor", "Unknown" };
+        String[] itemsExtType = { "Unknown/Unspecified", "Foam Glass", "Pearlite", "Fibreglass", "Mineral Wool", "Calcium Silicate", "Asbestos" };
+        String[] itemsInsuCon = { "Above average", "Average", "Below average" };
+        #endregion
         public UCCoatLiningIsulationCladding(int ID, string corrosionRateUnit, string thicknessUnit)
         {
             InitializeComponent();
+            additemsExtQuality();
+            addItemsLinnerType();
+            additemsLinerCon();
+            additemsExtType();
+            additemsInsuCon();
             ShowDatatoControl(ID, corrosionRateUnit, thicknessUnit);
 
             string changeUnit = "";
@@ -42,17 +54,54 @@ namespace RBI.PRE.subForm.InputDataForm
             }
             lblCladdingThickness.Text = changeUnit;
         }
-
+        #region Add Data to Combobox
+        private void additemsExtQuality()
+        {
+            cbExternalCoatQuality.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemsExtQuality.Length; i++)
+            {
+                cbExternalCoatQuality.Properties.Items.Add(itemsExtQuality[i], i, i);
+            }
+        }
+        private void addItemsLinnerType()
+        {
+            cbInternalLinerType.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemsExtQuality.Length; i++)
+            {
+                cbInternalLinerType.Properties.Items.Add(ItemsLinnerType[i], i, i);
+            }
+        }
+        private void additemsLinerCon()
+        {
+            cbInternalLinerCondition.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemsLinerCon.Length; i++)
+            {
+                cbInternalLinerCondition.Properties.Items.Add(itemsLinerCon[i], i, i);
+            }
+        }
+        private void additemsExtType()
+        {
+            cbExternalInsulation.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemsExtType.Length; i++)
+            {
+                cbExternalInsulation.Properties.Items.Add(itemsExtType[i], i, i);
+            }
+        }
+        private void additemsInsuCon()
+        {
+            cbInsulationCondition.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemsInsuCon.Length; i++)
+            {
+                cbInsulationCondition.Properties.Items.Add(itemsInsuCon[i], i, i);
+            }
+        }
+        #endregion
         public void ShowDatatoControl(int ID, string corrosionRate, string thicknessUnit)
         {
             RW_COATING_BUS BUS = new RW_COATING_BUS();
             RW_COATING coat = BUS.getData(ID);
             BUS_UNITS convUnit = new BUS_UNITS();
-            String[] extQuality = { "No coating or poor quality", "Medium coating quality", "High coating quality" };
-            String[] inType = { "Organic - High Quality", "Organic - Medium Quality", "Organic - Low Quality" , "Castable refractory", "Strip lined alloy", "Castable refractory severe condition", "Glass lined", "Acid Brick", "Fibreglass" };
-            String[] inCon = { "Good", "Average", "Poor", "Unknown" };
-            String[] extType = { "Foam Glass", "Pearlite", "Fibreglass", "Mineral Wool", "Calcium Silicate", "Asbestos" };
-            String[] isuCon = { "Above average", "Average", "Below average" };
+            
             if (coat.ExternalCoating == 1)
                 chkExternalCoat.Checked = true;
             else
@@ -80,64 +129,67 @@ namespace RBI.PRE.subForm.InputDataForm
 
             dateExternalCoating.DateTime = coat.ExternalCoatingDate;
 
-
-            for (int i = 0; i < extQuality.Length; i++)
-            {
-                if (coat.ExternalCoatingQuality == extQuality[i])
-                {
-                    cbExternalCoatQuality.SelectedIndex = i;
-                    break;
-                }
-            }
-            for (int i = 0; i < extType.Length; i++)
-            {
-                if (coat.ExternalInsulationType == extType[i])
-                {
-                    cbExternalIsulation.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            for (int i = 0; i < inCon.Length; i++)
-            {
-                if (coat.InternalLinerCondition == inCon[i])
-                {
-                    cbInternalLinerCondition.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-
             if (coat.InsulationContainsChloride == 1)
                 chkInsulationContainsChlorides.Checked = true;
             else
                 chkInsulationContainsChlorides.Checked = false;
 
-            for (int i = 0; i < inType.Length; i++)
-            {
-                if (coat.InternalLinerType == inType[i])
-                {
-                    cbInternalLinerType.SelectedIndex = i + 1;
-                    break;
-                }
-            }
-            if (thicknessUnit == "INCH") txtCladdingThickness.Text = (coat.CladdingThickness / convUnit.inch).ToString();
-            else txtCladdingThickness.Text = coat.CladdingThickness.ToString();
-
-            if (corrosionRate == "MMYR") txtCladdingCorrosionRate.Text = coat.CladdingCorrosionRate.ToString();
-            else txtCladdingCorrosionRate.Text = (coat.CladdingCorrosionRate / convUnit.mil).ToString();
 
             if (coat.SupportConfigNotAllowCoatingMaint == 1)
                 chkSupport.Checked = true;
             else
                 chkSupport.Checked = false;
 
-            for (int i = 0; i < isuCon.Length; i++)
+            for (int i = 0; i < itemsExtQuality.Length; i++)
             {
-                if (coat.InsulationCondition == isuCon[i])
+                if (coat.ExternalCoatingQuality == itemsExtQuality[i])
                 {
-                    cbIsulationCondition.SelectedIndex = i + 1;
+                    cbExternalCoatQuality.SelectedIndex = i + 1;
                     break;
                 }
             }
+            for (int i = 0; i < itemsExtType.Length; i++)
+            {
+                if (coat.ExternalInsulationType == itemsExtType[i])
+                {
+                    cbExternalInsulation.SelectedIndex = i + 1;
+                    break;
+                }
+            }
+            for (int i = 0; i < itemsLinerCon.Length; i++)
+            {
+                if (coat.InternalLinerCondition == itemsLinerCon[i])
+                {
+                    cbInternalLinerCondition.SelectedIndex = i + 1;
+                    break;
+                }
+            }
+
+            for (int i = 0; i < ItemsLinnerType.Length; i++)
+            {
+                if (coat.InternalLinerType == ItemsLinnerType[i])
+                {
+                    cbInternalLinerType.SelectedIndex = i + 1;
+                    break;
+                }
+            }
+
+            for (int i = 0; i < itemsInsuCon.Length; i++)
+            {
+                if (coat.InsulationCondition == itemsInsuCon[i])
+                {
+                    cbInsulationCondition.SelectedIndex = i + 1;
+                    break;
+                }
+            }
+
+            if (thicknessUnit == "INCH") txtCladdingThickness.Text = (coat.CladdingThickness / convUnit.inch).ToString();
+            else txtCladdingThickness.Text = coat.CladdingThickness.ToString();
+
+            if (corrosionRate == "MMYR") txtCladdingCorrosionRate.Text = coat.CladdingCorrosionRate.ToString();
+            else txtCladdingCorrosionRate.Text = (coat.CladdingCorrosionRate / convUnit.mil).ToString();
+
+
         }
 
         public RW_COATING getData(int ID, string corrosionRate, string thicknessUnit)
@@ -152,7 +204,7 @@ namespace RBI.PRE.subForm.InputDataForm
             coat.InternalLining = chkInternalLining.Checked ? 1 : 0;
             coat.ExternalCoatingDate = dateExternalCoating.DateTime;
             coat.ExternalCoatingQuality = cbExternalCoatQuality.Text;
-            coat.ExternalInsulationType = cbExternalIsulation.Text;
+            coat.ExternalInsulationType = cbExternalInsulation.Text;
             coat.InternalLinerCondition = cbInternalLinerCondition.Text;
             coat.InsulationContainsChloride = chkInsulationContainsChlorides.Checked ? 1 : 0;
             coat.InternalLinerType = cbInternalLinerType.Text;
@@ -161,7 +213,7 @@ namespace RBI.PRE.subForm.InputDataForm
             if (corrosionRate == "MMYR") coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : float.Parse(txtCladdingCorrosionRate.Text);
             else coat.CladdingCorrosionRate = txtCladdingCorrosionRate.Text == "" ? 0 : (float.Parse(txtCladdingCorrosionRate.Text) * (float)convUnit.mil);
             coat.SupportConfigNotAllowCoatingMaint = chkSupport.Checked ? 1 : 0;
-            coat.InsulationCondition = cbIsulationCondition.Text;
+            coat.InsulationCondition = cbInsulationCondition.Text;
             coat.CladdingThickness = txtCladdingThickness.Text!= "" ? float.Parse(txtCladdingThickness.Text) : 0;
             return coat;
         }
@@ -232,7 +284,7 @@ namespace RBI.PRE.subForm.InputDataForm
                         cbInternalLinerType.Enabled = cbInternalLinerCondition.Enabled = chk.Checked ? true : false;
                         break;
                     case "chkExternalIsulation":
-                        cbExternalIsulation.Enabled = cbIsulationCondition.Enabled = chk.Checked ? true : false;
+                        cbExternalInsulation.Enabled = cbInsulationCondition.Enabled = chk.Checked ? true : false;
                         break;
                     case "chkInternalCladding":
                         txtCladdingCorrosionRate.Enabled = txtCladdingThickness.Enabled = chk.Checked ? true : false;
