@@ -796,6 +796,7 @@ C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\RB
 C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.licenses
 C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\hai\Desktop\rbi update\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+<<<<<<< HEAD
 >>>>>>> f263bf871db7a8d1c20030231734cdc91bd10fcd
 C:\Users\DO ANH TUAN\Desktop\lab411\Code update 21-8-2019\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.CorrosionRateTank.resources
 C:\Users\DO ANH TUAN\Desktop\lab411\Code update 21-8-2019\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserControl1.resources
@@ -852,3 +853,6 @@ E:\Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserControl1.res
 E:\Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.GenerateResource.Cache
 E:\Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.licenses
 >>>>>>> a7010b3e329af711b2117c2459ce12a056f2d779
+=======
+D:\RBI\App\Source Code\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserControl1.resources
+>>>>>>> new
