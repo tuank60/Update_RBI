@@ -249,7 +249,7 @@ namespace RBI
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
                     //Save Data Corrosion Rate
-                    uc.ucCorRate.SaveDateCorrosinRate();
+                    //uc.ucCorRate.SaveDateCorrosinRate();
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     showUCinTabpage(resultRisk);
                 }
