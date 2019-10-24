@@ -61,26 +61,29 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
         //<SCC CAUSTIC>
         // 1. material is cacbon or allow stell
-        // 2. Enviroment contain caustic
+        // 2. Enviroment contain caustic(Enviroment Contains Caustic in Any Concentration)
         public String CAUSTIC_INSP_EFF { set; get; }// effect caustic
         public int CAUSTIC_INSP_NUM { set; get; }
         public String HEAT_TREATMENT { set; get; }
         public float NaOHConcentration { set; get; }
         public bool HEAT_TRACE { set; get; }
         public bool STEAM_OUT { set; get; }
+        public Boolean Caustic { set; get; }
         //</SCC CAUSTIC>
 
         //<SCC Amine>
         // 1. material is cacbon or allow stell
+        // 2. Exposed To Acid Gas Treating Amine
         public string AMINE_INSP_EFF { set; get; }
         public int AMINE_INSP_NUM { set; get; }
         public bool AMINE_EXPOSED { set; get; }
         public String AMINE_SOLUTION { set; get; }
+        
         //</SCC Amine>
 
         //<Sulphide Stress Cracking>
         // 1. material is carbon or allow stell
-        // 2.  the process environment contains water
+        // 2. the process environment contains water(Aqueous Phase During Operation)
         // 3. Environment Content H2S
         public Boolean ENVIRONMENT_H2S_CONTENT { set; get; }
         public Boolean AQUEOUS_OPERATOR { set; get; }
@@ -102,7 +105,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
         //<Carboonate Cracking>
         // 1. material is carbon or allow stell
-        // 2.the process environment contains water
+        // 2. Environment Content H2S
         // 3. PH > 7.5
         public String CACBONATE_INSP_EFF { set; get; }
         public int CACBONATE_INSP_NUM { set; get; }
@@ -110,8 +113,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         //</Carboonate Cracking>
 
         //<PTA Cracking>
-        // 1. material is an austenitic stainless steel or nickel based alloys
-        // 2. component is exposed to sulfur bearing compounds
+        // 1. material is an austenitic stainless steel or nickel based alloys(Austenitic hoặc Nickel-based Alloy)
+        // 2. component is exposed to sulfur bearing compounds (Exposed to Sulphur-Bearing Compounds)
         public Boolean PTA_SUSCEP { set; get; }
         public Boolean NICKEL_ALLOY { set; get; }
         public Boolean EXPOSED_SULFUR { set; get; }
@@ -164,10 +167,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
         //</EXTERNAL CORROSION>
 
         //<CUI DM>
-        public int N_A_CUI { set; get; }
-        public int N_B_CUI { set; get; }
-        public int N_C_CUI { set; get; }
-        public int N_D_CUI { set; get; }
         public Boolean INTERFACE_SOIL_WATER { set; get; }
         public Boolean SUPPORT_COATING { set; get; }// Support Configuration Which Does Not Allow Coating Maintenance
         public String INSULATION_TYPE { set; get; }
@@ -229,6 +228,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
         // 2. The Minimum Design Metal Temperature (MDMT) is unknown, or the MDMT is known but the component may
         //    operate at below the MDMT under normal or upset conditions
         public Boolean LOWEST_TEMP { set; get; }
+        public Boolean FabricatedSteel { set; get; }
+        public Boolean EquipmentSatisfied { set; get; }
+        public Boolean NominalOperating { set; get; }
+        public Boolean CETGreaterOrEqual { set; get; }
+        public Boolean CyclicServiceFatigueVibration { set; get; }
+        public Boolean EquipmentCircuitShock { set; get; }
         //</BRITTLE>
 
         //<TEMPER EMBRITTLE>
@@ -251,6 +256,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float MIN_OP_TEMP { set; get; }
         public float MIN_DESIGN_TEMP { set; get; }
         public float REF_TEMP { set; get; }
+        public float MinReqTemperaturePressurisation { set; get; }
+        public Boolean PressurisationControlled { set; get; }
         //</885>
 
         //<SIGMA>
@@ -378,14 +385,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 N_C = N_C_Extcor;
                 N_D = N_D_Extcor;
             }
-            else if (DM_ID == 32)
-            {
-                N_A = N_A_CUI;
-                N_B = N_B_CUI;
-                N_C = N_C_CUI;
-                N_D = N_D_CUI;
-
-            }
             ConditionalProbA = DAL_CAL.GET_TBL_46("A");
             ConditionalProbB = DAL_CAL.GET_TBL_46("B");
             ConditionalProbC = DAL_CAL.GET_TBL_46("C");
@@ -405,6 +404,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 Po[i]= Insp[i] / (Insp[0] + Insp[1] + Insp[2]);   
             }
+            Console.WriteLine("Posterior =" + Po[0]);
             return Po;
         }
         public double[] Parameter(float age, int DM_ID)
@@ -417,10 +417,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else if (DM_ID == 34)
             {
                 Art = ART_EXTERNAL(age);
-            }
-            else if (DM_ID == 32)
-            {
-                Art = ART_CUI(age);
             }
             double Ds = 0;
             double[] Pa = { 0, 0, 0 };
@@ -601,6 +597,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     Fom = 1;
                     break;
             }
+            //Console.WriteLine("Df thin: " + DFB_THIN(age));
             return (float) Math.Max(DFB_THIN(age) * Fip * Fdl * Fwd * Fsm * Fam / Fom, 0.1);
         }
 
@@ -767,7 +764,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float DF_CAUSTIC(float age)
         {
-            if (CARBON_ALLOY)
+            if (CARBON_ALLOY && Caustic)
             {
                 String FIELD = null;
                 if (CAUSTIC_INSP_EFF == "E" || CAUSTIC_INSP_NUM == 0)
@@ -775,6 +772,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else
                     FIELD = CAUSTIC_INSP_NUM + CAUSTIC_INSP_EFF;
                     float DFB_CAUSTIC = DAL_CAL.GET_TBL_63(SVI_CAUSTIC(), FIELD);
+                    //Console.WriteLine("CAUSTIC_INSP_NUM:"+CAUSTIC_INSP_NUM + "CAUSTIC:"+DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                     return DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
@@ -825,7 +823,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float DF_AMINE(float age)
         {
-            if (CARBON_ALLOY)
+            if (CARBON_ALLOY && EXPOSED_SULFUR)
             {
                 String FIELD = null;
                 if (AMINE_INSP_EFF == "E" || AMINE_INSP_NUM == 0)
@@ -1089,7 +1087,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float DF_CACBONATE(float age)
         {
-            if (CARBON_ALLOY && AQUEOUS_OPERATOR && PH >= 7.5)
+            if (CARBON_ALLOY && EXPOSED_SULFUR && PH >= 7.5)
             {
                 String FIELD = null;
                 if (CACBONATE_INSP_EFF == "E" || CACBONATE_INSP_NUM == 0)
@@ -1402,7 +1400,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         ///<summary>
         /// CAL EXTERNAL CORROSION
         ///</summary>
-        private List<float> API_CORROSION_PER()
+        private int API_EXTERNAL_CORROSION_TEMP()
         {
             List<float> List = new List<float>();
             List.Add(CUI_PERCENT_1);
@@ -1415,28 +1413,98 @@ namespace RBI.BUS.BUSMSSQL_CAL
             List.Add(CUI_PERCENT_8);
             List.Add(CUI_PERCENT_9);
             List.Add(CUI_PERCENT_10);
-            return List;
+            int[] data = { -12, -8, 6, 32, 71, 107, 121, 135, 176 };
+            return data[List.IndexOf(List.Max())]; // tìm chỉ số (vị trí) của giá trị Max
         }
-        // -12:0 -8:1 6:2 32:3 71:4 107:5 121:6 135:7 162:8 176:9
         private float API_EXTERNAL_CORROSION_RATE()
         {
-            List<float> CR_PER = API_CORROSION_PER();
-            float CR_EXTERN;
+            int EXTERNAL_TEMP = API_EXTERNAL_CORROSION_TEMP();
+            float CR_EXTERN = 0;
             if (EXTERNAL_EVIRONMENT == "Arid/dry")
             {
-                CR_EXTERN = 0.025f * (CR_PER[2] + CR_PER[3] + CR_PER[4]);  // 0.025: 6,32,71
+                switch (EXTERNAL_TEMP)
+                {
+                    case -12:
+                    case -8:
+                    case 107:
+                    case 121:
+                        CR_EXTERN = 0;
+                        break;
+                    case 6:
+                    case 32:
+                    case 71:
+                        CR_EXTERN = 0.025f;
+                        break;
+                    default:
+                        CR_EXTERN = 0;
+                        break;
+                }
             }
             else if (EXTERNAL_EVIRONMENT == "Marine")
             {
-                CR_EXTERN = 0.025f * (CR_PER[1] + CR_PER[5]) + 0.127f * (CR_PER[2] + CR_PER[3] + CR_PER[4]); // 0.025: -8,107 | 0.127: 6,32,71
+                switch (EXTERNAL_TEMP)
+                {
+                    case -12:
+                    case 121:
+                        CR_EXTERN = 0;
+                        break;
+                    case -8:
+                    case 107:
+                        CR_EXTERN = 0.025f;
+                        break;
+                    case 6:
+                    case 32:
+                    case 71:
+                        CR_EXTERN = 0.127f;
+                        break;
+                    default:
+                        CR_EXTERN = 0;
+                        break;
+                }
             }
             else if (EXTERNAL_EVIRONMENT == "Severe")
             {
-                CR_EXTERN = 0.051f * CR_PER[5] + 0.254f * (CR_PER[2] + CR_PER[3] + CR_PER[4]); // 0.051: 107 | 0.254: 6,32,71 
+                switch (EXTERNAL_TEMP)
+                {
+                    case -12:
+                    case -8:
+                    case 121:
+                        CR_EXTERN = 0;
+                        break;
+                    case 6:
+                    case 32:
+                    case 71:
+                        CR_EXTERN = 0.254f;
+                        break;
+                    case 107:
+                        CR_EXTERN = 0.051f;
+                        break;
+                    default:
+                        CR_EXTERN = 0;
+                        break;
+                }
             }
             else if (EXTERNAL_EVIRONMENT == "Temperate")
             {
-                CR_EXTERN = 0.051f * CR_PER[4] + 0.076f * (CR_PER[2] + CR_PER[3]); // 0.051: 71 | 0.076: 6,32
+                switch (EXTERNAL_TEMP)
+                {
+                    case -12:
+                    case -8:
+                    case 107:
+                    case 121:
+                        CR_EXTERN = 0;
+                        break;
+                    case 6:
+                    case 32:
+                        CR_EXTERN = 0.076f;
+                        break;
+                    case 71:
+                        CR_EXTERN = 0.051f;
+                        break;
+                    default:
+                        CR_EXTERN = 0;
+                        break;
+                }
             }
             else
                 CR_EXTERN = 0;
@@ -1444,7 +1512,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         private float ART_EXTERNAL(float age)
         {
-            float Coat_Adj = COATING_ADJUSTMENT(age);
             float FPS = 1, FIP = 1;
             if (SUPPORT_COATING)
                 FPS = 2;
@@ -1455,14 +1522,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 FIP = 2;
             else
                 FIP = 1;
-            float CR = API_EXTERNAL_CORROSION_RATE() * Math.Max(FPS, FIP);
-            Console.WriteLine("CR External " + CR);
-            float ART_EXT = CR * (age - Coat_Adj) / NomalThick;
+            float CR = API_CORROSION_RATE() * Math.Max(FPS, FIP);
+            float ART_EXT = (CR * (age - AGE_COAT())) / NomalThick;
             return ART_EXT;
         }
         public float AGE_COAT()
         {
-            TimeSpan TICK_SPAN = ASSESSMENT_DATE.Subtract(EXTERNAL_COATING_DATE);
+            TimeSpan TICK_SPAN = EXTERNAL_COATING_DATE.Subtract(ASSESSMENT_DATE);
             float DATA = (float)Math.Round((double)TICK_SPAN.Days / 365, 2);
             return DATA;
         }
@@ -1503,11 +1569,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     float[] Po = PosteriorProbab(34);
                     double[] Pa = Parameter(age, 34);
                     float DF_Extcor = (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
+                    Console.WriteLine("Df External Corrosion = " + DF_Extcor);
                     return DF_Extcor;
                 }
             }            
             else
             {
+                Console.WriteLine("Df External Corrosion");
                 return 0;
             }
 
@@ -1516,37 +1584,148 @@ namespace RBI.BUS.BUSMSSQL_CAL
         ///<summary>
         /// CAL CUI
         ///</summary>
-        // -12:0 -8:1 6:2 32:3 71:4 107:5 121:6 135:7 162: 8 176:9
+        private float AGE_CUI(float age)
+        {
+            //TimeSpan TCK = DateTime.Now.Subtract(CUI_INSP_DATE);
+            //float AGE_TK = (float)Math.Round((double)TCK.Days / 365, 2);
+            //return Math.Min(AGE_CLSCC(), AGE_TK);
+            return Math.Min(AGE_CLSCC(), age);
+        }
+        private int API_CUI_TEMP()
+        {
+            List<float> List = new List<float>();
+            List.Add(CUI_PERCENT_1);
+            List.Add(CUI_PERCENT_2);
+            List.Add(CUI_PERCENT_3);
+            List.Add(CUI_PERCENT_4);
+            List.Add(CUI_PERCENT_5);
+            List.Add(CUI_PERCENT_6);
+            List.Add(CUI_PERCENT_7);
+            List.Add(CUI_PERCENT_8);
+            List.Add(CUI_PERCENT_9);
+            List.Add(CUI_PERCENT_10);
+            int[] data = { -12, -8, 6, 32, 71, 107, 107, 135, 162, 176 };
+            return data[List.IndexOf(List.Max())];
+        }
         private float API_CORROSION_RATE()
         {
-            List<float> CUI_PER = API_CORROSION_PER();
+            int CUI_TEMP = API_CUI_TEMP();
             float CR_CUI = 0;
             if (EXTERNAL_EVIRONMENT == "Arid/dry")
             {
-                CR_CUI = 0.025f * (CUI_PER[5] + CUI_PER[2] + CUI_PER[3]) + 0.051f * CUI_PER[4]; // 0.025: 6,32,107 | 0.051: 71
+                switch (CUI_TEMP)
+                {
+                    case -12:
+                    case -8:
+                    case 135:
+                    case 162:
+                    case 176:
+                        CR_CUI = 0;
+                        break;
+                    case 6:
+                    case 32:
+                    case 107:
+                        CR_CUI = 0.025f;
+                        break;
+                    case 71:
+                        CR_CUI = 0.051f;
+                        break;
+                    default:
+                        CR_CUI = 0;
+                        break;
+                }
             }
             else if (EXTERNAL_EVIRONMENT == "Marine")
             {
-                CR_CUI = 0.025f * (CUI_PER[1] + CUI_PER[8]) + 0.051f * CUI_PER[7] + 0.127f * (CUI_PER[2] + CUI_PER[3] + CUI_PER[5]); // 0.025: -8,162 | 0.0254: 71 | 0.051 : 135 | 0.127: 6,32,107
+                switch (CUI_TEMP)
+                {
+                    case -12:
+                    case 176:
+                        CR_CUI = 0;
+                        break;
+                    case -8:
+                    case 162:
+                        CR_CUI = 0.025f;
+                        break;
+                    case 6:
+                    case 32:
+                    case 107:
+                        CR_CUI = 0.127f;
+                        break;
+                    case 135:
+                        CR_CUI = 0.051f;
+                        break;
+                    case 71:
+                        CR_CUI = 0.254f;
+                        break;
+                    default:
+                        CR_CUI = 0;
+                        break;
+                }
             }
             else if (EXTERNAL_EVIRONMENT == "Severe")
             {
-                CR_CUI = 0.076f * CUI_PER[1] + 0.127f * CUI_PER[8] + 0.254f * (CUI_PER[2] + CUI_PER[3] + CUI_PER[5] + CUI_PER[7]) + 0.508f * CUI_PER[4]; // 0.076: -8 | 0.127: 162 | 0.254: 6,32,107,135 | 0.508 : 71
+                switch (CUI_TEMP)
+                {
+                    case -12:
+                    case 176:
+                        CR_CUI = 0;
+                        break;
+                    case -8:
+                        CR_CUI = 0.076f;
+                        break;
+                    case 162:
+                        CR_CUI = 0.127f;
+                        break;
+                    case 6:
+                    case 32:
+                    case 107:
+                    case 135:
+                        CR_CUI = 0.254f;
+                        break;
+                    case 71:
+                        CR_CUI = 0.508f;
+                        break;
+                    default:
+                        CR_CUI = 0;
+                        break;
+                }
             }
             else if (EXTERNAL_EVIRONMENT == "Temperate")
             {
-                CR_CUI = 0.025f * (CUI_PER[5] + CUI_PER[7]) + 0.076f * (CUI_PER[2] + CUI_PER[3]) + 0.127f * CUI_PER[4]; // 0.025: 107,135 | 0.076: 6,32 | 0.127: 71 
+                switch (CUI_TEMP)
+                {
+                    case -12:
+                    case -8:
+                    case 162:
+                    case 176:
+                        CR_CUI = 0;
+                        break;
+                    case 107:
+                    case 135:
+                        CR_CUI = 0.025f;
+                        break;
+                    case 6:
+                    case 32:
+                        CR_CUI = 0.076f;
+                        break;
+                    case 71:
+                        CR_CUI = 0.127f;
+                        break;
+                    default:
+                        CR_CUI = 0;
+                        break;
+                }
             }
             else
                 CR_CUI = 0;
             return CR_CUI;
         }
-        private float ART_CUI(float age)
+        private float API_ART_CUI(float age)
         {
-            
-            float FIN = 1, FCM = 1, FIC = 1, FPS = 1, FIP = 1, Coat_Adj = COATING_ADJUSTMENT(age);
+            float FIN = 1, FCM = 1, FIC = 1, FPS = 1, FIP = 1;
 
-            if (INSULATION_TYPE == "Asbestos" || INSULATION_TYPE == "Calcium Silicate" || INSULATION_TYPE == "Mineral Wool" || INSULATION_TYPE == "Fibreglass" || INSULATION_TYPE == "Unknown/Unspecified")
+            if (INSULATION_TYPE == "Asbestos" || INSULATION_TYPE == "Calcium Silicate" || INSULATION_TYPE == "Mineral Wool" || INSULATION_TYPE == "Fibreglass")
                 FIN = 1.25f;
             else if (INSULATION_TYPE == "Foam Glass")
                 FIN = 0.75f;
@@ -1556,7 +1735,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (PIPING_COMPLEXITY == "Below average")
                 FCM = 0.75f;
             else if (PIPING_COMPLEXITY == "Above average")
-                FCM = 1.25f;
+                FCM = 1.75f;
             else
                 FCM = 1;
 
@@ -1578,32 +1757,26 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 FIP = 1;
 
             float CR = API_CORROSION_RATE() * FIN * FCM * FIC * Math.Max(FPS, FIP);
-            Console.WriteLine("CR CUI " + CR);
-            float ART_CUI = CR * (age - Coat_Adj) / NomalThick;
-            return ART_CUI;
+            float ART_CUI = Math.Max(1 - (CurrentThick - CR * AGE_CUI(age)) / (getTmin() + CA), 0);
+            return API_ART(ART_CUI);
         }
         public float DF_CUI(float age)
         {
             if (CUI_INSP_EFF == null || CUI_INSP_EFF == "" || CUI_INSP_NUM == 0)
                 CUI_INSP_EFF = "E";
-            if (EXTERNAL_EXPOSED_FLUID_MIST || (CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177)))
+            if (APIComponentType == "TANKBOTTOM")
             {
-                if (EXTERNAL_INSP_EFF == "" || EXTERNAL_INSP_EFF == null || EXTERNAL_INSP_NUM == 0)
-                    EXTERNAL_INSP_EFF = "E";
-
                 if (NomalThick == 0 || CurrentThick == 0)
-                    return 6500;
+                    return 1390;
                 else
-                {
-                    float[] Po = PosteriorProbab(32);
-                    double[] Pa = Parameter(age, 32);
-                    float DF_CUI = (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
-                    return DF_CUI;
-                }
+                    return DAL_CAL.GET_TBL_47(API_ART_CUI(age), CUI_INSP_EFF);
             }
             else
             {
-                return 0;
+                if (NomalThick == 0 || CurrentThick == 0)
+                    return 1900;
+                else
+                    return 0;
             }
         }
 
@@ -1619,7 +1792,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 if (EXTERNAL_EVIRONMENT == "Arid/dry")
                 {
-                        SUSCEP = "Not";
+                    SUSCEP = "Not";
                 }
                 else if (EXTERNAL_EVIRONMENT == "Marine")
                 {
@@ -1661,10 +1834,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 SVI = 50;
             else if (SUSCEP == "Medium")
                 SVI = 10;
-            else if (SUSCEP == "Low")
-                SVI = 1;
             else
-                SVI = 0;
+                SVI = 1;
 
             if (EXTERN_CLSCC_INSP_EFF == "E" || EXTERN_CLSCC_INSP_NUM == 0)
                 FIELD = "E";
@@ -1673,13 +1844,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
             return DAL_CAL.GET_TBL_63(SVI, FIELD);
         }
-        public float DF_EXTERN_CLSCC(float age)
+        public float DF_EXTERN_CLSCC()
         {
-            float Coat_Adj = COATING_ADJUSTMENT(age);
             if (AUSTENITIC_STEEL && EXTERNAL_EXPOSED_FLUID_MIST && !(MAX_OP_TEMP < 49 || MIN_DESIGN_TEMP > 149))
             {
-                
-                return DFB_EXTERN_CLSCC() * (float)Math.Pow(Math.Max(age - Coat_Adj,1), 1.1);
+                return DFB_EXTERN_CLSCC() * (float)Math.Pow((double)AGE_CLSCC(), 1.1);
             }
             else
                 return 0;
@@ -1688,6 +1857,20 @@ namespace RBI.BUS.BUSMSSQL_CAL
         ///<summary>
         /// CAL EXTERN CUI CLSCC
         ///</summary>
+        private float AGE_CLSCC()
+        {
+            DateTime AGE_COAT = COMPONENT_INSTALL_DATE;
+            if (EXTERN_COAT_QUALITY == "High coating quality")
+                AGE_COAT = COMPONENT_INSTALL_DATE.AddYears(15);
+            else if (EXTERN_COAT_QUALITY == "Medium coating quality")
+                AGE_COAT = COMPONENT_INSTALL_DATE.AddYears(5);
+            else
+                AGE_COAT = COMPONENT_INSTALL_DATE;
+            TimeSpan TICK_SPAN = DateTime.Now.Subtract(AGE_COAT);
+            float DATA = Math.Max(0, (float)Math.Round((double)TICK_SPAN.Days / 365, 2));
+            //Debug.WriteLine("jahdasd " + DATA +" Datetime "+AGE_COAT.ToString());
+            return DATA;
+        }
         private String CUI_CLSCC_SUSCEP()
         {
             String SUSCEP = null;
@@ -1793,12 +1976,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private String ADJUST_CHLORIDE_INSULATION()
         {
             String SCP = ADJUST_ISULATION();
-            if (!INSULATION_CHLORIDE)
+            if (INSULATION_CHLORIDE)
             {
                 if (SCP == "High")
                     SCP = "Medium";
-                else
+                else// if (SCP == "Medium")
                     SCP = "Low";
+                //else
+                //    SCP = "Low";
             }
             return SCP;
         }
@@ -1822,16 +2007,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 FIELD = EXTERN_CLSCC_CUI_INSP_NUM + EXTERN_CLSCC_CUI_INSP_EFF;
             return DAL_CAL.GET_TBL_63(SVI, FIELD);
         }
-        public float DF_CUI_CLSCC(float age)
+        public float DF_CUI_CLSCC()
         {
-            float Coat_Adj = COATING_ADJUSTMENT(age);
             if (AUSTENITIC_STEEL && EXTERNAL_INSULATION && EXTERNAL_EXPOSED_FLUID_MIST && !(MIN_OP_TEMP > 150 || MAX_OP_TEMP < 50))
             {
-                return DFB_CUI_CLSCC() * (float)Math.Pow(Math.Max(age - Coat_Adj,1), 1.1);
+                return DFB_CUI_CLSCC() * (float)Math.Pow((double)AGE_CLSCC(), 1.1);
             }
             else
                 return 0;
-            
         }
 
         ///<summary>
@@ -1946,20 +2129,33 @@ namespace RBI.BUS.BUSMSSQL_CAL
         ///</summary>
         private float DFB_BRITTLE()
         {
-            float TEMP_BRITTLE = Math.Min(MIN_DESIGN_TEMP, MIN_OP_TEMP);
+            //float TEMP_BRITTLE = Math.Min(MIN_DESIGN_TEMP, MIN_OP_TEMP);
+            float TEMP_BRITTLE = 0;
+            if (PressurisationControlled)
+            {
+                TEMP_BRITTLE = MinReqTemperaturePressurisation;
+            }
+            else{
+                TEMP_BRITTLE = CRITICAL_TEMP;
+            }
             if (PWHT)
-                return DAL_CAL.GET_TBL_215(API_TEMP(TEMP_BRITTLE - REF_TEMP), API_SIZE_BRITTLE(BRITTLE_THICK));
+                return DAL_CAL.GET_TBL_205(API_TEMP(TEMP_BRITTLE - REF_TEMP), API_SIZE_BRITTLE(BRITTLE_THICK));
             else
-                return DAL_CAL.GET_TBL_214(API_TEMP(TEMP_BRITTLE - REF_TEMP), API_SIZE_BRITTLE(BRITTLE_THICK));
+                return DAL_CAL.GET_TBL_204(API_TEMP(TEMP_BRITTLE - REF_TEMP), API_SIZE_BRITTLE(BRITTLE_THICK));
         }
         public float DF_BRITTLE()
         {
+            float Fse = 1;
+            if (BRITTLE_THICK <= 12.7 || (FabricatedSteel && EquipmentSatisfied && NominalOperating && CETGreaterOrEqual && CyclicServiceFatigueVibration && EquipmentCircuitShock && (BRITTLE_THICK <= 50.8)))
+            {
+                Fse = 0.01f;
+            }
             if (CARBON_ALLOY && (CRITICAL_TEMP < MIN_DESIGN_TEMP || MAX_OP_TEMP < MIN_DESIGN_TEMP))
             {
-                if (LOWEST_TEMP)
-                    return DFB_BRITTLE() * 0.01f;
-                else
-                    return DFB_BRITTLE();
+                //if (LOWEST_TEMP)
+                    return DFB_BRITTLE() * Fse;
+                //else
+                    //return DFB_BRITTLE();
             }
             else
                 return 0;
@@ -1993,7 +2189,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         private float API_TEMP(float TEMP)
         {
-            float[] data = { -73, -62, -51, -40, -29, -18, -7, 4, 16, 27, 38 };
+            float[] data = { -56, -44, -33, -22, -11, -0, 11, 22, 33, 44, 56 };
             if (TEMP < (data[0] + data[1]) / 2)
                 return data[0];
             else if (TEMP < (data[1] + data[2]) / 2)
@@ -2024,10 +2220,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 float TEMP_EMBRITTLE = Math.Min(MIN_DESIGN_TEMP, MIN_OP_TEMP) - (REF_TEMP + DELTA_FATT);
                 if (PWHT)
                 {
-                    return DAL_CAL.GET_TBL_215(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
+                    return DAL_CAL.GET_TBL_205(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
                 }
                 else
-                    return DAL_CAL.GET_TBL_214(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
+                    return DAL_CAL.GET_TBL_204(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
             }
             else
                 return 0;

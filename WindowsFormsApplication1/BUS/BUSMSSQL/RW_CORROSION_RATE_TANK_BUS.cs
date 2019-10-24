@@ -30,9 +30,9 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.delete(obj.CorrosionID);
         }
-        public List<RW_CORROSION_RATE_TANK> getDataSource()
+        public List<RW_CORROSION_RATE_TANK> getDataSource(int proposal_ID)
         {
-            return DAL.getDataSource();
+            return DAL.getDataSource(proposal_ID);
         }
     }
 }

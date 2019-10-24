@@ -96,9 +96,9 @@ namespace RBI.PRE.subForm.InputDataForm
             //stream.CriticalExposureTemperature
             //stream.ModelFluidID
             stream.NaOHConcentration = txtNaOHConcentration.Text != "" ? float.Parse(txtNaOHConcentration.Text) : 0;
-            //stream.NonFlameToxicFluidID
+            //stream.NonFlameToxicFluidID = cbToxicFluid.Text;
             //stream.StoragePhase
-            //stream.ToxicFluidID
+            //stream.ToxicFluidID = 
             stream.WaterpH = txtpHWater.Text != "" ? float.Parse(txtpHWater.Text) : 0;
             //stream.TankFluidName
             //stream.FluidHeight

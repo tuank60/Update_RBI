@@ -15,10 +15,13 @@ namespace RBI.PRE.subForm.OutputDataForm
 {
     public partial class UCCorrosionRateTank : DevExpress.XtraEditors.XtraUserControl
     {
+        public int Proposal_ID { get; set; }
         public UCCorrosionRateTank(int ID)
         {
             InitializeComponent();
-            unitdata(showData());
+            unitdata(showData(ID));
+            //MessageBox.Show(ID.ToString());
+            Proposal_ID = ID;
         }
 
         private RW_CORROSION_RATE_TANK getData(int row)
@@ -44,9 +47,30 @@ namespace RBI.PRE.subForm.OutputDataForm
             GridColumn FinalEstimatedCorrosionRate = gridView1.Columns[16];
             int[] selectedRowHandles = gridView1.GetSelectedRows();
 
-            CorRate.CorrosionID = (int)gridView1.GetRowCellValue(row, CorrosionID);
-            CorRate.SoilSideCorrosionRate = (float)gridView1.GetRowCellValue(row, SoilSideCorrosionRate);
-            CorRate.ProductSideCorrosionRate = (float)gridView1.GetRowCellValue(row, ProductSideCorrosionRate);
+            try
+            {
+                CorRate.CorrosionID = (int)gridView1.GetRowCellValue(row, CorrosionID);
+            }
+            catch
+            {
+                CorRate.CorrosionID = 0;
+            }
+            try
+            {
+                CorRate.SoilSideCorrosionRate = (float)gridView1.GetRowCellValue(row, SoilSideCorrosionRate);
+            }
+            catch
+            {
+                CorRate.SoilSideCorrosionRate = 0;
+            }
+            try
+            {
+                CorRate.ProductSideCorrosionRate = (float)gridView1.GetRowCellValue(row, ProductSideCorrosionRate);
+            }
+            catch
+            {
+                CorRate.ProductSideCorrosionRate = 0;
+            }
             CorRate.PotentialCorrosion = gridView1.GetRowCellDisplayText(row, PotentialCorrosion).ToString();
             CorRate.TankPadMaterial = gridView1.GetRowCellDisplayText(row, TankPadMaterial).ToString();
             CorRate.TankDrainageType = gridView1.GetRowCellDisplayText(row, TankDrainageType).ToString();
@@ -58,16 +82,38 @@ namespace RBI.PRE.subForm.OutputDataForm
             CorRate.SteamCoil = gridView1.GetRowCellDisplayText(row, SteamCoil).ToString();
             CorRate.WaterDrawOff = gridView1.GetRowCellDisplayText(row, WaterDrawOff).ToString();
             CorRate.ProductSideBottom = gridView1.GetRowCellDisplayText(row, ProductSideBottom).ToString();
-            CorRate.ModifiedSoilSideCorrosionRate = (float)gridView1.GetRowCellValue(row, ModifiedSoilSideCorrosionRate);
-            CorRate.ModifiedProductSideCorrosionRate = (float)gridView1.GetRowCellValue(row, ModifiedProductSideCorrosionRate);
-            CorRate.FinalEstimatedCorrosionRate = (float)gridView1.GetRowCellValue(row, FinalEstimatedCorrosionRate);
+            try
+            {
+                CorRate.ModifiedSoilSideCorrosionRate = (float)gridView1.GetRowCellValue(row, ModifiedSoilSideCorrosionRate);
+            }
+            catch
+            {
+                CorRate.ModifiedProductSideCorrosionRate = 0;
+            }
+            try
+            {
+                CorRate.ModifiedProductSideCorrosionRate = (float)gridView1.GetRowCellValue(row, ModifiedProductSideCorrosionRate);
+            }
+            catch
+            {
+                CorRate.ModifiedProductSideCorrosionRate = 0;
+            }
+            try
+            {
+                CorRate.FinalEstimatedCorrosionRate = (float)gridView1.GetRowCellValue(row, FinalEstimatedCorrosionRate);
+            }
+            catch
+            {
+                CorRate.FinalEstimatedCorrosionRate = 0;
+            }
+            
             return CorRate;
         }
 
-        private List<RW_CORROSION_RATE_TANK> showData()
+        private List<RW_CORROSION_RATE_TANK> showData(int ID)
         {
             RW_CORROSION_RATE_TANK_BUS busConRate = new RW_CORROSION_RATE_TANK_BUS();
-            List<RW_CORROSION_RATE_TANK> listConRate = busConRate.getDataSource();
+            List<RW_CORROSION_RATE_TANK> listConRate = busConRate.getDataSource(ID);
             List<RW_CORROSION_RATE_TANK> listdata = new List<RW_CORROSION_RATE_TANK>();
             foreach (RW_CORROSION_RATE_TANK ConRate in listConRate)
             {
@@ -215,10 +261,10 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_CORROSION_RATE_TANK obj = new RW_CORROSION_RATE_TANK();
             RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
             List<RW_ASSESSMENT> listAss = busAssessment.getDataSource();
-            int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);
-            obj.ID = ID;
+            //int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);
+            obj.ID = Proposal_ID;
             busConRate.add(obj);
-            unitdata(showData());
+            unitdata(showData(Proposal_ID));
         }
 
         private void binDeleteRow_Click(object sender, EventArgs e)
@@ -241,7 +287,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             List<RW_CORROSION_RATE_TANK> list = new List<RW_CORROSION_RATE_TANK>();
             int[] selectedRowHandles = gridView1.GetSelectedRows();
 
-            for (int i = 0; i <= selectedRowHandles.Length; i++)
+            for (int i = 0; i < selectedRowHandles.Length; i++)
             {
                 CorTank = getData(i);
                 CorRate.SoilSideCorrosionRate = CorTank.SoilSideCorrosionRate;
@@ -271,6 +317,24 @@ namespace RBI.PRE.subForm.OutputDataForm
                 Console.WriteLine("update ok");  
             }
             unitdata(list);
+        }
+        public void SaveDateCorrosinRate(){
+            RW_CORROSION_RATE_TANK CorTank = new RW_CORROSION_RATE_TANK();
+            RW_CORROSION_RATE_TANK_BUS busConRate = new RW_CORROSION_RATE_TANK_BUS();
+            int[] selectedRowHandles = gridView1.GetSelectedRows();
+            for (int i = 0; i < selectedRowHandles.Length; i++)
+            {
+                CorTank = getData(i);
+                MessageBox.Show(CorTank.SoilSideCorrosionRate.ToString());
+                CorTank.ID = (float)Proposal_ID;
+                MessageBox.Show(CorTank.ID.ToString());
+                busConRate.edit(CorTank);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveDateCorrosinRate();
         }
     }
 }

@@ -129,7 +129,7 @@
             this.pnlGovBrittleFractureDf.Controls.Add(this.label16);
             this.pnlGovBrittleFractureDf.Controls.Add(this.txtSigmaPhase);
             this.pnlGovBrittleFractureDf.Location = new System.Drawing.Point(26, 580);
-            this.pnlGovBrittleFractureDf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGovBrittleFractureDf.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGovBrittleFractureDf.Name = "pnlGovBrittleFractureDf";
             this.pnlGovBrittleFractureDf.Size = new System.Drawing.Size(877, 141);
             this.pnlGovBrittleFractureDf.TabIndex = 31;
@@ -206,7 +206,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(22, 73);
+            this.label8.Location = new System.Drawing.Point(21, 76);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(138, 15);
             this.label8.TabIndex = 0;
@@ -238,7 +238,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(22, 107);
+            this.label16.Location = new System.Drawing.Point(22, 105);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(103, 15);
             this.label16.TabIndex = 0;
@@ -264,7 +264,7 @@
             this.pnlHTHADf.Controls.Add(this.lblHTHADf);
             this.pnlHTHADf.Controls.Add(this.cbHTHAMaterial);
             this.pnlHTHADf.Location = new System.Drawing.Point(26, 471);
-            this.pnlHTHADf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHTHADf.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHTHADf.Name = "pnlHTHADf";
             this.pnlHTHADf.Size = new System.Drawing.Size(877, 90);
             this.pnlHTHADf.TabIndex = 29;
@@ -340,7 +340,7 @@
             this.pnlGovSccDf.Controls.Add(this.chkIsPTASeverity);
             this.pnlGovSccDf.Controls.Add(this.label27);
             this.pnlGovSccDf.Location = new System.Drawing.Point(26, 286);
-            this.pnlGovSccDf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGovSccDf.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGovSccDf.Name = "pnlGovSccDf";
             this.pnlGovSccDf.Size = new System.Drawing.Size(877, 166);
             this.pnlGovSccDf.TabIndex = 27;
@@ -475,7 +475,7 @@
             this.pnlGovThinningDf.Controls.Add(this.lblCorrosion);
             this.pnlGovThinningDf.Controls.Add(this.lblGovThinningDf);
             this.pnlGovThinningDf.Location = new System.Drawing.Point(26, 203);
-            this.pnlGovThinningDf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGovThinningDf.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGovThinningDf.Name = "pnlGovThinningDf";
             this.pnlGovThinningDf.Size = new System.Drawing.Size(877, 64);
             this.pnlGovThinningDf.TabIndex = 24;
@@ -551,7 +551,7 @@
             this.pnlGenericProperties.Controls.Add(this.txtMaterialCostFactor);
             this.pnlGenericProperties.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlGenericProperties.Location = new System.Drawing.Point(25, 30);
-            this.pnlGenericProperties.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlGenericProperties.Margin = new System.Windows.Forms.Padding(2);
             this.pnlGenericProperties.Name = "pnlGenericProperties";
             this.pnlGenericProperties.Size = new System.Drawing.Size(878, 156);
             this.pnlGenericProperties.TabIndex = 23;

@@ -104,7 +104,7 @@ namespace RBI.PRE.subForm.InputDataForm
                         break;
                 }
             }
-            if (worksheet.Columns.LastUsedIndex <= 31)
+            if (worksheet.Columns.LastUsedIndex <= 33)
             {
                 MessageBox.Show("This is Plant Process excel file! Select again", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

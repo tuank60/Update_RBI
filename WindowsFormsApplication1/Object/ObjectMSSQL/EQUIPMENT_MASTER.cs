@@ -23,5 +23,7 @@ namespace RBI.Object.ObjectMSSQL
         public int IsArchived { set; get; }
         public DateTime Archived { set; get; }
         public String ArchivedBy { set; get; }
+        public String EquipmentReport { set; get; }
+        public String DefaultComponentReport { set; get; }
     }
 }

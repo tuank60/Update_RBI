@@ -26,9 +26,13 @@ namespace RBI.DAL
             //    ConnectionString = connStr;
             //}
             if (Path.GetExtension(filePath).ToLower().Trim() == ".xls" && Environment.Is64BitOperatingSystem == false)
-                ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties=\"Excel 8.0;HDR=Yes;IMEX=2\"";
+                ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties=\"Excel 8.0;HDR=Yes;IMEX=1\"";
             else
-                ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=2\"";
+            {
+                ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + filePath + ";Extended Properties=\"Excel 12.0;HDR=Yes;IMEX=1\"";
+                //ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0; Data Source="+ filePath+"; Extended Properties='Excel 8.0;HDR=Yes;IMEX=1'";
+                Console.WriteLine("connect excel");
+            }  
             OleDbConnection conn = new OleDbConnection(ConnectionString);
             return conn;
             

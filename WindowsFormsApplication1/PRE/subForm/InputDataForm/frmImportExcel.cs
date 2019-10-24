@@ -53,7 +53,7 @@ namespace RBI.PRE.subForm.InputDataForm
             if (!workbook.IsProtected)
                 workbook.Protect("hoang", true, false);
             bool isCorrect = true;
-            if (workbook.Worksheets.Count != 7)
+            if (workbook.Worksheets.Count != 8)
             {
                 MessageBox.Show("Format is not correct! Please check again", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 
@@ -108,7 +108,7 @@ namespace RBI.PRE.subForm.InputDataForm
                         break;
                 }
             }
-            if (worksheet.Columns.LastUsedIndex > 31)
+            if (worksheet.Columns.LastUsedIndex > 32)
             {
                 MessageBox.Show("This is Storage Tank excel file! Select again", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

@@ -321,7 +321,7 @@ namespace RBI.DAL.MSSQL_CAL
             return data;
         }
         // get data from TBL_214
-        public float GET_TBL_214(float DeltaT, float Size)
+        public float GET_TBL_204(float DeltaT, float Size)
         {
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -355,7 +355,7 @@ namespace RBI.DAL.MSSQL_CAL
             return data;
         }
         // get data from TBL_215
-        public float GET_TBL_215(float DeltaT, float Size)
+        public float GET_TBL_205(float DeltaT, float Size)
         {
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();

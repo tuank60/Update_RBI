@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtToxicFluid = new System.Windows.Forms.TextBox();
-            this.txtModelFluid = new System.Windows.Forms.TextBox();
+            this.pnlGenericProperties = new System.Windows.Forms.Panel();
             this.numToxicFluidPercent = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.numLiquidLevel = new System.Windows.Forms.NumericUpDown();
@@ -41,7 +39,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblGenericProperties = new System.Windows.Forms.Label();
             this.pnlHydrogen = new System.Windows.Forms.Panel();
             this.lblHydrogen = new System.Windows.Forms.Label();
             this.chkProcessContainsHydrogen = new System.Windows.Forms.CheckBox();
@@ -81,20 +79,11 @@
             this.chkAqueousPhaseDuringOperation = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.chkExposedAcidGas = new System.Windows.Forms.CheckBox();
-            this.pnlGenericProperties = new System.Windows.Forms.Panel();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.imageComboBoxEdit2 = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.label7 = new System.Windows.Forms.Label();
-            this.imageComboBoxEdit1 = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbFluidTank = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblGenericProperties = new System.Windows.Forms.Label();
+            this.cbToxicFluid = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cbFluidTank = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlGenericProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numToxicFluidPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLiquidLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit3.Properties)).BeginInit();
@@ -102,20 +91,15 @@
             this.pnlStress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbAmineSolutionComposition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbExposureAmine.Properties)).BeginInit();
-            this.pnlGenericProperties.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbToxicFluid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbFluidTank.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.pnlGenericProperties);
             this.groupBox1.Controls.Add(this.pnlHydrogen);
             this.groupBox1.Controls.Add(this.pnlStress);
-            this.groupBox1.Controls.Add(this.pnlGenericProperties);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -125,42 +109,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stream";
             // 
-            // panel1
+            // pnlGenericProperties
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.txtToxicFluid);
-            this.panel1.Controls.Add(this.txtModelFluid);
-            this.panel1.Controls.Add(this.numToxicFluidPercent);
-            this.panel1.Controls.Add(this.label26);
-            this.panel1.Controls.Add(this.numLiquidLevel);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.imageComboBoxEdit3);
-            this.panel1.Controls.Add(this.label19);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label25);
-            this.panel1.Location = new System.Drawing.Point(24, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 156);
-            this.panel1.TabIndex = 21;
-            // 
-            // txtToxicFluid
-            // 
-            this.txtToxicFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtToxicFluid.Location = new System.Drawing.Point(362, 49);
-            this.txtToxicFluid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtToxicFluid.Name = "txtToxicFluid";
-            this.txtToxicFluid.Size = new System.Drawing.Size(212, 19);
-            this.txtToxicFluid.TabIndex = 24;
-            // 
-            // txtModelFluid
-            // 
-            this.txtModelFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelFluid.Location = new System.Drawing.Point(362, 26);
-            this.txtModelFluid.Margin = new System.Windows.Forms.Padding(2);
-            this.txtModelFluid.Name = "txtModelFluid";
-            this.txtModelFluid.Size = new System.Drawing.Size(212, 19);
-            this.txtModelFluid.TabIndex = 23;
+            this.pnlGenericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlGenericProperties.Controls.Add(this.numToxicFluidPercent);
+            this.pnlGenericProperties.Controls.Add(this.label26);
+            this.pnlGenericProperties.Controls.Add(this.numLiquidLevel);
+            this.pnlGenericProperties.Controls.Add(this.label11);
+            this.pnlGenericProperties.Controls.Add(this.imageComboBoxEdit3);
+            this.pnlGenericProperties.Controls.Add(this.cbToxicFluid);
+            this.pnlGenericProperties.Controls.Add(this.label19);
+            this.pnlGenericProperties.Controls.Add(this.cbFluidTank);
+            this.pnlGenericProperties.Controls.Add(this.label23);
+            this.pnlGenericProperties.Controls.Add(this.label24);
+            this.pnlGenericProperties.Controls.Add(this.lblGenericProperties);
+            this.pnlGenericProperties.Location = new System.Drawing.Point(24, 21);
+            this.pnlGenericProperties.Name = "pnlGenericProperties";
+            this.pnlGenericProperties.Size = new System.Drawing.Size(895, 156);
+            this.pnlGenericProperties.TabIndex = 21;
             // 
             // numToxicFluidPercent
             // 
@@ -239,16 +205,16 @@
             this.label24.TabIndex = 12;
             this.label24.Text = "Model Fluid";
             // 
-            // label25
+            // lblGenericProperties
             // 
-            this.label25.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(-2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(895, 17);
-            this.label25.TabIndex = 11;
-            this.label25.Text = "▼ Generic Properties";
-            this.label25.Click += new System.EventHandler(this.lblGenericProperties_Click);
+            this.lblGenericProperties.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblGenericProperties.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblGenericProperties.Location = new System.Drawing.Point(-2, 0);
+            this.lblGenericProperties.Name = "lblGenericProperties";
+            this.lblGenericProperties.Size = new System.Drawing.Size(895, 17);
+            this.lblGenericProperties.TabIndex = 11;
+            this.lblGenericProperties.Text = "▼ Generic Properties";
+            this.lblGenericProperties.Click += new System.EventHandler(this.lblGenericProperties_Click);
             // 
             // pnlHydrogen
             // 
@@ -702,88 +668,20 @@
             this.chkExposedAcidGas.CheckedChanged += new System.EventHandler(this.txtPrimaryFluid_TextChanged);
             this.chkExposedAcidGas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrimaryFluid_KeyDown);
             // 
-            // pnlGenericProperties
+            // cbToxicFluid
             // 
-            this.pnlGenericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlGenericProperties.Controls.Add(this.numericUpDown2);
-            this.pnlGenericProperties.Controls.Add(this.numericUpDown1);
-            this.pnlGenericProperties.Controls.Add(this.label9);
-            this.pnlGenericProperties.Controls.Add(this.imageComboBoxEdit2);
-            this.pnlGenericProperties.Controls.Add(this.label7);
-            this.pnlGenericProperties.Controls.Add(this.imageComboBoxEdit1);
-            this.pnlGenericProperties.Controls.Add(this.label2);
-            this.pnlGenericProperties.Controls.Add(this.cbFluidTank);
-            this.pnlGenericProperties.Controls.Add(this.label1);
-            this.pnlGenericProperties.Controls.Add(this.lblGenericProperties);
-            this.pnlGenericProperties.Location = new System.Drawing.Point(24, 34);
-            this.pnlGenericProperties.Name = "pnlGenericProperties";
-            this.pnlGenericProperties.Size = new System.Drawing.Size(869, 138);
-            this.pnlGenericProperties.TabIndex = 2;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(362, 94);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(44, 19);
-            this.numericUpDown2.TabIndex = 20;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(0, 0);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(90, 22);
-            this.numericUpDown1.TabIndex = 19;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(21, 93);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 15);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Liquid Level (%)";
-            // 
-            // imageComboBoxEdit2
-            // 
-            this.imageComboBoxEdit2.Location = new System.Drawing.Point(362, 71);
-            this.imageComboBoxEdit2.Name = "imageComboBoxEdit2";
-            this.imageComboBoxEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbToxicFluid.Location = new System.Drawing.Point(362, 49);
+            this.cbToxicFluid.Name = "cbToxicFluid";
+            this.cbToxicFluid.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit2.Size = new System.Drawing.Size(34, 20);
-            this.imageComboBoxEdit2.TabIndex = 17;
+            this.cbToxicFluid.Size = new System.Drawing.Size(267, 20);
+            this.cbToxicFluid.TabIndex = 15;
             // 
-            // label7
+            // contextMenuStrip1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(21, 72);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(146, 15);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Phase Of Fluid at Storage";
-            // 
-            // imageComboBoxEdit1
-            // 
-            this.imageComboBoxEdit1.Location = new System.Drawing.Point(362, 49);
-            this.imageComboBoxEdit1.Name = "imageComboBoxEdit1";
-            this.imageComboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit1.Size = new System.Drawing.Size(267, 20);
-            this.imageComboBoxEdit1.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 15);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Toxic Fluid";
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // cbFluidTank
             // 
@@ -794,33 +692,6 @@
             this.cbFluidTank.Size = new System.Drawing.Size(267, 20);
             this.cbFluidTank.TabIndex = 13;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Model Fluid";
-            // 
-            // lblGenericProperties
-            // 
-            this.lblGenericProperties.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lblGenericProperties.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblGenericProperties.Location = new System.Drawing.Point(-2, 0);
-            this.lblGenericProperties.Name = "lblGenericProperties";
-            this.lblGenericProperties.Size = new System.Drawing.Size(868, 17);
-            this.lblGenericProperties.TabIndex = 11;
-            this.lblGenericProperties.Text = "▼ Generic Properties";
-            this.lblGenericProperties.Click += new System.EventHandler(this.lblGenericProperties_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // UCStream
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -830,8 +701,8 @@
             this.Size = new System.Drawing.Size(941, 585);
             this.Load += new System.EventHandler(this.UCStream_Load);
             this.groupBox1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlGenericProperties.ResumeLayout(false);
+            this.pnlGenericProperties.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numToxicFluidPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLiquidLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit3.Properties)).EndInit();
@@ -841,12 +712,7 @@
             this.pnlStress.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbAmineSolutionComposition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbExposureAmine.Properties)).EndInit();
-            this.pnlGenericProperties.ResumeLayout(false);
-            this.pnlGenericProperties.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbToxicFluid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbFluidTank.Properties)).EndInit();
             this.ResumeLayout(false);
 
@@ -889,16 +755,12 @@
         private DevExpress.XtraEditors.ImageComboBoxEdit cbAmineSolutionComposition;
         private DevExpress.XtraEditors.ImageComboBoxEdit cbExposureAmine;
         private System.Windows.Forms.Panel pnlStress;
-        private System.Windows.Forms.Panel pnlGenericProperties;
         private System.Windows.Forms.Panel pnlHydrogen;
         private System.Windows.Forms.CheckBox chkProcessContainsHydrogen;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblGenericProperties;
         private System.Windows.Forms.Label lblStress;
         private System.Windows.Forms.Label lblHydrogen;
-        private DevExpress.XtraEditors.ImageComboBoxEdit cbFluidTank;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlGenericProperties;
         private System.Windows.Forms.NumericUpDown numToxicFluidPercent;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown numLiquidLevel;
@@ -907,16 +769,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.ImageComboBoxEdit imageComboBoxEdit2;
-        private System.Windows.Forms.Label label7;
-        private DevExpress.XtraEditors.ImageComboBoxEdit imageComboBoxEdit1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtToxicFluid;
-        private System.Windows.Forms.TextBox txtModelFluid;
+        private System.Windows.Forms.Label lblGenericProperties;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbToxicFluid;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbFluidTank;
     }
 }

@@ -150,7 +150,7 @@ namespace RBI.DAL.MSSQL
         }
         /// get datasource
         /// 
-        public List<RW_CORROSION_RATE_TANK> getDataSource()
+        public List<RW_CORROSION_RATE_TANK> getDataSource(int proposal_ID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -174,7 +174,7 @@ namespace RBI.DAL.MSSQL
                         ",[ModifiedSoilSideCorrosionRate]" +
                         ",[ModifiedProductSideCorrosionRate]" +
                         ",[FinalEstimatedCorrosionRate]" +
-                        " FROM [rbi].[dbo].[RW_CORROSION_RATE_TANK] ";
+                        " FROM [rbi].[dbo].[RW_CORROSION_RATE_TANK] WHERE [ID] = '" + proposal_ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
