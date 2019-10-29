@@ -102,3 +102,4 @@ F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.WaitForm1.re
 F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserControl1.resources
 F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.GenerateResource.Cache
 F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.licenses
+F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.InputDataForm.frmReport.resources

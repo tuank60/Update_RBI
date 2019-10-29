@@ -122,8 +122,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 float FC = CoF / 10000;
                 coordinatesCoF = 4 * x + FC * x / 10000 - 16;
-            }
-            
+            }          
             Image[] image = { Resource1.Triangle_icon, Resource1.Square_icon, Resource1.Circle_icon };
             for (int i = 0; i < 3; i++)
             {

@@ -400,6 +400,12 @@
     <Compile Include="Object\ucTabNormal.cs" />
     <Compile Include="Object\ucTabTank.cs" />
     <Compile Include="PRE\ITEM\jtree.cs" />
+    <Compile Include="PRE\subForm\InputDataForm\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmUnits.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -665,6 +671,9 @@
     <Compile Include="XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PRE\subForm\InputDataForm\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmUnits.resx">
       <DependentUpon>frmUnits.cs</DependentUpon>
     </EmbeddedResource>

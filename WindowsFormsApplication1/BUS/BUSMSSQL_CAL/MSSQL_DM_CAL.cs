@@ -927,6 +927,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULPHIDE_INSP_NUM + SULPHIDE_INSP_EFF;
+                Console.WriteLine("EFF" + FIELD);
                 float DFB_SULPHIDE = DAL_CAL.GET_TBL_63(SVI_SULPHIDE(), FIELD);
                 Console.WriteLine("DF_SULPHIDE = " + DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                 return DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
