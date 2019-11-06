@@ -740,123 +740,16 @@ namespace RBI.BUS.BUSExcel
                                     obj.CommissionDate = Convert.ToDateTime(reader[7].ToString());
                                     try
                                     {
-                                        obj.AdminUpsetManagement = Convert.ToInt32(reader.GetBoolean(11));
-                                    }
-                                    catch
-                                    {
-                                        obj.AdminUpsetManagement = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.CyclicOperation = Convert.ToInt32(reader.GetBoolean(12));
-                                    }
-                                    catch
-                                    {
-                                        obj.CyclicOperation = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.DowntimeProtectionUsed = Convert.ToInt32(reader.GetBoolean(13));
-                                    }
-                                    catch
-                                    {
-                                        obj.DowntimeProtectionUsed = 0;
-                                        Console.WriteLine("Hello error 3");
-                                    }
-                                    try
-                                    {
-                                        obj.SteamOutWaterFlush = Convert.ToInt32(reader.GetBoolean(14));
-                                    }
-                                    catch
-                                    {
-                                        obj.SteamOutWaterFlush = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.HeatTraced = Convert.ToInt32(reader.GetBoolean(15));
-                                    }
-                                    catch
-                                    {
-                                        obj.HeatTraced = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.PWHT = Convert.ToInt32(reader.GetBoolean(16));
+                                        obj.PWHT = Convert.ToInt32(reader.GetBoolean(11));
                                     }
                                     catch
                                     {
                                         obj.PWHT = 0;
                                     }
+                                    obj.OnlineMonitoring = reader[12].ToString();
                                     try
                                     {
-                                        obj.InterfaceSoilWater = Convert.ToInt32(reader.GetBoolean(17));
-                                    }
-                                    catch
-                                    {
-                                        obj.InterfaceSoilWater = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.PressurisationControlled = Convert.ToInt32(reader.GetBoolean(18));
-                                    }
-                                    catch
-                                    {
-                                        obj.PressurisationControlled = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.MinReqTemperaturePressurisation = (float)reader.GetDouble(19);
-                                    }
-                                    catch
-                                    {
-                                        obj.MinReqTemperaturePressurisation = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.YearLowestExpTemp = Convert.ToInt32(reader.GetBoolean(20));
-                                    }
-                                    catch
-                                    {
-                                        obj.YearLowestExpTemp = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.MaterialExposedToClExt = Convert.ToInt32(reader.GetBoolean(21));
-                                    }
-                                    catch
-                                    {
-                                        obj.MaterialExposedToClExt = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.LinerOnlineMonitoring = Convert.ToInt32(reader.GetBoolean(22));
-                                    }
-                                    catch
-                                    {
-                                        obj.LinerOnlineMonitoring = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.PresenceSulphidesO2 = Convert.ToInt32(reader.GetBoolean(23));
-                                    }
-                                    catch
-                                    {
-                                        obj.PresenceSulphidesO2 = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.PresenceSulphidesO2Shutdown = Convert.ToInt32(reader.GetBoolean(24));
-                                    }
-                                    catch
-                                    {
-                                        obj.PresenceSulphidesO2Shutdown = 0;
-                                    }
-                                    obj.ExternalEnvironment = reader[25].ToString();
-                                    obj.ThermalHistory = reader[26].ToString();
-                                    obj.OnlineMonitoring = reader[27].ToString();
-                                    try
-                                    {
-                                        obj.Volume = (float)reader.GetDouble(28);
+                                        obj.Volume = (float)reader.GetDouble(13);
                                     }
                                     catch
                                     {
@@ -864,26 +757,33 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.ManagementFactor = (float)reader.GetDouble(29);
+                                        obj.ManagementFactor = (float)reader.GetDouble(14);
                                     }
                                     catch
                                     {
                                         obj.ManagementFactor = 0;
+                                        //Console.WriteLine("Hello error 3");
                                     }
-                                    obj.TypeOfSoil = reader[30].ToString();
                                     try
                                     {
-                                        obj.DistanceToGroundWater = (float)reader.GetDouble(31);
+                                        obj.AdminUpsetManagement = Convert.ToInt32(reader.GetBoolean(15));
                                     }
                                     catch
                                     {
-                                        obj.DistanceToGroundWater = 0;
+                                        obj.AdminUpsetManagement = 0;
                                     }
-                                    obj.EnvironmentSensitivity = reader[32].ToString();
-                                    obj.AdjustmentSettle = reader[33].ToString();
                                     try
                                     {
-                                        obj.ComponentIsWelded = Convert.ToInt32(reader.GetBoolean(34));
+                                        obj.LinerOnlineMonitoring = Convert.ToInt32(reader.GetBoolean(16));
+                                    }
+                                    catch
+                                    {
+                                        obj.LinerOnlineMonitoring = 0;
+                                    }
+                                    obj.AdjustmentSettle = reader[17].ToString();
+                                    try
+                                    {
+                                        obj.ComponentIsWelded = Convert.ToInt32(reader.GetBoolean(18));
                                     }
                                     catch
                                     {
@@ -891,11 +791,95 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.TankIsMaintained = Convert.ToInt32(reader.GetBoolean(35));
+                                        obj.TankIsMaintained = Convert.ToInt32(reader.GetBoolean(19));
                                     }
                                     catch
                                     {
                                         obj.TankIsMaintained = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.MaterialExposedToClExt = Convert.ToInt32(reader.GetBoolean(20));
+                                    }
+                                    catch
+                                    {
+                                        obj.MaterialExposedToClExt = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.InterfaceSoilWater = Convert.ToInt32(reader.GetBoolean(21));
+                                    }
+                                    catch
+                                    {
+                                        obj.InterfaceSoilWater = 0;
+                                    }
+                                    obj.ExternalEnvironment = reader[22].ToString();
+                                    try
+                                    {
+                                        obj.DowntimeProtectionUsed = Convert.ToInt32(reader.GetBoolean(23));
+                                    }
+                                    catch
+                                    {
+                                        obj.DowntimeProtectionUsed = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.SteamOutWaterFlush = Convert.ToInt32(reader.GetBoolean(24));
+                                    }
+                                    catch
+                                    {
+                                        obj.SteamOutWaterFlush = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.HeatTraced = Convert.ToInt32(reader.GetBoolean(25));
+                                    }
+                                    catch
+                                    {
+                                        obj.HeatTraced = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.PresenceSulphidesO2 = Convert.ToInt32(reader.GetBoolean(26));
+                                    }
+                                    catch
+                                    {
+                                        obj.PresenceSulphidesO2 = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.PresenceSulphidesO2Shutdown = Convert.ToInt32(reader.GetBoolean(27));
+                                    }
+                                    catch
+                                    {
+                                        obj.PresenceSulphidesO2Shutdown = 0;
+                                    }
+                                    obj.ThermalHistory = reader[28].ToString();
+                                    try
+                                    {
+                                        obj.PressurisationControlled = Convert.ToInt32(reader.GetBoolean(29));
+                                    }
+                                    catch
+                                    {
+                                        obj.PressurisationControlled = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.MinReqTemperaturePressurisation = (float)reader.GetDouble(30);
+                                    }
+                                    catch
+                                    {
+                                        obj.MinReqTemperaturePressurisation = 0;
+                                    }
+                                    obj.TypeOfSoil = reader[31].ToString();
+                                    obj.EnvironmentSensitivity = reader[32].ToString();
+                                    try
+                                    {
+                                        obj.DistanceToGroundWater = (float)reader.GetDouble(33);
+                                    }
+                                    catch
+                                    {
+                                        obj.DistanceToGroundWater = 0;
                                     }
                                     list.Add(obj);
                                 }
@@ -903,7 +887,6 @@ namespace RBI.BUS.BUSExcel
                         }
                     }
                 }
-
             }
             catch
             {
@@ -1221,13 +1204,22 @@ namespace RBI.BUS.BUSExcel
                                     {
                                         obj.CurrentThickness = (float)reader.GetDouble(11);
                                     }
+
                                     catch
                                     {
                                         obj.CurrentThickness = 0;
                                     }
                                     try
                                     {
-                                        obj.MinReqThickness = (float)reader.GetDouble(12);
+                                        obj.CurrentCorrosionRate = (float)reader.GetDouble(12);
+                                    }
+                                    catch
+                                    {
+                                        obj.CurrentCorrosionRate = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.MinReqThickness = (float)reader.GetDouble(13);
                                     }
                                     catch
                                     {
@@ -1235,18 +1227,109 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.CurrentCorrosionRate = (float)reader.GetDouble(13);
+                                        obj.CracksPresent = Convert.ToInt32(reader.GetBoolean(14));
                                     }
                                     catch
                                     {
-                                        obj.CurrentCorrosionRate = 0;
+                                        obj.CracksPresent = 0;
                                     }
-                                    obj.BrinnelHardness = reader[18].ToString();
-                                    obj.ComplexityProtrusion = reader[19].ToString();
-                                    obj.SeverityOfVibration = reader[20].ToString();
                                     try
                                     {
-                                        obj.ReleasePreventionBarrier = Convert.ToInt32(reader.GetBoolean(21));
+                                        obj.WeldJointEfficiency = (float)reader.GetDouble(15);
+
+                                    }
+                                    catch
+                                    {
+                                        obj.WeldJointEfficiency = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.AllowableStress = (float)reader.GetDouble(16);
+                                    }
+                                    catch
+                                    {
+                                        obj.AllowableStress = 0;
+                                    }
+
+                                    obj.ConfidenceCorrosionRate = reader[17].ToString();
+                                    try
+                                    {
+                                        obj.MinimumStructuralThicknessGoverns = Convert.ToInt32(reader.GetBoolean(18));
+                                    }
+                                    catch
+                                    {
+                                        obj.MinimumStructuralThicknessGoverns = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.StructuralThickness = (float)reader.GetDouble(19);
+                                    }
+                                    catch
+                                    {
+                                        obj.StructuralThickness = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ComponentVolume = (float)reader.GetDouble(20);
+                                    }
+                                    catch
+                                    {
+                                        obj.ComponentVolume = 0;
+                                    }
+                                    obj.ComplexityProtrusion = reader[21].ToString();
+                                    obj.BrinnelHardness = reader[22].ToString();
+                                    try
+                                    {
+                                        obj.FabricatedSteel = Convert.ToInt32(reader.GetBoolean(23));
+                                    }
+                                    catch
+                                    {
+                                        obj.FabricatedSteel = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.EquipmentSatisfied = Convert.ToInt32(reader.GetBoolean(24));
+                                    }
+                                    catch
+                                    {
+                                        obj.EquipmentSatisfied = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.NominalOperatingConditions = Convert.ToInt32(reader.GetBoolean(25));
+                                    }
+                                    catch
+                                    {
+                                        obj.NominalOperatingConditions = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.CETGreaterOrEqual = Convert.ToInt32(reader.GetBoolean(26));
+                                    }
+                                    catch
+                                    {
+                                        obj.CETGreaterOrEqual = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.CyclicServiceFatigueVibration = Convert.ToInt32(reader.GetBoolean(27));
+                                    }
+                                    catch
+                                    {
+                                        obj.CyclicServiceFatigueVibration = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.EquipmentCircuitShock = Convert.ToInt32(reader.GetBoolean(28));
+                                    }
+                                    catch
+                                    {
+                                        obj.EquipmentCircuitShock = 0;
+                                    }
+                                    obj.SeverityOfVibration = reader[29].ToString();
+                                    try
+                                    {
+                                        obj.ReleasePreventionBarrier = Convert.ToInt32(reader.GetBoolean(30));
                                     }
                                     catch
                                     {
@@ -1254,15 +1337,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.ConcreteFoundation = Convert.ToInt32(reader.GetBoolean(22));
-                                    }
-                                    catch
-                                    {
-                                        obj.ConcreteFoundation = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.ShellHeight = (float)reader.GetDouble(23);
+                                        obj.ShellHeight = (float)reader.GetDouble(31);
                                     }
                                     catch
                                     {
@@ -1270,36 +1345,11 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.CracksPresent = Convert.ToInt32(reader.GetBoolean(16));
+                                        obj.ConcreteFoundation = Convert.ToInt32(reader.GetBoolean(32));
                                     }
                                     catch
                                     {
-                                        obj.CracksPresent = 0;
-                                    }
-
-                                    try
-                                    {
-                                        obj.DamageFoundInspection = Convert.ToInt32(reader.GetBoolean(15));
-                                    }
-                                    catch
-                                    {
-                                        obj.DamageFoundInspection = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.DeltaFATT = (float)reader.GetDouble(14);
-                                    }
-                                    catch
-                                    {
-                                        obj.DeltaFATT = 0;
-                                    }
-                                    try
-                                    {
-                                        //obj.TrampElements = Convert.ToInt32(reader.GetBoolean(17));
-                                    }
-                                    catch
-                                    {
-                                        //obj.TrampElements = 0;
+                                        obj.ConcreteFoundation = 0;
                                     }
                                     list.Add(obj);
                                 }
@@ -1355,8 +1405,6 @@ namespace RBI.BUS.BUSExcel
                                     {
                                         obj.Minus12ToMinus8 = 0;
                                     }
-                                    //MessageBox.Show(obj.Minus12ToMinus8.ToString());
-                                    //MessageBox.Show(obj.ID.ToString());
                                     try
                                     {
                                         obj.Minus8ToPlus6 = (float)reader.GetDouble(8);
@@ -1752,148 +1800,10 @@ namespace RBI.BUS.BUSExcel
                                 {
                                     obj = new RW_STREAM();
                                     obj.ID = list1[i].ID;
+                                    obj.TankFluidName = reader[1].ToString();
                                     try
                                     {
-                                        obj.NaOHConcentration = (float)reader.GetDouble(1);
-                                    }
-                                    catch
-                                    {
-                                        obj.NaOHConcentration = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.ReleaseFluidPercentToxic = (float)reader.GetDouble(2);
-                                    }
-                                    catch
-                                    {
-                                        obj.ReleaseFluidPercentToxic = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.Chloride = (float)reader.GetDouble(3);
-                                    }
-                                    catch
-                                    {
-                                        obj.Chloride = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.CO3Concentration = (float)reader.GetDouble(4);
-                                    }
-                                    catch
-                                    {
-                                        obj.CO3Concentration = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.H2SInWater = (float)reader.GetDouble(5);
-                                    }
-                                    catch
-                                    {
-                                        obj.H2SInWater = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.WaterpH = (float)reader.GetDouble(6);
-                                    }
-                                    catch
-                                    {
-                                        obj.WaterpH = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.ExposedToGasAmine = Convert.ToInt32(reader.GetBoolean(7));
-                                    }
-                                    catch
-                                    {
-                                        obj.ExposedToGasAmine = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.ToxicConstituent = Convert.ToInt32(reader.GetBoolean(8));
-                                    }
-                                    catch
-                                    {
-                                        obj.ToxicConstituent = 0;
-                                    }
-                                    obj.ExposureToAmine = reader[9].ToString();
-                                    obj.AmineSolution = reader[10].ToString();
-                                    try
-                                    {
-                                        obj.AqueousOperation = Convert.ToInt32(reader.GetBoolean(11));
-                                    }
-                                    catch
-                                    {
-                                        obj.AqueousOperation = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.AqueousShutdown = Convert.ToInt32(reader.GetBoolean(12));
-                                    }
-                                    catch
-                                    {
-                                        obj.AqueousShutdown = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.H2S = Convert.ToInt32(reader.GetBoolean(13));
-                                    }
-                                    catch
-                                    {
-                                        obj.H2S = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.Hydrofluoric = Convert.ToInt32(reader.GetBoolean(14));
-                                    }
-                                    catch
-                                    {
-                                        obj.Hydrofluoric = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.Cyanide = Convert.ToInt32(reader.GetBoolean(15));
-                                    }
-                                    catch
-                                    {
-                                        obj.Cyanide = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.Hydrogen = Convert.ToInt32(reader.GetBoolean(16));
-                                    }
-                                    catch
-                                    {
-                                        obj.Hydrogen = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.Caustic = Convert.ToInt32(reader.GetBoolean(17));
-                                    }
-                                    catch
-                                    {
-                                        obj.Caustic = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.ExposedToSulphur = Convert.ToInt32(reader.GetBoolean(18));
-                                    }
-                                    catch
-                                    {
-                                        obj.ExposedToSulphur = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.MaterialExposedToClInt = Convert.ToInt32(reader.GetBoolean(19));
-                                    }
-                                    catch
-                                    {
-                                        obj.MaterialExposedToClInt = 0;
-                                    }
-                                    obj.TankFluidName = reader[20].ToString();
-                                    try
-                                    {
-                                        obj.FluidHeight = (float)reader.GetDouble(21);
+                                        obj.FluidHeight = (float)reader.GetDouble(2);
                                     }
                                     catch
                                     {
@@ -1901,7 +1811,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.FluidLeaveDikePercent = (float)reader.GetDouble(22);
+                                        obj.FluidLeaveDikePercent = (float)reader.GetDouble(3);
                                     }
                                     catch
                                     {
@@ -1909,7 +1819,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.FluidLeaveDikeRemainOnSitePercent = (float)reader.GetDouble(23);
+                                        obj.FluidLeaveDikeRemainOnSitePercent = (float)reader.GetDouble(4);
                                     }
                                     catch
                                     {
@@ -1917,11 +1827,141 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.FluidGoOffSitePercent = (float)reader.GetDouble(24);
+                                        obj.FluidGoOffSitePercent = (float)reader.GetDouble(5);
                                     }
                                     catch
                                     {
                                         obj.FluidGoOffSitePercent = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ReleaseFluidPercentToxic = (float)reader.GetDouble(8);
+                                    }
+                                    catch
+                                    {
+                                        obj.ReleaseFluidPercentToxic = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ToxicConstituent = Convert.ToInt32(reader.GetBoolean(9));
+                                    }
+                                    catch
+                                    {
+                                        obj.ToxicConstituent = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.WaterpH = (float)reader.GetDouble(10);
+                                    }
+                                    catch
+                                    {
+                                        obj.WaterpH = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ExposedToGasAmine = Convert.ToInt32(reader.GetBoolean(11));
+                                    }
+                                    catch
+                                    {
+                                        obj.ExposedToGasAmine = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.AqueousOperation = Convert.ToInt32(reader.GetBoolean(12));
+                                    }
+                                    catch
+                                    {
+                                        obj.AqueousOperation = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.AqueousShutdown = Convert.ToInt32(reader.GetBoolean(13));
+                                    }
+                                    catch
+                                    {
+                                        obj.AqueousShutdown = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.H2S = Convert.ToInt32(reader.GetBoolean(14));
+                                    }
+                                    catch
+                                    {
+                                        obj.H2S = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.Hydrofluoric = Convert.ToInt32(reader.GetBoolean(15));
+                                    }
+                                    catch
+                                    {
+                                        obj.Hydrofluoric = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.Caustic = Convert.ToInt32(reader.GetBoolean(16));
+                                    }
+                                    catch
+                                    {
+                                        obj.Caustic = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ExposedToSulphur = Convert.ToInt32(reader.GetBoolean(17));
+                                    }
+                                    catch
+                                    {
+                                        obj.ExposedToSulphur = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.MaterialExposedToClInt = Convert.ToInt32(reader.GetBoolean(18));
+                                    }
+                                    catch
+                                    {
+                                        obj.MaterialExposedToClInt = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.Cyanide = Convert.ToInt32(reader.GetBoolean(19));
+                                    }
+                                    catch
+                                    {
+                                        obj.Cyanide = 0;
+                                    }
+                                    obj.ExposureToAmine = reader[20].ToString();
+                                    obj.AmineSolution = reader[21].ToString();
+                                    try
+                                    {
+                                        obj.NaOHConcentration = (float)reader.GetDouble(22);
+                                    }
+                                    catch
+                                    {
+                                        obj.NaOHConcentration = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.Chloride = (float)reader.GetDouble(23);
+                                    }
+                                    catch
+                                    {
+                                        obj.Chloride = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.CO3Concentration = (float)reader.GetDouble(24);
+                                    }
+                                    catch
+                                    {
+                                        obj.CO3Concentration = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.H2SInWater = (float)reader.GetDouble(25);
+                                    }
+                                    catch
+                                    {
+                                        obj.H2SInWater = 0;
                                     }
                                     list.Add(obj);
                                 }
@@ -2254,63 +2294,7 @@ namespace RBI.BUS.BUSExcel
                                     obj.MaterialName = reader[1].ToString();
                                     try
                                     {
-                                        obj.DesignPressure = (float)reader.GetDouble(2);
-                                    }
-                                    catch
-                                    {
-                                        obj.DesignPressure = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.DesignTemperature = (float)reader.GetDouble(3);
-                                    }
-                                    catch
-                                    {
-                                        obj.DesignTemperature = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.MinDesignTemperature = (float)reader.GetDouble(4);
-                                    }
-                                    catch
-                                    {
-                                        obj.MinDesignTemperature = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.ReferenceTemperature = (float)reader.GetDouble(5);
-                                    }
-                                    catch
-                                    {
-                                        obj.ReferenceTemperature = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.BrittleFractureThickness = (float)reader.GetDouble(6);
-                                    }
-                                    catch
-                                    {
-                                        obj.BrittleFractureThickness = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.AllowableStress = (float)reader.GetDouble(7);
-                                    }
-                                    catch
-                                    {
-                                        obj.AllowableStress = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.CorrosionAllowance = (float)reader.GetDouble(8);
-                                    }
-                                    catch
-                                    {
-                                        obj.CorrosionAllowance = 0;
-                                    }
-                                    try
-                                    {
-                                        obj.CarbonLowAlloy = Convert.ToInt32(reader.GetBoolean(9));
+                                        obj.CarbonLowAlloy = Convert.ToInt32(reader.GetBoolean(2));
                                     }
                                     catch
                                     {
@@ -2318,7 +2302,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.Austenitic = Convert.ToInt32(reader.GetBoolean(10));
+                                        obj.Austenitic = Convert.ToInt32(reader.GetBoolean(3));
                                     }
                                     catch
                                     {
@@ -2326,38 +2310,93 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.NickelBased = Convert.ToInt32(reader.GetBoolean(11));
+                                        obj.DesignPressure = (float)reader.GetDouble(4);
+                                    }
+                                    catch
+                                    {
+                                        obj.DesignPressure = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.DesignTemperature = (float)reader.GetDouble(5);
+                                    }
+                                    catch
+                                    {
+                                        obj.DesignTemperature = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.YieldStrength = (float)reader.GetDouble(6);
+                                    }
+                                    catch
+                                    {
+                                        obj.YieldStrength = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.TensileStrength = (float)reader.GetDouble(7);
+                                    }
+                                    catch
+                                    {
+                                        obj.TensileStrength = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.CostFactor = (float)reader.GetDouble(8);
+                                    }
+                                    catch
+                                    {
+                                        obj.CostFactor = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.CorrosionAllowance = (float)reader.GetDouble(9);
+                                    }
+                                    catch
+                                    {
+                                        obj.CorrosionAllowance = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.NickelBased = Convert.ToInt32(reader.GetBoolean(10));
                                     }
                                     catch
                                     {
                                         obj.NickelBased = 0;
                                     }
+                                    obj.SulfurContent = reader[11].ToString();
                                     try
                                     {
-                                        obj.ChromeMoreEqual12 = Convert.ToInt32(reader.GetBoolean(12));
-                                    }
-                                    catch
-                                    {
-                                        obj.ChromeMoreEqual12 = 0;
-                                    }
-                                    obj.SulfurContent = reader[13].ToString();
-                                    obj.HeatTreatment = reader[14].ToString();
-                                    try
-                                    {
-                                        obj.IsPTA = Convert.ToInt32(reader.GetBoolean(15));
+                                        obj.IsPTA = Convert.ToInt32(reader.GetBoolean(12));
                                     }
                                     catch
                                     {
                                         obj.IsPTA = 0;
                                     }
-                                    obj.PTAMaterialCode = reader[16].ToString();
+                                    obj.PTAMaterialCode = reader[13].ToString();
                                     try
                                     {
-                                        obj.CostFactor = (float)reader.GetDouble(17);
+                                        obj.MinDesignTemperature = (float)reader.GetDouble(14);
                                     }
                                     catch
                                     {
-                                        obj.CostFactor = 0;
+                                        obj.MinDesignTemperature = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ChromeMoreEqual12 = Convert.ToInt32(reader.GetBoolean(15));
+                                    }
+                                    catch
+                                    {
+                                        obj.ChromeMoreEqual12 = 0;
+                                    }
+                                    try
+                                    {
+                                        obj.ReferenceTemperature = (float)reader.GetDouble(16);
+                                    }
+                                    catch
+                                    {
+                                        obj.ReferenceTemperature = 0;
                                     }
                                     list.Add(obj);
                                 }
@@ -2420,7 +2459,7 @@ namespace RBI.BUS.BUSExcel
                                     }
                                     try
                                     {
-                                        obj.CladdingThickness = (float)reader.GetDouble(3); 
+                                        obj.CladdingThickness = (float)reader.GetDouble(3);
                                     }
                                     catch
                                     {
@@ -2451,7 +2490,7 @@ namespace RBI.BUS.BUSExcel
                                     catch
                                     {
                                         obj.InternalCoating = 0;
-                                    }                                    
+                                    }
                                     try
                                     {
                                         obj.ExternalCoatingDate = Convert.ToDateTime(reader[9].ToString());
@@ -2468,7 +2507,7 @@ namespace RBI.BUS.BUSExcel
                                     catch
                                     {
                                         obj.SupportConfigNotAllowCoatingMaint = 0;
-                                    }                                 
+                                    }
                                     try
                                     {
                                         obj.ExternalInsulation = Convert.ToInt32(reader.GetBoolean(12));

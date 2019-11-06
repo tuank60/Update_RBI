@@ -49,7 +49,7 @@ namespace RBI.PRE.subForm.InputDataForm
             IWorkbook workbook = spreadExcel.Document;
             DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[0];
             bool isCorrect = true;
-            if (workbook.Worksheets.Count != 7)
+            if (workbook.Worksheets.Count != 8)
             {
                 MessageBox.Show("Format is not correct! Please check again", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return
