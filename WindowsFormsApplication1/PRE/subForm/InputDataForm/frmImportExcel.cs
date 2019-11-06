@@ -333,6 +333,7 @@ namespace RBI.PRE.subForm.InputDataForm
             }
 
             List<RW_EXTCOR_TEMPERATURE> listRw_extcor = busExcelProcess.getRwExtTemp();
+            //MessageBox.Show(listRw_extcor.Count.ToString());
             for (int i = 0; i < listRw_extcor.Count; i++)
             {
                 if (editExcel.Count != 0)
@@ -341,7 +342,8 @@ namespace RBI.PRE.subForm.InputDataForm
                     {
                         if (listRw_extcor[i].ID == editExcel[j])
                         {
-                            busExcort.edit(listRw_extcor[i]);
+                            //MessageBox.Show("add file excel");
+                            busExcort.edit(listRw_extcor[i]);              
                         }
                     }
                 }
@@ -351,6 +353,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     {
                         if (listRw_extcor[i].ID == addExcel[j])
                         {
+                            //MessageBox.Show("add file excel");
                             busExcort.add(listRw_extcor[i]);
                         }
                     }

@@ -1341,6 +1341,8 @@ namespace RBI.BUS.BUSExcel
                         {
                             for (int i = 0; i < list1.Count; i++)
                             {
+                                //MessageBox.Show("comid"+list1[i].ComponentID.ToString());
+                                //MessageBox.Show(busCompMaster.getIDbyName(reader[0].ToString()).ToString());
                                 if (list1[i].ComponentID == busCompMaster.getIDbyName(reader[0].ToString()))
                                 {
                                     obj = new RW_EXTCOR_TEMPERATURE();
@@ -1353,6 +1355,8 @@ namespace RBI.BUS.BUSExcel
                                     {
                                         obj.Minus12ToMinus8 = 0;
                                     }
+                                    //MessageBox.Show(obj.Minus12ToMinus8.ToString());
+                                    //MessageBox.Show(obj.ID.ToString());
                                     try
                                     {
                                         obj.Minus8ToPlus6 = (float)reader.GetDouble(8);

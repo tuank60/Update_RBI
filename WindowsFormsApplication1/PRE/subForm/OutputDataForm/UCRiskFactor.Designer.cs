@@ -31,66 +31,73 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.tabPoF = new DevExpress.XtraTab.XtraTabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.cbThinningType = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
+            this.Fully = new System.Windows.Forms.GroupBox();
+            this.pnlDamageFactors = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label73 = new System.Windows.Forms.Label();
+            this.txtRLI = new DevExpress.XtraEditors.TextEdit();
+            this.lblRLI = new System.Windows.Forms.Label();
             this.txt72PoFCategory = new DevExpress.XtraEditors.TextEdit();
+            this.label39 = new System.Windows.Forms.Label();
             this.txt36PoFCategory = new DevExpress.XtraEditors.TextEdit();
+            this.lblDamageFactors = new System.Windows.Forms.Label();
             this.txt0PoFCategory = new DevExpress.XtraEditors.TextEdit();
+            this.label38 = new System.Windows.Forms.Label();
             this.txt72PoF = new DevExpress.XtraEditors.TextEdit();
+            this.label23 = new System.Windows.Forms.Label();
             this.txt36PoF = new DevExpress.XtraEditors.TextEdit();
+            this.label37 = new System.Windows.Forms.Label();
             this.txt0PoF = new DevExpress.XtraEditors.TextEdit();
+            this.label24 = new System.Windows.Forms.Label();
             this.txt72FinalTotalDamage = new DevExpress.XtraEditors.TextEdit();
+            this.label25 = new System.Windows.Forms.Label();
             this.txt36FinalTotalDamage = new DevExpress.XtraEditors.TextEdit();
+            this.label27 = new System.Windows.Forms.Label();
             this.txt0FinalTotalDamage = new DevExpress.XtraEditors.TextEdit();
+            this.label26 = new System.Windows.Forms.Label();
             this.txt72TotalLocalThinning = new DevExpress.XtraEditors.TextEdit();
+            this.label31 = new System.Windows.Forms.Label();
             this.txt36TotalLocalThinning = new DevExpress.XtraEditors.TextEdit();
+            this.label30 = new System.Windows.Forms.Label();
             this.txt0TotalLocalThinning = new DevExpress.XtraEditors.TextEdit();
+            this.label29 = new System.Windows.Forms.Label();
             this.txt72TotalGeneralThinning = new DevExpress.XtraEditors.TextEdit();
+            this.txt0Thinning = new DevExpress.XtraEditors.TextEdit();
             this.txt36TotalGeneralThinning = new DevExpress.XtraEditors.TextEdit();
+            this.txt36Thinning = new DevExpress.XtraEditors.TextEdit();
             this.txt0TotalGeneralThinning = new DevExpress.XtraEditors.TextEdit();
+            this.txt72Thinning = new DevExpress.XtraEditors.TextEdit();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txt0StressCorrosion = new DevExpress.XtraEditors.TextEdit();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txt36StressCorrosion = new DevExpress.XtraEditors.TextEdit();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txt72StressCorrosion = new DevExpress.XtraEditors.TextEdit();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txt0External = new DevExpress.XtraEditors.TextEdit();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txt36External = new DevExpress.XtraEditors.TextEdit();
+            this.txt72External = new DevExpress.XtraEditors.TextEdit();
             this.txt72Other = new DevExpress.XtraEditors.TextEdit();
+            this.txt0HighTemperature = new DevExpress.XtraEditors.TextEdit();
             this.txt32Other = new DevExpress.XtraEditors.TextEdit();
+            this.txt36HighTemperature = new DevExpress.XtraEditors.TextEdit();
             this.txt0Other = new DevExpress.XtraEditors.TextEdit();
+            this.txt72HighTemperature = new DevExpress.XtraEditors.TextEdit();
             this.txt72Piping = new DevExpress.XtraEditors.TextEdit();
+            this.txt0BrittleFracture = new DevExpress.XtraEditors.TextEdit();
             this.txt36Piping = new DevExpress.XtraEditors.TextEdit();
+            this.txt36BrittleFracture = new DevExpress.XtraEditors.TextEdit();
             this.txt0Piping = new DevExpress.XtraEditors.TextEdit();
             this.txt72BrittleFracture = new DevExpress.XtraEditors.TextEdit();
-            this.txt36BrittleFracture = new DevExpress.XtraEditors.TextEdit();
-            this.txt0BrittleFracture = new DevExpress.XtraEditors.TextEdit();
-            this.txt72HighTemperature = new DevExpress.XtraEditors.TextEdit();
-            this.txt36HighTemperature = new DevExpress.XtraEditors.TextEdit();
-            this.txt0HighTemperature = new DevExpress.XtraEditors.TextEdit();
-            this.txt72External = new DevExpress.XtraEditors.TextEdit();
-            this.txt36External = new DevExpress.XtraEditors.TextEdit();
-            this.txt0External = new DevExpress.XtraEditors.TextEdit();
-            this.txt72StressCorrosion = new DevExpress.XtraEditors.TextEdit();
-            this.txt36StressCorrosion = new DevExpress.XtraEditors.TextEdit();
-            this.txt0StressCorrosion = new DevExpress.XtraEditors.TextEdit();
-            this.txt72Thinning = new DevExpress.XtraEditors.TextEdit();
-            this.txt36Thinning = new DevExpress.XtraEditors.TextEdit();
-            this.txt0Thinning = new DevExpress.XtraEditors.TextEdit();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.pnlInitialFactor = new System.Windows.Forms.Panel();
+            this.lblInitialFactor = new System.Windows.Forms.Label();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbThinningType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabCA = new DevExpress.XtraTab.XtraTabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.txtCA = new System.Windows.Forms.TextBox();
@@ -256,15 +263,16 @@
             this.label71 = new System.Windows.Forms.Label();
             this.tbHdraulicWater = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.tabPoF.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbThinningType.Properties)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            this.Fully.SuspendLayout();
+            this.pnlDamageFactors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRLI.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72PoFCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt36PoFCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0PoFCategory.Properties)).BeginInit();
@@ -278,29 +286,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt36TotalLocalThinning.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0TotalLocalThinning.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72TotalGeneralThinning.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0Thinning.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt36TotalGeneralThinning.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36Thinning.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0TotalGeneralThinning.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72Thinning.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0StressCorrosion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36StressCorrosion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72StressCorrosion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0External.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36External.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72External.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72Other.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0HighTemperature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt32Other.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36HighTemperature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0Other.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72HighTemperature.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72Piping.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0BrittleFracture.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt36Piping.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36BrittleFracture.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0Piping.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72BrittleFracture.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36BrittleFracture.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0BrittleFracture.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72HighTemperature.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36HighTemperature.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0HighTemperature.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72External.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36External.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0External.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72StressCorrosion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36StressCorrosion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0StressCorrosion.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72Thinning.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36Thinning.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0Thinning.Properties)).BeginInit();
+            this.pnlInitialFactor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThinningType.Properties)).BeginInit();
             this.tabCA.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -337,6 +349,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShellD1.Properties)).BeginInit();
             this.tabCATankBottom.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -346,7 +359,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(969, 712);
+            this.groupBox1.Size = new System.Drawing.Size(969, 887);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Risk Factor";
@@ -357,7 +370,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(3, 17);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.tabPoF;
-            this.xtraTabControl1.Size = new System.Drawing.Size(963, 692);
+            this.xtraTabControl1.Size = new System.Drawing.Size(963, 867);
             this.xtraTabControl1.TabIndex = 2;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabPoF,
@@ -367,33 +380,683 @@
             // 
             // tabPoF
             // 
-            this.tabPoF.Controls.Add(this.groupBox2);
-            this.tabPoF.Controls.Add(this.groupBox3);
+            this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 665);
+            this.tabPoF.Size = new System.Drawing.Size(961, 840);
             this.tabPoF.Text = "Probability of Failure";
             // 
-            // groupBox2
+            // Fully
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.textEdit2);
-            this.groupBox2.Controls.Add(this.textEdit1);
-            this.groupBox2.Controls.Add(this.cbThinningType);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 13);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(957, 116);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Initial Factor";
+            this.Fully.Controls.Add(this.pnlDamageFactors);
+            this.Fully.Controls.Add(this.pnlInitialFactor);
+            this.Fully.Location = new System.Drawing.Point(3, 3);
+            this.Fully.Name = "Fully";
+            this.Fully.Size = new System.Drawing.Size(951, 559);
+            this.Fully.TabIndex = 2;
+            this.Fully.TabStop = false;
+            this.Fully.Text = "Fully-Quantitative Probability of Failure";
+            // 
+            // pnlDamageFactors
+            // 
+            this.pnlDamageFactors.Controls.Add(this.button1);
+            this.pnlDamageFactors.Controls.Add(this.label73);
+            this.pnlDamageFactors.Controls.Add(this.txtRLI);
+            this.pnlDamageFactors.Controls.Add(this.lblRLI);
+            this.pnlDamageFactors.Controls.Add(this.txt72PoFCategory);
+            this.pnlDamageFactors.Controls.Add(this.label39);
+            this.pnlDamageFactors.Controls.Add(this.txt36PoFCategory);
+            this.pnlDamageFactors.Controls.Add(this.lblDamageFactors);
+            this.pnlDamageFactors.Controls.Add(this.txt0PoFCategory);
+            this.pnlDamageFactors.Controls.Add(this.label38);
+            this.pnlDamageFactors.Controls.Add(this.txt72PoF);
+            this.pnlDamageFactors.Controls.Add(this.label23);
+            this.pnlDamageFactors.Controls.Add(this.txt36PoF);
+            this.pnlDamageFactors.Controls.Add(this.label37);
+            this.pnlDamageFactors.Controls.Add(this.txt0PoF);
+            this.pnlDamageFactors.Controls.Add(this.label24);
+            this.pnlDamageFactors.Controls.Add(this.txt72FinalTotalDamage);
+            this.pnlDamageFactors.Controls.Add(this.label25);
+            this.pnlDamageFactors.Controls.Add(this.txt36FinalTotalDamage);
+            this.pnlDamageFactors.Controls.Add(this.label27);
+            this.pnlDamageFactors.Controls.Add(this.txt0FinalTotalDamage);
+            this.pnlDamageFactors.Controls.Add(this.label26);
+            this.pnlDamageFactors.Controls.Add(this.txt72TotalLocalThinning);
+            this.pnlDamageFactors.Controls.Add(this.label31);
+            this.pnlDamageFactors.Controls.Add(this.txt36TotalLocalThinning);
+            this.pnlDamageFactors.Controls.Add(this.label30);
+            this.pnlDamageFactors.Controls.Add(this.txt0TotalLocalThinning);
+            this.pnlDamageFactors.Controls.Add(this.label29);
+            this.pnlDamageFactors.Controls.Add(this.txt72TotalGeneralThinning);
+            this.pnlDamageFactors.Controls.Add(this.txt0Thinning);
+            this.pnlDamageFactors.Controls.Add(this.txt36TotalGeneralThinning);
+            this.pnlDamageFactors.Controls.Add(this.txt36Thinning);
+            this.pnlDamageFactors.Controls.Add(this.txt0TotalGeneralThinning);
+            this.pnlDamageFactors.Controls.Add(this.txt72Thinning);
+            this.pnlDamageFactors.Controls.Add(this.label32);
+            this.pnlDamageFactors.Controls.Add(this.txt0StressCorrosion);
+            this.pnlDamageFactors.Controls.Add(this.label33);
+            this.pnlDamageFactors.Controls.Add(this.txt36StressCorrosion);
+            this.pnlDamageFactors.Controls.Add(this.label34);
+            this.pnlDamageFactors.Controls.Add(this.txt72StressCorrosion);
+            this.pnlDamageFactors.Controls.Add(this.label35);
+            this.pnlDamageFactors.Controls.Add(this.txt0External);
+            this.pnlDamageFactors.Controls.Add(this.label28);
+            this.pnlDamageFactors.Controls.Add(this.txt36External);
+            this.pnlDamageFactors.Controls.Add(this.txt72External);
+            this.pnlDamageFactors.Controls.Add(this.txt72Other);
+            this.pnlDamageFactors.Controls.Add(this.txt0HighTemperature);
+            this.pnlDamageFactors.Controls.Add(this.txt32Other);
+            this.pnlDamageFactors.Controls.Add(this.txt36HighTemperature);
+            this.pnlDamageFactors.Controls.Add(this.txt0Other);
+            this.pnlDamageFactors.Controls.Add(this.txt72HighTemperature);
+            this.pnlDamageFactors.Controls.Add(this.txt72Piping);
+            this.pnlDamageFactors.Controls.Add(this.txt0BrittleFracture);
+            this.pnlDamageFactors.Controls.Add(this.txt36Piping);
+            this.pnlDamageFactors.Controls.Add(this.txt36BrittleFracture);
+            this.pnlDamageFactors.Controls.Add(this.txt0Piping);
+            this.pnlDamageFactors.Controls.Add(this.txt72BrittleFracture);
+            this.pnlDamageFactors.Location = new System.Drawing.Point(17, 161);
+            this.pnlDamageFactors.Name = "pnlDamageFactors";
+            this.pnlDamageFactors.Size = new System.Drawing.Size(916, 385);
+            this.pnlDamageFactors.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(516, 347);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 23);
+            this.button1.TabIndex = 122;
+            this.button1.Text = "RLI Intermediate Values";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(425, 353);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(42, 13);
+            this.label73.TabIndex = 121;
+            this.label73.Text = "months";
+            // 
+            // txtRLI
+            // 
+            this.txtRLI.Location = new System.Drawing.Point(334, 348);
+            this.txtRLI.Name = "txtRLI";
+            this.txtRLI.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtRLI.Properties.Appearance.Options.UseFont = true;
+            this.txtRLI.Properties.ReadOnly = true;
+            this.txtRLI.Size = new System.Drawing.Size(85, 22);
+            this.txtRLI.TabIndex = 120;
+            // 
+            // lblRLI
+            // 
+            this.lblRLI.AutoSize = true;
+            this.lblRLI.Location = new System.Drawing.Point(24, 353);
+            this.lblRLI.Name = "lblRLI";
+            this.lblRLI.Size = new System.Drawing.Size(23, 13);
+            this.lblRLI.TabIndex = 119;
+            this.lblRLI.Text = "RLI";
+            // 
+            // txt72PoFCategory
+            // 
+            this.txt72PoFCategory.Location = new System.Drawing.Point(516, 321);
+            this.txt72PoFCategory.Name = "txt72PoFCategory";
+            this.txt72PoFCategory.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72PoFCategory.Properties.Appearance.Options.UseFont = true;
+            this.txt72PoFCategory.Properties.ReadOnly = true;
+            this.txt72PoFCategory.Size = new System.Drawing.Size(85, 22);
+            this.txt72PoFCategory.TabIndex = 114;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label39.Location = new System.Drawing.Point(527, 37);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(65, 15);
+            this.label39.TabIndex = 118;
+            this.label39.Text = "72 months";
+            // 
+            // txt36PoFCategory
+            // 
+            this.txt36PoFCategory.Location = new System.Drawing.Point(425, 321);
+            this.txt36PoFCategory.Name = "txt36PoFCategory";
+            this.txt36PoFCategory.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36PoFCategory.Properties.Appearance.Options.UseFont = true;
+            this.txt36PoFCategory.Properties.ReadOnly = true;
+            this.txt36PoFCategory.Size = new System.Drawing.Size(85, 22);
+            this.txt36PoFCategory.TabIndex = 113;
+            // 
+            // lblDamageFactors
+            // 
+            this.lblDamageFactors.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblDamageFactors.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDamageFactors.ForeColor = System.Drawing.Color.White;
+            this.lblDamageFactors.Location = new System.Drawing.Point(0, 0);
+            this.lblDamageFactors.Name = "lblDamageFactors";
+            this.lblDamageFactors.Size = new System.Drawing.Size(916, 20);
+            this.lblDamageFactors.TabIndex = 0;
+            this.lblDamageFactors.Text = "▼ Damage Factors and Probability of Failure";
+            // 
+            // txt0PoFCategory
+            // 
+            this.txt0PoFCategory.Location = new System.Drawing.Point(334, 321);
+            this.txt0PoFCategory.Name = "txt0PoFCategory";
+            this.txt0PoFCategory.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0PoFCategory.Properties.Appearance.Options.UseFont = true;
+            this.txt0PoFCategory.Properties.ReadOnly = true;
+            this.txt0PoFCategory.Size = new System.Drawing.Size(85, 22);
+            this.txt0PoFCategory.TabIndex = 112;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label38.Location = new System.Drawing.Point(432, 37);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(65, 15);
+            this.label38.TabIndex = 117;
+            this.label38.Text = "36 months";
+            // 
+            // txt72PoF
+            // 
+            this.txt72PoF.Location = new System.Drawing.Point(516, 297);
+            this.txt72PoF.Name = "txt72PoF";
+            this.txt72PoF.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72PoF.Properties.Appearance.Options.UseFont = true;
+            this.txt72PoF.Properties.ReadOnly = true;
+            this.txt72PoF.Size = new System.Drawing.Size(85, 22);
+            this.txt72PoF.TabIndex = 111;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label23.Location = new System.Drawing.Point(21, 37);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 15);
+            this.label23.TabIndex = 65;
+            this.label23.Text = "Assesment Periods";
+            // 
+            // txt36PoF
+            // 
+            this.txt36PoF.Location = new System.Drawing.Point(425, 297);
+            this.txt36PoF.Name = "txt36PoF";
+            this.txt36PoF.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36PoF.Properties.Appearance.Options.UseFont = true;
+            this.txt36PoF.Properties.ReadOnly = true;
+            this.txt36PoF.Size = new System.Drawing.Size(85, 22);
+            this.txt36PoF.TabIndex = 110;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label37.Location = new System.Drawing.Point(349, 37);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(58, 15);
+            this.label37.TabIndex = 116;
+            this.label37.Text = "0 months";
+            // 
+            // txt0PoF
+            // 
+            this.txt0PoF.Location = new System.Drawing.Point(334, 297);
+            this.txt0PoF.Name = "txt0PoF";
+            this.txt0PoF.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0PoF.Properties.Appearance.Options.UseFont = true;
+            this.txt0PoF.Properties.ReadOnly = true;
+            this.txt0PoF.Size = new System.Drawing.Size(85, 22);
+            this.txt0PoF.TabIndex = 109;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label24.Location = new System.Drawing.Point(21, 58);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(195, 15);
+            this.label24.TabIndex = 66;
+            this.label24.Text = "Governing Thining Damage Factor";
+            // 
+            // txt72FinalTotalDamage
+            // 
+            this.txt72FinalTotalDamage.Location = new System.Drawing.Point(516, 273);
+            this.txt72FinalTotalDamage.Name = "txt72FinalTotalDamage";
+            this.txt72FinalTotalDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72FinalTotalDamage.Properties.Appearance.Options.UseFont = true;
+            this.txt72FinalTotalDamage.Properties.ReadOnly = true;
+            this.txt72FinalTotalDamage.Size = new System.Drawing.Size(85, 22);
+            this.txt72FinalTotalDamage.TabIndex = 108;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label25.Location = new System.Drawing.Point(21, 82);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(295, 15);
+            this.label25.TabIndex = 67;
+            this.label25.Text = "Governing Stress Corrosion Cracking Damage Factor";
+            // 
+            // txt36FinalTotalDamage
+            // 
+            this.txt36FinalTotalDamage.Location = new System.Drawing.Point(425, 273);
+            this.txt36FinalTotalDamage.Name = "txt36FinalTotalDamage";
+            this.txt36FinalTotalDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36FinalTotalDamage.Properties.Appearance.Options.UseFont = true;
+            this.txt36FinalTotalDamage.Properties.ReadOnly = true;
+            this.txt36FinalTotalDamage.Size = new System.Drawing.Size(85, 22);
+            this.txt36FinalTotalDamage.TabIndex = 107;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label27.Location = new System.Drawing.Point(21, 106);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(199, 15);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "Governing External Damage Factor";
+            // 
+            // txt0FinalTotalDamage
+            // 
+            this.txt0FinalTotalDamage.Location = new System.Drawing.Point(334, 273);
+            this.txt0FinalTotalDamage.Name = "txt0FinalTotalDamage";
+            this.txt0FinalTotalDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0FinalTotalDamage.Properties.Appearance.Options.UseFont = true;
+            this.txt0FinalTotalDamage.Properties.ReadOnly = true;
+            this.txt0FinalTotalDamage.Size = new System.Drawing.Size(85, 22);
+            this.txt0FinalTotalDamage.TabIndex = 106;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label26.Location = new System.Drawing.Point(21, 130);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(286, 15);
+            this.label26.TabIndex = 69;
+            this.label26.Text = "High Temperature Hydrogen Attack Damage Factor";
+            // 
+            // txt72TotalLocalThinning
+            // 
+            this.txt72TotalLocalThinning.Location = new System.Drawing.Point(516, 249);
+            this.txt72TotalLocalThinning.Name = "txt72TotalLocalThinning";
+            this.txt72TotalLocalThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72TotalLocalThinning.Properties.Appearance.Options.UseFont = true;
+            this.txt72TotalLocalThinning.Properties.ReadOnly = true;
+            this.txt72TotalLocalThinning.Size = new System.Drawing.Size(85, 22);
+            this.txt72TotalLocalThinning.TabIndex = 105;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label31.Location = new System.Drawing.Point(21, 154);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(233, 15);
+            this.label31.TabIndex = 70;
+            this.label31.Text = "Governing Brittle Fracture Damage Factor";
+            // 
+            // txt36TotalLocalThinning
+            // 
+            this.txt36TotalLocalThinning.Location = new System.Drawing.Point(425, 249);
+            this.txt36TotalLocalThinning.Name = "txt36TotalLocalThinning";
+            this.txt36TotalLocalThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36TotalLocalThinning.Properties.Appearance.Options.UseFont = true;
+            this.txt36TotalLocalThinning.Properties.ReadOnly = true;
+            this.txt36TotalLocalThinning.Size = new System.Drawing.Size(85, 22);
+            this.txt36TotalLocalThinning.TabIndex = 104;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label30.Location = new System.Drawing.Point(21, 178);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(241, 15);
+            this.label30.TabIndex = 71;
+            this.label30.Text = "Piping Mechanical Fatigue Damage Factor";
+            // 
+            // txt0TotalLocalThinning
+            // 
+            this.txt0TotalLocalThinning.Location = new System.Drawing.Point(334, 249);
+            this.txt0TotalLocalThinning.Name = "txt0TotalLocalThinning";
+            this.txt0TotalLocalThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0TotalLocalThinning.Properties.Appearance.Options.UseFont = true;
+            this.txt0TotalLocalThinning.Properties.ReadOnly = true;
+            this.txt0TotalLocalThinning.Size = new System.Drawing.Size(85, 22);
+            this.txt0TotalLocalThinning.TabIndex = 103;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label29.Location = new System.Drawing.Point(21, 202);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(125, 15);
+            this.label29.TabIndex = 72;
+            this.label29.Text = "Other Damage Factor";
+            // 
+            // txt72TotalGeneralThinning
+            // 
+            this.txt72TotalGeneralThinning.Location = new System.Drawing.Point(516, 225);
+            this.txt72TotalGeneralThinning.Name = "txt72TotalGeneralThinning";
+            this.txt72TotalGeneralThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72TotalGeneralThinning.Properties.Appearance.Options.UseFont = true;
+            this.txt72TotalGeneralThinning.Properties.ReadOnly = true;
+            this.txt72TotalGeneralThinning.Size = new System.Drawing.Size(85, 22);
+            this.txt72TotalGeneralThinning.TabIndex = 102;
+            // 
+            // txt0Thinning
+            // 
+            this.txt0Thinning.Location = new System.Drawing.Point(334, 55);
+            this.txt0Thinning.Name = "txt0Thinning";
+            this.txt0Thinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0Thinning.Properties.Appearance.Options.UseFont = true;
+            this.txt0Thinning.Properties.ReadOnly = true;
+            this.txt0Thinning.Size = new System.Drawing.Size(85, 22);
+            this.txt0Thinning.TabIndex = 79;
+            // 
+            // txt36TotalGeneralThinning
+            // 
+            this.txt36TotalGeneralThinning.Location = new System.Drawing.Point(425, 225);
+            this.txt36TotalGeneralThinning.Name = "txt36TotalGeneralThinning";
+            this.txt36TotalGeneralThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36TotalGeneralThinning.Properties.Appearance.Options.UseFont = true;
+            this.txt36TotalGeneralThinning.Properties.ReadOnly = true;
+            this.txt36TotalGeneralThinning.Size = new System.Drawing.Size(85, 22);
+            this.txt36TotalGeneralThinning.TabIndex = 101;
+            // 
+            // txt36Thinning
+            // 
+            this.txt36Thinning.Location = new System.Drawing.Point(425, 55);
+            this.txt36Thinning.Name = "txt36Thinning";
+            this.txt36Thinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36Thinning.Properties.Appearance.Options.UseFont = true;
+            this.txt36Thinning.Properties.ReadOnly = true;
+            this.txt36Thinning.Size = new System.Drawing.Size(85, 22);
+            this.txt36Thinning.TabIndex = 80;
+            // 
+            // txt0TotalGeneralThinning
+            // 
+            this.txt0TotalGeneralThinning.Location = new System.Drawing.Point(334, 225);
+            this.txt0TotalGeneralThinning.Name = "txt0TotalGeneralThinning";
+            this.txt0TotalGeneralThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0TotalGeneralThinning.Properties.Appearance.Options.UseFont = true;
+            this.txt0TotalGeneralThinning.Properties.ReadOnly = true;
+            this.txt0TotalGeneralThinning.Size = new System.Drawing.Size(85, 22);
+            this.txt0TotalGeneralThinning.TabIndex = 100;
+            // 
+            // txt72Thinning
+            // 
+            this.txt72Thinning.Location = new System.Drawing.Point(516, 55);
+            this.txt72Thinning.Name = "txt72Thinning";
+            this.txt72Thinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72Thinning.Properties.Appearance.Options.UseFont = true;
+            this.txt72Thinning.Properties.ReadOnly = true;
+            this.txt72Thinning.Size = new System.Drawing.Size(85, 22);
+            this.txt72Thinning.TabIndex = 81;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label32.Location = new System.Drawing.Point(21, 325);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(169, 15);
+            this.label32.TabIndex = 77;
+            this.label32.Text = "Probability of Failure Category";
+            // 
+            // txt0StressCorrosion
+            // 
+            this.txt0StressCorrosion.Location = new System.Drawing.Point(334, 79);
+            this.txt0StressCorrosion.Name = "txt0StressCorrosion";
+            this.txt0StressCorrosion.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0StressCorrosion.Properties.Appearance.Options.UseFont = true;
+            this.txt0StressCorrosion.Properties.ReadOnly = true;
+            this.txt0StressCorrosion.Size = new System.Drawing.Size(85, 22);
+            this.txt0StressCorrosion.TabIndex = 82;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label33.Location = new System.Drawing.Point(21, 301);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(118, 15);
+            this.label33.TabIndex = 76;
+            this.label33.Text = "Probability of Failure";
+            // 
+            // txt36StressCorrosion
+            // 
+            this.txt36StressCorrosion.Location = new System.Drawing.Point(425, 79);
+            this.txt36StressCorrosion.Name = "txt36StressCorrosion";
+            this.txt36StressCorrosion.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36StressCorrosion.Properties.Appearance.Options.UseFont = true;
+            this.txt36StressCorrosion.Properties.ReadOnly = true;
+            this.txt36StressCorrosion.Size = new System.Drawing.Size(85, 22);
+            this.txt36StressCorrosion.TabIndex = 83;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label34.Location = new System.Drawing.Point(21, 277);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(152, 15);
+            this.label34.TabIndex = 75;
+            this.label34.Text = "Final Total Damage Factor";
+            // 
+            // txt72StressCorrosion
+            // 
+            this.txt72StressCorrosion.Location = new System.Drawing.Point(516, 79);
+            this.txt72StressCorrosion.Name = "txt72StressCorrosion";
+            this.txt72StressCorrosion.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72StressCorrosion.Properties.Appearance.Options.UseFont = true;
+            this.txt72StressCorrosion.Properties.ReadOnly = true;
+            this.txt72StressCorrosion.Size = new System.Drawing.Size(85, 22);
+            this.txt72StressCorrosion.TabIndex = 84;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label35.Location = new System.Drawing.Point(21, 253);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(231, 15);
+            this.label35.TabIndex = 74;
+            this.label35.Text = "Total Damage Factor with Local Thinning";
+            // 
+            // txt0External
+            // 
+            this.txt0External.Location = new System.Drawing.Point(334, 103);
+            this.txt0External.Name = "txt0External";
+            this.txt0External.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0External.Properties.Appearance.Options.UseFont = true;
+            this.txt0External.Properties.ReadOnly = true;
+            this.txt0External.Size = new System.Drawing.Size(85, 22);
+            this.txt0External.TabIndex = 85;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label28.Location = new System.Drawing.Point(21, 228);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(245, 15);
+            this.label28.TabIndex = 73;
+            this.label28.Text = "Total Damage Factor with General Thinning";
+            // 
+            // txt36External
+            // 
+            this.txt36External.Location = new System.Drawing.Point(425, 103);
+            this.txt36External.Name = "txt36External";
+            this.txt36External.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36External.Properties.Appearance.Options.UseFont = true;
+            this.txt36External.Properties.ReadOnly = true;
+            this.txt36External.Size = new System.Drawing.Size(85, 22);
+            this.txt36External.TabIndex = 86;
+            // 
+            // txt72External
+            // 
+            this.txt72External.Location = new System.Drawing.Point(516, 103);
+            this.txt72External.Name = "txt72External";
+            this.txt72External.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72External.Properties.Appearance.Options.UseFont = true;
+            this.txt72External.Properties.ReadOnly = true;
+            this.txt72External.Size = new System.Drawing.Size(85, 22);
+            this.txt72External.TabIndex = 87;
+            // 
+            // txt72Other
+            // 
+            this.txt72Other.Location = new System.Drawing.Point(516, 199);
+            this.txt72Other.Name = "txt72Other";
+            this.txt72Other.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72Other.Properties.Appearance.Options.UseFont = true;
+            this.txt72Other.Properties.ReadOnly = true;
+            this.txt72Other.Size = new System.Drawing.Size(85, 22);
+            this.txt72Other.TabIndex = 99;
+            // 
+            // txt0HighTemperature
+            // 
+            this.txt0HighTemperature.Location = new System.Drawing.Point(334, 127);
+            this.txt0HighTemperature.Name = "txt0HighTemperature";
+            this.txt0HighTemperature.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0HighTemperature.Properties.Appearance.Options.UseFont = true;
+            this.txt0HighTemperature.Properties.ReadOnly = true;
+            this.txt0HighTemperature.Size = new System.Drawing.Size(85, 22);
+            this.txt0HighTemperature.TabIndex = 88;
+            // 
+            // txt32Other
+            // 
+            this.txt32Other.Location = new System.Drawing.Point(425, 199);
+            this.txt32Other.Name = "txt32Other";
+            this.txt32Other.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt32Other.Properties.Appearance.Options.UseFont = true;
+            this.txt32Other.Properties.ReadOnly = true;
+            this.txt32Other.Size = new System.Drawing.Size(85, 22);
+            this.txt32Other.TabIndex = 98;
+            // 
+            // txt36HighTemperature
+            // 
+            this.txt36HighTemperature.Location = new System.Drawing.Point(425, 127);
+            this.txt36HighTemperature.Name = "txt36HighTemperature";
+            this.txt36HighTemperature.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36HighTemperature.Properties.Appearance.Options.UseFont = true;
+            this.txt36HighTemperature.Properties.ReadOnly = true;
+            this.txt36HighTemperature.Size = new System.Drawing.Size(85, 22);
+            this.txt36HighTemperature.TabIndex = 89;
+            // 
+            // txt0Other
+            // 
+            this.txt0Other.Location = new System.Drawing.Point(334, 199);
+            this.txt0Other.Name = "txt0Other";
+            this.txt0Other.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0Other.Properties.Appearance.Options.UseFont = true;
+            this.txt0Other.Properties.ReadOnly = true;
+            this.txt0Other.Size = new System.Drawing.Size(85, 22);
+            this.txt0Other.TabIndex = 97;
+            // 
+            // txt72HighTemperature
+            // 
+            this.txt72HighTemperature.Location = new System.Drawing.Point(516, 127);
+            this.txt72HighTemperature.Name = "txt72HighTemperature";
+            this.txt72HighTemperature.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72HighTemperature.Properties.Appearance.Options.UseFont = true;
+            this.txt72HighTemperature.Properties.ReadOnly = true;
+            this.txt72HighTemperature.Size = new System.Drawing.Size(85, 22);
+            this.txt72HighTemperature.TabIndex = 90;
+            // 
+            // txt72Piping
+            // 
+            this.txt72Piping.Location = new System.Drawing.Point(516, 175);
+            this.txt72Piping.Name = "txt72Piping";
+            this.txt72Piping.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72Piping.Properties.Appearance.Options.UseFont = true;
+            this.txt72Piping.Properties.ReadOnly = true;
+            this.txt72Piping.Size = new System.Drawing.Size(85, 22);
+            this.txt72Piping.TabIndex = 96;
+            // 
+            // txt0BrittleFracture
+            // 
+            this.txt0BrittleFracture.Location = new System.Drawing.Point(334, 151);
+            this.txt0BrittleFracture.Name = "txt0BrittleFracture";
+            this.txt0BrittleFracture.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0BrittleFracture.Properties.Appearance.Options.UseFont = true;
+            this.txt0BrittleFracture.Properties.ReadOnly = true;
+            this.txt0BrittleFracture.Size = new System.Drawing.Size(85, 22);
+            this.txt0BrittleFracture.TabIndex = 91;
+            // 
+            // txt36Piping
+            // 
+            this.txt36Piping.Location = new System.Drawing.Point(425, 175);
+            this.txt36Piping.Name = "txt36Piping";
+            this.txt36Piping.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36Piping.Properties.Appearance.Options.UseFont = true;
+            this.txt36Piping.Properties.ReadOnly = true;
+            this.txt36Piping.Size = new System.Drawing.Size(85, 22);
+            this.txt36Piping.TabIndex = 95;
+            // 
+            // txt36BrittleFracture
+            // 
+            this.txt36BrittleFracture.Location = new System.Drawing.Point(425, 151);
+            this.txt36BrittleFracture.Name = "txt36BrittleFracture";
+            this.txt36BrittleFracture.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt36BrittleFracture.Properties.Appearance.Options.UseFont = true;
+            this.txt36BrittleFracture.Properties.ReadOnly = true;
+            this.txt36BrittleFracture.Size = new System.Drawing.Size(85, 22);
+            this.txt36BrittleFracture.TabIndex = 92;
+            // 
+            // txt0Piping
+            // 
+            this.txt0Piping.Location = new System.Drawing.Point(334, 175);
+            this.txt0Piping.Name = "txt0Piping";
+            this.txt0Piping.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt0Piping.Properties.Appearance.Options.UseFont = true;
+            this.txt0Piping.Properties.ReadOnly = true;
+            this.txt0Piping.Size = new System.Drawing.Size(85, 22);
+            this.txt0Piping.TabIndex = 94;
+            // 
+            // txt72BrittleFracture
+            // 
+            this.txt72BrittleFracture.Location = new System.Drawing.Point(516, 151);
+            this.txt72BrittleFracture.Name = "txt72BrittleFracture";
+            this.txt72BrittleFracture.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txt72BrittleFracture.Properties.Appearance.Options.UseFont = true;
+            this.txt72BrittleFracture.Properties.ReadOnly = true;
+            this.txt72BrittleFracture.Size = new System.Drawing.Size(85, 22);
+            this.txt72BrittleFracture.TabIndex = 93;
+            // 
+            // pnlInitialFactor
+            // 
+            this.pnlInitialFactor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlInitialFactor.Controls.Add(this.lblInitialFactor);
+            this.pnlInitialFactor.Controls.Add(this.textEdit2);
+            this.pnlInitialFactor.Controls.Add(this.label20);
+            this.pnlInitialFactor.Controls.Add(this.textEdit1);
+            this.pnlInitialFactor.Controls.Add(this.label21);
+            this.pnlInitialFactor.Controls.Add(this.cbThinningType);
+            this.pnlInitialFactor.Controls.Add(this.label19);
+            this.pnlInitialFactor.Location = new System.Drawing.Point(17, 23);
+            this.pnlInitialFactor.Name = "pnlInitialFactor";
+            this.pnlInitialFactor.Size = new System.Drawing.Size(915, 116);
+            this.pnlInitialFactor.TabIndex = 0;
+            // 
+            // lblInitialFactor
+            // 
+            this.lblInitialFactor.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblInitialFactor.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInitialFactor.ForeColor = System.Drawing.Color.White;
+            this.lblInitialFactor.Location = new System.Drawing.Point(-3, 0);
+            this.lblInitialFactor.Name = "lblInitialFactor";
+            this.lblInitialFactor.Size = new System.Drawing.Size(927, 18);
+            this.lblInitialFactor.TabIndex = 14;
+            this.lblInitialFactor.Text = "▼ Initial Factor";
             // 
             // textEdit2
             // 
-            this.textEdit2.Location = new System.Drawing.Point(279, 82);
+            this.textEdit2.Location = new System.Drawing.Point(269, 85);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textEdit2.Properties.Appearance.Options.UseFont = true;
@@ -401,9 +1064,19 @@
             this.textEdit2.Size = new System.Drawing.Size(180, 22);
             this.textEdit2.TabIndex = 13;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label20.Location = new System.Drawing.Point(19, 88);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(174, 15);
+            this.label20.TabIndex = 9;
+            this.label20.Text = "Factor of Management System";
+            // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(279, 53);
+            this.textEdit1.Location = new System.Drawing.Point(269, 57);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
@@ -411,9 +1084,19 @@
             this.textEdit1.Size = new System.Drawing.Size(180, 22);
             this.textEdit1.TabIndex = 12;
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label21.Location = new System.Drawing.Point(19, 60);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(176, 15);
+            this.label21.TabIndex = 10;
+            this.label21.Text = "Total Generic Failure Frequenc";
+            // 
             // cbThinningType
             // 
-            this.cbThinningType.Location = new System.Drawing.Point(279, 26);
+            this.cbThinningType.Location = new System.Drawing.Point(269, 29);
             this.cbThinningType.Name = "cbThinningType";
             this.cbThinningType.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbThinningType.Properties.Appearance.Options.UseFont = true;
@@ -426,627 +1109,22 @@
             this.cbThinningType.TabIndex = 11;
             this.cbThinningType.SelectedIndexChanged += new System.EventHandler(this.cbThinningType_SelectedIndexChanged);
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label21.Location = new System.Drawing.Point(29, 56);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(176, 15);
-            this.label21.TabIndex = 10;
-            this.label21.Text = "Total Generic Failure Frequenc";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label20.Location = new System.Drawing.Point(29, 85);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(174, 15);
-            this.label20.TabIndex = 9;
-            this.label20.Text = "Factor of Management System";
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label19.Location = new System.Drawing.Point(29, 29);
+            this.label19.Location = new System.Drawing.Point(19, 32);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(84, 15);
             this.label19.TabIndex = 8;
             this.label19.Text = "Thinning Type";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.label39);
-            this.groupBox3.Controls.Add(this.label38);
-            this.groupBox3.Controls.Add(this.label37);
-            this.groupBox3.Controls.Add(this.txt72PoFCategory);
-            this.groupBox3.Controls.Add(this.txt36PoFCategory);
-            this.groupBox3.Controls.Add(this.txt0PoFCategory);
-            this.groupBox3.Controls.Add(this.txt72PoF);
-            this.groupBox3.Controls.Add(this.txt36PoF);
-            this.groupBox3.Controls.Add(this.txt0PoF);
-            this.groupBox3.Controls.Add(this.txt72FinalTotalDamage);
-            this.groupBox3.Controls.Add(this.txt36FinalTotalDamage);
-            this.groupBox3.Controls.Add(this.txt0FinalTotalDamage);
-            this.groupBox3.Controls.Add(this.txt72TotalLocalThinning);
-            this.groupBox3.Controls.Add(this.txt36TotalLocalThinning);
-            this.groupBox3.Controls.Add(this.txt0TotalLocalThinning);
-            this.groupBox3.Controls.Add(this.txt72TotalGeneralThinning);
-            this.groupBox3.Controls.Add(this.txt36TotalGeneralThinning);
-            this.groupBox3.Controls.Add(this.txt0TotalGeneralThinning);
-            this.groupBox3.Controls.Add(this.txt72Other);
-            this.groupBox3.Controls.Add(this.txt32Other);
-            this.groupBox3.Controls.Add(this.txt0Other);
-            this.groupBox3.Controls.Add(this.txt72Piping);
-            this.groupBox3.Controls.Add(this.txt36Piping);
-            this.groupBox3.Controls.Add(this.txt0Piping);
-            this.groupBox3.Controls.Add(this.txt72BrittleFracture);
-            this.groupBox3.Controls.Add(this.txt36BrittleFracture);
-            this.groupBox3.Controls.Add(this.txt0BrittleFracture);
-            this.groupBox3.Controls.Add(this.txt72HighTemperature);
-            this.groupBox3.Controls.Add(this.txt36HighTemperature);
-            this.groupBox3.Controls.Add(this.txt0HighTemperature);
-            this.groupBox3.Controls.Add(this.txt72External);
-            this.groupBox3.Controls.Add(this.txt36External);
-            this.groupBox3.Controls.Add(this.txt0External);
-            this.groupBox3.Controls.Add(this.txt72StressCorrosion);
-            this.groupBox3.Controls.Add(this.txt36StressCorrosion);
-            this.groupBox3.Controls.Add(this.txt0StressCorrosion);
-            this.groupBox3.Controls.Add(this.txt72Thinning);
-            this.groupBox3.Controls.Add(this.txt36Thinning);
-            this.groupBox3.Controls.Add(this.txt0Thinning);
-            this.groupBox3.Controls.Add(this.label32);
-            this.groupBox3.Controls.Add(this.label33);
-            this.groupBox3.Controls.Add(this.label34);
-            this.groupBox3.Controls.Add(this.label35);
-            this.groupBox3.Controls.Add(this.label28);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.label31);
-            this.groupBox3.Controls.Add(this.label26);
-            this.groupBox3.Controls.Add(this.label27);
-            this.groupBox3.Controls.Add(this.label25);
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 135);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(957, 518);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Damage Factors and Probability of Failure";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label39.Location = new System.Drawing.Point(534, 44);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(65, 15);
-            this.label39.TabIndex = 118;
-            this.label39.Text = "72 months";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label38.Location = new System.Drawing.Point(439, 44);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(65, 15);
-            this.label38.TabIndex = 117;
-            this.label38.Text = "36 months";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label37.Location = new System.Drawing.Point(356, 44);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(58, 15);
-            this.label37.TabIndex = 116;
-            this.label37.Text = "0 months";
-            // 
-            // txt72PoFCategory
-            // 
-            this.txt72PoFCategory.Location = new System.Drawing.Point(523, 326);
-            this.txt72PoFCategory.Name = "txt72PoFCategory";
-            this.txt72PoFCategory.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72PoFCategory.Properties.Appearance.Options.UseFont = true;
-            this.txt72PoFCategory.Properties.ReadOnly = true;
-            this.txt72PoFCategory.Size = new System.Drawing.Size(85, 22);
-            this.txt72PoFCategory.TabIndex = 114;
-            // 
-            // txt36PoFCategory
-            // 
-            this.txt36PoFCategory.Location = new System.Drawing.Point(432, 326);
-            this.txt36PoFCategory.Name = "txt36PoFCategory";
-            this.txt36PoFCategory.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36PoFCategory.Properties.Appearance.Options.UseFont = true;
-            this.txt36PoFCategory.Properties.ReadOnly = true;
-            this.txt36PoFCategory.Size = new System.Drawing.Size(85, 22);
-            this.txt36PoFCategory.TabIndex = 113;
-            // 
-            // txt0PoFCategory
-            // 
-            this.txt0PoFCategory.Location = new System.Drawing.Point(341, 326);
-            this.txt0PoFCategory.Name = "txt0PoFCategory";
-            this.txt0PoFCategory.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0PoFCategory.Properties.Appearance.Options.UseFont = true;
-            this.txt0PoFCategory.Properties.ReadOnly = true;
-            this.txt0PoFCategory.Size = new System.Drawing.Size(85, 22);
-            this.txt0PoFCategory.TabIndex = 112;
-            // 
-            // txt72PoF
-            // 
-            this.txt72PoF.Location = new System.Drawing.Point(523, 302);
-            this.txt72PoF.Name = "txt72PoF";
-            this.txt72PoF.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72PoF.Properties.Appearance.Options.UseFont = true;
-            this.txt72PoF.Properties.ReadOnly = true;
-            this.txt72PoF.Size = new System.Drawing.Size(85, 22);
-            this.txt72PoF.TabIndex = 111;
-            // 
-            // txt36PoF
-            // 
-            this.txt36PoF.Location = new System.Drawing.Point(432, 302);
-            this.txt36PoF.Name = "txt36PoF";
-            this.txt36PoF.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36PoF.Properties.Appearance.Options.UseFont = true;
-            this.txt36PoF.Properties.ReadOnly = true;
-            this.txt36PoF.Size = new System.Drawing.Size(85, 22);
-            this.txt36PoF.TabIndex = 110;
-            // 
-            // txt0PoF
-            // 
-            this.txt0PoF.Location = new System.Drawing.Point(341, 302);
-            this.txt0PoF.Name = "txt0PoF";
-            this.txt0PoF.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0PoF.Properties.Appearance.Options.UseFont = true;
-            this.txt0PoF.Properties.ReadOnly = true;
-            this.txt0PoF.Size = new System.Drawing.Size(85, 22);
-            this.txt0PoF.TabIndex = 109;
-            // 
-            // txt72FinalTotalDamage
-            // 
-            this.txt72FinalTotalDamage.Location = new System.Drawing.Point(523, 278);
-            this.txt72FinalTotalDamage.Name = "txt72FinalTotalDamage";
-            this.txt72FinalTotalDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72FinalTotalDamage.Properties.Appearance.Options.UseFont = true;
-            this.txt72FinalTotalDamage.Properties.ReadOnly = true;
-            this.txt72FinalTotalDamage.Size = new System.Drawing.Size(85, 22);
-            this.txt72FinalTotalDamage.TabIndex = 108;
-            // 
-            // txt36FinalTotalDamage
-            // 
-            this.txt36FinalTotalDamage.Location = new System.Drawing.Point(432, 278);
-            this.txt36FinalTotalDamage.Name = "txt36FinalTotalDamage";
-            this.txt36FinalTotalDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36FinalTotalDamage.Properties.Appearance.Options.UseFont = true;
-            this.txt36FinalTotalDamage.Properties.ReadOnly = true;
-            this.txt36FinalTotalDamage.Size = new System.Drawing.Size(85, 22);
-            this.txt36FinalTotalDamage.TabIndex = 107;
-            // 
-            // txt0FinalTotalDamage
-            // 
-            this.txt0FinalTotalDamage.Location = new System.Drawing.Point(341, 278);
-            this.txt0FinalTotalDamage.Name = "txt0FinalTotalDamage";
-            this.txt0FinalTotalDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0FinalTotalDamage.Properties.Appearance.Options.UseFont = true;
-            this.txt0FinalTotalDamage.Properties.ReadOnly = true;
-            this.txt0FinalTotalDamage.Size = new System.Drawing.Size(85, 22);
-            this.txt0FinalTotalDamage.TabIndex = 106;
-            // 
-            // txt72TotalLocalThinning
-            // 
-            this.txt72TotalLocalThinning.Location = new System.Drawing.Point(523, 254);
-            this.txt72TotalLocalThinning.Name = "txt72TotalLocalThinning";
-            this.txt72TotalLocalThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72TotalLocalThinning.Properties.Appearance.Options.UseFont = true;
-            this.txt72TotalLocalThinning.Properties.ReadOnly = true;
-            this.txt72TotalLocalThinning.Size = new System.Drawing.Size(85, 22);
-            this.txt72TotalLocalThinning.TabIndex = 105;
-            // 
-            // txt36TotalLocalThinning
-            // 
-            this.txt36TotalLocalThinning.Location = new System.Drawing.Point(432, 254);
-            this.txt36TotalLocalThinning.Name = "txt36TotalLocalThinning";
-            this.txt36TotalLocalThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36TotalLocalThinning.Properties.Appearance.Options.UseFont = true;
-            this.txt36TotalLocalThinning.Properties.ReadOnly = true;
-            this.txt36TotalLocalThinning.Size = new System.Drawing.Size(85, 22);
-            this.txt36TotalLocalThinning.TabIndex = 104;
-            // 
-            // txt0TotalLocalThinning
-            // 
-            this.txt0TotalLocalThinning.Location = new System.Drawing.Point(341, 254);
-            this.txt0TotalLocalThinning.Name = "txt0TotalLocalThinning";
-            this.txt0TotalLocalThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0TotalLocalThinning.Properties.Appearance.Options.UseFont = true;
-            this.txt0TotalLocalThinning.Properties.ReadOnly = true;
-            this.txt0TotalLocalThinning.Size = new System.Drawing.Size(85, 22);
-            this.txt0TotalLocalThinning.TabIndex = 103;
-            // 
-            // txt72TotalGeneralThinning
-            // 
-            this.txt72TotalGeneralThinning.Location = new System.Drawing.Point(523, 230);
-            this.txt72TotalGeneralThinning.Name = "txt72TotalGeneralThinning";
-            this.txt72TotalGeneralThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72TotalGeneralThinning.Properties.Appearance.Options.UseFont = true;
-            this.txt72TotalGeneralThinning.Properties.ReadOnly = true;
-            this.txt72TotalGeneralThinning.Size = new System.Drawing.Size(85, 22);
-            this.txt72TotalGeneralThinning.TabIndex = 102;
-            // 
-            // txt36TotalGeneralThinning
-            // 
-            this.txt36TotalGeneralThinning.Location = new System.Drawing.Point(432, 230);
-            this.txt36TotalGeneralThinning.Name = "txt36TotalGeneralThinning";
-            this.txt36TotalGeneralThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36TotalGeneralThinning.Properties.Appearance.Options.UseFont = true;
-            this.txt36TotalGeneralThinning.Properties.ReadOnly = true;
-            this.txt36TotalGeneralThinning.Size = new System.Drawing.Size(85, 22);
-            this.txt36TotalGeneralThinning.TabIndex = 101;
-            // 
-            // txt0TotalGeneralThinning
-            // 
-            this.txt0TotalGeneralThinning.Location = new System.Drawing.Point(341, 230);
-            this.txt0TotalGeneralThinning.Name = "txt0TotalGeneralThinning";
-            this.txt0TotalGeneralThinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0TotalGeneralThinning.Properties.Appearance.Options.UseFont = true;
-            this.txt0TotalGeneralThinning.Properties.ReadOnly = true;
-            this.txt0TotalGeneralThinning.Size = new System.Drawing.Size(85, 22);
-            this.txt0TotalGeneralThinning.TabIndex = 100;
-            // 
-            // txt72Other
-            // 
-            this.txt72Other.Location = new System.Drawing.Point(523, 206);
-            this.txt72Other.Name = "txt72Other";
-            this.txt72Other.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72Other.Properties.Appearance.Options.UseFont = true;
-            this.txt72Other.Properties.ReadOnly = true;
-            this.txt72Other.Size = new System.Drawing.Size(85, 22);
-            this.txt72Other.TabIndex = 99;
-            // 
-            // txt32Other
-            // 
-            this.txt32Other.Location = new System.Drawing.Point(432, 206);
-            this.txt32Other.Name = "txt32Other";
-            this.txt32Other.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt32Other.Properties.Appearance.Options.UseFont = true;
-            this.txt32Other.Properties.ReadOnly = true;
-            this.txt32Other.Size = new System.Drawing.Size(85, 22);
-            this.txt32Other.TabIndex = 98;
-            // 
-            // txt0Other
-            // 
-            this.txt0Other.Location = new System.Drawing.Point(341, 206);
-            this.txt0Other.Name = "txt0Other";
-            this.txt0Other.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0Other.Properties.Appearance.Options.UseFont = true;
-            this.txt0Other.Properties.ReadOnly = true;
-            this.txt0Other.Size = new System.Drawing.Size(85, 22);
-            this.txt0Other.TabIndex = 97;
-            // 
-            // txt72Piping
-            // 
-            this.txt72Piping.Location = new System.Drawing.Point(523, 182);
-            this.txt72Piping.Name = "txt72Piping";
-            this.txt72Piping.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72Piping.Properties.Appearance.Options.UseFont = true;
-            this.txt72Piping.Properties.ReadOnly = true;
-            this.txt72Piping.Size = new System.Drawing.Size(85, 22);
-            this.txt72Piping.TabIndex = 96;
-            // 
-            // txt36Piping
-            // 
-            this.txt36Piping.Location = new System.Drawing.Point(432, 182);
-            this.txt36Piping.Name = "txt36Piping";
-            this.txt36Piping.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36Piping.Properties.Appearance.Options.UseFont = true;
-            this.txt36Piping.Properties.ReadOnly = true;
-            this.txt36Piping.Size = new System.Drawing.Size(85, 22);
-            this.txt36Piping.TabIndex = 95;
-            // 
-            // txt0Piping
-            // 
-            this.txt0Piping.Location = new System.Drawing.Point(341, 182);
-            this.txt0Piping.Name = "txt0Piping";
-            this.txt0Piping.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0Piping.Properties.Appearance.Options.UseFont = true;
-            this.txt0Piping.Properties.ReadOnly = true;
-            this.txt0Piping.Size = new System.Drawing.Size(85, 22);
-            this.txt0Piping.TabIndex = 94;
-            // 
-            // txt72BrittleFracture
-            // 
-            this.txt72BrittleFracture.Location = new System.Drawing.Point(523, 158);
-            this.txt72BrittleFracture.Name = "txt72BrittleFracture";
-            this.txt72BrittleFracture.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72BrittleFracture.Properties.Appearance.Options.UseFont = true;
-            this.txt72BrittleFracture.Properties.ReadOnly = true;
-            this.txt72BrittleFracture.Size = new System.Drawing.Size(85, 22);
-            this.txt72BrittleFracture.TabIndex = 93;
-            // 
-            // txt36BrittleFracture
-            // 
-            this.txt36BrittleFracture.Location = new System.Drawing.Point(432, 158);
-            this.txt36BrittleFracture.Name = "txt36BrittleFracture";
-            this.txt36BrittleFracture.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36BrittleFracture.Properties.Appearance.Options.UseFont = true;
-            this.txt36BrittleFracture.Properties.ReadOnly = true;
-            this.txt36BrittleFracture.Size = new System.Drawing.Size(85, 22);
-            this.txt36BrittleFracture.TabIndex = 92;
-            // 
-            // txt0BrittleFracture
-            // 
-            this.txt0BrittleFracture.Location = new System.Drawing.Point(341, 158);
-            this.txt0BrittleFracture.Name = "txt0BrittleFracture";
-            this.txt0BrittleFracture.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0BrittleFracture.Properties.Appearance.Options.UseFont = true;
-            this.txt0BrittleFracture.Properties.ReadOnly = true;
-            this.txt0BrittleFracture.Size = new System.Drawing.Size(85, 22);
-            this.txt0BrittleFracture.TabIndex = 91;
-            // 
-            // txt72HighTemperature
-            // 
-            this.txt72HighTemperature.Location = new System.Drawing.Point(523, 134);
-            this.txt72HighTemperature.Name = "txt72HighTemperature";
-            this.txt72HighTemperature.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72HighTemperature.Properties.Appearance.Options.UseFont = true;
-            this.txt72HighTemperature.Properties.ReadOnly = true;
-            this.txt72HighTemperature.Size = new System.Drawing.Size(85, 22);
-            this.txt72HighTemperature.TabIndex = 90;
-            // 
-            // txt36HighTemperature
-            // 
-            this.txt36HighTemperature.Location = new System.Drawing.Point(432, 134);
-            this.txt36HighTemperature.Name = "txt36HighTemperature";
-            this.txt36HighTemperature.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36HighTemperature.Properties.Appearance.Options.UseFont = true;
-            this.txt36HighTemperature.Properties.ReadOnly = true;
-            this.txt36HighTemperature.Size = new System.Drawing.Size(85, 22);
-            this.txt36HighTemperature.TabIndex = 89;
-            // 
-            // txt0HighTemperature
-            // 
-            this.txt0HighTemperature.Location = new System.Drawing.Point(341, 134);
-            this.txt0HighTemperature.Name = "txt0HighTemperature";
-            this.txt0HighTemperature.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0HighTemperature.Properties.Appearance.Options.UseFont = true;
-            this.txt0HighTemperature.Properties.ReadOnly = true;
-            this.txt0HighTemperature.Size = new System.Drawing.Size(85, 22);
-            this.txt0HighTemperature.TabIndex = 88;
-            // 
-            // txt72External
-            // 
-            this.txt72External.Location = new System.Drawing.Point(523, 110);
-            this.txt72External.Name = "txt72External";
-            this.txt72External.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72External.Properties.Appearance.Options.UseFont = true;
-            this.txt72External.Properties.ReadOnly = true;
-            this.txt72External.Size = new System.Drawing.Size(85, 22);
-            this.txt72External.TabIndex = 87;
-            // 
-            // txt36External
-            // 
-            this.txt36External.Location = new System.Drawing.Point(432, 110);
-            this.txt36External.Name = "txt36External";
-            this.txt36External.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36External.Properties.Appearance.Options.UseFont = true;
-            this.txt36External.Properties.ReadOnly = true;
-            this.txt36External.Size = new System.Drawing.Size(85, 22);
-            this.txt36External.TabIndex = 86;
-            // 
-            // txt0External
-            // 
-            this.txt0External.Location = new System.Drawing.Point(341, 110);
-            this.txt0External.Name = "txt0External";
-            this.txt0External.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0External.Properties.Appearance.Options.UseFont = true;
-            this.txt0External.Properties.ReadOnly = true;
-            this.txt0External.Size = new System.Drawing.Size(85, 22);
-            this.txt0External.TabIndex = 85;
-            // 
-            // txt72StressCorrosion
-            // 
-            this.txt72StressCorrosion.Location = new System.Drawing.Point(523, 86);
-            this.txt72StressCorrosion.Name = "txt72StressCorrosion";
-            this.txt72StressCorrosion.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72StressCorrosion.Properties.Appearance.Options.UseFont = true;
-            this.txt72StressCorrosion.Properties.ReadOnly = true;
-            this.txt72StressCorrosion.Size = new System.Drawing.Size(85, 22);
-            this.txt72StressCorrosion.TabIndex = 84;
-            // 
-            // txt36StressCorrosion
-            // 
-            this.txt36StressCorrosion.Location = new System.Drawing.Point(432, 86);
-            this.txt36StressCorrosion.Name = "txt36StressCorrosion";
-            this.txt36StressCorrosion.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36StressCorrosion.Properties.Appearance.Options.UseFont = true;
-            this.txt36StressCorrosion.Properties.ReadOnly = true;
-            this.txt36StressCorrosion.Size = new System.Drawing.Size(85, 22);
-            this.txt36StressCorrosion.TabIndex = 83;
-            // 
-            // txt0StressCorrosion
-            // 
-            this.txt0StressCorrosion.Location = new System.Drawing.Point(341, 86);
-            this.txt0StressCorrosion.Name = "txt0StressCorrosion";
-            this.txt0StressCorrosion.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0StressCorrosion.Properties.Appearance.Options.UseFont = true;
-            this.txt0StressCorrosion.Properties.ReadOnly = true;
-            this.txt0StressCorrosion.Size = new System.Drawing.Size(85, 22);
-            this.txt0StressCorrosion.TabIndex = 82;
-            // 
-            // txt72Thinning
-            // 
-            this.txt72Thinning.Location = new System.Drawing.Point(523, 62);
-            this.txt72Thinning.Name = "txt72Thinning";
-            this.txt72Thinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt72Thinning.Properties.Appearance.Options.UseFont = true;
-            this.txt72Thinning.Properties.ReadOnly = true;
-            this.txt72Thinning.Size = new System.Drawing.Size(85, 22);
-            this.txt72Thinning.TabIndex = 81;
-            // 
-            // txt36Thinning
-            // 
-            this.txt36Thinning.Location = new System.Drawing.Point(432, 62);
-            this.txt36Thinning.Name = "txt36Thinning";
-            this.txt36Thinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt36Thinning.Properties.Appearance.Options.UseFont = true;
-            this.txt36Thinning.Properties.ReadOnly = true;
-            this.txt36Thinning.Size = new System.Drawing.Size(85, 22);
-            this.txt36Thinning.TabIndex = 80;
-            // 
-            // txt0Thinning
-            // 
-            this.txt0Thinning.Location = new System.Drawing.Point(341, 62);
-            this.txt0Thinning.Name = "txt0Thinning";
-            this.txt0Thinning.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txt0Thinning.Properties.Appearance.Options.UseFont = true;
-            this.txt0Thinning.Properties.ReadOnly = true;
-            this.txt0Thinning.Size = new System.Drawing.Size(85, 22);
-            this.txt0Thinning.TabIndex = 79;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label32.Location = new System.Drawing.Point(30, 330);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(169, 15);
-            this.label32.TabIndex = 77;
-            this.label32.Text = "Probability of Failure Category";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label33.Location = new System.Drawing.Point(30, 306);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(118, 15);
-            this.label33.TabIndex = 76;
-            this.label33.Text = "Probability of Failure";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label34.Location = new System.Drawing.Point(30, 282);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(152, 15);
-            this.label34.TabIndex = 75;
-            this.label34.Text = "Final Total Damage Factor";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label35.Location = new System.Drawing.Point(30, 258);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(231, 15);
-            this.label35.TabIndex = 74;
-            this.label35.Text = "Total Damage Factor with Local Thinning";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label28.Location = new System.Drawing.Point(30, 233);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(245, 15);
-            this.label28.TabIndex = 73;
-            this.label28.Text = "Total Damage Factor with General Thinning";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label29.Location = new System.Drawing.Point(30, 209);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(125, 15);
-            this.label29.TabIndex = 72;
-            this.label29.Text = "Other Damage Factor";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label30.Location = new System.Drawing.Point(30, 185);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(241, 15);
-            this.label30.TabIndex = 71;
-            this.label30.Text = "Piping Mechanical Fatigue Damage Factor";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label31.Location = new System.Drawing.Point(30, 161);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(233, 15);
-            this.label31.TabIndex = 70;
-            this.label31.Text = "Governing Brittle Fracture Damage Factor";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label26.Location = new System.Drawing.Point(30, 137);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(286, 15);
-            this.label26.TabIndex = 69;
-            this.label26.Text = "High Temperature Hydrogen Attack Damage Factor";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label27.Location = new System.Drawing.Point(30, 113);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(199, 15);
-            this.label27.TabIndex = 68;
-            this.label27.Text = "Governing External Damage Factor";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label25.Location = new System.Drawing.Point(30, 89);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(295, 15);
-            this.label25.TabIndex = 67;
-            this.label25.Text = "Governing Stress Corrosion Cracking Damage Factor";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label24.Location = new System.Drawing.Point(30, 65);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(195, 15);
-            this.label24.TabIndex = 66;
-            this.label24.Text = "Governing Thining Damage Factor";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label23.Location = new System.Drawing.Point(30, 44);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(112, 15);
-            this.label23.TabIndex = 65;
-            this.label23.Text = "Assesment Periods";
             // 
             // tabCA
             // 
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(957, 664);
+            this.tabCA.Size = new System.Drawing.Size(957, 839);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -1459,7 +1537,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(957, 664);
+            this.tabCAShell.Size = new System.Drawing.Size(957, 839);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -1531,7 +1609,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(957, 664);
+            this.groupBox7.Size = new System.Drawing.Size(957, 839);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -2199,7 +2277,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(957, 664);
+            this.tabCATankBottom.Size = new System.Drawing.Size(957, 839);
             this.tabCATankBottom.Text = "Consequence Area";
             // 
             // groupBox6
@@ -2267,7 +2345,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(957, 664);
+            this.groupBox6.Size = new System.Drawing.Size(957, 839);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -2835,24 +2913,51 @@
             this.label72.TabIndex = 0;
             this.label72.Text = "The hydraulic conductivity for water (m/day)";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(287, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(200, 100);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // UCRiskFactor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UCRiskFactor";
-            this.Size = new System.Drawing.Size(969, 712);
+            this.Size = new System.Drawing.Size(969, 887);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.tabPoF.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbThinningType.Properties)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Fully.ResumeLayout(false);
+            this.pnlDamageFactors.ResumeLayout(false);
+            this.pnlDamageFactors.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRLI.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72PoFCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt36PoFCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0PoFCategory.Properties)).EndInit();
@@ -2866,29 +2971,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt36TotalLocalThinning.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0TotalLocalThinning.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72TotalGeneralThinning.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0Thinning.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt36TotalGeneralThinning.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36Thinning.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0TotalGeneralThinning.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72Thinning.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0StressCorrosion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36StressCorrosion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72StressCorrosion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0External.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36External.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72External.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72Other.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0HighTemperature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt32Other.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36HighTemperature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0Other.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt72HighTemperature.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72Piping.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt0BrittleFracture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt36Piping.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt36BrittleFracture.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt0Piping.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt72BrittleFracture.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36BrittleFracture.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0BrittleFracture.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72HighTemperature.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36HighTemperature.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0HighTemperature.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72External.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36External.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0External.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72StressCorrosion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36StressCorrosion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0StressCorrosion.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt72Thinning.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt36Thinning.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt0Thinning.Properties)).EndInit();
+            this.pnlInitialFactor.ResumeLayout(false);
+            this.pnlInitialFactor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbThinningType.Properties)).EndInit();
             this.tabCA.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -2929,6 +3039,7 @@
             this.tabCATankBottom.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2936,7 +3047,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label37;
@@ -2989,7 +3099,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.GroupBox groupBox2;
         private DevExpress.XtraEditors.TextEdit textEdit2;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.ComboBoxEdit cbThinningType;
@@ -3163,5 +3272,17 @@
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TextBox tbHdraulicWater;
         private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.GroupBox Fully;
+        private System.Windows.Forms.Panel pnlInitialFactor;
+        private System.Windows.Forms.Label lblInitialFactor;
+        private System.Windows.Forms.Panel pnlDamageFactors;
+        private System.Windows.Forms.Label lblDamageFactors;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label73;
+        private DevExpress.XtraEditors.TextEdit txtRLI;
+        private System.Windows.Forms.Label lblRLI;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
