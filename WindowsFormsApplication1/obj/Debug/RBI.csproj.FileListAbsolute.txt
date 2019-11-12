@@ -320,6 +320,7 @@ D:\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.CoreCompileInputs.ca
 D:\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.CopyComplete
 D:\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 D:\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+<<<<<<< HEAD
 C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
@@ -537,3 +538,5 @@ C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.
 C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.CopyComplete
 C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\khact\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+=======
+>>>>>>> origin/thangk62
