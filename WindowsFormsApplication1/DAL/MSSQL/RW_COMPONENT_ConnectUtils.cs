@@ -503,124 +503,124 @@ namespace RBI.DAL.MSSQL
                         if (reader.HasRows)
                         {
                             obj = new RW_COMPONENT();
-                            obj.ID = reader.GetInt32(0);
+                            obj.ID = ID;
+                            if (!reader.IsDBNull(0))
+                            {
+                                obj.NominalDiameter = (float)reader.GetDouble(0);
+                            }
                             if (!reader.IsDBNull(1))
                             {
-                                obj.NominalDiameter = (float)reader.GetDouble(1);
+                                obj.NominalThickness = (float)reader.GetDouble(1);
                             }
                             if (!reader.IsDBNull(2))
                             {
-                                obj.NominalThickness = (float)reader.GetDouble(2);
+                                obj.CurrentThickness = (float)reader.GetDouble(2);
                             }
                             if (!reader.IsDBNull(3))
                             {
-                                obj.CurrentThickness = (float)reader.GetDouble(3);
+                                obj.MinReqThickness = (float)reader.GetDouble(3);
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.MinReqThickness = (float)reader.GetDouble(4);
+                                obj.CurrentCorrosionRate = (float)reader.GetDouble(4);
                             }
                             if (!reader.IsDBNull(5))
                             {
-                                obj.CurrentCorrosionRate = (float)reader.GetDouble(5);
+                                obj.BranchDiameter = reader.GetString(5);
                             }
                             if (!reader.IsDBNull(6))
                             {
-                                obj.BranchDiameter = reader.GetString(6);
+                                obj.BranchJointType = reader.GetString(6);
                             }
                             if (!reader.IsDBNull(7))
                             {
-                                obj.BranchJointType = reader.GetString(7);
-                            }
-                            if (!reader.IsDBNull(8))
-                            {
-                                obj.BrinnelHardness = reader.GetString(8);
+                                obj.BrinnelHardness = reader.GetString(7);
                             }
 
-                            obj.ChemicalInjection = Convert.ToInt32(reader.GetBoolean(9));
-                            obj.HighlyInjectionInsp = Convert.ToInt32(reader.GetBoolean(10));
+                            obj.ChemicalInjection = Convert.ToInt32(reader.GetBoolean(8));
+                            obj.HighlyInjectionInsp = Convert.ToInt32(reader.GetBoolean(9));
+                            if (!reader.IsDBNull(10))
+                            {
+                                obj.ComplexityProtrusion = reader.GetString(10);
+                            }
                             if (!reader.IsDBNull(11))
                             {
-                                obj.ComplexityProtrusion = reader.GetString(11);
+                                obj.CorrectiveAction = reader.GetString(11);
                             }
-                            if (!reader.IsDBNull(12))
+                            obj.CracksPresent = Convert.ToInt32(reader.GetBoolean(12));
+                            if (!reader.IsDBNull(13))
                             {
-                                obj.CorrectiveAction = reader.GetString(12);
+                                obj.CyclicLoadingWitin15_25m = reader.GetString(13);
                             }
-                            obj.CracksPresent = Convert.ToInt32(reader.GetBoolean(13));
-                            if (!reader.IsDBNull(14))
+                            obj.DamageFoundInspection = Convert.ToInt32(reader.GetBoolean(14));
+                            if (!reader.IsDBNull(15))
                             {
-                                obj.CyclicLoadingWitin15_25m = reader.GetString(14);
+                                obj.DeltaFATT = (float)reader.GetDouble(15);
                             }
-                            obj.DamageFoundInspection = Convert.ToInt32(reader.GetBoolean(15));
                             if (!reader.IsDBNull(16))
                             {
-                                obj.DeltaFATT = (float)reader.GetDouble(16);
+                                obj.NumberPipeFittings = reader.GetString(16);
                             }
                             if (!reader.IsDBNull(17))
                             {
-                                obj.NumberPipeFittings = reader.GetString(17);
+                                obj.PipeCondition = reader.GetString(17);
                             }
                             if (!reader.IsDBNull(18))
                             {
-                                obj.PipeCondition = reader.GetString(18);
+                                obj.PreviousFailures = reader.GetString(18);
                             }
                             if (!reader.IsDBNull(19))
                             {
-                                obj.PreviousFailures = reader.GetString(19);
+                                obj.ShakingAmount = reader.GetString(19);
                             }
-                            if (!reader.IsDBNull(20))
+                            obj.ShakingDetected = Convert.ToInt32(reader.GetBoolean(20));
+                            if (!reader.IsDBNull(21))
                             {
-                                obj.ShakingAmount = reader.GetString(20);
+                                obj.ShakingTime = reader.GetString(21);
                             }
-                            obj.ShakingDetected = Convert.ToInt32(reader.GetBoolean(21));
                             if (!reader.IsDBNull(22))
                             {
-                                obj.ShakingTime = reader.GetString(22);
+                                obj.SeverityOfVibration = reader.GetString(22);
                             }
-                            if (!reader.IsDBNull(23))
+                            obj.ReleasePreventionBarrier = Convert.ToInt32(reader.GetBoolean(23));
+                            obj.ConcreteFoundation = Convert.ToInt32(reader.GetBoolean(24));
+                            if (!reader.IsDBNull(25))
                             {
-                                obj.SeverityOfVibration = reader.GetString(23);
+                                obj.ShellHeight = (float)reader.GetDouble(25);
                             }
-                            obj.ReleasePreventionBarrier = Convert.ToInt32(reader.GetBoolean(24));
-                            obj.ConcreteFoundation = Convert.ToInt32(reader.GetBoolean(25));
                             if (!reader.IsDBNull(26))
                             {
-                                obj.ShellHeight = (float)reader.GetDouble(26);
+                                obj.AllowableStress = (float)reader.GetDouble(26);
                             }
                             if (!reader.IsDBNull(27))
                             {
-                                obj.AllowableStress = (float)reader.GetDouble(27);
+                                obj.WeldJointEfficiency = (float)reader.GetDouble(27);
                             }
                             if (!reader.IsDBNull(28))
                             {
-                                obj.WeldJointEfficiency = (float)reader.GetDouble(28);
+                                obj.ComponentVolume = (float)reader.GetDouble(28);
                             }
                             if (!reader.IsDBNull(29))
                             {
-                                obj.ComponentVolume = (float)reader.GetDouble(29);
+                                obj.ConfidenceCorrosionRate = reader.GetString(29);
                             }
-                            if (!reader.IsDBNull(30))
+                            obj.MinimumStructuralThicknessGoverns = Convert.ToInt32(reader.GetBoolean(30));
+                            if (!reader.IsDBNull(31))
                             {
-                                obj.ConfidenceCorrosionRate = reader.GetString(30);
+                                obj.StructuralThickness = (float)reader.GetDouble(31);
                             }
-                            obj.MinimumStructuralThicknessGoverns = Convert.ToInt32(reader.GetBoolean(31));
                             if (!reader.IsDBNull(32))
                             {
-                                obj.StructuralThickness = (float)reader.GetDouble(32);
+                                obj.CracksCurrentCondition = reader.GetString(32);
                             }
-                            if (!reader.IsDBNull(33))
-                            {
-                                obj.CracksCurrentCondition = reader.GetString(33);
-                            }
-                            obj.FabricatedSteel = Convert.ToInt32(reader.GetBoolean(34));
-                            obj.EquipmentSatisfied = Convert.ToInt32(reader.GetBoolean(35));
-                            obj.NominalOperatingConditions = Convert.ToInt32(reader.GetBoolean(36));
-                            obj.CETGreaterOrEqual = Convert.ToInt32(reader.GetBoolean(37));
-                            obj.CyclicServiceFatigueVibration = Convert.ToInt32(reader.GetBoolean(38));
-                            obj.EquipmentCircuitShock = Convert.ToInt32(reader.GetBoolean(39));
-                            obj.HTHADamageObserved = Convert.ToInt32(reader.GetBoolean(40));
-                            obj.BrittleFractureThickness = (float)reader.GetDouble(41);
+                            obj.FabricatedSteel = Convert.ToInt32(reader.GetBoolean(33));
+                            obj.EquipmentSatisfied = Convert.ToInt32(reader.GetBoolean(34));
+                            obj.NominalOperatingConditions = Convert.ToInt32(reader.GetBoolean(35));
+                            obj.CETGreaterOrEqual = Convert.ToInt32(reader.GetBoolean(36));
+                            obj.CyclicServiceFatigueVibration = Convert.ToInt32(reader.GetBoolean(37));
+                            obj.EquipmentCircuitShock = Convert.ToInt32(reader.GetBoolean(38));
+                            obj.HTHADamageObserved = Convert.ToInt32(reader.GetBoolean(39));
+                            obj.BrittleFractureThickness = (float)reader.GetDouble(40);
                         }
                     }
                 }
