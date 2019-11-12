@@ -204,68 +204,95 @@
             this.label100 = new System.Windows.Forms.Label();
             this.tabCATankBottom = new DevExpress.XtraTab.XtraTabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.tbMaterialFactor = new System.Windows.Forms.TextBox();
+            this.pnlFinancialConsequence = new System.Windows.Forms.Panel();
+            this.label124 = new System.Windows.Forms.Label();
+            this.label123 = new System.Windows.Forms.Label();
+            this.label122 = new System.Windows.Forms.Label();
+            this.label121 = new System.Windows.Forms.Label();
+            this.label120 = new System.Windows.Forms.Label();
+            this.label119 = new System.Windows.Forms.Label();
+            this.label118 = new System.Windows.Forms.Label();
+            this.label117 = new System.Windows.Forms.Label();
+            this.label101 = new System.Windows.Forms.Label();
+            this.lblFinancialConsequence = new System.Windows.Forms.Label();
             this.label116 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.tbVolumeGroundWaterFromLeakageD4 = new System.Windows.Forms.TextBox();
-            this.tbVolumeSubsoilFromLeakageD4 = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.tbRealeaseVolumeFromLeakageD4 = new System.Windows.Forms.TextBox();
-            this.tbLeakDurationD4 = new System.Windows.Forms.TextBox();
-            this.tbFlowRateD4 = new System.Windows.Forms.TextBox();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
+            this.tbMaterialFactor = new System.Windows.Forms.TextBox();
             this.tbCostOfBusinessInterruption = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
+            this.label65 = new System.Windows.Forms.Label();
             this.tbComponentDamageCost = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
+            this.tbTimeToInitiate = new System.Windows.Forms.TextBox();
             this.tbTotalCost = new System.Windows.Forms.TextBox();
+            this.tbVolumeGroundWaterFromLeakageD4 = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.tbConsequenceCategory = new System.Windows.Forms.TextBox();
-            this.label55 = new System.Windows.Forms.Label();
-            this.tbTotalConsequence = new System.Windows.Forms.TextBox();
-            this.label56 = new System.Windows.Forms.Label();
+            this.label64 = new System.Windows.Forms.Label();
             this.tbFC_Env_Rupture = new System.Windows.Forms.TextBox();
+            this.tbVolumeSubsoilFromLeakageD4 = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
+            this.tbVolumeSubsoilFromLeakageD1 = new System.Windows.Forms.TextBox();
             this.tbFC_Env_Leakage = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
             this.tbReachWater = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
+            this.tbVolumeGroundWaterFromLeakageD1 = new System.Windows.Forms.TextBox();
             this.tbOffsiteRupture = new System.Windows.Forms.TextBox();
+            this.label62 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
+            this.tbWithinTheDike = new System.Windows.Forms.TextBox();
             this.tbOnsiteRupture = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.tbWithinTheDike = new System.Windows.Forms.TextBox();
-            this.label62 = new System.Windows.Forms.Label();
-            this.tbVolumeGroundWaterFromLeakageD1 = new System.Windows.Forms.TextBox();
-            this.label63 = new System.Windows.Forms.Label();
-            this.tbVolumeSubsoilFromLeakageD1 = new System.Windows.Forms.TextBox();
-            this.label64 = new System.Windows.Forms.Label();
-            this.tbTimeToInitiate = new System.Windows.Forms.TextBox();
-            this.label65 = new System.Windows.Forms.Label();
-            this.tbReleaseVolumeFromRupture = new System.Windows.Forms.TextBox();
-            this.label66 = new System.Windows.Forms.Label();
-            this.tbRealeaseVolumeFromLeakageD1 = new System.Windows.Forms.TextBox();
-            this.label67 = new System.Windows.Forms.Label();
-            this.tbLeakDurationD1 = new System.Windows.Forms.TextBox();
-            this.label68 = new System.Windows.Forms.Label();
-            this.tbFlowRateD1 = new System.Windows.Forms.TextBox();
-            this.label69 = new System.Windows.Forms.Label();
-            this.tbSeepageVelocity = new System.Windows.Forms.TextBox();
-            this.label70 = new System.Windows.Forms.Label();
-            this.tbHdraulicFluid = new System.Windows.Forms.TextBox();
-            this.label71 = new System.Windows.Forms.Label();
-            this.tbHdraulicWater = new System.Windows.Forms.TextBox();
+            this.pnlIntermediateValues = new System.Windows.Forms.Panel();
+            this.label115 = new System.Windows.Forms.Label();
+            this.label114 = new System.Windows.Forms.Label();
+            this.label109 = new System.Windows.Forms.Label();
+            this.label108 = new System.Windows.Forms.Label();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
+            this.labIntermediateValues = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
+            this.tbHdraulicWater = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.tbHdraulicFluid = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.tbSeepageVelocity = new System.Windows.Forms.TextBox();
+            this.label69 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.tbFlowRateD1 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.tbRealeaseVolumeFromLeakageD4 = new System.Windows.Forms.TextBox();
+            this.tbLeakDurationD1 = new System.Windows.Forms.TextBox();
+            this.tbLeakDurationD4 = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.tbFlowRateD4 = new System.Windows.Forms.TextBox();
+            this.tbRealeaseVolumeFromLeakageD1 = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.tbReleaseVolumeFromRupture = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.pnlFinancialCoF = new System.Windows.Forms.Panel();
+            this.label74 = new System.Windows.Forms.Label();
+            this.lblFinancialCoF = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.tbTotalConsequence = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.tbConsequenceCategory = new System.Windows.Forms.TextBox();
+            this.xtraSemiPoF = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label125 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.xtraUserControl11 = new RBI.XtraUserControl1();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -349,6 +376,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShellD1.Properties)).BeginInit();
             this.tabCATankBottom.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.pnlFinancialConsequence.SuspendLayout();
+            this.pnlIntermediateValues.SuspendLayout();
+            this.pnlFinancialCoF.SuspendLayout();
+            this.xtraSemiPoF.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -376,13 +409,14 @@
             this.tabPoF,
             this.tabCA,
             this.tabCAShell,
-            this.tabCATankBottom});
+            this.tabCATankBottom,
+            this.xtraSemiPoF});
             // 
             // tabPoF
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 840);
+            this.tabPoF.Size = new System.Drawing.Size(957, 839);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -2277,218 +2311,790 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(957, 839);
-            this.tabCATankBottom.Text = "Consequence Area";
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 840);
+            this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.tbMaterialFactor);
-            this.groupBox6.Controls.Add(this.label116);
-            this.groupBox6.Controls.Add(this.label42);
-            this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Controls.Add(this.tbVolumeGroundWaterFromLeakageD4);
-            this.groupBox6.Controls.Add(this.tbVolumeSubsoilFromLeakageD4);
-            this.groupBox6.Controls.Add(this.label44);
-            this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.tbRealeaseVolumeFromLeakageD4);
-            this.groupBox6.Controls.Add(this.tbLeakDurationD4);
-            this.groupBox6.Controls.Add(this.tbFlowRateD4);
-            this.groupBox6.Controls.Add(this.label46);
-            this.groupBox6.Controls.Add(this.label47);
-            this.groupBox6.Controls.Add(this.label48);
-            this.groupBox6.Controls.Add(this.label49);
-            this.groupBox6.Controls.Add(this.label50);
-            this.groupBox6.Controls.Add(this.label51);
-            this.groupBox6.Controls.Add(this.tbCostOfBusinessInterruption);
-            this.groupBox6.Controls.Add(this.label52);
-            this.groupBox6.Controls.Add(this.tbComponentDamageCost);
-            this.groupBox6.Controls.Add(this.label53);
-            this.groupBox6.Controls.Add(this.tbTotalCost);
-            this.groupBox6.Controls.Add(this.label54);
-            this.groupBox6.Controls.Add(this.tbConsequenceCategory);
-            this.groupBox6.Controls.Add(this.label55);
-            this.groupBox6.Controls.Add(this.tbTotalConsequence);
-            this.groupBox6.Controls.Add(this.label56);
-            this.groupBox6.Controls.Add(this.tbFC_Env_Rupture);
-            this.groupBox6.Controls.Add(this.label57);
-            this.groupBox6.Controls.Add(this.tbFC_Env_Leakage);
-            this.groupBox6.Controls.Add(this.label58);
-            this.groupBox6.Controls.Add(this.tbReachWater);
-            this.groupBox6.Controls.Add(this.label59);
-            this.groupBox6.Controls.Add(this.tbOffsiteRupture);
-            this.groupBox6.Controls.Add(this.label60);
-            this.groupBox6.Controls.Add(this.tbOnsiteRupture);
-            this.groupBox6.Controls.Add(this.label61);
-            this.groupBox6.Controls.Add(this.tbWithinTheDike);
-            this.groupBox6.Controls.Add(this.label62);
-            this.groupBox6.Controls.Add(this.tbVolumeGroundWaterFromLeakageD1);
-            this.groupBox6.Controls.Add(this.label63);
-            this.groupBox6.Controls.Add(this.tbVolumeSubsoilFromLeakageD1);
-            this.groupBox6.Controls.Add(this.label64);
-            this.groupBox6.Controls.Add(this.tbTimeToInitiate);
-            this.groupBox6.Controls.Add(this.label65);
-            this.groupBox6.Controls.Add(this.tbReleaseVolumeFromRupture);
-            this.groupBox6.Controls.Add(this.label66);
-            this.groupBox6.Controls.Add(this.tbRealeaseVolumeFromLeakageD1);
-            this.groupBox6.Controls.Add(this.label67);
-            this.groupBox6.Controls.Add(this.tbLeakDurationD1);
-            this.groupBox6.Controls.Add(this.label68);
-            this.groupBox6.Controls.Add(this.tbFlowRateD1);
-            this.groupBox6.Controls.Add(this.label69);
-            this.groupBox6.Controls.Add(this.tbSeepageVelocity);
-            this.groupBox6.Controls.Add(this.label70);
-            this.groupBox6.Controls.Add(this.tbHdraulicFluid);
-            this.groupBox6.Controls.Add(this.label71);
-            this.groupBox6.Controls.Add(this.tbHdraulicWater);
-            this.groupBox6.Controls.Add(this.label72);
+            this.groupBox6.Controls.Add(this.pnlFinancialConsequence);
+            this.groupBox6.Controls.Add(this.pnlIntermediateValues);
+            this.groupBox6.Controls.Add(this.pnlFinancialCoF);
             this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(957, 839);
+            this.groupBox6.Size = new System.Drawing.Size(961, 840);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
             // 
-            // tbMaterialFactor
+            // pnlFinancialConsequence
             // 
-            this.tbMaterialFactor.BackColor = System.Drawing.SystemColors.Control;
-            this.tbMaterialFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbMaterialFactor.Location = new System.Drawing.Point(477, 509);
-            this.tbMaterialFactor.Name = "tbMaterialFactor";
-            this.tbMaterialFactor.Size = new System.Drawing.Size(100, 21);
-            this.tbMaterialFactor.TabIndex = 67;
+            this.pnlFinancialConsequence.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlFinancialConsequence.Controls.Add(this.label124);
+            this.pnlFinancialConsequence.Controls.Add(this.label123);
+            this.pnlFinancialConsequence.Controls.Add(this.label122);
+            this.pnlFinancialConsequence.Controls.Add(this.label121);
+            this.pnlFinancialConsequence.Controls.Add(this.label120);
+            this.pnlFinancialConsequence.Controls.Add(this.label119);
+            this.pnlFinancialConsequence.Controls.Add(this.label118);
+            this.pnlFinancialConsequence.Controls.Add(this.label117);
+            this.pnlFinancialConsequence.Controls.Add(this.label101);
+            this.pnlFinancialConsequence.Controls.Add(this.lblFinancialConsequence);
+            this.pnlFinancialConsequence.Controls.Add(this.label116);
+            this.pnlFinancialConsequence.Controls.Add(this.tbMaterialFactor);
+            this.pnlFinancialConsequence.Controls.Add(this.tbCostOfBusinessInterruption);
+            this.pnlFinancialConsequence.Controls.Add(this.label42);
+            this.pnlFinancialConsequence.Controls.Add(this.label52);
+            this.pnlFinancialConsequence.Controls.Add(this.label65);
+            this.pnlFinancialConsequence.Controls.Add(this.tbComponentDamageCost);
+            this.pnlFinancialConsequence.Controls.Add(this.label43);
+            this.pnlFinancialConsequence.Controls.Add(this.label53);
+            this.pnlFinancialConsequence.Controls.Add(this.tbTimeToInitiate);
+            this.pnlFinancialConsequence.Controls.Add(this.tbTotalCost);
+            this.pnlFinancialConsequence.Controls.Add(this.tbVolumeGroundWaterFromLeakageD4);
+            this.pnlFinancialConsequence.Controls.Add(this.label54);
+            this.pnlFinancialConsequence.Controls.Add(this.label64);
+            this.pnlFinancialConsequence.Controls.Add(this.tbFC_Env_Rupture);
+            this.pnlFinancialConsequence.Controls.Add(this.tbVolumeSubsoilFromLeakageD4);
+            this.pnlFinancialConsequence.Controls.Add(this.label57);
+            this.pnlFinancialConsequence.Controls.Add(this.tbVolumeSubsoilFromLeakageD1);
+            this.pnlFinancialConsequence.Controls.Add(this.tbFC_Env_Leakage);
+            this.pnlFinancialConsequence.Controls.Add(this.label46);
+            this.pnlFinancialConsequence.Controls.Add(this.label58);
+            this.pnlFinancialConsequence.Controls.Add(this.label63);
+            this.pnlFinancialConsequence.Controls.Add(this.tbReachWater);
+            this.pnlFinancialConsequence.Controls.Add(this.label47);
+            this.pnlFinancialConsequence.Controls.Add(this.label59);
+            this.pnlFinancialConsequence.Controls.Add(this.tbVolumeGroundWaterFromLeakageD1);
+            this.pnlFinancialConsequence.Controls.Add(this.tbOffsiteRupture);
+            this.pnlFinancialConsequence.Controls.Add(this.label62);
+            this.pnlFinancialConsequence.Controls.Add(this.label60);
+            this.pnlFinancialConsequence.Controls.Add(this.tbWithinTheDike);
+            this.pnlFinancialConsequence.Controls.Add(this.tbOnsiteRupture);
+            this.pnlFinancialConsequence.Controls.Add(this.label61);
+            this.pnlFinancialConsequence.Location = new System.Drawing.Point(25, 376);
+            this.pnlFinancialConsequence.Name = "pnlFinancialConsequence";
+            this.pnlFinancialConsequence.Size = new System.Drawing.Size(898, 445);
+            this.pnlFinancialConsequence.TabIndex = 70;
+            // 
+            // label124
+            // 
+            this.label124.AutoSize = true;
+            this.label124.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label124.Location = new System.Drawing.Point(585, 305);
+            this.label124.Name = "label124";
+            this.label124.Size = new System.Drawing.Size(14, 15);
+            this.label124.TabIndex = 75;
+            this.label124.Text = "$";
+            // 
+            // label123
+            // 
+            this.label123.AutoSize = true;
+            this.label123.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label123.Location = new System.Drawing.Point(585, 278);
+            this.label123.Name = "label123";
+            this.label123.Size = new System.Drawing.Size(14, 15);
+            this.label123.TabIndex = 74;
+            this.label123.Text = "$";
+            // 
+            // label122
+            // 
+            this.label122.AutoSize = true;
+            this.label122.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label122.Location = new System.Drawing.Point(585, 251);
+            this.label122.Name = "label122";
+            this.label122.Size = new System.Drawing.Size(45, 15);
+            this.label122.TabIndex = 73;
+            this.label122.Text = "barrels";
+            // 
+            // label121
+            // 
+            this.label121.AutoSize = true;
+            this.label121.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label121.Location = new System.Drawing.Point(585, 224);
+            this.label121.Name = "label121";
+            this.label121.Size = new System.Drawing.Size(45, 15);
+            this.label121.TabIndex = 72;
+            this.label121.Text = "barrels";
+            // 
+            // label120
+            // 
+            this.label120.AutoSize = true;
+            this.label120.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label120.Location = new System.Drawing.Point(585, 201);
+            this.label120.Name = "label120";
+            this.label120.Size = new System.Drawing.Size(45, 15);
+            this.label120.TabIndex = 71;
+            this.label120.Text = "barrels";
+            // 
+            // label119
+            // 
+            this.label119.AutoSize = true;
+            this.label119.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label119.Location = new System.Drawing.Point(758, 146);
+            this.label119.Name = "label119";
+            this.label119.Size = new System.Drawing.Size(45, 15);
+            this.label119.TabIndex = 70;
+            this.label119.Text = "barrels";
+            // 
+            // label118
+            // 
+            this.label118.AutoSize = true;
+            this.label118.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label118.Location = new System.Drawing.Point(585, 174);
+            this.label118.Name = "label118";
+            this.label118.Size = new System.Drawing.Size(45, 15);
+            this.label118.TabIndex = 69;
+            this.label118.Text = "barrels";
+            // 
+            // label117
+            // 
+            this.label117.AutoSize = true;
+            this.label117.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label117.Location = new System.Drawing.Point(758, 119);
+            this.label117.Name = "label117";
+            this.label117.Size = new System.Drawing.Size(45, 15);
+            this.label117.TabIndex = 61;
+            this.label117.Text = "barrels";
+            // 
+            // label101
+            // 
+            this.label101.AutoSize = true;
+            this.label101.Location = new System.Drawing.Point(18, 65);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(98, 15);
+            this.label101.TabIndex = 68;
+            this.label101.Text = "Release Type ";
+            // 
+            // lblFinancialConsequence
+            // 
+            this.lblFinancialConsequence.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblFinancialConsequence.ForeColor = System.Drawing.Color.White;
+            this.lblFinancialConsequence.Location = new System.Drawing.Point(-2, 0);
+            this.lblFinancialConsequence.Name = "lblFinancialConsequence";
+            this.lblFinancialConsequence.Size = new System.Drawing.Size(900, 17);
+            this.lblFinancialConsequence.TabIndex = 0;
+            this.lblFinancialConsequence.Text = "▼ Financial Consequence";
             // 
             // label116
             // 
             this.label116.AutoSize = true;
             this.label116.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label116.Location = new System.Drawing.Point(16, 512);
+            this.label116.Location = new System.Drawing.Point(18, 28);
             this.label116.Name = "label116";
             this.label116.Size = new System.Drawing.Size(109, 15);
             this.label116.TabIndex = 66;
             this.label116.Text = "The material factor";
             // 
+            // tbMaterialFactor
+            // 
+            this.tbMaterialFactor.BackColor = System.Drawing.SystemColors.Control;
+            this.tbMaterialFactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbMaterialFactor.Location = new System.Drawing.Point(479, 25);
+            this.tbMaterialFactor.Name = "tbMaterialFactor";
+            this.tbMaterialFactor.Size = new System.Drawing.Size(100, 21);
+            this.tbMaterialFactor.TabIndex = 67;
+            // 
+            // tbCostOfBusinessInterruption
+            // 
+            this.tbCostOfBusinessInterruption.BackColor = System.Drawing.SystemColors.Control;
+            this.tbCostOfBusinessInterruption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbCostOfBusinessInterruption.Location = new System.Drawing.Point(479, 405);
+            this.tbCostOfBusinessInterruption.Name = "tbCostOfBusinessInterruption";
+            this.tbCostOfBusinessInterruption.Size = new System.Drawing.Size(100, 21);
+            this.tbCostOfBusinessInterruption.TabIndex = 41;
+            // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label42.Location = new System.Drawing.Point(614, 286);
+            this.label42.Location = new System.Drawing.Point(616, 146);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(29, 15);
             this.label42.TabIndex = 59;
             this.label42.Text = "D4 :";
             // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label52.Location = new System.Drawing.Point(18, 408);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(221, 15);
+            this.label52.TabIndex = 40;
+            this.label52.Text = "The cost of buisiness interruption (US$)";
+            // 
+            // label65
+            // 
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label65.Location = new System.Drawing.Point(18, 91);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(289, 15);
+            this.label65.TabIndex = 14;
+            this.label65.Text = "The time to initate leakage to the ground water (day)";
+            // 
+            // tbComponentDamageCost
+            // 
+            this.tbComponentDamageCost.BackColor = System.Drawing.SystemColors.Control;
+            this.tbComponentDamageCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbComponentDamageCost.Location = new System.Drawing.Point(479, 378);
+            this.tbComponentDamageCost.Name = "tbComponentDamageCost";
+            this.tbComponentDamageCost.Size = new System.Drawing.Size(100, 21);
+            this.tbComponentDamageCost.TabIndex = 39;
+            // 
             // label43
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label43.Location = new System.Drawing.Point(614, 259);
+            this.label43.Location = new System.Drawing.Point(616, 119);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(29, 15);
             this.label43.TabIndex = 58;
             this.label43.Text = "D4 :";
             // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label53.Location = new System.Drawing.Point(18, 381);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(202, 15);
+            this.label53.TabIndex = 38;
+            this.label53.Text = "The component damage cost (US$)";
+            // 
+            // tbTimeToInitiate
+            // 
+            this.tbTimeToInitiate.BackColor = System.Drawing.SystemColors.Control;
+            this.tbTimeToInitiate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTimeToInitiate.Location = new System.Drawing.Point(479, 88);
+            this.tbTimeToInitiate.Name = "tbTimeToInitiate";
+            this.tbTimeToInitiate.Size = new System.Drawing.Size(100, 21);
+            this.tbTimeToInitiate.TabIndex = 15;
+            // 
+            // tbTotalCost
+            // 
+            this.tbTotalCost.BackColor = System.Drawing.SystemColors.Control;
+            this.tbTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTotalCost.Location = new System.Drawing.Point(479, 350);
+            this.tbTotalCost.Name = "tbTotalCost";
+            this.tbTotalCost.Size = new System.Drawing.Size(100, 21);
+            this.tbTotalCost.TabIndex = 37;
+            // 
             // tbVolumeGroundWaterFromLeakageD4
             // 
             this.tbVolumeGroundWaterFromLeakageD4.BackColor = System.Drawing.SystemColors.Control;
             this.tbVolumeGroundWaterFromLeakageD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbVolumeGroundWaterFromLeakageD4.Location = new System.Drawing.Point(649, 283);
+            this.tbVolumeGroundWaterFromLeakageD4.Location = new System.Drawing.Point(651, 143);
             this.tbVolumeGroundWaterFromLeakageD4.Name = "tbVolumeGroundWaterFromLeakageD4";
             this.tbVolumeGroundWaterFromLeakageD4.Size = new System.Drawing.Size(100, 21);
             this.tbVolumeGroundWaterFromLeakageD4.TabIndex = 57;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label54.Location = new System.Drawing.Point(18, 353);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(244, 15);
+            this.label54.TabIndex = 36;
+            this.label54.Text = "The total financial environmental cost (US$)";
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label64.Location = new System.Drawing.Point(18, 119);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(340, 15);
+            this.label64.TabIndex = 16;
+            this.label64.Text = "The volume of the product in the subsoil from lakage (barrels)";
+            // 
+            // tbFC_Env_Rupture
+            // 
+            this.tbFC_Env_Rupture.BackColor = System.Drawing.SystemColors.Control;
+            this.tbFC_Env_Rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbFC_Env_Rupture.Location = new System.Drawing.Point(479, 302);
+            this.tbFC_Env_Rupture.Name = "tbFC_Env_Rupture";
+            this.tbFC_Env_Rupture.Size = new System.Drawing.Size(100, 21);
+            this.tbFC_Env_Rupture.TabIndex = 31;
             // 
             // tbVolumeSubsoilFromLeakageD4
             // 
             this.tbVolumeSubsoilFromLeakageD4.BackColor = System.Drawing.SystemColors.Control;
             this.tbVolumeSubsoilFromLeakageD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbVolumeSubsoilFromLeakageD4.Location = new System.Drawing.Point(649, 256);
+            this.tbVolumeSubsoilFromLeakageD4.Location = new System.Drawing.Point(651, 116);
             this.tbVolumeSubsoilFromLeakageD4.Name = "tbVolumeSubsoilFromLeakageD4";
             this.tbVolumeSubsoilFromLeakageD4.Size = new System.Drawing.Size(100, 21);
             this.tbVolumeSubsoilFromLeakageD4.TabIndex = 56;
             // 
-            // label44
+            // label57
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label44.Location = new System.Drawing.Point(614, 161);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(29, 15);
-            this.label44.TabIndex = 54;
-            this.label44.Text = "D4 :";
+            this.label57.AutoSize = true;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label57.Location = new System.Drawing.Point(18, 305);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(288, 15);
+            this.label57.TabIndex = 30;
+            this.label57.Text = "The financial environmental cost from rupture (US$)";
             // 
-            // label45
+            // tbVolumeSubsoilFromLeakageD1
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label45.Location = new System.Drawing.Point(614, 134);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(29, 15);
-            this.label45.TabIndex = 53;
-            this.label45.Text = "D4 :";
+            this.tbVolumeSubsoilFromLeakageD1.BackColor = System.Drawing.SystemColors.Control;
+            this.tbVolumeSubsoilFromLeakageD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbVolumeSubsoilFromLeakageD1.Location = new System.Drawing.Point(479, 116);
+            this.tbVolumeSubsoilFromLeakageD1.Name = "tbVolumeSubsoilFromLeakageD1";
+            this.tbVolumeSubsoilFromLeakageD1.Size = new System.Drawing.Size(100, 21);
+            this.tbVolumeSubsoilFromLeakageD1.TabIndex = 17;
             // 
-            // tbRealeaseVolumeFromLeakageD4
+            // tbFC_Env_Leakage
             // 
-            this.tbRealeaseVolumeFromLeakageD4.BackColor = System.Drawing.SystemColors.Control;
-            this.tbRealeaseVolumeFromLeakageD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbRealeaseVolumeFromLeakageD4.Location = new System.Drawing.Point(649, 158);
-            this.tbRealeaseVolumeFromLeakageD4.Name = "tbRealeaseVolumeFromLeakageD4";
-            this.tbRealeaseVolumeFromLeakageD4.Size = new System.Drawing.Size(100, 21);
-            this.tbRealeaseVolumeFromLeakageD4.TabIndex = 51;
-            // 
-            // tbLeakDurationD4
-            // 
-            this.tbLeakDurationD4.BackColor = System.Drawing.SystemColors.Control;
-            this.tbLeakDurationD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbLeakDurationD4.Location = new System.Drawing.Point(649, 131);
-            this.tbLeakDurationD4.Name = "tbLeakDurationD4";
-            this.tbLeakDurationD4.Size = new System.Drawing.Size(100, 21);
-            this.tbLeakDurationD4.TabIndex = 50;
-            // 
-            // tbFlowRateD4
-            // 
-            this.tbFlowRateD4.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFlowRateD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFlowRateD4.Location = new System.Drawing.Point(649, 104);
-            this.tbFlowRateD4.Name = "tbFlowRateD4";
-            this.tbFlowRateD4.Size = new System.Drawing.Size(100, 21);
-            this.tbFlowRateD4.TabIndex = 49;
+            this.tbFC_Env_Leakage.BackColor = System.Drawing.SystemColors.Control;
+            this.tbFC_Env_Leakage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbFC_Env_Leakage.Location = new System.Drawing.Point(479, 275);
+            this.tbFC_Env_Leakage.Name = "tbFC_Env_Leakage";
+            this.tbFC_Env_Leakage.Size = new System.Drawing.Size(100, 21);
+            this.tbFC_Env_Leakage.TabIndex = 29;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label46.Location = new System.Drawing.Point(442, 286);
+            this.label46.Location = new System.Drawing.Point(444, 146);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(29, 15);
             this.label46.TabIndex = 48;
             this.label46.Text = "D1 :";
             // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label58.Location = new System.Drawing.Point(18, 278);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(293, 15);
+            this.label58.TabIndex = 28;
+            this.label58.Text = "The financial environmental cost from leakage (US$)";
+            // 
+            // label63
+            // 
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label63.Location = new System.Drawing.Point(18, 146);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(380, 15);
+            this.label63.TabIndex = 18;
+            this.label63.Text = "The volume of the product in the ground water from leakage (barrels)";
+            // 
+            // tbReachWater
+            // 
+            this.tbReachWater.BackColor = System.Drawing.SystemColors.Control;
+            this.tbReachWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbReachWater.Location = new System.Drawing.Point(479, 248);
+            this.tbReachWater.Name = "tbReachWater";
+            this.tbReachWater.Size = new System.Drawing.Size(100, 21);
+            this.tbReachWater.TabIndex = 27;
+            // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label47.Location = new System.Drawing.Point(442, 259);
+            this.label47.Location = new System.Drawing.Point(444, 119);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(29, 15);
             this.label47.TabIndex = 47;
             this.label47.Text = "D1 :";
             // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label59.Location = new System.Drawing.Point(18, 251);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(353, 15);
+            this.label59.TabIndex = 26;
+            this.label59.Text = "The total barrels of fluid that reach water from a rupture (barrels)";
+            // 
+            // tbVolumeGroundWaterFromLeakageD1
+            // 
+            this.tbVolumeGroundWaterFromLeakageD1.BackColor = System.Drawing.SystemColors.Control;
+            this.tbVolumeGroundWaterFromLeakageD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbVolumeGroundWaterFromLeakageD1.Location = new System.Drawing.Point(479, 143);
+            this.tbVolumeGroundWaterFromLeakageD1.Name = "tbVolumeGroundWaterFromLeakageD1";
+            this.tbVolumeGroundWaterFromLeakageD1.Size = new System.Drawing.Size(100, 21);
+            this.tbVolumeGroundWaterFromLeakageD1.TabIndex = 19;
+            // 
+            // tbOffsiteRupture
+            // 
+            this.tbOffsiteRupture.BackColor = System.Drawing.SystemColors.Control;
+            this.tbOffsiteRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbOffsiteRupture.Location = new System.Drawing.Point(479, 221);
+            this.tbOffsiteRupture.Name = "tbOffsiteRupture";
+            this.tbOffsiteRupture.Size = new System.Drawing.Size(100, 21);
+            this.tbOffsiteRupture.TabIndex = 25;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label62.Location = new System.Drawing.Point(18, 171);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(334, 15);
+            this.label62.TabIndex = 20;
+            this.label62.Text = "The total barrels of fluid within the dike from rupture (barrels)";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label60.Location = new System.Drawing.Point(18, 224);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(400, 15);
+            this.label60.TabIndex = 24;
+            this.label60.Text = "The total barrels of fluid in the off-site surface soil from a rupture (barrels)";
+            // 
+            // tbWithinTheDike
+            // 
+            this.tbWithinTheDike.BackColor = System.Drawing.SystemColors.Control;
+            this.tbWithinTheDike.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbWithinTheDike.Location = new System.Drawing.Point(479, 168);
+            this.tbWithinTheDike.Name = "tbWithinTheDike";
+            this.tbWithinTheDike.Size = new System.Drawing.Size(100, 21);
+            this.tbWithinTheDike.TabIndex = 21;
+            // 
+            // tbOnsiteRupture
+            // 
+            this.tbOnsiteRupture.BackColor = System.Drawing.SystemColors.Control;
+            this.tbOnsiteRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbOnsiteRupture.Location = new System.Drawing.Point(479, 195);
+            this.tbOnsiteRupture.Name = "tbOnsiteRupture";
+            this.tbOnsiteRupture.Size = new System.Drawing.Size(100, 21);
+            this.tbOnsiteRupture.TabIndex = 23;
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label61.Location = new System.Drawing.Point(18, 198);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(401, 15);
+            this.label61.TabIndex = 22;
+            this.label61.Text = "The total barrels of fluid in the on-site surface soil from a rupture (barrels)";
+            // 
+            // pnlIntermediateValues
+            // 
+            this.pnlIntermediateValues.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlIntermediateValues.Controls.Add(this.label115);
+            this.pnlIntermediateValues.Controls.Add(this.label114);
+            this.pnlIntermediateValues.Controls.Add(this.label109);
+            this.pnlIntermediateValues.Controls.Add(this.label108);
+            this.pnlIntermediateValues.Controls.Add(this.label103);
+            this.pnlIntermediateValues.Controls.Add(this.label102);
+            this.pnlIntermediateValues.Controls.Add(this.labIntermediateValues);
+            this.pnlIntermediateValues.Controls.Add(this.label72);
+            this.pnlIntermediateValues.Controls.Add(this.tbHdraulicWater);
+            this.pnlIntermediateValues.Controls.Add(this.label71);
+            this.pnlIntermediateValues.Controls.Add(this.tbHdraulicFluid);
+            this.pnlIntermediateValues.Controls.Add(this.label70);
+            this.pnlIntermediateValues.Controls.Add(this.tbSeepageVelocity);
+            this.pnlIntermediateValues.Controls.Add(this.label69);
+            this.pnlIntermediateValues.Controls.Add(this.label44);
+            this.pnlIntermediateValues.Controls.Add(this.tbFlowRateD1);
+            this.pnlIntermediateValues.Controls.Add(this.label45);
+            this.pnlIntermediateValues.Controls.Add(this.label68);
+            this.pnlIntermediateValues.Controls.Add(this.tbRealeaseVolumeFromLeakageD4);
+            this.pnlIntermediateValues.Controls.Add(this.tbLeakDurationD1);
+            this.pnlIntermediateValues.Controls.Add(this.tbLeakDurationD4);
+            this.pnlIntermediateValues.Controls.Add(this.label67);
+            this.pnlIntermediateValues.Controls.Add(this.tbFlowRateD4);
+            this.pnlIntermediateValues.Controls.Add(this.tbRealeaseVolumeFromLeakageD1);
+            this.pnlIntermediateValues.Controls.Add(this.label66);
+            this.pnlIntermediateValues.Controls.Add(this.tbReleaseVolumeFromRupture);
+            this.pnlIntermediateValues.Controls.Add(this.label48);
+            this.pnlIntermediateValues.Controls.Add(this.label51);
+            this.pnlIntermediateValues.Controls.Add(this.label49);
+            this.pnlIntermediateValues.Controls.Add(this.label50);
+            this.pnlIntermediateValues.Location = new System.Drawing.Point(22, 139);
+            this.pnlIntermediateValues.Name = "pnlIntermediateValues";
+            this.pnlIntermediateValues.Size = new System.Drawing.Size(902, 219);
+            this.pnlIntermediateValues.TabIndex = 69;
+            // 
+            // label115
+            // 
+            this.label115.AutoSize = true;
+            this.label115.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label115.Location = new System.Drawing.Point(760, 158);
+            this.label115.Name = "label115";
+            this.label115.Size = new System.Drawing.Size(45, 15);
+            this.label115.TabIndex = 60;
+            this.label115.Text = "barrels";
+            // 
+            // label114
+            // 
+            this.label114.AutoSize = true;
+            this.label114.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label114.Location = new System.Drawing.Point(760, 131);
+            this.label114.Name = "label114";
+            this.label114.Size = new System.Drawing.Size(32, 15);
+            this.label114.TabIndex = 59;
+            this.label114.Text = "days";
+            // 
+            // label109
+            // 
+            this.label109.AutoSize = true;
+            this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label109.Location = new System.Drawing.Point(760, 105);
+            this.label109.Name = "label109";
+            this.label109.Size = new System.Drawing.Size(46, 15);
+            this.label109.TabIndex = 58;
+            this.label109.Text = "bbl/day";
+            // 
+            // label108
+            // 
+            this.label108.AutoSize = true;
+            this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label108.Location = new System.Drawing.Point(588, 79);
+            this.label108.Name = "label108";
+            this.label108.Size = new System.Drawing.Size(40, 15);
+            this.label108.TabIndex = 57;
+            this.label108.Text = "m/day";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label103.Location = new System.Drawing.Point(588, 53);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(40, 15);
+            this.label103.TabIndex = 56;
+            this.label103.Text = "m/day";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label102.Location = new System.Drawing.Point(588, 28);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(40, 15);
+            this.label102.TabIndex = 55;
+            this.label102.Text = "m/day";
+            // 
+            // labIntermediateValues
+            // 
+            this.labIntermediateValues.BackColor = System.Drawing.SystemColors.Highlight;
+            this.labIntermediateValues.ForeColor = System.Drawing.Color.White;
+            this.labIntermediateValues.Location = new System.Drawing.Point(0, 0);
+            this.labIntermediateValues.Name = "labIntermediateValues";
+            this.labIntermediateValues.Size = new System.Drawing.Size(899, 15);
+            this.labIntermediateValues.TabIndex = 0;
+            this.labIntermediateValues.Text = "▼ Intermediate Values";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label72.Location = new System.Drawing.Point(21, 28);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(239, 15);
+            this.label72.TabIndex = 0;
+            this.label72.Text = "The hydraulic conductivity for water (m/day)";
+            // 
+            // tbHdraulicWater
+            // 
+            this.tbHdraulicWater.BackColor = System.Drawing.SystemColors.Control;
+            this.tbHdraulicWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbHdraulicWater.Location = new System.Drawing.Point(482, 25);
+            this.tbHdraulicWater.Name = "tbHdraulicWater";
+            this.tbHdraulicWater.Size = new System.Drawing.Size(100, 21);
+            this.tbHdraulicWater.TabIndex = 1;
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label71.Location = new System.Drawing.Point(21, 53);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(232, 15);
+            this.label71.TabIndex = 2;
+            this.label71.Text = "The hydraulic conductivity for fluid (m/day)";
+            // 
+            // tbHdraulicFluid
+            // 
+            this.tbHdraulicFluid.BackColor = System.Drawing.SystemColors.Control;
+            this.tbHdraulicFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbHdraulicFluid.Location = new System.Drawing.Point(482, 50);
+            this.tbHdraulicFluid.Name = "tbHdraulicFluid";
+            this.tbHdraulicFluid.Size = new System.Drawing.Size(100, 21);
+            this.tbHdraulicFluid.TabIndex = 3;
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label70.Location = new System.Drawing.Point(21, 79);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(209, 15);
+            this.label70.TabIndex = 4;
+            this.label70.Text = "The product seepage velocity (m/day)";
+            // 
+            // tbSeepageVelocity
+            // 
+            this.tbSeepageVelocity.BackColor = System.Drawing.SystemColors.Control;
+            this.tbSeepageVelocity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbSeepageVelocity.Location = new System.Drawing.Point(482, 76);
+            this.tbSeepageVelocity.Name = "tbSeepageVelocity";
+            this.tbSeepageVelocity.Size = new System.Drawing.Size(100, 21);
+            this.tbSeepageVelocity.TabIndex = 5;
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label69.Location = new System.Drawing.Point(21, 105);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(112, 15);
+            this.label69.TabIndex = 6;
+            this.label69.Text = "Flow Rate (bbl/day)";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label44.Location = new System.Drawing.Point(619, 158);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(29, 15);
+            this.label44.TabIndex = 54;
+            this.label44.Text = "D4 :";
+            // 
+            // tbFlowRateD1
+            // 
+            this.tbFlowRateD1.BackColor = System.Drawing.SystemColors.Control;
+            this.tbFlowRateD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbFlowRateD1.Location = new System.Drawing.Point(482, 102);
+            this.tbFlowRateD1.Name = "tbFlowRateD1";
+            this.tbFlowRateD1.Size = new System.Drawing.Size(100, 21);
+            this.tbFlowRateD1.TabIndex = 7;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label45.Location = new System.Drawing.Point(619, 131);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(29, 15);
+            this.label45.TabIndex = 53;
+            this.label45.Text = "D4 :";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label68.Location = new System.Drawing.Point(21, 131);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(112, 15);
+            this.label68.TabIndex = 8;
+            this.label68.Text = "Leak duration (day)";
+            // 
+            // tbRealeaseVolumeFromLeakageD4
+            // 
+            this.tbRealeaseVolumeFromLeakageD4.BackColor = System.Drawing.SystemColors.Control;
+            this.tbRealeaseVolumeFromLeakageD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbRealeaseVolumeFromLeakageD4.Location = new System.Drawing.Point(654, 155);
+            this.tbRealeaseVolumeFromLeakageD4.Name = "tbRealeaseVolumeFromLeakageD4";
+            this.tbRealeaseVolumeFromLeakageD4.Size = new System.Drawing.Size(100, 21);
+            this.tbRealeaseVolumeFromLeakageD4.TabIndex = 51;
+            // 
+            // tbLeakDurationD1
+            // 
+            this.tbLeakDurationD1.BackColor = System.Drawing.SystemColors.Control;
+            this.tbLeakDurationD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbLeakDurationD1.Location = new System.Drawing.Point(482, 128);
+            this.tbLeakDurationD1.Name = "tbLeakDurationD1";
+            this.tbLeakDurationD1.Size = new System.Drawing.Size(100, 21);
+            this.tbLeakDurationD1.TabIndex = 9;
+            // 
+            // tbLeakDurationD4
+            // 
+            this.tbLeakDurationD4.BackColor = System.Drawing.SystemColors.Control;
+            this.tbLeakDurationD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbLeakDurationD4.Location = new System.Drawing.Point(654, 128);
+            this.tbLeakDurationD4.Name = "tbLeakDurationD4";
+            this.tbLeakDurationD4.Size = new System.Drawing.Size(100, 21);
+            this.tbLeakDurationD4.TabIndex = 50;
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label67.Location = new System.Drawing.Point(21, 158);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(220, 15);
+            this.label67.TabIndex = 10;
+            this.label67.Text = "Release volume from leakage (barrels)";
+            // 
+            // tbFlowRateD4
+            // 
+            this.tbFlowRateD4.BackColor = System.Drawing.SystemColors.Control;
+            this.tbFlowRateD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbFlowRateD4.Location = new System.Drawing.Point(654, 102);
+            this.tbFlowRateD4.Name = "tbFlowRateD4";
+            this.tbFlowRateD4.Size = new System.Drawing.Size(100, 21);
+            this.tbFlowRateD4.TabIndex = 49;
+            // 
+            // tbRealeaseVolumeFromLeakageD1
+            // 
+            this.tbRealeaseVolumeFromLeakageD1.BackColor = System.Drawing.SystemColors.Control;
+            this.tbRealeaseVolumeFromLeakageD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbRealeaseVolumeFromLeakageD1.Location = new System.Drawing.Point(482, 155);
+            this.tbRealeaseVolumeFromLeakageD1.Name = "tbRealeaseVolumeFromLeakageD1";
+            this.tbRealeaseVolumeFromLeakageD1.Size = new System.Drawing.Size(100, 21);
+            this.tbRealeaseVolumeFromLeakageD1.TabIndex = 11;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label66.Location = new System.Drawing.Point(21, 185);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(215, 15);
+            this.label66.TabIndex = 12;
+            this.label66.Text = "Release volume from rupture (barrels)";
+            // 
+            // tbReleaseVolumeFromRupture
+            // 
+            this.tbReleaseVolumeFromRupture.BackColor = System.Drawing.SystemColors.Control;
+            this.tbReleaseVolumeFromRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbReleaseVolumeFromRupture.Location = new System.Drawing.Point(482, 182);
+            this.tbReleaseVolumeFromRupture.Name = "tbReleaseVolumeFromRupture";
+            this.tbReleaseVolumeFromRupture.Size = new System.Drawing.Size(100, 21);
+            this.tbReleaseVolumeFromRupture.TabIndex = 13;
+            // 
             // label48
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label48.Location = new System.Drawing.Point(614, 107);
+            this.label48.Location = new System.Drawing.Point(619, 105);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(29, 15);
             this.label48.TabIndex = 46;
             this.label48.Text = "D4 :";
             // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label51.Location = new System.Drawing.Point(447, 105);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(29, 15);
+            this.label51.TabIndex = 42;
+            this.label51.Text = "D1 :";
+            // 
             // label49
             // 
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label49.Location = new System.Drawing.Point(442, 161);
+            this.label49.Location = new System.Drawing.Point(447, 158);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(29, 15);
             this.label49.TabIndex = 44;
@@ -2498,420 +3104,116 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label50.Location = new System.Drawing.Point(442, 134);
+            this.label50.Location = new System.Drawing.Point(447, 131);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(29, 15);
             this.label50.TabIndex = 43;
             this.label50.Text = "D1 :";
             // 
-            // label51
+            // pnlFinancialCoF
             // 
-            this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label51.Location = new System.Drawing.Point(442, 107);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(29, 15);
-            this.label51.TabIndex = 42;
-            this.label51.Text = "D1 :";
+            this.pnlFinancialCoF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlFinancialCoF.Controls.Add(this.label74);
+            this.pnlFinancialCoF.Controls.Add(this.lblFinancialCoF);
+            this.pnlFinancialCoF.Controls.Add(this.label56);
+            this.pnlFinancialCoF.Controls.Add(this.tbTotalConsequence);
+            this.pnlFinancialCoF.Controls.Add(this.label55);
+            this.pnlFinancialCoF.Controls.Add(this.tbConsequenceCategory);
+            this.pnlFinancialCoF.Location = new System.Drawing.Point(22, 31);
+            this.pnlFinancialCoF.Name = "pnlFinancialCoF";
+            this.pnlFinancialCoF.Size = new System.Drawing.Size(902, 88);
+            this.pnlFinancialCoF.TabIndex = 68;
             // 
-            // tbCostOfBusinessInterruption
+            // label74
             // 
-            this.tbCostOfBusinessInterruption.BackColor = System.Drawing.SystemColors.Control;
-            this.tbCostOfBusinessInterruption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbCostOfBusinessInterruption.Location = new System.Drawing.Point(477, 563);
-            this.tbCostOfBusinessInterruption.Name = "tbCostOfBusinessInterruption";
-            this.tbCostOfBusinessInterruption.Size = new System.Drawing.Size(100, 21);
-            this.tbCostOfBusinessInterruption.TabIndex = 41;
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(456, 29);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(15, 15);
+            this.label74.TabIndex = 36;
+            this.label74.Text = "$";
             // 
-            // label52
+            // lblFinancialCoF
             // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label52.Location = new System.Drawing.Point(16, 566);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(221, 15);
-            this.label52.TabIndex = 40;
-            this.label52.Text = "The cost of buisiness interruption (US$)";
-            // 
-            // tbComponentDamageCost
-            // 
-            this.tbComponentDamageCost.BackColor = System.Drawing.SystemColors.Control;
-            this.tbComponentDamageCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbComponentDamageCost.Location = new System.Drawing.Point(477, 536);
-            this.tbComponentDamageCost.Name = "tbComponentDamageCost";
-            this.tbComponentDamageCost.Size = new System.Drawing.Size(100, 21);
-            this.tbComponentDamageCost.TabIndex = 39;
-            // 
-            // label53
-            // 
-            this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label53.Location = new System.Drawing.Point(16, 539);
-            this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(202, 15);
-            this.label53.TabIndex = 38;
-            this.label53.Text = "The component damage cost (US$)";
-            // 
-            // tbTotalCost
-            // 
-            this.tbTotalCost.BackColor = System.Drawing.SystemColors.Control;
-            this.tbTotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTotalCost.Location = new System.Drawing.Point(477, 482);
-            this.tbTotalCost.Name = "tbTotalCost";
-            this.tbTotalCost.Size = new System.Drawing.Size(100, 21);
-            this.tbTotalCost.TabIndex = 37;
-            // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label54.Location = new System.Drawing.Point(16, 485);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(244, 15);
-            this.label54.TabIndex = 36;
-            this.label54.Text = "The total financial environmental cost (US$)";
-            // 
-            // tbConsequenceCategory
-            // 
-            this.tbConsequenceCategory.BackColor = System.Drawing.SystemColors.Control;
-            this.tbConsequenceCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbConsequenceCategory.Location = new System.Drawing.Point(477, 631);
-            this.tbConsequenceCategory.Name = "tbConsequenceCategory";
-            this.tbConsequenceCategory.Size = new System.Drawing.Size(100, 21);
-            this.tbConsequenceCategory.TabIndex = 35;
-            // 
-            // label55
-            // 
-            this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label55.Location = new System.Drawing.Point(16, 634);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(134, 15);
-            this.label55.TabIndex = 34;
-            this.label55.Text = "Consequence Category";
-            // 
-            // tbTotalConsequence
-            // 
-            this.tbTotalConsequence.BackColor = System.Drawing.SystemColors.Control;
-            this.tbTotalConsequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTotalConsequence.Location = new System.Drawing.Point(477, 604);
-            this.tbTotalConsequence.Name = "tbTotalConsequence";
-            this.tbTotalConsequence.Size = new System.Drawing.Size(100, 21);
-            this.tbTotalConsequence.TabIndex = 33;
+            this.lblFinancialCoF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblFinancialCoF.ForeColor = System.Drawing.Color.White;
+            this.lblFinancialCoF.Location = new System.Drawing.Point(-2, 0);
+            this.lblFinancialCoF.Name = "lblFinancialCoF";
+            this.lblFinancialCoF.Size = new System.Drawing.Size(901, 17);
+            this.lblFinancialCoF.TabIndex = 0;
+            this.lblFinancialCoF.Text = "▼ Fully-Quantitative Financial Consequence of Failure and Category";
             // 
             // label56
             // 
             this.label56.AutoSize = true;
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label56.Location = new System.Drawing.Point(16, 607);
+            this.label56.Location = new System.Drawing.Point(21, 26);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(166, 15);
             this.label56.TabIndex = 32;
             this.label56.Text = "The total consequence (US$)";
             // 
-            // tbFC_Env_Rupture
+            // tbTotalConsequence
             // 
-            this.tbFC_Env_Rupture.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFC_Env_Rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFC_Env_Rupture.Location = new System.Drawing.Point(477, 445);
-            this.tbFC_Env_Rupture.Name = "tbFC_Env_Rupture";
-            this.tbFC_Env_Rupture.Size = new System.Drawing.Size(100, 21);
-            this.tbFC_Env_Rupture.TabIndex = 31;
+            this.tbTotalConsequence.BackColor = System.Drawing.SystemColors.Control;
+            this.tbTotalConsequence.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTotalConsequence.Location = new System.Drawing.Point(350, 26);
+            this.tbTotalConsequence.Name = "tbTotalConsequence";
+            this.tbTotalConsequence.Size = new System.Drawing.Size(100, 21);
+            this.tbTotalConsequence.TabIndex = 33;
             // 
-            // label57
+            // label55
             // 
-            this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label57.Location = new System.Drawing.Point(16, 448);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(288, 15);
-            this.label57.TabIndex = 30;
-            this.label57.Text = "The financial environmental cost from rupture (US$)";
+            this.label55.AutoSize = true;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label55.Location = new System.Drawing.Point(21, 53);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(134, 15);
+            this.label55.TabIndex = 34;
+            this.label55.Text = "Consequence Category";
             // 
-            // tbFC_Env_Leakage
+            // tbConsequenceCategory
             // 
-            this.tbFC_Env_Leakage.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFC_Env_Leakage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFC_Env_Leakage.Location = new System.Drawing.Point(477, 418);
-            this.tbFC_Env_Leakage.Name = "tbFC_Env_Leakage";
-            this.tbFC_Env_Leakage.Size = new System.Drawing.Size(100, 21);
-            this.tbFC_Env_Leakage.TabIndex = 29;
+            this.tbConsequenceCategory.BackColor = System.Drawing.SystemColors.Control;
+            this.tbConsequenceCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbConsequenceCategory.Location = new System.Drawing.Point(350, 53);
+            this.tbConsequenceCategory.Name = "tbConsequenceCategory";
+            this.tbConsequenceCategory.Size = new System.Drawing.Size(100, 21);
+            this.tbConsequenceCategory.TabIndex = 35;
             // 
-            // label58
+            // xtraSemiPoF
             // 
-            this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label58.Location = new System.Drawing.Point(16, 421);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(293, 15);
-            this.label58.TabIndex = 28;
-            this.label58.Text = "The financial environmental cost from leakage (US$)";
+            this.xtraSemiPoF.Controls.Add(this.groupBox2);
+            this.xtraSemiPoF.Name = "xtraSemiPoF";
+            this.xtraSemiPoF.Size = new System.Drawing.Size(957, 839);
+            this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
-            // tbReachWater
+            // groupBox2
             // 
-            this.tbReachWater.BackColor = System.Drawing.SystemColors.Control;
-            this.tbReachWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbReachWater.Location = new System.Drawing.Point(477, 391);
-            this.tbReachWater.Name = "tbReachWater";
-            this.tbReachWater.Size = new System.Drawing.Size(100, 21);
-            this.tbReachWater.TabIndex = 27;
+            this.groupBox2.Controls.Add(this.panel1);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(951, 833);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Likelihood Factors";
             // 
-            // label59
+            // panel1
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label59.Location = new System.Drawing.Point(16, 394);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(353, 15);
-            this.label59.TabIndex = 26;
-            this.label59.Text = "The total barrels of fluid that reach water from a rupture (barrels)";
+            this.panel1.Controls.Add(this.label125);
+            this.panel1.Location = new System.Drawing.Point(15, 28);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(917, 100);
+            this.panel1.TabIndex = 0;
             // 
-            // tbOffsiteRupture
+            // label125
             // 
-            this.tbOffsiteRupture.BackColor = System.Drawing.SystemColors.Control;
-            this.tbOffsiteRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbOffsiteRupture.Location = new System.Drawing.Point(477, 364);
-            this.tbOffsiteRupture.Name = "tbOffsiteRupture";
-            this.tbOffsiteRupture.Size = new System.Drawing.Size(100, 21);
-            this.tbOffsiteRupture.TabIndex = 25;
-            // 
-            // label60
-            // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label60.Location = new System.Drawing.Point(16, 367);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(400, 15);
-            this.label60.TabIndex = 24;
-            this.label60.Text = "The total barrels of fluid in the off-site surface soil from a rupture (barrels)";
-            // 
-            // tbOnsiteRupture
-            // 
-            this.tbOnsiteRupture.BackColor = System.Drawing.SystemColors.Control;
-            this.tbOnsiteRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbOnsiteRupture.Location = new System.Drawing.Point(477, 337);
-            this.tbOnsiteRupture.Name = "tbOnsiteRupture";
-            this.tbOnsiteRupture.Size = new System.Drawing.Size(100, 21);
-            this.tbOnsiteRupture.TabIndex = 23;
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label61.Location = new System.Drawing.Point(16, 340);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(401, 15);
-            this.label61.TabIndex = 22;
-            this.label61.Text = "The total barrels of fluid in the on-site surface soil from a rupture (barrels)";
-            // 
-            // tbWithinTheDike
-            // 
-            this.tbWithinTheDike.BackColor = System.Drawing.SystemColors.Control;
-            this.tbWithinTheDike.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbWithinTheDike.Location = new System.Drawing.Point(477, 310);
-            this.tbWithinTheDike.Name = "tbWithinTheDike";
-            this.tbWithinTheDike.Size = new System.Drawing.Size(100, 21);
-            this.tbWithinTheDike.TabIndex = 21;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label62.Location = new System.Drawing.Point(16, 313);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(334, 15);
-            this.label62.TabIndex = 20;
-            this.label62.Text = "The total barrels of fluid within the dike from rupture (barrels)";
-            // 
-            // tbVolumeGroundWaterFromLeakageD1
-            // 
-            this.tbVolumeGroundWaterFromLeakageD1.BackColor = System.Drawing.SystemColors.Control;
-            this.tbVolumeGroundWaterFromLeakageD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbVolumeGroundWaterFromLeakageD1.Location = new System.Drawing.Point(477, 283);
-            this.tbVolumeGroundWaterFromLeakageD1.Name = "tbVolumeGroundWaterFromLeakageD1";
-            this.tbVolumeGroundWaterFromLeakageD1.Size = new System.Drawing.Size(100, 21);
-            this.tbVolumeGroundWaterFromLeakageD1.TabIndex = 19;
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label63.Location = new System.Drawing.Point(16, 286);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(380, 15);
-            this.label63.TabIndex = 18;
-            this.label63.Text = "The volume of the product in the ground water from leakage (barrels)";
-            // 
-            // tbVolumeSubsoilFromLeakageD1
-            // 
-            this.tbVolumeSubsoilFromLeakageD1.BackColor = System.Drawing.SystemColors.Control;
-            this.tbVolumeSubsoilFromLeakageD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbVolumeSubsoilFromLeakageD1.Location = new System.Drawing.Point(477, 256);
-            this.tbVolumeSubsoilFromLeakageD1.Name = "tbVolumeSubsoilFromLeakageD1";
-            this.tbVolumeSubsoilFromLeakageD1.Size = new System.Drawing.Size(100, 21);
-            this.tbVolumeSubsoilFromLeakageD1.TabIndex = 17;
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label64.Location = new System.Drawing.Point(16, 259);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(340, 15);
-            this.label64.TabIndex = 16;
-            this.label64.Text = "The volume of the product in the subsoil from lakage (barrels)";
-            // 
-            // tbTimeToInitiate
-            // 
-            this.tbTimeToInitiate.BackColor = System.Drawing.SystemColors.Control;
-            this.tbTimeToInitiate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbTimeToInitiate.Location = new System.Drawing.Point(477, 229);
-            this.tbTimeToInitiate.Name = "tbTimeToInitiate";
-            this.tbTimeToInitiate.Size = new System.Drawing.Size(100, 21);
-            this.tbTimeToInitiate.TabIndex = 15;
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label65.Location = new System.Drawing.Point(16, 232);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(289, 15);
-            this.label65.TabIndex = 14;
-            this.label65.Text = "The time to initate leakage to the ground water (day)";
-            // 
-            // tbReleaseVolumeFromRupture
-            // 
-            this.tbReleaseVolumeFromRupture.BackColor = System.Drawing.SystemColors.Control;
-            this.tbReleaseVolumeFromRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbReleaseVolumeFromRupture.Location = new System.Drawing.Point(477, 185);
-            this.tbReleaseVolumeFromRupture.Name = "tbReleaseVolumeFromRupture";
-            this.tbReleaseVolumeFromRupture.Size = new System.Drawing.Size(100, 21);
-            this.tbReleaseVolumeFromRupture.TabIndex = 13;
-            // 
-            // label66
-            // 
-            this.label66.AutoSize = true;
-            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label66.Location = new System.Drawing.Point(16, 188);
-            this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(215, 15);
-            this.label66.TabIndex = 12;
-            this.label66.Text = "Release volume from rupture (barrels)";
-            // 
-            // tbRealeaseVolumeFromLeakageD1
-            // 
-            this.tbRealeaseVolumeFromLeakageD1.BackColor = System.Drawing.SystemColors.Control;
-            this.tbRealeaseVolumeFromLeakageD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbRealeaseVolumeFromLeakageD1.Location = new System.Drawing.Point(477, 158);
-            this.tbRealeaseVolumeFromLeakageD1.Name = "tbRealeaseVolumeFromLeakageD1";
-            this.tbRealeaseVolumeFromLeakageD1.Size = new System.Drawing.Size(100, 21);
-            this.tbRealeaseVolumeFromLeakageD1.TabIndex = 11;
-            // 
-            // label67
-            // 
-            this.label67.AutoSize = true;
-            this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label67.Location = new System.Drawing.Point(16, 161);
-            this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(220, 15);
-            this.label67.TabIndex = 10;
-            this.label67.Text = "Release volume from leakage (barrels)";
-            // 
-            // tbLeakDurationD1
-            // 
-            this.tbLeakDurationD1.BackColor = System.Drawing.SystemColors.Control;
-            this.tbLeakDurationD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbLeakDurationD1.Location = new System.Drawing.Point(477, 131);
-            this.tbLeakDurationD1.Name = "tbLeakDurationD1";
-            this.tbLeakDurationD1.Size = new System.Drawing.Size(100, 21);
-            this.tbLeakDurationD1.TabIndex = 9;
-            // 
-            // label68
-            // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label68.Location = new System.Drawing.Point(16, 134);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(112, 15);
-            this.label68.TabIndex = 8;
-            this.label68.Text = "Leak duration (day)";
-            // 
-            // tbFlowRateD1
-            // 
-            this.tbFlowRateD1.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFlowRateD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFlowRateD1.Location = new System.Drawing.Point(477, 104);
-            this.tbFlowRateD1.Name = "tbFlowRateD1";
-            this.tbFlowRateD1.Size = new System.Drawing.Size(100, 21);
-            this.tbFlowRateD1.TabIndex = 7;
-            // 
-            // label69
-            // 
-            this.label69.AutoSize = true;
-            this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label69.Location = new System.Drawing.Point(16, 107);
-            this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(112, 15);
-            this.label69.TabIndex = 6;
-            this.label69.Text = "Flow Rate (bbl/day)";
-            // 
-            // tbSeepageVelocity
-            // 
-            this.tbSeepageVelocity.BackColor = System.Drawing.SystemColors.Control;
-            this.tbSeepageVelocity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSeepageVelocity.Location = new System.Drawing.Point(477, 77);
-            this.tbSeepageVelocity.Name = "tbSeepageVelocity";
-            this.tbSeepageVelocity.Size = new System.Drawing.Size(100, 21);
-            this.tbSeepageVelocity.TabIndex = 5;
-            // 
-            // label70
-            // 
-            this.label70.AutoSize = true;
-            this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label70.Location = new System.Drawing.Point(16, 80);
-            this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(209, 15);
-            this.label70.TabIndex = 4;
-            this.label70.Text = "The product seepage velocity (m/day)";
-            // 
-            // tbHdraulicFluid
-            // 
-            this.tbHdraulicFluid.BackColor = System.Drawing.SystemColors.Control;
-            this.tbHdraulicFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbHdraulicFluid.Location = new System.Drawing.Point(477, 50);
-            this.tbHdraulicFluid.Name = "tbHdraulicFluid";
-            this.tbHdraulicFluid.Size = new System.Drawing.Size(100, 21);
-            this.tbHdraulicFluid.TabIndex = 3;
-            // 
-            // label71
-            // 
-            this.label71.AutoSize = true;
-            this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label71.Location = new System.Drawing.Point(16, 53);
-            this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(232, 15);
-            this.label71.TabIndex = 2;
-            this.label71.Text = "The hydraulic conductivity for fluid (m/day)";
-            // 
-            // tbHdraulicWater
-            // 
-            this.tbHdraulicWater.BackColor = System.Drawing.SystemColors.Control;
-            this.tbHdraulicWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbHdraulicWater.Location = new System.Drawing.Point(477, 23);
-            this.tbHdraulicWater.Name = "tbHdraulicWater";
-            this.tbHdraulicWater.Size = new System.Drawing.Size(100, 21);
-            this.tbHdraulicWater.TabIndex = 1;
-            // 
-            // label72
-            // 
-            this.label72.AutoSize = true;
-            this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label72.Location = new System.Drawing.Point(16, 26);
-            this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(239, 15);
-            this.label72.TabIndex = 0;
-            this.label72.Text = "The hydraulic conductivity for water (m/day)";
+            this.label125.AutoSize = true;
+            this.label125.Location = new System.Drawing.Point(4, 4);
+            this.label125.Name = "label125";
+            this.label125.Size = new System.Drawing.Size(24, 13);
+            this.label125.TabIndex = 0;
+            this.label125.Text = "LF1";
             // 
             // tabControl1
             // 
@@ -2942,6 +3244,13 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // xtraUserControl11
+            // 
+            this.xtraUserControl11.Location = new System.Drawing.Point(295, 4);
+            this.xtraUserControl11.Name = "xtraUserControl11";
+            this.xtraUserControl11.Size = new System.Drawing.Size(150, 150);
+            this.xtraUserControl11.TabIndex = 4;
             // 
             // UCRiskFactor
             // 
@@ -3038,7 +3347,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShellD1.Properties)).EndInit();
             this.tabCATankBottom.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
+            this.pnlFinancialConsequence.ResumeLayout(false);
+            this.pnlFinancialConsequence.PerformLayout();
+            this.pnlIntermediateValues.ResumeLayout(false);
+            this.pnlIntermediateValues.PerformLayout();
+            this.pnlFinancialCoF.ResumeLayout(false);
+            this.pnlFinancialCoF.PerformLayout();
+            this.xtraSemiPoF.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -3284,5 +3602,32 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Panel pnlFinancialCoF;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label lblFinancialCoF;
+        private System.Windows.Forms.Panel pnlIntermediateValues;
+        private System.Windows.Forms.Label labIntermediateValues;
+        private System.Windows.Forms.Panel pnlFinancialConsequence;
+        private System.Windows.Forms.Label lblFinancialConsequence;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Label label115;
+        private System.Windows.Forms.Label label114;
+        private System.Windows.Forms.Label label109;
+        private System.Windows.Forms.Label label108;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label124;
+        private System.Windows.Forms.Label label123;
+        private System.Windows.Forms.Label label122;
+        private System.Windows.Forms.Label label121;
+        private System.Windows.Forms.Label label120;
+        private System.Windows.Forms.Label label119;
+        private System.Windows.Forms.Label label118;
+        private System.Windows.Forms.Label label117;
+        private XtraUserControl1 xtraUserControl11;
+        private DevExpress.XtraTab.XtraTabPage xtraSemiPoF;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label125;
     }
 }

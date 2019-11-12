@@ -103,3 +103,8 @@ F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserCont
 F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.GenerateResource.Cache
 F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.licenses
 F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.InputDataForm.frmReport.resources
+F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\bin\Debug\de\MigraDoc.Rendering.resources.dll
+F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\bin\Debug\de\MigraDoc.RtfRendering.resources.dll
+F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\bin\Debug\de\PdfSharp.resources.dll
+F:\Project_Lab411\Update_RBI\WindowsFormsApplication1\bin\Debug\de\PdfSharp.Charting.resources.dll
