@@ -245,6 +245,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float BRITTLE_THICK { set; get; }
         public Boolean CARBON_ALLOY { set; get; }
         public float DELTA_FATT { set; get; }
+
+      
         //</TEMPER EMBRITTLE>
         
         //<885>
@@ -258,6 +260,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float REF_TEMP { set; get; }
         public float MinReqTemperaturePressurisation { set; get; }
         public Boolean PressurisationControlled { set; get; }
+        public float Cri_Exp_Temp { set; get; }
+       
         //</885>
 
         //<SIGMA>
@@ -2174,21 +2178,21 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private float API_SIZE_BRITTLE(float SIZE)
         {
             float[] data = { 6.4f, 12.7f, 25.4f, 38.1f, 50.8f, 63.5f, 76.2f, 88.9f, 101.6f };
-            if (SIZE < (data[0] + data[1]) / 2)
+            if (SIZE < data[0])
                 return data[0];
-            else if (SIZE < (data[1] + data[2]) / 2)
+            else if (SIZE < data[1]&&SIZE>data[0] )
                 return data[1];
-            else if (SIZE < (data[2] + data[3]) / 2)
+            else if (SIZE < data[2] && SIZE > data[1])
                 return data[2];
-            else if (SIZE < (data[3] + data[4]) / 2)
+            else if (SIZE < data[3] && SIZE > data[2])
                 return data[3];
-            else if (SIZE < (data[4] + data[5]) / 2)
+            else if (SIZE < data[4] && SIZE > data[3])
                 return data[4];
-            else if (SIZE < (data[5] + data[6]) / 2)
+            else if (SIZE < data[5] && SIZE > data[4])
                 return data[5];
-            else if (SIZE < (data[6] + data[7]) / 2)
+            else if (SIZE < data[6] && SIZE > data[5])
                 return data[6];
-            else if (SIZE < (data[7] + data[8]) / 2)
+            else if (SIZE < data[7] && SIZE > data[6])
                 return data[7];
             else
                 return data[8];
@@ -2197,25 +2201,25 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private float API_TEMP(float TEMP)
         {
             float[] data = { -56, -44, -33, -22, -11, -0, 11, 22, 33, 44, 56 };
-            if (TEMP < (data[0] + data[1]) / 2)
+            if ((TEMP < data[1]))
                 return data[0];
-            else if (TEMP < (data[1] + data[2]) / 2)
+            else if (TEMP < data[2] && TEMP > data[1])
                 return data[1];
-            else if (TEMP < (data[2] + data[3]) / 2)
+            else if (TEMP < data[3] && TEMP > data[2])
                 return data[2];
-            else if (TEMP < (data[3] + data[4]) / 2)
+            else if (TEMP < data[4] && TEMP > data[3])
                 return data[3];
-            else if (TEMP < (data[4] + data[5]) / 2)
+            else if (TEMP < data[5] && TEMP > data[4])
                 return data[4];
-            else if (TEMP < (data[5] + data[6]) / 2)
+            else if (TEMP < data[6] && TEMP > data[5])
                 return data[5];
-            else if (TEMP < (data[6] + data[7]) / 2)
+            else if (TEMP < data[7] && TEMP > data[6])
                 return data[6];
-            else if (TEMP < (data[7] + data[8]) / 2)
+            else if (TEMP < data[8] && TEMP > data[7])
                 return data[7];
-            else if (TEMP < (data[8] + data[9]) / 2)
+            else if (TEMP < data[9] && TEMP > data[8])
                 return data[8];
-            else if (TEMP < (data[9] + data[10]) / 2)
+            else if (TEMP < data[10] && TEMP > data[9])
                 return data[9];
             else
                 return data[10];
@@ -2224,13 +2228,25 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             if (TEMPER_SUSCEP || (CARBON_ALLOY && !(MAX_OP_TEMP < 343 || MIN_OP_TEMP > 577)))
             {
-                float TEMP_EMBRITTLE = Math.Min(MIN_DESIGN_TEMP, MIN_OP_TEMP) - (REF_TEMP + DELTA_FATT);
+                float TEMP_EMBRITTLE = MinReqTemperaturePressurisation;
+                if (PressurisationControlled == false)
+                {
+                    TEMP_EMBRITTLE = Math.Min(MIN_DESIGN_TEMP,  Cri_Exp_Temp);
+                    
+                }
+                TEMP_EMBRITTLE  -= (REF_TEMP + DELTA_FATT);
                 if (PWHT)
                 {
+
+                    Console.WriteLine("DF_TEMP_EMBRITTLE()=" + DAL_CAL.GET_TBL_205(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK)));
                     return DAL_CAL.GET_TBL_205(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
                 }
                 else
+                {
+                    Console.WriteLine("df temp=" + DAL_CAL.GET_TBL_204(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK)));
                     return DAL_CAL.GET_TBL_204(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
+                }
+                    
             }
             else
                 return 0;
@@ -2243,30 +2259,37 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             if (CHROMIUM_12 && !(MIN_OP_TEMP > 566 || MAX_OP_TEMP < 371))
             {
-                float TEMP_885 = Math.Min(MIN_DESIGN_TEMP, MIN_OP_TEMP) - REF_TEMP;
-                float[] data = { -73, -62, -51, -40, -29, -18, -7, 4, 16, 27, 38 };
-                if (TEMP_885 < (data[0] + data[1]) / 2)
-                    return 1381;
-                else if (TEMP_885 < (data[1] + data[2]) / 2)
-                    return 1216;
-                else if (TEMP_885 < (data[2] + data[3]) / 2)
-                    return 1022;
-                else if (TEMP_885 < (data[3] + data[4]) / 2)
-                    return 806;
-                else if (TEMP_885 < (data[4] + data[5]) / 2)
-                    return 581;
-                else if (TEMP_885 < (data[5] + data[6]) / 2)
-                    return 371;
-                else if (TEMP_885 < (data[6] + data[7]) / 2)
-                    return 200;
-                else if (TEMP_885 < (data[7] + data[8]) / 2)
-                    return 87;
-                else if (TEMP_885 < (data[8] + data[9]) / 2)
-                    return 30;
-                else if (TEMP_885 < (data[9] + data[10]) / 2)
-                    return 8;
+                float TEMP_885 = MinReqTemperaturePressurisation;
+                if (PressurisationControlled == false)
+                {
+                    TEMP_885 = Math.Min(MIN_DESIGN_TEMP, Cri_Exp_Temp);
+
+                }
+                TEMP_885 -= REF_TEMP;
+                float[] data = { -56, -44, -33, -22, -11, 0, 11, 22, 33, 44, 56 };
+                float[] table_22_3 = { 1381, 1216, 1022, 806, 581, 371, 200, 87, 30, 8, 2, 0 };
+                if ((TEMP_885 < data[1]))
+                    return table_22_3[0];
+                else if (TEMP_885 < data[2] && TEMP_885 > data[1])
+                    return table_22_3[1];
+                else if (TEMP_885 < data[3] && TEMP_885 > data[2])
+                    return table_22_3[2];
+                else if (TEMP_885 < data[4] && TEMP_885 > data[3])
+                    return table_22_3[3];
+                else if (TEMP_885 < data[5] && TEMP_885 > data[4])
+                    return table_22_3[4];
+                else if (TEMP_885 < data[6] && TEMP_885 > data[5])
+                    return table_22_3[5];
+                else if (TEMP_885 < data[7] && TEMP_885 > data[6])
+                    return table_22_3[6];
+                else if (TEMP_885 < data[8] && TEMP_885 > data[7])
+                    return table_22_3[7];
+                else if (TEMP_885 < data[9] && TEMP_885 > data[8])
+                    return table_22_3[8];
+                else if (TEMP_885 < data[10] && TEMP_885 > data[9])
+                    return table_22_3[9];
                 else
-                    return 2;
+                    return table_22_3[10];
             }
             else
                 return 0;
@@ -2275,29 +2298,29 @@ namespace RBI.BUS.BUSMSSQL_CAL
         ///<summary>
         /// CAL SIGMA
         ///</summary>
-        private float API_TEMP_SIGMA()
+        private float API_TEMP_SIGMA(float MIN_OP_TEMP)
         {
             float TEMP = 0;
             float[] DATA = { -46, -18, 10, 38, 66, 93, 204, 316, 427, 538, 649 };
-            if (MIN_OP_TEMP < (DATA[0] + DATA[1]) / 2)
+            if ((MIN_OP_TEMP < DATA[1]))
                 TEMP = DATA[0];
-            else if (MIN_OP_TEMP < (DATA[1] + DATA[2]) / 2)
+            else if (MIN_OP_TEMP < DATA[2] && MIN_OP_TEMP > DATA[1])
                 TEMP = DATA[1];
-            else if (MIN_OP_TEMP < (DATA[2] + DATA[3]) / 2)
+            else if (MIN_OP_TEMP < DATA[3] && MIN_OP_TEMP > DATA[2])
                 TEMP = DATA[2];
-            else if (MIN_OP_TEMP < (DATA[3] + DATA[4]) / 2)
+            else if (MIN_OP_TEMP < DATA[4] && MIN_OP_TEMP > DATA[3])
                 TEMP = DATA[3];
-            else if (MIN_OP_TEMP < (DATA[4] + DATA[5]) / 2)
+            else if (MIN_OP_TEMP < DATA[5] && MIN_OP_TEMP > DATA[4])
                 TEMP = DATA[4];
-            else if (MIN_OP_TEMP < (DATA[5] + DATA[6]) / 2)
+            else if (MIN_OP_TEMP < DATA[6] && MIN_OP_TEMP > DATA[5])
                 TEMP = DATA[5];
-            else if (MIN_OP_TEMP < (DATA[6] + DATA[7]) / 2)
+            else if (MIN_OP_TEMP < DATA[7] && MIN_OP_TEMP > DATA[6])
                 TEMP = DATA[6];
-            else if (MIN_OP_TEMP < (DATA[7] + DATA[8]) / 2)
+            else if (MIN_OP_TEMP < DATA[8] && MIN_OP_TEMP > DATA[7])
                 TEMP = DATA[7];
-            else if (MIN_OP_TEMP < (DATA[8] + DATA[9]) / 2)
+            else if (MIN_OP_TEMP < DATA[9] && MIN_OP_TEMP > DATA[8])
                 TEMP = DATA[8];
-            else if (MIN_OP_TEMP < (DATA[9] + DATA[10]) / 2)
+            else if (MIN_OP_TEMP < DATA[10] && MIN_OP_TEMP > DATA[9])
                 TEMP = DATA[9];
             else
                 TEMP = DATA[10];
@@ -2307,7 +2330,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             if (AUSTENITIC_STEEL && !(MIN_OP_TEMP > 927 || MAX_OP_TEMP < 593))
             {
-                float TEMP = API_TEMP_SIGMA();
+                float TEMP_SIGMA = MinReqTemperaturePressurisation;
+                if (PressurisationControlled == false)
+                {
+                    TEMP_SIGMA = Math.Min(MIN_DESIGN_TEMP, Cri_Exp_Temp);
+
+                }
+
+                float TEMP = API_TEMP_SIGMA(TEMP_SIGMA);
                 float DFB_SIGMA = 0;
                 if (TEMP == 649)
                 {
@@ -2404,6 +2434,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     else
                         DFB_SIGMA = 4196;
                 }
+                Console.WriteLine("DFB_SIGMA=" + DFB_SIGMA);
                 return DFB_SIGMA;
             }
             else
@@ -2413,7 +2444,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         ///<summary>
         /// CAL PIPING
         ///</summary>
-        private float DFB_PIPE()
+        private float DFB_PIPE()//chi co trong thiet bi pipe
         {
             float DFB_PF = 1, DFB_AS = 1, FFB_AS = 1, DFB_CF = 1;
             
@@ -2534,7 +2565,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FBD = 0.02f;
                 else
                     FBD = 1;
-
+                Console.WriteLine("DFB_PIPE() * FCA * FPC * FCP * FJB * FBD=" + DFB_PIPE() * FCA * FPC * FCP * FJB * FBD);
                 return DFB_PIPE() * FCA * FPC * FCP * FJB * FBD;
             }
             else

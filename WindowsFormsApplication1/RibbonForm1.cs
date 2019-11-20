@@ -1638,6 +1638,7 @@ namespace RBI
             cal.BRITTLE_THICK = com.BrittleFractureThickness;
             cal.CARBON_ALLOY = ma.CarbonLowAlloy == 1 ? true : false;
             cal.DELTA_FATT = com.DeltaFATT;
+            cal.Cri_Exp_Temp = st.CriticalExposureTemperature;
             //</Temper Embrittle>
 
             //<input 885>
@@ -3456,6 +3457,16 @@ namespace RBI
                 if (dlr == DialogResult.OK)
                     System.Windows.Forms.Application.Restart();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

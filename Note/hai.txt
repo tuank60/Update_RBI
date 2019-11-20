@@ -1,0 +1,2 @@
+operating Hydrogen Partial Pressure ko cho nhap so am
+min requite temperature ko dc nhap so <-46--> neu nhap ko xem dc damage mechanism
