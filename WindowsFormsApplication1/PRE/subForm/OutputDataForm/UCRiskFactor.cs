@@ -230,5 +230,188 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbTotalConsequenceShell.Text = caTank.Consequence.ToString();
             tbConsequenceCategoryShell.Text = caTank.ConsequenceCategory;
         }
+
+        private void lblLF1_Click(object sender, EventArgs e)
+        {
+            if (lblLF1.Text == "▼ LF1")
+            {
+                panelLF1.Height = 71;
+                lblLF1.Text = "▶ LF1";
+
+                panelLF2.Top = panelLF1.Top + panelLF1.Height + 13;
+                panelLF3.Top = panelLF2.Top + panelLF2.Height + 13;
+                panelLF4567.Top = panelLF3.Top + panelLF4567.Height + 13;
+            }
+            else if (lblLF1.Text == "▶ LF1")
+            {
+                panelLF1.Height = 21;
+                lblLF1.Text = "▼ LF1";
+
+                panelLF2.Top = panelLF1.Top + panelLF1.Height + 13;
+                panelLF3.Top = panelLF2.Top + panelLF2.Height + 13;
+                panelLF4567.Top = panelLF3.Top + panelLF4567.Height + 13;
+            }
+        }
+
+        private void lblLF2_Click(object sender, EventArgs e)
+        {
+
+            if (lblLF2.Text == "▼ LF2")
+            {
+                panelLF2.Height = 131;
+                lblLF2.Text = "▶ LF2";
+                panelLF3.Top = panelLF2.Top + panelLF2.Height + 13;
+                panelLF4567.Top = panelLF3.Top + panelLF3.Height + 13;
+
+            }
+            else if (lblLF2.Text == "▶ LF2")
+            {
+                panelLF2.Height = 21;
+                lblLF2.Text = "▼ LF2";
+                panelLF3.Top = panelLF2.Top + panelLF2.Height + 13;
+                panelLF4567.Top = panelLF3.Top + panelLF3.Height + 13;
+            }
+        }
+
+        private void lblLF3_Click(object sender, EventArgs e)
+        {
+            if (lblLF3.Text == "▼ LF3")
+            {
+                panelLF3.Height = 114;
+                lblLF3.Text = "▶ LF3";
+                panelLF4567.Top = panelLF3.Top + panelLF3.Height + 13;
+            }
+            else if (lblLF3.Text == "▶ LF3")
+            {
+                panelLF3.Height = 21;
+                lblLF3.Text = "▼ LF3";
+                panelLF4567.Top = panelLF3.Top + panelLF3.Height + 13;
+            }
+        }
+
+        private void lblLF4567_Click(object sender, EventArgs e)
+        {
+            if (lblLF4567.Text == "▼ LF4, LF5, LF6 and LF7")
+            {
+                panelLF4567.Height = 205;
+                lblLF4567.Text = "▶ LF4, LF5, LF6 and LF7";
+
+            }
+            else if (lblLF4567.Text == "▶ LF4, LF5, LF6 and LF7")
+            {
+                panelLF4567.Height = 21;
+                lblLF4567.Text = "▼ LF4, LF5, LF6 and LF7";
+
+            }
+        }
+        private void UCRiskFactor_Load_1(object sender, EventArgs e)
+        {
+            panelLF1.Height = 21;
+            panelLF2.Top = panelLF1.Top + panelLF1.Height + 13;
+            panelLF2.Height = 21;
+            panelLF3.Top = panelLF2.Top + panelLF2.Height + 13;
+            panelLF3.Height = 21;
+            panelLF4567.Top = panelLF3.Top + panelLF3.Height + 13;
+            panelLF4567.Height = 21;
+            panelInput.Height = 21;
+            panelFQF.Top = panelInput.Top + panelInput.Height + 13;
+            panelFQF.Height = 21;
+            groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
+            panelInflu.Height = 21;
+            panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+            panelCAP.Height = 21;
+            panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            panelRHP.Height = 21;
+        }
+
+        private void lblInput_Click(object sender, EventArgs e)
+        {
+            if (lblInput.Text == "▼ Input")
+            {
+                panelInput.Height = 142;
+                lblInput.Text = "▶ Input";
+                panelFQF.Top = panelInput.Top + panelInput.Height + 13;
+                groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
+                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+            else if (lblInput.Text == "▶ Input")
+            {
+                panelInput.Height = 21;
+                lblInput.Text = "▼ Input";
+                panelFQF.Top = panelInput.Top + panelInput.Height + 13;
+                groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
+                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+        }
+
+        private void lblFQF_Click(object sender, EventArgs e)
+        {
+            if (lblFQF.Text == "▼ Fully-Quantitive Financial Consequence of Failture and Category")
+            {
+                panelFQF.Height = 87;
+                lblFQF.Text = "▶ Fully-Quantitive Financial Consequence of Failture and Category";
+                groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
+                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+            else if (lblFQF.Text == "▶ Fully-Quantitive Financial Consequence of Failture and Category")
+            {
+                panelFQF.Height = 21;
+                lblFQF.Text = "▼ Fully-Quantitive Financial Consequence of Failture and Category";
+                groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
+                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+        }
+
+        private void lbllnfinput_Click(object sender, EventArgs e)
+        {
+            if (lbllnfinput.Text == "▼ Influencing Inputs")
+            {
+                panelInflu.Height = 207;
+                lbllnfinput.Text = "▶ Influencing Inputs";
+                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+            else if (lbllnfinput.Text == "▶ Influencing Inputs")
+            {
+                panelInflu.Height = 21;
+                lbllnfinput.Text = "▼ Influencing Inputs";
+                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+        }
+
+        private void lblCAP_Click(object sender, EventArgs e)
+        {
+            if (lblCAP.Text == "▼ Consequence Analysis Properties")
+            {
+                panelCAP.Height = 368;
+                lblCAP.Text = "▶ Consequence Analysis Properties";
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+            else if (lblCAP.Text == "▶ Consequence Analysis Properties")
+            {
+                panelCAP.Height = 21;
+                lblCAP.Text = "▼ Influencing Inputs";
+                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+            }
+        }
+
+        private void lblRHP_Click(object sender, EventArgs e)
+        {
+            if (lblRHP.Text == "▼ Release Holes Properties")
+            {
+                panelRHP.Height = 342;
+                lblRHP.Text = "▶ Release Holes Properties";
+            }
+            else if (lblRHP.Text == "▶ Release Holes Properties")
+            {
+                panelRHP.Height = 21;
+                lblRHP.Text = "▼ Release Holes Properties";
+            }
+        }
     }
 }
