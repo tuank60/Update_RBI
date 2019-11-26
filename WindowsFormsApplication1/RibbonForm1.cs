@@ -2228,7 +2228,7 @@ namespace RBI
                 rwCATank.Release_Volume_Leak_D3 = !float.IsNaN(CA.Bbl_leak_n(3)) && CA.Bbl_leak_n(3) > 0 ? CA.Bbl_leak_n(3) : 0;
                 rwCATank.Release_Volume_Leak_D4 = !float.IsNaN(CA.Bbl_leak_n(4)) && CA.Bbl_leak_n(4) > 0 ? CA.Bbl_leak_n(4) : 0;
 
-                rwCATank.Release_Volume_Rupture = !float.IsNaN(CA.Bbl_rupture_release()) && CA.Bbl_rupture_release() > 0 ? CA.Bbl_rupture_release() : 0;
+                rwCATank.Release_Volume_Rupture_D1 = !float.IsNaN(CA.Bbl_rupture_release()) && CA.Bbl_rupture_release() > 0 ? CA.Bbl_rupture_release() : 0;
                 rwCATank.Liquid_Height = CA.FLUID_HEIGHT;
                 rwCATank.Volume_Fluid = CA.BBL_TOTAL_SHELL();
 
@@ -2291,7 +2291,7 @@ namespace RBI
                 rwCATank.Release_Volume_Leak_D1 = float.IsNaN(CA.Bbl_leak_n_bottom(1)) ? 0 : CA.Bbl_leak_n_bottom(1);
                 rwCATank.Release_Volume_Leak_D4 = float.IsNaN(CA.Bbl_leak_n_bottom(4)) ? 0 : CA.Bbl_leak_n_bottom(4);
 
-                rwCATank.Release_Volume_Rupture = float.IsNaN(CA.Bbl_rupture_release_bottom()) ? 0 : CA.Bbl_rupture_release_bottom();
+                rwCATank.Release_Volume_Rupture_D1 = float.IsNaN(CA.Bbl_rupture_release_bottom()) ? 0 : CA.Bbl_rupture_release_bottom();
                 rwCATank.Volume_Fluid = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();
                 rwCATank.Time_Leak_Ground = float.IsNaN(CA.t_gl_bottom()) ? 0 : CA.t_gl_bottom();
 

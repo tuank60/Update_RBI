@@ -1134,8 +1134,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public String Soil_type { set; get; }
         public String TANK_FLUID { set; get; }
         public float Swg { set; get; } //total distance to the ground water underneath the tank
-        private float uw = 0.001f; //tra bang tren internet tai 27C
-        private float pw = 1000; // kg/m3
+        private float uw = 0.9f; //tra bang tren internet tai 27C
+        private float pw = 0.996621f; // kg/m3
 
         //STEP 1: Determine Release Rate and Volum
         private int n_rh()
@@ -1181,11 +1181,17 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 k_h[1] = (float)Math.Pow(10, -8);
                 k_h[2] = 0.5f;
             }
-            else
+            else if (Soil_type == "Concrete-Asphalt")
             {
                 k_h[0] = (float)Math.Pow(10, -10);
                 k_h[1] = (float)Math.Pow(10, -11);
-                k_h[2] = 0.99f;
+                k_h[2] = 0.3f;
+            }
+            else
+            {
+                k_h[0] = 1;
+                k_h[1] = 0.1f;
+                k_h[2] = 0.4f;
             }
             return k_h;
         }

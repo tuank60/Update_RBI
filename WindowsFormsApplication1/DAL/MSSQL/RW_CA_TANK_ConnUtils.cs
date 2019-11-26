@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_CA_TANK_ConnUtils
     {
-        public void add(int ID, float Hydraulic_Water, float Hydraulic_Fluid, float Seepage_Velocity, float Flow_Rate_D1, float Flow_Rate_D2, float Flow_Rate_D3, float Flow_Rate_D4, float Leak_Duration_D1, float Leak_Duration_D2, float Leak_Duration_D3, float Leak_Duration_D4, float Release_Volume_Leak_D1, float Release_Volume_Leak_D2, float Release_Volume_Leak_D3, float Release_Volume_Leak_D4, float Release_Volume_Rupture, float Liquid_Height, float Volume_Fluid, float Time_Leak_Ground, float Volume_SubSoil_Leak_D1, float Volume_SubSoil_Leak_D4, float Volume_Ground_Water_Leak_D1, float Volume_Ground_Water_Leak_D4, float Barrel_Dike_Leak, float Barrel_Dike_Rupture, float Barrel_Onsite_Leak, float Barrel_Onsite_Rupture, float Barrel_Offsite_Leak, float Barrel_Offsite_Rupture, float Barrel_Water_Leak, float Barrel_Water_Rupture, float FC_Environ_Leak, float FC_Environ_Rupture, float FC_Environ, float Material_Factor, float Component_Damage_Cost, float Business_Cost, float Consequence, String ConsequenceCategory)
+        public void add(int ID, float Hydraulic_Water, float Hydraulic_Fluid, float Seepage_Velocity, float Flow_Rate_D1, float Flow_Rate_D2, float Flow_Rate_D3, float Flow_Rate_D4, float Leak_Duration_D1, float Leak_Duration_D2, float Leak_Duration_D3, float Leak_Duration_D4, float Release_Volume_Leak_D1, float Release_Volume_Leak_D2, float Release_Volume_Leak_D3, float Release_Volume_Leak_D4, float Release_Volume_Rupture_D1, float Release_Volume_Rupture_D2, float Release_Volume_Rupture_D3, float Release_Volume_Rupture_D4, float Liquid_Height, float Volume_Fluid, float Time_Leak_Ground, float Volume_SubSoil_Leak_D1, float Volume_SubSoil_Leak_D4, float Volume_Ground_Water_Leak_D1, float Volume_Ground_Water_Leak_D4, float Barrel_Dike_Leak, float Barrel_Dike_Rupture, float Barrel_Onsite_Leak, float Barrel_Onsite_Rupture, float Barrel_Offsite_Leak, float Barrel_Offsite_Rupture, float Barrel_Water_Leak, float Barrel_Water_Rupture, float FC_Environ_Leak, float FC_Environ_Rupture, float FC_Environ, float Material_Factor, float Component_Damage_Cost, float Business_Cost, float Consequence, String ConsequenceCategory)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -34,7 +34,10 @@ namespace RBI.DAL.MSSQL
                         ",[Release_Volume_Leak_D2]" +
                         ",[Release_Volume_Leak_D3]" +
                         ",[Release_Volume_Leak_D4]" +
-                        ",[Release_Volume_Rupture]" +
+                        ",[Release_Volume_Rupture_D1]" +
+                        ",[Release_Volume_Rupture_D2]" +
+                        ",[Release_Volume_Rupture_D3]" +
+                        ",[Release_Volume_Rupture_D4]" +
                         ",[Liquid_Height]" +
                         ",[Volume_Fluid]" +
                         ",[Time_Leak_Ground]" +
@@ -75,7 +78,10 @@ namespace RBI.DAL.MSSQL
                         ",'" + Release_Volume_Leak_D2 + "'" +
                         ",'" + Release_Volume_Leak_D3 + "'" +
                         ",'" + Release_Volume_Leak_D4 + "'" +
-                        ",'" + Release_Volume_Rupture + "'" +
+                        ",'" + Release_Volume_Rupture_D1 + "'" +
+                        ",'" + Release_Volume_Rupture_D2 + "'" +
+                        ",'" + Release_Volume_Rupture_D3 + "'" +
+                        ",'" + Release_Volume_Rupture_D4 + "'" +
                         ",'" + Liquid_Height + "'" +
                         ",'" + Volume_Fluid + "'" +
                         ",'" + Time_Leak_Ground + "'" +
@@ -117,7 +123,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, float Hydraulic_Water, float Hydraulic_Fluid, float Seepage_Velocity, float Flow_Rate_D1, float Flow_Rate_D2, float Flow_Rate_D3, float Flow_Rate_D4, float Leak_Duration_D1, float Leak_Duration_D2, float Leak_Duration_D3, float Leak_Duration_D4, float Release_Volume_Leak_D1, float Release_Volume_Leak_D2, float Release_Volume_Leak_D3, float Release_Volume_Leak_D4, float Release_Volume_Rupture, float Liquid_Height, float Volume_Fluid, float Time_Leak_Ground, float Volume_SubSoil_Leak_D1, float Volume_SubSoil_Leak_D4, float Volume_Ground_Water_Leak_D1, float Volume_Ground_Water_Leak_D4, float Barrel_Dike_Leak, float Barrel_Dike_Rupture, float Barrel_Onsite_Leak, float Barrel_Onsite_Rupture, float Barrel_Offsite_Leak, float Barrel_Offsite_Rupture, float Barrel_Water_Leak, float Barrel_Water_Rupture, float FC_Environ_Leak, float FC_Environ_Rupture, float FC_Environ, float Material_Factor, float Component_Damage_Cost, float Business_Cost, float Consequence, String ConsequenceCategory)
+        public void edit(int ID, float Hydraulic_Water, float Hydraulic_Fluid, float Seepage_Velocity, float Flow_Rate_D1, float Flow_Rate_D2, float Flow_Rate_D3, float Flow_Rate_D4, float Leak_Duration_D1, float Leak_Duration_D2, float Leak_Duration_D3, float Leak_Duration_D4, float Release_Volume_Leak_D1, float Release_Volume_Leak_D2, float Release_Volume_Leak_D3, float Release_Volume_Leak_D4, float Release_Volume_Rupture_D1, float Release_Volume_Rupture_D2, float Release_Volume_Rupture_D3, float Release_Volume_Rupture_D4, float Liquid_Height, float Volume_Fluid, float Time_Leak_Ground, float Volume_SubSoil_Leak_D1, float Volume_SubSoil_Leak_D4, float Volume_Ground_Water_Leak_D1, float Volume_Ground_Water_Leak_D4, float Barrel_Dike_Leak, float Barrel_Dike_Rupture, float Barrel_Onsite_Leak, float Barrel_Onsite_Rupture, float Barrel_Offsite_Leak, float Barrel_Offsite_Rupture, float Barrel_Water_Leak, float Barrel_Water_Rupture, float FC_Environ_Leak, float FC_Environ_Rupture, float FC_Environ, float Material_Factor, float Component_Damage_Cost, float Business_Cost, float Consequence, String ConsequenceCategory)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -138,7 +144,10 @@ namespace RBI.DAL.MSSQL
                         ",[Release_Volume_Leak_D2] = '" + Release_Volume_Leak_D2 + "'" +
                         ",[Release_Volume_Leak_D3] = '" + Release_Volume_Leak_D3 + "'" +
                         ",[Release_Volume_Leak_D4] = '" + Release_Volume_Leak_D4 + "'" +
-                        ",[Release_Volume_Rupture] = '" + Release_Volume_Rupture + "'" +
+                        ",[Release_Volume_Rupture_D1] = '" + Release_Volume_Rupture_D1 + "'" +
+                        ",[Release_Volume_Rupture_D2] = '" + Release_Volume_Rupture_D2 + "'" +
+                        ",[Release_Volume_Rupture_D3] = '" + Release_Volume_Rupture_D3 + "'" +
+                        ",[Release_Volume_Rupture_D4] = '" + Release_Volume_Rupture_D4 + "'" +
                         ",[Liquid_Height] = '" + Liquid_Height + "'" +
                         ",[Volume_Fluid] = '" + Volume_Fluid + "'" +
                         ",[Time_Leak_Ground] = '" + Time_Leak_Ground + "'" +
@@ -223,7 +232,10 @@ namespace RBI.DAL.MSSQL
                         ",[Release_Volume_Leak_D2] " +
                         ",[Release_Volume_Leak_D3] " +
                         ",[Release_Volume_Leak_D4] " +
-                        ",[Release_Volume_Rupture] " +
+                        ",[Release_Volume_Rupture_D1] " +
+                        ",[Release_Volume_Rupture_D2] " +
+                        ",[Release_Volume_Rupture_D3] " +
+                        ",[Release_Volume_Rupture_D4] " +
                         ",[Liquid_Height] " +
                         ",[Volume_Fluid] " +
                         ",[Time_Leak_Ground] " +
@@ -275,7 +287,10 @@ namespace RBI.DAL.MSSQL
                             obj.Release_Volume_Leak_D2 = (float)reader.GetDouble(12);
                             obj.Release_Volume_Leak_D3 = (float)reader.GetDouble(13);
                             obj.Release_Volume_Leak_D4 = (float)reader.GetDouble(14);
-                            obj.Release_Volume_Rupture = (float)reader.GetDouble(15);
+                            obj.Release_Volume_Rupture_D1 = (float)reader.GetDouble(15);
+                            obj.Release_Volume_Rupture_D2 = (float)reader.GetDouble(15);
+                            obj.Release_Volume_Rupture_D3 = (float)reader.GetDouble(17);
+                            obj.Release_Volume_Rupture_D4 = (float)reader.GetDouble(18);
                             obj.Liquid_Height = (float)reader.GetDouble(16);
                             obj.Volume_Fluid = (float)reader.GetDouble(17);
                             obj.Time_Leak_Ground = (float)reader.GetDouble(18);

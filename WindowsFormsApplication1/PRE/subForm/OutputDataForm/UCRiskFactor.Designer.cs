@@ -273,7 +273,7 @@
             this.tbFlowRateD4 = new System.Windows.Forms.TextBox();
             this.tbRealeaseVolumeFromLeakageD1 = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
-            this.tbReleaseVolumeFromRupture = new System.Windows.Forms.TextBox();
+            this.tbReleaseVolumeFromRuptureD1 = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
@@ -308,30 +308,7 @@
             this.cbLF1 = new System.Windows.Forms.ComboBox();
             this.label125 = new System.Windows.Forms.Label();
             this.lblLF1 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.xtraUserControl11 = new RBI.XtraUserControl1();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.panelFQF = new System.Windows.Forms.Panel();
-            this.label126 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label133 = new System.Windows.Forms.Label();
-            this.txtCA1 = new System.Windows.Forms.TextBox();
-            this.label134 = new System.Windows.Forms.Label();
-            this.lblFQF = new System.Windows.Forms.Label();
-            this.panelInput = new System.Windows.Forms.Panel();
-            this.label135 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.txtFM = new System.Windows.Forms.TextBox();
-            this.label136 = new System.Windows.Forms.Label();
-            this.label137 = new System.Windows.Forms.Label();
-            this.label138 = new System.Windows.Forms.Label();
-            this.label139 = new System.Windows.Forms.Label();
-            this.lblInput = new System.Windows.Forms.Label();
             this.groupBoxIV = new System.Windows.Forms.GroupBox();
             this.panelRHP = new System.Windows.Forms.Panel();
             this.textBox48 = new System.Windows.Forms.TextBox();
@@ -455,6 +432,33 @@
             this.label187 = new System.Windows.Forms.Label();
             this.lbllnfinput = new System.Windows.Forms.Label();
             this.label188 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panelFQF = new System.Windows.Forms.Panel();
+            this.label126 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.txtCA1 = new System.Windows.Forms.TextBox();
+            this.label134 = new System.Windows.Forms.Label();
+            this.lblFQF = new System.Windows.Forms.Label();
+            this.panelInput = new System.Windows.Forms.Panel();
+            this.label135 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtFM = new System.Windows.Forms.TextBox();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label137 = new System.Windows.Forms.Label();
+            this.label138 = new System.Windows.Forms.Label();
+            this.label139 = new System.Windows.Forms.Label();
+            this.lblInput = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.xtraUserControl11 = new RBI.XtraUserControl1();
+            this.label189 = new System.Windows.Forms.Label();
+            this.tbReleaseVolumeFromRuptureD4 = new System.Windows.Forms.TextBox();
+            this.label190 = new System.Windows.Forms.Label();
+            this.label191 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -547,15 +551,15 @@
             this.panelLF3.SuspendLayout();
             this.panelLF2.SuspendLayout();
             this.panelLF1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.panelFQF.SuspendLayout();
-            this.panelInput.SuspendLayout();
             this.groupBoxIV.SuspendLayout();
             this.panelRHP.SuspendLayout();
             this.panelCAP.SuspendLayout();
             this.panelInflu.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.panelFQF.SuspendLayout();
+            this.panelInput.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -590,7 +594,7 @@
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(957, 839);
+            this.tabPoF.Size = new System.Drawing.Size(957, 1309);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -1332,7 +1336,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(957, 839);
+            this.tabCA.Size = new System.Drawing.Size(957, 1309);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -1745,7 +1749,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(957, 839);
+            this.tabCAShell.Size = new System.Drawing.Size(957, 1309);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -1817,7 +1821,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(957, 839);
+            this.groupBox7.Size = new System.Drawing.Size(957, 1309);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -2485,7 +2489,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(957, 839);
+            this.tabCATankBottom.Size = new System.Drawing.Size(957, 1309);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -2497,7 +2501,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(957, 839);
+            this.groupBox6.Size = new System.Drawing.Size(957, 1309);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -2959,6 +2963,10 @@
             // pnlIntermediateValues
             // 
             this.pnlIntermediateValues.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlIntermediateValues.Controls.Add(this.label191);
+            this.pnlIntermediateValues.Controls.Add(this.label190);
+            this.pnlIntermediateValues.Controls.Add(this.tbReleaseVolumeFromRuptureD4);
+            this.pnlIntermediateValues.Controls.Add(this.label189);
             this.pnlIntermediateValues.Controls.Add(this.label115);
             this.pnlIntermediateValues.Controls.Add(this.label114);
             this.pnlIntermediateValues.Controls.Add(this.label109);
@@ -2984,7 +2992,7 @@
             this.pnlIntermediateValues.Controls.Add(this.tbFlowRateD4);
             this.pnlIntermediateValues.Controls.Add(this.tbRealeaseVolumeFromLeakageD1);
             this.pnlIntermediateValues.Controls.Add(this.label66);
-            this.pnlIntermediateValues.Controls.Add(this.tbReleaseVolumeFromRupture);
+            this.pnlIntermediateValues.Controls.Add(this.tbReleaseVolumeFromRuptureD1);
             this.pnlIntermediateValues.Controls.Add(this.label48);
             this.pnlIntermediateValues.Controls.Add(this.label51);
             this.pnlIntermediateValues.Controls.Add(this.label49);
@@ -3235,14 +3243,14 @@
             this.label66.TabIndex = 12;
             this.label66.Text = "Release volume from rupture (barrels)";
             // 
-            // tbReleaseVolumeFromRupture
+            // tbReleaseVolumeFromRuptureD1
             // 
-            this.tbReleaseVolumeFromRupture.BackColor = System.Drawing.SystemColors.Control;
-            this.tbReleaseVolumeFromRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbReleaseVolumeFromRupture.Location = new System.Drawing.Point(482, 182);
-            this.tbReleaseVolumeFromRupture.Name = "tbReleaseVolumeFromRupture";
-            this.tbReleaseVolumeFromRupture.Size = new System.Drawing.Size(100, 21);
-            this.tbReleaseVolumeFromRupture.TabIndex = 13;
+            this.tbReleaseVolumeFromRuptureD1.BackColor = System.Drawing.SystemColors.Control;
+            this.tbReleaseVolumeFromRuptureD1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbReleaseVolumeFromRuptureD1.Location = new System.Drawing.Point(482, 182);
+            this.tbReleaseVolumeFromRuptureD1.Name = "tbReleaseVolumeFromRuptureD1";
+            this.tbReleaseVolumeFromRuptureD1.Size = new System.Drawing.Size(100, 21);
+            this.tbReleaseVolumeFromRuptureD1.TabIndex = 13;
             // 
             // label48
             // 
@@ -3359,7 +3367,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(957, 839);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(957, 1309);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -3615,43 +3623,6 @@
             this.lblLF1.Text = "▼ LF1";
             this.lblLF1.Click += new System.EventHandler(this.lblLF1_Click);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(287, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(200, 100);
-            this.tabControl1.TabIndex = 4;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(192, 74);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // xtraUserControl11
-            // 
-            this.xtraUserControl11.Location = new System.Drawing.Point(295, 4);
-            this.xtraUserControl11.Name = "xtraUserControl11";
-            this.xtraUserControl11.Size = new System.Drawing.Size(150, 150);
-            this.xtraUserControl11.TabIndex = 4;
-            // 
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.groupBoxIV);
@@ -3659,220 +3630,6 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(957, 1309);
             this.xtraTabPage1.Text = "Area-based CoF";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.panelFQF);
-            this.groupBox3.Controls.Add(this.panelInput);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 3);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(951, 277);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Fully-Quantitative Consequence of Failture";
-            // 
-            // panelFQF
-            // 
-            this.panelFQF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelFQF.Controls.Add(this.label126);
-            this.panelFQF.Controls.Add(this.textBox1);
-            this.panelFQF.Controls.Add(this.label133);
-            this.panelFQF.Controls.Add(this.txtCA1);
-            this.panelFQF.Controls.Add(this.label134);
-            this.panelFQF.Controls.Add(this.lblFQF);
-            this.panelFQF.Location = new System.Drawing.Point(7, 178);
-            this.panelFQF.Name = "panelFQF";
-            this.panelFQF.Size = new System.Drawing.Size(945, 87);
-            this.panelFQF.TabIndex = 2;
-            // 
-            // label126
-            // 
-            this.label126.AutoSize = true;
-            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label126.Location = new System.Drawing.Point(547, 34);
-            this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(15, 13);
-            this.label126.TabIndex = 6;
-            this.label126.Text = "m";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(363, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // label133
-            // 
-            this.label133.AutoSize = true;
-            this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label133.Location = new System.Drawing.Point(3, 59);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(191, 15);
-            this.label133.TabIndex = 4;
-            this.label133.Text = "Consequence of Failture Category";
-            // 
-            // txtCA1
-            // 
-            this.txtCA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCA1.Location = new System.Drawing.Point(363, 31);
-            this.txtCA1.Name = "txtCA1";
-            this.txtCA1.Size = new System.Drawing.Size(177, 20);
-            this.txtCA1.TabIndex = 3;
-            // 
-            // label134
-            // 
-            this.label134.AutoSize = true;
-            this.label134.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label134.Location = new System.Drawing.Point(3, 34);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(111, 15);
-            this.label134.TabIndex = 2;
-            this.label134.Text = "Consequence Area";
-            // 
-            // lblFQF
-            // 
-            this.lblFQF.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lblFQF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblFQF.ForeColor = System.Drawing.Color.White;
-            this.lblFQF.Location = new System.Drawing.Point(0, 0);
-            this.lblFQF.Name = "lblFQF";
-            this.lblFQF.Size = new System.Drawing.Size(945, 21);
-            this.lblFQF.TabIndex = 1;
-            this.lblFQF.Text = "▼ Fully-Quantitive Financial Consequence of Failture and Category";
-            this.lblFQF.Click += new System.EventHandler(this.lblFQF_Click);
-            // 
-            // panelInput
-            // 
-            this.panelInput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelInput.Controls.Add(this.label135);
-            this.panelInput.Controls.Add(this.comboBox3);
-            this.panelInput.Controls.Add(this.comboBox2);
-            this.panelInput.Controls.Add(this.comboBox1);
-            this.panelInput.Controls.Add(this.txtFM);
-            this.panelInput.Controls.Add(this.label136);
-            this.panelInput.Controls.Add(this.label137);
-            this.panelInput.Controls.Add(this.label138);
-            this.panelInput.Controls.Add(this.label139);
-            this.panelInput.Controls.Add(this.lblInput);
-            this.panelInput.Location = new System.Drawing.Point(8, 30);
-            this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(945, 142);
-            this.panelInput.TabIndex = 1;
-            // 
-            // label135
-            // 
-            this.label135.AutoSize = true;
-            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label135.Location = new System.Drawing.Point(476, 33);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(20, 13);
-            this.label135.TabIndex = 9;
-            this.label135.Text = "Kg";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(363, 104);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(249, 21);
-            this.comboBox3.TabIndex = 8;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.BackColor = System.Drawing.Color.Red;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Isolation or shutdown systems activated directly from process instrumentation or " +
-                "detector, with no operator intervention",
-            "Isolation or shutdown systems activated by operators in the control room or other" +
-                " suitable locations remote from the leak",
-            "Isolation dependent on manually-operated valves"});
-            this.comboBox2.Location = new System.Drawing.Point(363, 80);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(249, 21);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Red;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Instrumentation designed specifically to detect material losses by changes in ope" +
-                "ration conditions(i.e.loss of pressure or flow) in the system",
-            "Suitably located detectors to determine when the material is present outside the " +
-                "pressure containing envelope",
-            "Visual detectuin, cameras, or detectors with marginal coverage"});
-            this.comboBox1.Location = new System.Drawing.Point(363, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 21);
-            this.comboBox1.TabIndex = 6;
-            // 
-            // txtFM
-            // 
-            this.txtFM.BackColor = System.Drawing.Color.Red;
-            this.txtFM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtFM.Location = new System.Drawing.Point(363, 30);
-            this.txtFM.Name = "txtFM";
-            this.txtFM.Size = new System.Drawing.Size(107, 20);
-            this.txtFM.TabIndex = 5;
-            // 
-            // label136
-            // 
-            this.label136.AutoSize = true;
-            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label136.Location = new System.Drawing.Point(3, 107);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(144, 15);
-            this.label136.TabIndex = 4;
-            this.label136.Text = "Type of Detection System";
-            // 
-            // label137
-            // 
-            this.label137.AutoSize = true;
-            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label137.Location = new System.Drawing.Point(3, 83);
-            this.label137.Name = "label137";
-            this.label137.Size = new System.Drawing.Size(138, 15);
-            this.label137.TabIndex = 3;
-            this.label137.Text = "Type of Isolation System";
-            // 
-            // label138
-            // 
-            this.label138.AutoSize = true;
-            this.label138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label138.Location = new System.Drawing.Point(3, 58);
-            this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(144, 15);
-            this.label138.TabIndex = 2;
-            this.label138.Text = "Type of Detection System";
-            // 
-            // label139
-            // 
-            this.label139.AutoSize = true;
-            this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label139.Location = new System.Drawing.Point(3, 33);
-            this.label139.Name = "label139";
-            this.label139.Size = new System.Drawing.Size(188, 15);
-            this.label139.TabIndex = 1;
-            this.label139.Text = "Fluid Mass in the Inventory Group";
-            // 
-            // lblInput
-            // 
-            this.lblInput.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lblInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lblInput.ForeColor = System.Drawing.Color.White;
-            this.lblInput.Location = new System.Drawing.Point(0, 0);
-            this.lblInput.Name = "lblInput";
-            this.lblInput.Size = new System.Drawing.Size(945, 21);
-            this.lblInput.TabIndex = 0;
-            this.lblInput.Text = "▼ Input";
-            this.lblInput.Click += new System.EventHandler(this.lblInput_Click);
             // 
             // groupBoxIV
             // 
@@ -5020,6 +4777,296 @@
             this.label188.TabIndex = 0;
             this.label188.Text = "API Component Type";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panelFQF);
+            this.groupBox3.Controls.Add(this.panelInput);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(951, 277);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Fully-Quantitative Consequence of Failture";
+            // 
+            // panelFQF
+            // 
+            this.panelFQF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelFQF.Controls.Add(this.label126);
+            this.panelFQF.Controls.Add(this.textBox1);
+            this.panelFQF.Controls.Add(this.label133);
+            this.panelFQF.Controls.Add(this.txtCA1);
+            this.panelFQF.Controls.Add(this.label134);
+            this.panelFQF.Controls.Add(this.lblFQF);
+            this.panelFQF.Location = new System.Drawing.Point(7, 178);
+            this.panelFQF.Name = "panelFQF";
+            this.panelFQF.Size = new System.Drawing.Size(945, 87);
+            this.panelFQF.TabIndex = 2;
+            // 
+            // label126
+            // 
+            this.label126.AutoSize = true;
+            this.label126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label126.Location = new System.Drawing.Point(547, 34);
+            this.label126.Name = "label126";
+            this.label126.Size = new System.Drawing.Size(15, 13);
+            this.label126.TabIndex = 6;
+            this.label126.Text = "m";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox1.Location = new System.Drawing.Point(363, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(177, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label133
+            // 
+            this.label133.AutoSize = true;
+            this.label133.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label133.Location = new System.Drawing.Point(3, 59);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(191, 15);
+            this.label133.TabIndex = 4;
+            this.label133.Text = "Consequence of Failture Category";
+            // 
+            // txtCA1
+            // 
+            this.txtCA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCA1.Location = new System.Drawing.Point(363, 31);
+            this.txtCA1.Name = "txtCA1";
+            this.txtCA1.Size = new System.Drawing.Size(177, 20);
+            this.txtCA1.TabIndex = 3;
+            // 
+            // label134
+            // 
+            this.label134.AutoSize = true;
+            this.label134.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label134.Location = new System.Drawing.Point(3, 34);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(111, 15);
+            this.label134.TabIndex = 2;
+            this.label134.Text = "Consequence Area";
+            // 
+            // lblFQF
+            // 
+            this.lblFQF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblFQF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblFQF.ForeColor = System.Drawing.Color.White;
+            this.lblFQF.Location = new System.Drawing.Point(0, 0);
+            this.lblFQF.Name = "lblFQF";
+            this.lblFQF.Size = new System.Drawing.Size(945, 21);
+            this.lblFQF.TabIndex = 1;
+            this.lblFQF.Text = "▼ Fully-Quantitive Financial Consequence of Failture and Category";
+            this.lblFQF.Click += new System.EventHandler(this.lblFQF_Click);
+            // 
+            // panelInput
+            // 
+            this.panelInput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelInput.Controls.Add(this.label135);
+            this.panelInput.Controls.Add(this.comboBox3);
+            this.panelInput.Controls.Add(this.comboBox2);
+            this.panelInput.Controls.Add(this.comboBox1);
+            this.panelInput.Controls.Add(this.txtFM);
+            this.panelInput.Controls.Add(this.label136);
+            this.panelInput.Controls.Add(this.label137);
+            this.panelInput.Controls.Add(this.label138);
+            this.panelInput.Controls.Add(this.label139);
+            this.panelInput.Controls.Add(this.lblInput);
+            this.panelInput.Location = new System.Drawing.Point(8, 30);
+            this.panelInput.Name = "panelInput";
+            this.panelInput.Size = new System.Drawing.Size(945, 142);
+            this.panelInput.TabIndex = 1;
+            // 
+            // label135
+            // 
+            this.label135.AutoSize = true;
+            this.label135.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label135.Location = new System.Drawing.Point(476, 33);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(20, 13);
+            this.label135.TabIndex = 9;
+            this.label135.Text = "Kg";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(363, 104);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(249, 21);
+            this.comboBox3.TabIndex = 8;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.Red;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Isolation or shutdown systems activated directly from process instrumentation or " +
+                "detector, with no operator intervention",
+            "Isolation or shutdown systems activated by operators in the control room or other" +
+                " suitable locations remote from the leak",
+            "Isolation dependent on manually-operated valves"});
+            this.comboBox2.Location = new System.Drawing.Point(363, 80);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(249, 21);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Red;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Instrumentation designed specifically to detect material losses by changes in ope" +
+                "ration conditions(i.e.loss of pressure or flow) in the system",
+            "Suitably located detectors to determine when the material is present outside the " +
+                "pressure containing envelope",
+            "Visual detectuin, cameras, or detectors with marginal coverage"});
+            this.comboBox1.Location = new System.Drawing.Point(363, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(249, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // txtFM
+            // 
+            this.txtFM.BackColor = System.Drawing.Color.Red;
+            this.txtFM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFM.Location = new System.Drawing.Point(363, 30);
+            this.txtFM.Name = "txtFM";
+            this.txtFM.Size = new System.Drawing.Size(107, 20);
+            this.txtFM.TabIndex = 5;
+            // 
+            // label136
+            // 
+            this.label136.AutoSize = true;
+            this.label136.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label136.Location = new System.Drawing.Point(3, 107);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(144, 15);
+            this.label136.TabIndex = 4;
+            this.label136.Text = "Type of Detection System";
+            // 
+            // label137
+            // 
+            this.label137.AutoSize = true;
+            this.label137.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label137.Location = new System.Drawing.Point(3, 83);
+            this.label137.Name = "label137";
+            this.label137.Size = new System.Drawing.Size(138, 15);
+            this.label137.TabIndex = 3;
+            this.label137.Text = "Type of Isolation System";
+            // 
+            // label138
+            // 
+            this.label138.AutoSize = true;
+            this.label138.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label138.Location = new System.Drawing.Point(3, 58);
+            this.label138.Name = "label138";
+            this.label138.Size = new System.Drawing.Size(144, 15);
+            this.label138.TabIndex = 2;
+            this.label138.Text = "Type of Detection System";
+            // 
+            // label139
+            // 
+            this.label139.AutoSize = true;
+            this.label139.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label139.Location = new System.Drawing.Point(3, 33);
+            this.label139.Name = "label139";
+            this.label139.Size = new System.Drawing.Size(188, 15);
+            this.label139.TabIndex = 1;
+            this.label139.Text = "Fluid Mass in the Inventory Group";
+            // 
+            // lblInput
+            // 
+            this.lblInput.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lblInput.ForeColor = System.Drawing.Color.White;
+            this.lblInput.Location = new System.Drawing.Point(0, 0);
+            this.lblInput.Name = "lblInput";
+            this.lblInput.Size = new System.Drawing.Size(945, 21);
+            this.lblInput.TabIndex = 0;
+            this.lblInput.Text = "▼ Input";
+            this.lblInput.Click += new System.EventHandler(this.lblInput_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(287, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(200, 100);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(192, 74);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(192, 74);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // xtraUserControl11
+            // 
+            this.xtraUserControl11.Location = new System.Drawing.Point(295, 4);
+            this.xtraUserControl11.Name = "xtraUserControl11";
+            this.xtraUserControl11.Size = new System.Drawing.Size(150, 150);
+            this.xtraUserControl11.TabIndex = 4;
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label189.Location = new System.Drawing.Point(447, 185);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(29, 15);
+            this.label189.TabIndex = 63;
+            this.label189.Text = "D1 :";
+            // 
+            // tbReleaseVolumeFromRuptureD4
+            // 
+            this.tbReleaseVolumeFromRuptureD4.BackColor = System.Drawing.SystemColors.Control;
+            this.tbReleaseVolumeFromRuptureD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbReleaseVolumeFromRuptureD4.Location = new System.Drawing.Point(654, 182);
+            this.tbReleaseVolumeFromRuptureD4.Name = "tbReleaseVolumeFromRuptureD4";
+            this.tbReleaseVolumeFromRuptureD4.Size = new System.Drawing.Size(100, 21);
+            this.tbReleaseVolumeFromRuptureD4.TabIndex = 64;
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label190.Location = new System.Drawing.Point(619, 185);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(29, 15);
+            this.label190.TabIndex = 65;
+            this.label190.Text = "D4 :";
+            // 
+            // label191
+            // 
+            this.label191.AutoSize = true;
+            this.label191.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label191.Location = new System.Drawing.Point(761, 185);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(45, 15);
+            this.label191.TabIndex = 66;
+            this.label191.Text = "barrels";
+            // 
             // UCRiskFactor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5131,13 +5178,7 @@
             this.panelLF2.PerformLayout();
             this.panelLF1.ResumeLayout(false);
             this.panelLF1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.panelFQF.ResumeLayout(false);
-            this.panelFQF.PerformLayout();
-            this.panelInput.ResumeLayout(false);
-            this.panelInput.PerformLayout();
             this.groupBoxIV.ResumeLayout(false);
             this.panelRHP.ResumeLayout(false);
             this.panelRHP.PerformLayout();
@@ -5145,6 +5186,12 @@
             this.panelCAP.PerformLayout();
             this.panelInflu.ResumeLayout(false);
             this.panelInflu.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.panelFQF.ResumeLayout(false);
+            this.panelFQF.PerformLayout();
+            this.panelInput.ResumeLayout(false);
+            this.panelInput.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -5363,7 +5410,7 @@
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.TextBox tbTimeToInitiate;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox tbReleaseVolumeFromRupture;
+        private System.Windows.Forms.TextBox tbReleaseVolumeFromRuptureD1;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.TextBox tbRealeaseVolumeFromLeakageD1;
         private System.Windows.Forms.Label label67;
@@ -5578,5 +5625,9 @@
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.Label label139;
         private System.Windows.Forms.Label lblInput;
+        private System.Windows.Forms.Label label189;
+        private System.Windows.Forms.Label label191;
+        private System.Windows.Forms.Label label190;
+        private System.Windows.Forms.TextBox tbReleaseVolumeFromRuptureD4;
     }
 }

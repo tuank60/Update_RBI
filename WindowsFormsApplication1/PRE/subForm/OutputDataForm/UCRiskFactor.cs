@@ -25,7 +25,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             riskCA(ID);
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
-            //initData_Tank(ID);
+            initData_Tank(ID);
             initData_CA(ID);
         }
         public String type { set; get; }
@@ -168,7 +168,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbLeakDurationD4.Text = caTank.Leak_Duration_D4.ToString();
             tbRealeaseVolumeFromLeakageD1.Text = caTank.Release_Volume_Leak_D1.ToString();
             tbRealeaseVolumeFromLeakageD4.Text = caTank.Release_Volume_Leak_D4.ToString();
-            tbReleaseVolumeFromRupture.Text = caTank.Release_Volume_Rupture.ToString();
+            tbReleaseVolumeFromRuptureD1.Text = caTank.Release_Volume_Rupture_D1.ToString();
+            tbReleaseVolumeFromRuptureD4.Text = caTank.Release_Volume_Rupture_D4.ToString();
             tbTimeToInitiate.Text = caTank.Time_Leak_Ground.ToString();
             tbVolumeSubsoilFromLeakageD1.Text = caTank.Volume_SubSoil_Leak_D1.ToString();
             tbVolumeSubsoilFromLeakageD4.Text = caTank.Volume_SubSoil_Leak_D4.ToString();
@@ -210,7 +211,10 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbReleaseVolumeLeakageShellD3.Text = caTank.Release_Volume_Leak_D3.ToString();
             tbReleaseVolumeLeakageShellD4.Text = caTank.Release_Volume_Leak_D4.ToString();
 
-            tbReleaseVolumeRuptureShell.Text = caTank.Release_Volume_Rupture.ToString();
+            tbReleaseVolumeLeakageShellD1.Text = caTank.Release_Volume_Leak_D1.ToString();
+            tbReleaseVolumeLeakageShellD2.Text = caTank.Release_Volume_Leak_D2.ToString();
+            tbReleaseVolumeLeakageShellD3.Text = caTank.Release_Volume_Leak_D3.ToString();
+            tbReleaseVolumeLeakageShellD4.Text = caTank.Release_Volume_Leak_D4.ToString();
             tbTimeLeakageGroundWaterShell.Text = caTank.Time_Leak_Ground.ToString();
             tbVolumeSubsoilShellD1.Text = caTank.Volume_SubSoil_Leak_D1.ToString();
             tbVolumeSubsoilShellD4.Text = caTank.Volume_SubSoil_Leak_D4.ToString();
