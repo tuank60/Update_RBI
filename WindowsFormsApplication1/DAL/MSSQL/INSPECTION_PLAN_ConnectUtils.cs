@@ -19,12 +19,10 @@ namespace RBI.DAL.MSSQL
             String sql = "USE [rbi]" +
                         "INSERT INTO [dbo].[INSPECTION_PLAN]" +
                         "([InspPlanName]" +
-                        ",[InspPlanDate]" +
-                        ",[Remarks])" +
+                        ",[InspPlanDate])" +
                         "VALUES" +
                         "('" + InspPlanName + "'" +
-                        ",'" + InspPlanDate + "'" +
-                        ",'" + Remarks + "')";
+                        ",'" + InspPlanDate + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -102,7 +100,7 @@ namespace RBI.DAL.MSSQL
             String sql = " Use [rbi] Select [PlanID]" +
                           ",[InspPlanName]" +
                           ",[InspPlanDate]" +
-                          ",[Remarks]" +
+                         // ",[Remarks]" +
                           "From [dbo].[INSPECTION_PLAN]";
             try
             {
@@ -122,11 +120,10 @@ namespace RBI.DAL.MSSQL
                             {
                                 obj.InspPlanDate = reader.GetDateTime(2);
                             }
-                            if (!reader.IsDBNull(3))
-                            {
-                                obj.Remarks = reader.GetString(3);
-                            }
-                            
+                            //if (!reader.IsDBNull(3))
+                            //{
+                                //obj.Remarks = reader.GetString(3);
+                            //}
                             list.Add(obj);
                         }
                     }

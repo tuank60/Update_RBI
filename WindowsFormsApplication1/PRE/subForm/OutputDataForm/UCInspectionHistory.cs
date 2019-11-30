@@ -11,6 +11,8 @@ using RBI.Object.ObjectMSSQL;
 using RBI.BUS.BUSMSSQL;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraSplashScreen;
+using RBI.PRE.subForm.InputDataForm;
+
 namespace RBI.PRE.subForm.OutputDataForm
 {
     public partial class UCInspectionHistory : UserControl
@@ -45,7 +47,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             string[] header = { "Sites Name", "Facility Name", "Inspection Plan Name", "Inspection Coverage Name", "Equipment Number", "Component Number", "DM", "Inspection Type", "Inspection Date", "Inspection Effctive" };
             try
             {
-                gridControl1.DataSource = getData();
+                gridControl.DataSource = getData();
                 gridView1.Columns.Remove(gridView1.Columns["ID"]);
                 try
                 {
@@ -70,6 +72,24 @@ namespace RBI.PRE.subForm.OutputDataForm
                 // do nothing
             }
             SplashScreenManager.CloseForm();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            frmCreateInspectionPlan create = new frmCreateInspectionPlan();
+            create.ShowDialog();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            frmSearchInspectionPlan search = new frmSearchInspectionPlan();
+            search.ShowDialog();
+        }
+
+        private void btnAddEdit_Click(object sender, EventArgs e)
+        {
+            frmInspectionPlanDetail detail = new frmInspectionPlanDetail();
+            detail.ShowDialog();
         }
     }
 }

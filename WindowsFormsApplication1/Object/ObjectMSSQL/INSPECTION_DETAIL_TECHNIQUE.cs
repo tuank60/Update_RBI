@@ -14,5 +14,7 @@ namespace RBI.Object.ObjectMSSQL
         public int IMTypeID { get; set; }
         public int InspectionType { get; set; }
         public int Coverage { get; set; }
+        public String NDTMethod { get; set; }
+        
     }
 }

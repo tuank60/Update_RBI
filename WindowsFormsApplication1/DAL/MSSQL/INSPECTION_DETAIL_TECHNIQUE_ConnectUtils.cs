@@ -13,20 +13,40 @@ namespace RBI.DAL.MSSQL
 {
     class INSPECTION_DETAIL_TECHNIQUE_ConnectUtils
     {
-        public void add(int CoverageID, int IMItemID, int IMTypeID, int InspectionType, int Coverage)
+        public void add(int CoverageID, int IMItemID, int IMTypeID, int InspectionType, int Coverage, string NDTMethod)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "USE [rbi]" +
+            String sql = //"USE [rbi]" +
+                        //"INSERT INTO [dbo].[INSPECTION_DETAIL_TECHNIQUE]" +
+                        //"(" +
+                        //"[CoverageID]" +
+                        //"," +
+                        //"[IMItemID]" +
+                        //",[IMTypeID]" +
+                       // ",[InspectionType]" +
+                        //",[Coverage])" +
+                        //"VALUES" +
+                        //"('" 
+                        //+ CoverageID + "'" +
+                        //",'" 
+                       // + IMItemID + "'" +
+                       // ",'" + IMTypeID + "'" +
+                       // ",'" + InspectionType + "'" +
+                        //",'" + Coverage +
+                       // "')";
+            "USE [rbi]" +
                         "INSERT INTO [dbo].[INSPECTION_DETAIL_TECHNIQUE]" +
                         "([CoverageID]" +
                         ",[IMItemID]" +
+                        ",[NDTMethod]" +
                         ",[IMTypeID]" +
                         ",[InspectionType]" +
                         ",[Coverage])" +
                         "VALUES" +
                         "('" + CoverageID + "'" +
                         ",'" + IMItemID + "'" +
+                        ",'" + NDTMethod + "'" +
                         ",'" + IMTypeID + "'" +
                         ",'" + InspectionType + "'" +
                         ",'" + Coverage + "')";
@@ -101,6 +121,53 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
+        public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource(int CoverageID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<INSPECTION_DETAIL_TECHNIQUE> list = new List<INSPECTION_DETAIL_TECHNIQUE>();
+            INSPECTION_DETAIL_TECHNIQUE obj = null;
+            String sql = " Use [rbi] Select [ID]" +
+                          ",[IMItemID]" +
+                          ",[NDTMethod]" +
+                          ",[IMTypeID]" +
+                          ",[InspectionType]" +
+                          ",[Coverage]" +
+                          "From [rbi].[dbo].[COMPONENT_DETAIL] Where [CoverageID] ='" + CoverageID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new INSPECTION_DETAIL_TECHNIQUE();
+                            obj.ID = reader.GetInt32(0);
+                            obj.IMItemID = reader.GetInt32(1);
+                            obj.NDTMethod = reader.GetString(2);
+                            obj.IMTypeID = reader.GetInt32(3);
+                            obj.InspectionType = reader.GetInt32(4);
+                            obj.Coverage = reader.GetInt32(5);
+                            list.Add(obj);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
         public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -110,6 +177,7 @@ namespace RBI.DAL.MSSQL
             String sql = " Use [rbi] Select [ID]" +
                           ",[CoverageID]" +
                           ",[IMItemID]" +
+                          ",[NDTMethod]" +
                           ",[IMTypeID]" +
                           ",[InspectionType]" +
                           ",[Coverage]" +
@@ -134,11 +202,19 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(3))
                             {
-                                obj.IMTypeID = reader.GetInt32(3);
+                                obj.NDTMethod = reader.GetString(3);
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.InspectionType = reader.GetInt32(4);
+                                obj.IMTypeID = reader.GetInt32(4);
+                            }
+                            if (!reader.IsDBNull(5))
+                            {
+                                obj.InspectionType = reader.GetInt32(5);
+                            }
+                            if (!reader.IsDBNull(6))
+                            {
+                                obj.Coverage = reader.GetInt32(6);
                             }
                             list.Add(obj);
                         }
