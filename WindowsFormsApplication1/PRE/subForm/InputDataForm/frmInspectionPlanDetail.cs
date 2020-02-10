@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using RBI.BUS.BUSMSSQL;
+using RBI.Object;
 using RBI.Object.ObjectMSSQL;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.DataAccess.Excel;
@@ -21,14 +22,33 @@ namespace RBI.PRE.subForm.InputDataForm
     public partial class frmInspectionPlanDetail : Form
     {
         int _coverageID = 1;
-        public frmInspectionPlanDetail()
+        List<INSPECTION_DETAIL_TECHNIQUE> listNDT = new List<INSPECTION_DETAIL_TECHNIQUE>();
+        public frmInspectionPlanDetail(int PlanID)
         {
             InitializeComponent();
             Display();
             //Displaytab2();
             radioGroup1.EditValue = 1;
+            Showtab(PlanID);
+            initCombox();
+            gridview1(0,0,0);
 
         }
+
+        public void Showtab(int PlanID)
+        {
+            try
+            {
+                INSPECTION_PLAN_BUS businsplan = new INSPECTION_PLAN_BUS();
+                InspectionPlanName.Text = businsplan.getPlanName(PlanID);
+                InspectionDate.Text = businsplan.getPlanDate(PlanID);
+                
+            }
+            catch
+            {
+                // do nothing
+            }
+        }       
 
         private void BTnCancel_Click(object sender, EventArgs e)
         {
@@ -43,6 +63,7 @@ namespace RBI.PRE.subForm.InputDataForm
 
         #region tab Inspection Method
         public bool ButtonAddClicked { set; get; }
+
         private void btnAddIspMethod_Click(object sender, EventArgs e)
         {
             INSPECTION_DETAIL_TECHNIQUE ipTech = new INSPECTION_DETAIL_TECHNIQUE();
@@ -71,8 +92,9 @@ namespace RBI.PRE.subForm.InputDataForm
             MessageBox.Show(item);
             ipTech.NDTMethod = item;
             ButtonAddClicked = true;
-            ipTechBus.add(ipTech);
-            Displaytab2();
+            listNDT.Add(ipTech);           
+            gridControlMethod.DataSource = null;
+            gridControlMethod.DataSource = listNDT;            
         }
         private void gridControlMethod_Load(object sender, EventArgs e)
         {
@@ -171,24 +193,55 @@ namespace RBI.PRE.subForm.InputDataForm
                     break;
             }
         }
+        private List<RW_ASSESSMENT> getListAssessment(int EquipmentID)
+        {
+            List<RW_ASSESSMENT> listData = new List<RW_ASSESSMENT>();
+            RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
+            List<RW_ASSESSMENT> assessment;
+            if(EquipmentID == 0 ){
+                assessment= busAssessment.getDataSource();
+            }
+            else
+            {
+                assessment = busAssessment.getDataSourceEquipmentID(EquipmentID);
+            }
+            EQUIPMENT_MASTER_BUS buseq = new EQUIPMENT_MASTER_BUS();
+            COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+            foreach (RW_ASSESSMENT inspCove in assessment)
+            {
+                RW_ASSESSMENT rwAssessment = inspCove;
+                rwAssessment.EquipmentNumber = buseq.getEquipmentNumber(inspCove.EquipmentID);
+                rwAssessment.ComponentName = buscom.getComponentName(inspCove.ComponentID);
+                rwAssessment.ComponentNumber = buscom.getComponentNumber(inspCove.ComponentID);
+                listData.Add(rwAssessment);
+            }
+            return listData;
+        }
+
+        public void gridview1(int SiteID,int FavilityID, int EquipmentID)
+        {
+            gridControl1.DataSource = null;
+            RW_ASSESSMENT_BUS busAss = new RW_ASSESSMENT_BUS();
+            gridControl1.DataSource = getListAssessment(EquipmentID);
+        }
         private void btnDelete_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            int a = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableID);
+            //int a = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableID);
             INSPECTION_DETAIL_TECHNIQUE ip = new INSPECTION_DETAIL_TECHNIQUE();
-            ip.ID = a;
+            //ip.ID = a;
             INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
             busisp.delete(ip);
-            Displaytab2();
+            //Displaytab2();
         }
         private void GridViewtab2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             #region spinEdit in gridView
             INSPECTION_DETAIL_TECHNIQUE tech = new INSPECTION_DETAIL_TECHNIQUE();
-            tech.ID = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableID);
+            //tech.ID = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableID);
             tech.CoverageID = _coverageID;
-            tech.IMItemID = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableTechnique);
-            tech.IMTypeID = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableTypeMethod);
-            tech.InspectionType = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableIspType);
+            //tech.IMItemID = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableTechnique);
+            //tech.IMTypeID = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableTypeMethod);
+            //tech.InspectionType = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableIspType);
             tech.Coverage = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colCoverage);
             tech.NDTMethod = (String)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colNDT);
             INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
@@ -220,15 +273,38 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             try
             {
-                gridControlMethod.DataSource = null;
-                INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
-                gridControlMethod.DataSource = busisp.getDataSource();
+                //gridControlMethod.DataSource = null;
+                //INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
+                //RW_ASSESSMENT_BUS busisp = new RW_ASSESSMENT_BUS();
+                //gridControlMethod.DataSource = busisp.getDataSource();
+                //gridViewtab2.SetRowCellValue(2, 1, "aaa");
+                //gridControlMethod.DataSource = listDetail;
+                //gridViewtab2.AddNewRow();
+                //DataRow dt = new DataRow();
+                List<INSPECTION_DETAIL_TECHNIQUE> list= new List<INSPECTION_DETAIL_TECHNIQUE>();
+                INSPECTION_DETAIL_TECHNIQUE ins = new INSPECTION_DETAIL_TECHNIQUE();
+                ins.NDTMethod = "aaa";
+                ins.Coverage = 12;
+                list.Add(ins);
+                gridControlMethod.DataSource = list;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void AddListData(String NDT)
+        {
+            //List<INSPECTION_DETAIL_TECHNIQUE> list = new List<INSPECTION_DETAIL_TECHNIQUE>();
+            //list = obj;
+            INSPECTION_DETAIL_TECHNIQUE ins = new INSPECTION_DETAIL_TECHNIQUE();
+            ins.NDTMethod = NDT;
+            //ins.Coverage = 12;
+            listNDT.Add(ins);
+            //return list;
+        }
+
         #endregion
         #region test
         private void frmInspectionPlanDetail_Load(object sender, EventArgs e)
@@ -247,7 +323,9 @@ namespace RBI.PRE.subForm.InputDataForm
             {
                 gridControl3.DataSource = null;
                 INSPECTION_PLAN_BUS busisp = new INSPECTION_PLAN_BUS();
+                RW_INSPECTION_HISTORY_BUS busDetail = new RW_INSPECTION_HISTORY_BUS();
                 gridControl3.DataSource = busisp.getDataSource();
+                //gridControl3.DataSource = busDetail.getDataSource();
             }
             catch (Exception e)
             {
@@ -255,5 +333,113 @@ namespace RBI.PRE.subForm.InputDataForm
             }
         }
         #endregion
+        #region Combobox
+        private void initCombox()
+        {
+            additemsSite();
+        }
+        private void additemsSite()
+        {   
+            
+            SITES_BUS busSite = new SITES_BUS();
+            List<SITES> listitemsSite = busSite.getData();
+            int index = 0;
+            cbSite.Properties.Items.Add("<ALL>", -1, -1);
+            for (int i = 0; i < listitemsSite.Count; i++)
+            {
+                cbSite.Properties.Items.Add(listitemsSite[i].SiteName, i, i);
+                index = i;
+            }
+            cbSite.SelectedIndex = 0;            
+        }
+
+        private void additemsFacility()
+        {
+            cbFacility.Properties.Items.Add("<ALL>", -1, -1);
+            cbFacility.SelectedIndex = 0;
+            int SIteID = 0;
+            if (cbSite.Text == "<ALL>")
+            {
+                SIteID = 0;
+            }
+            else
+            {
+                SITES_BUS busSite = new SITES_BUS();
+                SIteID = busSite.getIDbyName(cbSite.Text);
+            }
+            FACILITY_BUS busFaci = new FACILITY_BUS();
+            List<string> listitemsFaci = busFaci.getListFacilityName(SIteID);
+            for (int i = 0; i < listitemsFaci.Count; i++)
+            {
+                cbFacility.Properties.Items.Add(listitemsFaci[i], i, i);
+            }
+        }
+        private void cbSite_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbFacility.Properties.Items.Clear();
+            cbEquipment.Properties.Items.Clear();
+            additemsFacility();
+            additemsEquipment();
+            SITES_BUS busSite = new SITES_BUS();
+            FACILITY_BUS busFacility = new FACILITY_BUS();
+            EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
+            gridview1(busSite.getIDbyName(cbSite.Text), busFacility.getIDbyName(cbFacility.Text), busEquipment.getIDbyName(cbEquipment.Text));
+        }
+
+        private void additemsEquipment()
+        {
+            cbEquipment.Properties.Items.Add("<ALL>", -1, -1);
+            cbEquipment.SelectedIndex = 0;
+            int FacilityID1 = 0;
+            if (cbFacility.Text == "<ALL>")
+            {
+                FacilityID1 = 0;
+            }
+            else
+            {
+                FACILITY_BUS busFaci = new FACILITY_BUS();
+                FacilityID1 = busFaci.getIDbyName(cbFacility.Text);
+            }
+            EQUIPMENT_MASTER_BUS busequip = new EQUIPMENT_MASTER_BUS();
+            List<String> listitemsEquip = busequip.getListEquipmentName(FacilityID1);    
+            for (int i = 0; i < listitemsEquip.Count; i++)
+            {
+                cbEquipment.Properties.Items.Add(listitemsEquip[i], i, i);
+            }
+        }
+        private void cbFacility_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbEquipment.Properties.Items.Clear();
+            additemsEquipment();
+            SITES_BUS busSite = new SITES_BUS();
+            FACILITY_BUS busFacility = new FACILITY_BUS();
+            EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
+            gridview1(0, busFacility.getIDbyName(cbFacility.Text), 0);
+        }
+
+        private void btnRefesh_Click(object sender, EventArgs e)
+        {
+            cbSite.Properties.Items.Clear();
+            cbFacility.Properties.Items.Clear();
+            cbEquipment.Properties.Items.Clear();
+            additemsSite();
+            additemsFacility();
+            additemsEquipment();
+        }
+
+        private void cbEquipment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SITES_BUS busSite = new SITES_BUS();
+            FACILITY_BUS busFacility = new FACILITY_BUS();
+            EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
+            gridview1(0, 0, busEquipment.getIDbyName(cbEquipment.Text));
+        }
+        #endregion 
+
+        
+
+        
+        
+
     }
 }

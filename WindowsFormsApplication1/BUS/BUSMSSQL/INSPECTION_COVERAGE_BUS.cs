@@ -28,6 +28,9 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
-
+        public List<INSPECTION_COVERAGE> getDataID(int PlanID)
+        {
+            return DAL.getDataID(PlanID);
+        }
     }
 }

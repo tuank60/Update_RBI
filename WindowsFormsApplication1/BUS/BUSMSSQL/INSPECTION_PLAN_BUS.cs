@@ -28,5 +28,13 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public String getPlanName(int PlanID)
+        {
+            return DAL.getPlanName(PlanID);
+        }
+        public String getPlanDate(int PlanID)
+        {
+            return DAL.getPlanDate(PlanID);
+        }
     }
 }

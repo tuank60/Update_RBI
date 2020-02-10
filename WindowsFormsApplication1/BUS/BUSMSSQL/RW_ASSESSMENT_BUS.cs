@@ -32,6 +32,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public List<RW_ASSESSMENT> getDataSourceEquipmentID(int EquipmentID)
+        {
+            return DAL.getDataSourceEquipmentID(EquipmentID);
+        }
         public int getEquipmentID(int ID)
         {
             return DAL.getEquipmentID(ID);

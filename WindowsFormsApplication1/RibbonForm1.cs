@@ -3113,9 +3113,9 @@ namespace RBI
 
         private void navFullInspHis_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            UCInspectionHistory history = new UCInspectionHistory();
+            UCInspectionHistory history = new UCInspectionHistory(0);
             history.Dock = DockStyle.Fill;
-            addTabfromMainMenu("Inspection History", history);
+            addTabfromMainMenu("Inspection / Mitigation Planner", history);
         }
         private void CheckAndShowTab(string tabname, int serial)
         {

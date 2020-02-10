@@ -941,7 +941,7 @@
             // 
             // navFullInspHis
             // 
-            this.navFullInspHis.Caption = "Inspection History";
+            this.navFullInspHis.Caption = "Inspection / Mitigation Planning";
             this.navFullInspHis.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFullInspHis.ImageOptions.SmallImage")));
             this.navFullInspHis.Name = "navFullInspHis";
             this.navFullInspHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFullInspHis_LinkClicked);

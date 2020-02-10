@@ -141,5 +141,72 @@ namespace RBI.DAL.MSSQL
             return list;
         }
 
+        public String getPlanName(int PlanID)
+        {
+            String insplanName = "";
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select InspPlanName from rbi.dbo.INSPECTION_PLAN where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows && !reader.IsDBNull(0))
+                        {
+                            insplanName = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get DateTime Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return insplanName;
+        }
+
+        public String getPlanDate(int PlanID)
+        {
+            String insplanDate = "";
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select InspPlanDate from rbi.dbo.INSPECTION_PLAN where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows && !reader.IsDBNull(0))
+                        {
+                            insplanDate = reader.GetDateTime(0).ToString();
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get DateTime Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return insplanDate;
+        }
     }
 }

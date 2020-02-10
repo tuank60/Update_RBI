@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using RBI.BUS.BUSMSSQL;
 using RBI.Object.ObjectMSSQL;
 using DevExpress.XtraGrid.Columns;
+using RBI.PRE.subForm.OutputDataForm;
 
 namespace RBI.PRE.subForm.InputDataForm
 {
@@ -21,10 +22,14 @@ namespace RBI.PRE.subForm.InputDataForm
             InitializeComponent();
             Display();
         }
-        public bool ButtonSelectClicked { set; get; }
+        public int ButtonSelectClicked { set; get; }
         private void btnSelect_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            ButtonSelectClicked = true;
+            int _id = (int)gridView1.GetRowCellValue(gridView1.FocusedRowHandle, ColInvisiblePlanID);
+            INSPECTION_PLAN ip = new INSPECTION_PLAN();
+            ip.PlanID = _id;           
+            UCInspectionHistory uchis = new UCInspectionHistory(ip.PlanID);            
+            ButtonSelectClicked = ip.PlanID;
             this.Close();
         }
         private void btnDelete_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)

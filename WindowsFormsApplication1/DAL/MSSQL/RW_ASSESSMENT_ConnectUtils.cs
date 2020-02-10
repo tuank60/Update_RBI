@@ -343,6 +343,112 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public List<RW_ASSESSMENT> getDataSourceEquipmentID(int EquipmentID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<RW_ASSESSMENT> list = new List<RW_ASSESSMENT>();
+            RW_ASSESSMENT obj = null;
+            String sql = " Use [rbi] Select [ID]" +
+                          ",[EquipmentID]" +
+                          ",[ComponentID]" +
+                          ",[AssessmentDate]" +
+                          ",[AssessmentMethod]" +
+                          ",[RiskAnalysisPeriod]" +
+                          ",[IsEquipmentLinked]" +
+                          ",[RecordType]" +
+                          ",[ProposalNo]" +
+                          ",[RevisionNo]" +
+                          ",[IsRecommend]" +
+                          ",[ProposalOrRevision]" +
+                          ",[AdoptedBy]" +
+                          ",[AdoptedDate]" +
+                          ",[RecommendedBy]" +
+                          ",[RecommendedDate]" +
+                          ",[ProposalName]" +
+                          "From [dbo].[RW_ASSESSMENT] WHERE EquipmentID = '" + EquipmentID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new RW_ASSESSMENT();
+                            obj.ID = reader.GetInt32(0);
+                            obj.EquipmentID = reader.GetInt32(1);
+                            obj.ComponentID = reader.GetInt32(2);
+                            if (!reader.IsDBNull(3))
+                            {
+                                obj.AssessmentDate = reader.GetDateTime(3);
+                            }
+                            if (!reader.IsDBNull(4))
+                            {
+                                obj.AssessmentMethod = reader.GetInt32(4);
+                            }
+                            if (!reader.IsDBNull(5))
+                            {
+                                obj.RiskAnalysisPeriod = reader.GetInt32(5);
+                            }
+                            obj.IsEquipmentLinked = reader.GetOrdinal("IsEquipmentLinked");
+                            if (!reader.IsDBNull(7))
+                            {
+                                obj.RecordType = reader.GetString(7);
+                            }
+                            if (!reader.IsDBNull(8))
+                            {
+                                obj.ProposalNo = reader.GetInt32(8);
+                            }
+                            if (!reader.IsDBNull(9))
+                            {
+                                obj.RevisionNo = reader.GetInt32(9);
+                            }
+                            obj.IsRecommend = reader.GetOrdinal("IsRecommend");
+                            if (!reader.IsDBNull(11))
+                            {
+                                obj.ProposalOrRevision = reader.GetString(11);
+                            }
+                            if (!reader.IsDBNull(12))
+                            {
+                                obj.AdoptedBy = reader.GetString(12);
+                            }
+                            if (!reader.IsDBNull(13))
+                            {
+                                obj.AdoptedDate = reader.GetDateTime(13);
+                            }
+                            if (!reader.IsDBNull(14))
+                            {
+                                obj.RecommendedBy = reader.GetString(14);
+                            }
+                            if (!reader.IsDBNull(15))
+                            {
+                                obj.RecommendedDate = reader.GetDateTime(15);
+                            }
+                            if (!reader.IsDBNull(16))
+                            {
+                                obj.ProposalName = reader.GetString(16);
+                            }
+                            list.Add(obj);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
+
         public int getEquipmentID(int ID)
         {
             int eqID = 0;

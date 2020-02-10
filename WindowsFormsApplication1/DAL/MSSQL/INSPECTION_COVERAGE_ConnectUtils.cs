@@ -161,6 +161,64 @@ namespace RBI.DAL.MSSQL
             return list;
         }
 
+        public List<INSPECTION_COVERAGE> getDataID(int PlanID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<INSPECTION_COVERAGE> list = new List<INSPECTION_COVERAGE>();
+            INSPECTION_COVERAGE obj = null;
+            String sql = " Use [rbi] Select [ID]" +
+                          ",[PlanID]" +
+                          ",[EquipmentID]" +
+                          ",[ComponentID]" +
+                          ",[Remarks]" +
+                          ",[Findings]" +
+                          ",[FindingRTF]" +
+                          "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new INSPECTION_COVERAGE();
+                            obj.ID = reader.GetInt32(0);
+                            obj.PlanID = reader.GetInt32(1);
+                            obj.EquipmentID = reader.GetInt32(2);
+                            obj.ComponentID = reader.GetInt32(3);
+                            if (!reader.IsDBNull(4))
+                            {
+                                obj.Remarks = reader.GetString(4);
+                            }
+                            if (!reader.IsDBNull(5))
+                            {
+                                obj.Findings = reader.GetString(5);
+                            }
+                            if (!reader.IsDBNull(6))
+                            {
+                                obj.FindingRTF = reader.GetString(6);
+                            }
+                            list.Add(obj);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
     }
 }
 
