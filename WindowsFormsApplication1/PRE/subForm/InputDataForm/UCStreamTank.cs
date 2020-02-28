@@ -17,20 +17,20 @@ namespace RBI.PRE.subForm.InputDataForm
     {
         string[] itemsExposureAmine = { "High Rich Amine", "Low Lean Amine", "None" };
         string[] itemsAmineSolutionComposition = { "Diethanolamine DEA", "Diglycolamine DGA", "Disopropanolamine DIPA", "Methyldiethanolamine MDEA", "Monoethanolamine MEA", "Sulfinol" };
-        string[] itemsTankFluid = { "Gasoline", "Light Diesel Oil", "Heavy Diesel Oil", "Fuel Oil", "Crude Oil", "Heavy Fuel Oil", "Heavy Crude Oil" };
+       // string[] itemsTankFluid = { "Gasoline", "Light Diesel Oil", "Heavy Diesel Oil", "Fuel Oil", "Crude Oil", "Heavy Fuel Oil", "Heavy Crude Oil" };
         public UCStreamTank()
         {
             InitializeComponent();
             addItemsExposureAmine();
             addItemsAmineSolutionComposition();
-            addItemsTankFluid();
+           // addItemsTankFluid();
         }
         public UCStreamTank(int ID)
         {
             InitializeComponent();
             addItemsExposureAmine();
             addItemsAmineSolutionComposition();
-            addItemsTankFluid();
+           // addItemsTankFluid();
             ShowDataToControl(ID);
         }
         private void ShowDataToControl(int ID)
@@ -69,14 +69,15 @@ namespace RBI.PRE.subForm.InputDataForm
             txtReleaseFluidPercent.Text = obj.ReleaseFluidPercentToxic.ToString();
             txtpHWater.Text = obj.WaterpH.ToString();
             //tank
-            for (int i = 0; i < itemsTankFluid.Length; i++)
-            {
-                if (obj.TankFluidName == itemsTankFluid[i])
-                {
-                    cbFluidTank.SelectedIndex = i + 1;
-                    break;
-                }
-            }
+            //for (int i = 0; i < itemsTankFluid.Length; i++)
+            //{
+            //    if (obj.TankFluidName == itemsTankFluid[i])
+            //    {
+            //        cbFluidTank.SelectedIndex = i + 1;
+            //        break;
+            //    }
+            //}
+            txbModelFluid.Text = obj.TankFluidName;
             txtFluidHeight.Text = obj.FluidHeight.ToString();
             txtPercentageLeavingDike.Text = obj.FluidLeaveDikePercent.ToString();
             txtPercentageLeavingRemainsOnSite.Text = obj.FluidLeaveDikeRemainOnSitePercent.ToString();
@@ -103,6 +104,7 @@ namespace RBI.PRE.subForm.InputDataForm
             stream.H2S = chkEnviromentContainsH2S.Checked ? 1 : 0;
             stream.Hydrogen = chkPresenceHydrofluoricAcid.Checked ? 1 : 0;
             stream.MaterialExposedToClInt = chkChlorine.Checked ? 1 : 0;
+            stream.TankFluidName = txbModelFluid.Text;//hai
             //if(tankbottom)
             stream.FluidHeight = txtFluidHeight.Text != "" ? float.Parse(txtFluidHeight.Text) : 0;
             stream.FluidLeaveDikePercent = txtPercentageLeavingDike.Text != "" ? float.Parse(txtPercentageLeavingDike.Text) : 0;
@@ -125,7 +127,8 @@ namespace RBI.PRE.subForm.InputDataForm
             tank.P_offsite = txtPercentageFluidGoingOffsite.Text != "" ? float.Parse(txtPercentageFluidGoingOffsite.Text) : 0;
             tank.P_onsite = txtPercentageLeavingRemainsOnSite.Text != "" ? float.Parse(txtPercentageLeavingRemainsOnSite.Text) : 0;
             tank.FLUID_HEIGHT = txtFluidHeight.Text != "" ? float.Parse(txtFluidHeight.Text) : 0;
-            tank.TANK_FLUID = cbFluidTank.Text;
+            tank.TANK_FLUID = txbModelFluid.Text;
+            //Console.WriteLine("tank height" + tank.FLUID_HEIGHT);
             if (tank.TANK_FLUID == "Gasoline")
                 tank.API_FLUID = "C6-C8";
             else if (tank.TANK_FLUID == "Light Diesel Oil")
@@ -142,21 +145,21 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             RW_INPUT_CA_TANK ca = new RW_INPUT_CA_TANK();
             ca.ID = 1;
-            ca.TANK_FLUID = cbFluidTank.Text;
+            ca.TANK_FLUID = txbModelFluid.Text;
             ca.FLUID_HEIGHT = txtFluidHeight.Text != "" ? float.Parse(txtFluidHeight.Text) : 0;
             ca.P_lvdike = txtPercentageLeavingDike.Text != "" ? float.Parse(txtPercentageLeavingDike.Text) : 0;
             ca.P_onsite = txtPercentageLeavingRemainsOnSite.Text != "" ? float.Parse(txtPercentageLeavingRemainsOnSite.Text) : 0;
             ca.P_offsite = txtPercentageFluidGoingOffsite.Text != "" ? float.Parse(txtPercentageFluidGoingOffsite.Text) : 0;
             return ca;
         }
-        private void addItemsTankFluid()
-        {
-            cbFluidTank.Properties.Items.Add("", -1, -1);
-            for(int i = 0; i < itemsTankFluid.Length; i++)
-            {
-                cbFluidTank.Properties.Items.Add(itemsTankFluid[i], i, i);
-            }
-        }
+        //private void addItemsTankFluid()
+        //{
+        //    cbFluidTank.Properties.Items.Add("", -1, -1);
+        //    for(int i = 0; i < itemsTankFluid.Length; i++)
+        //    {
+        //        cbFluidTank.Properties.Items.Add(itemsTankFluid[i], i, i);
+        //    }
+        //}
         private void addItemsExposureAmine()
         {
             cbExposureAmine.Properties.Items.Add("", -1, -1);
@@ -323,6 +326,18 @@ namespace RBI.PRE.subForm.InputDataForm
             pnlStress.Height = 21;
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmTankModelFluid tmf = new frmTankModelFluid();
+            tmf.ShowDialog();
+            txbModelFluid.Text = tmf.Fluid_Column;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.txbModelFluid.Text = "";
+        }
 
     }
 }

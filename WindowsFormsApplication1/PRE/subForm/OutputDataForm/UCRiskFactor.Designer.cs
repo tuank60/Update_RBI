@@ -248,6 +248,10 @@
             this.tbOnsiteRupture = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.pnlIntermediateValues = new System.Windows.Forms.Panel();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label190 = new System.Windows.Forms.Label();
+            this.tbReleaseVolumeFromRuptureD4 = new System.Windows.Forms.TextBox();
+            this.label189 = new System.Windows.Forms.Label();
             this.label115 = new System.Windows.Forms.Label();
             this.label114 = new System.Windows.Forms.Label();
             this.label109 = new System.Windows.Forms.Label();
@@ -455,10 +459,6 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.xtraUserControl11 = new RBI.XtraUserControl1();
-            this.label189 = new System.Windows.Forms.Label();
-            this.tbReleaseVolumeFromRuptureD4 = new System.Windows.Forms.TextBox();
-            this.label190 = new System.Windows.Forms.Label();
-            this.label191 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -3002,6 +3002,45 @@
             this.pnlIntermediateValues.Size = new System.Drawing.Size(902, 219);
             this.pnlIntermediateValues.TabIndex = 69;
             // 
+            // label191
+            // 
+            this.label191.AutoSize = true;
+            this.label191.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label191.Location = new System.Drawing.Point(761, 185);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(45, 15);
+            this.label191.TabIndex = 66;
+            this.label191.Text = "barrels";
+            // 
+            // label190
+            // 
+            this.label190.AutoSize = true;
+            this.label190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label190.Location = new System.Drawing.Point(619, 185);
+            this.label190.Name = "label190";
+            this.label190.Size = new System.Drawing.Size(29, 15);
+            this.label190.TabIndex = 65;
+            this.label190.Text = "D4 :";
+            // 
+            // tbReleaseVolumeFromRuptureD4
+            // 
+            this.tbReleaseVolumeFromRuptureD4.BackColor = System.Drawing.SystemColors.Control;
+            this.tbReleaseVolumeFromRuptureD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbReleaseVolumeFromRuptureD4.Location = new System.Drawing.Point(654, 182);
+            this.tbReleaseVolumeFromRuptureD4.Name = "tbReleaseVolumeFromRuptureD4";
+            this.tbReleaseVolumeFromRuptureD4.Size = new System.Drawing.Size(100, 21);
+            this.tbReleaseVolumeFromRuptureD4.TabIndex = 64;
+            // 
+            // label189
+            // 
+            this.label189.AutoSize = true;
+            this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label189.Location = new System.Drawing.Point(447, 185);
+            this.label189.Name = "label189";
+            this.label189.Size = new System.Drawing.Size(29, 15);
+            this.label189.TabIndex = 63;
+            this.label189.Text = "D1 :";
+            // 
             // label115
             // 
             this.label115.AutoSize = true;
@@ -5027,45 +5066,6 @@
             this.xtraUserControl11.Name = "xtraUserControl11";
             this.xtraUserControl11.Size = new System.Drawing.Size(150, 150);
             this.xtraUserControl11.TabIndex = 4;
-            // 
-            // label189
-            // 
-            this.label189.AutoSize = true;
-            this.label189.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label189.Location = new System.Drawing.Point(447, 185);
-            this.label189.Name = "label189";
-            this.label189.Size = new System.Drawing.Size(29, 15);
-            this.label189.TabIndex = 63;
-            this.label189.Text = "D1 :";
-            // 
-            // tbReleaseVolumeFromRuptureD4
-            // 
-            this.tbReleaseVolumeFromRuptureD4.BackColor = System.Drawing.SystemColors.Control;
-            this.tbReleaseVolumeFromRuptureD4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbReleaseVolumeFromRuptureD4.Location = new System.Drawing.Point(654, 182);
-            this.tbReleaseVolumeFromRuptureD4.Name = "tbReleaseVolumeFromRuptureD4";
-            this.tbReleaseVolumeFromRuptureD4.Size = new System.Drawing.Size(100, 21);
-            this.tbReleaseVolumeFromRuptureD4.TabIndex = 64;
-            // 
-            // label190
-            // 
-            this.label190.AutoSize = true;
-            this.label190.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label190.Location = new System.Drawing.Point(619, 185);
-            this.label190.Name = "label190";
-            this.label190.Size = new System.Drawing.Size(29, 15);
-            this.label190.TabIndex = 65;
-            this.label190.Text = "D4 :";
-            // 
-            // label191
-            // 
-            this.label191.AutoSize = true;
-            this.label191.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label191.Location = new System.Drawing.Point(761, 185);
-            this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(45, 15);
-            this.label191.TabIndex = 66;
-            this.label191.Text = "barrels";
             // 
             // UCRiskFactor
             // 

@@ -415,6 +415,12 @@
     <Compile Include="Object\ucTabNormal.cs" />
     <Compile Include="Object\ucTabTank.cs" />
     <Compile Include="PRE\ITEM\jtree.cs" />
+    <Compile Include="PRE\subForm\frmModelFluid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\frmModelFluid.Designer.cs">
+      <DependentUpon>frmModelFluid.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmCreateInspectionPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -438,6 +444,18 @@
     </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmSearchInspectionPlan.Designer.cs">
       <DependentUpon>frmSearchInspectionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmTankModelFluid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmTankModelFluid.Designer.cs">
+      <DependentUpon>frmTankModelFluid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmToxicFluid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmToxicFluid.Designer.cs">
+      <DependentUpon>frmToxicFluid.cs</DependentUpon>
     </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmUnits.cs">
       <SubType>Form</SubType>
@@ -704,6 +722,9 @@
     <Compile Include="XtraUserControl1.Designer.cs">
       <DependentUpon>XtraUserControl1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PRE\subForm\frmModelFluid.resx">
+      <DependentUpon>frmModelFluid.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmCreateInspectionPlan.resx">
       <DependentUpon>frmCreateInspectionPlan.cs</DependentUpon>
     </EmbeddedResource>
@@ -715,6 +736,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmSearchInspectionPlan.resx">
       <DependentUpon>frmSearchInspectionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\InputDataForm\frmTankModelFluid.resx">
+      <DependentUpon>frmTankModelFluid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\InputDataForm\frmToxicFluid.resx">
+      <DependentUpon>frmToxicFluid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmUnits.resx">
       <DependentUpon>frmUnits.cs</DependentUpon>

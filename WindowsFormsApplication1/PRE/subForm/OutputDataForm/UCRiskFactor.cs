@@ -131,6 +131,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             COMPONENT_MASTER_BUS busCompMaster = new COMPONENT_MASTER_BUS();
             int[] temp = busAssess.getEquipmentID_ComponentID(ID);
             int compTypeID = busCompMaster.getComponentTypeID(temp[1]);
+            Console.WriteLine("comTypeID=" + compTypeID + " " + temp[1]);
             if (compTypeID == 12)
             {
                 initData_Tank(ID);

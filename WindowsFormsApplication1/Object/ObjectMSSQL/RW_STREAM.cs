@@ -41,7 +41,8 @@ namespace RBI.Object.ObjectMSSQL
         public String StoragePhase { set; get; } //??
         public int ToxicFluidID { set; get; }
         public float WaterpH { set; get; }
-        public String TankFluidName { set; get; }//??
+        public String TankFluidName { set; get; }//model fluid
+        public string ToxicFluidName { set; get; }
         public float FluidHeight { set; get; }
         public float FluidLeaveDikePercent { set; get; }
         public float FluidLeaveDikeRemainOnSitePercent { set; get; }

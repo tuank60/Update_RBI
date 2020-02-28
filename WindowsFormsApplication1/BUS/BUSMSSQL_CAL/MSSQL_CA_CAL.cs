@@ -131,7 +131,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     if (PREVENTION_BARRIER)
                         dn = 3.175f;
                     else
-                        dn = 12.7f;
+                        dn = 12.7f ;
                 }
                 else if (i == 2)
                     dn = 0;
@@ -1134,8 +1134,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public String Soil_type { set; get; }
         public String TANK_FLUID { set; get; }
         public float Swg { set; get; } //total distance to the ground water underneath the tank
-        private float uw = 0.9f; //tra bang tren internet tai 27C
-        private float pw = 0.996621f; // kg/m3
+        private float uw =  1.002f;// Hai sua // trc day =0.9f; //tra bang tren internet tai 27C
+        private float pw = 1000;//Hai sua //trc day = 0.996621f; // kg/m3
 
         //STEP 1: Determine Release Rate and Volum
         private int n_rh()
@@ -1203,10 +1203,30 @@ namespace RBI.BUS.BUSMSSQL_CAL
         // W_n tank bottom cho d1 va d4
         public float rate_n_tank_bottom(int n)
         {
-            if (k_h_water() > (DAL_CAL.GET_TBL_3B21(34)) * Math.Pow(d_n(n), 2))
-                return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * d_n(n) * Math.Sqrt(2 * 1 * FLUID_HEIGHT) * n_rh());
-            else
-                return (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(FLUID_HEIGHT, 0.9) * Math.Pow(k_h_water(), 0.74) * n_rh());
+            float newFLUID_HEIGHT = 0.0762f;
+            if (!PREVENTION_BARRIER) newFLUID_HEIGHT = FLUID_HEIGHT;
+            double ps = (Math.Pow(d_n(n), 1.8)) / (0.21 * Math.Pow(newFLUID_HEIGHT, 0.4));
+             //Console.WriteLine("nrh" + n_rh());
+           // Console.WriteLine("th sau" + newFLUID_HEIGHT + " " + (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * Math.Pow(d_n(n), 2) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh()) + " " + (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh()));
+           
+           // Console.WriteLine("th sau 2" + (DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
+             if (k_h_prod() > (DAL_CAL.GET_TBL_3B21(34)) * Math.Pow(d_n(n), 2))
+                 return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * Math.Pow(d_n(n), 2) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh());
+             else if (k_h_prod() <= (DAL_CAL.GET_TBL_3B21(37)) * Math.Pow(ps, 1 / 0.74))
+             {
+                 
+                 
+                 return (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh());
+             }
+
+             else
+             {
+                 double m = DAL_CAL.GET_TBL_3B21(40) - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
+                 ps = (DAL_CAL.GET_TBL_3B21(39) + 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
+                 Console.WriteLine("th sau 2, n=" +n+" "+ (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
+                 return (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m))));
+                 
+             }
         }
         public float t_ld_tank_bottom()
         {
@@ -1258,6 +1278,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 data[0] = 775.019f;
                 data[1] = (float)(3.69 * Math.Pow(10, -2));
+            }
+            else if (TANK_FLUID == "Water")
+            {
+                data[0] = 1000;
+                data[1] = 1;
             }
             else
             {

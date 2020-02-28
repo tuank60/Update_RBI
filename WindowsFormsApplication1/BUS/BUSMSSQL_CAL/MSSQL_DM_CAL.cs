@@ -2180,19 +2180,19 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float[] data = { 6.4f, 12.7f, 25.4f, 38.1f, 50.8f, 63.5f, 76.2f, 88.9f, 101.6f };
             if (SIZE < data[0])
                 return data[0];
-            else if (SIZE < data[1]&&SIZE>data[0] )
+            else if (SIZE < data[1])
                 return data[1];
-            else if (SIZE < data[2] && SIZE > data[1])
+            else if (SIZE < data[2] )
                 return data[2];
-            else if (SIZE < data[3] && SIZE > data[2])
+            else if (SIZE < data[3] )
                 return data[3];
-            else if (SIZE < data[4] && SIZE > data[3])
+            else if (SIZE < data[4] )
                 return data[4];
-            else if (SIZE < data[5] && SIZE > data[4])
+            else if (SIZE < data[5] )
                 return data[5];
-            else if (SIZE < data[6] && SIZE > data[5])
+            else if (SIZE < data[6] )
                 return data[6];
-            else if (SIZE < data[7] && SIZE > data[6])
+            else if (SIZE < data[7] )
                 return data[7];
             else
                 return data[8];
@@ -2201,25 +2201,27 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private float API_TEMP(float TEMP)
         {
             float[] data = { -56, -44, -33, -22, -11, -0, 11, 22, 33, 44, 56 };
-            if ((TEMP < data[1]))
+            if ((TEMP < data[0]))
                 return data[0];
-            else if (TEMP < data[2] && TEMP > data[1])
+            else if ( TEMP < data[1])
+                return data[0];
+            else if (TEMP < data[2])
                 return data[1];
-            else if (TEMP < data[3] && TEMP > data[2])
+            else if (TEMP < data[3])
                 return data[2];
-            else if (TEMP < data[4] && TEMP > data[3])
+            else if (TEMP < data[4])
                 return data[3];
-            else if (TEMP < data[5] && TEMP > data[4])
+            else if (TEMP < data[5])
                 return data[4];
-            else if (TEMP < data[6] && TEMP > data[5])
+            else if (TEMP < data[6])
                 return data[5];
-            else if (TEMP < data[7] && TEMP > data[6])
+            else if (TEMP < data[7])
                 return data[6];
-            else if (TEMP < data[8] && TEMP > data[7])
+            else if (TEMP < data[8])
                 return data[7];
-            else if (TEMP < data[9] && TEMP > data[8])
+            else if (TEMP < data[9])
                 return data[8];
-            else if (TEMP < data[10] && TEMP > data[9])
+            else if (TEMP < data[10])
                 return data[9];
             else
                 return data[10];

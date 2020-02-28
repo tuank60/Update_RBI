@@ -43,6 +43,7 @@ namespace RBI
         {
             SplashScreenManager.ShowForm(typeof(WaitForm1));
             InitializeComponent();
+            diameter = "m";
             initDataforTreeList();
             initScheme();
             treeListProject.OptionsBehavior.Editable = false;
@@ -209,6 +210,7 @@ namespace RBI
                 {
 
                     int selectedID = int.Parse(this.xtraTabData.SelectedTabPage.Name);
+                   
                     ucTabNormal uc = null;
                     foreach (ucTabNormal u in listUC)
                     {
@@ -295,7 +297,7 @@ namespace RBI
                     caTank.SHELL_COURSE_HEIGHT = caTank4.SHELL_COURSE_HEIGHT;
                     caTank.TANK_DIAMETTER = caTank4.TANK_DIAMETTER;
                     caTank.Prevention_Barrier = caTank4.Prevention_Barrier;
-
+                    
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
@@ -2214,6 +2216,7 @@ namespace RBI
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
                 rwCATank.Flow_Rate_D1 = !float.IsNaN(CA.W_n_Tank(1)) && CA.W_n_Tank(1) > 0 ? CA.W_n_Tank(1) : 0;
+                
                 rwCATank.Flow_Rate_D2 = !float.IsNaN(CA.W_n_Tank(2)) && CA.W_n_Tank(2) > 0 ? CA.W_n_Tank(2) : 0;
                 rwCATank.Flow_Rate_D3 = !float.IsNaN(CA.W_n_Tank(3)) && CA.W_n_Tank(3) > 0 ? CA.W_n_Tank(3) : 0;
                 rwCATank.Flow_Rate_D4 = !float.IsNaN(CA.W_n_Tank(4)) && CA.W_n_Tank(4) > 0 ? CA.W_n_Tank(4) : 0;
@@ -2275,7 +2278,8 @@ namespace RBI
                 CA.TANK_FLUID = caTank.TANK_FLUID;
                 CA.FLUID = caTank.API_FLUID;
                 CA.API_COMPONENT_TYPE_NAME = "TANKBOTTOM";
-
+                CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
+                CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
                 rwCATank.Hydraulic_Water = CA.k_h_water();
@@ -2283,6 +2287,7 @@ namespace RBI
                 rwCATank.Seepage_Velocity = CA.vel_s_prod();
 
                 rwCATank.Flow_Rate_D1 = float.IsNaN(CA.rate_n_tank_bottom(1)) ? 0 : CA.rate_n_tank_bottom(1);
+               // Console.WriteLine("flow rate" + rwCATank.Flow_Rate_D1 + " " + CA.rate_n_tank_bottom(1));
                 rwCATank.Flow_Rate_D4 = float.IsNaN(CA.rate_n_tank_bottom(4)) ? 0 : CA.rate_n_tank_bottom(4);
 
                 rwCATank.Leak_Duration_D1 = float.IsNaN(CA.ld_n_tank_bottom(1)) ? 0 : CA.ld_n_tank_bottom(1);
@@ -3051,7 +3056,7 @@ namespace RBI
             busMaterial.edit(ma);
             //busCorrosionRate.edit(corate);
             //busInputCALevel1.edit(ca);
-
+            //Console.WriteLine("tank fluid name="+stream.TankFluidName);
         }
         //thiet bi tank
         private void SaveDatatoDatabase(RW_ASSESSMENT ass, RW_EQUIPMENT eq, RW_COMPONENT com, RW_STREAM stream, RW_EXTCOR_TEMPERATURE extTemp, RW_COATING coat, RW_MATERIAL ma, RW_INPUT_CA_TANK ca)
@@ -3059,11 +3064,14 @@ namespace RBI
             busAssessment.edit(ass);
             busEquipment.edit(eq);
             busComponent.edit(com);
+            Console.WriteLine("tank fluid name=" + stream.TankFluidName);
             busStream.edit(stream);
+            Console.WriteLine("ID=" + stream.ID);
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
             busInputCATank.edit(ca);
+            
         }
 
         private void SaveDataCorrosionRate(RW_CORROSION_RATE_TANK corate)
