@@ -43,9 +43,10 @@ namespace RBI
         {
             SplashScreenManager.ShowForm(typeof(WaitForm1));
             InitializeComponent();
-            diameter = "m";
+            
             initDataforTreeList();
             initScheme();
+            diameter = "m";
             treeListProject.OptionsBehavior.Editable = false;
             treeListProject.OptionsView.ShowIndicator = false;
             treeListProject.OptionsView.ShowColumns = false;
@@ -296,6 +297,7 @@ namespace RBI
                     caTank.ProductionCost = caTank3.ProductionCost;
                     caTank.SHELL_COURSE_HEIGHT = caTank4.SHELL_COURSE_HEIGHT;
                     caTank.TANK_DIAMETTER = caTank4.TANK_DIAMETTER;
+                    
                     caTank.Prevention_Barrier = caTank4.Prevention_Barrier;
                     
                     String _tabName = xtraTabData.SelectedTabPage.Text;
@@ -2273,6 +2275,7 @@ namespace RBI
             }
             else
             {
+                CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
                 CA.Swg = caTank.SW;
                 CA.Soil_type = caTank.Soil_Type;
                 CA.TANK_FLUID = caTank.TANK_FLUID;

@@ -1140,7 +1140,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         //STEP 1: Determine Release Rate and Volum
         private int n_rh()
         {
-            return (int)Math.Round(Math.Max(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 1), 0);
+           // Console.WriteLine("TANK_DIAMETER=" + TANK_DIAMETER + " " + (int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0));
+            return Math.Max((int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0), 1);
         }
         private float[] k_h_bottom()
         {
@@ -1211,7 +1212,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
            
            // Console.WriteLine("th sau 2" + (DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
              if (k_h_prod() > (DAL_CAL.GET_TBL_3B21(34)) * Math.Pow(d_n(n), 2))
+             {
                  return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * Math.Pow(d_n(n), 2) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh());
+             }
+                
              else if (k_h_prod() <= (DAL_CAL.GET_TBL_3B21(37)) * Math.Pow(ps, 1 / 0.74))
              {
                  
