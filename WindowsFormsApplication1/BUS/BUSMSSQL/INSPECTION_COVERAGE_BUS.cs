@@ -24,6 +24,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.delete(obj.ID);
         }
+        public void deletebyPlanID(int PlanID)//xoa du lieu tu PlanID
+        {
+            DAL.deletebyPlanID(PlanID);
+        }
         public List<INSPECTION_COVERAGE> getDataSource()
         {
             return DAL.getDataSource();
@@ -32,5 +36,6 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataID(PlanID);
         }
+       
     }
 }

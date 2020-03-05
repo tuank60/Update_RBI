@@ -20,6 +20,7 @@ namespace RBI.Object.ObjectMSSQL
         public int IsEquipmentLinked { get; set; }
         public String RecordType { get; set; }
         public int ProposalNo { get; set; } //sua Number thanh String Name
+        public String ComponentType { set; get; }//hai them
         public String ProposalName { set; get; }
         public int RevisionNo { get; set; }
         public int IsRecommend { get; set; }

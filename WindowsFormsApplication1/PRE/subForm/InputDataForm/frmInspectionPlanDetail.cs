@@ -21,17 +21,23 @@ namespace RBI.PRE.subForm.InputDataForm
 {
     public partial class frmInspectionPlanDetail : Form
     {
+        bool changeINSPECTION_COVERAGE = false;
         int _coverageID = 1;
+        public int planid;
         List<INSPECTION_DETAIL_TECHNIQUE> listNDT = new List<INSPECTION_DETAIL_TECHNIQUE>();
         public frmInspectionPlanDetail(int PlanID)
         {
             InitializeComponent();
+            planid = PlanID;
             Display();
+            
             //Displaytab2();
             radioGroup1.EditValue = 1;
             Showtab(PlanID);
+            
             initCombox();
             gridview1(0,0,0);
+            ShowGridview2(PlanID);
 
         }
 
@@ -48,7 +54,29 @@ namespace RBI.PRE.subForm.InputDataForm
             {
                 // do nothing
             }
-        }       
+        }  
+        public void ShowGridview2(int PlanID)
+        {
+            INSPECTION_COVERAGE_BUS ICB = new INSPECTION_COVERAGE_BUS();
+            List<INSPECTION_COVERAGE> IC = ICB.getDataID(PlanID);
+            int n = gridView2.RowCount;
+            foreach (INSPECTION_COVERAGE ic in IC)
+            {
+                EQUIPMENT_MASTER_BUS EMB = new EQUIPMENT_MASTER_BUS();
+                //EMB.getEquipmentName(ic.EquipmentID);//lay ten equipment
+                COMPONENT_MASTER_BUS CMB = new COMPONENT_MASTER_BUS();
+
+                for (int i = 0; i < n; i++)
+                {
+                    if (gridView2.GetRowCellValue(i, "ComponentNumber").ToString() == CMB.getComponentNumber(ic.ComponentID) && gridView2.GetRowCellValue(i, "EquipmentNumber").ToString() == EMB.getEquipmentNumber(ic.EquipmentID))
+                    {
+                        gridView2.SelectRow(i);
+                    }
+                }
+            }
+         
+
+        }
 
         private void BTnCancel_Click(object sender, EventArgs e)
         {
@@ -58,6 +86,30 @@ namespace RBI.PRE.subForm.InputDataForm
         private void btnOK_Click(object sender, EventArgs e)
         {
             //do something
+          // string obj = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "EquipmentNumber").ToString();
+            int[] a = gridView2.GetSelectedRows();
+            string obj = null;
+            INSPECTION_COVERAGE IC = new INSPECTION_COVERAGE();
+            INSPECTION_COVERAGE_BUS ICB=new INSPECTION_COVERAGE_BUS();
+            if (changeINSPECTION_COVERAGE) ICB.deletebyPlanID(planid);
+            for (int i = 0; i < gridView2.SelectedRowsCount; i++)
+            {
+                
+                IC.PlanID = planid;
+                EQUIPMENT_MASTER_BUS EMB = new EQUIPMENT_MASTER_BUS();
+                obj = gridView2.GetRowCellValue(a[i], "EquipmentNumber").ToString();
+                IC.EquipmentID = EMB.getIDbyName(obj);
+                COMPONENT_MASTER_BUS CMB = new COMPONENT_MASTER_BUS();
+                obj = gridView2.GetRowCellValue(a[i], "ComponentNumber").ToString();
+                IC.ComponentID = CMB.getIDbyName(obj);
+                ICB.add(IC);
+                
+               // Console.WriteLine(obj);
+                
+            }
+            
+           
+           
             this.Close();
         }
 
@@ -193,6 +245,74 @@ namespace RBI.PRE.subForm.InputDataForm
                     break;
             }
         }
+        private List<ProcessPlant> getListProcessPlant()
+        {
+            List<ProcessPlant> listPro = new List<ProcessPlant>();
+            RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
+            List<RW_ASSESSMENT> assessment = busAssessment.getDataSource();
+            EQUIPMENT_MASTER_BUS buseq = new EQUIPMENT_MASTER_BUS();
+            EQUIPMENT_TYPE_BUS eqType = new EQUIPMENT_TYPE_BUS();
+            COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+            COMPONENT_TYPE__BUS comType = new COMPONENT_TYPE__BUS();
+            DESIGN_CODE_BUS desCode = new DESIGN_CODE_BUS();
+            SITES_BUS site =new SITES_BUS();
+            FACILITY_BUS facility = new FACILITY_BUS();
+            //EquipmentProperty
+            RW_EQUIPMENT_BUS rwEqB=new RW_EQUIPMENT_BUS();
+            RW_EQUIPMENT rwEq=new RW_EQUIPMENT();
+            RW_COMPONENT_BUS rwComB = new RW_COMPONENT_BUS();
+            RW_COMPONENT rwCom = new RW_COMPONENT();
+            int EquipmentID = 0;
+            int ComponentID = 0;
+            foreach (RW_ASSESSMENT inspCove in assessment)
+            {
+                EquipmentID = inspCove.EquipmentID;
+                ComponentID = inspCove.ComponentID;
+                ProcessPlant Pro = new ProcessPlant();
+                Pro.EquipmentNumber = buseq.getEquipmentNumber(EquipmentID);
+                Pro.ComponentNumber = buscom.getComponentNumber(ComponentID);
+                Pro.Component=Pro.ComponentType = comType.getComponentTypeName(buscom.getComponentTypeID(ComponentID));
+                Pro.Site = site.getSiteName(buseq.getSiteID(EquipmentID));
+                Pro.Facility = facility.getFacilityName(buseq.getFacilityID(EquipmentID));
+                Pro.AssessmentName = inspCove.ProposalName;
+                Pro.AssessmentDate = inspCove.AdoptedDate.ToShortDateString();
+                Pro.CommissionDate = buseq.getComissionDate(EquipmentID).ToShortDateString();
+                Pro.RiskAnalysisPeriod = inspCove.RiskAnalysisPeriod.ToString();
+                Pro.EquipmentType = eqType.getEquipmentTypeName(buseq.getEqTypeID(EquipmentID));
+                Pro.DesignCode = desCode.getDesignCodeName(buseq.getDesignCodeID(EquipmentID));
+                //EquipmentProperty
+                rwEq = rwEqB.getData(inspCove.ID);
+                Pro.AdministrativeControl = rwEq.AdminUpsetManagement == 1 ? "✔" : "✘";
+                Pro.ContainsDeadlegs = rwEq.ContainsDeadlegs == 1 ? "✔" : "✘";
+                Pro.PresenceofSulphidesOperation = rwEq.PresenceSulphidesO2 == 1 ? "✔" : "✘";
+                Pro.SteamedOut = rwEq.SteamOutWaterFlush == 1 ? "✔" : "✘";
+                Pro.ThermalHistory = rwEq.ThermalHistory;
+                Pro.SystemManagementFactor = rwEq.ManagementFactor.ToString();
+                Pro.PWHT = rwEq.PWHT == 1 ? "✔" : "✘";
+                Pro.PressurisarionControlledbyAdmin = rwEq.PressurisationControlled == 1 ? "✔" : "✘";
+                Pro.PresenceofSulphidesShutdown = rwEq.PresenceSulphidesO2Shutdown == 1 ? "✔" : "✘";
+                Pro.OnlineMonitoring = rwEq.OnlineMonitoring;
+                Pro.MinRequiredTemperature = rwEq.MinReqTemperaturePressurisation.ToString();
+                Pro.MaterialisExposedtoFluids = rwEq.MaterialExposedToClExt == 1 ? "✔" : "✘";
+                Pro.CyclicOperation = rwEq.CyclicOperation == 1 ? "✔" : "✘";
+                Pro.LinerOnlineMonitoring = rwEq.LinerOnlineMonitoring == 1 ? "✔" : "✘";
+                Pro.DowntimeProtectionUsed = rwEq.DowntimeProtectionUsed == 1 ? "✔" : "✘";
+                Pro.EquipmentisOperating=rwEq.YearLowestExpTemp== 1 ? "✔" : "✘";
+                Pro.EquipmentVolume = rwEq.Volume.ToString();
+                Pro.InterfaceatSoilorWater = rwEq.InterfaceSoilWater == 1 ? "✔" : "✘";
+                Pro.ExternalEnvironment = rwEq.ExternalEnvironment;
+                Pro.HeatTraced = rwEq.HeatTraced == 1 ? "✔" : "✘";
+                Pro.HighlyEffectiveInspection = rwEq.HighlyDeadlegInsp == 1 ? "✔" : "✘";
+                //componentProperty
+                Pro.MinimumMeasuredThickness = (100*rwCom.CurrentThickness).ToString();
+                Pro.NominalThickness = (100*rwCom.NominalThickness).ToString();
+                Pro.NominalDiameter = (100*rwCom.NominalDiameter).ToString();
+                listPro.Add(Pro);
+
+            }
+            return listPro;
+        }
+      
         private List<RW_ASSESSMENT> getListAssessment(int EquipmentID)
         {
             List<RW_ASSESSMENT> listData = new List<RW_ASSESSMENT>();
@@ -207,14 +327,18 @@ namespace RBI.PRE.subForm.InputDataForm
             }
             EQUIPMENT_MASTER_BUS buseq = new EQUIPMENT_MASTER_BUS();
             COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+            COMPONENT_TYPE__BUS comType = new COMPONENT_TYPE__BUS();
             foreach (RW_ASSESSMENT inspCove in assessment)
             {
                 RW_ASSESSMENT rwAssessment = inspCove;
                 rwAssessment.EquipmentNumber = buseq.getEquipmentNumber(inspCove.EquipmentID);
-                rwAssessment.ComponentName = buscom.getComponentName(inspCove.ComponentID);
+                rwAssessment.ComponentName = buscom.getComponentName(inspCove.ComponentID);//khong can
                 rwAssessment.ComponentNumber = buscom.getComponentNumber(inspCove.ComponentID);
+
+                rwAssessment.ComponentType = comType.getComponentTypeName(buscom.getComponentTypeID(inspCove.ComponentID));
                 listData.Add(rwAssessment);
             }
+
             return listData;
         }
 
@@ -222,7 +346,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             gridControl1.DataSource = null;
             RW_ASSESSMENT_BUS busAss = new RW_ASSESSMENT_BUS();
-            gridControl1.DataSource = getListAssessment(EquipmentID);
+            gridControl1.DataSource = getListProcessPlant();
         }
         private void btnDelete_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
@@ -435,6 +559,11 @@ namespace RBI.PRE.subForm.InputDataForm
             gridview1(0, 0, busEquipment.getIDbyName(cbEquipment.Text));
         }
         #endregion 
+
+        private void gridView2_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
+        {
+            changeINSPECTION_COVERAGE = true;//bi thay doi, cap nhat lai
+        }
 
         
 

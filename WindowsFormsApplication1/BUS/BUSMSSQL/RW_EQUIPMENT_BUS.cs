@@ -28,6 +28,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.delete(ID);
         }
+        public int getAdminUpsetManagement(int ID)
+        {
+            return DAL.getAdminUpsetManagementbyID(ID);
+        }
         public List<RW_EQUIPMENT> getDataSource()
         {
             return DAL.getDataSource();

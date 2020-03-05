@@ -667,6 +667,39 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
+        public int getDesignCodeID(int eqID)
+        {
+            int obj = 0;
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select DesignCodeID from rbi.dbo.EQUIPMENT_MASTER where EquipmentID = '" + eqID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = reader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get DateTime Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return obj;
+        }
         public String getEquipmentName(int eqID)
         {
             String eqName = "";

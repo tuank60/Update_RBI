@@ -178,6 +178,39 @@ namespace RBI.DAL.MSSQL
             }
         }
         // get datasource 
+        public int getAdminUpsetManagementbyID(int ID)
+        {
+            int obj = 0;
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select AdminUpsetManagement from rbi.dbo.RW_EQUIPMENT where ID = '" + ID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = Convert.ToInt32(reader.GetBoolean(0));
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get DateTime Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return obj;
+        }
         public List<RW_EQUIPMENT> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();

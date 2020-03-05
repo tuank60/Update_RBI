@@ -47,6 +47,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getEquipmentTypeID(eqID);
         }
+        public int getDesignCodeID(int eqID)
+        {
+            return DAL.getDesignCodeID(eqID);
+        }
         public int getEquipmentTypeID(int siteID, int facilityID)
         {
             return DAL.getEquipmentTypeID(siteID, facilityID);
