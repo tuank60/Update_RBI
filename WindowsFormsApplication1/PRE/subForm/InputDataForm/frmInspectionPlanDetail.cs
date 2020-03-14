@@ -28,6 +28,7 @@ namespace RBI.PRE.subForm.InputDataForm
         public frmInspectionPlanDetail(int PlanID)
         {
             InitializeComponent();
+            gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
             planid = PlanID;
             Display();
             
@@ -87,6 +88,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             //do something
           // string obj = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "EquipmentNumber").ToString();
+            //Lưu tab Process Plant
             int[] a = gridView2.GetSelectedRows();
             string obj = null;
             INSPECTION_COVERAGE IC = new INSPECTION_COVERAGE();
@@ -102,12 +104,21 @@ namespace RBI.PRE.subForm.InputDataForm
                 COMPONENT_MASTER_BUS CMB = new COMPONENT_MASTER_BUS();
                 obj = gridView2.GetRowCellValue(a[i], "ComponentNumber").ToString();
                 IC.ComponentID = CMB.getIDbyName(obj);
+                IC.Remarks = txtFindingsDescription.Text;
                 ICB.add(IC);
                 
                // Console.WriteLine(obj);
                 
             }
+            //Lưu inspectionMethod
+           List <int> IDInsCov = ICB.getIDbyPlanID(planid);//khoa ngoai cua INSPECTION_DETAIL_TECHNIQUE
+            INSPECTION_DETAIL_TECHNIQUE insTech = new INSPECTION_DETAIL_TECHNIQUE();
+            foreach (int i in IDInsCov)
+            {
+                insTech.CoverageID = i;
+            }
             
+
            
            
             this.Close();
@@ -262,6 +273,12 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_EQUIPMENT rwEq=new RW_EQUIPMENT();
             RW_COMPONENT_BUS rwComB = new RW_COMPONENT_BUS();
             RW_COMPONENT rwCom = new RW_COMPONENT();
+            RW_STREAM_BUS rwStrB = new RW_STREAM_BUS();
+            RW_STREAM rwStr = new RW_STREAM();
+            RW_MATERIAL_BUS rwMaterB = new RW_MATERIAL_BUS();
+            RW_MATERIAL rwMater = new RW_MATERIAL();
+            RW_COATING_BUS rwCoatB = new RW_COATING_BUS();
+            RW_COATING rwCoat = new RW_COATING();
             int EquipmentID = 0;
             int ComponentID = 0;
             foreach (RW_ASSESSMENT inspCove in assessment)
@@ -304,9 +321,93 @@ namespace RBI.PRE.subForm.InputDataForm
                 Pro.HeatTraced = rwEq.HeatTraced == 1 ? "✔" : "✘";
                 Pro.HighlyEffectiveInspection = rwEq.HighlyDeadlegInsp == 1 ? "✔" : "✘";
                 //componentProperty
+                rwCom = rwComB.getData(ComponentID);
                 Pro.MinimumMeasuredThickness = (100*rwCom.CurrentThickness).ToString();
                 Pro.NominalThickness = (100*rwCom.NominalThickness).ToString();
                 Pro.NominalDiameter = (100*rwCom.NominalDiameter).ToString();
+                Pro.MinRequiredThickness = (100*rwCom.MinReqThickness).ToString();
+                Pro.CurrentCorrosionRate = (100 * rwCom.CurrentCorrosionRate).ToString();
+                Pro.PresenceofCracks = rwCom.CracksPresent == 1 ? "✔" : "✘";
+                Pro.PreviousFailures = rwCom.PreviousFailures;
+                Pro.DamageFoundDuringInspection = rwCom.DamageFoundInspection == 1 ? "✔" : "✘";
+               // Pro.PresenceofInjectionMixPoint=rwCom.HighlyInjectionInsp
+                Pro.HighlyEffectiveInspectionCom = rwCom.HighlyInjectionInsp == 1 ? "✔" : "✘";
+               // Pro.TrampElements=rwCom.tra
+                Pro.DeltaFATT = rwCom.DeltaFATT.ToString();
+                Pro.CyclicLoadingConnected = rwCom.CyclicLoadingWitin15_25m;
+                Pro.MaximumBrinnellHardness = rwCom.BrinnelHardness;
+                Pro.NumberofFitting = rwCom.NumberPipeFittings;
+                Pro.JointTypeofBranch = rwCom.BranchJointType;
+                Pro.PipeCondition = rwCom.PipeCondition;
+                Pro.VisibleorAudible = rwCom.ShakingDetected == 1 ? "✔" : "✘";
+                Pro.AccummlatedTimeShaking = rwCom.ShakingTime;
+                Pro.AmountofShaking = rwCom.ShakingAmount;
+                Pro.CorrectAction = rwCom.CorrectiveAction;
+                Pro.BranchDiameter = rwCom.BranchDiameter;
+                Pro.ComplexityofProtrusions = rwCom.ComplexityProtrusion;
+                //STREAM
+                rwStr = rwStrB.getData(inspCove.ID);
+                Pro.MaximumOperatingTemperature = rwStr.MaxOperatingTemperature.ToString();
+                Pro.MinimumOperatingTemperature = rwStr.MinOperatingTemperature.ToString();
+                Pro.MaximumOperatingPressure = rwStr.MaxOperatingPressure.ToString();
+                Pro.MinimumOperatingPressure = rwStr.MinOperatingPressure.ToString();
+                Pro.CriticalExposureTemperature = rwStr.CriticalExposureTemperature.ToString();
+                Pro.AmineSolutionComposition = rwStr.AmineSolution;
+                Pro.NAOHConcentration = rwStr.NaOHConcentration.ToString();
+                Pro.H2Scontent = rwStr.H2S.ToString();
+                Pro.MaterialFluidsMistsSolids = rwStr.MaterialExposedToClInt == 1 ? "✔" : "✘";
+                Pro.FlowRate = rwStr.FlowRate.ToString();
+                Pro.pHofWater = rwStr.WaterpH.ToString();
+                Pro.ToxicConsitituents = rwStr.ToxicConstituent == 1 ? "✔" : "✘";
+                Pro.ReleaseFluidPercentToxic = rwStr.ReleaseFluidPercentToxic.ToString();
+                Pro.ProcessContainsHydrogen = rwStr.Hydrogen == 1 ? "✔" : "✘";
+                Pro.PresenceofHydrofluoric = rwStr.Hydrofluoric == 1 ? "✔" : "✘";
+                Pro.ExposuretoAmine = rwStr.ExposureToAmine;
+                Pro.PresenceofCyanides = rwStr.Cyanide == 1 ? "✔" : "✘";
+                Pro.ExposuretoAmine = rwStr.ExposureToAmine;
+                Pro.PresenceofCyanides = rwStr.Cyanide == 1 ? "✔" : "✘";
+                Pro.OperatingHydrogenPartialPressure = rwStr.Hydrogen.ToString();//can check lai
+                Pro.ExposedSulphurBearing = rwStr.ExposedToSulphur == 1 ? "✔" : "✘";
+                Pro.ExposedAcidGas = rwStr.ExposedToGasAmine == 1 ? "✔" : "✘";
+                Pro.EnvironmentContainsH2S = rwStr.H2S == 1 ? "✔" : "✘";
+                Pro.EnvironmentContainsCaustic = rwStr.Caustic == 1 ? "✔" : "✘";
+                Pro.CO3Concentration = rwStr.CO3Concentration.ToString();
+                Pro.ChlorideIon = rwStr.Chloride.ToString();
+                Pro.AqueousPhaseDuringOper = rwStr.AqueousOperation == 1 ? "✔" : "✘";
+                Pro.AqueousPhaseDuringShut = rwStr.AqueousShutdown == 1 ? "✔" : "✘";
+                //Material
+                rwMater = rwMaterB.getData(inspCove.ID);
+                Pro.DesignPressure = rwMater.DesignTemperature.ToString();
+                Pro.AllowableStress = rwMater.AllowableStress.ToString();
+                Pro.DesignPressure = rwMater.DesignPressure.ToString();
+                Pro.SusceptibletoTemper = rwMater.Temper == 1 ? "✔" : "✘";
+                Pro.SulfurContent = rwMater.SulfurContent;
+                Pro.SigmaPhase = rwMater.SigmaPhase.ToString();
+                Pro.ReferenceTemperature = rwMater.ReferenceTemperature.ToString();
+                Pro.NickelAlloy = rwMater.NickelBased == 1 ? "✔" : "✘";
+                Pro.MaterialCostFactor = rwMater.CostFactor.ToString();
+                Pro.HeatTreatment = rwMater.HeatTreatment;
+                Pro.CorrosionAllowance = (rwMater.CorrosionAllowance * 100).ToString();
+                Pro.Chromium = rwMater.ChromeMoreEqual12 == 1 ? "✔" : "✘";
+                Pro.CacbonorLow = rwMater.CarbonLowAlloy == 1 ? "✔" : "✘";
+                Pro.AusteniticSteel = rwMater.Austenitic == 1 ? "✔" : "✘";
+                // Coating 
+                rwCoat = rwCoatB.getData(inspCove.ID);
+                Pro.InternalCoating = rwCoat.InternalCladding == 1 ? "✔" : "✘";
+                Pro.ExternalCoating = rwCoat.ExternalCoating == 1 ? "✔" : "✘";
+                Pro.ExternalCoatingInstallationDate = rwCoat.ExternalCoatingDate.ToShortDateString();
+                Pro.ExternalCoatingQuality = rwCoat.ExternalCoatingQuality;
+                Pro.SupportConfiguration = rwCoat.SupportConfigNotAllowCoatingMaint == 1 ? "✔" : "✘";
+                Pro.InternalLining = rwCoat.InternalLining == 1 ? "✔" : "✘";
+                Pro.InternalLinerType = rwCoat.InternalLinerType;
+                Pro.InternalLinerCondition = rwCoat.InternalLinerCondition;
+                Pro.InternalCladding = rwCoat.InternalCladding == 1 ? "✔" : "✘";
+                Pro.CladdingCorrosionRate = rwCoat.CladdingCorrosionRate.ToString();
+                Pro.ExternalInsulation = rwCoat.ExternalInsulation == 1 ? "✔" : "✘";
+                Pro.ExternalInsulationType = rwCoat.ExternalInsulationType;
+                Pro.InsulationCondition = rwCoat.InsulationCondition;
+                Pro.InsulationContainsChlorides = rwCoat.InsulationContainsChloride == 1 ? "✔" : "✘";
+              //  Pro.
                 listPro.Add(Pro);
 
             }

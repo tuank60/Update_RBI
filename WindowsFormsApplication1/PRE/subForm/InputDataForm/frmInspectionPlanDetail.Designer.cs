@@ -48,6 +48,7 @@
             this.tabProcessPlan = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn72 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -65,6 +66,7 @@
             this.bandedGridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn73 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,7 +87,8 @@
             this.bandedGridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bandedGridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn74 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn78 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -95,7 +98,76 @@
             this.bandedGridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bandedGridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bandedGridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.tr = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn75 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn19 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn24 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn25 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn38 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn39 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn40 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn41 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn42 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn43 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn76 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn44 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn45 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn46 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn47 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn48 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn49 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn50 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn51 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn52 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn53 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn54 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn77 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn58 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn59 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn60 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn61 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn62 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn63 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn64 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn65 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn66 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn67 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn68 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn69 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn70 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn71 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.tabTank = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -205,6 +277,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn79 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -406,6 +479,7 @@
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn72,
             this.bandedGridColumn2,
             this.bandedGridColumn3,
             this.bandedGridColumn4,
@@ -423,6 +497,7 @@
             this.bandedGridColumn16,
             this.bandedGridColumn17,
             this.bandedGridColumn18,
+            this.gridColumn73,
             this.bandedGridColumn19,
             this.bandedGridColumn20,
             this.bandedGridColumn21,
@@ -443,7 +518,8 @@
             this.bandedGridColumn36,
             this.bandedGridColumn37,
             this.bandedGridColumn38,
-            this.bandedGridColumn39,
+            this.gridColumn74,
+            this.gridColumn78,
             this.bandedGridColumn40,
             this.bandedGridColumn41,
             this.bandedGridColumn42,
@@ -453,14 +529,95 @@
             this.bandedGridColumn46,
             this.bandedGridColumn47,
             this.bandedGridColumn48,
-            this.bandedGridColumn49});
+            this.gridColumn79,
+            this.tr,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12,
+            this.gridColumn13,
+            this.gridColumn14,
+            this.gridColumn15,
+            this.gridColumn1,
+            this.gridColumn16,
+            this.gridColumn17,
+            this.gridColumn75,
+            this.gridColumn18,
+            this.gridColumn19,
+            this.gridColumn20,
+            this.gridColumn21,
+            this.gridColumn22,
+            this.gridColumn23,
+            this.gridColumn24,
+            this.gridColumn25,
+            this.gridColumn26,
+            this.gridColumn27,
+            this.gridColumn28,
+            this.gridColumn29,
+            this.gridColumn30,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34,
+            this.gridColumn35,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn38,
+            this.gridColumn39,
+            this.gridColumn40,
+            this.gridColumn41,
+            this.gridColumn42,
+            this.gridColumn43,
+            this.gridColumn76,
+            this.gridColumn44,
+            this.gridColumn45,
+            this.gridColumn46,
+            this.gridColumn47,
+            this.gridColumn48,
+            this.gridColumn49,
+            this.gridColumn50,
+            this.gridColumn51,
+            this.gridColumn52,
+            this.gridColumn53,
+            this.gridColumn54,
+            this.gridColumn55,
+            this.gridColumn56,
+            this.gridColumn57,
+            this.gridColumn77,
+            this.gridColumn58,
+            this.gridColumn59,
+            this.gridColumn60,
+            this.gridColumn61,
+            this.gridColumn62,
+            this.gridColumn63,
+            this.gridColumn64,
+            this.gridColumn65,
+            this.gridColumn66,
+            this.gridColumn67,
+            this.gridColumn68,
+            this.gridColumn69,
+            this.gridColumn70,
+            this.gridColumn71});
             this.gridView2.GridControl = this.gridControl1;
             this.gridView2.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsSelection.MultiSelect = true;
             this.gridView2.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
+            this.gridView2.OptionsSelection.ShowCheckBoxSelectorInColumnHeader = DevExpress.Utils.DefaultBoolean.False;
             this.gridView2.OptionsView.ColumnAutoWidth = false;
+            this.gridView2.OptionsView.ShowIndicator = false;
             this.gridView2.SelectionChanged += new DevExpress.Data.SelectionChangedEventHandler(this.gridView2_SelectionChanged);
+            // 
+            // gridColumn72
+            // 
+            this.gridColumn72.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.gridColumn72.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn72.Caption = "► Proposal";
+            this.gridColumn72.Name = "gridColumn72";
+            this.gridColumn72.Visible = true;
+            this.gridColumn72.VisibleIndex = 1;
             // 
             // bandedGridColumn2
             // 
@@ -468,7 +625,7 @@
             this.bandedGridColumn2.FieldName = "EquipmentNumber";
             this.bandedGridColumn2.Name = "bandedGridColumn2";
             this.bandedGridColumn2.Visible = true;
-            this.bandedGridColumn2.VisibleIndex = 1;
+            this.bandedGridColumn2.VisibleIndex = 2;
             this.bandedGridColumn2.Width = 67;
             // 
             // bandedGridColumn3
@@ -477,7 +634,7 @@
             this.bandedGridColumn3.FieldName = "Component";
             this.bandedGridColumn3.Name = "bandedGridColumn3";
             this.bandedGridColumn3.Visible = true;
-            this.bandedGridColumn3.VisibleIndex = 2;
+            this.bandedGridColumn3.VisibleIndex = 3;
             // 
             // bandedGridColumn4
             // 
@@ -485,7 +642,7 @@
             this.bandedGridColumn4.FieldName = "ComponentNumber";
             this.bandedGridColumn4.Name = "bandedGridColumn4";
             this.bandedGridColumn4.Visible = true;
-            this.bandedGridColumn4.VisibleIndex = 3;
+            this.bandedGridColumn4.VisibleIndex = 4;
             this.bandedGridColumn4.Width = 92;
             // 
             // bandedGridColumn5
@@ -494,7 +651,7 @@
             this.bandedGridColumn5.FieldName = "Site";
             this.bandedGridColumn5.Name = "bandedGridColumn5";
             this.bandedGridColumn5.Visible = true;
-            this.bandedGridColumn5.VisibleIndex = 4;
+            this.bandedGridColumn5.VisibleIndex = 5;
             this.bandedGridColumn5.Width = 56;
             // 
             // bandedGridColumn6
@@ -503,7 +660,7 @@
             this.bandedGridColumn6.FieldName = "Facility";
             this.bandedGridColumn6.Name = "bandedGridColumn6";
             this.bandedGridColumn6.Visible = true;
-            this.bandedGridColumn6.VisibleIndex = 5;
+            this.bandedGridColumn6.VisibleIndex = 6;
             this.bandedGridColumn6.Width = 61;
             // 
             // bandedGridColumn7
@@ -512,7 +669,7 @@
             this.bandedGridColumn7.FieldName = "AP1";
             this.bandedGridColumn7.Name = "bandedGridColumn7";
             this.bandedGridColumn7.Visible = true;
-            this.bandedGridColumn7.VisibleIndex = 6;
+            this.bandedGridColumn7.VisibleIndex = 7;
             this.bandedGridColumn7.Width = 29;
             // 
             // bandedGridColumn8
@@ -521,7 +678,7 @@
             this.bandedGridColumn8.FieldName = "AP2";
             this.bandedGridColumn8.Name = "bandedGridColumn8";
             this.bandedGridColumn8.Visible = true;
-            this.bandedGridColumn8.VisibleIndex = 7;
+            this.bandedGridColumn8.VisibleIndex = 8;
             this.bandedGridColumn8.Width = 29;
             // 
             // bandedGridColumn9
@@ -530,7 +687,7 @@
             this.bandedGridColumn9.FieldName = "AP3";
             this.bandedGridColumn9.Name = "bandedGridColumn9";
             this.bandedGridColumn9.Visible = true;
-            this.bandedGridColumn9.VisibleIndex = 8;
+            this.bandedGridColumn9.VisibleIndex = 9;
             this.bandedGridColumn9.Width = 29;
             // 
             // bandedGridColumn10
@@ -539,7 +696,7 @@
             this.bandedGridColumn10.FieldName = "RLI";
             this.bandedGridColumn10.Name = "bandedGridColumn10";
             this.bandedGridColumn10.Visible = true;
-            this.bandedGridColumn10.VisibleIndex = 9;
+            this.bandedGridColumn10.VisibleIndex = 10;
             this.bandedGridColumn10.Width = 71;
             // 
             // bandedGridColumn11
@@ -548,7 +705,7 @@
             this.bandedGridColumn11.FieldName = "AssessmentName";
             this.bandedGridColumn11.Name = "bandedGridColumn11";
             this.bandedGridColumn11.Visible = true;
-            this.bandedGridColumn11.VisibleIndex = 10;
+            this.bandedGridColumn11.VisibleIndex = 11;
             this.bandedGridColumn11.Width = 97;
             // 
             // bandedGridColumn12
@@ -557,7 +714,7 @@
             this.bandedGridColumn12.FieldName = "AssessmentDate";
             this.bandedGridColumn12.Name = "bandedGridColumn12";
             this.bandedGridColumn12.Visible = true;
-            this.bandedGridColumn12.VisibleIndex = 11;
+            this.bandedGridColumn12.VisibleIndex = 12;
             this.bandedGridColumn12.Width = 93;
             // 
             // bandedGridColumn13
@@ -566,7 +723,7 @@
             this.bandedGridColumn13.FieldName = "CommissionDate";
             this.bandedGridColumn13.Name = "bandedGridColumn13";
             this.bandedGridColumn13.Visible = true;
-            this.bandedGridColumn13.VisibleIndex = 12;
+            this.bandedGridColumn13.VisibleIndex = 13;
             this.bandedGridColumn13.Width = 91;
             // 
             // bandedGridColumn14
@@ -575,7 +732,7 @@
             this.bandedGridColumn14.FieldName = "RiskAnalysisPeriod";
             this.bandedGridColumn14.Name = "bandedGridColumn14";
             this.bandedGridColumn14.Visible = true;
-            this.bandedGridColumn14.VisibleIndex = 13;
+            this.bandedGridColumn14.VisibleIndex = 14;
             this.bandedGridColumn14.Width = 104;
             // 
             // bandedGridColumn15
@@ -584,7 +741,7 @@
             this.bandedGridColumn15.FieldName = "EquipmentType";
             this.bandedGridColumn15.Name = "bandedGridColumn15";
             this.bandedGridColumn15.Visible = true;
-            this.bandedGridColumn15.VisibleIndex = 14;
+            this.bandedGridColumn15.VisibleIndex = 15;
             this.bandedGridColumn15.Width = 87;
             // 
             // bandedGridColumn16
@@ -593,7 +750,7 @@
             this.bandedGridColumn16.FieldName = "ComponentType";
             this.bandedGridColumn16.Name = "bandedGridColumn16";
             this.bandedGridColumn16.Visible = true;
-            this.bandedGridColumn16.VisibleIndex = 15;
+            this.bandedGridColumn16.VisibleIndex = 16;
             this.bandedGridColumn16.Width = 92;
             // 
             // bandedGridColumn17
@@ -602,7 +759,7 @@
             this.bandedGridColumn17.FieldName = "InspectionDueDate";
             this.bandedGridColumn17.Name = "bandedGridColumn17";
             this.bandedGridColumn17.Visible = true;
-            this.bandedGridColumn17.VisibleIndex = 16;
+            this.bandedGridColumn17.VisibleIndex = 17;
             this.bandedGridColumn17.Width = 108;
             // 
             // bandedGridColumn18
@@ -611,7 +768,16 @@
             this.bandedGridColumn18.FieldName = "DesignCode";
             this.bandedGridColumn18.Name = "bandedGridColumn18";
             this.bandedGridColumn18.Visible = true;
-            this.bandedGridColumn18.VisibleIndex = 17;
+            this.bandedGridColumn18.VisibleIndex = 19;
+            // 
+            // gridColumn73
+            // 
+            this.gridColumn73.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.gridColumn73.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn73.Caption = "► Equipment Properties";
+            this.gridColumn73.Name = "gridColumn73";
+            this.gridColumn73.Visible = true;
+            this.gridColumn73.VisibleIndex = 18;
             // 
             // bandedGridColumn19
             // 
@@ -621,7 +787,7 @@
             this.bandedGridColumn19.FieldName = "AdministrativeControl";
             this.bandedGridColumn19.Name = "bandedGridColumn19";
             this.bandedGridColumn19.Visible = true;
-            this.bandedGridColumn19.VisibleIndex = 18;
+            this.bandedGridColumn19.VisibleIndex = 20;
             this.bandedGridColumn19.Width = 166;
             // 
             // bandedGridColumn20
@@ -630,7 +796,7 @@
             this.bandedGridColumn20.FieldName = "ContainsDeadlegs";
             this.bandedGridColumn20.Name = "bandedGridColumn20";
             this.bandedGridColumn20.Visible = true;
-            this.bandedGridColumn20.VisibleIndex = 19;
+            this.bandedGridColumn20.VisibleIndex = 21;
             this.bandedGridColumn20.Width = 64;
             // 
             // bandedGridColumn21
@@ -639,7 +805,7 @@
             this.bandedGridColumn21.FieldName = "PresenceofSulphidesOperation";
             this.bandedGridColumn21.Name = "bandedGridColumn21";
             this.bandedGridColumn21.Visible = true;
-            this.bandedGridColumn21.VisibleIndex = 20;
+            this.bandedGridColumn21.VisibleIndex = 22;
             this.bandedGridColumn21.Width = 154;
             // 
             // bandedGridColumn22
@@ -648,7 +814,7 @@
             this.bandedGridColumn22.FieldName = "SteamedOut";
             this.bandedGridColumn22.Name = "bandedGridColumn22";
             this.bandedGridColumn22.Visible = true;
-            this.bandedGridColumn22.VisibleIndex = 21;
+            this.bandedGridColumn22.VisibleIndex = 23;
             this.bandedGridColumn22.Width = 160;
             // 
             // bandedGridColumn23
@@ -657,7 +823,7 @@
             this.bandedGridColumn23.FieldName = "ThermalHistory";
             this.bandedGridColumn23.Name = "bandedGridColumn23";
             this.bandedGridColumn23.Visible = true;
-            this.bandedGridColumn23.VisibleIndex = 22;
+            this.bandedGridColumn23.VisibleIndex = 24;
             this.bandedGridColumn23.Width = 72;
             // 
             // bandedGridColumn24
@@ -666,7 +832,7 @@
             this.bandedGridColumn24.FieldName = "SystemManagementFactor";
             this.bandedGridColumn24.Name = "bandedGridColumn24";
             this.bandedGridColumn24.Visible = true;
-            this.bandedGridColumn24.VisibleIndex = 23;
+            this.bandedGridColumn24.VisibleIndex = 25;
             this.bandedGridColumn24.Width = 124;
             // 
             // bandedGridColumn25
@@ -675,7 +841,7 @@
             this.bandedGridColumn25.FieldName = "PWHT";
             this.bandedGridColumn25.Name = "bandedGridColumn25";
             this.bandedGridColumn25.Visible = true;
-            this.bandedGridColumn25.VisibleIndex = 24;
+            this.bandedGridColumn25.VisibleIndex = 26;
             this.bandedGridColumn25.Width = 33;
             // 
             // bandedGridColumn26
@@ -684,7 +850,7 @@
             this.bandedGridColumn26.FieldName = "PressurisarionControlledbyAdmin";
             this.bandedGridColumn26.Name = "bandedGridColumn26";
             this.bandedGridColumn26.Visible = true;
-            this.bandedGridColumn26.VisibleIndex = 25;
+            this.bandedGridColumn26.VisibleIndex = 27;
             this.bandedGridColumn26.Width = 152;
             // 
             // bandedGridColumn27
@@ -693,7 +859,7 @@
             this.bandedGridColumn27.FieldName = "PresenceofSulphidesShutdown";
             this.bandedGridColumn27.Name = "bandedGridColumn27";
             this.bandedGridColumn27.Visible = true;
-            this.bandedGridColumn27.VisibleIndex = 26;
+            this.bandedGridColumn27.VisibleIndex = 28;
             this.bandedGridColumn27.Width = 268;
             // 
             // bandedGridColumn28
@@ -702,7 +868,7 @@
             this.bandedGridColumn28.FieldName = "OnlineMonitoring";
             this.bandedGridColumn28.Name = "bandedGridColumn28";
             this.bandedGridColumn28.Visible = true;
-            this.bandedGridColumn28.VisibleIndex = 27;
+            this.bandedGridColumn28.VisibleIndex = 29;
             this.bandedGridColumn28.Width = 80;
             // 
             // bandedGridColumn29
@@ -711,7 +877,7 @@
             this.bandedGridColumn29.FieldName = "MinRequiredTemperature";
             this.bandedGridColumn29.Name = "bandedGridColumn29";
             this.bandedGridColumn29.Visible = true;
-            this.bandedGridColumn29.VisibleIndex = 28;
+            this.bandedGridColumn29.VisibleIndex = 30;
             this.bandedGridColumn29.Width = 287;
             // 
             // bandedGridColumn30
@@ -720,7 +886,7 @@
             this.bandedGridColumn30.FieldName = "MaterialisExposedtoFluids";
             this.bandedGridColumn30.Name = "bandedGridColumn30";
             this.bandedGridColumn30.Visible = true;
-            this.bandedGridColumn30.VisibleIndex = 29;
+            this.bandedGridColumn30.VisibleIndex = 31;
             this.bandedGridColumn30.Width = 316;
             // 
             // bandedGridColumn31
@@ -729,7 +895,7 @@
             this.bandedGridColumn31.FieldName = "CyclicOperation";
             this.bandedGridColumn31.Name = "bandedGridColumn31";
             this.bandedGridColumn31.Visible = true;
-            this.bandedGridColumn31.VisibleIndex = 30;
+            this.bandedGridColumn31.VisibleIndex = 32;
             // 
             // bandedGridColumn321
             // 
@@ -737,7 +903,7 @@
             this.bandedGridColumn321.FieldName = "LinerOnlineMonitoring";
             this.bandedGridColumn321.Name = "bandedGridColumn321";
             this.bandedGridColumn321.Visible = true;
-            this.bandedGridColumn321.VisibleIndex = 31;
+            this.bandedGridColumn321.VisibleIndex = 33;
             this.bandedGridColumn321.Width = 102;
             // 
             // bandedGridColumn331
@@ -746,7 +912,7 @@
             this.bandedGridColumn331.FieldName = "DowntimeProtectionUsed";
             this.bandedGridColumn331.Name = "bandedGridColumn331";
             this.bandedGridColumn331.Visible = true;
-            this.bandedGridColumn331.VisibleIndex = 32;
+            this.bandedGridColumn331.VisibleIndex = 34;
             this.bandedGridColumn331.Width = 117;
             // 
             // bandedGridColumn34
@@ -755,7 +921,7 @@
             this.bandedGridColumn34.FieldName = "EquipmentisOperating";
             this.bandedGridColumn34.Name = "bandedGridColumn34";
             this.bandedGridColumn34.Visible = true;
-            this.bandedGridColumn34.VisibleIndex = 33;
+            this.bandedGridColumn34.VisibleIndex = 35;
             this.bandedGridColumn34.Width = 307;
             // 
             // bandedGridColumn35
@@ -764,7 +930,7 @@
             this.bandedGridColumn35.FieldName = "EquipmentVolume";
             this.bandedGridColumn35.Name = "bandedGridColumn35";
             this.bandedGridColumn35.Visible = true;
-            this.bandedGridColumn35.VisibleIndex = 34;
+            this.bandedGridColumn35.VisibleIndex = 36;
             this.bandedGridColumn35.Width = 83;
             // 
             // bandedGridColumn36
@@ -773,7 +939,7 @@
             this.bandedGridColumn36.FieldName = "InterfaceatSoilorWater";
             this.bandedGridColumn36.Name = "bandedGridColumn36";
             this.bandedGridColumn36.Visible = true;
-            this.bandedGridColumn36.VisibleIndex = 35;
+            this.bandedGridColumn36.VisibleIndex = 37;
             this.bandedGridColumn36.Width = 114;
             // 
             // bandedGridColumn37
@@ -782,7 +948,7 @@
             this.bandedGridColumn37.FieldName = "ExternalEnvironment";
             this.bandedGridColumn37.Name = "bandedGridColumn37";
             this.bandedGridColumn37.Visible = true;
-            this.bandedGridColumn37.VisibleIndex = 36;
+            this.bandedGridColumn37.VisibleIndex = 38;
             this.bandedGridColumn37.Width = 101;
             // 
             // bandedGridColumn38
@@ -791,17 +957,25 @@
             this.bandedGridColumn38.FieldName = "HeatTraced";
             this.bandedGridColumn38.Name = "bandedGridColumn38";
             this.bandedGridColumn38.Visible = true;
-            this.bandedGridColumn38.VisibleIndex = 37;
+            this.bandedGridColumn38.VisibleIndex = 39;
             this.bandedGridColumn38.Width = 83;
             // 
-            // bandedGridColumn39
+            // gridColumn74
             // 
-            this.bandedGridColumn39.Caption = "Highly Effective Inspection for Deadlegs";
-            this.bandedGridColumn39.FieldName = "HighlyEffectiveInspection";
-            this.bandedGridColumn39.Name = "bandedGridColumn39";
-            this.bandedGridColumn39.Visible = true;
-            this.bandedGridColumn39.VisibleIndex = 38;
-            this.bandedGridColumn39.Width = 443;
+            this.gridColumn74.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.gridColumn74.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn74.Caption = "► Component Properties";
+            this.gridColumn74.Name = "gridColumn74";
+            this.gridColumn74.Visible = true;
+            this.gridColumn74.VisibleIndex = 41;
+            // 
+            // gridColumn78
+            // 
+            this.gridColumn78.Caption = "Highly Effective Inspection for Deadlegs";
+            this.gridColumn78.FieldName = "HighlyEffectiveInspection";
+            this.gridColumn78.Name = "gridColumn78";
+            this.gridColumn78.Visible = true;
+            this.gridColumn78.VisibleIndex = 40;
             // 
             // bandedGridColumn40
             // 
@@ -809,7 +983,7 @@
             this.bandedGridColumn40.FieldName = "MinimumMeasuredThickness";
             this.bandedGridColumn40.Name = "bandedGridColumn40";
             this.bandedGridColumn40.Visible = true;
-            this.bandedGridColumn40.VisibleIndex = 39;
+            this.bandedGridColumn40.VisibleIndex = 42;
             this.bandedGridColumn40.Width = 101;
             // 
             // bandedGridColumn41
@@ -818,7 +992,7 @@
             this.bandedGridColumn41.FieldName = "NominalThickness";
             this.bandedGridColumn41.Name = "bandedGridColumn41";
             this.bandedGridColumn41.Visible = true;
-            this.bandedGridColumn41.VisibleIndex = 40;
+            this.bandedGridColumn41.VisibleIndex = 43;
             this.bandedGridColumn41.Width = 78;
             // 
             // bandedGridColumn42
@@ -827,7 +1001,7 @@
             this.bandedGridColumn42.FieldName = "NominalDiameter";
             this.bandedGridColumn42.Name = "bandedGridColumn42";
             this.bandedGridColumn42.Visible = true;
-            this.bandedGridColumn42.VisibleIndex = 41;
+            this.bandedGridColumn42.VisibleIndex = 44;
             this.bandedGridColumn42.Width = 135;
             // 
             // bandedGridColumn43
@@ -836,7 +1010,7 @@
             this.bandedGridColumn43.FieldName = "MinRequiredThickness";
             this.bandedGridColumn43.Name = "bandedGridColumn43";
             this.bandedGridColumn43.Visible = true;
-            this.bandedGridColumn43.VisibleIndex = 42;
+            this.bandedGridColumn43.VisibleIndex = 45;
             this.bandedGridColumn43.Width = 152;
             // 
             // bandedGridColumn44
@@ -845,7 +1019,7 @@
             this.bandedGridColumn44.FieldName = "CurrentCorrosionRate";
             this.bandedGridColumn44.Name = "bandedGridColumn44";
             this.bandedGridColumn44.Visible = true;
-            this.bandedGridColumn44.VisibleIndex = 43;
+            this.bandedGridColumn44.VisibleIndex = 46;
             this.bandedGridColumn44.Width = 116;
             // 
             // bandedGridColumn45
@@ -854,7 +1028,7 @@
             this.bandedGridColumn45.FieldName = "PresenceofCracks";
             this.bandedGridColumn45.Name = "bandedGridColumn45";
             this.bandedGridColumn45.Visible = true;
-            this.bandedGridColumn45.VisibleIndex = 44;
+            this.bandedGridColumn45.VisibleIndex = 47;
             this.bandedGridColumn45.Width = 80;
             // 
             // bandedGridColumn46
@@ -863,7 +1037,7 @@
             this.bandedGridColumn46.FieldName = "PreviousFailures";
             this.bandedGridColumn46.Name = "bandedGridColumn46";
             this.bandedGridColumn46.Visible = true;
-            this.bandedGridColumn46.VisibleIndex = 45;
+            this.bandedGridColumn46.VisibleIndex = 48;
             // 
             // bandedGridColumn47
             // 
@@ -871,7 +1045,7 @@
             this.bandedGridColumn47.FieldName = "DamageFoundDuringInspection";
             this.bandedGridColumn47.Name = "bandedGridColumn47";
             this.bandedGridColumn47.Visible = true;
-            this.bandedGridColumn47.VisibleIndex = 46;
+            this.bandedGridColumn47.VisibleIndex = 49;
             // 
             // bandedGridColumn48
             // 
@@ -879,15 +1053,576 @@
             this.bandedGridColumn48.FieldName = "PresenceofInjectionMixPoint";
             this.bandedGridColumn48.Name = "bandedGridColumn48";
             this.bandedGridColumn48.Visible = true;
-            this.bandedGridColumn48.VisibleIndex = 47;
+            this.bandedGridColumn48.VisibleIndex = 51;
             // 
-            // bandedGridColumn49
+            // tr
             // 
-            this.bandedGridColumn49.Caption = "Highly Effective Inspection of Corrosion at Injection Mix Point";
-            this.bandedGridColumn49.FieldName = "HighlyEffectiveInspection ";
-            this.bandedGridColumn49.Name = "bandedGridColumn49";
-            this.bandedGridColumn49.Visible = true;
-            this.bandedGridColumn49.VisibleIndex = 48;
+            this.tr.Caption = "Tramp Elements";
+            this.tr.FieldName = "TrampElements";
+            this.tr.Name = "tr";
+            this.tr.Visible = true;
+            this.tr.VisibleIndex = 52;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Delta FATT";
+            this.gridColumn7.FieldName = "DeltaFATT";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 53;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Cyclic Loading Connected within 15.25m";
+            this.gridColumn8.FieldName = "CyclicLoadingConnected";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 54;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Maximum Brinnell Hardness of Weld";
+            this.gridColumn9.FieldName = "MaximumBrinnellHardness";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 55;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Number of Fitting on Pipe ";
+            this.gridColumn10.FieldName = "NumberofFitting";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 56;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Joint Type of Branch";
+            this.gridColumn11.FieldName = "JointTypeofBranch";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 57;
+            // 
+            // gridColumn12
+            // 
+            this.gridColumn12.Caption = "Pipe Condition";
+            this.gridColumn12.FieldName = "PipeCondition";
+            this.gridColumn12.Name = "gridColumn12";
+            this.gridColumn12.Visible = true;
+            this.gridColumn12.VisibleIndex = 58;
+            // 
+            // gridColumn13
+            // 
+            this.gridColumn13.Caption = "Visible or Audible Shaking Detected";
+            this.gridColumn13.FieldName = "VisibleorAudible ";
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 59;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "Accummlated Time Shaking of Pipe";
+            this.gridColumn14.FieldName = "AccummlatedTimeShaking";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 60;
+            // 
+            // gridColumn15
+            // 
+            this.gridColumn15.Caption = "Amount of Shaking of Pipe";
+            this.gridColumn15.FieldName = "AmountofShaking";
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 61;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Correct Action to Mitigate Vibration";
+            this.gridColumn1.FieldName = "CorrectAction";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 62;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.Caption = "Branch Diameter";
+            this.gridColumn16.FieldName = "BranchDiameter";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 63;
+            // 
+            // gridColumn17
+            // 
+            this.gridColumn17.Caption = "Complexity of Protrusions";
+            this.gridColumn17.FieldName = "ComplexityofProtrusions";
+            this.gridColumn17.Name = "gridColumn17";
+            this.gridColumn17.Visible = true;
+            this.gridColumn17.VisibleIndex = 64;
+            // 
+            // gridColumn75
+            // 
+            this.gridColumn75.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridColumn75.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.gridColumn75.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn75.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn75.Caption = "► Stream / Process Flow";
+            this.gridColumn75.Name = "gridColumn75";
+            this.gridColumn75.Visible = true;
+            this.gridColumn75.VisibleIndex = 65;
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "Maximum Operating Temperature (°C)";
+            this.gridColumn18.FieldName = "MaximumOperatingTemperature";
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 66;
+            // 
+            // gridColumn19
+            // 
+            this.gridColumn19.Caption = "Minimum Operating Temperature (°C)";
+            this.gridColumn19.FieldName = "MinimumOperatingTemperature";
+            this.gridColumn19.Name = "gridColumn19";
+            this.gridColumn19.Visible = true;
+            this.gridColumn19.VisibleIndex = 67;
+            // 
+            // gridColumn20
+            // 
+            this.gridColumn20.Caption = "Maximum Operating Pressure (MPa)";
+            this.gridColumn20.FieldName = "MaximumOperatingPressure ";
+            this.gridColumn20.Name = "gridColumn20";
+            this.gridColumn20.Visible = true;
+            this.gridColumn20.VisibleIndex = 68;
+            // 
+            // gridColumn21
+            // 
+            this.gridColumn21.Caption = "Minimum Operating Pressure (MPa)";
+            this.gridColumn21.FieldName = "MinimumOperatingPressure";
+            this.gridColumn21.Name = "gridColumn21";
+            this.gridColumn21.Visible = true;
+            this.gridColumn21.VisibleIndex = 69;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "Critical Exposure Temperature (°C)";
+            this.gridColumn22.FieldName = "CriticalExposureTemperature";
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 70;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "Amine Solution Composition ";
+            this.gridColumn23.FieldName = "AmineSolutionComposition ";
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 71;
+            // 
+            // gridColumn24
+            // 
+            this.gridColumn24.Caption = "NAOH Concentration (%)";
+            this.gridColumn24.FieldName = "NAOHConcentration ";
+            this.gridColumn24.Name = "gridColumn24";
+            this.gridColumn24.Visible = true;
+            this.gridColumn24.VisibleIndex = 72;
+            // 
+            // gridColumn25
+            // 
+            this.gridColumn25.Caption = "H2S Content in Water (ppm)";
+            this.gridColumn25.FieldName = "H2SContent";
+            this.gridColumn25.Name = "gridColumn25";
+            this.gridColumn25.Visible = true;
+            this.gridColumn25.VisibleIndex = 73;
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "Material is Exposed to Fluids, Mists, or Solids Containing Chlorine Internally";
+            this.gridColumn26.FieldName = "MaterialFluidsMistsSolids ";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 74;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "Flow Rate (m³/hr)";
+            this.gridColumn27.FieldName = "FlowRate";
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 75;
+            // 
+            // gridColumn28
+            // 
+            this.gridColumn28.Caption = "pH of Water";
+            this.gridColumn28.FieldName = "pHofWater";
+            this.gridColumn28.Name = "gridColumn28";
+            this.gridColumn28.Visible = true;
+            this.gridColumn28.VisibleIndex = 76;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "Toxic Consitituents";
+            this.gridColumn29.FieldName = "ToxicConsitituents";
+            this.gridColumn29.Name = "gridColumn29";
+            this.gridColumn29.Visible = true;
+            this.gridColumn29.VisibleIndex = 77;
+            // 
+            // gridColumn30
+            // 
+            this.gridColumn30.Caption = "Release Fluid Percent Toxic (%)";
+            this.gridColumn30.FieldName = "ReleaseFluidPercentToxic";
+            this.gridColumn30.Name = "gridColumn30";
+            this.gridColumn30.Visible = true;
+            this.gridColumn30.VisibleIndex = 78;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "Process Contains Hydrogen";
+            this.gridColumn31.FieldName = "ProcessContainsHydrogen";
+            this.gridColumn31.Name = "gridColumn31";
+            this.gridColumn31.Visible = true;
+            this.gridColumn31.VisibleIndex = 79;
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "Presence of Hydrofluoric Acid";
+            this.gridColumn32.FieldName = "PresenceofHydrofluoric";
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 80;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "Exposure to Amine ";
+            this.gridColumn33.FieldName = "ExposuretoAmine ";
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 81;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.Caption = "Presence of Cyanides";
+            this.gridColumn34.FieldName = "PresenceofCyanides";
+            this.gridColumn34.Name = "gridColumn34";
+            this.gridColumn34.Visible = true;
+            this.gridColumn34.VisibleIndex = 82;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "Operating Hydrogen Partial Pressure (MPa)";
+            this.gridColumn35.FieldName = "OperatingHydrogenPartialPressure";
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 83;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "Exposed to Sulphur-Bearing Compounds";
+            this.gridColumn36.FieldName = "ExposedSulphurBearing";
+            this.gridColumn36.Name = "gridColumn36";
+            this.gridColumn36.Visible = true;
+            this.gridColumn36.VisibleIndex = 84;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "Exposed to Acid Gas Treating Amine";
+            this.gridColumn37.FieldName = "ExposedAcidGas";
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 85;
+            // 
+            // gridColumn38
+            // 
+            this.gridColumn38.Caption = "Environment Contains H2S";
+            this.gridColumn38.FieldName = "EnvironmentContainsH2S";
+            this.gridColumn38.Name = "gridColumn38";
+            this.gridColumn38.Visible = true;
+            this.gridColumn38.VisibleIndex = 86;
+            // 
+            // gridColumn39
+            // 
+            this.gridColumn39.Caption = "Environment Contains Caustic in Any Concentration ";
+            this.gridColumn39.FieldName = "EnvironmentContainsCaustic";
+            this.gridColumn39.Name = "gridColumn39";
+            this.gridColumn39.Visible = true;
+            this.gridColumn39.VisibleIndex = 87;
+            // 
+            // gridColumn40
+            // 
+            this.gridColumn40.Caption = "CO3 Concentration in Water (ppm)";
+            this.gridColumn40.FieldName = "CO3Concentration";
+            this.gridColumn40.Name = "gridColumn40";
+            this.gridColumn40.Visible = true;
+            this.gridColumn40.VisibleIndex = 88;
+            // 
+            // gridColumn41
+            // 
+            this.gridColumn41.Caption = "Chloride Ion (ppm)";
+            this.gridColumn41.FieldName = "ChlorideIon";
+            this.gridColumn41.Name = "gridColumn41";
+            this.gridColumn41.Visible = true;
+            this.gridColumn41.VisibleIndex = 89;
+            // 
+            // gridColumn42
+            // 
+            this.gridColumn42.Caption = "Aqueous Phase During Operation ";
+            this.gridColumn42.FieldName = "AqueousPhaseDuringOper";
+            this.gridColumn42.Name = "gridColumn42";
+            this.gridColumn42.Visible = true;
+            this.gridColumn42.VisibleIndex = 90;
+            // 
+            // gridColumn43
+            // 
+            this.gridColumn43.Caption = "Aqueous Phase During Shut Down";
+            this.gridColumn43.FieldName = "AqueousPhaseDuringShut";
+            this.gridColumn43.Name = "gridColumn43";
+            this.gridColumn43.Visible = true;
+            this.gridColumn43.VisibleIndex = 91;
+            // 
+            // gridColumn76
+            // 
+            this.gridColumn76.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridColumn76.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.gridColumn76.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn76.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn76.Caption = "► Material";
+            this.gridColumn76.Name = "gridColumn76";
+            this.gridColumn76.Visible = true;
+            this.gridColumn76.VisibleIndex = 92;
+            // 
+            // gridColumn44
+            // 
+            this.gridColumn44.Caption = "Design Temperature (°C)";
+            this.gridColumn44.FieldName = "DesignTemperature";
+            this.gridColumn44.Name = "gridColumn44";
+            this.gridColumn44.Visible = true;
+            this.gridColumn44.VisibleIndex = 93;
+            // 
+            // gridColumn45
+            // 
+            this.gridColumn45.Caption = "Allowable Stress at Assessment Temperature (MPa)";
+            this.gridColumn45.FieldName = "AllowableStress";
+            this.gridColumn45.Name = "gridColumn45";
+            this.gridColumn45.Visible = true;
+            this.gridColumn45.VisibleIndex = 94;
+            // 
+            // gridColumn46
+            // 
+            this.gridColumn46.Caption = "Design Pressure (MPa)";
+            this.gridColumn46.FieldName = "DesignPressure";
+            this.gridColumn46.Name = "gridColumn46";
+            this.gridColumn46.Visible = true;
+            this.gridColumn46.VisibleIndex = 95;
+            // 
+            // gridColumn47
+            // 
+            this.gridColumn47.Caption = "Susceptible to Temper";
+            this.gridColumn47.FieldName = "SusceptibletoTemper";
+            this.gridColumn47.Name = "gridColumn47";
+            this.gridColumn47.Visible = true;
+            this.gridColumn47.VisibleIndex = 96;
+            // 
+            // gridColumn48
+            // 
+            this.gridColumn48.Caption = "Sulfur Content ";
+            this.gridColumn48.FieldName = "SulfurContent ";
+            this.gridColumn48.Name = "gridColumn48";
+            this.gridColumn48.Visible = true;
+            this.gridColumn48.VisibleIndex = 97;
+            // 
+            // gridColumn49
+            // 
+            this.gridColumn49.Caption = "Sigma Phase (%)";
+            this.gridColumn49.FieldName = "SigmaPhase";
+            this.gridColumn49.Name = "gridColumn49";
+            this.gridColumn49.Visible = true;
+            this.gridColumn49.VisibleIndex = 98;
+            // 
+            // gridColumn50
+            // 
+            this.gridColumn50.Caption = "Reference Temperature (°C)";
+            this.gridColumn50.FieldName = "ReferenceTemperature";
+            this.gridColumn50.Name = "gridColumn50";
+            this.gridColumn50.Visible = true;
+            this.gridColumn50.VisibleIndex = 99;
+            // 
+            // gridColumn51
+            // 
+            this.gridColumn51.Caption = "Nickel-based Alloy";
+            this.gridColumn51.FieldName = "NickelAlloy";
+            this.gridColumn51.Name = "gridColumn51";
+            this.gridColumn51.Visible = true;
+            this.gridColumn51.VisibleIndex = 100;
+            // 
+            // gridColumn52
+            // 
+            this.gridColumn52.Caption = "Material Cost Factor";
+            this.gridColumn52.FieldName = "MaterialCostFactor";
+            this.gridColumn52.Name = "gridColumn52";
+            this.gridColumn52.Visible = true;
+            this.gridColumn52.VisibleIndex = 101;
+            // 
+            // gridColumn53
+            // 
+            this.gridColumn53.Caption = "Heat Treatment ";
+            this.gridColumn53.FieldName = "HeatTreatment ";
+            this.gridColumn53.Name = "gridColumn53";
+            this.gridColumn53.Visible = true;
+            this.gridColumn53.VisibleIndex = 102;
+            // 
+            // gridColumn54
+            // 
+            this.gridColumn54.Caption = "Corrosion Allowance (mm)";
+            this.gridColumn54.FieldName = "CorrosionAllowance";
+            this.gridColumn54.Name = "gridColumn54";
+            this.gridColumn54.Visible = true;
+            this.gridColumn54.VisibleIndex = 103;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.Caption = "Chromium ≥ 12%";
+            this.gridColumn55.FieldName = "Chromium";
+            this.gridColumn55.Name = "gridColumn55";
+            this.gridColumn55.Visible = true;
+            this.gridColumn55.VisibleIndex = 104;
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "Cacbon or Low Alloy Steel";
+            this.gridColumn56.FieldName = "CacbonorLow";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 105;
+            // 
+            // gridColumn57
+            // 
+            this.gridColumn57.Caption = "Austenitic Steel";
+            this.gridColumn57.FieldName = "AusteniticSteel";
+            this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.Visible = true;
+            this.gridColumn57.VisibleIndex = 106;
+            // 
+            // gridColumn77
+            // 
+            this.gridColumn77.AppearanceHeader.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.gridColumn77.AppearanceHeader.ForeColor = System.Drawing.Color.Red;
+            this.gridColumn77.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn77.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn77.Caption = "Coating, Cladding, Linning & Insulation";
+            this.gridColumn77.Name = "gridColumn77";
+            this.gridColumn77.Visible = true;
+            this.gridColumn77.VisibleIndex = 107;
+            // 
+            // gridColumn58
+            // 
+            this.gridColumn58.Caption = "Internal Coating";
+            this.gridColumn58.FieldName = "InternalCoating";
+            this.gridColumn58.Name = "gridColumn58";
+            this.gridColumn58.Visible = true;
+            this.gridColumn58.VisibleIndex = 108;
+            // 
+            // gridColumn59
+            // 
+            this.gridColumn59.Caption = "External Coating";
+            this.gridColumn59.FieldName = "ExternalCoating";
+            this.gridColumn59.Name = "gridColumn59";
+            this.gridColumn59.Visible = true;
+            this.gridColumn59.VisibleIndex = 109;
+            // 
+            // gridColumn60
+            // 
+            this.gridColumn60.Caption = "External Coating Installation date";
+            this.gridColumn60.FieldName = "ExternalCoatingInstallationDate";
+            this.gridColumn60.Name = "gridColumn60";
+            this.gridColumn60.Visible = true;
+            this.gridColumn60.VisibleIndex = 110;
+            // 
+            // gridColumn61
+            // 
+            this.gridColumn61.Caption = "External Coating Quality";
+            this.gridColumn61.FieldName = "ExternalCoatingQuality";
+            this.gridColumn61.Name = "gridColumn61";
+            this.gridColumn61.Visible = true;
+            this.gridColumn61.VisibleIndex = 111;
+            // 
+            // gridColumn62
+            // 
+            this.gridColumn62.Caption = "Support Configuration Which Does Not Allow Coating Maintenance";
+            this.gridColumn62.FieldName = "SupportConfiguration";
+            this.gridColumn62.Name = "gridColumn62";
+            this.gridColumn62.Visible = true;
+            this.gridColumn62.VisibleIndex = 112;
+            // 
+            // gridColumn63
+            // 
+            this.gridColumn63.Caption = "Internal Lining ";
+            this.gridColumn63.FieldName = "InternalLining ";
+            this.gridColumn63.Name = "gridColumn63";
+            this.gridColumn63.Visible = true;
+            this.gridColumn63.VisibleIndex = 113;
+            // 
+            // gridColumn64
+            // 
+            this.gridColumn64.Caption = "Internal Liner Type";
+            this.gridColumn64.FieldName = "InternalLinerType";
+            this.gridColumn64.Name = "gridColumn64";
+            this.gridColumn64.Visible = true;
+            this.gridColumn64.VisibleIndex = 114;
+            // 
+            // gridColumn65
+            // 
+            this.gridColumn65.Caption = "Internal Liner Condition";
+            this.gridColumn65.FieldName = "InternalLinerCondition";
+            this.gridColumn65.Name = "gridColumn65";
+            this.gridColumn65.Visible = true;
+            this.gridColumn65.VisibleIndex = 115;
+            // 
+            // gridColumn66
+            // 
+            this.gridColumn66.Caption = "Internal Cladding ";
+            this.gridColumn66.FieldName = "InternalCladding";
+            this.gridColumn66.Name = "gridColumn66";
+            this.gridColumn66.Visible = true;
+            this.gridColumn66.VisibleIndex = 116;
+            // 
+            // gridColumn67
+            // 
+            this.gridColumn67.Caption = "Cladding Corrosion Rate (mm/yr)";
+            this.gridColumn67.FieldName = "CladdingCorrosionRate";
+            this.gridColumn67.Name = "gridColumn67";
+            this.gridColumn67.Visible = true;
+            this.gridColumn67.VisibleIndex = 117;
+            // 
+            // gridColumn68
+            // 
+            this.gridColumn68.Caption = "External Insulation";
+            this.gridColumn68.FieldName = "ExternalInsulation";
+            this.gridColumn68.Name = "gridColumn68";
+            this.gridColumn68.Visible = true;
+            this.gridColumn68.VisibleIndex = 118;
+            // 
+            // gridColumn69
+            // 
+            this.gridColumn69.Caption = "External Insulation Type";
+            this.gridColumn69.FieldName = "ExternalInsulationType";
+            this.gridColumn69.Name = "gridColumn69";
+            this.gridColumn69.Visible = true;
+            this.gridColumn69.VisibleIndex = 119;
+            // 
+            // gridColumn70
+            // 
+            this.gridColumn70.Caption = "Insulation Condition";
+            this.gridColumn70.FieldName = "InsulationCondition";
+            this.gridColumn70.Name = "gridColumn70";
+            this.gridColumn70.Visible = true;
+            this.gridColumn70.VisibleIndex = 120;
+            // 
+            // gridColumn71
+            // 
+            this.gridColumn71.Caption = "Insulation Contains Chlorides";
+            this.gridColumn71.FieldName = "InsulationContainsChlorides";
+            this.gridColumn71.Name = "gridColumn71";
+            this.gridColumn71.Visible = true;
+            this.gridColumn71.VisibleIndex = 121;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -1978,6 +2713,14 @@
             this.gridColumn6.VisibleIndex = 2;
             this.gridColumn6.Width = 49;
             // 
+            // gridColumn79
+            // 
+            this.gridColumn79.Caption = "Highly Effective Inspection of Corrosion at Injection Mix Point";
+            this.gridColumn79.FieldName = "HighlyEffectiveInspectionCom";
+            this.gridColumn79.Name = "gridColumn79";
+            this.gridColumn79.Visible = true;
+            this.gridColumn79.VisibleIndex = 50;
+            // 
             // frmInspectionPlanDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2212,7 +2955,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn36;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn37;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn38;
-        private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn39;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn40;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn41;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn42;
@@ -2222,6 +2964,80 @@
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn46;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn47;
         private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn48;
-        private DevExpress.XtraGrid.Columns.GridColumn bandedGridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn tr;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn43;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn44;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn45;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn46;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn47;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn48;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn49;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn50;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn51;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn52;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn58;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn59;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn60;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn61;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn62;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn63;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn64;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn65;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn66;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn67;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn68;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn69;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn70;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn71;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn72;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn73;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn74;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn75;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn76;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn77;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn78;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn79;
     }
 }
