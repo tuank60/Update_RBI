@@ -3384,7 +3384,7 @@
             this.tabIspFinding.Controls.Add(this.btnClearFindings);
             this.tabIspFinding.Controls.Add(this.btnViewEditFindings);
             this.tabIspFinding.Name = "tabIspFinding";
-            this.tabIspFinding.Size = new System.Drawing.Size(908, 328);
+            this.tabIspFinding.Size = new System.Drawing.Size(1188, 382);
             // 
             // groupBoxRemarks
             // 
@@ -3423,6 +3423,7 @@
             this.btnViewEditFindings.TabIndex = 1;
             this.btnViewEditFindings.Text = "View or edit Inspection Findings / Description";
             this.btnViewEditFindings.UseVisualStyleBackColor = true;
+            this.btnViewEditFindings.Click += new System.EventHandler(this.btnViewEditFindings_Click);
             // 
             // panel5
             // 

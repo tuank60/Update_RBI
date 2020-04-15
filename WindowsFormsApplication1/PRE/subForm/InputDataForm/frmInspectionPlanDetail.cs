@@ -940,5 +940,16 @@ namespace RBI.PRE.subForm.InputDataForm
         {
 
         }
+
+
+
+
+
+        // Mở Word ở Inspection Finding trong tab thứ 4
+        private void btnViewEditFindings_Click(object sender, EventArgs e)
+        {
+            frmInspectionFinding office = new frmInspectionFinding();
+            office.ShowDialog();
+        }
     }
 }
