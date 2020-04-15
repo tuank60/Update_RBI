@@ -32,7 +32,7 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getPlanName(PlanID);
         }
-        public String getPlanDate(int PlanID)
+        public DateTime getPlanDate(int PlanID)
         {
             return DAL.getPlanDate(PlanID);
         }

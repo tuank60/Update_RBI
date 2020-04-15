@@ -273,10 +273,14 @@ namespace RBI.DAL.MSSQL
                 {
                     while (reader.Read())
                     {
-                        if (reader.IsDBNull(0))
-                            IsExist = false;
-                        else
-                            IsExist = true;
+                        if (reader.HasRows)
+                        {
+
+                            if (Convert.ToInt32(reader.GetBoolean(0)) == 0)
+                                IsExist = false;
+                            else
+                                IsExist = true;
+                        }
                     }
                 }
             }
@@ -291,7 +295,44 @@ namespace RBI.DAL.MSSQL
             }
             return IsExist;
         }
+        public Boolean checkIsDamageMechanism(int ID, int DM_ID)
+        {
+            Boolean IsExist = false;
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            string sql = "Select IsDF from rbi.dbo.RW_DAMAGE_MECHANISM where ID = '" + ID + "' and DMItemID = '" + DM_ID + "'";
+            try
+            {
+                
+                SqlCommand cmd = new SqlCommand(sql, conn);
+               
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read()==true)
+                    {
 
+                        if (reader.HasRows)
+                        {
+                            
+                            if (Convert.ToInt32(reader.GetBoolean(0)) == 0)
+                                IsExist = false;
+                            else
+                                IsExist = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return IsExist;
+        }
         public List<InspectionPlant> GetListInspectionPlant()
         {
             List<InspectionPlant> lstInsp = new List<InspectionPlant>();

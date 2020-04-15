@@ -56,7 +56,7 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.checkExist(comNum);
         }
-        public int getIDbyName(String comNum)
+        public int getIDbyName(String comNum)//getIDbyNumber
         {
             return DAL.getIDbyName(comNum);
         }

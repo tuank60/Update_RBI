@@ -12,27 +12,23 @@ namespace RBI.DAL.MSSQL
 {
     class INSPECTION_COVERAGE_DETAIL_ConnectUtils
     {
-        public void add(int CoverageID,int DMItemID, DateTime InspectionDate, String EffectivenessCode,String InspectionSummary, int IsCarriedOut, DateTime CarriedOutDate)
+        public void add(int CoverageID,int DMItemID, DateTime InspectionDate, String EffectivenessCode,String InspectionSummary)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
-                        "INSERT INTO [dbo].[INSPECTION_COVERAGE_DETAIL]" +
-                        "([CoverageID]" +
-                        ",[DMItemID]" +
-                        ",[InspectionDate]" +
-                        ",[EffectivenessCode]" +
-                        ",[InspectionSummary]" +
-                        ",[IsCarriedOut]" +
-                        ",[CarriedOutDate])" +
-                        "VALUES" +
-                        "('" + CoverageID + "'" +
-                        ",'" + DMItemID + "'" +
-                        ",'" + InspectionDate + "'" +
-                        ",'" + EffectivenessCode + "'" +
-                        ",'" + InspectionSummary + "'" +
-                        ",'" + IsCarriedOut + "'" +
-                        ",'" + CarriedOutDate + "')";
+                         "INSERT INTO [dbo].[INSPECTION_COVERAGE_DETAIL]" +
+                            "([CoverageID]" +
+                            ",[DMItemID]" +
+                            ",[InspectionDate]" +
+                            ",[EffectivenessCode]" +
+                            ",[InspectionSummary])" +
+                            "VALUES" +
+                            "('" + CoverageID + "'" +
+                            ",'" + DMItemID + "'" +
+                            ",'" + InspectionDate + "'" +
+                            ",'" + EffectivenessCode + "'" +
+                            ",'" + InspectionSummary + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -106,6 +102,30 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
+        public void deletebyCoverageID(int CoverageID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "USE [rbi]" +
+                        "DELETE FROM [dbo].[INSPECTION_COVERAGE_DETAIL]" +
+                        "WHERE [CoverageID] = '" + CoverageID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "DELETE FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
         public List<INSPECTION_COVERAGE_DETAIL> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -160,8 +180,43 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public String getEffectivenessCodebyCoverageIDandDMItemID(int CoverageID, int DMItemID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String EffectivenessCode = "E";
+            String sql = " Use [rbi] Select [EffectivenessCode]" +
+                          "From [dbo].[INSPECTION_COVERAGE_DETAIL] where CoverageID = '" + CoverageID + "' and DMItemID= '" + DMItemID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            EffectivenessCode = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return EffectivenessCode;
+        }
 
     }
+
 }
 
 

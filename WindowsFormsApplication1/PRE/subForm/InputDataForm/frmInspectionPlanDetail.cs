@@ -21,7 +21,7 @@ namespace RBI.PRE.subForm.InputDataForm
 {
     public partial class frmInspectionPlanDetail : Form
     {
-        bool changeINSPECTION_COVERAGE = false;
+        
         int _coverageID = 1;
         public int planid;
         List<INSPECTION_DETAIL_TECHNIQUE> listNDT = new List<INSPECTION_DETAIL_TECHNIQUE>();
@@ -29,8 +29,10 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             InitializeComponent();
             gridView2.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            gridView3.OptionsView.ColumnHeaderAutoHeight = DevExpress.Utils.DefaultBoolean.True;
+            //gridView3.OptionsView.he
             planid = PlanID;
-            Display();
+           // Display();
             
             //Displaytab2();
             radioGroup1.EditValue = 1;
@@ -39,6 +41,7 @@ namespace RBI.PRE.subForm.InputDataForm
             initCombox();
             gridview1(0,0,0);
             ShowGridview2(PlanID);
+            showGridControlMethod();
 
         }
 
@@ -48,7 +51,7 @@ namespace RBI.PRE.subForm.InputDataForm
             {
                 INSPECTION_PLAN_BUS businsplan = new INSPECTION_PLAN_BUS();
                 InspectionPlanName.Text = businsplan.getPlanName(PlanID);
-                InspectionDate.Text = businsplan.getPlanDate(PlanID);
+                InspectionDate.Text = businsplan.getPlanDate(PlanID).ToString();
                 
             }
             catch
@@ -75,7 +78,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     }
                 }
             }
-         
+            if (IC.Count > 0) txtRemarks.Text = IC[0].Remarks;
 
         }
 
@@ -86,15 +89,31 @@ namespace RBI.PRE.subForm.InputDataForm
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+
             //do something
           // string obj = gridView2.GetRowCellValue(gridView2.FocusedRowHandle, "EquipmentNumber").ToString();
-            //Lưu tab Process Plant
-            int[] a = gridView2.GetSelectedRows();
+            //Lưu tab Process Plant trong tab inspection scope
+            int[] a = gridView2.GetSelectedRows();// tra ve chi so hang dc tick
+            if(a.Length==0)
+            {
+                MessageBox.Show("There is no damage mechanism selected","Inspection / Mitigation Planner", MessageBoxButtons.OK,MessageBoxIcon.Hand);
+                return;
+            }
             string obj = null;
             INSPECTION_COVERAGE IC = new INSPECTION_COVERAGE();
             INSPECTION_COVERAGE_BUS ICB=new INSPECTION_COVERAGE_BUS();
-            if (changeINSPECTION_COVERAGE) ICB.deletebyPlanID(planid);
-            for (int i = 0; i < gridView2.SelectedRowsCount; i++)
+            // xoa database de luu database moi
+            List<int> IDInsCov = ICB.getIDbyPlanID(planid);//khoa ngoai cua INSPECTION_DETAIL_TECHNIQUE
+            INSPECTION_DETAIL_TECHNIQUE_BUS Bus_insTech = new INSPECTION_DETAIL_TECHNIQUE_BUS();
+            INSPECTION_COVERAGE_DETAIL_BUS insCoDeBus = new INSPECTION_COVERAGE_DETAIL_BUS();
+            foreach (int i in IDInsCov)
+            {
+
+                Bus_insTech.deletebyCoverageID(i);
+                insCoDeBus.deletebyCoverageID(i);
+            }
+            ICB.deletebyPlanID(planid);
+            for (int i = 0; i < gridView2.SelectedRowsCount; i++)//SelectedRowsCount: so luong hang dc tick
             {
                 
                 IC.PlanID = planid;
@@ -104,23 +123,104 @@ namespace RBI.PRE.subForm.InputDataForm
                 COMPONENT_MASTER_BUS CMB = new COMPONENT_MASTER_BUS();
                 obj = gridView2.GetRowCellValue(a[i], "ComponentNumber").ToString();
                 IC.ComponentID = CMB.getIDbyName(obj);
-                IC.Remarks = txtFindingsDescription.Text;
+                IC.Remarks = txtRemarks.Text;
                 ICB.add(IC);
-                
-               // Console.WriteLine(obj);
                 
             }
             //Lưu inspectionMethod
-           List <int> IDInsCov = ICB.getIDbyPlanID(planid);//khoa ngoai cua INSPECTION_DETAIL_TECHNIQUE
+            List<String> imIteam = new List<String>();
+            List<String> imType = new List<String>();
+            List<String> inspectionType = new List<string>();
+            List<int> converage = new List<int>();
+            String NTDMethod = null, IMIteam = null, IMType = null, InspectionType = null;
+            int tam = 0;
+            for (int i = 0; i < gridViewtab2.RowCount; i++)
+            {
+                NTDMethod = gridViewtab2.GetRowCellValue(i, "NDTMethod").ToString();
+                converage.Add((int)gridViewtab2.GetRowCellValue(i, "Coverage"));
+                tam = 0;
+                for (int j  = 0; j < NTDMethod.Length; j++)
+                {
+                    if (NTDMethod[j] == '+')
+                    {
+
+                        if (tam == 0)
+                        {
+                            
+                           InspectionType = "";
+                            for (int t = 0; t < j-1; t++)
+                            {
+                                InspectionType += NTDMethod[t];
+                            }
+                            tam = j + 2;
+                            j++;
+                            continue;
+                        }
+                        else
+                        {
+                            IMIteam = "";
+                            for (int t = tam; t < j; t++)
+                            {
+                                IMIteam += NTDMethod[t];
+                            }
+                                
+                            tam =j+ 2;
+                            break;
+                          
+                        }
+                    }
+                }
+                IMType = "";
+                for (int t = tam; t < NTDMethod.Length; t++)
+                {
+                    IMType+= NTDMethod[t];
+                }
+            
+                imIteam.Add(IMIteam);
+                imType.Add(IMType);
+                inspectionType.Add(InspectionType);
+
+            }
+            IM_ITEMS_BUS imIteamsBus = new IM_ITEMS_BUS();
+            IM_TYPE_BUS imTypeBus = new IM_TYPE_BUS();
+            
             INSPECTION_DETAIL_TECHNIQUE insTech = new INSPECTION_DETAIL_TECHNIQUE();
+            IDInsCov = ICB.getIDbyPlanID(planid);//khoa ngoai cua INSPECTION_DETAIL_TECHNIQUE
+            Bus_insTech = new INSPECTION_DETAIL_TECHNIQUE_BUS();
             foreach (int i in IDInsCov)
             {
+               // insTech = null;
                 insTech.CoverageID = i;
+                for (int j = 0; j < imIteam.Count; j++)
+                {
+                    insTech.IMItemID = imIteamsBus.getData(imIteam[j]).IMItemID;
+                    insTech.IMTypeID = imTypeBus.getData(imType[j]).IMTypeID;
+                    insTech.InspectionType = (inspectionType[j] == "Instrusive") ? 0 : 1;
+                    insTech.Coverage = converage[j];
+                    Bus_insTech.add(insTech);
+                }
+                
             }
-            
-
-           
-           
+            //Luu tab Damage Mechanism
+            INSPECTION_COVERAGE_DETAIL_BUS inCoDeBus = new INSPECTION_COVERAGE_DETAIL_BUS();
+            INSPECTION_COVERAGE_DETAIL inCoDe = null;
+            for (int i = 0; i < gridView1.RowCount; i++)
+            {
+                inCoDe = new INSPECTION_COVERAGE_DETAIL();
+                INSPECTION_COVERAGE_BUS inCoBus = new INSPECTION_COVERAGE_BUS();
+                COMPONENT_MASTER_BUS comMasBus = new COMPONENT_MASTER_BUS();
+                EQUIPMENT_MASTER_BUS EquipMasBus = new EQUIPMENT_MASTER_BUS();
+                String EquipmentNumber = gridView1.GetRowCellValue(i, "EquipmentNumber").ToString();
+                String ComponentNumber = gridView1.GetRowCellValue(i, "ComponentNumber").ToString();
+                inCoDe.CoverageID = inCoBus.getIDbyEquipmentIDandComponentIDandPlanID(EquipMasBus.getIDbyNumber(EquipmentNumber), comMasBus.getIDbyName(ComponentNumber), planid);
+                DM_ITEMS_BUS dmItemsBus = new DM_ITEMS_BUS();
+                inCoDe.DMItemID = dmItemsBus.getDMIteamIDbyDMDescription(gridView1.GetRowCellValue(i, "DamageMechanism").ToString());
+                inCoDe.EffectivenessCode= gridView1.GetRowCellValue(i, "InspectionEffectiveness").ToString();
+                inCoDe.InspectionSummary= gridView1.GetRowCellValue(i, "InspectionSummary").ToString();
+                INSPECTION_PLAN_BUS inPlanBus = new INSPECTION_PLAN_BUS();
+                inCoDe.InspectionDate = inPlanBus.getPlanDate(planid);
+                inCoDeBus.add(inCoDe);
+            }
             this.Close();
         }
 
@@ -130,47 +230,88 @@ namespace RBI.PRE.subForm.InputDataForm
         private void btnAddIspMethod_Click(object sender, EventArgs e)
         {
             INSPECTION_DETAIL_TECHNIQUE ipTech = new INSPECTION_DETAIL_TECHNIQUE();
-            ipTech.IMItemID = lstTechnique.SelectedIndex;
-            ipTech.IMTypeID = lstMethod.SelectedIndex;
+            IM_ITEMS_BUS imIteamsBus = new IM_ITEMS_BUS();
+            IM_TYPE_BUS imTypeBus = new IM_TYPE_BUS();
+            ipTech.IMItemID = imIteamsBus.getData(this.lstMethod.GetItemText(this.lstMethod.SelectedItem)).IMItemID;
+            ipTech.IMTypeID = imTypeBus.getData(this.lstTechnique.GetItemText(this.lstTechnique.SelectedItem)).IMTypeID;
             if ((int)radioGroup1.EditValue == 1)
                 ipTech.InspectionType = 1;
             else ipTech.InspectionType = 0;
             ipTech.Coverage = 0;
-            ipTech.CoverageID = _coverageID;
+            ipTech.CoverageID = _coverageID;//ko ro
             INSPECTION_DETAIL_TECHNIQUE_BUS ipTechBus = new INSPECTION_DETAIL_TECHNIQUE_BUS();
-            List<INSPECTION_DETAIL_TECHNIQUE> listTech = ipTechBus.getDataSource();
-            foreach (INSPECTION_DETAIL_TECHNIQUE ds in listTech)
+            //List<INSPECTION_DETAIL_TECHNIQUE> listTech = ipTechBus.getDataSource();
+            foreach (INSPECTION_DETAIL_TECHNIQUE ds in listNDT)
             {
-                if (ds.IMTypeID == lstMethod.SelectedIndex && ds.IMItemID == lstTechnique.SelectedIndex && ds.InspectionType == ipTech.InspectionType)
+                if (ds.IMTypeID == ipTech.IMTypeID && ds.IMItemID == ipTech.IMItemID && ds.InspectionType == ipTech.InspectionType)
                 {
                     return;
                 }
             }
-            string InspectionType = "Intrusive";
+            string InspectionType = "Instrusive";
             if ((int)radioGroup1.EditValue == 0)
-                InspectionType  = "Non-Intrusive";
+                InspectionType  = "Non-Instrusive";
             string item = InspectionType + " + "
                 + this.lstMethod.GetItemText(this.lstMethod.SelectedItem) + " + " 
                 + this.lstTechnique.GetItemText(this.lstTechnique.SelectedItem);
+            
             MessageBox.Show(item);
             ipTech.NDTMethod = item;
             ButtonAddClicked = true;
-            listNDT.Add(ipTech);           
+            listNDT.Add(ipTech);
             gridControlMethod.DataSource = null;
-            gridControlMethod.DataSource = listNDT;            
+            gridControlMethod.DataSource = listNDT;
+           //gridViewtab2.AddNewRow();
+            //gridViewtab2.SetRowCellValue(gridViewtab2.RowCount-1, "Coverate", 12);
+
+
         }
-        private void gridControlMethod_Load(object sender, EventArgs e)
+        private void showGridControlMethod()
         {
             try
             {
                 gridControlMethod.DataSource = null;
+                INSPECTION_DETAIL_TECHNIQUE insMe = null;
+                List<INSPECTION_DETAIL_TECHNIQUE> listInsMe = new List<INSPECTION_DETAIL_TECHNIQUE>();
+                INSPECTION_COVERAGE_BUS insCoBus = new INSPECTION_COVERAGE_BUS();
+                if (insCoBus.getDataID(planid).Count == 0) return;
+                int CoverageID = insCoBus.getDataID(planid)[0].ID;
                 INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
-                gridControlMethod.DataSource = busisp.getDataSource();
+                List<INSPECTION_DETAIL_TECHNIQUE> listInsDeTe = new List<INSPECTION_DETAIL_TECHNIQUE>();
+                listInsDeTe = busisp.getDataSource(CoverageID);
+                foreach (INSPECTION_DETAIL_TECHNIQUE i in listInsDeTe)
+                {
+                    insMe = new INSPECTION_DETAIL_TECHNIQUE();
+                    insMe.IMItemID = i.IMItemID;
+                    insMe.IMTypeID = i.IMTypeID;
+                    if (i.InspectionType == 1)
+                    {
+                        insMe.NDTMethod = "Non-Intrusive + ";
+                        insMe.CoverageID = 1;
+                    }
+
+                    else insMe.NDTMethod = "Intrusive + ";
+                    IM_ITEMS_BUS imItemsBus = new IM_ITEMS_BUS();
+                    insMe.NDTMethod += imItemsBus.getDataSourcebyIMItemID(i.IMItemID).IMDescription;
+                    insMe.NDTMethod += " + ";
+                    IM_TYPE_BUS imTypeBus = new IM_TYPE_BUS();
+                    insMe.NDTMethod += imTypeBus.getDataSourcebyIMTypeID(i.IMTypeID).IMTypeName;
+                    insMe.Coverage = i.Coverage;
+                    listInsMe.Add(insMe);
+                }
+                gridControlMethod.DataSource = listInsMe;
+
+                listNDT = new List<INSPECTION_DETAIL_TECHNIQUE>(listInsMe);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+        private void gridControlMethod_Load(object sender, EventArgs e)
+        {
+            
+          
         }
         private void lstMethod_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -195,7 +336,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     lstTechnique.Items.Clear();
                     lstTechnique.Items.Add("Magnetic Fluorescent Inspection");
                     lstTechnique.Items.Add("Magnetic Flux Leakage");
-                    lstTechnique.Items.Add("Magnetic Practicle Inspection");
+                    lstTechnique.Items.Add("Magnetic Particle Inspection");
                     lstTechnique.SelectedIndex = 0;
                     break;
                 case 3:
@@ -260,7 +401,8 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             List<ProcessPlant> listPro = new List<ProcessPlant>();
             RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
-            List<RW_ASSESSMENT> assessment = busAssessment.getDataSource();
+            List<COMPONENT_MASTER> comMas = new List<COMPONENT_MASTER>();
+            COMPONENT_MASTER_BUS comMasBus = new COMPONENT_MASTER_BUS();
             EQUIPMENT_MASTER_BUS buseq = new EQUIPMENT_MASTER_BUS();
             EQUIPMENT_TYPE_BUS eqType = new EQUIPMENT_TYPE_BUS();
             COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
@@ -279,136 +421,146 @@ namespace RBI.PRE.subForm.InputDataForm
             RW_MATERIAL rwMater = new RW_MATERIAL();
             RW_COATING_BUS rwCoatB = new RW_COATING_BUS();
             RW_COATING rwCoat = new RW_COATING();
+            RW_FULL_POF_BUS rwFullPOFBus = new RW_FULL_POF_BUS();
+            comMas = comMasBus.getDataSource();
             int EquipmentID = 0;
             int ComponentID = 0;
-            foreach (RW_ASSESSMENT inspCove in assessment)
+            foreach (COMPONENT_MASTER com in comMas)
             {
-                EquipmentID = inspCove.EquipmentID;
+                RW_ASSESSMENT inspCove = busAssessment.getTopDatabyComponentID(com.ComponentID);
+                 EquipmentID = inspCove.EquipmentID;
                 ComponentID = inspCove.ComponentID;
                 ProcessPlant Pro = new ProcessPlant();
-                Pro.EquipmentNumber = buseq.getEquipmentNumber(EquipmentID);
-                Pro.ComponentNumber = buscom.getComponentNumber(ComponentID);
-                Pro.Component=Pro.ComponentType = comType.getComponentTypeName(buscom.getComponentTypeID(ComponentID));
-                Pro.Site = site.getSiteName(buseq.getSiteID(EquipmentID));
-                Pro.Facility = facility.getFacilityName(buseq.getFacilityID(EquipmentID));
-                Pro.AssessmentName = inspCove.ProposalName;
-                Pro.AssessmentDate = inspCove.AdoptedDate.ToShortDateString();
-                Pro.CommissionDate = buseq.getComissionDate(EquipmentID).ToShortDateString();
-                Pro.RiskAnalysisPeriod = inspCove.RiskAnalysisPeriod.ToString();
-                Pro.EquipmentType = eqType.getEquipmentTypeName(buseq.getEqTypeID(EquipmentID));
-                Pro.DesignCode = desCode.getDesignCodeName(buseq.getDesignCodeID(EquipmentID));
-                //EquipmentProperty
-                rwEq = rwEqB.getData(inspCove.ID);
-                Pro.AdministrativeControl = rwEq.AdminUpsetManagement == 1 ? "✔" : "✘";
-                Pro.ContainsDeadlegs = rwEq.ContainsDeadlegs == 1 ? "✔" : "✘";
-                Pro.PresenceofSulphidesOperation = rwEq.PresenceSulphidesO2 == 1 ? "✔" : "✘";
-                Pro.SteamedOut = rwEq.SteamOutWaterFlush == 1 ? "✔" : "✘";
-                Pro.ThermalHistory = rwEq.ThermalHistory;
-                Pro.SystemManagementFactor = rwEq.ManagementFactor.ToString();
-                Pro.PWHT = rwEq.PWHT == 1 ? "✔" : "✘";
-                Pro.PressurisarionControlledbyAdmin = rwEq.PressurisationControlled == 1 ? "✔" : "✘";
-                Pro.PresenceofSulphidesShutdown = rwEq.PresenceSulphidesO2Shutdown == 1 ? "✔" : "✘";
-                Pro.OnlineMonitoring = rwEq.OnlineMonitoring;
-                Pro.MinRequiredTemperature = rwEq.MinReqTemperaturePressurisation.ToString();
-                Pro.MaterialisExposedtoFluids = rwEq.MaterialExposedToClExt == 1 ? "✔" : "✘";
-                Pro.CyclicOperation = rwEq.CyclicOperation == 1 ? "✔" : "✘";
-                Pro.LinerOnlineMonitoring = rwEq.LinerOnlineMonitoring == 1 ? "✔" : "✘";
-                Pro.DowntimeProtectionUsed = rwEq.DowntimeProtectionUsed == 1 ? "✔" : "✘";
-                Pro.EquipmentisOperating=rwEq.YearLowestExpTemp== 1 ? "✔" : "✘";
-                Pro.EquipmentVolume = rwEq.Volume.ToString();
-                Pro.InterfaceatSoilorWater = rwEq.InterfaceSoilWater == 1 ? "✔" : "✘";
-                Pro.ExternalEnvironment = rwEq.ExternalEnvironment;
-                Pro.HeatTraced = rwEq.HeatTraced == 1 ? "✔" : "✘";
-                Pro.HighlyEffectiveInspection = rwEq.HighlyDeadlegInsp == 1 ? "✔" : "✘";
-                //componentProperty
-                rwCom = rwComB.getData(ComponentID);
-                Pro.MinimumMeasuredThickness = (100*rwCom.CurrentThickness).ToString();
-                Pro.NominalThickness = (100*rwCom.NominalThickness).ToString();
-                Pro.NominalDiameter = (100*rwCom.NominalDiameter).ToString();
-                Pro.MinRequiredThickness = (100*rwCom.MinReqThickness).ToString();
-                Pro.CurrentCorrosionRate = (100 * rwCom.CurrentCorrosionRate).ToString();
-                Pro.PresenceofCracks = rwCom.CracksPresent == 1 ? "✔" : "✘";
-                Pro.PreviousFailures = rwCom.PreviousFailures;
-                Pro.DamageFoundDuringInspection = rwCom.DamageFoundInspection == 1 ? "✔" : "✘";
-               // Pro.PresenceofInjectionMixPoint=rwCom.HighlyInjectionInsp
-                Pro.HighlyEffectiveInspectionCom = rwCom.HighlyInjectionInsp == 1 ? "✔" : "✘";
-               // Pro.TrampElements=rwCom.tra
-                Pro.DeltaFATT = rwCom.DeltaFATT.ToString();
-                Pro.CyclicLoadingConnected = rwCom.CyclicLoadingWitin15_25m;
-                Pro.MaximumBrinnellHardness = rwCom.BrinnelHardness;
-                Pro.NumberofFitting = rwCom.NumberPipeFittings;
-                Pro.JointTypeofBranch = rwCom.BranchJointType;
-                Pro.PipeCondition = rwCom.PipeCondition;
-                Pro.VisibleorAudible = rwCom.ShakingDetected == 1 ? "✔" : "✘";
-                Pro.AccummlatedTimeShaking = rwCom.ShakingTime;
-                Pro.AmountofShaking = rwCom.ShakingAmount;
-                Pro.CorrectAction = rwCom.CorrectiveAction;
-                Pro.BranchDiameter = rwCom.BranchDiameter;
-                Pro.ComplexityofProtrusions = rwCom.ComplexityProtrusion;
-                //STREAM
-                rwStr = rwStrB.getData(inspCove.ID);
-                Pro.MaximumOperatingTemperature = rwStr.MaxOperatingTemperature.ToString();
-                Pro.MinimumOperatingTemperature = rwStr.MinOperatingTemperature.ToString();
-                Pro.MaximumOperatingPressure = rwStr.MaxOperatingPressure.ToString();
-                Pro.MinimumOperatingPressure = rwStr.MinOperatingPressure.ToString();
-                Pro.CriticalExposureTemperature = rwStr.CriticalExposureTemperature.ToString();
-                Pro.AmineSolutionComposition = rwStr.AmineSolution;
-                Pro.NAOHConcentration = rwStr.NaOHConcentration.ToString();
-                Pro.H2Scontent = rwStr.H2S.ToString();
-                Pro.MaterialFluidsMistsSolids = rwStr.MaterialExposedToClInt == 1 ? "✔" : "✘";
-                Pro.FlowRate = rwStr.FlowRate.ToString();
-                Pro.pHofWater = rwStr.WaterpH.ToString();
-                Pro.ToxicConsitituents = rwStr.ToxicConstituent == 1 ? "✔" : "✘";
-                Pro.ReleaseFluidPercentToxic = rwStr.ReleaseFluidPercentToxic.ToString();
-                Pro.ProcessContainsHydrogen = rwStr.Hydrogen == 1 ? "✔" : "✘";
-                Pro.PresenceofHydrofluoric = rwStr.Hydrofluoric == 1 ? "✔" : "✘";
-                Pro.ExposuretoAmine = rwStr.ExposureToAmine;
-                Pro.PresenceofCyanides = rwStr.Cyanide == 1 ? "✔" : "✘";
-                Pro.ExposuretoAmine = rwStr.ExposureToAmine;
-                Pro.PresenceofCyanides = rwStr.Cyanide == 1 ? "✔" : "✘";
-                Pro.OperatingHydrogenPartialPressure = rwStr.Hydrogen.ToString();//can check lai
-                Pro.ExposedSulphurBearing = rwStr.ExposedToSulphur == 1 ? "✔" : "✘";
-                Pro.ExposedAcidGas = rwStr.ExposedToGasAmine == 1 ? "✔" : "✘";
-                Pro.EnvironmentContainsH2S = rwStr.H2S == 1 ? "✔" : "✘";
-                Pro.EnvironmentContainsCaustic = rwStr.Caustic == 1 ? "✔" : "✘";
-                Pro.CO3Concentration = rwStr.CO3Concentration.ToString();
-                Pro.ChlorideIon = rwStr.Chloride.ToString();
-                Pro.AqueousPhaseDuringOper = rwStr.AqueousOperation == 1 ? "✔" : "✘";
-                Pro.AqueousPhaseDuringShut = rwStr.AqueousShutdown == 1 ? "✔" : "✘";
-                //Material
-                rwMater = rwMaterB.getData(inspCove.ID);
-                Pro.DesignPressure = rwMater.DesignTemperature.ToString();
-                Pro.AllowableStress = rwMater.AllowableStress.ToString();
-                Pro.DesignPressure = rwMater.DesignPressure.ToString();
-                Pro.SusceptibletoTemper = rwMater.Temper == 1 ? "✔" : "✘";
-                Pro.SulfurContent = rwMater.SulfurContent;
-                Pro.SigmaPhase = rwMater.SigmaPhase.ToString();
-                Pro.ReferenceTemperature = rwMater.ReferenceTemperature.ToString();
-                Pro.NickelAlloy = rwMater.NickelBased == 1 ? "✔" : "✘";
-                Pro.MaterialCostFactor = rwMater.CostFactor.ToString();
-                Pro.HeatTreatment = rwMater.HeatTreatment;
-                Pro.CorrosionAllowance = (rwMater.CorrosionAllowance * 100).ToString();
-                Pro.Chromium = rwMater.ChromeMoreEqual12 == 1 ? "✔" : "✘";
-                Pro.CacbonorLow = rwMater.CarbonLowAlloy == 1 ? "✔" : "✘";
-                Pro.AusteniticSteel = rwMater.Austenitic == 1 ? "✔" : "✘";
-                // Coating 
-                rwCoat = rwCoatB.getData(inspCove.ID);
-                Pro.InternalCoating = rwCoat.InternalCladding == 1 ? "✔" : "✘";
-                Pro.ExternalCoating = rwCoat.ExternalCoating == 1 ? "✔" : "✘";
-                Pro.ExternalCoatingInstallationDate = rwCoat.ExternalCoatingDate.ToShortDateString();
-                Pro.ExternalCoatingQuality = rwCoat.ExternalCoatingQuality;
-                Pro.SupportConfiguration = rwCoat.SupportConfigNotAllowCoatingMaint == 1 ? "✔" : "✘";
-                Pro.InternalLining = rwCoat.InternalLining == 1 ? "✔" : "✘";
-                Pro.InternalLinerType = rwCoat.InternalLinerType;
-                Pro.InternalLinerCondition = rwCoat.InternalLinerCondition;
-                Pro.InternalCladding = rwCoat.InternalCladding == 1 ? "✔" : "✘";
-                Pro.CladdingCorrosionRate = rwCoat.CladdingCorrosionRate.ToString();
-                Pro.ExternalInsulation = rwCoat.ExternalInsulation == 1 ? "✔" : "✘";
-                Pro.ExternalInsulationType = rwCoat.ExternalInsulationType;
-                Pro.InsulationCondition = rwCoat.InsulationCondition;
-                Pro.InsulationContainsChlorides = rwCoat.InsulationContainsChloride == 1 ? "✔" : "✘";
-              //  Pro.
-                listPro.Add(Pro);
+                if (buseq.getEquipmentTypeID(EquipmentID) != 11)//thiet bi thuong
+                {
+                    Pro.EquipmentNumber = buseq.getEquipmentNumber(EquipmentID);
+                    Pro.ComponentNumber = buscom.getComponentNumber(ComponentID);
+                    Pro.Component = Pro.ComponentType = comType.getComponentTypeName(buscom.getComponentTypeID(ComponentID));
+                    Pro.Site = site.getSiteName(buseq.getSiteID(EquipmentID));
+                    Pro.Facility = facility.getFacilityName(buseq.getFacilityID(EquipmentID));
+                    Pro.AP1 = rwFullPOFBus.getData(inspCove.ID).PoFAP1Category+ rwFullPOFBus.getData(inspCove.ID).CoFCategory;
+                    Pro.AP2 = rwFullPOFBus.getData(inspCove.ID).PoFAP2Category+ rwFullPOFBus.getData(inspCove.ID).CoFCategory;
+                    Pro.AP3 = rwFullPOFBus.getData(inspCove.ID).PoFAP3Category+ rwFullPOFBus.getData(inspCove.ID).CoFCategory;
+                    Pro.RLI = rwFullPOFBus.getData(inspCove.ID).RLI.ToString();
+                    Pro.AssessmentName = inspCove.ProposalName;
+                    Pro.AssessmentDate = inspCove.AdoptedDate.ToShortDateString();
+                    Pro.CommissionDate = buseq.getComissionDate(EquipmentID).ToShortDateString();
+                    Pro.RiskAnalysisPeriod = inspCove.RiskAnalysisPeriod.ToString();
+                    Pro.EquipmentType = eqType.getEquipmentTypeName(buseq.getEqTypeID(EquipmentID));
+                    Pro.DesignCode = desCode.getDesignCodeName(buseq.getDesignCodeID(EquipmentID));
+                    //EquipmentProperty
+                    rwEq = rwEqB.getData(inspCove.ID);
+                    Pro.AdministrativeControl = rwEq.AdminUpsetManagement == 1 ? "✔" : "✘";
+                    Pro.ContainsDeadlegs = rwEq.ContainsDeadlegs == 1 ? "✔" : "✘";
+                    Pro.PresenceofSulphidesOperation = rwEq.PresenceSulphidesO2 == 1 ? "✔" : "✘";
+                    Pro.SteamedOut = rwEq.SteamOutWaterFlush == 1 ? "✔" : "✘";
+                    Pro.ThermalHistory = rwEq.ThermalHistory;
+                    Pro.SystemManagementFactor = rwEq.ManagementFactor.ToString();
+                    Pro.PWHT = rwEq.PWHT == 1 ? "✔" : "✘";
+                    Pro.PressurisarionControlledbyAdmin = rwEq.PressurisationControlled == 1 ? "✔" : "✘";
+                    Pro.PresenceofSulphidesShutdown = rwEq.PresenceSulphidesO2Shutdown == 1 ? "✔" : "✘";
+                    Pro.OnlineMonitoring = rwEq.OnlineMonitoring;
+                    Pro.MinRequiredTemperature = rwEq.MinReqTemperaturePressurisation.ToString();
+                    Pro.MaterialisExposedtoFluids = rwEq.MaterialExposedToClExt == 1 ? "✔" : "✘";
+                    Pro.CyclicOperation = rwEq.CyclicOperation == 1 ? "✔" : "✘";
+                    Pro.LinerOnlineMonitoring = rwEq.LinerOnlineMonitoring == 1 ? "✔" : "✘";
+                    Pro.DowntimeProtectionUsed = rwEq.DowntimeProtectionUsed == 1 ? "✔" : "✘";
+                    Pro.EquipmentisOperating = rwEq.YearLowestExpTemp == 1 ? "✔" : "✘";
+                    Pro.EquipmentVolume = rwEq.Volume.ToString();
+                    Pro.InterfaceatSoilorWater = rwEq.InterfaceSoilWater == 1 ? "✔" : "✘";
+                    Pro.ExternalEnvironment = rwEq.ExternalEnvironment;
+                    Pro.HeatTraced = rwEq.HeatTraced == 1 ? "✔" : "✘";
+                    Pro.HighlyEffectiveInspection = rwEq.HighlyDeadlegInsp == 1 ? "✔" : "✘";
+                    //componentProperty
+                    rwCom = rwComB.getData(ComponentID);
+                    Pro.MinimumMeasuredThickness = (100 * rwCom.CurrentThickness).ToString();
+                    Pro.NominalThickness = (100 * rwCom.NominalThickness).ToString();
+                    Pro.NominalDiameter = (100 * rwCom.NominalDiameter).ToString();
+                    Pro.MinRequiredThickness = (100 * rwCom.MinReqThickness).ToString();
+                    Pro.CurrentCorrosionRate = (100 * rwCom.CurrentCorrosionRate).ToString();
+                    Pro.PresenceofCracks = rwCom.CracksPresent == 1 ? "✔" : "✘";
+                    Pro.PreviousFailures = rwCom.PreviousFailures;
+                    Pro.DamageFoundDuringInspection = rwCom.DamageFoundInspection == 1 ? "✔" : "✘";
+                    // Pro.PresenceofInjectionMixPoint=rwCom.HighlyInjectionInsp
+                    Pro.HighlyEffectiveInspectionCom = rwCom.HighlyInjectionInsp == 1 ? "✔" : "✘";
+                    // Pro.TrampElements=rwCom.tra
+                    Pro.DeltaFATT = rwCom.DeltaFATT.ToString();
+                    Pro.CyclicLoadingConnected = rwCom.CyclicLoadingWitin15_25m;
+                    Pro.MaximumBrinnellHardness = rwCom.BrinnelHardness;
+                    Pro.NumberofFitting = rwCom.NumberPipeFittings;
+                    Pro.JointTypeofBranch = rwCom.BranchJointType;
+                    Pro.PipeCondition = rwCom.PipeCondition;
+                    Pro.VisibleorAudible = rwCom.ShakingDetected == 1 ? "✔" : "✘";
+                    Pro.AccummlatedTimeShaking = rwCom.ShakingTime;
+                    Pro.AmountofShaking = rwCom.ShakingAmount;
+                    Pro.CorrectAction = rwCom.CorrectiveAction;
+                    Pro.BranchDiameter = rwCom.BranchDiameter;
+                    Pro.ComplexityofProtrusions = rwCom.ComplexityProtrusion;
+                    //STREAM
+                    rwStr = rwStrB.getData(inspCove.ID);
+                    Pro.MaximumOperatingTemperature = rwStr.MaxOperatingTemperature.ToString();
+                    Pro.MinimumOperatingTemperature = rwStr.MinOperatingTemperature.ToString();
+                    Pro.MaximumOperatingPressure = rwStr.MaxOperatingPressure.ToString();
+                    Pro.MinimumOperatingPressure = rwStr.MinOperatingPressure.ToString();
+                    Pro.CriticalExposureTemperature = rwStr.CriticalExposureTemperature.ToString();
+                    Pro.AmineSolutionComposition = rwStr.AmineSolution;
+                    Pro.NAOHConcentration = rwStr.NaOHConcentration.ToString();
+                    Pro.H2Scontent = rwStr.H2S.ToString();
+                    Pro.MaterialFluidsMistsSolids = rwStr.MaterialExposedToClInt == 1 ? "✔" : "✘";
+                    Pro.FlowRate = rwStr.FlowRate.ToString();
+                    Pro.pHofWater = rwStr.WaterpH.ToString();
+                    Pro.ToxicConsitituents = rwStr.ToxicConstituent == 1 ? "✔" : "✘";
+                    Pro.ReleaseFluidPercentToxic = rwStr.ReleaseFluidPercentToxic.ToString();
+                    Pro.ProcessContainsHydrogen = rwStr.Hydrogen == 1 ? "✔" : "✘";
+                    Pro.PresenceofHydrofluoric = rwStr.Hydrofluoric == 1 ? "✔" : "✘";
+                    Pro.ExposuretoAmine = rwStr.ExposureToAmine;
+                    Pro.PresenceofCyanides = rwStr.Cyanide == 1 ? "✔" : "✘";
+                    Pro.ExposuretoAmine = rwStr.ExposureToAmine;
+                    Pro.PresenceofCyanides = rwStr.Cyanide == 1 ? "✔" : "✘";
+                    Pro.OperatingHydrogenPartialPressure = rwStr.Hydrogen.ToString();//can check lai
+                    Pro.ExposedSulphurBearing = rwStr.ExposedToSulphur == 1 ? "✔" : "✘";
+                    Pro.ExposedAcidGas = rwStr.ExposedToGasAmine == 1 ? "✔" : "✘";
+                    Pro.EnvironmentContainsH2S = rwStr.H2S == 1 ? "✔" : "✘";
+                    Pro.EnvironmentContainsCaustic = rwStr.Caustic == 1 ? "✔" : "✘";
+                    Pro.CO3Concentration = rwStr.CO3Concentration.ToString();
+                    Pro.ChlorideIon = rwStr.Chloride.ToString();
+                    Pro.AqueousPhaseDuringOper = rwStr.AqueousOperation == 1 ? "✔" : "✘";
+                    Pro.AqueousPhaseDuringShut = rwStr.AqueousShutdown == 1 ? "✔" : "✘";
+                    //Material
+                    rwMater = rwMaterB.getData(inspCove.ID);
+                    Pro.DesignPressure = rwMater.DesignTemperature.ToString();
+                    Pro.AllowableStress = rwMater.AllowableStress.ToString();
+                    Pro.DesignPressure = rwMater.DesignPressure.ToString();
+                    Pro.SusceptibletoTemper = rwMater.Temper == 1 ? "✔" : "✘";
+                    Pro.SulfurContent = rwMater.SulfurContent;
+                    Pro.SigmaPhase = rwMater.SigmaPhase.ToString();
+                    Pro.ReferenceTemperature = rwMater.ReferenceTemperature.ToString();
+                    Pro.NickelAlloy = rwMater.NickelBased == 1 ? "✔" : "✘";
+                    Pro.MaterialCostFactor = rwMater.CostFactor.ToString();
+                    Pro.HeatTreatment = rwMater.HeatTreatment;
+                    Pro.CorrosionAllowance = (rwMater.CorrosionAllowance * 100).ToString();
+                    Pro.Chromium = rwMater.ChromeMoreEqual12 == 1 ? "✔" : "✘";
+                    Pro.CacbonorLow = rwMater.CarbonLowAlloy == 1 ? "✔" : "✘";
+                    Pro.AusteniticSteel = rwMater.Austenitic == 1 ? "✔" : "✘";
+                    // Coating 
+                    rwCoat = rwCoatB.getData(inspCove.ID);
+                    Pro.InternalCoating = rwCoat.InternalCladding == 1 ? "✔" : "✘";
+                    Pro.ExternalCoating = rwCoat.ExternalCoating == 1 ? "✔" : "✘";
+                    Pro.ExternalCoatingInstallationDate = rwCoat.ExternalCoatingDate.ToShortDateString();
+                    Pro.ExternalCoatingQuality = rwCoat.ExternalCoatingQuality;
+                    Pro.SupportConfiguration = rwCoat.SupportConfigNotAllowCoatingMaint == 1 ? "✔" : "✘";
+                    Pro.InternalLining = rwCoat.InternalLining == 1 ? "✔" : "✘";
+                    Pro.InternalLinerType = rwCoat.InternalLinerType;
+                    Pro.InternalLinerCondition = rwCoat.InternalLinerCondition;
+                    Pro.InternalCladding = rwCoat.InternalCladding == 1 ? "✔" : "✘";
+                    Pro.CladdingCorrosionRate = rwCoat.CladdingCorrosionRate.ToString();
+                    Pro.ExternalInsulation = rwCoat.ExternalInsulation == 1 ? "✔" : "✘";
+                    Pro.ExternalInsulationType = rwCoat.ExternalInsulationType;
+                    Pro.InsulationCondition = rwCoat.InsulationCondition;
+                    Pro.InsulationContainsChlorides = rwCoat.InsulationContainsChloride == 1 ? "✔" : "✘";
+                    //  Pro.
+                    listPro.Add(Pro);
+                }
 
             }
             return listPro;
@@ -452,11 +604,14 @@ namespace RBI.PRE.subForm.InputDataForm
         private void btnDelete_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             //int a = (int)gridViewtab2.GetRowCellValue(gridViewtab2.FocusedRowHandle, colInvisiableID);
-            INSPECTION_DETAIL_TECHNIQUE ip = new INSPECTION_DETAIL_TECHNIQUE();
+           // INSPECTION_DETAIL_TECHNIQUE ip = new INSPECTION_DETAIL_TECHNIQUE();
             //ip.ID = a;
-            INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
-            busisp.delete(ip);
+            //INSPECTION_DETAIL_TECHNIQUE_BUS busisp = new INSPECTION_DETAIL_TECHNIQUE_BUS();
+            //busisp.delete(ip);
             //Displaytab2();
+            listNDT.RemoveAt(gridViewtab2.FocusedRowHandle);
+            gridControlMethod.DataSource = null;
+            gridControlMethod.DataSource = listNDT;
         }
         private void GridViewtab2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
@@ -542,15 +697,109 @@ namespace RBI.PRE.subForm.InputDataForm
             ButtonSelectClicked = true;
             this.Close();
         }
-        private void Display()
+        private void DisplayDamagemachanism()
         {
+            int[] listDMItemIDhasRule = { 8, 9, 32,34,57,60,61,62,63,66,67,69,70,72,73 };
             try
             {
+
+                Damage_Mechanism DaMe = null;
+                List<Damage_Mechanism> listDaMe = new List<Damage_Mechanism>();
+                int[] a = gridView2.GetSelectedRows();
+                RW_ASSESSMENT_BUS rwAssBus = new RW_ASSESSMENT_BUS();
+                RW_DAMAGE_MECHANISM_BUS rwDaMeBus = new RW_DAMAGE_MECHANISM_BUS();
+                INSPECTION_DM_RULE_BUS insDMRuleBus = new INSPECTION_DM_RULE_BUS();
+                DM_ITEMS_BUS dmItemsBus = new DM_ITEMS_BUS();
+                List<int> listIMItemID = new List<int>();
+                List<int> listIMTypeID = new List<int>();
+                List<String> listNDTMethod = new List<String>();
+                List<int> listCoverage = new List<int>();
+                for (int i = 0; i < gridView2.SelectedRowsCount; i++)
+                {
+                    DaMe = new Damage_Mechanism();
+                    DaMe.EquipmentNumber = gridView2.GetRowCellValue(a[i], "EquipmentNumber").ToString();
+                    DaMe.ComponentNumber = gridView2.GetRowCellValue(a[i], "ComponentNumber").ToString();
+                    COMPONENT_MASTER_BUS CMB = new COMPONENT_MASTER_BUS();
+
+                    for (int j = 0; j < listDMItemIDhasRule.Length; j++)
+                    {
+                        if (rwDaMeBus.checkIsDF(rwAssBus.getTopIDbyComponentID(CMB.getIDbyName(DaMe.ComponentNumber)), listDMItemIDhasRule[j]) == true)//co ton tai yeu to DM nay
+                        {
+                            //ktra inspection_DM_Rule
+                            foreach (INSPECTION_DETAIL_TECHNIQUE insDeTe in listNDT)
+                            {
+                               
+                                foreach (int DMItemID in insDMRuleBus.getDMItemID(insDeTe.IMItemID, insDeTe.IMTypeID))
+                                {
+                                    if (DMItemID == listDMItemIDhasRule[j])
+                                    {
+                                        listIMItemID.Add(insDeTe.IMItemID);
+                                        listIMTypeID.Add(insDeTe.IMTypeID);
+                                        listNDTMethod.Add(insDeTe.NDTMethod);
+                                        listCoverage.Add(insDeTe.Coverage);
+                                    }
+                                }
+                            }
+                            if(listIMItemID.Count!=0)
+                            {
+                                Damage_Mechanism dame_copy = null;
+                                
+                                DaMe.DamageMechanism = dmItemsBus.getDMDescriptionbyDMItemID(listDMItemIDhasRule[j]);
+                                DaMe.InspectionSummary = "";
+                                DaMe.InspectionEffectiveness = "E";
+                                for (int t = 0; t < listIMItemID.Count-1; t++)
+                                {
+                                    DaMe.InspectionSummary += listNDTMethod[t] + " - ";
+                                    DaMe.InspectionSummary += listCoverage[t]+" %\n";
+                                    DaMe.InspectionSummary += "AND\n";
+                                }
+                                DaMe.InspectionSummary += listNDTMethod[listIMItemID.Count - 1] + " - ";
+                                DaMe.InspectionSummary += listCoverage[listIMItemID.Count - 1] + " % ";
+
+                                // DaMe.InspectionSummary += listCoverage[listIMItemID.Count-1];
+                                //kiem tra xem InspectionEffectiveness co trong database chua?
+                                dame_copy = new Damage_Mechanism();
+                                dame_copy.EquipmentNumber = DaMe.EquipmentNumber;
+                                dame_copy.ComponentNumber = DaMe.ComponentNumber;
+                                dame_copy.DamageMechanism = DaMe.DamageMechanism;
+                                dame_copy.InspectionSummary = DaMe.InspectionSummary;
+                                //dame_copy.InspectionEffectiveness = DaMe.InspectionEffectiveness;
+                                INSPECTION_COVERAGE_BUS inCoBus = new INSPECTION_COVERAGE_BUS();
+                                COMPONENT_MASTER_BUS comMasBus = new COMPONENT_MASTER_BUS();
+                                EQUIPMENT_MASTER_BUS EquipMasBus = new EQUIPMENT_MASTER_BUS();
+                                int coverageID=inCoBus.getIDbyEquipmentIDandComponentIDandPlanID(EquipMasBus.getIDbyNumber(DaMe.EquipmentNumber), comMasBus.getIDbyName(DaMe.ComponentNumber), planid);
+                                INSPECTION_COVERAGE_DETAIL_BUS inCoDeBus = new INSPECTION_COVERAGE_DETAIL_BUS();
+                                dame_copy.InspectionEffectiveness=inCoDeBus.getEffectivenessCodebyCoverageIDandDMItemID(coverageID, listDMItemIDhasRule[j]);
+                                listDaMe.Add(dame_copy);
+                            }
+                            
+                            listIMItemID.Clear();
+                            listIMTypeID.Clear();
+                            listNDTMethod.Clear();
+                            listCoverage.Clear();
+
+                        }
+                    }
+                    
+
+                }
+                //
                 gridControl3.DataSource = null;
-                INSPECTION_PLAN_BUS busisp = new INSPECTION_PLAN_BUS();
-                RW_INSPECTION_HISTORY_BUS busDetail = new RW_INSPECTION_HISTORY_BUS();
-                gridControl3.DataSource = busisp.getDataSource();
-                //gridControl3.DataSource = busDetail.getDataSource();
+                gridControl3.DataSource = listDaMe;
+                //hient thi clolumn INSPECTION_EFFECTIVENESS
+                List<INSPECTION_EFFECTIVENESS> list_ins_eff = new List<INSPECTION_EFFECTIVENESS>();
+                list_ins_eff.Add(new INSPECTION_EFFECTIVENESS("A","Highly Effective"));
+                list_ins_eff.Add(new INSPECTION_EFFECTIVENESS("B","Usually Effective"));
+                list_ins_eff.Add(new INSPECTION_EFFECTIVENESS("C", "Fairly Effective"));
+                list_ins_eff.Add(new INSPECTION_EFFECTIVENESS("D", "Poorly Effective"));
+                list_ins_eff.Add(new INSPECTION_EFFECTIVENESS("E", "Ineffective Effective"));
+                repositoryItemGridLookUpEditInspectionEffectivess.DataSource = list_ins_eff;
+                repositoryItemGridLookUpEditInspectionEffectivess.ValueMember = "EffectivenessCode";
+                repositoryItemGridLookUpEditInspectionEffectivess.DisplayMember = "EffectivenessCode";
+                //colInspectionEffectiveness.
+                
+                
+
             }
             catch (Exception e)
             {
@@ -663,13 +912,33 @@ namespace RBI.PRE.subForm.InputDataForm
 
         private void gridView2_SelectionChanged(object sender, DevExpress.Data.SelectionChangedEventArgs e)
         {
-            changeINSPECTION_COVERAGE = true;//bi thay doi, cap nhat lai
+           
         }
 
-        
+        private void gridControl3_Load(object sender, EventArgs e)
+        {
+            
+        }
 
-        
-        
+        private void gridControl3_DataSourceChanged(object sender, EventArgs e)
+        {
+            //Display();
+        }
 
+        private void tabPane1_SelectedPageIndexChanged(object sender, EventArgs e)
+        {
+            if (tabPane1.SelectedPage.Name == "tabDamageMechanism")
+                DisplayDamagemachanism();
+            else
+            {
+               // if (tabPane1.SelectedPage.Name == "tabInspectionMethod")
+                  //  showGridControlMethod();
+            }
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

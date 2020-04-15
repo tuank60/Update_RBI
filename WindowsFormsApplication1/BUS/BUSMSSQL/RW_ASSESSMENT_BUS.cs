@@ -68,6 +68,14 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getLastID();
         }
+        public int getTopIDbyComponentID(int ComponentID)
+        {
+            return DAL.getTopIDbyComponentID(ComponentID);
+        }
+        public RW_ASSESSMENT getTopDatabyComponentID(int ComponentID)
+        {
+            return DAL.getTopDatabyComponentID(ComponentID);
+        }
         public List<int> getAllIDbyComponentID(int ID)
         {
             return DAL.getAllIDbyComponentID(ID);
@@ -86,6 +94,7 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getAssessmentName(assID);
         }
+       
         //thao
     }
 }

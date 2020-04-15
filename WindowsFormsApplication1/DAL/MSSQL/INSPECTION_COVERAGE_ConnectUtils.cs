@@ -280,6 +280,42 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public int getIDbyEquipmentIDandComponentID(int EquipmentID, int ComponentID,int PlanID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            int ID = -1;
+            String sql = "Use [rbi]" +
+                        "SELECT [ID]" +
+                        "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + EquipmentID + "' and ComponentID = '"+ ComponentID+ "' and PlanID = '"+ PlanID+"'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ID = reader.GetInt32(0);
+                        }
+                        
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return ID;
+        }
     }
 }
 

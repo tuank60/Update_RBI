@@ -650,11 +650,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     Fom = 0.1f;
                 else
                     Fom = 1;
-                Console.WriteLine("linning=" + DFB_LINNING(age) * Fom * Fdl);
+               
                 return DFB_LINNING(age) * Fom * Fdl;
             }
             else
-                return 0;
+                return -1;
         }
 
         /// <summary>
@@ -781,7 +781,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -841,7 +841,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -940,7 +940,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -1059,7 +1059,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -1106,7 +1106,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_CACBONATE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -1225,7 +1225,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_PTA * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
-                return 0;
+                return -1;
         }
         ///<summary>
         /// CAL CLSCC
@@ -1299,7 +1299,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_CLSCC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -1347,7 +1347,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_HSCHF * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
-                return 0;
+                return -1;
         }
         ///<summary>
         /// CAL HICSOHIC-HF
@@ -1405,7 +1405,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return (DFB_HICSOHIC_HF * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -1580,13 +1580,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     float[] Po = PosteriorProbab(34);
                     double[] Pa = Parameter(age, 34);
                     float DF_Extcor = (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
-                    Console.WriteLine("Df External Corrosion = " + DF_Extcor);
                     return DF_Extcor;
                 }
             }            
             else
             {
-                Console.WriteLine("Df External Corrosion");
+                
                 return 0;
             }
 
@@ -2132,7 +2131,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     return API_DF_HTHA(age);
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -2169,7 +2168,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     //return DFB_BRITTLE();
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -2251,7 +2250,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -2294,7 +2293,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     return table_22_3[10];
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -2440,7 +2439,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_SIGMA;
             }
             else
-                return 0;
+                return -1;
         }
 
         ///<summary>
@@ -2571,7 +2570,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return DFB_PIPE() * FCA * FPC * FCP * FJB * FBD;
             }
             else
-                return 0;
+                return -1;
         }
 
     }

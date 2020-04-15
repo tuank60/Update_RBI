@@ -169,6 +169,7 @@
     <Compile Include="BUS\BUSMSSQL\INSPECTION_COVERAGE_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\INSPECTION_COVERAGE_DETAIL_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\INSPECTION_DETAIL_TECHNIQUE_BUS.cs" />
+    <Compile Include="BUS\BUSMSSQL\INSPECTION_DM_RULE_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\INSPECTION_PLAN_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\ITEM_LIST_CONFIG_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\MANUFACTURER_BUS.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="DAL\MSSQL\INSPECTION_COVERAGE_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\INSPECTION_COVERAGE_DETAIL_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\INSPECTION_DETAIL_TECHNIQUE_ConnectUtils.cs" />
+    <Compile Include="DAL\MSSQL\INSPECTION_DM_RULE_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\INSPECTION_PLAN_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\ITEM_LIST_CONFIG_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\MANUFACTURER_ConnectUtils.cs" />
@@ -319,6 +321,7 @@
     <Compile Include="Object\InputInspectionCalculation.cs" />
     <Compile Include="Object\CtrlSPressEventArgs.cs" />
     <Compile Include="Object\ObjectMSSQL\API_COMPONENT_TYPE.cs" />
+    <Compile Include="Object\ObjectMSSQL\Damage_Mechanism.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_DETAIL_TECHNIQUE.cs" />
     <Compile Include="Object\ObjectMSSQL\COMPONENT_DETAIL.cs" />
     <Compile Include="Object\ObjectMSSQL\COMPONENT_MASTER.cs" />
@@ -352,6 +355,9 @@
     <Compile Include="Object\ObjectMSSQL\IM_TYPE.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_COVERAGE.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_COVERAGE_DETAIL.cs" />
+    <Compile Include="Object\ObjectMSSQL\INSPECTION_DM_RULE.cs" />
+    <Compile Include="Object\ObjectMSSQL\INSPECTION_EFFECTIVENESS.cs" />
+    <Compile Include="Object\ObjectMSSQL\INSPECTION_METHOD.cs" />
     <Compile Include="Object\ObjectMSSQL\INSPECTION_PLAN.cs" />
     <Compile Include="Object\ObjectMSSQL\ITEM_LIST_CONFIG.cs" />
     <Compile Include="Object\ObjectMSSQL\MANUFACTURER.cs" />

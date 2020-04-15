@@ -28,5 +28,13 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource(int CoverageID)
+        {
+            return DAL.getDataSource(CoverageID);
+        }
+        public void deletebyCoverageID(int CoverageID)
+        {
+            DAL.deletebyCoverageID(CoverageID);
+        }
     }
 }

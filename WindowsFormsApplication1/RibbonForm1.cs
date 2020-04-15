@@ -1686,25 +1686,25 @@ namespace RBI
             Df[0] = cal.DF_THIN(age[0]);
             Df[1] = cal.DF_LINNING(age[1]);
             Df[2] = cal.DF_CAUSTIC(age[2]);
-            Df[3] = cal.DF_AMINE(age[3]);
-            Df[4] = cal.DF_SULPHIDE(age[4]);
+            Df[3] = cal.DF_AMINE(age[3]) ;
+            Df[4] = cal.DF_SULPHIDE(age[4]) ;
             Df[5] = cal.DF_HICSOHIC_H2S(age[5]);
             Df[6] = cal.DF_CACBONATE(age[6]);
             Df[7] = cal.DF_PTA(age[7]);
             Df[8] = cal.DF_CLSCC(age[8]);
-            Df[9] = cal.DF_HSCHF(age[9]);
+            Df[9] = cal.DF_HSCHF(age[9]) ;
             Df[10] = cal.DF_HIC_SOHIC_HF(age[10]);
-            Df[11] = cal.DF_EXTERNAL_CORROSION(age[11]);
-            Df[12] = cal.DF_CUI(age[12]);
-            Df[13] = cal.DF_EXTERN_CLSCC();
-            Df[14] = cal.DF_CUI_CLSCC();
-            Df[15] = cal.DF_HTHA(age[13]);
-            Df[16] = cal.DF_BRITTLE();
+            Df[11] = cal.DF_EXTERNAL_CORROSION(age[11]) ;
+            Df[12] = cal.DF_CUI(age[12]) ;
+            Df[13] = cal.DF_EXTERN_CLSCC() ;
+            Df[14] = cal.DF_CUI_CLSCC() ;
+            Df[15] = cal.DF_HTHA(age[13]) ;
+            Df[16] = cal.DF_BRITTLE() ;
             Df[17] = cal.DF_TEMP_EMBRITTLE();
             Df[18] = cal.DF_885();
             Df[19] = cal.DF_SIGMA();
-            Df[20] = cal.DF_PIPE();
-
+            Df[20] = cal.DF_PIPE() ;
+            
 
             List<float> DFSCCAgePlus3 = new List<float>();
             List<float> DFSCCAgePlus6 = new List<float>();
@@ -1719,8 +1719,8 @@ namespace RBI
             fullPOF.ID = IDProposal;
             for (int i = 0; i < 21; i++)
             {
-                if (Df[i] >= 0)
-                {
+                //if (Df[i] >= 0)
+                //{//hai sua
                     RW_DAMAGE_MECHANISM damage = new RW_DAMAGE_MECHANISM();
                     damage.ID = IDProposal;
                     damage.DMItemID = DM_ID[i];
@@ -1736,111 +1736,300 @@ namespace RBI
                     }
 
                     damage.DF1 = Df[i];
-                    switch (i)
-                    {
-                        case 0: //Thinning
-                            damage.DF2 = cal.DF_THIN(age[0] + 3);
-                            damage.DF3 = cal.DF_THIN(age[0] + 6);
-                            thinningPlusAge[0] = damage.DF2;
-                            thinningPlusAge[1] = damage.DF3;
-                            break;
-                        case 1: //Linning
+                switch (i)
+                {
+                    case 0: //Thinning
+                        damage.IsDF = 1;
+
+                        damage.DF2 = cal.DF_THIN(age[0] + 3);
+                        damage.DF3 = cal.DF_THIN(age[0] + 6);
+                        thinningPlusAge[0] = damage.DF2;
+                        thinningPlusAge[1] = damage.DF3;
+                        break;
+                    case 1: //Linning
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+
+                        else
+                        {
                             damage.DF2 = cal.DF_LINNING(age[1] + 3);
                             damage.DF3 = cal.DF_LINNING(age[1] + 6);
-                            linningPlusAge[0] = damage.DF2;
-                            linningPlusAge[1] = damage.DF3;
-                            break;
-                        case 2: //Caustic
+                        }
+
+                        linningPlusAge[0] = damage.DF2;
+                        linningPlusAge[1] = damage.DF3;
+                        break;
+                    case 2: //Caustic
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CAUSTIC(age[2] + 3);
                             damage.DF3 = cal.DF_CAUSTIC(age[2] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 3: //Amine
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 3: //Amine
+
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_AMINE(age[3] + 3);
                             damage.DF3 = cal.DF_AMINE(age[3] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 4: //Sulphide
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 4: //Sulphide
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_SULPHIDE(age[4] + 3);
                             damage.DF3 = cal.DF_SULPHIDE(age[4] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 5: //HIC/SOHIC-H2S
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 5: //HIC/SOHIC-H2S
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HICSOHIC_H2S(age[5] + 3);
                             damage.DF3 = cal.DF_HICSOHIC_H2S(age[5] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 6: //Carbonate
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 6: //Carbonate
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CACBONATE(age[6] + 3);
                             damage.DF3 = cal.DF_CACBONATE(age[6] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 7: //PTA (Polythionic Acid Stress Corrosion Cracking)
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 7: //PTA (Polythionic Acid Stress Corrosion Cracking)
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_PTA(age[7] + 3);
                             damage.DF3 = cal.DF_PTA(age[7] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 8: //CLSCC (Chloride Stress Corrosion Cracking)
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 8: //CLSCC (Chloride Stress Corrosion Cracking)
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CLSCC(age[8] + 3);
                             damage.DF3 = cal.DF_CLSCC(age[8] + 6);
                             DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 9: //HSC-HF
+                        }
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 9: //HSC-HF
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HSCHF(age[9] + 3);
                             damage.DF3 = cal.DF_HSCHF(age[9] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 10: //HIC/SOHIC-HF
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 10: //HIC/SOHIC-HF
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HIC_SOHIC_HF(age[10] + 3);
                             damage.DF3 = cal.DF_HIC_SOHIC_HF(age[10] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 11: //External Corrosion
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 11: //External Corrosion//nen kiem tra lai
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_EXTERNAL_CORROSION(age[11] + 3);
                             damage.DF3 = cal.DF_EXTERNAL_CORROSION(age[11] + 6);
-                            DF_EXTERN_CORROSIONPlusAge[0] = damage.DF2;
-                            DF_EXTERN_CORROSIONPlusAge[1] = damage.DF2;
-                            break;
-                        case 12: //CUI (Corrosion Under Insulation)
+                        }
+                        DF_EXTERN_CORROSIONPlusAge[0] = damage.DF2;
+                        DF_EXTERN_CORROSIONPlusAge[1] = damage.DF2;
+                        break;
+                    case 12: //CUI (Corrosion Under Insulation)//nen kiem tra lai
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CUI(age[12] + 3);
                             damage.DF3 = cal.DF_CUI(age[12] + 6);
-                            DF_CUIPlusAge[0] = damage.DF2;
-                            DF_CUIPlusAge[1] = damage.DF3;
-                            break;
-                        case 15: //HTHA
+                        }
+                        DF_CUIPlusAge[0] = damage.DF2;
+                        DF_CUIPlusAge[1] = damage.DF3;
+                        break;
+                    case 15: //HTHA
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HTHA(age[13] + 3);
                             damage.DF3 = cal.DF_HTHA(age[13] + 6);
-                            DF_HTHAPlusAge[0] = damage.DF2;
-                            DF_HTHAPlusAge[1] = damage.DF3;
-                            fullPOF.HTHA_AP1 = damage.DF1;
-                            fullPOF.HTHA_AP2 = damage.DF2;
-                            fullPOF.HTHA_AP3 = damage.DF3;
-                            break;
-                        case 16: //Brittle
-                            damage.DF2 = damage.DF3 = damage.DF1;
-                            fullPOF.BrittleAP1 = fullPOF.BrittleAP2 = fullPOF.BrittleAP3 = damage.DF1;
-                            break;
-                        case 20: //Piping Fatigure
-                            damage.DF2 = damage.DF3 = damage.DF1;
-                            fullPOF.FatigueAP1 = fullPOF.FatigueAP2 = fullPOF.FatigueAP3 = damage.DF1;
-                            break;
-                        default:
-                            damage.DF2 = damage.DF1;
-                            damage.DF3 = damage.DF1;
-                            break;
-                    }
-                    listDamageMachenism.Add(damage);
+                        }
+                        DF_HTHAPlusAge[0] = damage.DF2;
+                        DF_HTHAPlusAge[1] = damage.DF3;
+                        fullPOF.HTHA_AP1 = damage.DF1;
+                        fullPOF.HTHA_AP2 = damage.DF2;
+                        fullPOF.HTHA_AP3 = damage.DF3;
+                        break;
+                    case 16: //Brittle
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        damage.DF2 = damage.DF3 = damage.DF1;
+                        fullPOF.BrittleAP1 = fullPOF.BrittleAP2 = fullPOF.BrittleAP3 = damage.DF1;
+                        break;
+                    case 20: //Piping Fatigure
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        damage.DF2 = damage.DF3 = damage.DF1;
+
+                        fullPOF.FatigueAP1 = fullPOF.FatigueAP2 = fullPOF.FatigueAP3 = damage.DF1;
+                        break;
+                    default:
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        damage.DF2 = damage.DF1;
+                        damage.DF3 = damage.DF1;
+                        break;
                 }
+                listDamageMachenism.Add(damage);
             }
+
             DMmachenism = listDamageMachenism;
             /*  
              * Tính DF_Thin_Total

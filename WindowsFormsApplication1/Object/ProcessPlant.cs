@@ -13,10 +13,10 @@ namespace RBI.Object
         public String ComponentNumber { set; get; }
         public String Site { set; get; }
         public String Facility { set; get; }
-        String AP1 { set; get; }
-        String AP2 { set; get; }
-        String AP3 { set; get; }
-        String RLI { set; get; }
+        public String AP1 { set; get; }
+        public String AP2 { set; get; }
+        public  String AP3 { set; get; }
+        public String RLI { set; get; }
         public String AssessmentName { set; get; }
         public String AssessmentDate { set; get; }
         public String CommissionDate { set; get; }

@@ -136,6 +136,88 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public IM_ITEMS getDataSourcebyIMItemID(int IMItemID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            IM_ITEMS obj = new IM_ITEMS();
+            String sql = " Use [rbi] Select [IMItemID]" +
+                          ",[IMDescription]" +
+                          ",[IMCode]" +
+                          "From [dbo].[IM_ITEMS] Where [IMItemID] ='" + IMItemID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                           
+                            obj.IMItemID = reader.GetInt32(0);
+                            obj.IMDescription = reader.GetString(1);
+                            obj.IMCode = reader.GetString(2);
+
+                            
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
+        public IM_ITEMS getData(String IMDescription)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            IM_ITEMS obj = null;
+            String sql = " Use [rbi] Select [IMItemID]" +
+                          ",[IMDescription]" +
+                          ",[IMCode]" +
+                          "From [dbo].[IM_ITEMS] Where [IMDescription] ='" + IMDescription + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new IM_ITEMS();
+                            obj.IMItemID = reader.GetInt32(0);
+                            obj.IMDescription = reader.GetString(1);
+                            obj.IMCode = reader.GetString(2);
+
+                           
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
 
     }
 }

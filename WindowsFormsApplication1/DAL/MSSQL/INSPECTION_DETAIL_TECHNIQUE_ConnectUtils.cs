@@ -121,6 +121,30 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
+        public void deletebyCoverageID(int CoverageID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "USE [rbi]" +
+                        "DELETE FROM [dbo].[INSPECTION_DETAIL_TECHNIQUE]" +
+                        "WHERE [CoverageID] = '" + CoverageID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "DELETE FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
         public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource(int CoverageID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -133,7 +157,7 @@ namespace RBI.DAL.MSSQL
                           ",[IMTypeID]" +
                           ",[InspectionType]" +
                           ",[Coverage]" +
-                          "From [rbi].[dbo].[COMPONENT_DETAIL] Where [CoverageID] ='" + CoverageID + "'";
+                          "From [rbi].[dbo].[INSPECTION_DETAIL_TECHNIQUE] Where [CoverageID] ='" + CoverageID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -146,7 +170,7 @@ namespace RBI.DAL.MSSQL
                         if (reader.HasRows)
                         {
                             obj = new INSPECTION_DETAIL_TECHNIQUE();
-                            obj.ID = reader.GetInt32(0);
+                            obj.ID = (int)reader.GetInt64(0);
                             obj.IMItemID = reader.GetInt32(1);
                             obj.NDTMethod = reader.GetString(2);
                             obj.IMTypeID = reader.GetInt32(3);
@@ -177,7 +201,7 @@ namespace RBI.DAL.MSSQL
             String sql = " Use [rbi] Select [ID]" +
                           ",[CoverageID]" +
                           ",[IMItemID]" +
-                          ",[NDTMethod]" +
+                        
                           ",[IMTypeID]" +
                           ",[InspectionType]" +
                           ",[Coverage]" +
@@ -194,7 +218,7 @@ namespace RBI.DAL.MSSQL
                         if (reader.HasRows)
                         {
                             obj = new INSPECTION_DETAIL_TECHNIQUE();
-                            obj.ID = reader.GetInt32(0);
+                            obj.ID = (int)reader.GetInt64(0);
                             obj.CoverageID = reader.GetInt32(1);
                             if (!reader.IsDBNull(2))
                             {
@@ -202,19 +226,15 @@ namespace RBI.DAL.MSSQL
                             }
                             if (!reader.IsDBNull(3))
                             {
-                                obj.NDTMethod = reader.GetString(3);
+                                obj.IMTypeID = reader.GetInt32(3);
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.IMTypeID = reader.GetInt32(4);
+                                obj.InspectionType = reader.GetInt32(4);
                             }
                             if (!reader.IsDBNull(5))
                             {
-                                obj.InspectionType = reader.GetInt32(5);
-                            }
-                            if (!reader.IsDBNull(6))
-                            {
-                                obj.Coverage = reader.GetInt32(6);
+                                obj.Coverage = reader.GetInt32(5);
                             }
                             list.Add(obj);
                         }
@@ -232,5 +252,6 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+
     }
 }

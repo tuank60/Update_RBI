@@ -58,7 +58,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 rwInspCove.EquipmentName = buseq.getEquipmentName(inspCove.EquipmentID);
                 rwInspCove.ComponentName = buscom.getComponentName(inspCove.ComponentID);
                 rwInspCove.InspectionPlanName = businsplan.getPlanName(inspCove.PlanID);
-                rwInspCove.InspectionPlanDate = businsplan.getPlanDate(inspCove.PlanID);
+                rwInspCove.InspectionPlanDate = businsplan.getPlanDate(inspCove.PlanID).ToString();
                 listData.Add(rwInspCove);    
             }
             return listData;
@@ -90,7 +90,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 INSPECTION_PLAN_BUS businsplan = new INSPECTION_PLAN_BUS();              
                 InspectionPlanName.Text = businsplan.getPlanName(PlanID);
-                InspectionDate.Text = businsplan.getPlanDate(PlanID);
+                InspectionDate.Text = businsplan.getPlanDate(PlanID).ToString();
                 IDPlan = PlanID;
             }
             catch

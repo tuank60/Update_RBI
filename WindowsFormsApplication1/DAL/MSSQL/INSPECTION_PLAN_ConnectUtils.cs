@@ -175,9 +175,9 @@ namespace RBI.DAL.MSSQL
             return insplanName;
         }
 
-        public String getPlanDate(int PlanID)
+        public DateTime getPlanDate(int PlanID)
         {
-            String insplanDate = "";
+            DateTime insplanDate = new DateTime();
             SqlConnection con = MSSQLDBUtils.GetDBConnection();
             con.Open();
             String sql = "select InspPlanDate from rbi.dbo.INSPECTION_PLAN where PlanID = '" + PlanID + "'";
@@ -192,7 +192,7 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows && !reader.IsDBNull(0))
                         {
-                            insplanDate = reader.GetDateTime(0).ToString();
+                            insplanDate = reader.GetDateTime(0);
                         }
                     }
                 }

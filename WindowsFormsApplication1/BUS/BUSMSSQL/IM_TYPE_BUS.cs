@@ -28,6 +28,14 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
-        
+        public IM_TYPE getDataSourcebyIMTypeID(int IMTypeID)
+        {
+            return DAL.getDataSourcebyIMTypeID(IMTypeID);
+        }
+        public IM_TYPE getData(String IMTypeName)
+        {
+            return DAL.getData(IMTypeName);
+        }
+
     }
 }
