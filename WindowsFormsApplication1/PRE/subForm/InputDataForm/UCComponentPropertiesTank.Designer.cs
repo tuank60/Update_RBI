@@ -937,9 +937,9 @@
             this.lblDiameter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiameter.Location = new System.Drawing.Point(343, 28);
             this.lblDiameter.Name = "lblDiameter";
-            this.lblDiameter.Size = new System.Drawing.Size(18, 15);
+            this.lblDiameter.Size = new System.Drawing.Size(29, 15);
             this.lblDiameter.TabIndex = 0;
-            this.lblDiameter.Text = "m";
+            this.lblDiameter.Text = "mm";
             // 
             // lblNominalThickness
             // 

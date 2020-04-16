@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInspectionPlanDetail));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.labelMain = new System.Windows.Forms.Label();
@@ -3026,7 +3026,7 @@
             this.tabInspectionMethod.Controls.Add(this.panel7);
             this.tabInspectionMethod.Controls.Add(this.panel6);
             this.tabInspectionMethod.Name = "tabInspectionMethod";
-            this.tabInspectionMethod.Size = new System.Drawing.Size(908, 328);
+            this.tabInspectionMethod.Size = new System.Drawing.Size(1188, 382);
             // 
             // gridControlMethod
             // 
@@ -3037,7 +3037,7 @@
             this.gridControlMethod.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDelete,
             this.txtCoverage});
-            this.gridControlMethod.Size = new System.Drawing.Size(908, 148);
+            this.gridControlMethod.Size = new System.Drawing.Size(1188, 202);
             this.gridControlMethod.TabIndex = 47;
             this.gridControlMethod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewtab2});
@@ -3105,9 +3105,9 @@
             // 
             this.btnDelete.AccessibleDescription = "";
             this.btnDelete.AutoHeight = false;
-            editorButtonImageOptions1.ImageUri.Uri = "Cancel;Size16x16";
+            editorButtonImageOptions2.ImageUri.Uri = "Cancel;Size16x16";
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Delete", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "Delete", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick_1);
@@ -3118,13 +3118,13 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 152);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(908, 28);
+            this.panel8.Size = new System.Drawing.Size(1188, 28);
             this.panel8.TabIndex = 46;
             // 
             // btnAddIspMethod
             // 
             this.btnAddIspMethod.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAddIspMethod.Location = new System.Drawing.Point(823, 0);
+            this.btnAddIspMethod.Location = new System.Drawing.Point(1103, 0);
             this.btnAddIspMethod.Name = "btnAddIspMethod";
             this.btnAddIspMethod.Size = new System.Drawing.Size(85, 28);
             this.btnAddIspMethod.TabIndex = 0;
@@ -3138,7 +3138,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 31);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(908, 121);
+            this.panel7.Size = new System.Drawing.Size(1188, 121);
             this.panel7.TabIndex = 45;
             // 
             // splitContainer1
@@ -3154,8 +3154,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(908, 121);
-            this.splitContainer1.SplitterDistance = 302;
+            this.splitContainer1.Size = new System.Drawing.Size(1188, 121);
+            this.splitContainer1.SplitterDistance = 395;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox2
@@ -3164,7 +3164,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(302, 121);
+            this.groupBox2.Size = new System.Drawing.Size(395, 121);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Inspection Methods";
@@ -3186,7 +3186,7 @@
             "Visual"});
             this.lstMethod.Location = new System.Drawing.Point(3, 16);
             this.lstMethod.Name = "lstMethod";
-            this.lstMethod.Size = new System.Drawing.Size(296, 102);
+            this.lstMethod.Size = new System.Drawing.Size(389, 102);
             this.lstMethod.TabIndex = 5;
             this.lstMethod.SelectedIndexChanged += new System.EventHandler(this.lstMethod_SelectedIndexChanged);
             // 
@@ -3196,7 +3196,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(602, 121);
+            this.groupBox1.Size = new System.Drawing.Size(789, 121);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inspection Technique";
@@ -3207,7 +3207,7 @@
             this.lstTechnique.FormattingEnabled = true;
             this.lstTechnique.Location = new System.Drawing.Point(3, 16);
             this.lstTechnique.Name = "lstTechnique";
-            this.lstTechnique.Size = new System.Drawing.Size(596, 102);
+            this.lstTechnique.Size = new System.Drawing.Size(783, 102);
             this.lstTechnique.TabIndex = 1;
             // 
             // panel6
@@ -3217,7 +3217,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(908, 31);
+            this.panel6.Size = new System.Drawing.Size(1188, 31);
             this.panel6.TabIndex = 44;
             // 
             // radioGroup1
@@ -3246,7 +3246,7 @@
             this.tabDamageMechanism.Caption = "Damage Mechanism";
             this.tabDamageMechanism.Controls.Add(this.gridControl3);
             this.tabDamageMechanism.Name = "tabDamageMechanism";
-            this.tabDamageMechanism.Size = new System.Drawing.Size(908, 328);
+            this.tabDamageMechanism.Size = new System.Drawing.Size(1188, 382);
             // 
             // gridControl3
             // 
@@ -3258,7 +3258,7 @@
             this.ItemLookUpEdit,
             this.repositoryItemGridLookUpEditInspectionEffectivess,
             this.repositoryItemMemoEdit1});
-            this.gridControl3.Size = new System.Drawing.Size(908, 328);
+            this.gridControl3.Size = new System.Drawing.Size(1188, 382);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -3414,6 +3414,7 @@
             this.btnClearFindings.TabIndex = 2;
             this.btnClearFindings.Text = "Clear Inspection Findings / Description";
             this.btnClearFindings.UseVisualStyleBackColor = true;
+            this.btnClearFindings.Click += new System.EventHandler(this.btnClearFindings_Click);
             // 
             // btnViewEditFindings
             // 

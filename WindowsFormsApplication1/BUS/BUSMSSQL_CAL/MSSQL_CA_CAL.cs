@@ -138,7 +138,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (i == 3)
                     dn = 0;
                 else if (i == 4 && PREVENTION_BARRIER)
-                    dn = 250 * TANK_DIAMETER;
+                    dn = 250 * TANK_DIAMETER*0.001f;//doi don vi ra m cho TANK_DIAMETER
                 else
                     dn = 0;
             }
@@ -153,7 +153,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (i == 3)
                     dn = 50.8f;
                 else
-                    dn = 250 * TANK_DIAMETER;
+                    dn = 250 * TANK_DIAMETER * 0.001f;
             }
             else
             {
@@ -959,6 +959,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float SHELL_COURSE_HEIGHT { set; get; }
         public float TANK_DIAMETER { set; get; }
         public Boolean PREVENTION_BARRIER { set; get; }//Release Prevention Barrier
+        public Boolean ConcreteFoundation { set; get; }//Concrete or Asphalt Foundation cua tankbotom
+
         public String EnvironSensitivity { set; get; }
         public float P_lvdike { set; get; }
         public float P_onsite { set; get; }
@@ -972,7 +974,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
         public float BBL_TOTAL_SHELL()
         {
-            return (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2)) * FLUID_HEIGHT / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            return (float)(Math.PI * Math.Pow(TANK_DIAMETER*0.001f, 2)) * FLUID_HEIGHT / (4 * (DAL_CAL.GET_TBL_3B21(13)));
         }
         private float Bbl_avail(int n)
         {
@@ -985,7 +987,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             //{
             //    return 0;
             //}
-            float Bbl_avail =  (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2)) * (FLUID_HEIGHT - (n - 1) * SHELL_COURSE_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            float Bbl_avail =  (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2)) * (FLUID_HEIGHT - (n - 1) * SHELL_COURSE_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
             return Bbl_avail > 0 ? Bbl_avail : 0;
         }
 
@@ -1141,7 +1143,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         private int n_rh()
         {
            // Console.WriteLine("TANK_DIAMETER=" + TANK_DIAMETER + " " + (int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0));
-            return Math.Max((int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0), 1);
+            return Math.Max((int)Math.Round(Math.Pow(TANK_DIAMETER * 0.001f / DAL_CAL.GET_TBL_3B21(36), 2), 0), 1);
         }
         private float[] k_h_bottom()
         {
@@ -1207,51 +1209,50 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float newFLUID_HEIGHT = 0.0762f;
             if (!PREVENTION_BARRIER) newFLUID_HEIGHT = FLUID_HEIGHT;
             double ps = (Math.Pow(d_n(n), 1.8)) / (0.21 * Math.Pow(newFLUID_HEIGHT, 0.4));
-             //Console.WriteLine("nrh" + n_rh());
-           // Console.WriteLine("th sau" + newFLUID_HEIGHT + " " + (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * Math.Pow(d_n(n), 2) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh()) + " " + (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh()));
-           
-           // Console.WriteLine("th sau 2" + (DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
+            
              if (k_h_prod() > (DAL_CAL.GET_TBL_3B21(34)) * Math.Pow(d_n(n), 2))
              {
-                 return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * Math.Pow(d_n(n), 2) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh());
+                 return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * d_n(n) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh());
              }
                 
              else if (k_h_prod() <= (DAL_CAL.GET_TBL_3B21(37)) * Math.Pow(ps, 1 / 0.74))
              {
-                 
-                 
-                 return (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh());
+
+                //newFLUID_HEIGHT = 0.0762f;
+                return (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh());
              }
 
              else
              {
-                 double m = DAL_CAL.GET_TBL_3B21(40) - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
+                
+                double m = DAL_CAL.GET_TBL_3B21(40) - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
+                //m = m / 3;
                  ps = (DAL_CAL.GET_TBL_3B21(39) + 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
-                 Console.WriteLine("th sau 2, n=" +n+" "+ (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
-                 return (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m))));
+                 //Console.WriteLine("th sau 2, n=" +n+" "+ (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
+                 return ((float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
                  
              }
         }
         public float t_ld_tank_bottom()
         {
-            if (Soil_type == "Concrete-Asphalt") return 7;
+            if (ConcreteFoundation) return 7;
             else if (PREVENTION_BARRIER) return 30;
             else return 360;
         }
 
         public float BBL_TOTAL_TANKBOTTOM()
         {
-            return (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2) * FLUID_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            return (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2) * FLUID_HEIGHT * (DAL_CAL.GET_TBL_3B21(13))) / (4 );
         }
         // ld_n cho truong hop d1 va d4
         public float ld_n_tank_bottom(int n)
         {
-            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2) * FLUID_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2) * FLUID_HEIGHT * (DAL_CAL.GET_TBL_3B21(13))) / (4 );
             return Math.Min(Bbl_total_tank_bottom / rate_n_tank_bottom(n), t_ld_tank_bottom());
         }
         public float Bbl_leak_n_bottom(int n)
         {
-            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2) * FLUID_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2) * FLUID_HEIGHT * (DAL_CAL.GET_TBL_3B21(13))) / (4 );
             return Math.Min(rate_n_tank_bottom(n) * ld_n_tank_bottom(n), Bbl_total_tank_bottom);
         }
         //STEP 2: Consequence Tank Bottom
@@ -1331,7 +1332,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float Bbl_rupture_release_bottom()
         {
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
-            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2) * FLUID_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2) * FLUID_HEIGHT) / (4 );
             return (Bbl_total_tank_bottom * obj.GFFRupture) / obj.GFFTotal;
         }
         public float Bbl_rupture_indike_bottom()
@@ -1367,7 +1368,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             float sum = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
-            sum = (float)(obj.GFFSmall * obj.HoleCostSmall + obj.GFFMedium * obj.HoleCostMedium + obj.GFFLarge * obj.HoleCostLarge + obj.HoleCostRupture * Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2));
+            sum = (float)(obj.GFFSmall * obj.HoleCostSmall + obj.GFFMedium * obj.HoleCostMedium + obj.GFFLarge * obj.HoleCostLarge + obj.HoleCostRupture * Math.Pow(TANK_DIAMETER * 0.001f / DAL_CAL.GET_TBL_3B21(36), 2));
             return sum * MATERIAL_COST / obj.GFFTotal;
         }
         public double FC_total_bottom()

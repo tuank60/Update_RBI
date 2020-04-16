@@ -17,9 +17,12 @@ namespace RBI.PRE.subForm.InputDataForm
 {
     public partial class frmInspectionFinding : RibbonForm
     {
-        public frmInspectionFinding()
+        public String InsFinding = "";
+        public frmInspectionFinding(String InspectionFinding)
         {
+           
             InitializeComponent();
+            richEditControl.Text = InspectionFinding;
             InitSkinGallery();
             InitializeRichEditControl();
             ribbonControl.SelectedPage = fileRibbonPage1;
@@ -41,8 +44,8 @@ namespace RBI.PRE.subForm.InputDataForm
 
         private void OKItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            MessageBox.Show("do something");
-            //chưa làm
+            InsFinding = richEditControl.Text;
+            this.Close();
         }
     }
 }

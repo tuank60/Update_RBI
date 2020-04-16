@@ -21,7 +21,7 @@ namespace RBI.PRE.subForm.InputDataForm
 {
     public partial class frmInspectionPlanDetail : Form
     {
-        
+        String InspectionFinding = "";
         int _coverageID = 1;
         public int planid;
         List<INSPECTION_DETAIL_TECHNIQUE> listNDT = new List<INSPECTION_DETAIL_TECHNIQUE>();
@@ -78,7 +78,11 @@ namespace RBI.PRE.subForm.InputDataForm
                     }
                 }
             }
-            if (IC.Count > 0) txtRemarks.Text = IC[0].Remarks;
+            if (IC.Count > 0)
+            {
+                txtRemarks.Text = IC[0].Remarks;
+                InspectionFinding = IC[0].Findings;
+            }
 
         }
 
@@ -124,6 +128,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 obj = gridView2.GetRowCellValue(a[i], "ComponentNumber").ToString();
                 IC.ComponentID = CMB.getIDbyName(obj);
                 IC.Remarks = txtRemarks.Text;
+                IC.Findings = InspectionFinding;
                 ICB.add(IC);
                 
             }
@@ -948,8 +953,14 @@ namespace RBI.PRE.subForm.InputDataForm
         // Mở Word ở Inspection Finding trong tab thứ 4
         private void btnViewEditFindings_Click(object sender, EventArgs e)
         {
-            frmInspectionFinding office = new frmInspectionFinding();
+            frmInspectionFinding office = new frmInspectionFinding(InspectionFinding);
             office.ShowDialog();
+            InspectionFinding = office.InsFinding;
+        }
+
+        private void btnClearFindings_Click(object sender, EventArgs e)
+        {
+            InspectionFinding = "";
         }
     }
 }

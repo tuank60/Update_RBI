@@ -46,7 +46,7 @@ namespace RBI
             
             initDataforTreeList();
             initScheme();
-            diameter = "m";
+            //diameter = "m";
             treeListProject.OptionsBehavior.Editable = false;
             treeListProject.OptionsView.ShowIndicator = false;
             treeListProject.OptionsView.ShowColumns = false;
@@ -297,7 +297,7 @@ namespace RBI
                     caTank.ProductionCost = caTank3.ProductionCost;
                     caTank.SHELL_COURSE_HEIGHT = caTank4.SHELL_COURSE_HEIGHT;
                     caTank.TANK_DIAMETTER = caTank4.TANK_DIAMETTER;
-                    
+                    caTank.ConcreteFoundation = caTank4.ConcreteFoundation;
                     caTank.Prevention_Barrier = caTank4.Prevention_Barrier;
                     
                     String _tabName = xtraTabData.SelectedTabPage.Text;
@@ -2472,6 +2472,7 @@ namespace RBI
                 CA.API_COMPONENT_TYPE_NAME = "TANKBOTTOM";
                 CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
                 CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
+                CA.ConcreteFoundation=caTank.ConcreteFoundation == 1 ? true : false;
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
                 rwCATank.Hydraulic_Water = CA.k_h_water();
@@ -2488,7 +2489,9 @@ namespace RBI
                 rwCATank.Release_Volume_Leak_D1 = float.IsNaN(CA.Bbl_leak_n_bottom(1)) ? 0 : CA.Bbl_leak_n_bottom(1);
                 rwCATank.Release_Volume_Leak_D4 = float.IsNaN(CA.Bbl_leak_n_bottom(4)) ? 0 : CA.Bbl_leak_n_bottom(4);
 
-                rwCATank.Release_Volume_Rupture_D1 = float.IsNaN(CA.Bbl_rupture_release_bottom()) ? 0 : CA.Bbl_rupture_release_bottom();
+                //rwCATank.Release_Volume_Rupture_D1 = float.IsNaN(CA.Bbl_rupture_release_bottom()) ? 0 : CA.Bbl_rupture_release_bottom();
+                rwCATank.Release_Volume_Rupture_D1 = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();//haik61
+                rwCATank.Release_Volume_Rupture_D4 = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();//haik61
                 rwCATank.Volume_Fluid = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();
                 rwCATank.Time_Leak_Ground = float.IsNaN(CA.t_gl_bottom()) ? 0 : CA.t_gl_bottom();
 
