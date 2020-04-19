@@ -287,7 +287,7 @@ namespace RBI.DAL.MSSQL
             int ID = -1;
             String sql = "Use [rbi]" +
                         "SELECT [ID]" +
-                        "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + EquipmentID + "' and ComponentID = '"+ ComponentID+ "' and PlanID = '"+ PlanID+"'";
+                        "From [dbo].[INSPECTION_COVERAGE] where EquipmentID = '" + EquipmentID + "' and ComponentID = '"+ ComponentID+ "' and PlanID = '"+ PlanID+"'";
             try
             {
                 SqlCommand cmd = new SqlCommand();

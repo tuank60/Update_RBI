@@ -46,6 +46,10 @@ namespace RBI.Object
         public String ExternalEnvironment { set; get; }
         public String HeatTraced { set; get; }
         public String HighlyEffectiveInspection { set; get; }
+        public String TypeofSoil { set; get; }
+        public String  EnvironmentalSensitivity { set; get; }
+        public String DistanceToGroundWater { set; get; }
+
         //component 
         public String MinimumMeasuredThickness { set; get; }
         public String NominalThickness { set; get; }
@@ -70,8 +74,13 @@ namespace RBI.Object
         public String CorrectAction { set; get; }
         public String BranchDiameter { set; get; }
         public String ComplexityofProtrusions { set; get; }
-        //stream
-        public String MaximumOperatingTemperature { set; get; }
+        public String  ReleasePreventionBarrier{ set; get; }
+       public String ShellHeight { set; get; }
+        public String ConcreteorAsphaltFoundation{ set; get; }
+     public String SeverityofVibration { set; get; }
+
+    //stream
+    public String MaximumOperatingTemperature { set; get; }
         public String MinimumOperatingTemperature { set; get; }
         public String MaximumOperatingPressure { set; get; }
         public String MinimumOperatingPressure { set; get; }
@@ -97,8 +106,13 @@ namespace RBI.Object
         public String ChlorideIon { set; get; }
         public String AqueousPhaseDuringOper { set; get; }
         public String AqueousPhaseDuringShut { set; get; }
-        //material
-        public String DesignTemperature { set; get; }
+        public String FluidHeight{ set; get; }
+    public String PercentageofFluidLeavingtheDike{ set; get; }
+public String PercentageofFluidLeavingtheDikebutRemainsonSite{ set; get; }
+public String PercentageofFluidGoingOffsite { set; get; }
+
+//material
+public String DesignTemperature { set; get; }
         public String AllowableStress { set; get; }
         public String DesignPressure { set; get; }
         public String SusceptibletoTemper { set; get; }
