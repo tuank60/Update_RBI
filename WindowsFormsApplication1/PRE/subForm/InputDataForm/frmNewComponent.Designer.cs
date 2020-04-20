@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewComponent));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.cbAPIComponentType = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.cbComponentType = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.cbFacility = new DevExpress.XtraEditors.ImageComboBoxEdit();
@@ -58,7 +59,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbAPIComponentType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbComponentType.Properties)).BeginInit();
@@ -106,6 +106,16 @@
             this.panel1.Size = new System.Drawing.Size(630, 451);
             this.panel1.TabIndex = 1;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(527, 409);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 29);
+            this.btnCancel.TabIndex = 44;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // cbAPIComponentType
             // 
             this.cbAPIComponentType.Location = new System.Drawing.Point(288, 234);
@@ -124,6 +134,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbComponentType.Size = new System.Drawing.Size(314, 20);
             this.cbComponentType.TabIndex = 6;
+            this.cbComponentType.SelectedIndexChanged += new System.EventHandler(this.cbComponentType_SelectedIndexChanged);
             this.cbComponentType.SelectedValueChanged += new System.EventHandler(this.cbComponentType_SelectedValueChanged);
             // 
             // cbFacility
@@ -371,16 +382,6 @@
             this.label4.Size = new System.Drawing.Size(86, 16);
             this.label4.TabIndex = 0;
             this.label4.Text = "Component";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Location = new System.Drawing.Point(527, 409);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 29);
-            this.btnCancel.TabIndex = 44;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmNewComponent
             // 

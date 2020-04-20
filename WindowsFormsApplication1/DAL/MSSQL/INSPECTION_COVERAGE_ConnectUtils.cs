@@ -102,6 +102,30 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
+        public void deletebyPlanID(int PlanID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "USE [rbi] " +
+                        "DELETE FROM [dbo].[INSPECTION_COVERAGE]" +
+                        "WHERE [PlanID] = '" + PlanID + "' ";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "DELETE FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
         public List<INSPECTION_COVERAGE> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -161,6 +185,137 @@ namespace RBI.DAL.MSSQL
             return list;
         }
 
+        public List<INSPECTION_COVERAGE> getDataID(int PlanID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<INSPECTION_COVERAGE> list = new List<INSPECTION_COVERAGE>();
+            INSPECTION_COVERAGE obj = null;
+            String sql = " Use [rbi] Select [ID]" +
+                          ",[PlanID]" +
+                          ",[EquipmentID]" +
+                          ",[ComponentID]" +
+                          ",[Remarks]" +
+                          ",[Findings]" +
+                          ",[FindingRTF]" +
+                          "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new INSPECTION_COVERAGE();
+                            obj.ID = reader.GetInt32(0);
+                            obj.PlanID = reader.GetInt32(1);
+                            obj.EquipmentID = reader.GetInt32(2);
+                            obj.ComponentID = reader.GetInt32(3);
+                            if (!reader.IsDBNull(4))
+                            {
+                                obj.Remarks = reader.GetString(4);
+                            }
+                            if (!reader.IsDBNull(5))
+                            {
+                                obj.Findings = reader.GetString(5);
+                            }
+                            if (!reader.IsDBNull(6))
+                            {
+                                obj.FindingRTF = reader.GetString(6);
+                            }
+                            list.Add(obj);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
+        public List<int> getIDbyPlanID(int PlanID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<int> list = new List<int>();
+            int ID = 0;
+            String sql = "Use [rbi]" +
+                        "SELECT [ID]" +
+                        "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ID = reader.GetInt32(0);
+                        }
+                        list.Add(ID);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
+        public int getIDbyEquipmentIDandComponentID(int EquipmentID, int ComponentID,int PlanID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            int ID = -1;
+            String sql = "Use [rbi]" +
+                        "SELECT [ID]" +
+                        "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + EquipmentID + "' and ComponentID = '"+ ComponentID+ "' and PlanID = '"+ PlanID+"'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ID = reader.GetInt32(0);
+                        }
+                        
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return ID;
+        }
     }
 }
 

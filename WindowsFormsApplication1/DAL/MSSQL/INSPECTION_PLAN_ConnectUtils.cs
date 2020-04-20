@@ -19,12 +19,10 @@ namespace RBI.DAL.MSSQL
             String sql = "USE [rbi]" +
                         "INSERT INTO [dbo].[INSPECTION_PLAN]" +
                         "([InspPlanName]" +
-                        ",[InspPlanDate]" +
-                        ",[Remarks])" +
+                        ",[InspPlanDate])" +
                         "VALUES" +
                         "('" + InspPlanName + "'" +
-                        ",'" + InspPlanDate + "'" +
-                        ",'" + Remarks + "')";
+                        ",'" + InspPlanDate + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -102,7 +100,7 @@ namespace RBI.DAL.MSSQL
             String sql = " Use [rbi] Select [PlanID]" +
                           ",[InspPlanName]" +
                           ",[InspPlanDate]" +
-                          ",[Remarks]" +
+                         // ",[Remarks]" +
                           "From [dbo].[INSPECTION_PLAN]";
             try
             {
@@ -122,11 +120,10 @@ namespace RBI.DAL.MSSQL
                             {
                                 obj.InspPlanDate = reader.GetDateTime(2);
                             }
-                            if (!reader.IsDBNull(3))
-                            {
-                                obj.Remarks = reader.GetString(3);
-                            }
-                            
+                            //if (!reader.IsDBNull(3))
+                            //{
+                                //obj.Remarks = reader.GetString(3);
+                            //}
                             list.Add(obj);
                         }
                     }
@@ -144,5 +141,72 @@ namespace RBI.DAL.MSSQL
             return list;
         }
 
+        public String getPlanName(int PlanID)
+        {
+            String insplanName = "";
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select InspPlanName from rbi.dbo.INSPECTION_PLAN where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows && !reader.IsDBNull(0))
+                        {
+                            insplanName = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get DateTime Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return insplanName;
+        }
+
+        public DateTime getPlanDate(int PlanID)
+        {
+            DateTime insplanDate = new DateTime();
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select InspPlanDate from rbi.dbo.INSPECTION_PLAN where PlanID = '" + PlanID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows && !reader.IsDBNull(0))
+                        {
+                            insplanDate = reader.GetDateTime(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get DateTime Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return insplanDate;
+        }
     }
 }

@@ -278,7 +278,6 @@ namespace RBI.PRE.subForm.InputDataForm
                     RW_INPUT_CA_LEVEL_1 inputCA = new RW_INPUT_CA_LEVEL_1();
                     inputCA.ID = assID;
                     busInputCA.add(inputCA);
-                    
                 }
             }
 

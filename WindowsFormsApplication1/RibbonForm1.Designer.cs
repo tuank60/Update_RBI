@@ -212,7 +212,7 @@
             this.btnUnitSeting,
             this.btnAssessmentMethod});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 27;
+            this.ribbon.MaxItemId = 28;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -224,6 +224,7 @@
             this.repositoryItemMarqueeProgressBar1});
             this.ribbon.Size = new System.Drawing.Size(1084, 147);
             this.ribbon.StatusBar = this.ribStatusbar;
+            this.ribbon.Click += new System.EventHandler(this.ribbon_Click);
             // 
             // btnPlant
             // 
@@ -776,6 +777,7 @@
             this.label1.Size = new System.Drawing.Size(523, 108);
             this.label1.TabIndex = 0;
             this.label1.Text = "Cortek RBI";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // treeListProject
             // 
@@ -939,7 +941,7 @@
             // 
             // navFullInspHis
             // 
-            this.navFullInspHis.Caption = "Inspection History";
+            this.navFullInspHis.Caption = "Inspection / Mitigation Planning";
             this.navFullInspHis.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("navFullInspHis.ImageOptions.SmallImage")));
             this.navFullInspHis.Name = "navFullInspHis";
             this.navFullInspHis.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navFullInspHis_LinkClicked);

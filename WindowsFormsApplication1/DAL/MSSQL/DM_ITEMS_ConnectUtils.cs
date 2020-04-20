@@ -160,5 +160,80 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public String getDMDescriptionbyDMItemID(int DMItemID)
+        {
+            
+            String obj = "";
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = " Use [rbi] Select [DMDescription]" +
+                          "From [rbi].[dbo].[DM_ITEMS] where [DMItemID]='" + DMItemID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                           
+                            obj = reader.GetString(0);
+                         
+                            
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
+        public int getDMIteamIDbyDMDescription(String DMDescription)
+        {
+            int obj = -1;
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = " Use [rbi] Select [DMItemID]" +
+                          "From [rbi].[dbo].[DM_ITEMS] where [DMDescription]='" + DMDescription + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+
+                            obj = reader.GetInt32(0);
+
+
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
     }
 }

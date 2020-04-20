@@ -106,7 +106,7 @@ namespace RBI.DAL.MSSQL
                           ",[IMTypeName]" +
                           ",[IMTypeCode]" +
                           ",[IMItemID]" +
-                          "From [dbo].[IM_ITEMS]";
+                          "From [dbo].[IM_TYPE]";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -138,6 +138,90 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
             return list;
+        }
+        public IM_TYPE getDataSourcebyIMTypeID(int IMTypeID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            IM_TYPE obj = new IM_TYPE();
+            String sql = " Use [rbi] Select [IMTypeID]" +
+                          ",[IMTypeName]" +
+                          ",[IMTypeCode]" +
+                          ",[IMItemID]" +
+                          "From [dbo].[IM_TYPE] Where [IMTypeID] ='" + IMTypeID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj.IMTypeID = reader.GetInt32(0);
+                            obj.IMTypeName = reader.GetString(1);
+                            obj.IMTypeCode = reader.GetString(2);
+                            obj.IMItemID = reader.GetInt32(3);
+                            
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
+        public IM_TYPE getData(String IMTypeName)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+           
+            IM_TYPE obj = null;
+            String sql = " Use [rbi] Select [IMTypeID]" +
+                          ",[IMTypeName]" +
+                          ",[IMTypeCode]" +
+                          ",[IMItemID]" +
+                          "From [dbo].[IM_TYPE] Where [IMTypeName] ='" + IMTypeName + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new IM_TYPE();
+                            obj.IMTypeID = reader.GetInt32(0);
+                            obj.IMTypeName = reader.GetString(1);
+                            obj.IMTypeCode = reader.GetString(2);
+                            obj.IMItemID = reader.GetInt32(3);
+                            
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
         }
 
     }

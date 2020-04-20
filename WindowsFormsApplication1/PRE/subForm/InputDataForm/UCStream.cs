@@ -65,6 +65,8 @@ namespace RBI.PRE.subForm.InputDataForm
             chkChlorine.Checked = Convert.ToBoolean(obj.MaterialExposedToClInt);
             txtNaOHConcentration.Text = obj.NaOHConcentration.ToString();
             txtpHWater.Text = obj.WaterpH.ToString();
+            txbModelFluid.Text = obj.TankFluidName;
+            txbToxicFluid.Text = obj.ToxicFluidName;
         }
         public RW_STREAM getData(int ID)
         {
@@ -100,7 +102,8 @@ namespace RBI.PRE.subForm.InputDataForm
             //stream.StoragePhase
             //stream.ToxicFluidID = 
             stream.WaterpH = txtpHWater.Text != "" ? float.Parse(txtpHWater.Text) : 0;
-            //stream.TankFluidName
+            stream.TankFluidName = txbModelFluid.Text;
+            stream.ToxicFluidName = txbToxicFluid.Text;
             //stream.FluidHeight
             //stream.FluidLeaveDikePercent
             //stream.FluidLeaveDikeRemainOnSitePercent
@@ -314,5 +317,31 @@ namespace RBI.PRE.subForm.InputDataForm
             pnlHydrogen.Height = 21;
         }
         #endregion
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           // this.Hide();
+            frmModelFluid mf = new frmModelFluid();
+            mf.ShowDialog();
+            //this.Show();
+            this.txbModelFluid.Text = mf.Representative_Fluid;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.txbModelFluid.Text = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmToxicFluid mf = new frmToxicFluid();
+            mf.ShowDialog();
+            this.txbToxicFluid.Text = mf.Representative_Fluid;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.txbToxicFluid.Text = "";
+        }
     }
 }

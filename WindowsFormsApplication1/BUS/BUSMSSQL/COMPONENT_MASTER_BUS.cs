@@ -44,6 +44,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getComponentName(comID);
         }
+        public String getComponentName(int comID,int EqID)
+        {
+            return DAL.getComponentName(comID,EqID);
+        }
         public COMPONENT_MASTER getData(int comID)
         {
             return DAL.getData(comID);
@@ -52,7 +56,7 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.checkExist(comNum);
         }
-        public int getIDbyName(String comNum)
+        public int getIDbyName(String comNum)//getIDbyNumber
         {
             return DAL.getIDbyName(comNum);
         }
@@ -75,6 +79,10 @@ namespace RBI.BUS.BUSMSSQL
         public List<string> getAllComponentNumber()
         {
             return DAL.getAllComponentNumber();
+        }
+        public List<string> getAllComponentName(int EqID)
+        {
+            return getAllComponentName(EqID);
         }
         public int getComponentTypeID(string comNumber)
         {

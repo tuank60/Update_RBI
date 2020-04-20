@@ -45,6 +45,7 @@ namespace RBI.DAL.MSSQL
             }
             return comNumber;
         }
+
         public int getComponentID (String componentNumber)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -363,6 +364,39 @@ namespace RBI.DAL.MSSQL
             }
             return comName;
         }
+        public String getComponentName(int comID,int EqID)
+        {
+            String comName = "";
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "select ComponentName from rbi.dbo.COMPONENT_MASTER where ComponentID = '" + comID + "'" + "AND EquipmentID='" + EqID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            comName = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get FMS Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return comName;
+        }
         public COMPONENT_MASTER getData(int comID)
         {
             COMPONENT_MASTER obj = new COMPONENT_MASTER();
@@ -558,6 +592,37 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             List<string> ListCompID = new List<string>();
             String sql = "SELECT ComponentNumber FROM rbi.dbo.COMPONENT_MASTER";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ListCompID.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return ListCompID;
+        }
+        public List<string> getAllComponentName(int EqID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<string> ListCompID = new List<string>();
+            String sql = "SELECT ComponentName FROM rbi.dbo.COMPONENT_MASTER WHERE EquipmentID = '" + EqID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);

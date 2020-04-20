@@ -10,13 +10,17 @@ namespace RBI.Object.ObjectMSSQL
     {
         public int ID { get; set; }
         public int EquipmentID { get; set; }
+        public String EquipmentNumber { get; set; }
         public int ComponentID { get; set; }
+        public String ComponentName { get; set; }
+        public String ComponentNumber { get; set; }
         public DateTime AssessmentDate { get; set; }
         public int AssessmentMethod { get; set; }
         public int RiskAnalysisPeriod { get; set; }
         public int IsEquipmentLinked { get; set; }
         public String RecordType { get; set; }
         public int ProposalNo { get; set; } //sua Number thanh String Name
+        public String ComponentType { set; get; }//hai them
         public String ProposalName { set; get; }
         public int RevisionNo { get; set; }
         public int IsRecommend { get; set; }

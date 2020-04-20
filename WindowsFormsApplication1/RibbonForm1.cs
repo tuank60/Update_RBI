@@ -43,8 +43,10 @@ namespace RBI
         {
             SplashScreenManager.ShowForm(typeof(WaitForm1));
             InitializeComponent();
+            
             initDataforTreeList();
             initScheme();
+            //diameter = "m";
             treeListProject.OptionsBehavior.Editable = false;
             treeListProject.OptionsView.ShowIndicator = false;
             treeListProject.OptionsView.ShowColumns = false;
@@ -209,6 +211,7 @@ namespace RBI
                 {
 
                     int selectedID = int.Parse(this.xtraTabData.SelectedTabPage.Name);
+                   
                     ucTabNormal uc = null;
                     foreach (ucTabNormal u in listUC)
                     {
@@ -294,8 +297,9 @@ namespace RBI
                     caTank.ProductionCost = caTank3.ProductionCost;
                     caTank.SHELL_COURSE_HEIGHT = caTank4.SHELL_COURSE_HEIGHT;
                     caTank.TANK_DIAMETTER = caTank4.TANK_DIAMETTER;
+                    caTank.ConcreteFoundation = caTank4.ConcreteFoundation;
                     caTank.Prevention_Barrier = caTank4.Prevention_Barrier;
-
+                    
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
@@ -1638,6 +1642,7 @@ namespace RBI
             cal.BRITTLE_THICK = com.BrittleFractureThickness;
             cal.CARBON_ALLOY = ma.CarbonLowAlloy == 1 ? true : false;
             cal.DELTA_FATT = com.DeltaFATT;
+            cal.Cri_Exp_Temp = st.CriticalExposureTemperature;
             //</Temper Embrittle>
 
             //<input 885>
@@ -1681,25 +1686,25 @@ namespace RBI
             Df[0] = cal.DF_THIN(age[0]);
             Df[1] = cal.DF_LINNING(age[1]);
             Df[2] = cal.DF_CAUSTIC(age[2]);
-            Df[3] = cal.DF_AMINE(age[3]);
-            Df[4] = cal.DF_SULPHIDE(age[4]);
+            Df[3] = cal.DF_AMINE(age[3]) ;
+            Df[4] = cal.DF_SULPHIDE(age[4]) ;
             Df[5] = cal.DF_HICSOHIC_H2S(age[5]);
             Df[6] = cal.DF_CACBONATE(age[6]);
             Df[7] = cal.DF_PTA(age[7]);
             Df[8] = cal.DF_CLSCC(age[8]);
-            Df[9] = cal.DF_HSCHF(age[9]);
+            Df[9] = cal.DF_HSCHF(age[9]) ;
             Df[10] = cal.DF_HIC_SOHIC_HF(age[10]);
-            Df[11] = cal.DF_EXTERNAL_CORROSION(age[11]);
-            Df[12] = cal.DF_CUI(age[12]);
-            Df[13] = cal.DF_EXTERN_CLSCC();
-            Df[14] = cal.DF_CUI_CLSCC();
-            Df[15] = cal.DF_HTHA(age[13]);
-            Df[16] = cal.DF_BRITTLE();
+            Df[11] = cal.DF_EXTERNAL_CORROSION(age[11]) ;
+            Df[12] = cal.DF_CUI(age[12]) ;
+            Df[13] = cal.DF_EXTERN_CLSCC() ;
+            Df[14] = cal.DF_CUI_CLSCC() ;
+            Df[15] = cal.DF_HTHA(age[13]) ;
+            Df[16] = cal.DF_BRITTLE() ;
             Df[17] = cal.DF_TEMP_EMBRITTLE();
             Df[18] = cal.DF_885();
             Df[19] = cal.DF_SIGMA();
-            Df[20] = cal.DF_PIPE();
-
+            Df[20] = cal.DF_PIPE() ;
+            
 
             List<float> DFSCCAgePlus3 = new List<float>();
             List<float> DFSCCAgePlus6 = new List<float>();
@@ -1714,8 +1719,8 @@ namespace RBI
             fullPOF.ID = IDProposal;
             for (int i = 0; i < 21; i++)
             {
-                if (Df[i] >= 0)
-                {
+                //if (Df[i] >= 0)
+                //{//hai sua
                     RW_DAMAGE_MECHANISM damage = new RW_DAMAGE_MECHANISM();
                     damage.ID = IDProposal;
                     damage.DMItemID = DM_ID[i];
@@ -1731,111 +1736,300 @@ namespace RBI
                     }
 
                     damage.DF1 = Df[i];
-                    switch (i)
-                    {
-                        case 0: //Thinning
-                            damage.DF2 = cal.DF_THIN(age[0] + 3);
-                            damage.DF3 = cal.DF_THIN(age[0] + 6);
-                            thinningPlusAge[0] = damage.DF2;
-                            thinningPlusAge[1] = damage.DF3;
-                            break;
-                        case 1: //Linning
+                switch (i)
+                {
+                    case 0: //Thinning
+                        damage.IsDF = 1;
+
+                        damage.DF2 = cal.DF_THIN(age[0] + 3);
+                        damage.DF3 = cal.DF_THIN(age[0] + 6);
+                        thinningPlusAge[0] = damage.DF2;
+                        thinningPlusAge[1] = damage.DF3;
+                        break;
+                    case 1: //Linning
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+
+                        else
+                        {
                             damage.DF2 = cal.DF_LINNING(age[1] + 3);
                             damage.DF3 = cal.DF_LINNING(age[1] + 6);
-                            linningPlusAge[0] = damage.DF2;
-                            linningPlusAge[1] = damage.DF3;
-                            break;
-                        case 2: //Caustic
+                        }
+
+                        linningPlusAge[0] = damage.DF2;
+                        linningPlusAge[1] = damage.DF3;
+                        break;
+                    case 2: //Caustic
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CAUSTIC(age[2] + 3);
                             damage.DF3 = cal.DF_CAUSTIC(age[2] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 3: //Amine
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 3: //Amine
+
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_AMINE(age[3] + 3);
                             damage.DF3 = cal.DF_AMINE(age[3] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 4: //Sulphide
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 4: //Sulphide
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_SULPHIDE(age[4] + 3);
                             damage.DF3 = cal.DF_SULPHIDE(age[4] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 5: //HIC/SOHIC-H2S
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 5: //HIC/SOHIC-H2S
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HICSOHIC_H2S(age[5] + 3);
                             damage.DF3 = cal.DF_HICSOHIC_H2S(age[5] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 6: //Carbonate
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 6: //Carbonate
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CACBONATE(age[6] + 3);
                             damage.DF3 = cal.DF_CACBONATE(age[6] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 7: //PTA (Polythionic Acid Stress Corrosion Cracking)
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 7: //PTA (Polythionic Acid Stress Corrosion Cracking)
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_PTA(age[7] + 3);
                             damage.DF3 = cal.DF_PTA(age[7] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 8: //CLSCC (Chloride Stress Corrosion Cracking)
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 8: //CLSCC (Chloride Stress Corrosion Cracking)
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CLSCC(age[8] + 3);
                             damage.DF3 = cal.DF_CLSCC(age[8] + 6);
                             DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 9: //HSC-HF
+                        }
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 9: //HSC-HF
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HSCHF(age[9] + 3);
                             damage.DF3 = cal.DF_HSCHF(age[9] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 10: //HIC/SOHIC-HF
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 10: //HIC/SOHIC-HF
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HIC_SOHIC_HF(age[10] + 3);
                             damage.DF3 = cal.DF_HIC_SOHIC_HF(age[10] + 6);
-                            DFSCCAgePlus3.Add(damage.DF2);
-                            DFSCCAgePlus6.Add(damage.DF3);
-                            break;
-                        case 11: //External Corrosion
+                        }
+                        DFSCCAgePlus3.Add(damage.DF2);
+                        DFSCCAgePlus6.Add(damage.DF3);
+                        break;
+                    case 11: //External Corrosion//nen kiem tra lai
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_EXTERNAL_CORROSION(age[11] + 3);
                             damage.DF3 = cal.DF_EXTERNAL_CORROSION(age[11] + 6);
-                            DF_EXTERN_CORROSIONPlusAge[0] = damage.DF2;
-                            DF_EXTERN_CORROSIONPlusAge[1] = damage.DF2;
-                            break;
-                        case 12: //CUI (Corrosion Under Insulation)
+                        }
+                        DF_EXTERN_CORROSIONPlusAge[0] = damage.DF2;
+                        DF_EXTERN_CORROSIONPlusAge[1] = damage.DF2;
+                        break;
+                    case 12: //CUI (Corrosion Under Insulation)//nen kiem tra lai
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_CUI(age[12] + 3);
                             damage.DF3 = cal.DF_CUI(age[12] + 6);
-                            DF_CUIPlusAge[0] = damage.DF2;
-                            DF_CUIPlusAge[1] = damage.DF3;
-                            break;
-                        case 15: //HTHA
+                        }
+                        DF_CUIPlusAge[0] = damage.DF2;
+                        DF_CUIPlusAge[1] = damage.DF3;
+                        break;
+                    case 15: //HTHA
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        else
+                        {
                             damage.DF2 = cal.DF_HTHA(age[13] + 3);
                             damage.DF3 = cal.DF_HTHA(age[13] + 6);
-                            DF_HTHAPlusAge[0] = damage.DF2;
-                            DF_HTHAPlusAge[1] = damage.DF3;
-                            fullPOF.HTHA_AP1 = damage.DF1;
-                            fullPOF.HTHA_AP2 = damage.DF2;
-                            fullPOF.HTHA_AP3 = damage.DF3;
-                            break;
-                        case 16: //Brittle
-                            damage.DF2 = damage.DF3 = damage.DF1;
-                            fullPOF.BrittleAP1 = fullPOF.BrittleAP2 = fullPOF.BrittleAP3 = damage.DF1;
-                            break;
-                        case 20: //Piping Fatigure
-                            damage.DF2 = damage.DF3 = damage.DF1;
-                            fullPOF.FatigueAP1 = fullPOF.FatigueAP2 = fullPOF.FatigueAP3 = damage.DF1;
-                            break;
-                        default:
-                            damage.DF2 = damage.DF1;
-                            damage.DF3 = damage.DF1;
-                            break;
-                    }
-                    listDamageMachenism.Add(damage);
+                        }
+                        DF_HTHAPlusAge[0] = damage.DF2;
+                        DF_HTHAPlusAge[1] = damage.DF3;
+                        fullPOF.HTHA_AP1 = damage.DF1;
+                        fullPOF.HTHA_AP2 = damage.DF2;
+                        fullPOF.HTHA_AP3 = damage.DF3;
+                        break;
+                    case 16: //Brittle
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        damage.DF2 = damage.DF3 = damage.DF1;
+                        fullPOF.BrittleAP1 = fullPOF.BrittleAP2 = fullPOF.BrittleAP3 = damage.DF1;
+                        break;
+                    case 20: //Piping Fatigure
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        damage.DF2 = damage.DF3 = damage.DF1;
+
+                        fullPOF.FatigueAP1 = fullPOF.FatigueAP2 = fullPOF.FatigueAP3 = damage.DF1;
+                        break;
+                    default:
+                        damage.IsDF = 1;
+                        if (damage.DF1 == -1)
+                        {
+                            damage.IsDF = 0;
+                            Df[i] = 0;
+                            damage.DF1 = 0;
+                            damage.DF2 = 0;
+                            damage.DF3 = 0;
+                        }
+                        damage.DF2 = damage.DF1;
+                        damage.DF3 = damage.DF1;
+                        break;
                 }
+                listDamageMachenism.Add(damage);
             }
+
             DMmachenism = listDamageMachenism;
             /*  
              * Tính DF_Thin_Total
@@ -2213,6 +2407,7 @@ namespace RBI
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
                 rwCATank.Flow_Rate_D1 = !float.IsNaN(CA.W_n_Tank(1)) && CA.W_n_Tank(1) > 0 ? CA.W_n_Tank(1) : 0;
+                
                 rwCATank.Flow_Rate_D2 = !float.IsNaN(CA.W_n_Tank(2)) && CA.W_n_Tank(2) > 0 ? CA.W_n_Tank(2) : 0;
                 rwCATank.Flow_Rate_D3 = !float.IsNaN(CA.W_n_Tank(3)) && CA.W_n_Tank(3) > 0 ? CA.W_n_Tank(3) : 0;
                 rwCATank.Flow_Rate_D4 = !float.IsNaN(CA.W_n_Tank(4)) && CA.W_n_Tank(4) > 0 ? CA.W_n_Tank(4) : 0;
@@ -2227,7 +2422,7 @@ namespace RBI
                 rwCATank.Release_Volume_Leak_D3 = !float.IsNaN(CA.Bbl_leak_n(3)) && CA.Bbl_leak_n(3) > 0 ? CA.Bbl_leak_n(3) : 0;
                 rwCATank.Release_Volume_Leak_D4 = !float.IsNaN(CA.Bbl_leak_n(4)) && CA.Bbl_leak_n(4) > 0 ? CA.Bbl_leak_n(4) : 0;
 
-                rwCATank.Release_Volume_Rupture = !float.IsNaN(CA.Bbl_rupture_release()) && CA.Bbl_rupture_release() > 0 ? CA.Bbl_rupture_release() : 0;
+                rwCATank.Release_Volume_Rupture_D1 = !float.IsNaN(CA.Bbl_rupture_release()) && CA.Bbl_rupture_release() > 0 ? CA.Bbl_rupture_release() : 0;
                 rwCATank.Liquid_Height = CA.FLUID_HEIGHT;
                 rwCATank.Volume_Fluid = CA.BBL_TOTAL_SHELL();
 
@@ -2269,19 +2464,27 @@ namespace RBI
             }
             else
             {
+                CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
                 CA.Swg = caTank.SW;
                 CA.Soil_type = caTank.Soil_Type;
                 CA.TANK_FLUID = caTank.TANK_FLUID;
                 CA.FLUID = caTank.API_FLUID;
                 CA.API_COMPONENT_TYPE_NAME = "TANKBOTTOM";
-
+                CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
+                CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
+                CA.ConcreteFoundation=caTank.ConcreteFoundation == 1 ? true : false;
+                CA.EnvironSensitivity = caTank.Environ_Sensitivity;//Thang them
+                CA.P_lvdike = caTank.P_lvdike;//Thang them
+                CA.P_offsite = caTank.P_offsite;//Thang them
+                CA.P_onsite = caTank.P_onsite;//Thang them
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
                 rwCATank.Hydraulic_Water = CA.k_h_water();
                 rwCATank.Hydraulic_Fluid = CA.k_h_prod();
                 rwCATank.Seepage_Velocity = CA.vel_s_prod();
-
+                rwCATank.Material_Factor = CA.MATERIAL_COST;//Thang them
                 rwCATank.Flow_Rate_D1 = float.IsNaN(CA.rate_n_tank_bottom(1)) ? 0 : CA.rate_n_tank_bottom(1);
+               // Console.WriteLine("flow rate" + rwCATank.Flow_Rate_D1 + " " + CA.rate_n_tank_bottom(1));
                 rwCATank.Flow_Rate_D4 = float.IsNaN(CA.rate_n_tank_bottom(4)) ? 0 : CA.rate_n_tank_bottom(4);
 
                 rwCATank.Leak_Duration_D1 = float.IsNaN(CA.ld_n_tank_bottom(1)) ? 0 : CA.ld_n_tank_bottom(1);
@@ -2290,7 +2493,9 @@ namespace RBI
                 rwCATank.Release_Volume_Leak_D1 = float.IsNaN(CA.Bbl_leak_n_bottom(1)) ? 0 : CA.Bbl_leak_n_bottom(1);
                 rwCATank.Release_Volume_Leak_D4 = float.IsNaN(CA.Bbl_leak_n_bottom(4)) ? 0 : CA.Bbl_leak_n_bottom(4);
 
-                rwCATank.Release_Volume_Rupture = float.IsNaN(CA.Bbl_rupture_release_bottom()) ? 0 : CA.Bbl_rupture_release_bottom();
+                //rwCATank.Release_Volume_Rupture_D1 = float.IsNaN(CA.Bbl_rupture_release_bottom()) ? 0 : CA.Bbl_rupture_release_bottom();
+                rwCATank.Release_Volume_Rupture_D1 = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();//haik61
+                rwCATank.Release_Volume_Rupture_D4 = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();//haik61
                 rwCATank.Volume_Fluid = float.IsNaN(CA.BBL_TOTAL_TANKBOTTOM()) ? 0 : CA.BBL_TOTAL_TANKBOTTOM();
                 rwCATank.Time_Leak_Ground = float.IsNaN(CA.t_gl_bottom()) ? 0 : CA.t_gl_bottom();
 
@@ -3050,7 +3255,7 @@ namespace RBI
             busMaterial.edit(ma);
             //busCorrosionRate.edit(corate);
             //busInputCALevel1.edit(ca);
-
+            //Console.WriteLine("tank fluid name="+stream.TankFluidName);
         }
         //thiet bi tank
         private void SaveDatatoDatabase(RW_ASSESSMENT ass, RW_EQUIPMENT eq, RW_COMPONENT com, RW_STREAM stream, RW_EXTCOR_TEMPERATURE extTemp, RW_COATING coat, RW_MATERIAL ma, RW_INPUT_CA_TANK ca)
@@ -3058,11 +3263,14 @@ namespace RBI
             busAssessment.edit(ass);
             busEquipment.edit(eq);
             busComponent.edit(com);
+            Console.WriteLine("tank fluid name=" + stream.TankFluidName);
             busStream.edit(stream);
+            Console.WriteLine("ID=" + stream.ID);
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
             busInputCATank.edit(ca);
+            
         }
 
         private void SaveDataCorrosionRate(RW_CORROSION_RATE_TANK corate)
@@ -3112,9 +3320,9 @@ namespace RBI
 
         private void navFullInspHis_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            UCInspectionHistory history = new UCInspectionHistory();
+            UCInspectionHistory history = new UCInspectionHistory(0);
             history.Dock = DockStyle.Fill;
-            addTabfromMainMenu("Inspection History", history);
+            addTabfromMainMenu("Inspection / Mitigation Planner", history);
         }
         private void CheckAndShowTab(string tabname, int serial)
         {
@@ -3456,6 +3664,16 @@ namespace RBI
                 if (dlr == DialogResult.OK)
                     System.Windows.Forms.Application.Restart();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

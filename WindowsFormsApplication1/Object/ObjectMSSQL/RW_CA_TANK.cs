@@ -24,7 +24,10 @@ namespace RBI.Object.ObjectMSSQL
         public float Release_Volume_Leak_D2 { set; get; }
         public float Release_Volume_Leak_D3 { set; get; }
         public float Release_Volume_Leak_D4 { set; get; }
-        public float Release_Volume_Rupture { set; get; }
+        public float Release_Volume_Rupture_D1 { set; get; }
+        public float Release_Volume_Rupture_D2 { set; get; }
+        public float Release_Volume_Rupture_D3 { set; get; }
+        public float Release_Volume_Rupture_D4 { set; get; }
         public float Liquid_Height { set; get; }
         public float Volume_Fluid { set; get; }
         public float Time_Leak_Ground { set; get; }

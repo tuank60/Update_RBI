@@ -239,8 +239,8 @@ namespace RBI.PRE.subForm.InputDataForm
             tank.ID = ID;
             if (diameter == "MM") tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) : 0;
             else if (diameter == "INCH") tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? (float)(double.Parse(txtTankDiameter.Text) * convUnit.inch) : 0; // in sang mm
-            else tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) * 1000 : 0; // m sang mm
-            tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text) : 0;
+           //else tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text)  : 0; // m sang mm
+            tank.ConcreteFoundation= chkConcreteAsphalt.Checked ? 1 : 0;
             tank.Prevention_Barrier = chkPreventionBarrier.Checked ? 1 : 0;
             return tank;
         }

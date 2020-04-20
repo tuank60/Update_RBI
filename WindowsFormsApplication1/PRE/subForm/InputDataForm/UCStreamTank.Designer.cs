@@ -79,6 +79,9 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.txbModelFluid = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnlStress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbAmineSolutionComposition.Properties)).BeginInit();
@@ -540,6 +543,9 @@
             // pnlGenericProperties
             // 
             this.pnlGenericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlGenericProperties.Controls.Add(this.txbModelFluid);
+            this.pnlGenericProperties.Controls.Add(this.button2);
+            this.pnlGenericProperties.Controls.Add(this.button1);
             this.pnlGenericProperties.Controls.Add(this.lblGenericProperties);
             this.pnlGenericProperties.Controls.Add(this.txtPercentageFluidGoingOffsite);
             this.pnlGenericProperties.Controls.Add(this.cbFluidTank);
@@ -581,7 +587,7 @@
             // 
             // cbFluidTank
             // 
-            this.cbFluidTank.Location = new System.Drawing.Point(360, 30);
+            this.cbFluidTank.Location = new System.Drawing.Point(487, 100);
             this.cbFluidTank.Name = "cbFluidTank";
             this.cbFluidTank.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -683,6 +689,36 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "m";
             // 
+            // txbModelFluid
+            // 
+            this.txbModelFluid.Location = new System.Drawing.Point(360, 28);
+            this.txbModelFluid.Multiline = true;
+            this.txbModelFluid.Name = "txbModelFluid";
+            this.txbModelFluid.Size = new System.Drawing.Size(266, 19);
+            this.txbModelFluid.TabIndex = 28;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(644, 27);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 21);
+            this.button2.TabIndex = 27;
+            this.button2.Text = "X";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(624, 27);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UCStreamTank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -756,5 +792,8 @@
         private System.Windows.Forms.Panel pnlStress;
         private System.Windows.Forms.Label lblGenericProperties;
         private System.Windows.Forms.Label lblStress;
+        private System.Windows.Forms.TextBox txbModelFluid;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

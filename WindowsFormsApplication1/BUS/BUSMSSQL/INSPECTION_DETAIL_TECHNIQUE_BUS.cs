@@ -14,7 +14,7 @@ namespace RBI.BUS.BUSMSSQL
         INSPECTION_DETAIL_TECHNIQUE_ConnectUtils DAL = new INSPECTION_DETAIL_TECHNIQUE_ConnectUtils();
         public void add(INSPECTION_DETAIL_TECHNIQUE obj)
         {
-            DAL.add(obj.CoverageID, obj.IMItemID, obj.IMTypeID, obj.InspectionType, obj.Coverage);
+            DAL.add( obj.CoverageID, obj.IMItemID, obj.IMTypeID, obj.InspectionType, obj.Coverage, obj.NDTMethod);
         }
         public void edit(INSPECTION_DETAIL_TECHNIQUE obj)
         {
@@ -27,6 +27,14 @@ namespace RBI.BUS.BUSMSSQL
         public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource()
         {
             return DAL.getDataSource();
+        }
+        public List<INSPECTION_DETAIL_TECHNIQUE> getDataSource(int CoverageID)
+        {
+            return DAL.getDataSource(CoverageID);
+        }
+        public void deletebyCoverageID(int CoverageID)
+        {
+            DAL.deletebyCoverageID(CoverageID);
         }
     }
 }

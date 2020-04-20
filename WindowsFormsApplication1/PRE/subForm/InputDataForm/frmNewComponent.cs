@@ -94,7 +94,7 @@ namespace RBI.PRE.subForm.InputDataForm
             int _equipmentTypeID = equipmentBus.getEqTypeID(ID);
             if (_equipmentTypeID == 11)
             {
-                string[] componentTypeName = { "Shell", "Tank Bottom" };
+                string[] componentTypeName = { "Fixed Roof","Floating Roof","Shell", "Tank Bottom" };
                 string[] APIcomp = { "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "TANKBOTTOM" };
                 cbComponentType.Properties.Items.Clear();
                 cbComponentType.Properties.Items.Add("", -1, -1);
@@ -192,18 +192,15 @@ namespace RBI.PRE.subForm.InputDataForm
             int _equipmentTypeID = equipmentBus.getEquipmentTypeID(_siteID, _facilityID);
             if (_equipmentTypeID == 11)
             {
-                string[] componentTypeName = { "Shell", "Tank Bottom" };
-                string[] APIcomp = { "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "TANKBOTTOM" };
+                string[] componentTypeName = { "Fixed Roof", "Floating Roof", "Shell", "Tank Bottom" };
+                
                 cbComponentType.Properties.Items.Clear();
                 for (int i = 0; i < componentTypeName.Length; i++)
                 {
                     cbComponentType.Properties.Items.Add(componentTypeName[i], i, i);
                 }
-                cbAPIComponentType.Properties.Items.Clear();
-                for (int i = 0; i < APIcomp.Length; i++)
-                {
-                    cbAPIComponentType.Properties.Items.Add(APIcomp[i], i, i);
-                }
+                
+               
             }
             else
             {
@@ -348,6 +345,34 @@ namespace RBI.PRE.subForm.InputDataForm
             else
             {
                 picComponentType.Show();
+            }
+        }
+
+        private void cbComponentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbAPIComponentType.Properties.Items.Clear();
+            string[] APIcomp = { "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "TANKBOTTOM" };
+            if (this.cbComponentType.SelectedItem.ToString() == "Shell")
+            {
+                cbAPIComponentType.Enabled = true;
+                picAPIComponent.Visible = true;
+                for (int i = 0; i < APIcomp.Length - 1; i++)
+                {
+                    cbAPIComponentType.Properties.Items.Add(APIcomp[i], i, i);
+                }
+
+            }
+            else if (this.cbComponentType.SelectedItem.ToString() == "Tank Bottom")
+            {
+                cbAPIComponentType.Enabled = true;
+                picAPIComponent.Visible = true;
+                cbAPIComponentType.Properties.Items.Add("TANKBOTTOM", 0, 0);
+            }
+            else
+            {
+
+                cbAPIComponentType.Enabled = false;
+                picAPIComponent.Visible = false;
             }
         }
     }

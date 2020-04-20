@@ -154,6 +154,7 @@ namespace RBI.DAL.MSSQL
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "select ComponentTypeName from rbi.dbo.COMPONENT_TYPE where ComponentTypeID = '"+typeID+"'";
+            Console.WriteLine("typeID" + typeID);
             try
             {
                 SqlCommand cmd = new SqlCommand();

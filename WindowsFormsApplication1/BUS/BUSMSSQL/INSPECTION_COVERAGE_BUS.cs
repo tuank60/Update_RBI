@@ -24,9 +24,25 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.delete(obj.ID);
         }
+        public void deletebyPlanID(int PlanID)//xoa du lieu tu PlanID
+        {
+            DAL.deletebyPlanID(PlanID);
+        }
         public List<INSPECTION_COVERAGE> getDataSource()
         {
             return DAL.getDataSource();
+        }
+        public List<INSPECTION_COVERAGE> getDataID(int PlanID)
+        {
+            return DAL.getDataID(PlanID);
+        }
+        public List<int> getIDbyPlanID(int PlanID)
+        {
+            return DAL.getIDbyPlanID(PlanID);//HaiK61
+        }
+        public int getIDbyEquipmentIDandComponentIDandPlanID(int EquipmentID,int ComponentID,int PlanID)
+        {
+            return DAL.getIDbyEquipmentIDandComponentID(EquipmentID, ComponentID, PlanID);//HaiK61
         }
 
     }
