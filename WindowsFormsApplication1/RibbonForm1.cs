@@ -2473,12 +2473,16 @@ namespace RBI
                 CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
                 CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
                 CA.ConcreteFoundation=caTank.ConcreteFoundation == 1 ? true : false;
+                CA.EnvironSensitivity = caTank.Environ_Sensitivity;//Thang them
+                CA.P_lvdike = caTank.P_lvdike;//Thang them
+                CA.P_offsite = caTank.P_offsite;//Thang them
+                CA.P_onsite = caTank.P_onsite;//Thang them
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
                 rwCATank.Hydraulic_Water = CA.k_h_water();
                 rwCATank.Hydraulic_Fluid = CA.k_h_prod();
                 rwCATank.Seepage_Velocity = CA.vel_s_prod();
-
+                rwCATank.Material_Factor = CA.MATERIAL_COST;//Thang them
                 rwCATank.Flow_Rate_D1 = float.IsNaN(CA.rate_n_tank_bottom(1)) ? 0 : CA.rate_n_tank_bottom(1);
                // Console.WriteLine("flow rate" + rwCATank.Flow_Rate_D1 + " " + CA.rate_n_tank_bottom(1));
                 rwCATank.Flow_Rate_D4 = float.IsNaN(CA.rate_n_tank_bottom(4)) ? 0 : CA.rate_n_tank_bottom(4);

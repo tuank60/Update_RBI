@@ -12,6 +12,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 {
     class MSSQL_CA_CAL
     {
+       
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
         public float MATERIAL_COST { set; get; }
@@ -1138,11 +1139,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float Swg { set; get; } //total distance to the ground water underneath the tank
         private float uw =  1.002f;// Hai sua // trc day =0.9f; //tra bang tren internet tai 27C
         private float pw = 1000;//Hai sua //trc day = 0.996621f; // kg/m3
+       
 
         //STEP 1: Determine Release Rate and Volum
         private int n_rh()
         {
-           // Console.WriteLine("TANK_DIAMETER=" + TANK_DIAMETER + " " + (int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0));
+           //Console.WriteLine("TANK_DIAMETER=" + TANK_DIAMETER + " " + (int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0));
             return Math.Max((int)Math.Round(Math.Pow(TANK_DIAMETER * 0.001f / DAL_CAL.GET_TBL_3B21(36), 2), 0), 1);
         }
         private float[] k_h_bottom()
@@ -1160,7 +1162,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 k_h[1] = 0.001f;
                 k_h[2] = 0.33f;
             }
-            else if (Soil_type == "Very Fine Sand")
+            else if (Soil_type == "Very Fane Sand")
             {
                 k_h[0] = (float)Math.Pow(10, -3);
                 k_h[1] = (float)Math.Pow(10, -5);
@@ -1312,8 +1314,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float Bbl_leak_groundwater(int n)
         {
-            if (t_gl_bottom() > t_ld_tank_bottom())
-                return Bbl_leak_n_bottom(n) * ((t_gl_bottom() - t_ld_tank_bottom()) / t_gl_bottom());
+            if (t_gl_bottom() < t_ld_tank_bottom())
+                return Bbl_leak_n_bottom(n) * ((t_ld_tank_bottom()-t_gl_bottom()) / t_ld_tank_bottom());
             else
                 return 0;
         }
@@ -1332,13 +1334,19 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float Bbl_rupture_release_bottom()
         {
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
-            float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2) * FLUID_HEIGHT) / (4 );
-            return (Bbl_total_tank_bottom * obj.GFFRupture) / obj.GFFTotal;
+
+            // float Bbl_total_tank_bottom = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2) * FLUID_HEIGHT) / (4 );
+            //return (Bbl_total_tank_bottom * obj.GFFRupture) / obj.GFFTotal;
+            return (BBL_TOTAL_TANKBOTTOM()* obj.GFFRupture) / obj.GFFTotal;
+            
         }
         public float Bbl_rupture_indike_bottom()
         {
-            float indike =  Bbl_rupture_release_bottom() * (1 - P_lvdike / 100);
+            
+            float indike = Bbl_rupture_release_bottom() * (1 - P_lvdike / 100);
             return indike > 0 ? indike : 0;
+            
+          
         }
         public float Bbl_rupture_ssonsite_bottom()
         {
@@ -1359,6 +1367,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             int[] cost = getCost();
             return Bbl_rupture_indike_bottom() * cost[0] + Bbl_rupture_ssonsite_bottom() * cost[1] + Bbl_rupture_ssoffsite_bottom() * cost[2] + Bbl_rupture_water_bottom() * cost[5];
+           
         }
         public float FC_environ_bottom()
         {
@@ -1368,12 +1377,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             float sum = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
-            sum = (float)(obj.GFFSmall * obj.HoleCostSmall + obj.GFFMedium * obj.HoleCostMedium + obj.GFFLarge * obj.HoleCostLarge + obj.HoleCostRupture * Math.Pow(TANK_DIAMETER * 0.001f / DAL_CAL.GET_TBL_3B21(36), 2));
-            return sum * MATERIAL_COST / obj.GFFTotal;
+            sum = (float)(obj.GFFSmall * obj.HoleCostSmall + obj.GFFMedium * obj.HoleCostMedium + obj.GFFLarge * obj.HoleCostLarge + obj.GFFRupture * obj.HoleCostRupture * Math.Pow((TANK_DIAMETER * 0.001f / DAL_CAL.GET_TBL_3B21(36)), 2));
+            return sum* MATERIAL_COST / obj.GFFTotal;
+            
         }
         public double FC_total_bottom()
         {
             return FC_environ_bottom() + FC_cmd_bottom() + FC_PROD_SHELL();
         }
+       
     }
 }

@@ -168,10 +168,13 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbLeakDurationD1.Text = caTank.Leak_Duration_D1.ToString();
             tbLeakDurationD4.Text = caTank.Leak_Duration_D4.ToString();
             tbRealeaseVolumeFromLeakageD1.Text = caTank.Release_Volume_Leak_D1.ToString();
+            //MessageBox.Show(caTank.Release_Volume_Leak_D1.ToString());
+            // MessageBox.Show(caTank.FC_Environ_Rupture.ToString());
             tbRealeaseVolumeFromLeakageD4.Text = caTank.Release_Volume_Leak_D4.ToString();
             tbReleaseVolumeFromRuptureD1.Text = caTank.Release_Volume_Rupture_D1.ToString();
             tbReleaseVolumeFromRuptureD4.Text = caTank.Release_Volume_Rupture_D4.ToString();
             tbTimeToInitiate.Text = caTank.Time_Leak_Ground.ToString();
+           // MessageBox.Show(caTank.Time_Leak_Ground.ToString());
             tbVolumeSubsoilFromLeakageD1.Text = caTank.Volume_SubSoil_Leak_D1.ToString();
             tbVolumeSubsoilFromLeakageD4.Text = caTank.Volume_SubSoil_Leak_D4.ToString();
             tbVolumeGroundWaterFromLeakageD1.Text = caTank.Volume_Ground_Water_Leak_D1.ToString();
@@ -184,11 +187,9 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbFC_Env_Leakage.Text = caTank.FC_Environ_Leak.ToString();
             tbFC_Env_Rupture.Text = caTank.FC_Environ_Rupture.ToString();
             tbMaterialFactor.Text = caTank.Material_Factor.ToString();
-
             tbTotalCost.Text = caTank.FC_Environ.ToString();
             tbComponentDamageCost.Text = caTank.Component_Damage_Cost.ToString();
             tbCostOfBusinessInterruption.Text = caTank.Business_Cost.ToString();
-
             tbTotalConsequence.Text = caTank.Consequence.ToString();
             tbConsequenceCategory.Text = caTank.ConsequenceCategory;
         }

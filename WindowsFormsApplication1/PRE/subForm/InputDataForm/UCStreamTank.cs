@@ -123,11 +123,12 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             RW_INPUT_CA_TANK tank = new RW_INPUT_CA_TANK();
             tank.ID = ID;
-            tank.P_lvdike = txtPercentageLeavingDike.Text != "" ? float.Parse(txtPercentageLeavingDike.Text) : 0;
-            tank.P_offsite = txtPercentageFluidGoingOffsite.Text != "" ? float.Parse(txtPercentageFluidGoingOffsite.Text) : 0;
-            tank.P_onsite = txtPercentageLeavingRemainsOnSite.Text != "" ? float.Parse(txtPercentageLeavingRemainsOnSite.Text) : 0;
+            tank.P_lvdike = txtPercentageLeavingDike.Text != "" ? float.Parse(txtPercentageLeavingDike.Text) : 9;
+            tank.P_offsite = txtPercentageFluidGoingOffsite.Text != "" ? float.Parse(txtPercentageFluidGoingOffsite.Text) : 9;
+            tank.P_onsite = txtPercentageLeavingRemainsOnSite.Text != "" ? float.Parse(txtPercentageLeavingRemainsOnSite.Text) : 9;
             tank.FLUID_HEIGHT = txtFluidHeight.Text != "" ? float.Parse(txtFluidHeight.Text) : 0;
             tank.TANK_FLUID = txbModelFluid.Text;
+            //MessageBox.Show(tank.FLUID_HEIGHT.ToString());
             //Console.WriteLine("tank height" + tank.FLUID_HEIGHT);
             if (tank.TANK_FLUID == "Gasoline")
                 tank.API_FLUID = "C6-C8";
@@ -141,7 +142,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 tank.API_FLUID = "C25+";
             return tank;
         }
-        public RW_INPUT_CA_TANK getDataCATank()
+       /* public RW_INPUT_CA_TANK getDataCATank()
         {
             RW_INPUT_CA_TANK ca = new RW_INPUT_CA_TANK();
             ca.ID = 1;
@@ -151,7 +152,7 @@ namespace RBI.PRE.subForm.InputDataForm
             ca.P_onsite = txtPercentageLeavingRemainsOnSite.Text != "" ? float.Parse(txtPercentageLeavingRemainsOnSite.Text) : 0;
             ca.P_offsite = txtPercentageFluidGoingOffsite.Text != "" ? float.Parse(txtPercentageFluidGoingOffsite.Text) : 0;
             return ca;
-        }
+        }*/
         //private void addItemsTankFluid()
         //{
         //    cbFluidTank.Properties.Items.Add("", -1, -1);
