@@ -138,6 +138,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankBottom.PageVisible = true;
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = false;
+                tabCATankShell.PageVisible = false;
             }
             else if (compTypeID == 8)
             {
@@ -145,6 +146,15 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCA.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
                 tabCAShell.PageVisible = true;
+                tabCATankShell.PageVisible = false;
+            }
+            else if (compTypeID == 13)
+            {
+                initData_Shell(ID);
+                tabCA.PageVisible = false;
+                tabCATankBottom.PageVisible = false;
+                tabCAShell.PageVisible = true;
+                tabCATankShell.PageVisible = true;
             }
             else
             {
@@ -153,6 +163,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankBottom.PageVisible = false;
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = true;
+                tabCATankShell.PageVisible = false;
             }
         }
 
@@ -419,5 +430,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lblRHP.Text = "▼ Release Holes Properties";
             }
         }
+
+       
     }
 }

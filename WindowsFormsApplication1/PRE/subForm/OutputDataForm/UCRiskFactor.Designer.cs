@@ -289,6 +289,20 @@
             this.tbTotalConsequence = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
             this.tbConsequenceCategory = new System.Windows.Forms.TextBox();
+            this.tabCATankShell = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.label196 = new System.Windows.Forms.Label();
+            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.label197 = new System.Windows.Forms.Label();
+            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.label198 = new System.Windows.Forms.Label();
+            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.label199 = new System.Windows.Forms.Label();
+            this.label200 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
             this.xtraSemiPoF = new DevExpress.XtraTab.XtraTabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelLF4567 = new System.Windows.Forms.Panel();
@@ -459,6 +473,98 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.xtraUserControl11 = new RBI.XtraUserControl1();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label193 = new System.Windows.Forms.Label();
+            this.label194 = new System.Windows.Forms.Label();
+            this.label195 = new System.Windows.Forms.Label();
+            this.textBox59 = new System.Windows.Forms.TextBox();
+            this.label201 = new System.Windows.Forms.Label();
+            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label202 = new System.Windows.Forms.Label();
+            this.label203 = new System.Windows.Forms.Label();
+            this.label204 = new System.Windows.Forms.Label();
+            this.label205 = new System.Windows.Forms.Label();
+            this.label206 = new System.Windows.Forms.Label();
+            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.label207 = new System.Windows.Forms.Label();
+            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.label208 = new System.Windows.Forms.Label();
+            this.textBox68 = new System.Windows.Forms.TextBox();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit11 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
+            this.label209 = new System.Windows.Forms.Label();
+            this.label210 = new System.Windows.Forms.Label();
+            this.label211 = new System.Windows.Forms.Label();
+            this.label212 = new System.Windows.Forms.Label();
+            this.label213 = new System.Windows.Forms.Label();
+            this.label214 = new System.Windows.Forms.Label();
+            this.label215 = new System.Windows.Forms.Label();
+            this.label216 = new System.Windows.Forms.Label();
+            this.label217 = new System.Windows.Forms.Label();
+            this.label218 = new System.Windows.Forms.Label();
+            this.label219 = new System.Windows.Forms.Label();
+            this.label220 = new System.Windows.Forms.Label();
+            this.label221 = new System.Windows.Forms.Label();
+            this.label222 = new System.Windows.Forms.Label();
+            this.label223 = new System.Windows.Forms.Label();
+            this.label224 = new System.Windows.Forms.Label();
+            this.label225 = new System.Windows.Forms.Label();
+            this.label226 = new System.Windows.Forms.Label();
+            this.label227 = new System.Windows.Forms.Label();
+            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.label228 = new System.Windows.Forms.Label();
+            this.textBox70 = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label229 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label230 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label231 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label232 = new System.Windows.Forms.Label();
+            this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit18 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit19 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit20 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit21 = new DevExpress.XtraEditors.TextEdit();
+            this.label233 = new System.Windows.Forms.Label();
+            this.label234 = new System.Windows.Forms.Label();
+            this.label235 = new System.Windows.Forms.Label();
+            this.label236 = new System.Windows.Forms.Label();
+            this.label237 = new System.Windows.Forms.Label();
+            this.label238 = new System.Windows.Forms.Label();
+            this.textEdit22 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit23 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit24 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit25 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit26 = new DevExpress.XtraEditors.TextEdit();
+            this.label239 = new System.Windows.Forms.Label();
+            this.label240 = new System.Windows.Forms.Label();
+            this.label241 = new System.Windows.Forms.Label();
+            this.textEdit27 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit28 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit29 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit30 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit31 = new DevExpress.XtraEditors.TextEdit();
+            this.label242 = new System.Windows.Forms.Label();
+            this.label243 = new System.Windows.Forms.Label();
+            this.label244 = new System.Windows.Forms.Label();
+            this.label245 = new System.Windows.Forms.Label();
+            this.label246 = new System.Windows.Forms.Label();
+            this.textEdit32 = new DevExpress.XtraEditors.TextEdit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -545,6 +651,9 @@
             this.pnlFinancialConsequence.SuspendLayout();
             this.pnlIntermediateValues.SuspendLayout();
             this.pnlFinancialCoF.SuspendLayout();
+            this.tabCATankShell.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.xtraSemiPoF.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panelLF4567.SuspendLayout();
@@ -560,6 +669,42 @@
             this.panelFQF.SuspendLayout();
             this.panelInput.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit26.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit27.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit28.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit29.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit30.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit31.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit32.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -587,6 +732,7 @@
             this.tabCA,
             this.tabCAShell,
             this.tabCATankBottom,
+            this.tabCATankShell,
             this.xtraSemiPoF,
             this.xtraTabPage1});
             // 
@@ -594,7 +740,7 @@
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(957, 1309);
+            this.tabPoF.Size = new System.Drawing.Size(961, 1312);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -1336,7 +1482,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(957, 1309);
+            this.tabCA.Size = new System.Drawing.Size(961, 1312);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -1749,7 +1895,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(957, 1309);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 1312);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -1821,7 +1967,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(957, 1309);
+            this.groupBox7.Size = new System.Drawing.Size(961, 1312);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -2489,7 +2635,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(957, 1309);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1312);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -2501,7 +2647,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(957, 1309);
+            this.groupBox6.Size = new System.Drawing.Size(961, 1312);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -3402,11 +3548,155 @@
             this.tbConsequenceCategory.Size = new System.Drawing.Size(100, 21);
             this.tbConsequenceCategory.TabIndex = 35;
             // 
+            // tabCATankShell
+            // 
+            this.tabCATankShell.Controls.Add(this.groupBox8);
+            this.tabCATankShell.Name = "tabCATankShell";
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankShell.Text = "Financial COF";
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.panel7);
+            this.groupBox8.Controls.Add(this.panel6);
+            this.groupBox8.Controls.Add(this.panel5);
+            this.groupBox8.Controls.Add(this.panel4);
+            this.groupBox8.Controls.Add(this.panel3);
+            this.groupBox8.Controls.Add(this.panel2);
+            this.groupBox8.Controls.Add(this.panel1);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.groupBox8.Location = new System.Drawing.Point(0, 0);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox8.TabIndex = 0;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.textBox61);
+            this.panel1.Controls.Add(this.textBox62);
+            this.panel1.Controls.Add(this.label196);
+            this.panel1.Controls.Add(this.textBox63);
+            this.panel1.Controls.Add(this.label197);
+            this.panel1.Controls.Add(this.textBox64);
+            this.panel1.Controls.Add(this.label198);
+            this.panel1.Controls.Add(this.textBox65);
+            this.panel1.Controls.Add(this.label199);
+            this.panel1.Controls.Add(this.label200);
+            this.panel1.Controls.Add(this.label192);
+            this.panel1.Location = new System.Drawing.Point(15, 20);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(940, 180);
+            this.panel1.TabIndex = 0;
+            // 
+            // textBox61
+            // 
+            this.textBox61.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox61.Location = new System.Drawing.Point(427, 32);
+            this.textBox61.Name = "textBox61";
+            this.textBox61.Size = new System.Drawing.Size(182, 22);
+            this.textBox61.TabIndex = 2;
+            // 
+            // textBox62
+            // 
+            this.textBox62.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox62.Location = new System.Drawing.Point(427, 143);
+            this.textBox62.Name = "textBox62";
+            this.textBox62.Size = new System.Drawing.Size(182, 22);
+            this.textBox62.TabIndex = 10;
+            // 
+            // label196
+            // 
+            this.label196.AutoSize = true;
+            this.label196.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label196.Location = new System.Drawing.Point(22, 35);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(276, 14);
+            this.label196.TabIndex = 1;
+            this.label196.Text = "The unit replacement cost for component, $/m2";
+            // 
+            // textBox63
+            // 
+            this.textBox63.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox63.Location = new System.Drawing.Point(427, 115);
+            this.textBox63.Name = "textBox63";
+            this.textBox63.Size = new System.Drawing.Size(182, 22);
+            this.textBox63.TabIndex = 8;
+            // 
+            // label197
+            // 
+            this.label197.AutoSize = true;
+            this.label197.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label197.Location = new System.Drawing.Point(22, 146);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(327, 14);
+            this.label197.TabIndex = 9;
+            this.label197.Text = "Cost associated with serious injury of fatality of personal, $";
+            // 
+            // textBox64
+            // 
+            this.textBox64.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox64.Location = new System.Drawing.Point(427, 87);
+            this.textBox64.Name = "textBox64";
+            this.textBox64.Size = new System.Drawing.Size(182, 22);
+            this.textBox64.TabIndex = 6;
+            // 
+            // label198
+            // 
+            this.label198.AutoSize = true;
+            this.label198.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label198.Location = new System.Drawing.Point(22, 118);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(384, 14);
+            this.label198.TabIndex = 7;
+            this.label198.Text = "Population density of personal or employees in the unit, personal/m2";
+            // 
+            // textBox65
+            // 
+            this.textBox65.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox65.Location = new System.Drawing.Point(427, 61);
+            this.textBox65.Name = "textBox65";
+            this.textBox65.Size = new System.Drawing.Size(182, 22);
+            this.textBox65.TabIndex = 4;
+            // 
+            // label199
+            // 
+            this.label199.AutoSize = true;
+            this.label199.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label199.Location = new System.Drawing.Point(22, 90);
+            this.label199.Name = "label199";
+            this.label199.Size = new System.Drawing.Size(384, 14);
+            this.label199.TabIndex = 5;
+            this.label199.Text = "Cost of lost production due to downtime to repair equipment, $/day";
+            // 
+            // label200
+            // 
+            this.label200.AutoSize = true;
+            this.label200.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label200.Location = new System.Drawing.Point(22, 64);
+            this.label200.Name = "label200";
+            this.label200.Size = new System.Drawing.Size(162, 14);
+            this.label200.TabIndex = 3;
+            this.label200.Text = "Equipment Outage Multiplier";
+            // 
+            // label192
+            // 
+            this.label192.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label192.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label192.ForeColor = System.Drawing.Color.White;
+            this.label192.Location = new System.Drawing.Point(0, 0);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(940, 17);
+            this.label192.TabIndex = 0;
+            this.label192.Text = "▼ Input";
+            // 
             // xtraSemiPoF
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(957, 1309);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1312);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -3667,7 +3957,7 @@
             this.xtraTabPage1.Controls.Add(this.groupBoxIV);
             this.xtraTabPage1.Controls.Add(this.groupBox3);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(957, 1309);
+            this.xtraTabPage1.Size = new System.Drawing.Size(961, 1312);
             this.xtraTabPage1.Text = "Area-based CoF";
             // 
             // groupBoxIV
@@ -5067,6 +5357,1022 @@
             this.xtraUserControl11.Size = new System.Drawing.Size(150, 150);
             this.xtraUserControl11.TabIndex = 4;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label194);
+            this.panel2.Controls.Add(this.label195);
+            this.panel2.Controls.Add(this.textBox59);
+            this.panel2.Controls.Add(this.label201);
+            this.panel2.Controls.Add(this.textBox60);
+            this.panel2.Controls.Add(this.label193);
+            this.panel2.Location = new System.Drawing.Point(11, 219);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(943, 91);
+            this.panel2.TabIndex = 1;
+            // 
+            // label193
+            // 
+            this.label193.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label193.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label193.ForeColor = System.Drawing.Color.White;
+            this.label193.Location = new System.Drawing.Point(0, 0);
+            this.label193.Name = "label193";
+            this.label193.Size = new System.Drawing.Size(943, 17);
+            this.label193.TabIndex = 0;
+            this.label193.Text = "▼ Fully-Quantitative Financial Consequence of Failure and Category";
+            // 
+            // label194
+            // 
+            this.label194.AutoSize = true;
+            this.label194.Location = new System.Drawing.Point(461, 35);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(15, 15);
+            this.label194.TabIndex = 3;
+            this.label194.Text = "$";
+            // 
+            // label195
+            // 
+            this.label195.AutoSize = true;
+            this.label195.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label195.Location = new System.Drawing.Point(26, 32);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(166, 15);
+            this.label195.TabIndex = 1;
+            this.label195.Text = "The total consequence (US$)";
+            // 
+            // textBox59
+            // 
+            this.textBox59.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox59.Location = new System.Drawing.Point(355, 32);
+            this.textBox59.Name = "textBox59";
+            this.textBox59.Size = new System.Drawing.Size(100, 21);
+            this.textBox59.TabIndex = 2;
+            // 
+            // label201
+            // 
+            this.label201.AutoSize = true;
+            this.label201.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label201.Location = new System.Drawing.Point(26, 59);
+            this.label201.Name = "label201";
+            this.label201.Size = new System.Drawing.Size(134, 15);
+            this.label201.TabIndex = 4;
+            this.label201.Text = "Consequence Category";
+            // 
+            // textBox60
+            // 
+            this.textBox60.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox60.Location = new System.Drawing.Point(355, 59);
+            this.textBox60.Name = "textBox60";
+            this.textBox60.Size = new System.Drawing.Size(100, 21);
+            this.textBox60.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label225);
+            this.panel3.Controls.Add(this.label226);
+            this.panel3.Controls.Add(this.label227);
+            this.panel3.Controls.Add(this.textBox69);
+            this.panel3.Controls.Add(this.label228);
+            this.panel3.Controls.Add(this.textBox70);
+            this.panel3.Controls.Add(this.textEdit3);
+            this.panel3.Controls.Add(this.textEdit4);
+            this.panel3.Controls.Add(this.textEdit5);
+            this.panel3.Controls.Add(this.textEdit6);
+            this.panel3.Controls.Add(this.textEdit7);
+            this.panel3.Controls.Add(this.textEdit8);
+            this.panel3.Controls.Add(this.textEdit9);
+            this.panel3.Controls.Add(this.textEdit10);
+            this.panel3.Controls.Add(this.textEdit11);
+            this.panel3.Controls.Add(this.textEdit12);
+            this.panel3.Controls.Add(this.textEdit13);
+            this.panel3.Controls.Add(this.textEdit14);
+            this.panel3.Controls.Add(this.textEdit15);
+            this.panel3.Controls.Add(this.label209);
+            this.panel3.Controls.Add(this.label210);
+            this.panel3.Controls.Add(this.label211);
+            this.panel3.Controls.Add(this.label212);
+            this.panel3.Controls.Add(this.label213);
+            this.panel3.Controls.Add(this.label214);
+            this.panel3.Controls.Add(this.label215);
+            this.panel3.Controls.Add(this.label216);
+            this.panel3.Controls.Add(this.label217);
+            this.panel3.Controls.Add(this.label218);
+            this.panel3.Controls.Add(this.label219);
+            this.panel3.Controls.Add(this.label220);
+            this.panel3.Controls.Add(this.label221);
+            this.panel3.Controls.Add(this.label222);
+            this.panel3.Controls.Add(this.label223);
+            this.panel3.Controls.Add(this.label224);
+            this.panel3.Controls.Add(this.label203);
+            this.panel3.Controls.Add(this.label204);
+            this.panel3.Controls.Add(this.label205);
+            this.panel3.Controls.Add(this.label206);
+            this.panel3.Controls.Add(this.textBox66);
+            this.panel3.Controls.Add(this.label207);
+            this.panel3.Controls.Add(this.textBox67);
+            this.panel3.Controls.Add(this.label208);
+            this.panel3.Controls.Add(this.textBox68);
+            this.panel3.Controls.Add(this.label202);
+            this.panel3.Location = new System.Drawing.Point(11, 326);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(947, 272);
+            this.panel3.TabIndex = 2;
+            // 
+            // label202
+            // 
+            this.label202.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label202.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label202.ForeColor = System.Drawing.Color.White;
+            this.label202.Location = new System.Drawing.Point(0, 0);
+            this.label202.Name = "label202";
+            this.label202.Size = new System.Drawing.Size(947, 17);
+            this.label202.TabIndex = 0;
+            this.label202.Text = "▼ Intermediate Values";
+            // 
+            // label203
+            // 
+            this.label203.AutoSize = true;
+            this.label203.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label203.Location = new System.Drawing.Point(461, 83);
+            this.label203.Name = "label203";
+            this.label203.Size = new System.Drawing.Size(40, 15);
+            this.label203.TabIndex = 9;
+            this.label203.Text = "m/day";
+            // 
+            // label204
+            // 
+            this.label204.AutoSize = true;
+            this.label204.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label204.Location = new System.Drawing.Point(461, 57);
+            this.label204.Name = "label204";
+            this.label204.Size = new System.Drawing.Size(40, 15);
+            this.label204.TabIndex = 6;
+            this.label204.Text = "m/day";
+            // 
+            // label205
+            // 
+            this.label205.AutoSize = true;
+            this.label205.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label205.Location = new System.Drawing.Point(461, 32);
+            this.label205.Name = "label205";
+            this.label205.Size = new System.Drawing.Size(40, 15);
+            this.label205.TabIndex = 3;
+            this.label205.Text = "m/day";
+            // 
+            // label206
+            // 
+            this.label206.AutoSize = true;
+            this.label206.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label206.Location = new System.Drawing.Point(26, 32);
+            this.label206.Name = "label206";
+            this.label206.Size = new System.Drawing.Size(239, 15);
+            this.label206.TabIndex = 1;
+            this.label206.Text = "The hydraulic conductivity for water (m/day)";
+            // 
+            // textBox66
+            // 
+            this.textBox66.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox66.Location = new System.Drawing.Point(355, 29);
+            this.textBox66.Name = "textBox66";
+            this.textBox66.Size = new System.Drawing.Size(100, 21);
+            this.textBox66.TabIndex = 2;
+            // 
+            // label207
+            // 
+            this.label207.AutoSize = true;
+            this.label207.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label207.Location = new System.Drawing.Point(26, 57);
+            this.label207.Name = "label207";
+            this.label207.Size = new System.Drawing.Size(232, 15);
+            this.label207.TabIndex = 4;
+            this.label207.Text = "The hydraulic conductivity for fluid (m/day)";
+            // 
+            // textBox67
+            // 
+            this.textBox67.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox67.Location = new System.Drawing.Point(355, 54);
+            this.textBox67.Name = "textBox67";
+            this.textBox67.Size = new System.Drawing.Size(100, 21);
+            this.textBox67.TabIndex = 5;
+            // 
+            // label208
+            // 
+            this.label208.AutoSize = true;
+            this.label208.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label208.Location = new System.Drawing.Point(26, 83);
+            this.label208.Name = "label208";
+            this.label208.Size = new System.Drawing.Size(209, 15);
+            this.label208.TabIndex = 7;
+            this.label208.Text = "The product seepage velocity (m/day)";
+            // 
+            // textBox68
+            // 
+            this.textBox68.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox68.Location = new System.Drawing.Point(355, 80);
+            this.textBox68.Name = "textBox68";
+            this.textBox68.Size = new System.Drawing.Size(100, 21);
+            this.textBox68.TabIndex = 8;
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Location = new System.Drawing.Point(808, 214);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit3.Properties.Appearance.Options.UseFont = true;
+            this.textEdit3.Size = new System.Drawing.Size(100, 22);
+            this.textEdit3.TabIndex = 42;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(808, 186);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit4.Properties.Appearance.Options.UseFont = true;
+            this.textEdit4.Size = new System.Drawing.Size(100, 22);
+            this.textEdit4.TabIndex = 33;
+            // 
+            // textEdit5
+            // 
+            this.textEdit5.Location = new System.Drawing.Point(808, 107);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit5.Properties.Appearance.Options.UseFont = true;
+            this.textEdit5.Size = new System.Drawing.Size(100, 22);
+            this.textEdit5.TabIndex = 18;
+            // 
+            // textEdit6
+            // 
+            this.textEdit6.Location = new System.Drawing.Point(658, 214);
+            this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit6.Properties.Appearance.Options.UseFont = true;
+            this.textEdit6.Size = new System.Drawing.Size(100, 22);
+            this.textEdit6.TabIndex = 40;
+            // 
+            // textEdit7
+            // 
+            this.textEdit7.Location = new System.Drawing.Point(658, 186);
+            this.textEdit7.Name = "textEdit7";
+            this.textEdit7.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit7.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit7.Properties.Appearance.Options.UseFont = true;
+            this.textEdit7.Size = new System.Drawing.Size(100, 22);
+            this.textEdit7.TabIndex = 31;
+            // 
+            // textEdit8
+            // 
+            this.textEdit8.Location = new System.Drawing.Point(658, 107);
+            this.textEdit8.Name = "textEdit8";
+            this.textEdit8.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit8.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit8.Properties.Appearance.Options.UseFont = true;
+            this.textEdit8.Size = new System.Drawing.Size(100, 22);
+            this.textEdit8.TabIndex = 16;
+            // 
+            // textEdit9
+            // 
+            this.textEdit9.Location = new System.Drawing.Point(507, 214);
+            this.textEdit9.Name = "textEdit9";
+            this.textEdit9.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit9.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit9.Properties.Appearance.Options.UseFont = true;
+            this.textEdit9.Size = new System.Drawing.Size(100, 22);
+            this.textEdit9.TabIndex = 38;
+            // 
+            // textEdit10
+            // 
+            this.textEdit10.Location = new System.Drawing.Point(507, 186);
+            this.textEdit10.Name = "textEdit10";
+            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit10.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit10.Properties.Appearance.Options.UseFont = true;
+            this.textEdit10.Size = new System.Drawing.Size(100, 22);
+            this.textEdit10.TabIndex = 29;
+            // 
+            // textEdit11
+            // 
+            this.textEdit11.Location = new System.Drawing.Point(507, 107);
+            this.textEdit11.Name = "textEdit11";
+            this.textEdit11.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit11.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit11.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit11.Properties.Appearance.Options.UseFont = true;
+            this.textEdit11.Size = new System.Drawing.Size(100, 22);
+            this.textEdit11.TabIndex = 14;
+            // 
+            // textEdit12
+            // 
+            this.textEdit12.Location = new System.Drawing.Point(355, 242);
+            this.textEdit12.Name = "textEdit12";
+            this.textEdit12.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit12.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit12.Properties.Appearance.Options.UseFont = true;
+            this.textEdit12.Size = new System.Drawing.Size(100, 22);
+            this.textEdit12.TabIndex = 44;
+            // 
+            // textEdit13
+            // 
+            this.textEdit13.Location = new System.Drawing.Point(355, 214);
+            this.textEdit13.Name = "textEdit13";
+            this.textEdit13.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit13.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit13.Properties.Appearance.Options.UseFont = true;
+            this.textEdit13.Size = new System.Drawing.Size(100, 22);
+            this.textEdit13.TabIndex = 36;
+            // 
+            // textEdit14
+            // 
+            this.textEdit14.Location = new System.Drawing.Point(355, 186);
+            this.textEdit14.Name = "textEdit14";
+            this.textEdit14.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit14.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit14.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit14.Properties.Appearance.Options.UseFont = true;
+            this.textEdit14.Size = new System.Drawing.Size(100, 22);
+            this.textEdit14.TabIndex = 27;
+            // 
+            // textEdit15
+            // 
+            this.textEdit15.Location = new System.Drawing.Point(355, 107);
+            this.textEdit15.Name = "textEdit15";
+            this.textEdit15.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit15.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit15.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit15.Properties.Appearance.Options.UseFont = true;
+            this.textEdit15.Size = new System.Drawing.Size(100, 22);
+            this.textEdit15.TabIndex = 12;
+            // 
+            // label209
+            // 
+            this.label209.AutoSize = true;
+            this.label209.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label209.Location = new System.Drawing.Point(773, 109);
+            this.label209.Name = "label209";
+            this.label209.Size = new System.Drawing.Size(29, 15);
+            this.label209.TabIndex = 17;
+            this.label209.Text = "D4 :";
+            // 
+            // label210
+            // 
+            this.label210.AutoSize = true;
+            this.label210.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label210.Location = new System.Drawing.Point(773, 187);
+            this.label210.Name = "label210";
+            this.label210.Size = new System.Drawing.Size(29, 15);
+            this.label210.TabIndex = 32;
+            this.label210.Text = "D4 :";
+            // 
+            // label211
+            // 
+            this.label211.AutoSize = true;
+            this.label211.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label211.Location = new System.Drawing.Point(623, 214);
+            this.label211.Name = "label211";
+            this.label211.Size = new System.Drawing.Size(29, 15);
+            this.label211.TabIndex = 39;
+            this.label211.Text = "D3 :";
+            // 
+            // label212
+            // 
+            this.label212.AutoSize = true;
+            this.label212.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label212.Location = new System.Drawing.Point(623, 187);
+            this.label212.Name = "label212";
+            this.label212.Size = new System.Drawing.Size(29, 15);
+            this.label212.TabIndex = 30;
+            this.label212.Text = "D3 :";
+            // 
+            // label213
+            // 
+            this.label213.AutoSize = true;
+            this.label213.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label213.Location = new System.Drawing.Point(623, 109);
+            this.label213.Name = "label213";
+            this.label213.Size = new System.Drawing.Size(29, 15);
+            this.label213.TabIndex = 15;
+            this.label213.Text = "D3 :";
+            // 
+            // label214
+            // 
+            this.label214.AutoSize = true;
+            this.label214.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label214.Location = new System.Drawing.Point(472, 214);
+            this.label214.Name = "label214";
+            this.label214.Size = new System.Drawing.Size(29, 15);
+            this.label214.TabIndex = 37;
+            this.label214.Text = "D2 :";
+            // 
+            // label215
+            // 
+            this.label215.AutoSize = true;
+            this.label215.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label215.Location = new System.Drawing.Point(472, 187);
+            this.label215.Name = "label215";
+            this.label215.Size = new System.Drawing.Size(29, 15);
+            this.label215.TabIndex = 28;
+            this.label215.Text = "D2 :";
+            // 
+            // label216
+            // 
+            this.label216.AutoSize = true;
+            this.label216.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label216.Location = new System.Drawing.Point(773, 214);
+            this.label216.Name = "label216";
+            this.label216.Size = new System.Drawing.Size(29, 15);
+            this.label216.TabIndex = 41;
+            this.label216.Text = "D4 :";
+            // 
+            // label217
+            // 
+            this.label217.AutoSize = true;
+            this.label217.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label217.Location = new System.Drawing.Point(472, 109);
+            this.label217.Name = "label217";
+            this.label217.Size = new System.Drawing.Size(29, 15);
+            this.label217.TabIndex = 13;
+            this.label217.Text = "D2 :";
+            // 
+            // label218
+            // 
+            this.label218.AutoSize = true;
+            this.label218.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label218.Location = new System.Drawing.Point(320, 214);
+            this.label218.Name = "label218";
+            this.label218.Size = new System.Drawing.Size(29, 15);
+            this.label218.TabIndex = 35;
+            this.label218.Text = "D1 :";
+            // 
+            // label219
+            // 
+            this.label219.AutoSize = true;
+            this.label219.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label219.Location = new System.Drawing.Point(320, 187);
+            this.label219.Name = "label219";
+            this.label219.Size = new System.Drawing.Size(29, 15);
+            this.label219.TabIndex = 26;
+            this.label219.Text = "D1 :";
+            // 
+            // label220
+            // 
+            this.label220.AutoSize = true;
+            this.label220.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label220.Location = new System.Drawing.Point(320, 109);
+            this.label220.Name = "label220";
+            this.label220.Size = new System.Drawing.Size(29, 15);
+            this.label220.TabIndex = 11;
+            this.label220.Text = "D1 :";
+            // 
+            // label221
+            // 
+            this.label221.AutoSize = true;
+            this.label221.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label221.Location = new System.Drawing.Point(26, 242);
+            this.label221.Name = "label221";
+            this.label221.Size = new System.Drawing.Size(215, 15);
+            this.label221.TabIndex = 43;
+            this.label221.Text = "Release volume from rupture (barrels)";
+            // 
+            // label222
+            // 
+            this.label222.AutoSize = true;
+            this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label222.Location = new System.Drawing.Point(26, 215);
+            this.label222.Name = "label222";
+            this.label222.Size = new System.Drawing.Size(220, 15);
+            this.label222.TabIndex = 34;
+            this.label222.Text = "Release volume from leakage (barrels)";
+            // 
+            // label223
+            // 
+            this.label223.AutoSize = true;
+            this.label223.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label223.Location = new System.Drawing.Point(26, 188);
+            this.label223.Name = "label223";
+            this.label223.Size = new System.Drawing.Size(112, 15);
+            this.label223.TabIndex = 25;
+            this.label223.Text = "Leak duration (day)";
+            // 
+            // label224
+            // 
+            this.label224.AutoSize = true;
+            this.label224.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label224.Location = new System.Drawing.Point(26, 110);
+            this.label224.Name = "label224";
+            this.label224.Size = new System.Drawing.Size(112, 15);
+            this.label224.TabIndex = 10;
+            this.label224.Text = "Flow Rate (bbl/day)";
+            // 
+            // label225
+            // 
+            this.label225.AutoSize = true;
+            this.label225.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label225.Location = new System.Drawing.Point(461, 161);
+            this.label225.Name = "label225";
+            this.label225.Size = new System.Drawing.Size(31, 15);
+            this.label225.TabIndex = 24;
+            this.label225.Text = "m^3";
+            // 
+            // label226
+            // 
+            this.label226.AutoSize = true;
+            this.label226.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label226.Location = new System.Drawing.Point(461, 136);
+            this.label226.Name = "label226";
+            this.label226.Size = new System.Drawing.Size(31, 15);
+            this.label226.TabIndex = 21;
+            this.label226.Text = "m^3";
+            // 
+            // label227
+            // 
+            this.label227.AutoSize = true;
+            this.label227.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label227.Location = new System.Drawing.Point(26, 136);
+            this.label227.Name = "label227";
+            this.label227.Size = new System.Drawing.Size(246, 15);
+            this.label227.TabIndex = 19;
+            this.label227.Text = "The liquid height above the shell in question";
+            // 
+            // textBox69
+            // 
+            this.textBox69.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox69.Location = new System.Drawing.Point(355, 133);
+            this.textBox69.Name = "textBox69";
+            this.textBox69.Size = new System.Drawing.Size(100, 21);
+            this.textBox69.TabIndex = 20;
+            // 
+            // label228
+            // 
+            this.label228.AutoSize = true;
+            this.label228.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label228.Location = new System.Drawing.Point(26, 161);
+            this.label228.Name = "label228";
+            this.label228.Size = new System.Drawing.Size(258, 15);
+            this.label228.TabIndex = 22;
+            this.label228.Text = "The volumn of fluid above the shell in question";
+            // 
+            // textBox70
+            // 
+            this.textBox70.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox70.Location = new System.Drawing.Point(355, 158);
+            this.textBox70.Name = "textBox70";
+            this.textBox70.Size = new System.Drawing.Size(100, 21);
+            this.textBox70.TabIndex = 23;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label229);
+            this.panel4.Location = new System.Drawing.Point(11, 623);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(943, 121);
+            this.panel4.TabIndex = 3;
+            // 
+            // label229
+            // 
+            this.label229.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label229.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label229.ForeColor = System.Drawing.Color.White;
+            this.label229.Location = new System.Drawing.Point(0, 0);
+            this.label229.Name = "label229";
+            this.label229.Size = new System.Drawing.Size(943, 17);
+            this.label229.TabIndex = 0;
+            this.label229.Text = "▼ Flammable Consequences";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label230);
+            this.panel5.Location = new System.Drawing.Point(11, 761);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(943, 47);
+            this.panel5.TabIndex = 4;
+            // 
+            // label230
+            // 
+            this.label230.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label230.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label230.ForeColor = System.Drawing.Color.White;
+            this.label230.Location = new System.Drawing.Point(0, 0);
+            this.label230.Name = "label230";
+            this.label230.Size = new System.Drawing.Size(943, 17);
+            this.label230.TabIndex = 0;
+            this.label230.Text = "▼ Toxic Consequences Area";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label231);
+            this.panel6.Location = new System.Drawing.Point(11, 834);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(943, 52);
+            this.panel6.TabIndex = 5;
+            // 
+            // label231
+            // 
+            this.label231.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label231.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label231.ForeColor = System.Drawing.Color.White;
+            this.label231.Location = new System.Drawing.Point(0, 0);
+            this.label231.Name = "label231";
+            this.label231.Size = new System.Drawing.Size(943, 17);
+            this.label231.TabIndex = 0;
+            this.label231.Text = "▼ Consequences Areas";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.textEdit27);
+            this.panel7.Controls.Add(this.textEdit28);
+            this.panel7.Controls.Add(this.textEdit29);
+            this.panel7.Controls.Add(this.textEdit30);
+            this.panel7.Controls.Add(this.textEdit31);
+            this.panel7.Controls.Add(this.label242);
+            this.panel7.Controls.Add(this.label243);
+            this.panel7.Controls.Add(this.label244);
+            this.panel7.Controls.Add(this.label245);
+            this.panel7.Controls.Add(this.label246);
+            this.panel7.Controls.Add(this.textEdit32);
+            this.panel7.Controls.Add(this.textEdit16);
+            this.panel7.Controls.Add(this.textEdit26);
+            this.panel7.Controls.Add(this.textEdit17);
+            this.panel7.Controls.Add(this.textEdit25);
+            this.panel7.Controls.Add(this.textEdit18);
+            this.panel7.Controls.Add(this.textEdit24);
+            this.panel7.Controls.Add(this.textEdit19);
+            this.panel7.Controls.Add(this.textEdit23);
+            this.panel7.Controls.Add(this.textEdit20);
+            this.panel7.Controls.Add(this.textEdit22);
+            this.panel7.Controls.Add(this.textEdit21);
+            this.panel7.Controls.Add(this.label233);
+            this.panel7.Controls.Add(this.label234);
+            this.panel7.Controls.Add(this.label235);
+            this.panel7.Controls.Add(this.label236);
+            this.panel7.Controls.Add(this.label237);
+            this.panel7.Controls.Add(this.label241);
+            this.panel7.Controls.Add(this.label240);
+            this.panel7.Controls.Add(this.label239);
+            this.panel7.Controls.Add(this.label238);
+            this.panel7.Controls.Add(this.label232);
+            this.panel7.Location = new System.Drawing.Point(11, 935);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(943, 371);
+            this.panel7.TabIndex = 6;
+            // 
+            // label232
+            // 
+            this.label232.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label232.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label232.ForeColor = System.Drawing.Color.White;
+            this.label232.Location = new System.Drawing.Point(0, 0);
+            this.label232.Name = "label232";
+            this.label232.Size = new System.Drawing.Size(943, 17);
+            this.label232.TabIndex = 0;
+            this.label232.Text = "▼ Financial Consequence";
+            // 
+            // textEdit16
+            // 
+            this.textEdit16.Location = new System.Drawing.Point(475, 188);
+            this.textEdit16.Name = "textEdit16";
+            this.textEdit16.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit16.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit16.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit16.Properties.Appearance.Options.UseFont = true;
+            this.textEdit16.Size = new System.Drawing.Size(85, 22);
+            this.textEdit16.TabIndex = 20;
+            // 
+            // textEdit17
+            // 
+            this.textEdit17.Location = new System.Drawing.Point(475, 160);
+            this.textEdit17.Name = "textEdit17";
+            this.textEdit17.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit17.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit17.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit17.Properties.Appearance.Options.UseFont = true;
+            this.textEdit17.Size = new System.Drawing.Size(85, 22);
+            this.textEdit17.TabIndex = 17;
+            // 
+            // textEdit18
+            // 
+            this.textEdit18.Location = new System.Drawing.Point(475, 132);
+            this.textEdit18.Name = "textEdit18";
+            this.textEdit18.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit18.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit18.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit18.Properties.Appearance.Options.UseFont = true;
+            this.textEdit18.Size = new System.Drawing.Size(85, 22);
+            this.textEdit18.TabIndex = 14;
+            // 
+            // textEdit19
+            // 
+            this.textEdit19.Location = new System.Drawing.Point(475, 104);
+            this.textEdit19.Name = "textEdit19";
+            this.textEdit19.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit19.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit19.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit19.Properties.Appearance.Options.UseFont = true;
+            this.textEdit19.Size = new System.Drawing.Size(85, 22);
+            this.textEdit19.TabIndex = 11;
+            // 
+            // textEdit20
+            // 
+            this.textEdit20.Location = new System.Drawing.Point(475, 76);
+            this.textEdit20.Name = "textEdit20";
+            this.textEdit20.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit20.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit20.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit20.Properties.Appearance.Options.UseFont = true;
+            this.textEdit20.Size = new System.Drawing.Size(85, 22);
+            this.textEdit20.TabIndex = 8;
+            // 
+            // textEdit21
+            // 
+            this.textEdit21.Location = new System.Drawing.Point(475, 48);
+            this.textEdit21.Name = "textEdit21";
+            this.textEdit21.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit21.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit21.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit21.Properties.Appearance.Options.UseFont = true;
+            this.textEdit21.Size = new System.Drawing.Size(85, 22);
+            this.textEdit21.TabIndex = 5;
+            // 
+            // label233
+            // 
+            this.label233.AutoSize = true;
+            this.label233.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label233.Location = new System.Drawing.Point(14, 190);
+            this.label233.Name = "label233";
+            this.label233.Size = new System.Drawing.Size(134, 15);
+            this.label233.TabIndex = 19;
+            this.label233.Text = "The environmental cost";
+            // 
+            // label234
+            // 
+            this.label234.AutoSize = true;
+            this.label234.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label234.Location = new System.Drawing.Point(14, 162);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(186, 15);
+            this.label234.TabIndex = 16;
+            this.label234.Text = "The financial environmental cost ";
+            // 
+            // label235
+            // 
+            this.label235.AutoSize = true;
+            this.label235.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label235.Location = new System.Drawing.Point(14, 134);
+            this.label235.Name = "label235";
+            this.label235.Size = new System.Drawing.Size(227, 15);
+            this.label235.TabIndex = 13;
+            this.label235.Text = "The total barrels of fluid that reach water ";
+            // 
+            // label236
+            // 
+            this.label236.AutoSize = true;
+            this.label236.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label236.Location = new System.Drawing.Point(14, 106);
+            this.label236.Name = "label236";
+            this.label236.Size = new System.Drawing.Size(274, 15);
+            this.label236.TabIndex = 10;
+            this.label236.Text = "The total barrels of fluid in the off-site surface soil ";
+            // 
+            // label237
+            // 
+            this.label237.AutoSize = true;
+            this.label237.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label237.Location = new System.Drawing.Point(14, 78);
+            this.label237.Name = "label237";
+            this.label237.Size = new System.Drawing.Size(275, 15);
+            this.label237.TabIndex = 7;
+            this.label237.Text = "The total barrels of fluid in the on-site surface soil ";
+            // 
+            // label238
+            // 
+            this.label238.AutoSize = true;
+            this.label238.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label238.Location = new System.Drawing.Point(14, 50);
+            this.label238.Name = "label238";
+            this.label238.Size = new System.Drawing.Size(218, 15);
+            this.label238.TabIndex = 4;
+            this.label238.Text = "The total barrels of fluid within the dike ";
+            // 
+            // textEdit22
+            // 
+            this.textEdit22.Location = new System.Drawing.Point(578, 48);
+            this.textEdit22.Name = "textEdit22";
+            this.textEdit22.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit22.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit22.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit22.Properties.Appearance.Options.UseFont = true;
+            this.textEdit22.Size = new System.Drawing.Size(85, 22);
+            this.textEdit22.TabIndex = 6;
+            // 
+            // textEdit23
+            // 
+            this.textEdit23.Location = new System.Drawing.Point(578, 76);
+            this.textEdit23.Name = "textEdit23";
+            this.textEdit23.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit23.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit23.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit23.Properties.Appearance.Options.UseFont = true;
+            this.textEdit23.Size = new System.Drawing.Size(85, 22);
+            this.textEdit23.TabIndex = 9;
+            // 
+            // textEdit24
+            // 
+            this.textEdit24.Location = new System.Drawing.Point(578, 104);
+            this.textEdit24.Name = "textEdit24";
+            this.textEdit24.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit24.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit24.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit24.Properties.Appearance.Options.UseFont = true;
+            this.textEdit24.Size = new System.Drawing.Size(85, 22);
+            this.textEdit24.TabIndex = 12;
+            // 
+            // textEdit25
+            // 
+            this.textEdit25.Location = new System.Drawing.Point(578, 132);
+            this.textEdit25.Name = "textEdit25";
+            this.textEdit25.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit25.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit25.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit25.Properties.Appearance.Options.UseFont = true;
+            this.textEdit25.Size = new System.Drawing.Size(85, 22);
+            this.textEdit25.TabIndex = 15;
+            // 
+            // textEdit26
+            // 
+            this.textEdit26.Location = new System.Drawing.Point(578, 160);
+            this.textEdit26.Name = "textEdit26";
+            this.textEdit26.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit26.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit26.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit26.Properties.Appearance.Options.UseFont = true;
+            this.textEdit26.Size = new System.Drawing.Size(85, 22);
+            this.textEdit26.TabIndex = 18;
+            // 
+            // label239
+            // 
+            this.label239.AutoSize = true;
+            this.label239.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label239.Location = new System.Drawing.Point(17, 26);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(82, 15);
+            this.label239.TabIndex = 1;
+            this.label239.Text = "Release Type";
+            // 
+            // label240
+            // 
+            this.label240.AutoSize = true;
+            this.label240.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label240.Location = new System.Drawing.Point(575, 26);
+            this.label240.Name = "label240";
+            this.label240.Size = new System.Drawing.Size(51, 15);
+            this.label240.TabIndex = 3;
+            this.label240.Text = "Rupture";
+            // 
+            // label241
+            // 
+            this.label241.AutoSize = true;
+            this.label241.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label241.Location = new System.Drawing.Point(472, 26);
+            this.label241.Name = "label241";
+            this.label241.Size = new System.Drawing.Size(55, 15);
+            this.label241.TabIndex = 2;
+            this.label241.Text = "Leakage";
+            // 
+            // textEdit27
+            // 
+            this.textEdit27.Location = new System.Drawing.Point(475, 328);
+            this.textEdit27.Name = "textEdit27";
+            this.textEdit27.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit27.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit27.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit27.Properties.Appearance.Options.UseFont = true;
+            this.textEdit27.Size = new System.Drawing.Size(85, 22);
+            this.textEdit27.TabIndex = 31;
+            // 
+            // textEdit28
+            // 
+            this.textEdit28.Location = new System.Drawing.Point(475, 300);
+            this.textEdit28.Name = "textEdit28";
+            this.textEdit28.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit28.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit28.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit28.Properties.Appearance.Options.UseFont = true;
+            this.textEdit28.Size = new System.Drawing.Size(85, 22);
+            this.textEdit28.TabIndex = 29;
+            // 
+            // textEdit29
+            // 
+            this.textEdit29.Location = new System.Drawing.Point(475, 271);
+            this.textEdit29.Name = "textEdit29";
+            this.textEdit29.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit29.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit29.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit29.Properties.Appearance.Options.UseFont = true;
+            this.textEdit29.Size = new System.Drawing.Size(85, 22);
+            this.textEdit29.TabIndex = 27;
+            // 
+            // textEdit30
+            // 
+            this.textEdit30.Location = new System.Drawing.Point(475, 243);
+            this.textEdit30.Name = "textEdit30";
+            this.textEdit30.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit30.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit30.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit30.Properties.Appearance.Options.UseFont = true;
+            this.textEdit30.Size = new System.Drawing.Size(85, 22);
+            this.textEdit30.TabIndex = 25;
+            // 
+            // textEdit31
+            // 
+            this.textEdit31.Location = new System.Drawing.Point(475, 215);
+            this.textEdit31.Name = "textEdit31";
+            this.textEdit31.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit31.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit31.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit31.Properties.Appearance.Options.UseFont = true;
+            this.textEdit31.Size = new System.Drawing.Size(85, 22);
+            this.textEdit31.TabIndex = 23;
+            // 
+            // label242
+            // 
+            this.label242.AutoSize = true;
+            this.label242.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label242.Location = new System.Drawing.Point(17, 273);
+            this.label242.Name = "label242";
+            this.label242.Size = new System.Drawing.Size(294, 15);
+            this.label242.TabIndex = 26;
+            this.label242.Text = "The cost of damage to surrounding eqiupment (US$)";
+            // 
+            // label243
+            // 
+            this.label243.AutoSize = true;
+            this.label243.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label243.Location = new System.Drawing.Point(17, 245);
+            this.label243.Name = "label243";
+            this.label243.Size = new System.Drawing.Size(202, 15);
+            this.label243.TabIndex = 24;
+            this.label243.Text = "The component damage cost (US$)";
+            // 
+            // label244
+            // 
+            this.label244.AutoSize = true;
+            this.label244.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label244.Location = new System.Drawing.Point(17, 217);
+            this.label244.Name = "label244";
+            this.label244.Size = new System.Drawing.Size(244, 15);
+            this.label244.TabIndex = 22;
+            this.label244.Text = "The total financial environmental cost (US$)";
+            // 
+            // label245
+            // 
+            this.label245.AutoSize = true;
+            this.label245.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label245.Location = new System.Drawing.Point(17, 330);
+            this.label245.Name = "label245";
+            this.label245.Size = new System.Drawing.Size(244, 15);
+            this.label245.TabIndex = 30;
+            this.label245.Text = "Cost Associated with Personnel Injury (US$)";
+            // 
+            // label246
+            // 
+            this.label246.AutoSize = true;
+            this.label246.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label246.Location = new System.Drawing.Point(17, 302);
+            this.label246.Name = "label246";
+            this.label246.Size = new System.Drawing.Size(218, 15);
+            this.label246.TabIndex = 28;
+            this.label246.Text = "The cost of business interruption (US$)";
+            // 
+            // textEdit32
+            // 
+            this.textEdit32.Location = new System.Drawing.Point(578, 188);
+            this.textEdit32.Name = "textEdit32";
+            this.textEdit32.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit32.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit32.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit32.Properties.Appearance.Options.UseFont = true;
+            this.textEdit32.Size = new System.Drawing.Size(85, 22);
+            this.textEdit32.TabIndex = 21;
+            // 
             // UCRiskFactor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5169,6 +6475,10 @@
             this.pnlIntermediateValues.PerformLayout();
             this.pnlFinancialCoF.ResumeLayout(false);
             this.pnlFinancialCoF.PerformLayout();
+            this.tabCATankShell.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.xtraSemiPoF.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.panelLF4567.ResumeLayout(false);
@@ -5192,6 +6502,45 @@
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit11.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit26.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit27.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit28.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit29.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit30.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit31.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit32.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -5629,5 +6978,111 @@
         private System.Windows.Forms.Label label191;
         private System.Windows.Forms.Label label190;
         private System.Windows.Forms.TextBox tbReleaseVolumeFromRuptureD4;
+        private DevExpress.XtraTab.XtraTabPage tabCATankShell;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label192;
+        private System.Windows.Forms.TextBox textBox61;
+        private System.Windows.Forms.TextBox textBox62;
+        private System.Windows.Forms.Label label196;
+        private System.Windows.Forms.TextBox textBox63;
+        private System.Windows.Forms.Label label197;
+        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.Label label198;
+        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.Label label199;
+        private System.Windows.Forms.Label label200;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label232;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label231;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label229;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label225;
+        private System.Windows.Forms.Label label226;
+        private System.Windows.Forms.Label label227;
+        private System.Windows.Forms.TextBox textBox69;
+        private System.Windows.Forms.Label label228;
+        private System.Windows.Forms.TextBox textBox70;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit textEdit6;
+        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.TextEdit textEdit8;
+        private DevExpress.XtraEditors.TextEdit textEdit9;
+        private DevExpress.XtraEditors.TextEdit textEdit10;
+        private DevExpress.XtraEditors.TextEdit textEdit11;
+        private DevExpress.XtraEditors.TextEdit textEdit12;
+        private DevExpress.XtraEditors.TextEdit textEdit13;
+        private DevExpress.XtraEditors.TextEdit textEdit14;
+        private DevExpress.XtraEditors.TextEdit textEdit15;
+        private System.Windows.Forms.Label label209;
+        private System.Windows.Forms.Label label210;
+        private System.Windows.Forms.Label label211;
+        private System.Windows.Forms.Label label212;
+        private System.Windows.Forms.Label label213;
+        private System.Windows.Forms.Label label214;
+        private System.Windows.Forms.Label label215;
+        private System.Windows.Forms.Label label216;
+        private System.Windows.Forms.Label label217;
+        private System.Windows.Forms.Label label218;
+        private System.Windows.Forms.Label label219;
+        private System.Windows.Forms.Label label220;
+        private System.Windows.Forms.Label label221;
+        private System.Windows.Forms.Label label222;
+        private System.Windows.Forms.Label label223;
+        private System.Windows.Forms.Label label224;
+        private System.Windows.Forms.Label label203;
+        private System.Windows.Forms.Label label204;
+        private System.Windows.Forms.Label label205;
+        private System.Windows.Forms.Label label206;
+        private System.Windows.Forms.TextBox textBox66;
+        private System.Windows.Forms.Label label207;
+        private System.Windows.Forms.TextBox textBox67;
+        private System.Windows.Forms.Label label208;
+        private System.Windows.Forms.TextBox textBox68;
+        private System.Windows.Forms.Label label202;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label194;
+        private System.Windows.Forms.Label label195;
+        private System.Windows.Forms.TextBox textBox59;
+        private System.Windows.Forms.Label label201;
+        private System.Windows.Forms.TextBox textBox60;
+        private System.Windows.Forms.Label label193;
+        private DevExpress.XtraEditors.TextEdit textEdit16;
+        private DevExpress.XtraEditors.TextEdit textEdit26;
+        private DevExpress.XtraEditors.TextEdit textEdit17;
+        private DevExpress.XtraEditors.TextEdit textEdit25;
+        private DevExpress.XtraEditors.TextEdit textEdit18;
+        private DevExpress.XtraEditors.TextEdit textEdit24;
+        private DevExpress.XtraEditors.TextEdit textEdit19;
+        private DevExpress.XtraEditors.TextEdit textEdit23;
+        private DevExpress.XtraEditors.TextEdit textEdit20;
+        private DevExpress.XtraEditors.TextEdit textEdit22;
+        private DevExpress.XtraEditors.TextEdit textEdit21;
+        private System.Windows.Forms.Label label233;
+        private System.Windows.Forms.Label label234;
+        private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.Label label236;
+        private System.Windows.Forms.Label label237;
+        private System.Windows.Forms.Label label238;
+        private DevExpress.XtraEditors.TextEdit textEdit27;
+        private DevExpress.XtraEditors.TextEdit textEdit28;
+        private DevExpress.XtraEditors.TextEdit textEdit29;
+        private DevExpress.XtraEditors.TextEdit textEdit30;
+        private DevExpress.XtraEditors.TextEdit textEdit31;
+        private System.Windows.Forms.Label label242;
+        private System.Windows.Forms.Label label243;
+        private System.Windows.Forms.Label label244;
+        private System.Windows.Forms.Label label245;
+        private System.Windows.Forms.Label label246;
+        private DevExpress.XtraEditors.TextEdit textEdit32;
+        private System.Windows.Forms.Label label241;
+        private System.Windows.Forms.Label label240;
+        private System.Windows.Forms.Label label239;
     }
 }
