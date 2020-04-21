@@ -139,21 +139,24 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = false;
                 tabCATankShell.PageVisible = false;
+                TabArea.PageVisible = false;
             }
             else if (compTypeID == 8)
             {
                 initData_Shell(ID);
                 tabCA.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
-                tabCAShell.PageVisible = true;
-                tabCATankShell.PageVisible = false;
+                tabCAShell.PageVisible = false;
+                tabCATankShell.PageVisible = true;
+                TabArea.PageVisible = false;
             }
             else if (compTypeID == 13)
             {
                 initData_Shell(ID);
                 tabCA.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
-                tabCAShell.PageVisible = true;
+                TabArea.PageVisible = false;
+                tabCAShell.PageVisible = false;
                 tabCATankShell.PageVisible = true;
             }
             else

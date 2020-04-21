@@ -2526,15 +2526,15 @@ namespace RBI
                 FC_Total = rwCATank.Consequence;
             }
             fc = FC_Total;
-            RW_FULL_FCOF fullFCoF = new RW_FULL_FCOF();
-            fullFCoF.ID = rwCATank.ID;
-            fullFCoF.FCoFValue = FC_Total;
-            fullFCoF.FCoFCategory = CA.FC_Category(FC_Total);
+            //RW_FULL_FCOF fullFCoF = new RW_FULL_FCOF();
+            //fullFCoF.ID = rwCATank.ID;
+            //fullFCoF.FCoFValue = FC_Total;
+            //fullFCoF.FCoFCategory = CA.FC_Category(FC_Total);
 
-            if (busFullFCoF.checkExist(fullFCoF.ID))
-                busFullFCoF.edit(fullFCoF);
-            else
-                busFullFCoF.add(fullFCoF);
+            //if (busFullFCoF.checkExist(fullFCoF.ID))
+            //    busFullFCoF.edit(fullFCoF);
+            //else
+            //    busFullFCoF.add(fullFCoF);
             #endregion
         }
         private void Calculation(String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem)
