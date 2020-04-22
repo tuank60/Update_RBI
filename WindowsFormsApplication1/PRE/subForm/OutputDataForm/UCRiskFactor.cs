@@ -33,7 +33,6 @@ namespace RBI.PRE.subForm.OutputDataForm
         {
             RW_FULL_POF_BUS bus = new RW_FULL_POF_BUS();
             RW_FULL_POF obj = bus.getData(ID);
-
             cbThinningType.Text = obj.ThinningType;
             textEdit1.Text = obj.GFFTotal.ToString();
             textEdit2.Text = obj.FMS.ToString();
@@ -156,7 +155,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCA.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
                 TabArea.PageVisible = false;
-                tabCAShell.PageVisible = false;
+                tabCAShell.PageVisible = true;
                 tabCATankShell.PageVisible = true;
             }
             else
@@ -207,11 +206,12 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbTotalConsequence.Text = caTank.Consequence.ToString();
             tbConsequenceCategory.Text = caTank.ConsequenceCategory;
         }
-
+        
         private void initData_Shell(int ID)
         {
             RW_CA_TANK_BUS busCA_Tank = new RW_CA_TANK_BUS();
             RW_CA_TANK caTank = busCA_Tank.getData(ID);
+            #region consequences area
             tbFlowRateShellD1.Text = caTank.Flow_Rate_D1.ToString();
             tbFlowRateShellD2.Text = caTank.Flow_Rate_D2.ToString();
             tbFlowRateShellD3.Text = caTank.Flow_Rate_D3.ToString();
@@ -249,8 +249,29 @@ namespace RBI.PRE.subForm.OutputDataForm
 
             tbTotalConsequenceShell.Text = caTank.Consequence.ToString();
             tbConsequenceCategoryShell.Text = caTank.ConsequenceCategory;
-        }
+            #endregion
 
+            #region Tab COF Financial for Shell
+            
+            tbWithinDikeLeakageShell.Text = caTank.Barrel_Dike_Leak.ToString();
+            tbWithinDikeRuptureShell.Text = caTank.Barrel_Dike_Rupture.ToString();
+            tbOn_siteLeakageShell.Text = caTank.Barrel_Onsite_Leak.ToString();
+            tbOn_siteRuptureShell.Text = caTank.Barrel_Onsite_Rupture.ToString();
+            tbOff_siteLeakageShell.Text = caTank.Barrel_Offsite_Leak.ToString();
+            tbOff_siteRupureShell.Text = caTank.Barrel_Offsite_Rupture.ToString();
+            txtReachWaterLeakageShell.Text = caTank.Barrel_Water_Leak.ToString();
+            txtReachWaterRuptureShell.Text = caTank.Barrel_Water_Rupture.ToString();
+            tbFCenvLeakageShell.Text = caTank.FC_Environ_Leak.ToString();
+            tbFCenvRuptureShell.Text = caTank.FC_Environ_Rupture.ToString();
+            tbTotalFCenvShell.Text = caTank.FC_Environ.ToString();
+            tbComponentDamageCostShell.Text = caTank.Component_Damage_Cost.ToString();
+            //tbDamageSurroundEquipmentShell.Text = caTank.
+            tbCostOfBusinessInterruptionShell.Text = caTank.Business_Cost.ToString();
+            //tbCostAssociatedPersonInjury.Text =
+            
+            #endregion
+        }
+        #region event
         private void lblLF1_Click(object sender, EventArgs e)
         {
             if (lblLF1.Text == "▼ LF1")
@@ -434,6 +455,6 @@ namespace RBI.PRE.subForm.OutputDataForm
             }
         }
 
-       
+        #endregion
     }
 }
