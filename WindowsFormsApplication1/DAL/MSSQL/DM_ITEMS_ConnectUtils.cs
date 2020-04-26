@@ -198,6 +198,45 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
+        public List <String> getDMDescription()
+        {
+
+            string obj = null;
+            List<string> listobj = new List<string>();
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = " Use [rbi] Select [DMDescription]" +
+                          "From [rbi].[dbo].[DM_ITEMS]" ;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                           
+                            obj = reader.GetString(0);
+                            listobj.Add(obj);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return listobj;
+        }
+
         public int getDMIteamIDbyDMDescription(String DMDescription)
         {
             int obj = -1;

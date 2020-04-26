@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInspectionPlanDetail));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.labelMain = new System.Windows.Forms.Label();
@@ -408,7 +408,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1188, 59);
+            this.panel2.Size = new System.Drawing.Size(1068, 59);
             this.panel2.TabIndex = 2;
             // 
             // label9
@@ -441,7 +441,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 59);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1188, 34);
+            this.panel1.Size = new System.Drawing.Size(1068, 34);
             this.panel1.TabIndex = 3;
             // 
             // InspectionDate
@@ -496,9 +496,9 @@
             this.tabInspectionMethod,
             this.tabDamageMechanism,
             this.tabIspFinding});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1188, 409);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1068, 401);
             this.tabPane1.SelectedPage = this.tabInspectionScope;
-            this.tabPane1.Size = new System.Drawing.Size(1188, 409);
+            this.tabPane1.Size = new System.Drawing.Size(1068, 401);
             this.tabPane1.TabIndex = 4;
             this.tabPane1.Text = "tabPane1";
             this.tabPane1.SelectedPageIndexChanged += new System.EventHandler(this.tabPane1_SelectedPageIndexChanged);
@@ -510,7 +510,7 @@
             this.tabInspectionScope.Controls.Add(this.panel4);
             this.tabInspectionScope.Controls.Add(this.panel3);
             this.tabInspectionScope.Name = "tabInspectionScope";
-            this.tabInspectionScope.Size = new System.Drawing.Size(1188, 382);
+            this.tabInspectionScope.Size = new System.Drawing.Size(1068, 374);
             // 
             // tabPane2
             // 
@@ -523,9 +523,9 @@
             this.tabPane2.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabProcessPlan,
             this.tabTank});
-            this.tabPane2.RegularSize = new System.Drawing.Size(1188, 314);
+            this.tabPane2.RegularSize = new System.Drawing.Size(1068, 306);
             this.tabPane2.SelectedPage = this.tabProcessPlan;
-            this.tabPane2.Size = new System.Drawing.Size(1188, 314);
+            this.tabPane2.Size = new System.Drawing.Size(1068, 306);
             this.tabPane2.TabIndex = 1;
             this.tabPane2.Text = "tabPane2";
             // 
@@ -534,7 +534,7 @@
             this.tabProcessPlan.Caption = "Process Plan";
             this.tabProcessPlan.Controls.Add(this.gridControl1);
             this.tabProcessPlan.Name = "tabProcessPlan";
-            this.tabProcessPlan.Size = new System.Drawing.Size(1188, 287);
+            this.tabProcessPlan.Size = new System.Drawing.Size(1068, 279);
             // 
             // gridControl1
             // 
@@ -544,7 +544,7 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.gridControl1.Size = new System.Drawing.Size(1188, 287);
+            this.gridControl1.Size = new System.Drawing.Size(1068, 279);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -2953,7 +2953,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 37);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1188, 31);
+            this.panel4.Size = new System.Drawing.Size(1068, 31);
             this.panel4.TabIndex = 0;
             // 
             // btnClearAll
@@ -2998,7 +2998,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1188, 37);
+            this.panel3.Size = new System.Drawing.Size(1068, 37);
             this.panel3.TabIndex = 0;
             // 
             // cbEquipment
@@ -3081,7 +3081,7 @@
             this.tabInspectionMethod.Controls.Add(this.panel7);
             this.tabInspectionMethod.Controls.Add(this.panel6);
             this.tabInspectionMethod.Name = "tabInspectionMethod";
-            this.tabInspectionMethod.Size = new System.Drawing.Size(1188, 382);
+            this.tabInspectionMethod.Size = new System.Drawing.Size(1068, 374);
             // 
             // gridControlMethod
             // 
@@ -3092,7 +3092,7 @@
             this.gridControlMethod.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDelete,
             this.txtCoverage});
-            this.gridControlMethod.Size = new System.Drawing.Size(1188, 202);
+            this.gridControlMethod.Size = new System.Drawing.Size(1068, 194);
             this.gridControlMethod.TabIndex = 47;
             this.gridControlMethod.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewtab2});
@@ -3165,9 +3165,9 @@
             // 
             this.btnDelete.AccessibleDescription = "";
             this.btnDelete.AutoHeight = false;
-            editorButtonImageOptions1.ImageUri.Uri = "Cancel;Size16x16";
+            editorButtonImageOptions3.ImageUri.Uri = "Cancel;Size16x16";
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Delete", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Delete", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick_1);
@@ -3178,13 +3178,13 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 152);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1188, 28);
+            this.panel8.Size = new System.Drawing.Size(1068, 28);
             this.panel8.TabIndex = 46;
             // 
             // btnAddIspMethod
             // 
             this.btnAddIspMethod.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAddIspMethod.Location = new System.Drawing.Point(1103, 0);
+            this.btnAddIspMethod.Location = new System.Drawing.Point(983, 0);
             this.btnAddIspMethod.Name = "btnAddIspMethod";
             this.btnAddIspMethod.Size = new System.Drawing.Size(85, 28);
             this.btnAddIspMethod.TabIndex = 0;
@@ -3198,7 +3198,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 31);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(1188, 121);
+            this.panel7.Size = new System.Drawing.Size(1068, 121);
             this.panel7.TabIndex = 45;
             // 
             // splitContainer1
@@ -3214,8 +3214,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1188, 121);
-            this.splitContainer1.SplitterDistance = 395;
+            this.splitContainer1.Size = new System.Drawing.Size(1068, 121);
+            this.splitContainer1.SplitterDistance = 355;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox2
@@ -3224,7 +3224,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(395, 121);
+            this.groupBox2.Size = new System.Drawing.Size(355, 121);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Inspection Methods";
@@ -3246,7 +3246,7 @@
             "Visual"});
             this.lstMethod.Location = new System.Drawing.Point(3, 16);
             this.lstMethod.Name = "lstMethod";
-            this.lstMethod.Size = new System.Drawing.Size(389, 102);
+            this.lstMethod.Size = new System.Drawing.Size(349, 102);
             this.lstMethod.TabIndex = 5;
             this.lstMethod.SelectedIndexChanged += new System.EventHandler(this.lstMethod_SelectedIndexChanged);
             // 
@@ -3256,7 +3256,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(789, 121);
+            this.groupBox1.Size = new System.Drawing.Size(709, 121);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inspection Technique";
@@ -3267,7 +3267,7 @@
             this.lstTechnique.FormattingEnabled = true;
             this.lstTechnique.Location = new System.Drawing.Point(3, 16);
             this.lstTechnique.Name = "lstTechnique";
-            this.lstTechnique.Size = new System.Drawing.Size(783, 102);
+            this.lstTechnique.Size = new System.Drawing.Size(703, 102);
             this.lstTechnique.TabIndex = 1;
             // 
             // panel6
@@ -3277,7 +3277,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1188, 31);
+            this.panel6.Size = new System.Drawing.Size(1068, 31);
             this.panel6.TabIndex = 44;
             // 
             // radioGroup1
@@ -3306,7 +3306,7 @@
             this.tabDamageMechanism.Caption = "Damage Mechanism";
             this.tabDamageMechanism.Controls.Add(this.gridControl3);
             this.tabDamageMechanism.Name = "tabDamageMechanism";
-            this.tabDamageMechanism.Size = new System.Drawing.Size(1188, 382);
+            this.tabDamageMechanism.Size = new System.Drawing.Size(1068, 374);
             // 
             // gridControl3
             // 
@@ -3318,7 +3318,7 @@
             this.ItemLookUpEdit,
             this.repositoryItemGridLookUpEditInspectionEffectivess,
             this.repositoryItemMemoEdit1});
-            this.gridControl3.Size = new System.Drawing.Size(1188, 382);
+            this.gridControl3.Size = new System.Drawing.Size(1068, 374);
             this.gridControl3.TabIndex = 0;
             this.gridControl3.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -3491,15 +3491,15 @@
             this.panel5.Controls.Add(this.BTnCancel);
             this.panel5.Controls.Add(this.btnOK);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 502);
+            this.panel5.Location = new System.Drawing.Point(0, 494);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1188, 35);
+            this.panel5.Size = new System.Drawing.Size(1068, 35);
             this.panel5.TabIndex = 5;
             // 
             // BTnCancel
             // 
             this.BTnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTnCancel.Location = new System.Drawing.Point(1079, 6);
+            this.BTnCancel.Location = new System.Drawing.Point(959, 6);
             this.BTnCancel.Name = "BTnCancel";
             this.BTnCancel.Size = new System.Drawing.Size(80, 26);
             this.BTnCancel.TabIndex = 1;
@@ -3510,7 +3510,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(983, 6);
+            this.btnOK.Location = new System.Drawing.Point(863, 6);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(80, 26);
             this.btnOK.TabIndex = 2;
@@ -3524,7 +3524,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 93);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1188, 409);
+            this.panel10.Size = new System.Drawing.Size(1068, 401);
             this.panel10.TabIndex = 6;
             // 
             // gridColumn2
@@ -3576,7 +3576,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 537);
+            this.ClientSize = new System.Drawing.Size(1068, 529);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);

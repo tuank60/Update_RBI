@@ -40,6 +40,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getEquipmentID(ID);
         }
+        public int getComponentID(int ID)
+        {
+            return DAL.getComponentID(ID);
+        }
         public DateTime getAssessmentDate(int ID)
         {
             return DAL.getAssessmentDate(ID);

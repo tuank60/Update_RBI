@@ -179,6 +179,66 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+         public List<RW_INSPECTION_DETAIL> getDataSourcebyDetailID(int DetailID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<RW_INSPECTION_DETAIL> list = new List<RW_INSPECTION_DETAIL>();
+            RW_INSPECTION_DETAIL obj = null;
+            String sql = "SELECT [ID]" +
+                        ",[DetailID] " +
+                        ",[EquipmentID]" +
+                        ",[ComponentID]" +
+                        ",[Coverage_DetailID]" +
+                        ",[InspPlanName]" +
+                        ",[InspectionDate]" +
+                        ",[DMItemID]" +
+                        ",[EffectivenessCode]" +
+                        ",[InspectionSummary]" +
+                        ",[IsCarriedOut]" +
+                        ",[CarriedOutDate]" +
+                        ",[IsActive]" +
+                        "  FROM [rbi].[dbo].[RW_INSPECTION_DETAIL] WHERE [DetailID] ='" + DetailID + "'"; 
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = conn;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new RW_INSPECTION_DETAIL();
+                            obj.ID = reader.GetInt32(0);
+                            obj.DetailID = reader.GetInt32(1);
+                            obj.EquipmentID = reader.GetInt32(2);
+                            obj.ComponentID = reader.GetInt32(3);
+                            obj.Coverage_DetailID = reader.GetInt32(4);
+                            obj.InspPlanName = reader.GetString(5);
+                            obj.InspectionDate = reader.GetDateTime(6);
+                            obj.DMItemID = reader.GetInt32(7);
+                            obj.EffectivenessCode = reader.GetString(8);
+                            obj.IsCarriedOut = reader.GetInt32(9);
+                            obj.CarriedOutDate = reader.GetDateTime(10);
+                            obj.IsActive = reader.GetInt32(11);
+                            list.Add(obj);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                // do nothing
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
         public List<RW_INSPECTION_DETAIL> getDataComp(int CompID)
         {
             List<RW_INSPECTION_DETAIL> list = new List<RW_INSPECTION_DETAIL>();

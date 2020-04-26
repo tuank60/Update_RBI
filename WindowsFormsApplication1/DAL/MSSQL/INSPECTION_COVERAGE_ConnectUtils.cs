@@ -280,6 +280,42 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public int getPlanIDbyID(int ID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            int PlanID = -1;
+            String sql = "Use [rbi]" +
+                        "SELECT [PlanID]" +
+                        "From [dbo].[INSPECTION_COVERAGE] where ID = '" + ID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            PlanID = reader.GetInt32(0);
+                        }
+                       
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return PlanID;
+        }
         public int getIDbyEquipmentIDandComponentID(int EquipmentID, int ComponentID,int PlanID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -287,7 +323,7 @@ namespace RBI.DAL.MSSQL
             int ID = -1;
             String sql = "Use [rbi]" +
                         "SELECT [ID]" +
-                        "From [dbo].[INSPECTION_COVERAGE] where PlanID = '" + EquipmentID + "' and ComponentID = '"+ ComponentID+ "' and PlanID = '"+ PlanID+"'";
+                        "From [dbo].[INSPECTION_COVERAGE] where EquipmentID = '" + EquipmentID + "' and ComponentID = '"+ ComponentID+ "' and PlanID = '"+ PlanID+"'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -315,6 +351,43 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
             return ID;
+        }
+       public List<int> getlistIDbyEquipmentIDandComponentID(int EquipmentID, int ComponentID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<int> list = new List<int>();
+            int ID = 0;
+            String sql = "Use [rbi]" +
+                        "SELECT [ID]" +
+                        "From [dbo].[INSPECTION_COVERAGE]  where EquipmentID = '" + EquipmentID + "' and ComponentID = '" + ComponentID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ID = reader.GetInt32(0);
+                        }
+                        list.Add(ID);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
         }
     }
 }
