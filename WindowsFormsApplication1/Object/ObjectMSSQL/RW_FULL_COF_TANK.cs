@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RBI.Object.ObjectMSSQL
 {
-    class RW_FULL_COF_TANK
+    public class RW_FULL_COF_TANK
     {
         public int ID { get; set; }
         public float CoFValue { get; set; }

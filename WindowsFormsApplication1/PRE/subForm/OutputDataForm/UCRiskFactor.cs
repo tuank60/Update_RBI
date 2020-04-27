@@ -9,9 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RBI.Object.ObjectMSSQL;
 using RBI.BUS.BUSMSSQL;
+using RBI.Object;
+
 
 namespace RBI.PRE.subForm.OutputDataForm
 {
+    public delegate void DataUCChangedHanlder(object sender, DataUCChangedEventArgs e);
+    public delegate void CtrlSHandler(object sender, CtrlSPressEventArgs e);
     public partial class UCRiskFactor : UserControl
     {
         public UCRiskFactor()
@@ -25,7 +29,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             riskCA(ID);
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
-            initData_Tank(ID);
+            //initData_Tank(ID);
             initData_CA(ID);
         }
         public String type { set; get; }
@@ -131,6 +135,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             int[] temp = busAssess.getEquipmentID_ComponentID(ID);
             int compTypeID = busCompMaster.getComponentTypeID(temp[1]);
             Console.WriteLine("comTypeID=" + compTypeID + " " + temp[1]);
+            
+
             if (compTypeID == 12)
             {
                 initData_Tank(ID);
@@ -157,6 +163,16 @@ namespace RBI.PRE.subForm.OutputDataForm
                 TabArea.PageVisible = false;
                 tabCAShell.PageVisible = true;
                 tabCATankShell.PageVisible = true;
+                #region  table RW_FULL_COF_TANK
+                RW_FULL_COF_TANK_BUS COFBus = new RW_FULL_COF_TANK_BUS();
+                RW_FULL_COF_TANK obj = COFBus.getData(ID);
+                txtProdCost.Text = obj.ProdCost.ToString();
+                
+                txtEquipOutageMultiplier.Text = obj.EquipOutageMultiplier.ToString();
+                txtEquip.Text = obj.equipcost.ToString();
+                txtDensity.Text = obj.popdens.ToString();
+                txtInjury.Text = obj.injcost.ToString();
+                #endregion
             }
             else
             {
@@ -271,6 +287,21 @@ namespace RBI.PRE.subForm.OutputDataForm
             
             #endregion
         }
+
+        RW_FULL_COF_TANK input = new RW_FULL_COF_TANK();
+        public RW_FULL_COF_TANK getDataInputCOFTank(int ID)
+        {
+            input.ID = ID;
+            input.ProdCost = txtProdCost.Text != "" ? float.Parse(txtProdCost.Text) : 0;
+            MessageBox.Show(txtProdCost.ToString());
+            //input.ProdCost = txtProdCostDev.Text != "" ? float.Parse(txtProdCost.Text) : 0;
+            input.EquipOutageMultiplier = txtEquipOutageMultiplier.Text != "" ? float.Parse(txtEquipOutageMultiplier.Text) : 0;
+            input.equipcost = txtEquip.Text != "" ? float.Parse(txtEquip.Text) : 0; 
+            input.injcost =  txtInjury.Text != "" ? float.Parse(txtInjury.Text) : 0;
+            input.popdens = 99999;
+            return input;
+        }
+
         #region event
         private void lblLF1_Click(object sender, EventArgs e)
         {
@@ -453,6 +484,96 @@ namespace RBI.PRE.subForm.OutputDataForm
                 panelRHP.Height = 21;
                 lblRHP.Text = "▼ Release Holes Properties";
             }
+        }
+
+        #endregion
+        #region Xu ly su kien khi data thay doi
+        private int datachange = 0;
+        private int ctrlSpress = 0;
+        public event DataUCChangedHanlder DataChanged;
+        public event CtrlSHandler CtrlS_Press;
+        public int CtrlSPress
+        {
+            get { return ctrlSpress; }
+            set
+            {
+                ctrlSpress = value;
+                OnCtrlS_Press(new CtrlSPressEventArgs(ctrlSpress));
+            }
+        }
+        public int DataChange
+        {
+            get { return datachange; }
+            set
+            {
+                if (datachange == value) return;
+                datachange = value;
+                OnDataChanged(new DataUCChangedEventArgs(datachange));
+            }
+        }
+        protected virtual void OnDataChanged(DataUCChangedEventArgs e)
+        {
+             if (DataChanged != null)
+                 DataChanged(this, e);
+        }
+        protected virtual void OnCtrlS_Press(CtrlSPressEventArgs e)
+        {
+             if (CtrlS_Press != null)
+                 CtrlS_Press(this, e);
+        }
+
+        private void txtRiskFactor_TextChanged(object sender, EventArgs e)
+        {
+             DataChange++;
+        }
+       
+
+        private void txtRiskFactor_KeyDown(object sender, KeyEventArgs e)
+         {
+             if (e.Control && e.KeyCode == Keys.S)
+             {
+                 CtrlSPress++;
+             }
+         }
+        
+        #endregion
+
+        #region KeyPress Event Handle
+        private void keyPressEvent(TextBox textbox, KeyPressEventArgs ev)
+        {
+            string a = textbox.Text;
+            if (!char.IsControl(ev.KeyChar) && !char.IsDigit(ev.KeyChar) && (ev.KeyChar != '.') && (ev.KeyChar != '-'))
+            {
+                ev.Handled = true;
+            }
+            if (a.Contains('.') && ev.KeyChar == '.')
+            {
+                ev.Handled = true;
+            }
+        }
+        private void txtProdCost_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyPressEvent(txtProdCost, e);
+        }
+
+        private void txtEquipOutageMultiplier_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyPressEvent(txtEquipOutageMultiplier, e);
+        }
+        
+        private void txtEquip_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyPressEvent(txtEquip, e);
+        }
+
+        private void txtDensity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyPressEvent(txtDensity, e);
+        }
+
+        private void txtInjury_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            keyPressEvent(txtInjury, e);
         }
 
         #endregion

@@ -547,14 +547,14 @@
             this.textBox60 = new System.Windows.Forms.TextBox();
             this.label193 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.txtProdCost = new System.Windows.Forms.TextBox();
+            this.txtInjury = new System.Windows.Forms.TextBox();
             this.label196 = new System.Windows.Forms.Label();
-            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.txtDensity = new System.Windows.Forms.TextBox();
             this.label197 = new System.Windows.Forms.Label();
-            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.txtEquip = new System.Windows.Forms.TextBox();
             this.label198 = new System.Windows.Forms.Label();
-            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.txtEquipOutageMultiplier = new System.Windows.Forms.TextBox();
             this.label199 = new System.Windows.Forms.Label();
             this.label200 = new System.Windows.Forms.Label();
             this.label192 = new System.Windows.Forms.Label();
@@ -6179,14 +6179,14 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox61);
-            this.panel1.Controls.Add(this.textBox62);
+            this.panel1.Controls.Add(this.txtProdCost);
+            this.panel1.Controls.Add(this.txtInjury);
             this.panel1.Controls.Add(this.label196);
-            this.panel1.Controls.Add(this.textBox63);
+            this.panel1.Controls.Add(this.txtDensity);
             this.panel1.Controls.Add(this.label197);
-            this.panel1.Controls.Add(this.textBox64);
+            this.panel1.Controls.Add(this.txtEquip);
             this.panel1.Controls.Add(this.label198);
-            this.panel1.Controls.Add(this.textBox65);
+            this.panel1.Controls.Add(this.txtEquipOutageMultiplier);
             this.panel1.Controls.Add(this.label199);
             this.panel1.Controls.Add(this.label200);
             this.panel1.Controls.Add(this.label192);
@@ -6195,21 +6195,27 @@
             this.panel1.Size = new System.Drawing.Size(940, 180);
             this.panel1.TabIndex = 0;
             // 
-            // textBox61
+            // txtProdCost
             // 
-            this.textBox61.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox61.Location = new System.Drawing.Point(427, 32);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(182, 22);
-            this.textBox61.TabIndex = 2;
+            this.txtProdCost.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProdCost.Location = new System.Drawing.Point(427, 32);
+            this.txtProdCost.Name = "txtProdCost";
+            this.txtProdCost.Size = new System.Drawing.Size(182, 22);
+            this.txtProdCost.TabIndex = 2;
+            this.txtProdCost.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtProdCost.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtProdCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProdCost_KeyPress);
             // 
-            // textBox62
+            // txtInjury
             // 
-            this.textBox62.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox62.Location = new System.Drawing.Point(427, 143);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(182, 22);
-            this.textBox62.TabIndex = 10;
+            this.txtInjury.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInjury.Location = new System.Drawing.Point(427, 143);
+            this.txtInjury.Name = "txtInjury";
+            this.txtInjury.Size = new System.Drawing.Size(182, 22);
+            this.txtInjury.TabIndex = 10;
+            this.txtInjury.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtInjury.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtInjury.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInjury_KeyPress);
             // 
             // label196
             // 
@@ -6221,13 +6227,16 @@
             this.label196.TabIndex = 1;
             this.label196.Text = "The unit replacement cost for component, $/m2";
             // 
-            // textBox63
+            // txtDensity
             // 
-            this.textBox63.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox63.Location = new System.Drawing.Point(427, 115);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(182, 22);
-            this.textBox63.TabIndex = 8;
+            this.txtDensity.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDensity.Location = new System.Drawing.Point(427, 115);
+            this.txtDensity.Name = "txtDensity";
+            this.txtDensity.Size = new System.Drawing.Size(182, 22);
+            this.txtDensity.TabIndex = 8;
+            this.txtDensity.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtDensity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtDensity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDensity_KeyPress);
             // 
             // label197
             // 
@@ -6239,13 +6248,16 @@
             this.label197.TabIndex = 9;
             this.label197.Text = "Cost associated with serious injury of fatality of personal, $";
             // 
-            // textBox64
+            // txtEquip
             // 
-            this.textBox64.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox64.Location = new System.Drawing.Point(427, 87);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(182, 22);
-            this.textBox64.TabIndex = 6;
+            this.txtEquip.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquip.Location = new System.Drawing.Point(427, 87);
+            this.txtEquip.Name = "txtEquip";
+            this.txtEquip.Size = new System.Drawing.Size(182, 22);
+            this.txtEquip.TabIndex = 6;
+            this.txtEquip.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtEquip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtEquip.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEquip_KeyPress);
             // 
             // label198
             // 
@@ -6257,13 +6269,16 @@
             this.label198.TabIndex = 7;
             this.label198.Text = "Population density of personal or employees in the unit, personal/m2";
             // 
-            // textBox65
+            // txtEquipOutageMultiplier
             // 
-            this.textBox65.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox65.Location = new System.Drawing.Point(427, 61);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(182, 22);
-            this.textBox65.TabIndex = 4;
+            this.txtEquipOutageMultiplier.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipOutageMultiplier.Location = new System.Drawing.Point(427, 61);
+            this.txtEquipOutageMultiplier.Name = "txtEquipOutageMultiplier";
+            this.txtEquipOutageMultiplier.Size = new System.Drawing.Size(182, 22);
+            this.txtEquipOutageMultiplier.TabIndex = 4;
+            this.txtEquipOutageMultiplier.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtEquipOutageMultiplier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtEquipOutageMultiplier.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEquipOutageMultiplier_KeyPress);
             // 
             // label199
             // 
@@ -6940,14 +6955,14 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label192;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
+        private System.Windows.Forms.TextBox txtProdCost;
+        private System.Windows.Forms.TextBox txtInjury;
         private System.Windows.Forms.Label label196;
-        private System.Windows.Forms.TextBox textBox63;
+        private System.Windows.Forms.TextBox txtDensity;
         private System.Windows.Forms.Label label197;
-        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.TextBox txtEquip;
         private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.TextBox txtEquipOutageMultiplier;
         private System.Windows.Forms.Label label199;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.Panel panel7;

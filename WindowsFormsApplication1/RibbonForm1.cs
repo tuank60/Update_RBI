@@ -281,6 +281,7 @@ namespace RBI
                     RW_EQUIPMENT eq = uc.ucEquipmentTank.getData(IDProposal, temperature, volume);
                     RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress);
                     RW_STREAM stream = uc.ucStreamTank.getData(IDProposal);
+                    RW_FULL_COF_TANK cof = uc.ucRiskFactor.getDataInputCOFTank(IDProposal);
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, corrosion);
@@ -289,7 +290,7 @@ namespace RBI
                     RW_INPUT_CA_TANK caTank2 = uc.ucStreamTank.getDataforTank(IDProposal);
                     RW_INPUT_CA_TANK caTank3 = uc.ucMaterialTank.getDataforTank(IDProposal);
                     RW_INPUT_CA_TANK caTank4 = uc.ucComponentTank.getDataforTank(IDProposal, diameter);
-
+                    
                     caTank = caTank2;
                     caTank.Soil_Type = caTank1.Soil_Type;
                     caTank.SW = caTank1.SW;
@@ -305,7 +306,8 @@ namespace RBI
                     String ThinningType = uc.ucRiskFactor.type;
                     Calculation_CA_TANK(componentTypeName, apiComName, ThinningType, ass.ComponentID, eq, com, ma, stream, coat, extTemp, caTank);
                     MessageBox.Show("Calculation finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank);
+
+                    SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank, cof);
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     //resultRisk.ShowDataOutputCA(IDProposal); //***
                     //resultRisk.riskPoF(IDProposal); //***
@@ -565,6 +567,7 @@ namespace RBI
             RW_INPUT_CA_LEVEL_1 rwCALevel1 = new RW_INPUT_CA_LEVEL_1();
             RW_CA_TANK rwCATank = new RW_CA_TANK();
             RW_INPUT_CA_TANK rwInputCATank = new RW_INPUT_CA_TANK();
+            RW_FULL_COF_TANK rwCOFTank = new RW_FULL_COF_TANK();
             RW_RISK_GRAPH rwRiskGraph = new RW_RISK_GRAPH();
             /*-----------------Tìm đuôi Proposal có giá trị lớn nhất-------------------*/
             List<string> lstProposalName = busAssessment.AllName();
@@ -629,7 +632,9 @@ namespace RBI
             rwMaterial.ID = ID;
             rwExtTemp.ID = ID;
             rwCoat.ExternalCoatingDate = DateTime.Now;
-
+            #region Vietanh
+            //rwCOFTank.ID = ID;
+            #endregion
             busEquipment.add(rwEq);
             busComponent.add(rwCom);
             busCoating.add(rwCoat);
@@ -644,6 +649,8 @@ namespace RBI
             {
                 rwCATank.ID = ID;
                 rwInputCATank.ID = ID;
+                rwCOFTank.ID =ID;
+                busFullCofTank.add(rwCOFTank);
                 busCATank.add(rwCATank);
                 busInputCATank.add(rwInputCATank);
             }
@@ -1382,6 +1389,11 @@ namespace RBI
                     UCCA ca = uc as UCCA;
                     RW_INPUT_CA_LEVEL_1 rwCA = ca.getData(ID);
                     busInputCALevel1.edit(rwCA);
+                    break;
+                case "UCRiskFactor":
+                    UCRiskFactor risk = uc as UCRiskFactor;
+                    RW_FULL_COF_TANK rwRisk = risk.getDataInputCOFTank(ID);
+                    busFullCofTank.editInput(rwRisk);
                     break;
                 default:
                     break;
@@ -2460,7 +2472,11 @@ namespace RBI
                 if (busCATank.CheckExistID(rwCATank.ID))
                     busCATank.edit(rwCATank);
                 else
+                {
                     busCATank.add(rwCATank);
+                    //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
+                    //busFullCofTank.add(a);
+                }    
             }
             else
             {
@@ -3258,7 +3274,7 @@ namespace RBI
             //Console.WriteLine("tank fluid name="+stream.TankFluidName);
         }
         //thiet bi tank
-        private void SaveDatatoDatabase(RW_ASSESSMENT ass, RW_EQUIPMENT eq, RW_COMPONENT com, RW_STREAM stream, RW_EXTCOR_TEMPERATURE extTemp, RW_COATING coat, RW_MATERIAL ma, RW_INPUT_CA_TANK ca)
+        private void SaveDatatoDatabase(RW_ASSESSMENT ass, RW_EQUIPMENT eq, RW_COMPONENT com, RW_STREAM stream, RW_EXTCOR_TEMPERATURE extTemp, RW_COATING coat, RW_MATERIAL ma, RW_INPUT_CA_TANK ca, RW_FULL_COF_TANK cof)
         {
             busAssessment.edit(ass);
             busEquipment.edit(eq);
@@ -3269,8 +3285,9 @@ namespace RBI
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
-            busInputCATank.edit(ca);
-            
+            //busInputCATank.edit(ca);
+            busFullCofTank.edit(cof);
+
         }
 
         private void SaveDataCorrosionRate(RW_CORROSION_RATE_TANK corate)
@@ -3627,6 +3644,7 @@ namespace RBI
         RW_INSPECTION_HISTORY_BUS busInspectionHistory = new RW_INSPECTION_HISTORY_BUS();
         FACILITY_RISK_TARGET_BUS busRiskTarget = new FACILITY_RISK_TARGET_BUS();
         RW_DAMAGE_MECHANISM_BUS busDamageMechanism = new RW_DAMAGE_MECHANISM_BUS();
+        RW_FULL_COF_TANK_BUS busFullCofTank = new RW_FULL_COF_TANK_BUS();
         //</BUS>
         #endregion
         #region Unit String

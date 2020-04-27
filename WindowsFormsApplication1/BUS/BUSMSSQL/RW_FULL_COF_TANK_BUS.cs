@@ -19,6 +19,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.edit(obj.ID, obj.CoFValue, obj.CoFCategory, obj.ProdCost, obj.EquipOutageMultiplier, obj.equipcost, obj.popdens, obj.injcost, obj.CoFMatrixValue);
         }
+        public void editInput(RW_FULL_COF_TANK obj)
+        {
+            DAL.editInput(obj.ID, obj.ProdCost, obj.EquipOutageMultiplier, obj.equipcost, obj.popdens, obj.injcost, obj.CoFMatrixValue);
+        }
         public void delete(RW_FULL_COF_TANK obj)
         {
             DAL.delete(obj.ID);
@@ -27,5 +31,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public RW_FULL_COF_TANK getData(int ID)
+        {
+            return DAL.getData(ID);
+        }
+
     }
 }
