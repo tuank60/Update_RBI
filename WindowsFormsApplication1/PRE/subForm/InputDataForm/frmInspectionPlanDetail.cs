@@ -15,7 +15,8 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.DataAccess.Excel;
 using DevExpress.XtraPivotGrid;
 using DevExpress.XtraGrid.Views.Grid;
-
+using DevExpress.XtraSplashScreen;
+using RBI.PRE.subForm.OutputDataForm;
 
 namespace RBI.PRE.subForm.InputDataForm
 {
@@ -25,6 +26,9 @@ namespace RBI.PRE.subForm.InputDataForm
         int _coverageID = 1;
         public int planid;
         List<INSPECTION_DETAIL_TECHNIQUE> listNDT = new List<INSPECTION_DETAIL_TECHNIQUE>();
+      
+        List<ProcessPlant> listPro = new List<ProcessPlant>();
+        List<ProcessPlant> listProTank = new List<ProcessPlant>();
         public frmInspectionPlanDetail(int PlanID)
         {
             InitializeComponent();
@@ -228,28 +232,52 @@ namespace RBI.PRE.subForm.InputDataForm
                 }
                 
             }
-            //Luu tab Damage Mechanism
+            //Luu tab Damage Mechanism va luu vao [RW_INSPECTION_DETAIL]
             INSPECTION_COVERAGE_DETAIL_BUS inCoDeBus = new INSPECTION_COVERAGE_DETAIL_BUS();
             INSPECTION_COVERAGE_DETAIL inCoDe = null;
+            RW_INSPECTION_HISTORY_BUS rwInsHisBus = new RW_INSPECTION_HISTORY_BUS();
+            RW_INSPECTION_DETAIL rwInsDe = null;
+            INSPECTION_COVERAGE_BUS insCovBus = new INSPECTION_COVERAGE_BUS();
+            INSPECTION_PLAN_BUS insPlanBus = new INSPECTION_PLAN_BUS();
+            RW_ASSESSMENT_BUS rwAssBus = new RW_ASSESSMENT_BUS();
             for (int i = 0; i < gridView1.RowCount; i++)
             {
                 inCoDe = new INSPECTION_COVERAGE_DETAIL();
+                rwInsDe = new RW_INSPECTION_DETAIL();
                 INSPECTION_COVERAGE_BUS inCoBus = new INSPECTION_COVERAGE_BUS();
                 COMPONENT_MASTER_BUS comMasBus = new COMPONENT_MASTER_BUS();
                 EQUIPMENT_MASTER_BUS EquipMasBus = new EQUIPMENT_MASTER_BUS();
                 String EquipmentNumber = gridView1.GetRowCellValue(i, "EquipmentNumber").ToString();
                 String ComponentNumber = gridView1.GetRowCellValue(i, "ComponentNumber").ToString();
                 inCoDe.CoverageID = inCoBus.getIDbyEquipmentIDandComponentIDandPlanID(EquipMasBus.getIDbyNumber(EquipmentNumber), comMasBus.getIDbyName(ComponentNumber), planid);
+                
                 DM_ITEMS_BUS dmItemsBus = new DM_ITEMS_BUS();
                 inCoDe.DMItemID = dmItemsBus.getDMIteamIDbyDMDescription(gridView1.GetRowCellValue(i, "DamageMechanism").ToString());
+                
                 inCoDe.EffectivenessCode= gridView1.GetRowCellValue(i, "InspectionEffectiveness").ToString();
+                
                 inCoDe.InspectionSummary= gridView1.GetRowCellValue(i, "InspectionSummary").ToString();
+                
                 INSPECTION_PLAN_BUS inPlanBus = new INSPECTION_PLAN_BUS();
                 inCoDe.InspectionDate = inPlanBus.getPlanDate(planid);
                 inCoDe.IsCarriedOut = 0;
                 inCoDe.CarriedOutDate = inCoDe.InspectionDate;
+                rwInsDe.Coverage_DetailID = inCoDe.CoverageID;
+                rwInsDe.InspectionSummary = inCoDe.InspectionSummary;
+                rwInsDe.EffectivenessCode = inCoDe.EffectivenessCode;
+                rwInsDe.DMItemID = inCoDe.DMItemID;
+                rwInsDe.InspectionDate = inCoDe.InspectionDate;
+                rwInsDe.IsCarriedOut = inCoDe.IsCarriedOut;
+                rwInsDe.CarriedOutDate = inCoDe.CarriedOutDate;
+                rwInsDe.IsActive = 1;
+                rwInsDe.EquipmentID=insCovBus.getEquipmentID(inCoDe.CoverageID);
+                rwInsDe.ComponentID= insCovBus.getComponentID(inCoDe.CoverageID);
+                rwInsDe.InspPlanName = insPlanBus.getPlanName(insCovBus.getPlanIDbyID(inCoDe.CoverageID));
+                rwInsDe.ID = rwAssBus.getTopIDbyComponentID(rwInsDe.ComponentID);
+                rwInsHisBus.add(rwInsDe);
                 inCoDeBus.add(inCoDe);
             }
+           
             MessageBox.Show("Inspection / Mitigation planning's have been updated!", "Inspection / Mitigation Planner", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
@@ -429,8 +457,7 @@ namespace RBI.PRE.subForm.InputDataForm
         }
         private void getListProcessPlant()
         {
-            List<ProcessPlant> listPro = new List<ProcessPlant>();
-            List<ProcessPlant> listProTank = new List<ProcessPlant>();
+           
             RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
             List<COMPONENT_MASTER> comMas = new List<COMPONENT_MASTER>();
             COMPONENT_MASTER_BUS comMasBus = new COMPONENT_MASTER_BUS();
@@ -723,7 +750,9 @@ namespace RBI.PRE.subForm.InputDataForm
             gridControl2.DataSource = null;
             gridControl1.DataSource = listPro;
             gridControl2.DataSource = listProTank;
-            
+            //List<ProcessPlant> lISTPRO = listPro;
+           // lISTPRO.AddRange(listPro);
+            //List<ProcessPlant> LISTPROTANK = new List<ProcessPlant>(listProTank);
         }
       
         private List<RW_ASSESSMENT> getListAssessment(int EquipmentID)
@@ -986,6 +1015,7 @@ namespace RBI.PRE.subForm.InputDataForm
             List<SITES> listitemsSite = busSite.getData();
             int index = 0;
             cbSite.Properties.Items.Add("<ALL>", -1, -1);
+            
             for (int i = 0; i < listitemsSite.Count; i++)
             {
                 cbSite.Properties.Items.Add(listitemsSite[i].SiteName, i, i);
@@ -1015,20 +1045,110 @@ namespace RBI.PRE.subForm.InputDataForm
                 cbFacility.Properties.Items.Add(listitemsFaci[i], i, i);
             }
         }
+        private List<ProcessPlant> refressBySite (string site)//nomal
+        {
+            List<ProcessPlant> pro = new List<ProcessPlant>();
+            foreach (ProcessPlant i in listPro)
+            {
+                if (i.Site == site)
+                {
+                    pro.Add(i);
+                }
+            }
+            return pro;
+        }
+        private List<ProcessPlant> refressTankBySite(string site)
+        {
+            List<ProcessPlant> pro = new List<ProcessPlant>();
+            foreach (ProcessPlant i in listProTank)
+            {
+                if (i.Site == site)
+                {
+                    pro.Add(i);
+                }
+            }
+            return pro;
+        }
+        private List<ProcessPlant> refressBySiteAndFacility(string site,string facility)
+        {
+            List<ProcessPlant> pro = new List<ProcessPlant>();
+            List<ProcessPlant> PRO2=refressBySite(site);
+            foreach (ProcessPlant i in PRO2)
+            {
+                if (i.Facility == facility)
+                {
+                    pro.Add(i);
+                }
+            }
+            return pro;
+        }
+        private List<ProcessPlant> refressTankBySiteAndFacility(string site, string facility)
+        {
+            List<ProcessPlant> pro = new List<ProcessPlant>();
+            List<ProcessPlant> PRO2 = refressTankBySite(site);
+            foreach (ProcessPlant i in PRO2)
+            {
+                if (i.Facility == facility)
+                {
+                    pro.Add(i);
+                }
+            }
+            return pro;
+        }
+        private List<ProcessPlant> refressBySiteAndFacilityAndEquipment(string site, string facility, string equipment)
+        {
+            List<ProcessPlant> pro = new List<ProcessPlant>();
+            List<ProcessPlant> PRO2 = refressBySiteAndFacility(site, facility);
+            foreach (ProcessPlant i in PRO2)
+            {
+                if (i.EquipmentNumber == equipment)
+                {
+                    pro.Add(i);
+                }
+            }
+            return pro;
+        }
+        private List<ProcessPlant> refressTankBySiteAndFacilityAndEquipment(string site, string facility,string equipment)
+        {
+            List<ProcessPlant> pro = new List<ProcessPlant>();
+            List<ProcessPlant> PRO2 = refressTankBySiteAndFacility(site, facility);
+            foreach (ProcessPlant i in PRO2)
+            {
+                if (i.EquipmentNumber == equipment)
+                {
+                    pro.Add(i);
+                }
+            }
+            return pro;
+        }
         private void cbSite_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DevExpress.XtraEditors.ImageComboBoxEdit cb = sender as DevExpress.XtraEditors.ImageComboBoxEdit;
             cbFacility.Properties.Items.Clear();
             cbEquipment.Properties.Items.Clear();
             additemsFacility();
             additemsEquipment();
-            SITES_BUS busSite = new SITES_BUS();
-            FACILITY_BUS busFacility = new FACILITY_BUS();
-            EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
-            gridview1(busSite.getIDbyName(cbSite.Text), busFacility.getIDbyName(cbFacility.Text), busEquipment.getIDbyName(cbEquipment.Text));
+            if (cb.Text != "<ALL>")
+            {
+               
+                SITES_BUS busSite = new SITES_BUS();
+                FACILITY_BUS busFacility = new FACILITY_BUS();
+                EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
+                gridControl1.DataSource = refressBySite(cb.SelectedItem.ToString());
+                gridControl2.DataSource = refressTankBySite(cb.SelectedItem.ToString());
+            }
+            else
+            {
+                gridControl1.DataSource = listPro;
+                gridControl2.DataSource = listProTank;
+            }
+           
+            //gridview1(busSite.getIDbyName(cbSite.Text), busFacility.getIDbyName(cbFacility.Text), busEquipment.getIDbyName(cbEquipment.Text));
         }
 
         private void additemsEquipment()
         {
+            cbEquipment.Properties.Items.Clear();
             cbEquipment.Properties.Items.Add("<ALL>", -1, -1);
             cbEquipment.SelectedIndex = 0;
             int FacilityID1 = 0;
@@ -1042,7 +1162,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 FacilityID1 = busFaci.getIDbyName(cbFacility.Text);
             }
             EQUIPMENT_MASTER_BUS busequip = new EQUIPMENT_MASTER_BUS();
-            List<String> listitemsEquip = busequip.getListEquipmentName(FacilityID1);    
+            List<String> listitemsEquip = busequip.getListEquipmentNumberbyFacilityID(FacilityID1);    
             for (int i = 0; i < listitemsEquip.Count; i++)
             {
                 cbEquipment.Properties.Items.Add(listitemsEquip[i], i, i);
@@ -1050,30 +1170,52 @@ namespace RBI.PRE.subForm.InputDataForm
         }
         private void cbFacility_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbEquipment.Properties.Items.Clear();
+            DevExpress.XtraEditors.ImageComboBoxEdit cb = sender as DevExpress.XtraEditors.ImageComboBoxEdit;
             additemsEquipment();
-            SITES_BUS busSite = new SITES_BUS();
-            FACILITY_BUS busFacility = new FACILITY_BUS();
-            EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
-            gridview1(0, busFacility.getIDbyName(cbFacility.Text), 0);
+            if (cb.Text != "<ALL>")
+            {
+               
+                gridControl1.DataSource = refressBySiteAndFacility(cbSite.Text,cb.Text);
+                gridControl2.DataSource = refressTankBySiteAndFacility(cbSite.Text,cb.Text);
+                // cbEquipment.Properties.Items.Clear();
+
+            }
+            else
+            {
+                gridControl1.DataSource = refressBySite(cbSite.Text);
+                gridControl2.DataSource = refressTankBySite(cbSite.Text);
+                //additemsEquipment();
+            }
+            
         }
 
         private void btnRefesh_Click(object sender, EventArgs e)
         {
+            SplashScreenManager.ShowForm(typeof(WaitForm2));
             cbSite.Properties.Items.Clear();
             cbFacility.Properties.Items.Clear();
             cbEquipment.Properties.Items.Clear();
             additemsSite();
             additemsFacility();
             additemsEquipment();
+            SplashScreenManager.CloseForm();
         }
 
         private void cbEquipment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SITES_BUS busSite = new SITES_BUS();
-            FACILITY_BUS busFacility = new FACILITY_BUS();
-            EQUIPMENT_MASTER_BUS busEquipment = new EQUIPMENT_MASTER_BUS();
-            gridview1(0, 0, busEquipment.getIDbyName(cbEquipment.Text));
+            DevExpress.XtraEditors.ImageComboBoxEdit cb = sender as DevExpress.XtraEditors.ImageComboBoxEdit;
+
+            if (cb.Text != "<ALL>")
+            {
+                gridControl1.DataSource = refressBySiteAndFacilityAndEquipment(cbSite.Text, cbFacility.Text,cb.Text);
+                gridControl2.DataSource = refressTankBySiteAndFacilityAndEquipment(cbSite.Text, cbFacility.Text,cb.Text);
+            }
+            else
+            {
+                gridControl1.DataSource = refressBySiteAndFacility(cbSite.Text, cbFacility.Text);
+                gridControl1.DataSource = refressTankBySiteAndFacility(cbSite.Text, cbFacility.Text);
+
+            }
         }
         #endregion 
 
@@ -1123,6 +1265,30 @@ namespace RBI.PRE.subForm.InputDataForm
         private void btnClearFindings_Click(object sender, EventArgs e)
         {
             InspectionFinding = "";
+        }
+
+        private void btnSelectAllOnScreen_Click(object sender, EventArgs e)
+        {
+            if (tabPane2.SelectedPage == tabProcessPlan)
+            {
+                gridView2.SelectAll();
+            }
+            else gridView3.SelectAll();
+        }
+
+        private void btnClearAllOnScreen_Click(object sender, EventArgs e)
+        {
+            if (tabPane2.SelectedPage == tabProcessPlan)
+            {
+                gridView2.ClearSelection();
+            }
+            else gridView3.ClearSelection();
+        }
+
+        private void btnClearAll_Click(object sender, EventArgs e)
+        {
+            gridView2.ClearSelection();
+            gridView3.ClearSelection();
         }
     }
 }

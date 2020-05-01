@@ -251,6 +251,9 @@ namespace RBI
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
+                    //Save inspection history
+                    UCInspectionHistorySubform ucInsHisSub = uc.ucInspectionHistory;
+                    ucInsHisSub.saveData(IDProposal);
                     //Save Data Corrosion Rate
                     //uc.ucCorRate.SaveDateCorrosinRate();
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
@@ -654,6 +657,7 @@ namespace RBI
                 busInputCALevel1.add(rwCALevel1);
                 //busCALevel1.add(rwCA);
             }
+           // CheckAndShowTab(this.xtraTabData.SelectedTabPage.Name, 1);
             initDataforTreeList();
         }
         private void deleteRecord(object sender, EventArgs e)
@@ -2689,6 +2693,10 @@ namespace RBI
                         xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(rs);
                         //rs.Dock = DockStyle.Fill;
 
+                        break;
+                    case 11:
+                        UCInspectionHistorySubform ih = new UCInspectionHistorySubform(IDProposal);
+                        xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(ih);
                         break;
                     default:
                         xtraTabData.TabPages.TabControl.SelectedTabPage.Controls.Add(u);

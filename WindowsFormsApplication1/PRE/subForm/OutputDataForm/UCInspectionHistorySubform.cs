@@ -56,6 +56,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             //{
                
             //}
+           
 
         }
 
@@ -113,18 +114,17 @@ namespace RBI.PRE.subForm.OutputDataForm
             dtgvInsHis.Columns.Add(dtvcDelete);
             dtvcDelete.Width = 50;
             RW_INSPECTION_HISTORY_BUS rwInspHisBus = new RW_INSPECTION_HISTORY_BUS();
-            List<RW_INSPECTION_DETAIL> lstRwInsDe= rwInspHisBus.getDataSourcebyDetailID(IDAss);
+            List<RW_INSPECTION_DETAIL> lstRwInsDe= rwInspHisBus.getDataSourcebyID(IDAss);
             foreach(RW_INSPECTION_DETAIL de in lstRwInsDe)
             {
-                dtgvInsHis.Rows.Add(de.InspPlanName, de.InspectionDate.ToShortDateString(), dmItemsBus.getDMDescriptionbyDMItemID(de.DMItemID), de.InspectionSummary, "...", de.EffectivenessCode, de.IsCarriedOut, de.CarriedOutDate,"Delete");
+                dtgvInsHis.Rows.Add(de.InspPlanName, de.InspectionDate.ToShortDateString(), dmItemsBus.getDMDescriptionbyDMItemID(de.DMItemID), de.InspectionSummary, "...", de.EffectivenessCode, de.IsCarriedOut, de.CarriedOutDate, "✖");
             }
             dtgvInsHis.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             dtgvInsHis.AllowUserToAddRows = false;
         }
         private void btnRestoreInspectionPlan_Click(object sender, EventArgs e)
         {
-            WaitForm2 wf = new WaitForm2();
-            wf.Show();
+            SplashScreenManager.ShowForm(typeof(WaitForm2));
             dtgvInsHis.Rows.Clear();
            
            RW_ASSESSMENT_BUS rwAssBus = new RW_ASSESSMENT_BUS();
@@ -139,7 +139,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 foreach (int j in listIDDetal)
                 {
                     INSPECTION_COVERAGE_DETAIL insCovDe = insCovDeBus.getDataSourcebyID(j);
-                    dtgvInsHis.Rows.Add(inPlanBus.getPlanName(insCovBus.getPlanIDbyID(i)), insCovDe.InspectionDate.ToShortDateString(), dmItemsBus.getDMDescriptionbyDMItemID(insCovDe.DMItemID), insCovDe.InspectionSummary,"...", insCovDe.EffectivenessCode, insCovDe.IsCarriedOut, insCovDe.CarriedOutDate.ToShortDateString(),"Delete");
+                    dtgvInsHis.Rows.Add(inPlanBus.getPlanName(insCovBus.getPlanIDbyID(i)), insCovDe.InspectionDate.ToShortDateString(), dmItemsBus.getDMDescriptionbyDMItemID(insCovDe.DMItemID), insCovDe.InspectionSummary,"...", insCovDe.EffectivenessCode, insCovDe.IsCarriedOut, insCovDe.CarriedOutDate.ToShortDateString(), "✖");
                 }
             }
             int n = dtgvInsHis.RowCount;
@@ -151,7 +151,34 @@ namespace RBI.PRE.subForm.OutputDataForm
                 dtgvInsHis.Rows[i].Cells[8].ReadOnly = false;
                 dtgvInsHis.Rows[i].Cells[3].ReadOnly = false;
             }
-            wf.Close();
+            SplashScreenManager.CloseForm();
+
+        }
+        public void saveData(int ID)
+        {
+           
+            RW_INSPECTION_DETAIL InsHis = null;
+            RW_INSPECTION_HISTORY_BUS InsHisBus = new RW_INSPECTION_HISTORY_BUS();
+            EQUIPMENT_MASTER_BUS eqMasBus = new EQUIPMENT_MASTER_BUS();
+            RW_ASSESSMENT_BUS rwAssBus = new RW_ASSESSMENT_BUS();
+            DM_ITEMS_BUS dmItemsBus = new DM_ITEMS_BUS();
+            InsHisBus.delete(ID);
+            for (int i = 0; i < dtgvInsHis.RowCount; i++)
+            {
+                InsHis = new RW_INSPECTION_DETAIL();
+                InsHis.ID = ID;
+                InsHis.InspPlanName = dtgvInsHis.Rows[i].Cells[0].Value.ToString();
+                InsHis.EquipmentID = rwAssBus.getEquipmentID(ID);
+                InsHis.ComponentID = rwAssBus.getComponentID(ID);
+                InsHis.DMItemID= dmItemsBus.getDMIteamIDbyDMDescription(dtgvInsHis.Rows[i].Cells[2].Value.ToString());
+                InsHis.InspectionDate = Convert.ToDateTime(dtgvInsHis.Rows[i].Cells[1].Value.ToString());
+                InsHis.InspectionSummary = dtgvInsHis.Rows[i].Cells[3].Value.ToString();
+                InsHis.EffectivenessCode= dtgvInsHis.Rows[i].Cells[5].Value.ToString();
+                InsHis.IsCarriedOut = (int)dtgvInsHis.Rows[i].Cells[6].Value;
+                InsHis.CarriedOutDate= Convert.ToDateTime(dtgvInsHis.Rows[i].Cells[7].Value.ToString());
+                InsHis.IsActive = 1;
+                InsHisBus.add(InsHis);
+            }
             
         }
 
@@ -162,13 +189,13 @@ namespace RBI.PRE.subForm.OutputDataForm
             int n = rwInsHisBus.getDataComp(rwAssBus.getComponentID(IDAss)).Count;
             if(n>0)
             {
-                dtgvInsHis.Rows.Add("-", DateTime.Now.ToShortDateString(), "Corrosion Under Insulation", "", "", "E", 0, DateTime.Now.ToShortDateString());
+                dtgvInsHis.Rows.Add("-", DateTime.Now.ToShortDateString(), "Corrosion Under Insulation", "", "", "E", 0, DateTime.Now.ToShortDateString(), "✖");
             }
             else
             {
                 if(dtgvInsHis.RowCount>0)
                 {
-                    dtgvInsHis.Rows.Add("-", DateTime.Now.ToShortDateString(), "Corrosion Under Insulation", "", "", "E", 0, DateTime.Now.ToShortDateString());
+                    dtgvInsHis.Rows.Add("-", DateTime.Now.ToShortDateString(), "Corrosion Under Insulation", "", "", "E", 0, DateTime.Now.ToShortDateString(), "✖");
                 }
                 else
                 {
@@ -198,6 +225,11 @@ namespace RBI.PRE.subForm.OutputDataForm
                     senderGrid.Rows.RemoveAt(e.RowIndex);
                 }
             }
+        }
+
+        private void UCInspectionHistorySubform_ContextMenuStripChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("su kien");
         }
     }
 }

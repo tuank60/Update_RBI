@@ -138,6 +138,7 @@
             this.btnUnitSetting = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem20 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem21 = new DevExpress.XtraBars.BarButtonItem();
+            this.hideContainerLeft = new DevExpress.XtraBars.Docking.AutoHideContainer();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popNew)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popExportExcel)).BeginInit();
@@ -1114,6 +1115,14 @@
             this.barButtonItem21.Name = "barButtonItem21";
             this.barButtonItem21.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // hideContainerLeft
+            // 
+            this.hideContainerLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(242)))));
+            this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 147);
+            this.hideContainerLeft.Name = "hideContainerLeft";
+            this.hideContainerLeft.Size = new System.Drawing.Size(35, 465);
+            // 
             // RibbonForm1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -1272,5 +1281,6 @@
         private DevExpress.XtraBars.BarButtonItem btnUnitSeting;
         private DevExpress.XtraBars.BarButtonItem btnAssessmentMethod;
         private DevExpress.XtraNavBar.NavBarItem navCorrosionRate;
+        private DevExpress.XtraBars.Docking.AutoHideContainer hideContainerLeft;
     }
 }

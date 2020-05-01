@@ -55,8 +55,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             foreach (INSPECTION_COVERAGE inspCove in listInscove)
             {
                 INSPECTION_COVERAGE rwInspCove = inspCove;
-                rwInspCove.EquipmentName = buseq.getEquipmentName(inspCove.EquipmentID);
-                rwInspCove.ComponentName = buscom.getComponentName(inspCove.ComponentID);
+                rwInspCove.EquipmentName = buseq.getEquipmentNumber(inspCove.EquipmentID);
+                rwInspCove.ComponentName = buscom.getComponentNumber(inspCove.ComponentID);
                 rwInspCove.InspectionPlanName = businsplan.getPlanName(inspCove.PlanID);
                 rwInspCove.InspectionPlanDate = businsplan.getPlanDate(inspCove.PlanID).ToString();
                 listData.Add(rwInspCove);    
@@ -75,7 +75,8 @@ namespace RBI.PRE.subForm.OutputDataForm
                 gridView1.Columns.Remove(gridView1.Columns["ID"]);
                 gridView1.Columns.Remove(gridView1.Columns["PlanID"]);
                 gridView1.Columns.Remove(gridView1.Columns["EquipmentID"]);
-                gridView1.Columns.Remove(gridView1.Columns["ComponentID"]);                
+                gridView1.Columns.Remove(gridView1.Columns["ComponentID"]);
+                gridView1.Columns.Remove(gridView1.Columns["FindingRTF"]);
             }
             catch
             {

@@ -205,20 +205,23 @@ namespace RBI.PRE.subForm.InputDataForm
             else
             {
                 //get data for API component
+                string[] componentTypeName = { "Bend / Elbow", "Cylindrical Section", "Cylindrical Shell", "Elliptical Head", "Hemispherical Head", "Nozzle", "Pressure Relief Device", "Reducer", "Spherical Shell", "Torispherical Head" };
+                string[] APIcomp = { "COLBTM", "COLMID", "COLTOP", "COMPC", "COMPR", "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "COURSE-10", "DRUM", "FILTER", "FINFAN", "HEXSS", "HEXTS", "HEXTUBE", "KODRUM", "PIPE-1", "PIPE-2", "PIPE-4", "PIPE-6", "PIPE-8", "PIPE-10", "PIPE-12", "PIPE-16", "PIPEGT16", "PUMP1S", "PUMP2S", "PUMPR", "REACTOR", "OTHER" };
                 listAPIComponent = API_BUS.getDataSource();
                 cbAPIComponentType.Properties.Items.Clear();
                 cbAPIComponentType.Properties.Items.Add("", -1, -1);
-                for (int i = 0; i < listAPIComponent.Count; i++)
+                for (int i = 0; i < APIcomp.Length; i++)
                 {
-                    cbAPIComponentType.Properties.Items.Add(listAPIComponent[i].APIComponentTypeName, i, i);
+                    cbAPIComponentType.Properties.Items.Add(APIcomp[i], i, i);
                 }
                 //get data for component type
+
                 listComponent = componentBus.getDataSource();
                 cbComponentType.Properties.Items.Clear();
                 cbComponentType.Properties.Items.Add("", -1, -1);
-                for (int i = 0; i < listComponent.Count; i++)
+                for (int i = 0; i < componentTypeName.Length; i++)
                 {
-                    cbComponentType.Properties.Items.Add(listComponent[i].ComponentTypeName, i, i);
+                    cbComponentType.Properties.Items.Add(componentTypeName[i], i, i);
                 }
             }
             //</lọc data cho tank>
@@ -351,28 +354,40 @@ namespace RBI.PRE.subForm.InputDataForm
         private void cbComponentType_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbAPIComponentType.Properties.Items.Clear();
-            string[] APIcomp = { "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "TANKBOTTOM" };
-            if (this.cbComponentType.SelectedItem.ToString() == "Shell")
+            if (txtEquipmentType.Text == "Tank")
             {
-                cbAPIComponentType.Enabled = true;
-                picAPIComponent.Visible = true;
-                for (int i = 0; i < APIcomp.Length - 1; i++)
-                {
-                    cbAPIComponentType.Properties.Items.Add(APIcomp[i], i, i);
-                }
+                string[] APIcomp = { "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "TANKBOTTOM" };
 
-            }
-            else if (this.cbComponentType.SelectedItem.ToString() == "Tank Bottom")
-            {
-                cbAPIComponentType.Enabled = true;
-                picAPIComponent.Visible = true;
-                cbAPIComponentType.Properties.Items.Add("TANKBOTTOM", 0, 0);
+                if (this.cbComponentType.SelectedItem.ToString() == "Shell")
+                {
+                    cbAPIComponentType.Enabled = true;
+                    picAPIComponent.Visible = true;
+                    for (int i = 0; i < APIcomp.Length - 1; i++)
+                    {
+                        cbAPIComponentType.Properties.Items.Add(APIcomp[i], i, i);
+                    }
+
+                }
+                else if (this.cbComponentType.SelectedItem.ToString() == "Tank Bottom")
+                {
+                    cbAPIComponentType.Enabled = true;
+                    picAPIComponent.Visible = true;
+                    cbAPIComponentType.Properties.Items.Add("TANKBOTTOM", 0, 0);
+                }
+                else
+                {
+
+                    cbAPIComponentType.Enabled = false;
+                    picAPIComponent.Visible = false;
+                }
             }
             else
             {
-
-                cbAPIComponentType.Enabled = false;
-                picAPIComponent.Visible = false;
+                 string[] APIcomp = { "COLBTM", "COLMID", "COLTOP", "COMPC", "COMPR", "COURSE-1", "COURSE-10", "COURSE-2", "COURSE-3", "COURSE-4", "COURSE-5", "COURSE-6", "COURSE-7", "COURSE-8", "COURSE-9", "COURSE-10", "DRUM", "FILTER", "FINFAN", "HEXSS", "HEXTS", "HEXTUBE", "KODRUM", "PIPE-1", "PIPE-2", "PIPE-4", "PIPE-6", "PIPE-8", "PIPE-10", "PIPE-12", "PIPE-16", "PIPEGT16", "PUMP1S", "PUMP2S", "PUMPR", "REACTOR", "OTHER" };
+                for (int i = 0; i < APIcomp.Length ; i++)
+                {
+                    cbAPIComponentType.Properties.Items.Add(APIcomp[i], i, i);
+                }
             }
         }
     }
