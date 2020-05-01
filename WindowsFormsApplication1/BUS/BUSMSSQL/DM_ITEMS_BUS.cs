@@ -27,6 +27,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public List<String> getDMDescription()
+        {
+            return DAL.getDMDescription();
+        }
         public String getDMDescriptionbyDMItemID(int DMItemID)
         {
             return DAL.getDMDescriptionbyDMItemID(DMItemID);

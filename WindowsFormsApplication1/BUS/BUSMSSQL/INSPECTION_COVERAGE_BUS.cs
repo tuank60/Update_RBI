@@ -40,9 +40,17 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getIDbyPlanID(PlanID);//HaiK61
         }
+        public int getPlanIDbyID(int ID)
+        {
+            return DAL.getPlanIDbyID(ID);//HaiK61
+        }
         public int getIDbyEquipmentIDandComponentIDandPlanID(int EquipmentID,int ComponentID,int PlanID)
         {
             return DAL.getIDbyEquipmentIDandComponentID(EquipmentID, ComponentID, PlanID);//HaiK61
+        }
+        public List<int> getlistIDbyEquipmentIDandComponentID(int EquipmentID, int ComponentID)
+        {
+            return DAL.getlistIDbyEquipmentIDandComponentID(EquipmentID, ComponentID);
         }
 
     }

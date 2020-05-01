@@ -27,6 +27,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public List<RW_INSPECTION_DETAIL> getDataSourcebyDetailID(int ID)
+        {
+            return DAL.getDataSourcebyDetailID(ID);
+        }
         public List<RW_INSPECTION_DETAIL> getDataComp(int CompID)
         {
             return DAL.getDataComp(CompID);

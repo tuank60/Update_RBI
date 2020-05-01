@@ -163,16 +163,8 @@ namespace RBI.PRE.subForm.OutputDataForm
                 TabArea.PageVisible = false;
                 tabCAShell.PageVisible = true;
                 tabCATankShell.PageVisible = true;
-                #region  table RW_FULL_COF_TANK
-                RW_FULL_COF_TANK_BUS COFBus = new RW_FULL_COF_TANK_BUS();
-                RW_FULL_COF_TANK obj = COFBus.getData(ID);
-                txtProdCost.Text = obj.ProdCost.ToString();
-                
-                txtEquipOutageMultiplier.Text = obj.EquipOutageMultiplier.ToString();
-                txtEquip.Text = obj.equipcost.ToString();
-                txtDensity.Text = obj.popdens.ToString();
-                txtInjury.Text = obj.injcost.ToString();
-                #endregion
+                initData_InputTank(ID);
+
             }
             else
             {
@@ -223,10 +215,25 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbConsequenceCategory.Text = caTank.ConsequenceCategory;
         }
         
+        private void initData_InputTank(int ID)
+        {
+            #region  table RW_FULL_COF_TANK
+            RW_FULL_COF_TANK_BUS COFBus = new RW_FULL_COF_TANK_BUS();
+            int test = ID; // test ở đây
+            RW_FULL_COF_TANK obj = COFBus.getData(ID);
+            txtIDFullCOFTankInTabShell.Text = obj.ID.ToString();
+            txtProcessUnitReplace.Text = obj.ProdCost.ToString();
+            txtEquipOutageMultiplier.Text = obj.EquipOutageMultiplier.ToString();
+            txtLossProduction.Text = obj.equipcost.ToString();
+            txtDensity.Text = obj.popdens.ToString();
+            txtInjury.Text = obj.injcost.ToString();
+            #endregion
+        }
         private void initData_Shell(int ID)
         {
             RW_CA_TANK_BUS busCA_Tank = new RW_CA_TANK_BUS();
             RW_CA_TANK caTank = busCA_Tank.getData(ID);
+
             #region consequences area
             tbFlowRateShellD1.Text = caTank.Flow_Rate_D1.ToString();
             tbFlowRateShellD2.Text = caTank.Flow_Rate_D2.ToString();
@@ -268,7 +275,31 @@ namespace RBI.PRE.subForm.OutputDataForm
             #endregion
 
             #region Tab COF Financial for Shell
+
+            txtHdraulicWater.Text = caTank.Hydraulic_Water.ToString();
+            txtHdraulicFluid.Text = caTank.Hydraulic_Fluid.ToString();
+            txtSeepageVelocity.Text = caTank.Seepage_Velocity.ToString();
+
+            txtFlowRateShellD1.Text = caTank.Flow_Rate_D1.ToString();
+            txtFlowRateShellD2.Text = caTank.Flow_Rate_D2.ToString();
+            txtFlowRateShellD3.Text = caTank.Flow_Rate_D3.ToString();
+            txtFlowRateShellD4.Text = caTank.Flow_Rate_D4.ToString();
             
+            txtHeightAboveShell.Text = caTank.Liquid_Height.ToString();
+            txtVolumnAboveShell.Text = caTank.Volume_Fluid.ToString();
+
+            txtLeakDurationShellD1.Text = caTank.Leak_Duration_D1.ToString();
+            txtLeakDurationShellD2.Text = caTank.Leak_Duration_D2.ToString();
+            txtLeakDurationShellD3.Text = caTank.Leak_Duration_D3.ToString();
+            txtLeakDurationShellD4.Text = caTank.Leak_Duration_D4.ToString();
+
+            txtReleaseVolumeLeakageShellD1.Text = caTank.Release_Volume_Leak_D1.ToString();
+            txtReleaseVolumeLeakageShellD2.Text = caTank.Release_Volume_Leak_D2.ToString();
+            txtReleaseVolumeLeakageShellD3.Text = caTank.Release_Volume_Leak_D3.ToString();
+            txtReleaseVolumeLeakageShellD4.Text = caTank.Release_Volume_Leak_D4.ToString();
+
+            txtReleaseVolumeFromRuptureShell.Text = caTank.Release_Volume_Rupture_D1.ToString(); // lưu giá trị này ở D1
+
             tbWithinDikeLeakageShell.Text = caTank.Barrel_Dike_Leak.ToString();
             tbWithinDikeRuptureShell.Text = caTank.Barrel_Dike_Rupture.ToString();
             tbOn_siteLeakageShell.Text = caTank.Barrel_Onsite_Leak.ToString();
@@ -277,14 +308,16 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbOff_siteRupureShell.Text = caTank.Barrel_Offsite_Rupture.ToString();
             txtReachWaterLeakageShell.Text = caTank.Barrel_Water_Leak.ToString();
             txtReachWaterRuptureShell.Text = caTank.Barrel_Water_Rupture.ToString();
+
             tbFCenvLeakageShell.Text = caTank.FC_Environ_Leak.ToString();
             tbFCenvRuptureShell.Text = caTank.FC_Environ_Rupture.ToString();
+
             tbTotalFCenvShell.Text = caTank.FC_Environ.ToString();
             tbComponentDamageCostShell.Text = caTank.Component_Damage_Cost.ToString();
-            //tbDamageSurroundEquipmentShell.Text = caTank.
+            //tbDamageSurroundEquipmentShell.Text = cần bổ sung base 
             tbCostOfBusinessInterruptionShell.Text = caTank.Business_Cost.ToString();
-            //tbCostAssociatedPersonInjury.Text =
-            
+            //tbCostAssociatedPersonInjury.Text = cần bổ sung base 
+
             #endregion
         }
 
@@ -292,13 +325,13 @@ namespace RBI.PRE.subForm.OutputDataForm
         public RW_FULL_COF_TANK getDataInputCOFTank(int ID)
         {
             input.ID = ID;
-            input.ProdCost = txtProdCost.Text != "" ? float.Parse(txtProdCost.Text) : 0;
-            MessageBox.Show(txtProdCost.ToString());
-            //input.ProdCost = txtProdCostDev.Text != "" ? float.Parse(txtProdCost.Text) : 0;
+            //input.ProdCost = float.Parse(a) ;
+            //MessageBox.Show(txtProdCost.ToString(), txtDensity.ToString());
+            input.equipcost = txtProcessUnitReplace.Text != "" ? float.Parse(txtProcessUnitReplace.Text) : 0;
             input.EquipOutageMultiplier = txtEquipOutageMultiplier.Text != "" ? float.Parse(txtEquipOutageMultiplier.Text) : 0;
-            input.equipcost = txtEquip.Text != "" ? float.Parse(txtEquip.Text) : 0; 
+            input.ProdCost = txtLossProduction.Text != "" ? float.Parse(txtLossProduction.Text) : 0; 
             input.injcost =  txtInjury.Text != "" ? float.Parse(txtInjury.Text) : 0;
-            input.popdens = 99999;
+            input.popdens = txtDensity.Text != "" ? float.Parse(txtDensity.Text) : 0; 
             return input;
         }
 
@@ -537,7 +570,6 @@ namespace RBI.PRE.subForm.OutputDataForm
          }
         
         #endregion
-
         #region KeyPress Event Handle
         private void keyPressEvent(TextBox textbox, KeyPressEventArgs ev)
         {
@@ -553,7 +585,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
         private void txtProdCost_KeyPress(object sender, KeyPressEventArgs e)
         {
-            keyPressEvent(txtProdCost, e);
+            keyPressEvent(txtProcessUnitReplace, e);
         }
 
         private void txtEquipOutageMultiplier_KeyPress(object sender, KeyPressEventArgs e)
@@ -563,7 +595,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         
         private void txtEquip_KeyPress(object sender, KeyPressEventArgs e)
         {
-            keyPressEvent(txtEquip, e);
+            keyPressEvent(txtLossProduction, e);
         }
 
         private void txtDensity_KeyPress(object sender, KeyPressEventArgs e)
@@ -577,5 +609,15 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
 
         #endregion
+
+        private void btnSaveInputShell_Click(object sender, EventArgs e) //dùng button này để sửa giá trị bảng RW full cof tank
+        {
+            int ID = int.Parse(txtIDFullCOFTankInTabShell.Text);
+            RW_FULL_COF_TANK inputShell = new RW_FULL_COF_TANK();
+            inputShell = getDataInputCOFTank(ID);
+            RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
+            busCA_Tank.edit(inputShell);
+            MessageBox.Show("Update Input", "Coterk RBI");
+        }
     }
 }

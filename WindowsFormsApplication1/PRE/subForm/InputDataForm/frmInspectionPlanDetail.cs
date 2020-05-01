@@ -246,6 +246,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 inCoDe.InspectionSummary= gridView1.GetRowCellValue(i, "InspectionSummary").ToString();
                 INSPECTION_PLAN_BUS inPlanBus = new INSPECTION_PLAN_BUS();
                 inCoDe.InspectionDate = inPlanBus.getPlanDate(planid);
+                inCoDe.IsCarriedOut = 0;
+                inCoDe.CarriedOutDate = inCoDe.InspectionDate;
                 inCoDeBus.add(inCoDe);
             }
             MessageBox.Show("Inspection / Mitigation planning's have been updated!", "Inspection / Mitigation Planner", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -283,7 +285,7 @@ namespace RBI.PRE.subForm.InputDataForm
                 + this.lstMethod.GetItemText(this.lstMethod.SelectedItem) + " + " 
                 + this.lstTechnique.GetItemText(this.lstTechnique.SelectedItem);
             
-            MessageBox.Show(item);
+            //MessageBox.Show(item);
             ipTech.NDTMethod = item;
             ButtonAddClicked = true;
             listNDT.Add(ipTech);

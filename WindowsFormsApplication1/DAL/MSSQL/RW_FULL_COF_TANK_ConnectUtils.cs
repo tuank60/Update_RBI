@@ -168,7 +168,7 @@ namespace RBI.DAL.MSSQL
                         ",[popdens]" +
                         ",[injcost]" +
                         ",[CoFMatrixValue]" +
-                          "From [dbo].[RW_FULL_COF_TANK]  ";
+                          "From [dbo].[RW_FULL_COF_TANK] WHERE [ID] ='" + ID + "'";
 
             try
             {

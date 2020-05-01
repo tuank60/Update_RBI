@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class INSPECTION_COVERAGE_DETAIL_ConnectUtils
     {
-        public void add(int CoverageID,int DMItemID, DateTime InspectionDate, String EffectivenessCode,String InspectionSummary)
+        public void add(int CoverageID,int DMItemID, DateTime InspectionDate, String EffectivenessCode,String InspectionSummary, int IsCarriedOut, DateTime CarriedOutDate)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -22,13 +22,17 @@ namespace RBI.DAL.MSSQL
                             ",[DMItemID]" +
                             ",[InspectionDate]" +
                             ",[EffectivenessCode]" +
-                            ",[InspectionSummary])" +
+                            ",[InspectionSummary]" +
+                            ",[IsCarriedOut]" +
+                            ",[CarriedOutDate])" +
                             "VALUES" +
                             "('" + CoverageID + "'" +
                             ",'" + DMItemID + "'" +
                             ",'" + InspectionDate + "'" +
                             ",'" + EffectivenessCode + "'" +
-                            ",'" + InspectionSummary + "')";
+                            ",'" + InspectionSummary + "'"+
+                            ",'" + IsCarriedOut + "'"+
+                            ",'" + CarriedOutDate + "')";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -180,6 +184,61 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
+        public INSPECTION_COVERAGE_DETAIL getDataSourcebyID(int ID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+           
+            INSPECTION_COVERAGE_DETAIL obj = null;
+            String sql = " Use [rbi] Select [CoverageID]" +
+                          ",[DMItemID]" +
+                          ",[InspectionDate]" +
+                          ",[EffectivenessCode]" +
+                          ",[InspectionSummary]" +
+                          ",[IsCarriedOut]" +
+                          ",[CarriedOutDate]" +
+                          "From [dbo].[INSPECTION_COVERAGE_DETAIL] where ID = '" + ID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj = new INSPECTION_COVERAGE_DETAIL();
+                            obj.ID = ID;
+                            obj.CoverageID = reader.GetInt32(0);
+                            obj.DMItemID = reader.GetInt32(1);
+                            obj.InspectionDate = reader.GetDateTime(2);
+                            obj.EffectivenessCode = reader.GetString(3);
+                            obj.InspectionSummary = reader.GetString(4);
+                            //obj.IsCarriedOut = reader.GetOrdinal("IsCarriedOut");
+                            obj.IsCarriedOut = (reader.GetBoolean(5)==true)?1:0;
+                            //obj.CarriedOutDate= reader.GetDateTime(6);
+                            if (!reader.IsDBNull(6))
+                            {
+                                obj.CarriedOutDate = reader.GetDateTime(6);
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
         public String getEffectivenessCodebyCoverageIDandDMItemID(int CoverageID, int DMItemID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -213,6 +272,43 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
             return EffectivenessCode;
+        }
+        public List<int> getIDbyCoverageID(int CoverageID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<int> list = new List<int>();
+            int ID = 0;
+            String sql = "Use [rbi]" +
+                        "SELECT [ID]" +
+                        "From [dbo].[INSPECTION_COVERAGE_DETAIL] where CoverageID = '" + CoverageID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ID = (int)reader.GetInt64(0);
+                        }
+                        list.Add(ID);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
         }
 
     }

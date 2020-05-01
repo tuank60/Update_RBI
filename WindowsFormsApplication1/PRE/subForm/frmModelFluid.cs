@@ -25,7 +25,6 @@ namespace RBI.PRE.subForm
                 DataTable data1 = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(query, con);
                 adapter.Fill(data1);
-                //Console.WriteLine("a="+a);
                 con.Close();
                 dtgvModelFluid.DataSource = data1;
             }

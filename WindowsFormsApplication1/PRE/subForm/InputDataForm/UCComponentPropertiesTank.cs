@@ -145,6 +145,8 @@ namespace RBI.PRE.subForm.InputDataForm
             if (volumeUnit == "M3") txtComponentVolume.Text = comp.ComponentVolume.ToString();
             else txtComponentVolume.Text = (comp.ComponentVolume / convUnit.ft3).ToString();
 
+            txtShellHeight.Text = (comp.ShellHeight).ToString();// lay don vi m
+
             chkConcreteAsphalt.Checked = comp.ConcreteFoundation == 1 ? true : false;
             chkPresenceCracks.Checked = comp.CracksPresent == 1 ? true : false;
             chkPreventionBarrier.Checked = comp.ReleasePreventionBarrier == 1 ? true : false;
@@ -242,6 +244,7 @@ namespace RBI.PRE.subForm.InputDataForm
            //else tank.TANK_DIAMETTER = txtTankDiameter.Text != "" ? float.Parse(txtTankDiameter.Text)  : 0; // m sang mm
             tank.ConcreteFoundation= chkConcreteAsphalt.Checked ? 1 : 0;
             tank.Prevention_Barrier = chkPreventionBarrier.Checked ? 1 : 0;
+            tank.SHELL_COURSE_HEIGHT = txtShellHeight.Text != "" ? (float)(double.Parse(txtShellHeight.Text) ) : 0; // lay don vi m
             return tank;
         }
         private void addItemsBrinnellHardness()

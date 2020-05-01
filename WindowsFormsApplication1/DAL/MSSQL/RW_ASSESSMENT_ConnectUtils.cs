@@ -482,6 +482,39 @@ namespace RBI.DAL.MSSQL
             }
             return eqID;
         }
+        public int getComponentID(int ID)
+        {
+            int comID = 0;
+            SqlConnection con = MSSQLDBUtils.GetDBConnection();
+            con.Open();
+            String sql = "SELECT [ComponentID] FROM [rbi].[dbo].[RW_ASSESSMENT] WHERE ID = '" + ID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = sql;
+                cmd.Connection = con;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            comID = reader.GetInt32(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Get Equipment ID Fail------->" + ex.ToString(), "Get Data Fail");
+            }
+            finally
+            {
+                con.Close();
+                con.Dispose();
+            }
+            return comID;
+        }
         public DateTime getAssessmentDate(int ID)
         {
             DateTime assDate = DateTime.Now;
