@@ -13,23 +13,23 @@ namespace RBI.BUS.BUSMSSQL
         RW_INSPECTION_DETAIL_ConnUtils DAL = new RW_INSPECTION_DETAIL_ConnUtils();
         public void add(RW_INSPECTION_DETAIL obj)
         {
-            DAL.add( obj.DetailID, obj.EquipmentID, obj.ComponentID, obj.Coverage_DetailID, obj.InspPlanName, obj.InspectionDate, obj.DMItemID, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate, obj.IsActive);
+            DAL.add( obj.ID, obj.EquipmentID, obj.ComponentID, obj.Coverage_DetailID, obj.InspPlanName, obj.InspectionDate, obj.DMItemID, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate, obj.IsActive);
         }
         public void edit(RW_INSPECTION_DETAIL obj)
         {
             DAL.edit(obj.ID, obj.DetailID, obj.EquipmentID, obj.ComponentID, obj.Coverage_DetailID, obj.InspPlanName, obj.InspectionDate, obj.DMItemID, obj.EffectivenessCode, obj.InspectionSummary, obj.IsCarriedOut, obj.CarriedOutDate, obj.IsActive);
         }
-        public void delete(RW_INSPECTION_DETAIL obj)
+        public void delete(int ID)
         {
-            DAL.delete(obj.ID);
+            DAL.delete(ID);
         }
         public List<RW_INSPECTION_DETAIL> getDataSource()
         {
             return DAL.getDataSource();
         }
-        public List<RW_INSPECTION_DETAIL> getDataSourcebyDetailID(int ID)
+        public List<RW_INSPECTION_DETAIL> getDataSourcebyID(int ID)
         {
-            return DAL.getDataSourcebyDetailID(ID);
+            return DAL.getDataSourcebyID(ID);
         }
         public List<RW_INSPECTION_DETAIL> getDataComp(int CompID)
         {

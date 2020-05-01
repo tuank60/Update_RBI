@@ -11,13 +11,13 @@ namespace RBI.DAL.MSSQL
 {
     class RW_INSPECTION_DETAIL_ConnUtils
     {
-        public void add(int DetailID, int EquipmentID, int ComponentID, int Coverage_DetailID, String InspPlanname, DateTime InspectionDate, int DMItemID, String EffectivenessCode, String InspectionSummary, int IsCarriedOut, DateTime CarriedOutDate, int IsActive)
+        public void add(int ID, int EquipmentID, int ComponentID, int Coverage_DetailID, String InspPlanname, DateTime InspectionDate, int DMItemID, String EffectivenessCode, String InspectionSummary, int IsCarriedOut, DateTime CarriedOutDate, int IsActive)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi] " +
                         "INSERT INTO [dbo].[RW_INSPECTION_DETAIL] " +
-                        "([DetailID] " +
+                        "([ID] " +
                         ",[EquipmentID] " +
                         ",[ComponentID] " +
                         ",[Coverage_DetailID] " +
@@ -30,7 +30,7 @@ namespace RBI.DAL.MSSQL
                         ",[CarriedOutDate] " +
                         ",[IsActive])" +
                         " VALUES " +
-                        "('" + DetailID + "'" +
+                        "('" + ID + "'" +
                         ",'" + EquipmentID + "'" +
                         ",'" + ComponentID + "'" +
                         ",'" + Coverage_DetailID + "'" +
@@ -179,7 +179,7 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
-         public List<RW_INSPECTION_DETAIL> getDataSourcebyDetailID(int DetailID)
+         public List<RW_INSPECTION_DETAIL> getDataSourcebyID(int ID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -198,7 +198,7 @@ namespace RBI.DAL.MSSQL
                         ",[IsCarriedOut]" +
                         ",[CarriedOutDate]" +
                         ",[IsActive]" +
-                        "  FROM [rbi].[dbo].[RW_INSPECTION_DETAIL] WHERE [DetailID] ='" + DetailID + "'"; 
+                        "  FROM [rbi].[dbo].[RW_INSPECTION_DETAIL] WHERE [ID] ='" + ID + "'"; 
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -212,25 +212,27 @@ namespace RBI.DAL.MSSQL
                         {
                             obj = new RW_INSPECTION_DETAIL();
                             obj.ID = reader.GetInt32(0);
-                            obj.DetailID = reader.GetInt32(1);
+                            obj.DetailID = (Int32)reader.GetInt64(1);
                             obj.EquipmentID = reader.GetInt32(2);
                             obj.ComponentID = reader.GetInt32(3);
-                            obj.Coverage_DetailID = reader.GetInt32(4);
+                            obj.Coverage_DetailID = (Int32)reader.GetInt64(4);
                             obj.InspPlanName = reader.GetString(5);
                             obj.InspectionDate = reader.GetDateTime(6);
                             obj.DMItemID = reader.GetInt32(7);
                             obj.EffectivenessCode = reader.GetString(8);
-                            obj.IsCarriedOut = reader.GetInt32(9);
-                            obj.CarriedOutDate = reader.GetDateTime(10);
-                            obj.IsActive = reader.GetInt32(11);
+                            obj.InspectionSummary= reader.GetString(9);
+                            obj.IsCarriedOut = (reader.GetBoolean(10)==true)?1:0;
+                            obj.CarriedOutDate = reader.GetDateTime(11);
+                            obj.IsActive = reader.GetBoolean(12)==true?1:0;
                             list.Add(obj);
                         }
                     }
                 }
             }
-            catch
+            catch (Exception e)
             {
                 // do nothing
+                MessageBox.Show(e.ToString(), "ADD FAIL!");
             }
             finally
             {

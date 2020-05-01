@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInspectionPlanDetail));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.labelMain = new System.Windows.Forms.Label();
@@ -177,7 +177,6 @@
             this.gridColumn80 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn156 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn157 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn155 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAP2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAP3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRLI = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -349,6 +348,7 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn155 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -1729,7 +1729,7 @@
             this.tabTank.Caption = "Tank";
             this.tabTank.Controls.Add(this.panel9);
             this.tabTank.Name = "tabTank";
-            this.tabTank.Size = new System.Drawing.Size(1188, 287);
+            this.tabTank.Size = new System.Drawing.Size(1068, 279);
             // 
             // panel9
             // 
@@ -1737,7 +1737,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1188, 287);
+            this.panel9.Size = new System.Drawing.Size(1068, 279);
             this.panel9.TabIndex = 0;
             // 
             // gridControl2
@@ -1750,7 +1750,7 @@
             this.repositoryItemCheckedComboBoxEdit1,
             this.repositoryItemCheckEdit2,
             this.repositoryItemComboBox1});
-            this.gridControl2.Size = new System.Drawing.Size(1188, 287);
+            this.gridControl2.Size = new System.Drawing.Size(1068, 279);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -1891,7 +1891,7 @@
             this.gridColumn80.Caption = "► Proposals";
             this.gridColumn80.Name = "gridColumn80";
             this.gridColumn80.Visible = true;
-            this.gridColumn80.VisibleIndex = 4;
+            this.gridColumn80.VisibleIndex = 1;
             this.gridColumn80.Width = 83;
             // 
             // gridColumn156
@@ -1900,7 +1900,7 @@
             this.gridColumn156.FieldName = "EquipmentNumber";
             this.gridColumn156.Name = "gridColumn156";
             this.gridColumn156.Visible = true;
-            this.gridColumn156.VisibleIndex = 1;
+            this.gridColumn156.VisibleIndex = 2;
             // 
             // gridColumn157
             // 
@@ -1908,15 +1908,7 @@
             this.gridColumn157.FieldName = "ComponentNumber";
             this.gridColumn157.Name = "gridColumn157";
             this.gridColumn157.Visible = true;
-            this.gridColumn157.VisibleIndex = 2;
-            // 
-            // gridColumn155
-            // 
-            this.gridColumn155.Caption = "AP1";
-            this.gridColumn155.FieldName = "AP1";
-            this.gridColumn155.Name = "gridColumn155";
-            this.gridColumn155.Visible = true;
-            this.gridColumn155.VisibleIndex = 3;
+            this.gridColumn157.VisibleIndex = 3;
             // 
             // colAP2
             // 
@@ -2965,6 +2957,7 @@
             this.btnClearAll.TabIndex = 0;
             this.btnClearAll.Text = "Clear All";
             this.btnClearAll.UseVisualStyleBackColor = true;
+            this.btnClearAll.Click += new System.EventHandler(this.btnClearAll_Click);
             // 
             // btnClearAllOnScreen
             // 
@@ -2975,6 +2968,7 @@
             this.btnClearAllOnScreen.TabIndex = 0;
             this.btnClearAllOnScreen.Text = "Clear All On Screen";
             this.btnClearAllOnScreen.UseVisualStyleBackColor = true;
+            this.btnClearAllOnScreen.Click += new System.EventHandler(this.btnClearAllOnScreen_Click);
             // 
             // btnSelectAllOnScreen
             // 
@@ -2985,6 +2979,7 @@
             this.btnSelectAllOnScreen.TabIndex = 0;
             this.btnSelectAllOnScreen.Text = "Select All On Screen";
             this.btnSelectAllOnScreen.UseVisualStyleBackColor = true;
+            this.btnSelectAllOnScreen.Click += new System.EventHandler(this.btnSelectAllOnScreen_Click);
             // 
             // panel3
             // 
@@ -3165,9 +3160,9 @@
             // 
             this.btnDelete.AccessibleDescription = "";
             this.btnDelete.AutoHeight = false;
-            editorButtonImageOptions3.ImageUri.Uri = "Cancel;Size16x16";
+            editorButtonImageOptions1.ImageUri.Uri = "Cancel;Size16x16";
             this.btnDelete.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "Delete", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "Delete", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnDelete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnDelete_ButtonClick_1);
@@ -3571,6 +3566,14 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
             this.gridColumn6.Width = 49;
+            // 
+            // gridColumn155
+            // 
+            this.gridColumn155.Caption = "AP1";
+            this.gridColumn155.FieldName = "AP1";
+            this.gridColumn155.Name = "gridColumn155";
+            this.gridColumn155.Visible = true;
+            this.gridColumn155.VisibleIndex = 4;
             // 
             // frmInspectionPlanDetail
             // 

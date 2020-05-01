@@ -799,7 +799,39 @@ namespace RBI.DAL.MSSQL
             }
             return list;
         }
-
+        public List<string> getListEquipmentNumberbyFacilityID(int FaID)
+        {
+            List<string> list = new List<string>();
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "select EquipmentNumber from rbi.dbo.EQUIPMENT_MASTER where FacilityID = '" + FaID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            list.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
         public List<int> GetAllAssessmentIDbyEquipmentID(int eqID)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();

@@ -131,17 +131,19 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.gridControl1);
-            this.panel5.Location = new System.Drawing.Point(6, 20);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(3, 17);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(773, 428);
+            this.panel5.Size = new System.Drawing.Size(776, 439);
             this.panel5.TabIndex = 0;
             // 
             // gridControl1
             // 
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(774, 430);
+            this.gridControl1.Size = new System.Drawing.Size(776, 439);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});

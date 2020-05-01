@@ -145,6 +145,7 @@
             this.Name = "UCInspectionHistorySubform";
             this.Size = new System.Drawing.Size(1053, 629);
             this.Load += new System.EventHandler(this.UCInspectionHistorySubform_Load);
+            this.ContextMenuStripChanged += new System.EventHandler(this.UCInspectionHistorySubform_ContextMenuStripChanged);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvInsHis)).EndInit();
