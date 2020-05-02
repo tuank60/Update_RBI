@@ -36,6 +36,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float PERSON_DENSITY { set; get; }
         public float EQUIPMENT_COST { set; get; }
         private String TOXIC_PHASE { set; get; }
+        public float Outage_mul { set; get; } //viet anh them
         public String FC_Category(float fc)
         {
             if (fc <= 10000)
@@ -837,7 +838,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             return Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt);
         }
         // Step 12: financial
-        public float fc_cmd()
+        public float fc_cmd() //Component Damage Cost
         {
             float fc_cmd = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
@@ -846,7 +847,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             fc_cmd = t * MATERIAL_COST / obj.GFFTotal;
             return fc_cmd;
         }
-        public float fc_affa()
+        public float fc_affa() //Damage Costs to Surrounding Equipment in Affected Area
         {
             float fc_affa = 0;
             float cacmd = ca_cmd();
@@ -859,7 +860,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float t = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             t = obj.GFFSmall * obj.OutageSmall + obj.GFFMedium * obj.OutageMedium + obj.GFFLarge * obj.OutageLarge + obj.GFFRupture * obj.GFFRupture;
-            outage_cmd = t / obj.GFFTotal;
+            outage_cmd = t / obj.GFFTotal * Outage_mul;
             return outage_cmd;
         }
         public float outage_affa()
@@ -870,12 +871,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
             outage_affa = (float)Math.Pow(10, b);
             return outage_affa;
         }
-        public float fc_prod()
+        public float fc_prod() //Business Interruption Costs
         {
             float fc_prod = (outage_cmd() + outage_affa()) * PRODUCTION_COST;
             return fc_prod;
         }
-        public float fc_inj()
+        public float fc_inj() //Potential Injury Costs
         {
             float fc_inj = ca_inj() * PERSON_DENSITY * INJURE_COST;
             return fc_inj;
@@ -930,7 +931,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             vol_n_env = (float)((DAL_CAL.GET_TBL_3B21(13)) * massn * (1 - frac_evap) / (data[1] * 16.02));
             return vol_n_env;
         }
-        public float fc_environ()
+        public float fc_environ() //Environmental Cleanup Costs
         {
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             float fc_environ = 0;
@@ -967,19 +968,19 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float P_onsite { set; get; }
         public float P_offsite { set; get; }
 
-        public float W_n_Tank(int n)
+        public float W_n_Tank(int n) // Flow rate
         {
-            float Wn_tank = (float)(DAL_CAL.GET_TBL_3B21(32) * Cd * a_n(n) * Math.Sqrt(2 * FLUID_HEIGHT));
-            return Wn_tank > 0 ? Wn_tank : 1;
+            float Wn_tank = (float)(DAL_CAL.GET_TBL_3B21(32) * Cd * a_n(n) * Math.Sqrt(2 * 9.81f * FLUID_HEIGHT));
+            return Wn_tank > 0 ? Wn_tank : 0;
         }
 
-        public float BBL_TOTAL_SHELL()
+        public float BBL_TOTAL_SHELL() // khong su dung
         {
             return (float)(Math.PI * Math.Pow(TANK_DIAMETER*0.001f, 2)) * FLUID_HEIGHT / (4 * (DAL_CAL.GET_TBL_3B21(13)));
         }
-        private float Bbl_avail(int n)
+        private float Bbl_avail()
         {
-            int i = (int)(FLUID_HEIGHT / SHELL_COURSE_HEIGHT);
+            //int i = (int)(FLUID_HEIGHT / SHELL_COURSE_HEIGHT);
             //if (n <= i)
             //{
             //    return (float)(Math.PI * Math.Pow(TANK_DIAMETER, 2)) * (FLUID_HEIGHT - (n - 1) * SHELL_COURSE_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
@@ -988,30 +989,64 @@ namespace RBI.BUS.BUSMSSQL_CAL
             //{
             //    return 0;
             //}
-            float Bbl_avail =  (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2)) * (FLUID_HEIGHT - (n - 1) * SHELL_COURSE_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            //float Bbl_avail =  (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2)) * (FLUID_HEIGHT - (n - 1) * SHELL_COURSE_HEIGHT) / (4 * (DAL_CAL.GET_TBL_3B21(13)));
+            float Bbl_avail = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2)) / 4 * (float)LHT_above_i() * (DAL_CAL.GET_TBL_3B21(13));
             return Bbl_avail > 0 ? Bbl_avail : 0;
         }
+        
+        public float LHT_above_i() //The liquid height above the shell in question
+        {
+            string a = API_COMPONENT_TYPE_NAME;
+            string b = string.Empty;
+            int i_th = 0;
 
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (Char.IsDigit(a[i]))
+                    b += a[i];
+            }
+
+            if (b.Length > 0)
+                i_th = int.Parse(b);
+           // float test = SHELL_COURSE_HEIGHT;
+            float LHT = FLUID_HEIGHT - (i_th - 1) * SHELL_COURSE_HEIGHT;
+            return LHT > 0 ? LHT : 0;
+        }
+        
+        public float Lvol_above_i() // the volumn of fluid above the shell in question
+        {
+            float Lvol_above_i = (float)(Math.PI * Math.Pow(TANK_DIAMETER * 0.001f, 2)) / 4 * (float)LHT_above_i();
+            return Lvol_above_i > 0 ? Lvol_above_i : 0;
+        }
+        
         public float ld_tank(int n)
         {
-            if (d_n(n) <= 3.17)
+            if (d_n(n) <= 3.175) // sửa 3.17 sang 3.175
             {
-                float ld_tank_shell =  Math.Min(Bbl_avail(n) / W_n_Tank(n), 7);
-                return ld_tank_shell > 0 ? ld_tank_shell : 1;
+                //float ld_tank_shell =  Math.Min(Bbl_avail(n) / W_n_Tank(n), 7);
+               // return ld_tank_shell > 0 ? ld_tank_shell : 1;
+                float ld_tank_shell = Math.Min(Bbl_avail() / W_n_Tank(n), 7);
+                return ld_tank_shell > 0 ? ld_tank_shell : 0;
             }
             else
             {
-                return 1;
+                //return 1;
+                float ld_tank_shell = Math.Min(Bbl_avail() / W_n_Tank(n), 1);
+                return ld_tank_shell > 0 ? ld_tank_shell : 0;
             }
         }
-        public float Bbl_leak_n(int n)
+        public float Bbl_leak_n(int n) // release volumn from leakage
         {
             //if (d_n(n) <= 50.8)
             //{
-                return Math.Min(W_n_Tank(n) * ld_tank(n), Bbl_avail(n));
+                return Math.Min(W_n_Tank(n) * ld_tank(n), Bbl_avail());
             //}
             //else
                 //return Bbl_avail(n);
+        }
+        public float Bbl_rupture_n() // release volume from a rupture
+        {
+            return Bbl_avail();
         }
         public int[] getCost()
         {

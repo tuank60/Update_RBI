@@ -23,5 +23,11 @@ namespace RBI.Object.ObjectMSSQL
         public float SW { set; get; }
         public float ProductionCost { set; get; }
         public int ConcreteFoundation { set; get; }
+        
+        public float equipcost { set; get; } // Process unit replacement costs for component
+        public float EquipOutageMultiplier { set; get; } // Equipment Outage Multipiler
+        public float ProdCost { set; get; } // Cost of Lost production
+        public float popdens { set; get; }
+        public float injcost { set; get; }
     }
 }

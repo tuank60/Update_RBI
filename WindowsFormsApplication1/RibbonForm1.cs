@@ -284,6 +284,7 @@ namespace RBI
                     RW_EQUIPMENT eq = uc.ucEquipmentTank.getData(IDProposal, temperature, volume);
                     RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress);
                     RW_STREAM stream = uc.ucStreamTank.getData(IDProposal);
+                    RW_FULL_COF_TANK cof = uc.ucRiskFactor.getDataInputCOFTank(IDProposal);//va them
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, corrosion);
@@ -292,7 +293,7 @@ namespace RBI
                     RW_INPUT_CA_TANK caTank2 = uc.ucStreamTank.getDataforTank(IDProposal);
                     RW_INPUT_CA_TANK caTank3 = uc.ucMaterialTank.getDataforTank(IDProposal);
                     RW_INPUT_CA_TANK caTank4 = uc.ucComponentTank.getDataforTank(IDProposal, diameter);
-
+                    
                     caTank = caTank2;
                     caTank.Soil_Type = caTank1.Soil_Type;
                     caTank.SW = caTank1.SW;
@@ -302,12 +303,19 @@ namespace RBI
                     caTank.TANK_DIAMETTER = caTank4.TANK_DIAMETTER;
                     caTank.ConcreteFoundation = caTank4.ConcreteFoundation;
                     caTank.Prevention_Barrier = caTank4.Prevention_Barrier;
-                    
+                    //viet anh them
+                    caTank.equipcost = cof.equipcost; //// Process unit replacement costs for component
+                    caTank.EquipOutageMultiplier = cof.EquipOutageMultiplier;
+                    caTank.ProdCost = cof.ProdCost; // Cost of Lost production
+                    caTank.injcost = cof.injcost;
+                    caTank.popdens = cof.popdens;
+                    //----
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
                     Calculation_CA_TANK(componentTypeName, apiComName, ThinningType, ass.ComponentID, eq, com, ma, stream, coat, extTemp, caTank);
                     MessageBox.Show("Calculation finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    //SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank, cof); dự định sẽ khi ấn save sẽ lưu cả phần input trong cof
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank);
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     //resultRisk.ShowDataOutputCA(IDProposal); //***
@@ -568,6 +576,7 @@ namespace RBI
             RW_INPUT_CA_LEVEL_1 rwCALevel1 = new RW_INPUT_CA_LEVEL_1();
             RW_CA_TANK rwCATank = new RW_CA_TANK();
             RW_INPUT_CA_TANK rwInputCATank = new RW_INPUT_CA_TANK();
+            RW_FULL_COF_TANK rwCOFTank = new RW_FULL_COF_TANK();
             RW_RISK_GRAPH rwRiskGraph = new RW_RISK_GRAPH();
             /*-----------------Tìm đuôi Proposal có giá trị lớn nhất-------------------*/
             List<string> lstProposalName = busAssessment.AllName();
@@ -632,7 +641,6 @@ namespace RBI
             rwMaterial.ID = ID;
             rwExtTemp.ID = ID;
             rwCoat.ExternalCoatingDate = DateTime.Now;
-
             busEquipment.add(rwEq);
             busComponent.add(rwCom);
             busCoating.add(rwCoat);
@@ -647,8 +655,10 @@ namespace RBI
             {
                 rwCATank.ID = ID;
                 rwInputCATank.ID = ID;
+                rwCOFTank.ID = ID; // va them
                 busCATank.add(rwCATank);
                 busInputCATank.add(rwInputCATank);
+                busFullCofTank.add(rwCOFTank); // va them
             }
             else
             {
@@ -1387,6 +1397,11 @@ namespace RBI
                     RW_INPUT_CA_LEVEL_1 rwCA = ca.getData(ID);
                     busInputCALevel1.edit(rwCA);
                     break;
+               // case "UCRiskFactor":
+               //     UCRiskFactor risk = uc as UCRiskFactor;
+               //     RW_FULL_COF_TANK rwRisk = risk.getDataInputCOFTank(ID);
+               //     busFullCofTank.editInput(rwRisk);
+               //     break;
                 default:
                     break;
             }
@@ -2398,6 +2413,8 @@ namespace RBI
             RW_CA_TANK rwCATank = new RW_CA_TANK();
             if (componentTypeName == "Shell")
             {
+                CA.Soil_type = caTank.Soil_Type; // va thêm
+                CA.TANK_FLUID = caTank.TANK_FLUID; // va thêm
                 CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
                 CA.SHELL_COURSE_HEIGHT = caTank.SHELL_COURSE_HEIGHT;
                 CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
@@ -2407,11 +2424,19 @@ namespace RBI
                 CA.P_offsite = caTank.P_offsite;
                 CA.P_onsite = caTank.P_onsite;
                 CA.API_COMPONENT_TYPE_NAME = API_component;
-
+                //viet anh them
+                CA.EQUIPMENT_COST = caTank.equipcost;// Process unit replacement costs for component
+                CA.Outage_mul = caTank.EquipOutageMultiplier;
+                CA.PRODUCTION_COST = caTank.ProdCost;
+                CA.PERSON_DENSITY = caTank.popdens;
+                //---------
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
+                rwCATank.Hydraulic_Water = !float.IsNaN(CA.k_h_water()) && CA.k_h_water() > 0 ? CA.k_h_water() : 0;
+                rwCATank.Hydraulic_Fluid = !float.IsNaN(CA.k_h_prod()) && CA.k_h_prod() > 0 ? CA.k_h_prod() : 0;
+                rwCATank.Seepage_Velocity = !float.IsNaN(CA.vel_s_prod()) && CA.vel_s_prod() > 0 ? CA.vel_s_prod() : 0;
+
                 rwCATank.Flow_Rate_D1 = !float.IsNaN(CA.W_n_Tank(1)) && CA.W_n_Tank(1) > 0 ? CA.W_n_Tank(1) : 0;
-                
                 rwCATank.Flow_Rate_D2 = !float.IsNaN(CA.W_n_Tank(2)) && CA.W_n_Tank(2) > 0 ? CA.W_n_Tank(2) : 0;
                 rwCATank.Flow_Rate_D3 = !float.IsNaN(CA.W_n_Tank(3)) && CA.W_n_Tank(3) > 0 ? CA.W_n_Tank(3) : 0;
                 rwCATank.Flow_Rate_D4 = !float.IsNaN(CA.W_n_Tank(4)) && CA.W_n_Tank(4) > 0 ? CA.W_n_Tank(4) : 0;
@@ -2426,9 +2451,12 @@ namespace RBI
                 rwCATank.Release_Volume_Leak_D3 = !float.IsNaN(CA.Bbl_leak_n(3)) && CA.Bbl_leak_n(3) > 0 ? CA.Bbl_leak_n(3) : 0;
                 rwCATank.Release_Volume_Leak_D4 = !float.IsNaN(CA.Bbl_leak_n(4)) && CA.Bbl_leak_n(4) > 0 ? CA.Bbl_leak_n(4) : 0;
 
-                rwCATank.Release_Volume_Rupture_D1 = !float.IsNaN(CA.Bbl_rupture_release()) && CA.Bbl_rupture_release() > 0 ? CA.Bbl_rupture_release() : 0;
-                rwCATank.Liquid_Height = CA.FLUID_HEIGHT;
-                rwCATank.Volume_Fluid = CA.BBL_TOTAL_SHELL();
+                
+                //rwCATank.Liquid_Height = CA.FLUID_HEIGHT; 
+                rwCATank.Liquid_Height = CA.LHT_above_i(); //tạm thời lưu giá trị này vào liquid height
+                rwCATank.Volume_Fluid = CA.Lvol_above_i(); 
+
+                rwCATank.Release_Volume_Rupture_D1 = !float.IsNaN(CA.Bbl_rupture_n()) && CA.Bbl_rupture_n() > 0 ? CA.Bbl_rupture_n() : 0;
 
                 rwCATank.Barrel_Dike_Leak = !float.IsNaN(CA.Bbl_leak_indike()) && CA.Bbl_leak_indike() > 0 ? CA.Bbl_leak_indike() : 0;
                 rwCATank.Barrel_Dike_Rupture = !float.IsNaN(CA.Bbl_rupture_indike()) && CA.Bbl_rupture_indike() > 0 ? CA.Bbl_rupture_indike() : 0;
@@ -2447,9 +2475,11 @@ namespace RBI
                 //bieu thuc tinh toan
                 rwCATank.FC_Environ_Rupture = float.IsNaN(CA.FC_rupture_environ()) ? 0 : CA.FC_rupture_environ();
                 rwCATank.FC_Environ_Leak = float.IsNaN(CA.FC_leak_environ()) ? 0 : CA.FC_leak_environ();
+
                 rwCATank.FC_Environ = rwCATank.FC_Environ_Rupture + rwCATank.FC_Environ_Leak;
-                rwCATank.Business_Cost = float.IsNaN(CA.FC_PROD_SHELL()) ? 0 : CA.FC_PROD_SHELL();
                 rwCATank.Component_Damage_Cost = float.IsNaN(CA.fc_cmd()) ? 0 : CA.fc_cmd();
+                rwCATank.Business_Cost = float.IsNaN(CA.fc_prod()) ? 0 : CA.fc_prod();
+                
                 rwCATank.Consequence = rwCATank.FC_Environ + rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
                 rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
                 FC_Total = rwCATank.Consequence;
@@ -2464,7 +2494,11 @@ namespace RBI
                 if (busCATank.CheckExistID(rwCATank.ID))
                     busCATank.edit(rwCATank);
                 else
+                {
                     busCATank.add(rwCATank);
+                    //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
+                    //busFullCofTank.add(a);
+                }    
             }
             else
             {
@@ -3277,8 +3311,9 @@ namespace RBI
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
-            busInputCATank.edit(ca);
-            
+            //busInputCATank.edit(ca);
+            //busFullCofTank.edit(cof);
+
         }
 
         private void SaveDataCorrosionRate(RW_CORROSION_RATE_TANK corate)
@@ -3635,6 +3670,7 @@ namespace RBI
         RW_INSPECTION_HISTORY_BUS busInspectionHistory = new RW_INSPECTION_HISTORY_BUS();
         FACILITY_RISK_TARGET_BUS busRiskTarget = new FACILITY_RISK_TARGET_BUS();
         RW_DAMAGE_MECHANISM_BUS busDamageMechanism = new RW_DAMAGE_MECHANISM_BUS();
+        RW_FULL_COF_TANK_BUS busFullCofTank = new RW_FULL_COF_TANK_BUS();
         //</BUS>
         #endregion
         #region Unit String

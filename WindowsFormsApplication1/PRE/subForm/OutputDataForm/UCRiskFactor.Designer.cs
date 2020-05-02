@@ -497,22 +497,22 @@
             this.label225 = new System.Windows.Forms.Label();
             this.label226 = new System.Windows.Forms.Label();
             this.label227 = new System.Windows.Forms.Label();
-            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.txtHeightAboveShell = new System.Windows.Forms.TextBox();
             this.label228 = new System.Windows.Forms.Label();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.tbFlowRateShell4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
-            this.tbFlowRateShell3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
-            this.tbFlowRateShell2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit13 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit14 = new DevExpress.XtraEditors.TextEdit();
-            this.tbFlowRateShell1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtVolumnAboveShell = new System.Windows.Forms.TextBox();
+            this.txtReleaseVolumeLeakageShellD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtLeakDurationShellD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFlowRateShellD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseVolumeLeakageShellD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtLeakDurationShellD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFlowRateShellD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseVolumeLeakageShellD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtLeakDurationShellD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFlowRateShellD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseVolumeFromRuptureShell = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseVolumeLeakageShellD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtLeakDurationShellD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtFlowRateShellD1 = new DevExpress.XtraEditors.TextEdit();
             this.label209 = new System.Windows.Forms.Label();
             this.label210 = new System.Windows.Forms.Label();
             this.label211 = new System.Windows.Forms.Label();
@@ -533,11 +533,11 @@
             this.label204 = new System.Windows.Forms.Label();
             this.label205 = new System.Windows.Forms.Label();
             this.label206 = new System.Windows.Forms.Label();
-            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.txtHdraulicWater = new System.Windows.Forms.TextBox();
             this.label207 = new System.Windows.Forms.Label();
-            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.txtHdraulicFluid = new System.Windows.Forms.TextBox();
             this.label208 = new System.Windows.Forms.Label();
-            this.textBox68 = new System.Windows.Forms.TextBox();
+            this.txtSeepageVelocity = new System.Windows.Forms.TextBox();
             this.label202 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label194 = new System.Windows.Forms.Label();
@@ -547,14 +547,16 @@
             this.textBox60 = new System.Windows.Forms.TextBox();
             this.label193 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
+            this.btnSaveInputShell = new System.Windows.Forms.Button();
+            this.txtIDFullCOFTankInTabShell = new System.Windows.Forms.TextBox();
+            this.txtProcessUnitReplace = new System.Windows.Forms.TextBox();
+            this.txtInjury = new System.Windows.Forms.TextBox();
             this.label196 = new System.Windows.Forms.Label();
-            this.textBox63 = new System.Windows.Forms.TextBox();
+            this.txtDensity = new System.Windows.Forms.TextBox();
             this.label197 = new System.Windows.Forms.Label();
-            this.textBox64 = new System.Windows.Forms.TextBox();
+            this.txtLossProduction = new System.Windows.Forms.TextBox();
             this.label198 = new System.Windows.Forms.Label();
-            this.textBox65 = new System.Windows.Forms.TextBox();
+            this.txtEquipOutageMultiplier = new System.Windows.Forms.TextBox();
             this.label199 = new System.Windows.Forms.Label();
             this.label200 = new System.Windows.Forms.Label();
             this.label192 = new System.Windows.Forms.Label();
@@ -684,19 +686,19 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeFromRuptureShell.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD1.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -735,7 +737,7 @@
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 1310);
+            this.tabPoF.Size = new System.Drawing.Size(961, 1312);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -1476,7 +1478,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1310);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1312);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -1737,7 +1739,7 @@
             this.TabArea.Controls.Add(this.groupBoxIV);
             this.TabArea.Controls.Add(this.groupBox3);
             this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(961, 1310);
+            this.TabArea.Size = new System.Drawing.Size(961, 1312);
             this.TabArea.Text = "Area-based CoF";
             // 
             // groupBoxIV
@@ -3105,7 +3107,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(961, 1310);
+            this.tabCA.Size = new System.Drawing.Size(961, 1312);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -3518,7 +3520,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(961, 1310);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 1312);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -3590,7 +3592,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(961, 1310);
+            this.groupBox7.Size = new System.Drawing.Size(961, 1312);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -4258,7 +4260,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1310);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1312);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -4270,7 +4272,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(961, 1310);
+            this.groupBox6.Size = new System.Drawing.Size(961, 1312);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -5175,7 +5177,7 @@
             // 
             this.tabCATankShell.Controls.Add(this.groupBox8);
             this.tabCATankShell.Name = "tabCATankShell";
-            this.tabCATankShell.Size = new System.Drawing.Size(961, 1310);
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 1312);
             this.tabCATankShell.Text = "Financial COF";
             // 
             // groupBox8
@@ -5191,7 +5193,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(961, 1310);
+            this.groupBox8.Size = new System.Drawing.Size(961, 1312);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -5597,25 +5599,26 @@
             // 
             // panel3
             // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.label225);
             this.panel3.Controls.Add(this.label226);
             this.panel3.Controls.Add(this.label227);
-            this.panel3.Controls.Add(this.textBox69);
+            this.panel3.Controls.Add(this.txtHeightAboveShell);
             this.panel3.Controls.Add(this.label228);
-            this.panel3.Controls.Add(this.textBox70);
-            this.panel3.Controls.Add(this.textEdit3);
-            this.panel3.Controls.Add(this.textEdit4);
-            this.panel3.Controls.Add(this.tbFlowRateShell4);
-            this.panel3.Controls.Add(this.textEdit6);
-            this.panel3.Controls.Add(this.textEdit7);
-            this.panel3.Controls.Add(this.tbFlowRateShell3);
-            this.panel3.Controls.Add(this.textEdit9);
-            this.panel3.Controls.Add(this.textEdit10);
-            this.panel3.Controls.Add(this.tbFlowRateShell2);
-            this.panel3.Controls.Add(this.textEdit12);
-            this.panel3.Controls.Add(this.textEdit13);
-            this.panel3.Controls.Add(this.textEdit14);
-            this.panel3.Controls.Add(this.tbFlowRateShell1);
+            this.panel3.Controls.Add(this.txtVolumnAboveShell);
+            this.panel3.Controls.Add(this.txtReleaseVolumeLeakageShellD4);
+            this.panel3.Controls.Add(this.txtLeakDurationShellD4);
+            this.panel3.Controls.Add(this.txtFlowRateShellD4);
+            this.panel3.Controls.Add(this.txtReleaseVolumeLeakageShellD3);
+            this.panel3.Controls.Add(this.txtLeakDurationShellD3);
+            this.panel3.Controls.Add(this.txtFlowRateShellD3);
+            this.panel3.Controls.Add(this.txtReleaseVolumeLeakageShellD2);
+            this.panel3.Controls.Add(this.txtLeakDurationShellD2);
+            this.panel3.Controls.Add(this.txtFlowRateShellD2);
+            this.panel3.Controls.Add(this.txtReleaseVolumeFromRuptureShell);
+            this.panel3.Controls.Add(this.txtReleaseVolumeLeakageShellD1);
+            this.panel3.Controls.Add(this.txtLeakDurationShellD1);
+            this.panel3.Controls.Add(this.txtFlowRateShellD1);
             this.panel3.Controls.Add(this.label209);
             this.panel3.Controls.Add(this.label210);
             this.panel3.Controls.Add(this.label211);
@@ -5636,11 +5639,11 @@
             this.panel3.Controls.Add(this.label204);
             this.panel3.Controls.Add(this.label205);
             this.panel3.Controls.Add(this.label206);
-            this.panel3.Controls.Add(this.textBox66);
+            this.panel3.Controls.Add(this.txtHdraulicWater);
             this.panel3.Controls.Add(this.label207);
-            this.panel3.Controls.Add(this.textBox67);
+            this.panel3.Controls.Add(this.txtHdraulicFluid);
             this.panel3.Controls.Add(this.label208);
-            this.panel3.Controls.Add(this.textBox68);
+            this.panel3.Controls.Add(this.txtSeepageVelocity);
             this.panel3.Controls.Add(this.label202);
             this.panel3.Location = new System.Drawing.Point(11, 326);
             this.panel3.Name = "panel3";
@@ -5677,14 +5680,14 @@
             this.label227.TabIndex = 19;
             this.label227.Text = "The liquid height above the shell in question";
             // 
-            // textBox69
+            // txtHeightAboveShell
             // 
-            this.textBox69.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox69.Location = new System.Drawing.Point(355, 133);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(100, 21);
-            this.textBox69.TabIndex = 20;
+            this.txtHeightAboveShell.BackColor = System.Drawing.SystemColors.Control;
+            this.txtHeightAboveShell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtHeightAboveShell.Location = new System.Drawing.Point(355, 133);
+            this.txtHeightAboveShell.Name = "txtHeightAboveShell";
+            this.txtHeightAboveShell.Size = new System.Drawing.Size(100, 21);
+            this.txtHeightAboveShell.TabIndex = 20;
             // 
             // label228
             // 
@@ -5696,157 +5699,157 @@
             this.label228.TabIndex = 22;
             this.label228.Text = "The volumn of fluid above the shell in question";
             // 
-            // textBox70
+            // txtVolumnAboveShell
             // 
-            this.textBox70.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox70.Location = new System.Drawing.Point(355, 158);
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(100, 21);
-            this.textBox70.TabIndex = 23;
+            this.txtVolumnAboveShell.BackColor = System.Drawing.SystemColors.Control;
+            this.txtVolumnAboveShell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtVolumnAboveShell.Location = new System.Drawing.Point(355, 158);
+            this.txtVolumnAboveShell.Name = "txtVolumnAboveShell";
+            this.txtVolumnAboveShell.Size = new System.Drawing.Size(100, 21);
+            this.txtVolumnAboveShell.TabIndex = 23;
             // 
-            // textEdit3
+            // txtReleaseVolumeLeakageShellD4
             // 
-            this.textEdit3.Location = new System.Drawing.Point(808, 214);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(100, 22);
-            this.textEdit3.TabIndex = 42;
+            this.txtReleaseVolumeLeakageShellD4.Location = new System.Drawing.Point(808, 214);
+            this.txtReleaseVolumeLeakageShellD4.Name = "txtReleaseVolumeLeakageShellD4";
+            this.txtReleaseVolumeLeakageShellD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseVolumeLeakageShellD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseVolumeLeakageShellD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseVolumeLeakageShellD4.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseVolumeLeakageShellD4.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseVolumeLeakageShellD4.TabIndex = 42;
             // 
-            // textEdit4
+            // txtLeakDurationShellD4
             // 
-            this.textEdit4.Location = new System.Drawing.Point(808, 186);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit4.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit4.Properties.Appearance.Options.UseFont = true;
-            this.textEdit4.Size = new System.Drawing.Size(100, 22);
-            this.textEdit4.TabIndex = 33;
+            this.txtLeakDurationShellD4.Location = new System.Drawing.Point(808, 186);
+            this.txtLeakDurationShellD4.Name = "txtLeakDurationShellD4";
+            this.txtLeakDurationShellD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLeakDurationShellD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLeakDurationShellD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtLeakDurationShellD4.Properties.Appearance.Options.UseFont = true;
+            this.txtLeakDurationShellD4.Size = new System.Drawing.Size(100, 22);
+            this.txtLeakDurationShellD4.TabIndex = 33;
             // 
-            // tbFlowRateShell4
+            // txtFlowRateShellD4
             // 
-            this.tbFlowRateShell4.Location = new System.Drawing.Point(808, 107);
-            this.tbFlowRateShell4.Name = "tbFlowRateShell4";
-            this.tbFlowRateShell4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFlowRateShell4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFlowRateShell4.Properties.Appearance.Options.UseBackColor = true;
-            this.tbFlowRateShell4.Properties.Appearance.Options.UseFont = true;
-            this.tbFlowRateShell4.Size = new System.Drawing.Size(100, 22);
-            this.tbFlowRateShell4.TabIndex = 18;
+            this.txtFlowRateShellD4.Location = new System.Drawing.Point(808, 107);
+            this.txtFlowRateShellD4.Name = "txtFlowRateShellD4";
+            this.txtFlowRateShellD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFlowRateShellD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlowRateShellD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFlowRateShellD4.Properties.Appearance.Options.UseFont = true;
+            this.txtFlowRateShellD4.Size = new System.Drawing.Size(100, 22);
+            this.txtFlowRateShellD4.TabIndex = 18;
             // 
-            // textEdit6
+            // txtReleaseVolumeLeakageShellD3
             // 
-            this.textEdit6.Location = new System.Drawing.Point(658, 214);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit6.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(100, 22);
-            this.textEdit6.TabIndex = 40;
+            this.txtReleaseVolumeLeakageShellD3.Location = new System.Drawing.Point(658, 214);
+            this.txtReleaseVolumeLeakageShellD3.Name = "txtReleaseVolumeLeakageShellD3";
+            this.txtReleaseVolumeLeakageShellD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseVolumeLeakageShellD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseVolumeLeakageShellD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseVolumeLeakageShellD3.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseVolumeLeakageShellD3.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseVolumeLeakageShellD3.TabIndex = 40;
             // 
-            // textEdit7
+            // txtLeakDurationShellD3
             // 
-            this.textEdit7.Location = new System.Drawing.Point(658, 186);
-            this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit7.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit7.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit7.Properties.Appearance.Options.UseFont = true;
-            this.textEdit7.Size = new System.Drawing.Size(100, 22);
-            this.textEdit7.TabIndex = 31;
+            this.txtLeakDurationShellD3.Location = new System.Drawing.Point(658, 186);
+            this.txtLeakDurationShellD3.Name = "txtLeakDurationShellD3";
+            this.txtLeakDurationShellD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLeakDurationShellD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLeakDurationShellD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtLeakDurationShellD3.Properties.Appearance.Options.UseFont = true;
+            this.txtLeakDurationShellD3.Size = new System.Drawing.Size(100, 22);
+            this.txtLeakDurationShellD3.TabIndex = 31;
             // 
-            // tbFlowRateShell3
+            // txtFlowRateShellD3
             // 
-            this.tbFlowRateShell3.Location = new System.Drawing.Point(658, 107);
-            this.tbFlowRateShell3.Name = "tbFlowRateShell3";
-            this.tbFlowRateShell3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFlowRateShell3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFlowRateShell3.Properties.Appearance.Options.UseBackColor = true;
-            this.tbFlowRateShell3.Properties.Appearance.Options.UseFont = true;
-            this.tbFlowRateShell3.Size = new System.Drawing.Size(100, 22);
-            this.tbFlowRateShell3.TabIndex = 16;
+            this.txtFlowRateShellD3.Location = new System.Drawing.Point(658, 107);
+            this.txtFlowRateShellD3.Name = "txtFlowRateShellD3";
+            this.txtFlowRateShellD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFlowRateShellD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlowRateShellD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFlowRateShellD3.Properties.Appearance.Options.UseFont = true;
+            this.txtFlowRateShellD3.Size = new System.Drawing.Size(100, 22);
+            this.txtFlowRateShellD3.TabIndex = 16;
             // 
-            // textEdit9
+            // txtReleaseVolumeLeakageShellD2
             // 
-            this.textEdit9.Location = new System.Drawing.Point(507, 214);
-            this.textEdit9.Name = "textEdit9";
-            this.textEdit9.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit9.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit9.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit9.Properties.Appearance.Options.UseFont = true;
-            this.textEdit9.Size = new System.Drawing.Size(100, 22);
-            this.textEdit9.TabIndex = 38;
+            this.txtReleaseVolumeLeakageShellD2.Location = new System.Drawing.Point(507, 214);
+            this.txtReleaseVolumeLeakageShellD2.Name = "txtReleaseVolumeLeakageShellD2";
+            this.txtReleaseVolumeLeakageShellD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseVolumeLeakageShellD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseVolumeLeakageShellD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseVolumeLeakageShellD2.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseVolumeLeakageShellD2.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseVolumeLeakageShellD2.TabIndex = 38;
             // 
-            // textEdit10
+            // txtLeakDurationShellD2
             // 
-            this.textEdit10.Location = new System.Drawing.Point(507, 186);
-            this.textEdit10.Name = "textEdit10";
-            this.textEdit10.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit10.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit10.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit10.Properties.Appearance.Options.UseFont = true;
-            this.textEdit10.Size = new System.Drawing.Size(100, 22);
-            this.textEdit10.TabIndex = 29;
+            this.txtLeakDurationShellD2.Location = new System.Drawing.Point(507, 186);
+            this.txtLeakDurationShellD2.Name = "txtLeakDurationShellD2";
+            this.txtLeakDurationShellD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLeakDurationShellD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLeakDurationShellD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtLeakDurationShellD2.Properties.Appearance.Options.UseFont = true;
+            this.txtLeakDurationShellD2.Size = new System.Drawing.Size(100, 22);
+            this.txtLeakDurationShellD2.TabIndex = 29;
             // 
-            // tbFlowRateShell2
+            // txtFlowRateShellD2
             // 
-            this.tbFlowRateShell2.Location = new System.Drawing.Point(507, 107);
-            this.tbFlowRateShell2.Name = "tbFlowRateShell2";
-            this.tbFlowRateShell2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFlowRateShell2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFlowRateShell2.Properties.Appearance.Options.UseBackColor = true;
-            this.tbFlowRateShell2.Properties.Appearance.Options.UseFont = true;
-            this.tbFlowRateShell2.Size = new System.Drawing.Size(100, 22);
-            this.tbFlowRateShell2.TabIndex = 14;
+            this.txtFlowRateShellD2.Location = new System.Drawing.Point(507, 107);
+            this.txtFlowRateShellD2.Name = "txtFlowRateShellD2";
+            this.txtFlowRateShellD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFlowRateShellD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlowRateShellD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFlowRateShellD2.Properties.Appearance.Options.UseFont = true;
+            this.txtFlowRateShellD2.Size = new System.Drawing.Size(100, 22);
+            this.txtFlowRateShellD2.TabIndex = 14;
             // 
-            // textEdit12
+            // txtReleaseVolumeFromRuptureShell
             // 
-            this.textEdit12.Location = new System.Drawing.Point(355, 242);
-            this.textEdit12.Name = "textEdit12";
-            this.textEdit12.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit12.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit12.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit12.Properties.Appearance.Options.UseFont = true;
-            this.textEdit12.Size = new System.Drawing.Size(100, 22);
-            this.textEdit12.TabIndex = 44;
+            this.txtReleaseVolumeFromRuptureShell.Location = new System.Drawing.Point(355, 242);
+            this.txtReleaseVolumeFromRuptureShell.Name = "txtReleaseVolumeFromRuptureShell";
+            this.txtReleaseVolumeFromRuptureShell.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseVolumeFromRuptureShell.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseVolumeFromRuptureShell.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseVolumeFromRuptureShell.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseVolumeFromRuptureShell.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseVolumeFromRuptureShell.TabIndex = 44;
             // 
-            // textEdit13
+            // txtReleaseVolumeLeakageShellD1
             // 
-            this.textEdit13.Location = new System.Drawing.Point(355, 214);
-            this.textEdit13.Name = "textEdit13";
-            this.textEdit13.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit13.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit13.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit13.Properties.Appearance.Options.UseFont = true;
-            this.textEdit13.Size = new System.Drawing.Size(100, 22);
-            this.textEdit13.TabIndex = 36;
+            this.txtReleaseVolumeLeakageShellD1.Location = new System.Drawing.Point(355, 214);
+            this.txtReleaseVolumeLeakageShellD1.Name = "txtReleaseVolumeLeakageShellD1";
+            this.txtReleaseVolumeLeakageShellD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseVolumeLeakageShellD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseVolumeLeakageShellD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseVolumeLeakageShellD1.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseVolumeLeakageShellD1.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseVolumeLeakageShellD1.TabIndex = 36;
             // 
-            // textEdit14
+            // txtLeakDurationShellD1
             // 
-            this.textEdit14.Location = new System.Drawing.Point(355, 186);
-            this.textEdit14.Name = "textEdit14";
-            this.textEdit14.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit14.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit14.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit14.Properties.Appearance.Options.UseFont = true;
-            this.textEdit14.Size = new System.Drawing.Size(100, 22);
-            this.textEdit14.TabIndex = 27;
+            this.txtLeakDurationShellD1.Location = new System.Drawing.Point(355, 186);
+            this.txtLeakDurationShellD1.Name = "txtLeakDurationShellD1";
+            this.txtLeakDurationShellD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtLeakDurationShellD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLeakDurationShellD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtLeakDurationShellD1.Properties.Appearance.Options.UseFont = true;
+            this.txtLeakDurationShellD1.Size = new System.Drawing.Size(100, 22);
+            this.txtLeakDurationShellD1.TabIndex = 27;
             // 
-            // tbFlowRateShell1
+            // txtFlowRateShellD1
             // 
-            this.tbFlowRateShell1.Location = new System.Drawing.Point(355, 107);
-            this.tbFlowRateShell1.Name = "tbFlowRateShell1";
-            this.tbFlowRateShell1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.tbFlowRateShell1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbFlowRateShell1.Properties.Appearance.Options.UseBackColor = true;
-            this.tbFlowRateShell1.Properties.Appearance.Options.UseFont = true;
-            this.tbFlowRateShell1.Size = new System.Drawing.Size(100, 22);
-            this.tbFlowRateShell1.TabIndex = 12;
+            this.txtFlowRateShellD1.Location = new System.Drawing.Point(355, 107);
+            this.txtFlowRateShellD1.Name = "txtFlowRateShellD1";
+            this.txtFlowRateShellD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFlowRateShellD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlowRateShellD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFlowRateShellD1.Properties.Appearance.Options.UseFont = true;
+            this.txtFlowRateShellD1.Size = new System.Drawing.Size(100, 22);
+            this.txtFlowRateShellD1.TabIndex = 12;
             // 
             // label209
             // 
@@ -6048,14 +6051,14 @@
             this.label206.TabIndex = 1;
             this.label206.Text = "The hydraulic conductivity for water (m/day)";
             // 
-            // textBox66
+            // txtHdraulicWater
             // 
-            this.textBox66.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox66.Location = new System.Drawing.Point(355, 29);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(100, 21);
-            this.textBox66.TabIndex = 2;
+            this.txtHdraulicWater.BackColor = System.Drawing.SystemColors.Control;
+            this.txtHdraulicWater.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtHdraulicWater.Location = new System.Drawing.Point(355, 29);
+            this.txtHdraulicWater.Name = "txtHdraulicWater";
+            this.txtHdraulicWater.Size = new System.Drawing.Size(100, 21);
+            this.txtHdraulicWater.TabIndex = 2;
             // 
             // label207
             // 
@@ -6067,14 +6070,14 @@
             this.label207.TabIndex = 4;
             this.label207.Text = "The hydraulic conductivity for fluid (m/day)";
             // 
-            // textBox67
+            // txtHdraulicFluid
             // 
-            this.textBox67.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox67.Location = new System.Drawing.Point(355, 54);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(100, 21);
-            this.textBox67.TabIndex = 5;
+            this.txtHdraulicFluid.BackColor = System.Drawing.SystemColors.Control;
+            this.txtHdraulicFluid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtHdraulicFluid.Location = new System.Drawing.Point(355, 54);
+            this.txtHdraulicFluid.Name = "txtHdraulicFluid";
+            this.txtHdraulicFluid.Size = new System.Drawing.Size(100, 21);
+            this.txtHdraulicFluid.TabIndex = 5;
             // 
             // label208
             // 
@@ -6086,14 +6089,14 @@
             this.label208.TabIndex = 7;
             this.label208.Text = "The product seepage velocity (m/day)";
             // 
-            // textBox68
+            // txtSeepageVelocity
             // 
-            this.textBox68.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox68.Location = new System.Drawing.Point(355, 80);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(100, 21);
-            this.textBox68.TabIndex = 8;
+            this.txtSeepageVelocity.BackColor = System.Drawing.SystemColors.Control;
+            this.txtSeepageVelocity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtSeepageVelocity.Location = new System.Drawing.Point(355, 80);
+            this.txtSeepageVelocity.Name = "txtSeepageVelocity";
+            this.txtSeepageVelocity.Size = new System.Drawing.Size(100, 21);
+            this.txtSeepageVelocity.TabIndex = 8;
             // 
             // label202
             // 
@@ -6102,12 +6105,13 @@
             this.label202.ForeColor = System.Drawing.Color.White;
             this.label202.Location = new System.Drawing.Point(0, 0);
             this.label202.Name = "label202";
-            this.label202.Size = new System.Drawing.Size(947, 17);
+            this.label202.Size = new System.Drawing.Size(943, 17);
             this.label202.TabIndex = 0;
             this.label202.Text = "▼ Intermediate Values";
             // 
             // panel2
             // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label194);
             this.panel2.Controls.Add(this.label195);
             this.panel2.Controls.Add(this.textBox59);
@@ -6173,20 +6177,23 @@
             this.label193.ForeColor = System.Drawing.Color.White;
             this.label193.Location = new System.Drawing.Point(0, 0);
             this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(943, 17);
+            this.label193.Size = new System.Drawing.Size(939, 17);
             this.label193.TabIndex = 0;
             this.label193.Text = "▼ Fully-Quantitative Financial Consequence of Failure and Category";
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox61);
-            this.panel1.Controls.Add(this.textBox62);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnSaveInputShell);
+            this.panel1.Controls.Add(this.txtIDFullCOFTankInTabShell);
+            this.panel1.Controls.Add(this.txtProcessUnitReplace);
+            this.panel1.Controls.Add(this.txtInjury);
             this.panel1.Controls.Add(this.label196);
-            this.panel1.Controls.Add(this.textBox63);
+            this.panel1.Controls.Add(this.txtDensity);
             this.panel1.Controls.Add(this.label197);
-            this.panel1.Controls.Add(this.textBox64);
+            this.panel1.Controls.Add(this.txtLossProduction);
             this.panel1.Controls.Add(this.label198);
-            this.panel1.Controls.Add(this.textBox65);
+            this.panel1.Controls.Add(this.txtEquipOutageMultiplier);
             this.panel1.Controls.Add(this.label199);
             this.panel1.Controls.Add(this.label200);
             this.panel1.Controls.Add(this.label192);
@@ -6195,21 +6202,45 @@
             this.panel1.Size = new System.Drawing.Size(940, 180);
             this.panel1.TabIndex = 0;
             // 
-            // textBox61
+            // btnSaveInputShell
             // 
-            this.textBox61.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox61.Location = new System.Drawing.Point(427, 32);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(182, 22);
-            this.textBox61.TabIndex = 2;
+            this.btnSaveInputShell.Location = new System.Drawing.Point(753, 93);
+            this.btnSaveInputShell.Name = "btnSaveInputShell";
+            this.btnSaveInputShell.Size = new System.Drawing.Size(79, 25);
+            this.btnSaveInputShell.TabIndex = 12;
+            this.btnSaveInputShell.Text = "Update";
+            this.btnSaveInputShell.UseVisualStyleBackColor = true;
+            this.btnSaveInputShell.Click += new System.EventHandler(this.btnSaveInputShell_Click);
             // 
-            // textBox62
+            // txtIDFullCOFTankInTabShell
             // 
-            this.textBox62.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox62.Location = new System.Drawing.Point(427, 143);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(182, 22);
-            this.textBox62.TabIndex = 10;
+            this.txtIDFullCOFTankInTabShell.Location = new System.Drawing.Point(753, 61);
+            this.txtIDFullCOFTankInTabShell.Name = "txtIDFullCOFTankInTabShell";
+            this.txtIDFullCOFTankInTabShell.Size = new System.Drawing.Size(79, 21);
+            this.txtIDFullCOFTankInTabShell.TabIndex = 11;
+            this.txtIDFullCOFTankInTabShell.Visible = false;
+            // 
+            // txtProcessUnitReplace
+            // 
+            this.txtProcessUnitReplace.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcessUnitReplace.Location = new System.Drawing.Point(427, 32);
+            this.txtProcessUnitReplace.Name = "txtProcessUnitReplace";
+            this.txtProcessUnitReplace.Size = new System.Drawing.Size(182, 22);
+            this.txtProcessUnitReplace.TabIndex = 2;
+            this.txtProcessUnitReplace.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtProcessUnitReplace.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtProcessUnitReplace.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProdCost_KeyPress);
+            // 
+            // txtInjury
+            // 
+            this.txtInjury.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInjury.Location = new System.Drawing.Point(427, 143);
+            this.txtInjury.Name = "txtInjury";
+            this.txtInjury.Size = new System.Drawing.Size(182, 22);
+            this.txtInjury.TabIndex = 10;
+            this.txtInjury.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtInjury.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtInjury.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInjury_KeyPress);
             // 
             // label196
             // 
@@ -6221,13 +6252,16 @@
             this.label196.TabIndex = 1;
             this.label196.Text = "The unit replacement cost for component, $/m2";
             // 
-            // textBox63
+            // txtDensity
             // 
-            this.textBox63.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox63.Location = new System.Drawing.Point(427, 115);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(182, 22);
-            this.textBox63.TabIndex = 8;
+            this.txtDensity.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDensity.Location = new System.Drawing.Point(427, 115);
+            this.txtDensity.Name = "txtDensity";
+            this.txtDensity.Size = new System.Drawing.Size(182, 22);
+            this.txtDensity.TabIndex = 8;
+            this.txtDensity.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtDensity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtDensity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDensity_KeyPress);
             // 
             // label197
             // 
@@ -6239,13 +6273,16 @@
             this.label197.TabIndex = 9;
             this.label197.Text = "Cost associated with serious injury of fatality of personal, $";
             // 
-            // textBox64
+            // txtLossProduction
             // 
-            this.textBox64.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox64.Location = new System.Drawing.Point(427, 87);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(182, 22);
-            this.textBox64.TabIndex = 6;
+            this.txtLossProduction.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLossProduction.Location = new System.Drawing.Point(427, 87);
+            this.txtLossProduction.Name = "txtLossProduction";
+            this.txtLossProduction.Size = new System.Drawing.Size(182, 22);
+            this.txtLossProduction.TabIndex = 6;
+            this.txtLossProduction.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtLossProduction.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtLossProduction.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEquip_KeyPress);
             // 
             // label198
             // 
@@ -6257,13 +6294,16 @@
             this.label198.TabIndex = 7;
             this.label198.Text = "Population density of personal or employees in the unit, personal/m2";
             // 
-            // textBox65
+            // txtEquipOutageMultiplier
             // 
-            this.textBox65.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox65.Location = new System.Drawing.Point(427, 61);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(182, 22);
-            this.textBox65.TabIndex = 4;
+            this.txtEquipOutageMultiplier.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEquipOutageMultiplier.Location = new System.Drawing.Point(427, 61);
+            this.txtEquipOutageMultiplier.Name = "txtEquipOutageMultiplier";
+            this.txtEquipOutageMultiplier.Size = new System.Drawing.Size(182, 22);
+            this.txtEquipOutageMultiplier.TabIndex = 4;
+            this.txtEquipOutageMultiplier.TextChanged += new System.EventHandler(this.txtRiskFactor_TextChanged);
+            this.txtEquipOutageMultiplier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRiskFactor_KeyDown);
+            this.txtEquipOutageMultiplier.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEquipOutageMultiplier_KeyPress);
             // 
             // label199
             // 
@@ -6292,7 +6332,7 @@
             this.label192.ForeColor = System.Drawing.Color.White;
             this.label192.Location = new System.Drawing.Point(0, 0);
             this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(940, 17);
+            this.label192.Size = new System.Drawing.Size(936, 17);
             this.label192.TabIndex = 0;
             this.label192.Text = "▼ Input";
             // 
@@ -6481,19 +6521,19 @@
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit13.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit14.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFlowRateShell1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeFromRuptureShell.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD1.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -6940,14 +6980,14 @@
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label192;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
+        private System.Windows.Forms.TextBox txtProcessUnitReplace;
+        private System.Windows.Forms.TextBox txtInjury;
         private System.Windows.Forms.Label label196;
-        private System.Windows.Forms.TextBox textBox63;
+        private System.Windows.Forms.TextBox txtDensity;
         private System.Windows.Forms.Label label197;
-        private System.Windows.Forms.TextBox textBox64;
+        private System.Windows.Forms.TextBox txtLossProduction;
         private System.Windows.Forms.Label label198;
-        private System.Windows.Forms.TextBox textBox65;
+        private System.Windows.Forms.TextBox txtEquipOutageMultiplier;
         private System.Windows.Forms.Label label199;
         private System.Windows.Forms.Label label200;
         private System.Windows.Forms.Panel panel7;
@@ -6962,22 +7002,22 @@
         private System.Windows.Forms.Label label225;
         private System.Windows.Forms.Label label226;
         private System.Windows.Forms.Label label227;
-        private System.Windows.Forms.TextBox textBox69;
+        private System.Windows.Forms.TextBox txtHeightAboveShell;
         private System.Windows.Forms.Label label228;
-        private System.Windows.Forms.TextBox textBox70;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit tbFlowRateShell4;
-        private DevExpress.XtraEditors.TextEdit textEdit6;
-        private DevExpress.XtraEditors.TextEdit textEdit7;
-        private DevExpress.XtraEditors.TextEdit tbFlowRateShell3;
-        private DevExpress.XtraEditors.TextEdit textEdit9;
-        private DevExpress.XtraEditors.TextEdit textEdit10;
-        private DevExpress.XtraEditors.TextEdit tbFlowRateShell2;
-        private DevExpress.XtraEditors.TextEdit textEdit12;
-        private DevExpress.XtraEditors.TextEdit textEdit13;
-        private DevExpress.XtraEditors.TextEdit textEdit14;
-        private DevExpress.XtraEditors.TextEdit tbFlowRateShell1;
+        private System.Windows.Forms.TextBox txtVolumnAboveShell;
+        private DevExpress.XtraEditors.TextEdit txtReleaseVolumeLeakageShellD4;
+        private DevExpress.XtraEditors.TextEdit txtLeakDurationShellD4;
+        private DevExpress.XtraEditors.TextEdit txtFlowRateShellD4;
+        private DevExpress.XtraEditors.TextEdit txtReleaseVolumeLeakageShellD3;
+        private DevExpress.XtraEditors.TextEdit txtLeakDurationShellD3;
+        private DevExpress.XtraEditors.TextEdit txtFlowRateShellD3;
+        private DevExpress.XtraEditors.TextEdit txtReleaseVolumeLeakageShellD2;
+        private DevExpress.XtraEditors.TextEdit txtLeakDurationShellD2;
+        private DevExpress.XtraEditors.TextEdit txtFlowRateShellD2;
+        private DevExpress.XtraEditors.TextEdit txtReleaseVolumeFromRuptureShell;
+        private DevExpress.XtraEditors.TextEdit txtReleaseVolumeLeakageShellD1;
+        private DevExpress.XtraEditors.TextEdit txtLeakDurationShellD1;
+        private DevExpress.XtraEditors.TextEdit txtFlowRateShellD1;
         private System.Windows.Forms.Label label209;
         private System.Windows.Forms.Label label210;
         private System.Windows.Forms.Label label211;
@@ -6998,11 +7038,11 @@
         private System.Windows.Forms.Label label204;
         private System.Windows.Forms.Label label205;
         private System.Windows.Forms.Label label206;
-        private System.Windows.Forms.TextBox textBox66;
+        private System.Windows.Forms.TextBox txtHdraulicWater;
         private System.Windows.Forms.Label label207;
-        private System.Windows.Forms.TextBox textBox67;
+        private System.Windows.Forms.TextBox txtHdraulicFluid;
         private System.Windows.Forms.Label label208;
-        private System.Windows.Forms.TextBox textBox68;
+        private System.Windows.Forms.TextBox txtSeepageVelocity;
         private System.Windows.Forms.Label label202;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label194;
@@ -7039,5 +7079,7 @@
         private System.Windows.Forms.Label label241;
         private System.Windows.Forms.Label label240;
         private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.TextBox txtIDFullCOFTankInTabShell;
+        private System.Windows.Forms.Button btnSaveInputShell;
     }
 }

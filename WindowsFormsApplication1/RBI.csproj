@@ -914,6 +914,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RibbonForm1.resx.bak" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
