@@ -188,7 +188,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankBottom.PageVisible = false;
                 TabArea.PageVisible = false;
                 tabCAShell.PageVisible = false;
-                tabCATankShell.PageVisible = true;
+                tabCATankShell.PageVisible = false;
                 tabCATankRoof.PageVisible = true;
                 initData_InputTank(ID);
                 initData_Roof(ID);
