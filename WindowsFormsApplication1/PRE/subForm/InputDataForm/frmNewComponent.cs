@@ -252,6 +252,11 @@ namespace RBI.PRE.subForm.InputDataForm
             }
 
             listAPIComponent = API_BUS.getDataSource();
+            //String APIComponentType = cbAPIComponentType.Text;
+            //if (cbAPIComponentType.Text == "Floating Roof")
+            //    APIComponentType = "TANKROOFFLOAT";
+            //else if (cbAPIComponentType.Text == "Fixed Roof")
+            //    APIComponentType = "TANKROOFFIXED";
             foreach (API_COMPONENT_TYPE a in listAPIComponent)
             {
                 if (a.APIComponentTypeName == cbAPIComponentType.Text)
@@ -278,10 +283,25 @@ namespace RBI.PRE.subForm.InputDataForm
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
-            if (txtComponentNumber.Text == "" || cbComponentType.Text == "" || cbAPIComponentType.Text == "")
+            if (txtComponentNumber.Text == "")
                 return;
+            else
+            {
+                if (cbComponentType.Text == "")
+                    return;
+                else
+                {
+                    if (cbComponentType.Text != "Fixed Roof" && cbComponentType.Text != "Floating Roof" && cbAPIComponentType.Text == "")
+                    {
+                        return;
+                    }
+                }
+            }
+            
+            //if (txtComponentNumber.Text == "" || cbComponentType.Text == "" || cbAPIComponentType.Text == "")
+            //    return;
             List<string> comNum = componentMaster_Bus.getAllComponentNumber();
-            Console.WriteLine("jshdjksdh " + doubleEditClicked);
+            
             foreach(string s in comNum)
             {
                 if (s == txtComponentNumber.Text && s != oldName)
@@ -376,7 +396,15 @@ namespace RBI.PRE.subForm.InputDataForm
                 }
                 else
                 {
-
+                    if (this.cbComponentType.SelectedItem.ToString() == "Fixed Roof")
+                    {
+                        cbAPIComponentType.Properties.Items.Add("TANKROOFFIXED", 0, 0);
+                    }
+                    else
+                    {
+                        cbAPIComponentType.Properties.Items.Add("TANKROOFFLOAT", 0, 0);
+                    }
+                    cbAPIComponentType.SelectedIndex = 0;
                     cbAPIComponentType.Enabled = false;
                     picAPIComponent.Visible = false;
                 }
