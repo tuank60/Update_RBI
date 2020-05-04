@@ -284,7 +284,8 @@ namespace RBI
                     RW_EQUIPMENT eq = uc.ucEquipmentTank.getData(IDProposal, temperature, volume);
                     RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress);
                     RW_STREAM stream = uc.ucStreamTank.getData(IDProposal);
-                    RW_FULL_COF_TANK cof = uc.ucRiskFactor.getDataInputCOFTank(IDProposal);//va them
+                    //RW_FULL_COF_TANK cof = uc.ucRiskFactor.getDataInputCOFTank(IDProposal);//va them
+                    RW_FULL_COF_TANK cof = busFullCofTank.getData(IDProposal); // va them
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, corrosion);
@@ -651,7 +652,7 @@ namespace RBI
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
 
             String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
-            if (componentTypeName == "Shell" || componentTypeName == "Tank Bottom")
+            if (componentTypeName == "Shell" || componentTypeName == "Tank Bottom" || componentTypeName == "Fixed Roof" || componentTypeName == "Floating Roof")
             {
                 rwCATank.ID = ID;
                 rwInputCATank.ID = ID;
@@ -2429,6 +2430,7 @@ namespace RBI
                 CA.Outage_mul = caTank.EquipOutageMultiplier;
                 CA.PRODUCTION_COST = caTank.ProdCost;
                 CA.PERSON_DENSITY = caTank.popdens;
+                CA.INJURE_COST = caTank.injcost;
                 //---------
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
@@ -2499,6 +2501,84 @@ namespace RBI
                     //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
                     //busFullCofTank.add(a);
                 }    
+            }
+            else if (componentTypeName == "Fixed Roof") //va them
+            {
+                CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
+                //CA.Swg = caTank.SW;
+                CA.Soil_type = caTank.Soil_Type;
+                CA.TANK_FLUID = caTank.TANK_FLUID;
+                CA.FLUID = caTank.API_FLUID;
+                CA.API_COMPONENT_TYPE_NAME = "TANKROOFFIXED";
+                CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
+                CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
+                CA.ConcreteFoundation = caTank.ConcreteFoundation == 1 ? true : false;
+                CA.EnvironSensitivity = caTank.Environ_Sensitivity;
+                CA.P_lvdike = caTank.P_lvdike;
+                CA.P_offsite = caTank.P_offsite;
+                CA.P_onsite = caTank.P_onsite;
+
+                rwCATank.ID = eq.ID;
+
+                CA.Outage_mul = caTank.EquipOutageMultiplier;
+                CA.PRODUCTION_COST = caTank.ProdCost;
+                rwCATank.Material_Factor = CA.MATERIAL_COST;
+                rwCATank.Leak_Duration_D1 = float.IsNaN(CA.outage_cmd()) ? 0 : CA.outage_cmd();//luu tam gia tri
+                rwCATank.Business_Cost = float.IsNaN(CA.outage_cmd() * CA.PRODUCTION_COST) ? 0 : CA.outage_cmd() * CA.PRODUCTION_COST;
+                rwCATank.Component_Damage_Cost = float.IsNaN(CA.fc_cmd()) ? 0 : CA.fc_cmd();
+
+
+                rwCATank.Material_Factor = CA.MATERIAL_COST;
+
+                rwCATank.Consequence = rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
+                rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
+                if (busCATank.CheckExistID(rwCATank.ID))
+                    busCATank.edit(rwCATank);
+                else
+                {
+                    busCATank.add(rwCATank);
+                    //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
+                    //busFullCofTank.add(a);
+                }
+            }
+            else if (componentTypeName == "Floating Roof") //va thêm
+            {
+                CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
+                //CA.Swg = caTank.SW;
+                CA.Soil_type = caTank.Soil_Type;
+                CA.TANK_FLUID = caTank.TANK_FLUID;
+                CA.FLUID = caTank.API_FLUID;
+                CA.API_COMPONENT_TYPE_NAME = "TANKROOFFLOAT";
+                CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
+                CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
+                CA.ConcreteFoundation = caTank.ConcreteFoundation == 1 ? true : false;
+                CA.EnvironSensitivity = caTank.Environ_Sensitivity;
+                CA.P_lvdike = caTank.P_lvdike;
+                CA.P_offsite = caTank.P_offsite;
+                CA.P_onsite = caTank.P_onsite;
+
+                rwCATank.ID = eq.ID;
+
+                CA.Outage_mul = caTank.EquipOutageMultiplier;
+                CA.PRODUCTION_COST = caTank.ProdCost;
+                rwCATank.Material_Factor = CA.MATERIAL_COST;
+                rwCATank.Leak_Duration_D1 = float.IsNaN(CA.outage_cmd()) ? 0 : CA.outage_cmd();//luu tam gia tri
+                rwCATank.Business_Cost = float.IsNaN(CA.outage_cmd() * CA.PRODUCTION_COST) ? 0 : CA.outage_cmd() * CA.PRODUCTION_COST;
+                rwCATank.Component_Damage_Cost = float.IsNaN(CA.FC_cmd_bottom()) ? 0 : CA.FC_cmd_bottom();
+
+                
+                rwCATank.Material_Factor = CA.MATERIAL_COST;
+
+                rwCATank.Consequence = rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
+                rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
+                if (busCATank.CheckExistID(rwCATank.ID))
+                    busCATank.edit(rwCATank);
+                else
+                {
+                    busCATank.add(rwCATank);
+                    //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
+                    //busFullCofTank.add(a);
+                }
             }
             else
             {
@@ -3710,15 +3790,7 @@ namespace RBI
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ribbon_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 
 }

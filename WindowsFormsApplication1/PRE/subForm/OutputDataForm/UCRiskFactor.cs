@@ -137,7 +137,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             Console.WriteLine("comTypeID=" + compTypeID + " " + temp[1]);
             
 
-            if (compTypeID == 12)
+            if (compTypeID == 12) //tank bottom
             {
                 initData_Tank(ID);
                 tabCATankBottom.PageVisible = true;
@@ -145,6 +145,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCA.PageVisible = false;
                 tabCATankShell.PageVisible = false;
                 TabArea.PageVisible = false;
+                tabCATankRoof.PageVisible = false;
             }
             else if (compTypeID == 8)
             {
@@ -154,17 +155,43 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCATankShell.PageVisible = true;
                 TabArea.PageVisible = false;
+                tabCATankRoof.PageVisible = false;
             }
-            else if (compTypeID == 13)
+            else if (compTypeID == 13) //shell
             {
                 initData_Shell(ID);
+                TabArea.PageVisible = false;
+                tabCA.PageVisible = false;
+                tabCAShell.PageVisible = false;
+                tabCATankBottom.PageVisible = false;
+                tabCATankShell.PageVisible = true;
+                tabCATankRoof.PageVisible = false; 
+                initData_InputTank(ID);
+
+            }
+            else if (compTypeID == 14) //fixed roof
+            {
+                
                 tabCA.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
                 TabArea.PageVisible = false;
-                tabCAShell.PageVisible = true;
-                tabCATankShell.PageVisible = true;
+                tabCAShell.PageVisible = false;
+                tabCATankShell.PageVisible = false;
+                tabCATankRoof.PageVisible = true;
                 initData_InputTank(ID);
-
+                initData_Roof(ID);
+            }
+            else if (compTypeID == 15) //floating roof
+            {
+               
+                tabCA.PageVisible = false;
+                tabCATankBottom.PageVisible = false;
+                TabArea.PageVisible = false;
+                tabCAShell.PageVisible = false;
+                tabCATankShell.PageVisible = true;
+                tabCATankRoof.PageVisible = true;
+                initData_InputTank(ID);
+                initData_Roof(ID);
             }
             else
             {
@@ -174,9 +201,25 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = true;
                 tabCATankShell.PageVisible = false;
+                tabCATankRoof.PageVisible = false;
+
             }
         }
-
+        private void initData_Roof(int ID)
+        {
+            RW_FULL_COF_TANK_BUS COFBus = new RW_FULL_COF_TANK_BUS();
+            RW_FULL_COF_TANK obj = COFBus.getData(ID);
+            RW_CA_TANK_BUS busCA_Tank = new RW_CA_TANK_BUS();
+            RW_CA_TANK caTank = busCA_Tank.getData(ID);
+            txtOutageMulRoof.Text = obj.EquipOutageMultiplier.ToString();
+            txtPrrodCostRoof.Text = obj.ProdCost.ToString();
+            txtMaterialRoof.Text = caTank.Material_Factor.ToString();
+            txtComDamRoof.Text = caTank.Component_Damage_Cost.ToString();
+            txtDowntimeRoof.Text = caTank.Leak_Duration_D1.ToString();//lưu tạm giá trị
+            txtBusInterRoof.Text = caTank.Business_Cost.ToString();
+            txtTotalConsequenceRoof.Text = caTank.Consequence.ToString();
+            txtConsequenceCategoryRoof.Text = caTank.ConsequenceCategory;
+        }
         private void initData_Tank(int ID)
         {
             RW_CA_TANK_BUS busCA_Tank = new RW_CA_TANK_BUS();
@@ -219,12 +262,11 @@ namespace RBI.PRE.subForm.OutputDataForm
         {
             #region  table RW_FULL_COF_TANK
             RW_FULL_COF_TANK_BUS COFBus = new RW_FULL_COF_TANK_BUS();
-            int test = ID; // test ở đây
             RW_FULL_COF_TANK obj = COFBus.getData(ID);
             txtIDFullCOFTankInTabShell.Text = obj.ID.ToString();
-            txtProcessUnitReplace.Text = obj.ProdCost.ToString();
+            txtProcessUnitReplace.Text = obj.equipcost.ToString();
             txtEquipOutageMultiplier.Text = obj.EquipOutageMultiplier.ToString();
-            txtLossProduction.Text = obj.equipcost.ToString();
+            txtLossProduction.Text = obj.ProdCost.ToString();
             txtDensity.Text = obj.popdens.ToString();
             txtInjury.Text = obj.injcost.ToString();
             #endregion
@@ -322,11 +364,15 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
 
         RW_FULL_COF_TANK input = new RW_FULL_COF_TANK();
+        //private float[] Input = { 0, 0, 0, 0, 0 };
         public RW_FULL_COF_TANK getDataInputCOFTank(int ID)
         {
             input.ID = ID;
-            //input.ProdCost = float.Parse(a) ;
-            //MessageBox.Show(txtProdCost.ToString(), txtDensity.ToString());
+            /*input.equipcost = Input[0] < 0  ? Input[0] : 0;
+            input.EquipOutageMultiplier = Input[1] < 0 ? Input[1] : 0;
+            input.ProdCost = Input[2] < 0 ? Input[2] : 0;
+            input.injcost = Input[3] < 0 ? Input[3] : 0;
+            input.popdens = Input[4] < 0 ? Input[4] : 0; */
             input.equipcost = txtProcessUnitReplace.Text != "" ? float.Parse(txtProcessUnitReplace.Text) : 0;
             input.EquipOutageMultiplier = txtEquipOutageMultiplier.Text != "" ? float.Parse(txtEquipOutageMultiplier.Text) : 0;
             input.ProdCost = txtLossProduction.Text != "" ? float.Parse(txtLossProduction.Text) : 0; 
@@ -614,6 +660,18 @@ namespace RBI.PRE.subForm.OutputDataForm
         {
             int ID = int.Parse(txtIDFullCOFTankInTabShell.Text);
             RW_FULL_COF_TANK inputShell = new RW_FULL_COF_TANK();
+            inputShell = getDataInputCOFTank(ID);
+            RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
+            busCA_Tank.edit(inputShell);
+            MessageBox.Show("Update Input", "Coterk RBI");
+        }
+
+        private void btnSaveInputRoof_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(txtIDFullCOFTankInTabShell.Text);
+            RW_FULL_COF_TANK inputShell = new RW_FULL_COF_TANK();
+            txtEquipOutageMultiplier.Text = txtOutageMulRoof.Text;
+            txtLossProduction.Text = txtPrrodCostRoof.Text;
             inputShell = getDataInputCOFTank(ID);
             RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
             busCA_Tank.edit(inputShell);
