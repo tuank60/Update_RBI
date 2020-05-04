@@ -826,7 +826,7 @@ namespace RBI.DAL.MSSQL
                           ",[RecommendedDate]" +
                           ",[ProposalName]" + 
                           "from rbi.dbo.RW_ASSESSMENT where ComponentID = '" + ComponentID + "'";
-            RW_ASSESSMENT obj = new RW_ASSESSMENT();
+            RW_ASSESSMENT obj = null;
             try
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
