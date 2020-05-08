@@ -221,6 +221,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float HTHA_PRESSURE { set; get; }
         public float CRITICAL_TEMP { set; get; }
         public Boolean DAMAGE_FOUND { set; get; }
+        public int Hydrogen { set; get; }
+        public int HTHADamageObserved { set; get; }
         //</HTHA>
 
         //<BRITTLE>
@@ -2042,61 +2044,139 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             float PV = HTHA_PV(age);
             String SUSCEP = null;
-            if (HTHA_PRESSURE > 8.274) HTHA_MATERIAL = "1.25Cr-0.5Mo";
-            switch (HTHA_MATERIAL)
+            if (HTHADamageObserved == 1)
             {
-                case "Carbon Steel":
-                    {
-                        if (PV > 4.7) SUSCEP = "High";
-                        else if (PV > 4.61 && PV <= 4.7) SUSCEP = "Medium";
-                        else if (PV > 4.53 && PV <= 4.61) SUSCEP = "Low";
-                        else SUSCEP = "Not";
-                        break;
-                    }
-                case "C-0.5Mo (Annealed)":
-                    {
-                        if (PV > 4.95) SUSCEP = "High";
-                        else if (PV > 4.87 && PV <= 4.95) SUSCEP = "Medium";
-                        else if (PV > 4.78 && PV <= 4.87) SUSCEP = "Low";
-                        else SUSCEP = "Not";
-                        break;
-                    }
-                case "C-0.5Mo (Normalised)":
-                    {
-                        if (PV > 5.6) SUSCEP = "High";
-                        else if (PV > 5.51 && PV <= 5.6) SUSCEP = "Medium";
-                        else if (PV > 5.43 && PV <= 5.51) SUSCEP = "Low";
-                        else SUSCEP = "Not";
-                        break;
-                    }
-                case "1Cr-0.5Mo":
-                    {
-                        if (PV > 5.8) SUSCEP = "High";
-                        else if (PV > 5.71 && PV <= 5.8) SUSCEP = "Medium";
-                        else if (PV > 5.63 && PV <= 5.71) SUSCEP = "Low";
-                        else SUSCEP = "Not";
-                        break;
-                    }
-                case "1.25Cr-0.5Mo":
-                    {
-                        if (PV > 6.0) SUSCEP = "High";
-                        else if (PV > 5.92 && PV <= 6.0) SUSCEP = "Medium";
-                        else if (PV > 5.83 && PV <= 5.92) SUSCEP = "Low";
-                        else SUSCEP = "Not";
-                        break;
-                    }
-                case "2.25Cr-1Mo":
-                    {
-                        if (PV > 6.53) SUSCEP = "High";
-                        else if (PV > 6.45 && PV <= 6.53) SUSCEP = "Medium";
-                        else if (PV > 6.36 && PV <= 6.45) SUSCEP = "Low";
-                        else SUSCEP = "Not";
-                        break;
-                    }
-                default: SUSCEP = "Not"; break;
+
+                if (MAX_OP_TEMP > 177 && HTHA_PRESSURE >= 0.345)
+                {
+                    SUSCEP = "High";
+
+                }
+                else SUSCEP = "No";
+
             }
-            //Debug.WriteLine("Suscep: " + SUSCEP);
-            return SUSCEP;
+            else
+            {
+                float HTHA_PRESSURE_psia = HTHA_PRESSURE * 145;
+                float TemperatureAdjusted = MAX_OP_TEMP * 9 / 5 + 32;
+                double deltaT = 0;
+                if (MATERIAL_SUSCEP_HTHA == true)
+                {
+                    switch (HTHA_MATERIAL)
+                    {
+                        case "Carbon Steel":
+                        case "C-0.5Mo (Annealed)":
+                        case "C-0.5Mo (Normalised)":
+                            {
+                                if (MAX_OP_TEMP > 177 && HTHA_PRESSURE >= 0.345)
+                                {
+                                    SUSCEP = "High";
+                                }
+                                else SUSCEP = "No";
+                                break;
+                            }
+
+
+                        case "1Cr-0.5Mo":
+                            {
+                               if(HTHA_PRESSURE_psia>=50.0&& HTHA_PRESSURE_psia<700.0)
+                                {
+                                    deltaT = TemperatureAdjusted - ((-0.2992 * HTHA_PRESSURE_psia) + 1100.0);
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 700.0) && (HTHA_PRESSURE_psia < 1250.0))
+                                {
+                                    deltaT =(TemperatureAdjusted - 905.0);
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 1250.0) && (HTHA_PRESSURE_psia < 1800.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - (1171.11 * Math.Pow(HTHA_PRESSURE_psia - 1215.03, -0.092)));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 1800.0) && (HTHA_PRESSURE_psia < 2600.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - (((4E-05 * Math.Pow(HTHA_PRESSURE_psia, 2.0)) - (0.2042 * HTHA_PRESSURE_psia)) + 903.69));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 2600.0) && (HTHA_PRESSURE_psia < 13000.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - 625.0);
+                                }
+                                break;
+                            }
+                        case "1.25Cr-0.5Mo":
+                            {
+                                if ((HTHA_PRESSURE_psia >= 50.0) && (HTHA_PRESSURE_psia < 1250.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - ((-0.1668 * HTHA_PRESSURE_psia) + 1150.0));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 1250.0) && (HTHA_PRESSURE_psia < 1800.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - (1171.11 * Math.Pow(HTHA_PRESSURE_psia - 1215.03, -0.092)));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 1800.0) && (HTHA_PRESSURE_psia < 2600.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - (((4E-05 * Math.Pow(HTHA_PRESSURE_psia, 2.0)) - (0.2042 * HTHA_PRESSURE_psia)) + 903.69));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 2600.0) && (HTHA_PRESSURE_psia < 13000.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - 625.0);
+                                }
+                                break;
+                            }
+                        case "2.25Cr-1Mo":
+                            {
+                                if ((HTHA_PRESSURE_psia >= 50.0) && (HTHA_PRESSURE_psia < 2000.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - ((-0.1701 * HTHA_PRESSURE_psia) + 1200.0));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 2000.0) && (HTHA_PRESSURE_psia < 6000.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - 855.0);
+                                }
+                                break;
+                            }
+                        case "3Cr-1Mo":
+                            {
+                                if ((HTHA_PRESSURE_psia >= 50.0) && (HTHA_PRESSURE_psia < 1800.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - ((-0.1659 * HTHA_PRESSURE_psia) + 1250.0));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 1800.0) && (HTHA_PRESSURE_psia < 6000.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - 950.0);
+                                }
+                                break;
+                            }
+                        case "6Cr-0.5Mo":
+                            {
+                                if ((HTHA_PRESSURE_psia >= 50.0) && (HTHA_PRESSURE_psia < 1100.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - ((-0.1254 * HTHA_PRESSURE_psia) + 1300.0));
+                                }
+                                else if ((HTHA_PRESSURE_psia >= 1100.0) && (HTHA_PRESSURE_psia < 6000.0))
+                                {
+                                    deltaT = (TemperatureAdjusted - 1120.0);
+                                }
+                                break;
+                            }
+                        case "Not Applicable":
+                            {
+                                SUSCEP = "None";
+                                break;
+                            }
+                    }
+
+                }
+                if (SUSCEP == null)
+                {
+                    if (deltaT >= 0) SUSCEP = "High";
+                    else if (deltaT < 0 && deltaT >=-50) SUSCEP = "Medium";
+                    else if(deltaT < -50 && deltaT >= -100) SUSCEP = "Low";
+                    else  SUSCEP = "None";
+
+                }
+            }
+           
+
+                return SUSCEP;
         }
         private int API_DF_HTHA(float age)
         {
@@ -2123,16 +2203,28 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float DF_HTHA(float age)
         {
-            
-            if (MATERIAL_SUSCEP_HTHA)
-            {
-                if (CRITICAL_TEMP <= 204 && HTHA_PRESSURE <= 0.552) //80.06 psi
-                    return 1;
-                else
-                    return API_DF_HTHA(age);
-            }
-            else
-                return -1;
+            int kq = 0;
+            //if (MATERIAL_SUSCEP_HTHA)
+            //{
+            //    if (CRITICAL_TEMP <= 204 && HTHA_PRESSURE <= 0.552) //80.06 psi
+            //        return 1;
+            //    else
+            //        return API_DF_HTHA(age);
+            //}
+            //else
+            //    return -1;
+            //Hai sua
+            if (Hydrogen==0 || MAX_OP_TEMP == 0) return -1;//>177
+            if (HTHA_SUSCEP(age) == "No") return -1;
+            else if (HTHA_SUSCEP(age) == "Observed" || HTHA_SUSCEP(age) == "High")
+                kq = 5000;
+            else if (HTHA_SUSCEP(age) == "Medium")
+                kq = 2000;
+            else if (HTHA_SUSCEP(age) == "Low")
+                kq = 100;
+            else kq = 0;
+            return kq;
+
         }
 
         ///<summary>

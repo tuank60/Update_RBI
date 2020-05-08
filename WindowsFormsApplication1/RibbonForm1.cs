@@ -1643,9 +1643,11 @@ namespace RBI
             cal.HTHA_NUM_INSP = busInspectionHistory.InspectionNumber(componentID, DM_ID[15]);
             cal.MATERIAL_SUSCEP_HTHA = ma.IsHTHA == 1 ? true : false;
             cal.HTHA_MATERIAL = ma.HTHAMaterialCode; //check lai
-            cal.HTHA_PRESSURE = st.H2SPartialPressure * 0.006895f;
+            cal.HTHA_PRESSURE = st.H2SPartialPressure;// * 0.006895f;
             cal.CRITICAL_TEMP = st.CriticalExposureTemperature; //check lai
             cal.DAMAGE_FOUND = com.DamageFoundInspection == 1 ? true : false;
+            cal.Hydrogen = st.Hydrogen;
+            cal.HTHADamageObserved = com.HTHADamageObserved;
             //</HTHA>
 
             //<input Brittle>
