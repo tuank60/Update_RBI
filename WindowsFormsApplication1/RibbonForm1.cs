@@ -242,7 +242,7 @@ namespace RBI
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, corrosion);
-                    
+                    UCInspectionHistorySubform ucInsHisSub = uc.ucInspectionHistory;
                     //RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
@@ -251,8 +251,8 @@ namespace RBI
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
-                    //Save inspection history
-                    UCInspectionHistorySubform ucInsHisSub = uc.ucInspectionHistory;
+                    //Save inspection history//hai bo sung
+              
                     ucInsHisSub.saveData(IDProposal);
                     //Save Data Corrosion Rate
                     //uc.ucCorRate.SaveDateCorrosinRate();
@@ -284,8 +284,7 @@ namespace RBI
                     RW_EQUIPMENT eq = uc.ucEquipmentTank.getData(IDProposal, temperature, volume);
                     RW_COMPONENT com = uc.ucComponentTank.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress);
                     RW_STREAM stream = uc.ucStreamTank.getData(IDProposal);
-                    //RW_FULL_COF_TANK cof = uc.ucRiskFactor.getDataInputCOFTank(IDProposal);//va them
-                    RW_FULL_COF_TANK cof = busFullCofTank.getData(IDProposal); // va them
+                    RW_FULL_COF_TANK cof = uc.ucRiskFactor.getDataInputCOFTank(IDProposal);//va them
                     RW_EXTCOR_TEMPERATURE extTemp = uc.ucOpera.getDataExtcorTemp(IDProposal);
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterialTank.getData(IDProposal, temperature, pressure, corrosion);
@@ -318,6 +317,9 @@ namespace RBI
                     MessageBox.Show("Calculation finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank, cof); dự định sẽ khi ấn save sẽ lưu cả phần input trong cof
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma, caTank);
+                    //luu inspection history
+                    UCInspectionHistorySubform ucInsHisSub = uc.ucInspHistory;
+                    ucInsHisSub.saveData(IDProposal);
                     UCRiskFactor resultRisk = new UCRiskFactor(IDProposal);
                     //resultRisk.ShowDataOutputCA(IDProposal); //***
                     //resultRisk.riskPoF(IDProposal); //***
@@ -652,7 +654,7 @@ namespace RBI
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
 
             String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
-            if (componentTypeName == "Shell" || componentTypeName == "Tank Bottom" || componentTypeName == "Fixed Roof" || componentTypeName == "Floating Roof")
+            if (componentTypeName == "Shell" || componentTypeName == "Tank Bottom")
             {
                 rwCATank.ID = ID;
                 rwInputCATank.ID = ID;
@@ -1493,7 +1495,7 @@ namespace RBI
             cal.N_C_Thinning = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "C");
             cal.N_D_Thinning = busInspectionHistory.InspectionTypeNumber(componentID, DM_ID[0], "D");
         
-            Console.WriteLine("noInspection:" + cal.NoINSP_THINNING);
+            //Console.WriteLine("noInspection:" + cal.NoINSP_THINNING);
             cal.EFF_THIN = busInspectionHistory.getHighestInspEffec(componentID, DM_ID[0]);
             cal.OnlineMonitoring = eq.OnlineMonitoring;
             cal.HighlyEffectDeadleg = eq.HighlyDeadlegInsp == 1 ? true : false;
@@ -2140,12 +2142,12 @@ namespace RBI
             fullPOF.ThinningAP1 = DF_Thin_Total[0];
             fullPOF.ThinningAP2 = DF_Thin_Total[1];
             fullPOF.ThinningAP3 = DF_Thin_Total[2];
-            fullPOF.ThinningLocalAP1 = Math.Max(DF_Thin_Total[0], DF_Ext_Total);
-            fullPOF.ThinningLocalAP2 = Math.Max(DF_Thin_Total[1], DF_Ext_Total2);
-            fullPOF.ThinningLocalAP3 = Math.Max(DF_Thin_Total[2], DF_ext_total3);
-            fullPOF.ThinningGeneralAP1 = DF_Thin_Total[0] + DF_Ext_Total;
-            fullPOF.ThinningGeneralAP2 = DF_Thin_Total[1] + DF_Ext_Total2;
-            fullPOF.ThinningGeneralAP3 = DF_Thin_Total[2] + DF_ext_total3;
+            //fullPOF.ThinningLocalAP1 = Math.Max(DF_Thin_Total[0], DF_Ext_Total);
+            //fullPOF.ThinningLocalAP2 = Math.Max(DF_Thin_Total[1], DF_Ext_Total2);
+            //fullPOF.ThinningLocalAP3 = Math.Max(DF_Thin_Total[2], DF_ext_total3);
+            //fullPOF.ThinningGeneralAP1 = DF_Thin_Total[0] + DF_Ext_Total;
+            //fullPOF.ThinningGeneralAP2 = DF_Thin_Total[1] + DF_Ext_Total2;
+            //fullPOF.ThinningGeneralAP3 = DF_Thin_Total[2] + DF_ext_total3;
             fullPOF.ExternalAP1 = DF_Ext_Total;
             fullPOF.ExternalAP2 = DF_Ext_Total2;
             fullPOF.ExternalAP3 = DF_ext_total3;
@@ -2161,6 +2163,12 @@ namespace RBI
             fullPOF.SCCAP1 = DF_SCC_Total[0];
             fullPOF.SCCAP2 = DF_SCC_Total[1];
             fullPOF.SCCAP3 = DF_SCC_Total[2];
+            fullPOF.ThinningLocalAP1 = Math.Max(DF_Thin_Total[0], DF_Ext_Total)+ fullPOF.SCCAP1+ fullPOF.BrittleAP1+ fullPOF.FatigueAP1+ fullPOF.HTHA_AP1;
+            fullPOF.ThinningLocalAP2 = Math.Max(DF_Thin_Total[1], DF_Ext_Total2) + fullPOF.SCCAP2 + fullPOF.BrittleAP2 + fullPOF.FatigueAP2 + fullPOF.HTHA_AP2;
+            fullPOF.ThinningLocalAP3 = Math.Max(DF_Thin_Total[2], DF_ext_total3)+ fullPOF.SCCAP3 + fullPOF.BrittleAP3 + fullPOF.FatigueAP3 + fullPOF.HTHA_AP3;
+            fullPOF.ThinningGeneralAP1 = DF_Thin_Total[0] + DF_Ext_Total + fullPOF.SCCAP1 + fullPOF.BrittleAP1 + fullPOF.FatigueAP1 + fullPOF.HTHA_AP1; ;
+            fullPOF.ThinningGeneralAP2 = DF_Thin_Total[1] + DF_Ext_Total2 + fullPOF.SCCAP2 + fullPOF.BrittleAP2 + fullPOF.FatigueAP2 + fullPOF.HTHA_AP2;
+            fullPOF.ThinningGeneralAP3 = DF_Thin_Total[2] + DF_ext_total3 + fullPOF.SCCAP3 + fullPOF.BrittleAP3 + fullPOF.FatigueAP3 + fullPOF.HTHA_AP3; ;
             fullPOF.TotalDFAP1 = DF_Total[0];
             fullPOF.TotalDFAP2 = DF_Total[1];
             fullPOF.TotalDFAP3 = DF_Total[2];
@@ -2169,7 +2177,8 @@ namespace RBI
             fullPOF.PoFAP3Category = cal.PoFCategory(DF_Total[2]);
             //get Managerment Factor 
             float FMS = 0;
-            FMS = busFacility.getFMS(busEquipmentMaster.getSiteID(equipmentID));
+            //FMS = busFacility.getFMS(busEquipmentMaster.getSiteID(equipmentID));
+            FMS = eq.ManagementFactor;
             fullPOF.FMS = FMS;
             //get GFFtotal
             float GFFTotal = 0;
@@ -2430,7 +2439,6 @@ namespace RBI
                 CA.Outage_mul = caTank.EquipOutageMultiplier;
                 CA.PRODUCTION_COST = caTank.ProdCost;
                 CA.PERSON_DENSITY = caTank.popdens;
-                CA.INJURE_COST = caTank.injcost;
                 //---------
                 rwCATank.ID = eq.ID;
                 // bieu thuc trung gian
@@ -2501,84 +2509,6 @@ namespace RBI
                     //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
                     //busFullCofTank.add(a);
                 }    
-            }
-            else if (componentTypeName == "Fixed Roof") //va them
-            {
-                CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
-                //CA.Swg = caTank.SW;
-                CA.Soil_type = caTank.Soil_Type;
-                CA.TANK_FLUID = caTank.TANK_FLUID;
-                CA.FLUID = caTank.API_FLUID;
-                CA.API_COMPONENT_TYPE_NAME = "TANKROOFFIXED";
-                CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
-                CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
-                CA.ConcreteFoundation = caTank.ConcreteFoundation == 1 ? true : false;
-                CA.EnvironSensitivity = caTank.Environ_Sensitivity;
-                CA.P_lvdike = caTank.P_lvdike;
-                CA.P_offsite = caTank.P_offsite;
-                CA.P_onsite = caTank.P_onsite;
-
-                rwCATank.ID = eq.ID;
-
-                CA.Outage_mul = caTank.EquipOutageMultiplier;
-                CA.PRODUCTION_COST = caTank.ProdCost;
-                rwCATank.Material_Factor = CA.MATERIAL_COST;
-                rwCATank.Leak_Duration_D1 = float.IsNaN(CA.outage_cmd()) ? 0 : CA.outage_cmd();//luu tam gia tri
-                rwCATank.Business_Cost = float.IsNaN(CA.outage_cmd() * CA.PRODUCTION_COST) ? 0 : CA.outage_cmd() * CA.PRODUCTION_COST;
-                rwCATank.Component_Damage_Cost = float.IsNaN(CA.fc_cmd()) ? 0 : CA.fc_cmd();
-
-
-                rwCATank.Material_Factor = CA.MATERIAL_COST;
-
-                rwCATank.Consequence = rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
-                rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
-                if (busCATank.CheckExistID(rwCATank.ID))
-                    busCATank.edit(rwCATank);
-                else
-                {
-                    busCATank.add(rwCATank);
-                    //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
-                    //busFullCofTank.add(a);
-                }
-            }
-            else if (componentTypeName == "Floating Roof") //va thêm
-            {
-                CA.TANK_DIAMETER = caTank.TANK_DIAMETTER;
-                //CA.Swg = caTank.SW;
-                CA.Soil_type = caTank.Soil_Type;
-                CA.TANK_FLUID = caTank.TANK_FLUID;
-                CA.FLUID = caTank.API_FLUID;
-                CA.API_COMPONENT_TYPE_NAME = "TANKROOFFLOAT";
-                CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
-                CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
-                CA.ConcreteFoundation = caTank.ConcreteFoundation == 1 ? true : false;
-                CA.EnvironSensitivity = caTank.Environ_Sensitivity;
-                CA.P_lvdike = caTank.P_lvdike;
-                CA.P_offsite = caTank.P_offsite;
-                CA.P_onsite = caTank.P_onsite;
-
-                rwCATank.ID = eq.ID;
-
-                CA.Outage_mul = caTank.EquipOutageMultiplier;
-                CA.PRODUCTION_COST = caTank.ProdCost;
-                rwCATank.Material_Factor = CA.MATERIAL_COST;
-                rwCATank.Leak_Duration_D1 = float.IsNaN(CA.outage_cmd()) ? 0 : CA.outage_cmd();//luu tam gia tri
-                rwCATank.Business_Cost = float.IsNaN(CA.outage_cmd() * CA.PRODUCTION_COST) ? 0 : CA.outage_cmd() * CA.PRODUCTION_COST;
-                rwCATank.Component_Damage_Cost = float.IsNaN(CA.FC_cmd_bottom()) ? 0 : CA.FC_cmd_bottom();
-
-                
-                rwCATank.Material_Factor = CA.MATERIAL_COST;
-
-                rwCATank.Consequence = rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
-                rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
-                if (busCATank.CheckExistID(rwCATank.ID))
-                    busCATank.edit(rwCATank);
-                else
-                {
-                    busCATank.add(rwCATank);
-                    //RW_FULL_COF_TANK a = new RW_FULL_COF_TANK();
-                    //busFullCofTank.add(a);
-                }
             }
             else
             {
@@ -3790,7 +3720,15 @@ namespace RBI
             }
         }
 
-       
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

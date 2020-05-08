@@ -17,17 +17,20 @@ namespace RBI.PRE.subForm.InputDataForm
 
         string[] itemsExposureAmine = { "High Rich Amine", "Low Lean Amine", "None" };
         string[] itemsAmineSolutionComposition = { "Diethanolamine DEA", "Diglycolamine DGA", "Disopropanolamine DIPA", "Methyldiethanolamine MDEA", "Monoethanolamine MEA", "Sulfinol" };
+        string[] itemsPhaseFluidStorage = { "Gas", "Liquid" };
         public UCStream()
         {
             InitializeComponent();
             addItemsExposureAmine();
             addItemsAmineSolutionComposition();
+            addIteamsPhaseFluidStorage();
         }
         public UCStream(int ID)
         {
             InitializeComponent();
             addItemsExposureAmine();
             addItemsAmineSolutionComposition();
+            addIteamsPhaseFluidStorage();
             ShowDatatoControl(ID);
         }
         public void ShowDatatoControl(int ID)
@@ -67,6 +70,7 @@ namespace RBI.PRE.subForm.InputDataForm
             txtpHWater.Text = obj.WaterpH.ToString();
             txbModelFluid.Text = obj.TankFluidName;
             txbToxicFluid.Text = obj.ToxicFluidName;
+            cbPhaseFluidStorage.SelectedItem = obj.StoragePhase;
         }
         public RW_STREAM getData(int ID)
         {
@@ -99,7 +103,7 @@ namespace RBI.PRE.subForm.InputDataForm
             //stream.ModelFluidID
             stream.NaOHConcentration = txtNaOHConcentration.Text != "" ? float.Parse(txtNaOHConcentration.Text) : 0;
             //stream.NonFlameToxicFluidID = cbToxicFluid.Text;
-            //stream.StoragePhase
+            stream.StoragePhase = cbPhaseFluidStorage.Text;
             //stream.ToxicFluidID = 
             stream.WaterpH = txtpHWater.Text != "" ? float.Parse(txtpHWater.Text) : 0;
             stream.TankFluidName = txbModelFluid.Text;
@@ -126,7 +130,14 @@ namespace RBI.PRE.subForm.InputDataForm
                 cbAmineSolutionComposition.Properties.Items.Add(itemsAmineSolutionComposition[i], i, i);
             }
         }
-       
+       private void addIteamsPhaseFluidStorage()
+        {
+            cbPhaseFluidStorage.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemsPhaseFluidStorage.Length; i++)
+            {
+                cbPhaseFluidStorage.Properties.Items.Add(itemsPhaseFluidStorage[i], i, i);
+            }
+        }
 
         #region KeyPress Event Handle
         private void keyPressEvent(TextBox textbox, KeyPressEventArgs ev)

@@ -357,6 +357,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
         public float FlowStress()
         {
+            //if (((YieldStrength + TensileStrength) / 2) * WeldJointEfficiency * 1.1f == 0) return 1;
             return ((YieldStrength + TensileStrength) / 2) * WeldJointEfficiency * 1.1f; // MPA la don vi chuan
         }
 
@@ -504,7 +505,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 EFF_THIN = "E";
             if (APIComponentType == "TANKBOTTOM")
             {
-                if (NomalThick == 0 || CurrentThick == 0)
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 1390;
                 else
                     Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN));
@@ -514,7 +515,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 float[] Po = PosteriorProbab(8);
                 double[] Pa = Parameter(age,8);
-                if (NomalThick == 0 || CurrentThick == 0)
+                if (NomalThick == 0 || CurrentThick == 0|| WeldJointEfficiency==0||(YieldStrength==0&& TensileStrength==0)) 
                     return 6500;
                 else
                 {
@@ -1568,12 +1569,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
         } 
         public float DF_EXTERNAL_CORROSION(float age)
         {
-            if (EXTERNAL_EXPOSED_FLUID_MIST || (CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177)))
+           // if (EXTERNAL_EXPOSED_FLUID_MIST || ((CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177))))
             {
                 if (EXTERNAL_INSP_EFF == "" || EXTERNAL_INSP_EFF == null || EXTERNAL_INSP_NUM == 0)
                     EXTERNAL_INSP_EFF = "E";
 
-                if (NomalThick == 0 || CurrentThick == 0)
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0)|| EXTERNAL_EXPOSED_FLUID_MIST || ((CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177)))) 
                     return 6500;
                 else
                 {
@@ -1583,10 +1584,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     return DF_Extcor;
                 }
             }            
-            else
+            //else
             {
                 
-                return 0;
+              //  return 0;
             }
 
         }
@@ -1776,14 +1777,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 CUI_INSP_EFF = "E";
             if (APIComponentType == "TANKBOTTOM")
             {
-                if (NomalThick == 0 || CurrentThick == 0)
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 1390;
                 else
                     return DAL_CAL.GET_TBL_47(API_ART_CUI(age), CUI_INSP_EFF);
             }
             else
             {
-                if (NomalThick == 0 || CurrentThick == 0)
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 1900;
                 else
                     return 0;

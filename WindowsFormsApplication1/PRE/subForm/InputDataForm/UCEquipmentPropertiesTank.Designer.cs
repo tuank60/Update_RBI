@@ -159,7 +159,7 @@
             this.lblTankConsequence.Name = "lblTankConsequence";
             this.lblTankConsequence.Size = new System.Drawing.Size(865, 17);
             this.lblTankConsequence.TabIndex = 22;
-            this.lblTankConsequence.Text = "▼ Tank Consequence of Faifure Properties";
+            this.lblTankConsequence.Text = "▼ Tank Consequence of Failture Properties";
             this.lblTankConsequence.Click += new System.EventHandler(this.lblTankConsequence_Click);
             // 
             // label7
@@ -629,7 +629,7 @@
             this.lblThinningDF.Name = "lblThinningDF";
             this.lblThinningDF.Size = new System.Drawing.Size(874, 19);
             this.lblThinningDF.TabIndex = 30;
-            this.lblThinningDF.Text = "▼ Governing Thinning Damage Factor Properties\r\n";
+            this.lblThinningDF.Text = "▼ Governing Thinning Damage Factor Properties";
             this.lblThinningDF.Click += new System.EventHandler(this.lblThinningDF_Click);
             // 
             // label15

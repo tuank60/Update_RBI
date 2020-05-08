@@ -31,12 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pnlGenericProperties = new System.Windows.Forms.Panel();
+            this.txbToxicFluid = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txbModelFluid = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.numToxicFluidPercent = new System.Windows.Forms.NumericUpDown();
             this.label26 = new System.Windows.Forms.Label();
             this.numLiquidLevel = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
-            this.imageComboBoxEdit3 = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.cbToxicFluid = new DevExpress.XtraEditors.ImageComboBoxEdit();
+            this.cbPhaseFluidStorage = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -81,24 +86,15 @@
             this.label10 = new System.Windows.Forms.Label();
             this.chkExposedAcidGas = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txbModelFluid = new System.Windows.Forms.TextBox();
-            this.cbFluidTank = new DevExpress.XtraEditors.ImageComboBoxEdit();
-            this.txbToxicFluid = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnlGenericProperties.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numToxicFluidPercent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLiquidLevel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbToxicFluid.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbPhaseFluidStorage.Properties)).BeginInit();
             this.pnlHydrogen.SuspendLayout();
             this.pnlStress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbAmineSolutionComposition.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbExposureAmine.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbFluidTank.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -128,10 +124,8 @@
             this.pnlGenericProperties.Controls.Add(this.label26);
             this.pnlGenericProperties.Controls.Add(this.numLiquidLevel);
             this.pnlGenericProperties.Controls.Add(this.label11);
-            this.pnlGenericProperties.Controls.Add(this.imageComboBoxEdit3);
-            this.pnlGenericProperties.Controls.Add(this.cbToxicFluid);
+            this.pnlGenericProperties.Controls.Add(this.cbPhaseFluidStorage);
             this.pnlGenericProperties.Controls.Add(this.label19);
-            this.pnlGenericProperties.Controls.Add(this.cbFluidTank);
             this.pnlGenericProperties.Controls.Add(this.label23);
             this.pnlGenericProperties.Controls.Add(this.label24);
             this.pnlGenericProperties.Controls.Add(this.lblGenericProperties);
@@ -139,6 +133,66 @@
             this.pnlGenericProperties.Name = "pnlGenericProperties";
             this.pnlGenericProperties.Size = new System.Drawing.Size(895, 156);
             this.pnlGenericProperties.TabIndex = 21;
+            // 
+            // txbToxicFluid
+            // 
+            this.txbToxicFluid.Location = new System.Drawing.Point(362, 50);
+            this.txbToxicFluid.Multiline = true;
+            this.txbToxicFluid.Name = "txbToxicFluid";
+            this.txbToxicFluid.Size = new System.Drawing.Size(266, 19);
+            this.txbToxicFluid.TabIndex = 28;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(646, 49);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(24, 21);
+            this.button3.TabIndex = 27;
+            this.button3.Text = "X";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(626, 49);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(23, 21);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txbModelFluid
+            // 
+            this.txbModelFluid.Location = new System.Drawing.Point(362, 27);
+            this.txbModelFluid.Multiline = true;
+            this.txbModelFluid.Name = "txbModelFluid";
+            this.txbModelFluid.Size = new System.Drawing.Size(266, 19);
+            this.txbModelFluid.TabIndex = 25;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(646, 26);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 21);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "X";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(626, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(23, 21);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // numToxicFluidPercent
             // 
@@ -178,23 +232,14 @@
             this.label11.TabIndex = 18;
             this.label11.Text = "Liquid Level (%)";
             // 
-            // imageComboBoxEdit3
+            // cbPhaseFluidStorage
             // 
-            this.imageComboBoxEdit3.Location = new System.Drawing.Point(362, 72);
-            this.imageComboBoxEdit3.Name = "imageComboBoxEdit3";
-            this.imageComboBoxEdit3.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.cbPhaseFluidStorage.Location = new System.Drawing.Point(362, 72);
+            this.cbPhaseFluidStorage.Name = "cbPhaseFluidStorage";
+            this.cbPhaseFluidStorage.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.imageComboBoxEdit3.Size = new System.Drawing.Size(69, 20);
-            this.imageComboBoxEdit3.TabIndex = 17;
-            // 
-            // cbToxicFluid
-            // 
-            this.cbToxicFluid.Location = new System.Drawing.Point(501, 90);
-            this.cbToxicFluid.Name = "cbToxicFluid";
-            this.cbToxicFluid.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbToxicFluid.Size = new System.Drawing.Size(267, 20);
-            this.cbToxicFluid.TabIndex = 15;
+            this.cbPhaseFluidStorage.Size = new System.Drawing.Size(69, 20);
+            this.cbPhaseFluidStorage.TabIndex = 17;
             // 
             // label19
             // 
@@ -695,75 +740,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(626, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 21);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "...";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(646, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 21);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "X";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txbModelFluid
-            // 
-            this.txbModelFluid.Location = new System.Drawing.Point(362, 27);
-            this.txbModelFluid.Multiline = true;
-            this.txbModelFluid.Name = "txbModelFluid";
-            this.txbModelFluid.Size = new System.Drawing.Size(266, 19);
-            this.txbModelFluid.TabIndex = 25;
-            // 
-            // cbFluidTank
-            // 
-            this.cbFluidTank.Location = new System.Drawing.Point(501, 116);
-            this.cbFluidTank.Name = "cbFluidTank";
-            this.cbFluidTank.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbFluidTank.Size = new System.Drawing.Size(267, 20);
-            this.cbFluidTank.TabIndex = 13;
-            // 
-            // txbToxicFluid
-            // 
-            this.txbToxicFluid.Location = new System.Drawing.Point(362, 50);
-            this.txbToxicFluid.Multiline = true;
-            this.txbToxicFluid.Name = "txbToxicFluid";
-            this.txbToxicFluid.Size = new System.Drawing.Size(266, 19);
-            this.txbToxicFluid.TabIndex = 28;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(646, 49);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 21);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "X";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(626, 49);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(23, 21);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // UCStream
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,15 +753,13 @@
             this.pnlGenericProperties.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numToxicFluidPercent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numLiquidLevel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageComboBoxEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbToxicFluid.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbPhaseFluidStorage.Properties)).EndInit();
             this.pnlHydrogen.ResumeLayout(false);
             this.pnlHydrogen.PerformLayout();
             this.pnlStress.ResumeLayout(false);
             this.pnlStress.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbAmineSolutionComposition.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbExposureAmine.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbFluidTank.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -837,12 +811,11 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.NumericUpDown numLiquidLevel;
         private System.Windows.Forms.Label label11;
-        private DevExpress.XtraEditors.ImageComboBoxEdit imageComboBoxEdit3;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbPhaseFluidStorage;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label lblGenericProperties;
-        private DevExpress.XtraEditors.ImageComboBoxEdit cbToxicFluid;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
@@ -850,6 +823,5 @@
         private System.Windows.Forms.TextBox txbToxicFluid;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private DevExpress.XtraEditors.ImageComboBoxEdit cbFluidTank;
     }
 }

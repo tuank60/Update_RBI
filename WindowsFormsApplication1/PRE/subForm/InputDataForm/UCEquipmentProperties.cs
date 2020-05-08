@@ -74,6 +74,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     chkPWHT.Checked = e.PWHT == 1 ? true : false;
                     chkLinerOnlineMonitoring.Checked = e.LinerOnlineMonitoring == 1 ? true : false;
                     chkPresenceSulphideShutdown.Checked = e.PresenceSulphidesO2Shutdown == 1 ? true : false;
+                    numSystemManagementFactor.Value=(decimal)e.ManagementFactor;
                     if (temUnit == "DEG_C") txtMinRequiredTemperature.Text = e.MinReqTemperaturePressurisation.ToString();
                     else if (temUnit == "DEG_F") txtMinRequiredTemperature.Text = (convUnit.CelToFah(e.MinReqTemperaturePressurisation)).ToString(); // mai
                     else txtMinRequiredTemperature.Text = (convUnit.CelToKenvin(e.MinReqTemperaturePressurisation)).ToString(); // mai
@@ -157,8 +158,9 @@ namespace RBI.PRE.subForm.InputDataForm
             eq.PWHT = chkPWHT.Checked ? 1 : 0;
             eq.SteamOutWaterFlush = chkSteamedOutPriorWaterFlushing.Checked ? 1 : 0;
             int equipmentID = assBus.getEquipmentID(ID);
-            float FMS = busFacility.getFMS(busEquipmentMaster.getFacilityID(equipmentID));
-            eq.ManagementFactor = FMS;
+            //float FMS = busFacility.getFMS(busEquipmentMaster.getFacilityID(equipmentID));
+            float FMS = (float)numSystemManagementFactor.Value;
+            eq.ManagementFactor = (float)numSystemManagementFactor.Value;
             eq.ThermalHistory = cbThermalHistory.Text;
             double equipVolume = 0;
             if (volUnit == "M3")
