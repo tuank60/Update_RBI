@@ -761,6 +761,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -772,12 +773,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 71.99999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(80, 14);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(523, 108);
+            this.label1.Size = new System.Drawing.Size(685, 73);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cortek RBI";
+            this.label1.Text = "Risk-based Inspection";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // treeListProject
