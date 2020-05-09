@@ -1576,7 +1576,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (EXTERNAL_INSP_EFF == "" || EXTERNAL_INSP_EFF == null || EXTERNAL_INSP_NUM == 0)
                     EXTERNAL_INSP_EFF = "E";
 
-                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0)|| EXTERNAL_EXPOSED_FLUID_MIST || ((CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177)))) 
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 6500;
                 else
                 {
@@ -2034,6 +2034,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         /// CAL HTHA
         ///</summary>
         private float HTHA_PV(float age)
+
         {
             float HTHA_AGE = age * 24 * 365;
             float log1 = (float)Math.Log10(HTHA_PRESSURE / 0.0979);
