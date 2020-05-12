@@ -517,8 +517,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 float[] Po = PosteriorProbab(8);
                 double[] Pa = Parameter(age,8);
-                if (NomalThick == 0 || CurrentThick == 0|| WeldJointEfficiency==0||(YieldStrength==0&& TensileStrength==0)) 
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 6500;
+
                 else
                 {
                     Console.WriteLine("Strength ratio: " + StrengRatio());
@@ -1576,7 +1577,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (EXTERNAL_INSP_EFF == "" || EXTERNAL_INSP_EFF == null || EXTERNAL_INSP_NUM == 0)
                     EXTERNAL_INSP_EFF = "E";
 
-                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
+                if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0) || EXTERN_COAT_QUALITY == "" || EXTERNAL_COATING_DATE == null)
                     return 6500;
                 else
                 {
@@ -2250,7 +2251,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float DF_BRITTLE()
         {
             float Fse = 1;
-            if (BRITTLE_THICK <= 12.7 || (FabricatedSteel && EquipmentSatisfied && NominalOperating && CETGreaterOrEqual && CyclicServiceFatigueVibration && EquipmentCircuitShock && (BRITTLE_THICK <= 50.8)))
+            if (BRITTLE_THICK <= 12.7 || (FabricatedSteel && EquipmentSatisfied && NominalOperating && CETGreaterOrEqual && CyclicServiceFatigueVibration && EquipmentCircuitShock && (NomalThick <= 50.8)))
             {
                 Fse = 0.01f;
             }
