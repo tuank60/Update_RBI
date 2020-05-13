@@ -221,6 +221,11 @@ namespace RBI
                             break;
                         }
                     }
+                    int[] eq_comID = busAssessment.getEquipmentID_ComponentID(IDProposal);
+                    COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
+
+                    String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
+                    int APICompID = componentMaster.APIComponentTypeID;
                     UCAssessmentInfo uAssTest = uc.ucAss;
                     RW_ASSESSMENT ass = uAssTest.getData(IDProposal);
                     RW_EQUIPMENT eq = uc.ucEq.getData(IDProposal, temperature, volume); // mai
@@ -243,11 +248,13 @@ namespace RBI
                     RW_COATING coat = uc.ucCoat.getData(IDProposal, corrosionRate, thickness);
                     RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, corrosion);
                     UCInspectionHistorySubform ucInsHisSub = uc.ucInspectionHistory;
+                    RW_INPUT_CA_TANK caTank = new RW_INPUT_CA_TANK();
+
                     //RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
-                    Calculation(ThinningType, ass.ComponentID, eq, com, ma, stream, coat, extTemp);
+                    Calculation(ThinningType, ass.ComponentID, componentTypeName, eq, com, ma, stream, coat, extTemp, caTank);
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
@@ -2342,16 +2349,37 @@ namespace RBI
             }
             #endregion
         }
-        private void CA(out float fc, string apiComponentTypeName, RW_COMPONENT com, RW_MATERIAL ma)
+        private void CA(out float fc, string apiComponentTypeName, string componentTypeName, RW_COMPONENT com, RW_MATERIAL ma, RW_INPUT_CA_TANK caTank)
         {
             #region CA
-            //MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+            MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
             //<input CA Lavel 1>
-            //CA_CAL.NominalDiameter = com.NominalDiameter;
-            //CA_CAL.MATERIAL_COST = ma.CostFactor;
+            CA_CAL.NominalDiameter = com.NominalDiameter;
+            CA_CAL.MATERIAL_COST = ma.CostFactor;
+            CA_CAL.PRODUCTION_COST = caTank.ProductionCost;
+            RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
             //CA_CAL.FLUID = caInput.API_FLUID;
             //CA_CAL.FLUID_PHASE = caInput.SYSTEM;
             //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+            CA_CAL.COMPONENT_TYPE_NAME = componentTypeName;
+            CA_CAL.TANK_DIAMETER = caTank.TANK_DIAMETTER;
+            CA_CAL.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
+            CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+
+            //trung gian
+            rwfholesize.A1 = CA_CAL.a_n(1);
+            Console.WriteLine("gia tri cua A1 la" + rwfholesize.A1);
+            rwfholesize.A2 = CA_CAL.a_n(2);
+            Console.WriteLine("gia tri cua A2 la" + rwfholesize.A2);
+            rwfholesize.A3 = CA_CAL.a_n(3);
+            Console.WriteLine("gia tri cua A3 la" + rwfholesize.A3);
+            rwfholesize.A4 = CA_CAL.a_n(4);
+            Console.WriteLine("gia tri cua A4 la" + rwfholesize.A4);
+
+            //if (hsbus.checkExistCoFHS(rwfholesize.ID))
+            //    hsbus.edit(rwfholesize);
+            //else
+            //    hsbus.add(rwfholesize);
             //CA_CAL.DETECTION_TYPE = caInput.Detection_Type;
             //CA_CAL.ISULATION_TYPE = caInput.Isulation_Type;
             //CA_CAL.STORED_PRESSURE = caInput.Stored_Pressure;
@@ -2520,6 +2548,7 @@ namespace RBI
                 CA.TANK_FLUID = caTank.TANK_FLUID;
                 CA.FLUID = caTank.API_FLUID;
                 CA.API_COMPONENT_TYPE_NAME = "TANKBOTTOM";
+                CA.COMPONENT_TYPE_NAME = componentTypeName;
                 CA.FLUID_HEIGHT = caTank.FLUID_HEIGHT;
                 CA.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
                 CA.ConcreteFoundation=caTank.ConcreteFoundation == 1 ? true : false;
@@ -2587,7 +2616,7 @@ namespace RBI
             //    busFullFCoF.add(fullFCoF);
             #endregion
         }
-        private void Calculation(String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem)
+        private void Calculation(String ThinningType, int componentID, String componentTypeName, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
         {
             InputInspectionCalculation inputInsp;
             MSSQL_DM_CAL cacal;
@@ -2595,7 +2624,7 @@ namespace RBI
             RW_FULL_POF fullpof;
             float FC = 0;
             PoF(out fullpof, out inputInsp, out cacal, out DMmache, ThinningType, componentID, eq, com, ma, st, coat, tem);
-            CA(out FC, inputInsp.ApiComponentType, com, ma);
+            CA(out FC, inputInsp.ApiComponentType, componentTypeName, com, ma, caTank);
             InspectionPlan(fullpof, inputInsp, cacal, DMmache, FC);
         }
         private void Calculation_CA_TANK(String componentTypeName, String API_component, String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)

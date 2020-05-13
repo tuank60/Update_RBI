@@ -13,12 +13,12 @@ namespace RBI.BUS.BUSMSSQL
         RW_FULL_COF_HOLE_SIZE_ConnectUtils DAL = new RW_FULL_COF_HOLE_SIZE_ConnectUtils();
         public void add(RW_FULL_COF_HOLE_SIZE obj)
         {
-            DAL.add(obj.ID, obj.GFF_n, obj.An, obj.Wn, obj.t_n, obj.ld_max_n, obj.mass_add_n, obj.mass_avail_n, obj.rate_n, obj.ld_n, obj.mass_n, obj.eneff_n, obj.factIC_n, obj.ReleaseType_n);
+            DAL.add(obj.ID, obj.GFF_n, obj.A1, obj.A2, obj.A3, obj.A4, obj.Wn, obj.t_n, obj.ld_max_n, obj.mass_add_n, obj.mass_avail_n, obj.rate_n, obj.ld_n, obj.mass_n, obj.eneff_n, obj.factIC_n, obj.ReleaseType_n);
         }
         public void edit(RW_FULL_COF_HOLE_SIZE obj)
         {
-            DAL.edit(obj.ID, obj.GFF_n, obj.An, obj.Wn, obj.t_n, obj.ld_max_n, obj.mass_add_n, obj.mass_avail_n, obj.rate_n, obj.ld_n, obj.mass_n, obj.eneff_n, obj.factIC_n, obj.ReleaseType_n);
-        
+            DAL.edit(obj.ID, obj.GFF_n, obj.A1, obj.A2, obj.A3, obj.A4, obj.Wn, obj.t_n, obj.ld_max_n, obj.mass_add_n, obj.mass_avail_n, obj.rate_n, obj.ld_n, obj.mass_n, obj.eneff_n, obj.factIC_n, obj.ReleaseType_n);
+
         }
         public void delete(RW_FULL_COF_HOLE_SIZE obj)
         {
@@ -27,6 +27,14 @@ namespace RBI.BUS.BUSMSSQL
         public List<RW_FULL_COF_HOLE_SIZE> getDataSource()
         {
             return DAL.getDataSource();
+        }
+        public RW_FULL_COF_HOLE_SIZE getData(int ID)
+        {
+            return DAL.getData(ID);
+        }
+        public Boolean checkExistCoFHS(int ID)
+        {
+            return DAL.checkExistCoFHS(ID);
         }
     }
 }

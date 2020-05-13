@@ -20,6 +20,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public String FLUID { set; get; }
         public String FLUID_PHASE { set; get; }
         public String API_COMPONENT_TYPE_NAME { set; get; }
+        public String COMPONENT_TYPE_NAME { set; get; }
         public String DETECTION_TYPE { set; get; }
         public String ISULATION_TYPE { set; get; }
         public float STORED_PRESSURE { set; get; }
@@ -123,30 +124,28 @@ namespace RBI.BUS.BUSMSSQL_CAL
             return DAL_CAL.GET_RELEASE_PHASE(FLUID);
         }
         // Step 2 release hole size
-        private float d_n(int i)
+        public float d_n(int i)
         {
             float dn = 0;
-            if (API_COMPONENT_TYPE_NAME == "TANKBOTTOM")
+            if (COMPONENT_TYPE_NAME == "Tank Bottom")
             {
                 if (i == 1)
                 {
                     if (PREVENTION_BARRIER)
                         dn = 3.175f;
                     else
-                        dn = 12.7f ;
+                        dn = 12.7f;
                 }
                 else if (i == 2)
                     dn = 0;
                 else if (i == 3)
                     dn = 0;
                 else if (i == 4 && PREVENTION_BARRIER)
-                    dn = 250 * TANK_DIAMETER*0.001f;//doi don vi ra m cho TANK_DIAMETER
+                    dn = 250 * TANK_DIAMETER * 0.001f;//doi don vi ra m cho TANK_DIAMETER
                 else
                     dn = 0;
             }
-            else if (API_COMPONENT_TYPE_NAME == "COURSE-1" || API_COMPONENT_TYPE_NAME == "COURSE-10" || API_COMPONENT_TYPE_NAME == "COURSE-2" || API_COMPONENT_TYPE_NAME == "COURSE-3" ||
-                    API_COMPONENT_TYPE_NAME == "COURSE-4" || API_COMPONENT_TYPE_NAME == "COURSE-5" || API_COMPONENT_TYPE_NAME == "COURSE-6" || API_COMPONENT_TYPE_NAME == "COURSE-7" ||
-                    API_COMPONENT_TYPE_NAME == "COURSE-8" || API_COMPONENT_TYPE_NAME == "COURSE-9")
+            else if (COMPONENT_TYPE_NAME == "Shell")
             {
                 if (i == 1)
                     dn = 3.175f;
@@ -167,12 +166,16 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     dn = 102;
                 else
                     dn = (float)Math.Min(NominalDiameter, 406);
+
             }
+            Console.WriteLine("Gia tri d la: " + dn);
             return dn;
         }
-        private float a_n(int i)
+        public float a_n(int i)
         {
-            return (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 2);
+            float a_n = (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 2);
+            //Console.WriteLine("gia tri An" + a_n);
+            return a_n;
         }
         private float C_P()
         {

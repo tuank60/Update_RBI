@@ -10,7 +10,10 @@ namespace RBI.Object.ObjectMSSQL
     {
         public int ID { get; set; }
         public String GFF_n { get; set; }
-        public float An { get; set; }
+        public float A1 { get; set; }
+        public float A2 { get; set; }
+        public float A3 { get; set; }
+        public float A4 { get; set; }
         public float Wn { get; set; }
         public float t_n { get; set; }
         public float ld_max_n { get; set; }

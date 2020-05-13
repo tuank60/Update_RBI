@@ -88,6 +88,15 @@ namespace RBI.PRE.subForm.OutputDataForm
             txt36PoFCategory.Text = obj.PoFAP2Category;
             txt72PoFCategory.Text = obj.PoFAP3Category;
         }
+        public void AreabaseCOF(int ID)
+        {
+            RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE fullhs = new RW_FULL_COF_HOLE_SIZE();
+            textBox26.Text = fullhs.A1.ToString();
+            textBox36.Text = fullhs.A2.ToString();
+            textBox47.Text = fullhs.A3.ToString();
+            textBox58.Text = fullhs.A4.ToString();
+        }
         public void riskCA(int ID)
         {
             RW_FULL_FCOF_BUS fullPoFBus = new RW_FULL_FCOF_BUS();
