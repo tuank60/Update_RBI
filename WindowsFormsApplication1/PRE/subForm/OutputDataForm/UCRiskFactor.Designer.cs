@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.tabRisk = new DevExpress.XtraTab.XtraTabControl();
             this.tabPoF = new DevExpress.XtraTab.XtraTabPage();
             this.Fully = new System.Windows.Forms.GroupBox();
             this.pnlDamageFactors = new System.Windows.Forms.Panel();
@@ -560,13 +560,40 @@
             this.label199 = new System.Windows.Forms.Label();
             this.label200 = new System.Windows.Forms.Label();
             this.label192 = new System.Windows.Forms.Label();
+            this.tabCATankRoof = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label247 = new System.Windows.Forms.Label();
+            this.label257 = new System.Windows.Forms.Label();
+            this.label256 = new System.Windows.Forms.Label();
+            this.label255 = new System.Windows.Forms.Label();
+            this.label248 = new System.Windows.Forms.Label();
+            this.label251 = new System.Windows.Forms.Label();
+            this.label253 = new System.Windows.Forms.Label();
+            this.txtBusInterRoof = new DevExpress.XtraEditors.TextEdit();
+            this.txtDowntimeRoof = new DevExpress.XtraEditors.TextEdit();
+            this.txtMaterialRoof = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalConsequenceRoof = new DevExpress.XtraEditors.TextEdit();
+            this.txtComDamRoof = new DevExpress.XtraEditors.TextEdit();
+            this.txtConsequenceCategoryRoof = new DevExpress.XtraEditors.TextEdit();
+            this.label250 = new System.Windows.Forms.Label();
+            this.label249 = new System.Windows.Forms.Label();
+            this.label254 = new System.Windows.Forms.Label();
+            this.label252 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnSaveInputRoof = new System.Windows.Forms.Button();
+            this.txtOutageMulRoof = new System.Windows.Forms.TextBox();
+            this.txtPrrodCostRoof = new System.Windows.Forms.TextBox();
+            this.label258 = new System.Windows.Forms.Label();
+            this.label259 = new System.Windows.Forms.Label();
+            this.label233 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.xtraUserControl11 = new RBI.XtraUserControl1();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabRisk)).BeginInit();
+            this.tabRisk.SuspendLayout();
             this.tabPoF.SuspendLayout();
             this.Fully.SuspendLayout();
             this.pnlDamageFactors.SuspendLayout();
@@ -701,12 +728,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFlowRateShellD1.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tabCATankRoof.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusInterRoof.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDowntimeRoof.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaterialRoof.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalConsequenceRoof.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComDamRoof.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConsequenceCategoryRoof.Properties)).BeginInit();
+            this.panel8.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.xtraTabControl1);
+            this.groupBox1.Controls.Add(this.tabRisk);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -716,22 +753,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Risk Factor";
             // 
-            // xtraTabControl1
+            // tabRisk
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(3, 17);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.tabPoF;
-            this.xtraTabControl1.Size = new System.Drawing.Size(963, 1337);
-            this.xtraTabControl1.TabIndex = 2;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabRisk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabRisk.Location = new System.Drawing.Point(3, 17);
+            this.tabRisk.Name = "tabRisk";
+            this.tabRisk.SelectedTabPage = this.tabPoF;
+            this.tabRisk.Size = new System.Drawing.Size(963, 1337);
+            this.tabRisk.TabIndex = 2;
+            this.tabRisk.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraSemiPoF,
             this.tabPoF,
             this.TabArea,
             this.tabCA,
             this.tabCAShell,
             this.tabCATankBottom,
-            this.tabCATankShell});
+            this.tabCATankShell,
+            this.tabCATankRoof});
             // 
             // tabPoF
             // 
@@ -6336,6 +6374,293 @@
             this.label192.TabIndex = 0;
             this.label192.Text = "▼ Input";
             // 
+            // tabCATankRoof
+            // 
+            this.tabCATankRoof.Controls.Add(this.groupBox9);
+            this.tabCATankRoof.Name = "tabCATankRoof";
+            this.tabCATankRoof.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankRoof.Text = "Financial COF";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.panel9);
+            this.groupBox9.Controls.Add(this.panel8);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.groupBox9.Location = new System.Drawing.Point(0, 0);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.label247);
+            this.panel9.Controls.Add(this.label257);
+            this.panel9.Controls.Add(this.label256);
+            this.panel9.Controls.Add(this.label255);
+            this.panel9.Controls.Add(this.label248);
+            this.panel9.Controls.Add(this.label251);
+            this.panel9.Controls.Add(this.label253);
+            this.panel9.Controls.Add(this.txtBusInterRoof);
+            this.panel9.Controls.Add(this.txtDowntimeRoof);
+            this.panel9.Controls.Add(this.txtMaterialRoof);
+            this.panel9.Controls.Add(this.txtTotalConsequenceRoof);
+            this.panel9.Controls.Add(this.txtComDamRoof);
+            this.panel9.Controls.Add(this.txtConsequenceCategoryRoof);
+            this.panel9.Controls.Add(this.label250);
+            this.panel9.Controls.Add(this.label249);
+            this.panel9.Controls.Add(this.label254);
+            this.panel9.Controls.Add(this.label252);
+            this.panel9.Location = new System.Drawing.Point(17, 158);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(929, 238);
+            this.panel9.TabIndex = 1;
+            // 
+            // label247
+            // 
+            this.label247.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label247.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label247.ForeColor = System.Drawing.Color.White;
+            this.label247.Location = new System.Drawing.Point(0, 0);
+            this.label247.Name = "label247";
+            this.label247.Size = new System.Drawing.Size(929, 17);
+            this.label247.TabIndex = 0;
+            this.label247.Text = "▼ Fully-Quantitative Financial Consequence of Failure and Category";
+            // 
+            // label257
+            // 
+            this.label257.AutoSize = true;
+            this.label257.Location = new System.Drawing.Point(569, 91);
+            this.label257.Name = "label257";
+            this.label257.Size = new System.Drawing.Size(36, 15);
+            this.label257.TabIndex = 8;
+            this.label257.Text = "days";
+            // 
+            // label256
+            // 
+            this.label256.AutoSize = true;
+            this.label256.Location = new System.Drawing.Point(569, 63);
+            this.label256.Name = "label256";
+            this.label256.Size = new System.Drawing.Size(15, 15);
+            this.label256.TabIndex = 5;
+            this.label256.Text = "$";
+            // 
+            // label255
+            // 
+            this.label255.AutoSize = true;
+            this.label255.Location = new System.Drawing.Point(569, 119);
+            this.label255.Name = "label255";
+            this.label255.Size = new System.Drawing.Size(15, 15);
+            this.label255.TabIndex = 11;
+            this.label255.Text = "$";
+            // 
+            // label248
+            // 
+            this.label248.AutoSize = true;
+            this.label248.Location = new System.Drawing.Point(569, 170);
+            this.label248.Name = "label248";
+            this.label248.Size = new System.Drawing.Size(15, 15);
+            this.label248.TabIndex = 14;
+            this.label248.Text = "$";
+            // 
+            // label251
+            // 
+            this.label251.AutoSize = true;
+            this.label251.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label251.Location = new System.Drawing.Point(20, 170);
+            this.label251.Name = "label251";
+            this.label251.Size = new System.Drawing.Size(166, 15);
+            this.label251.TabIndex = 12;
+            this.label251.Text = "The total consequence (US$)";
+            // 
+            // label253
+            // 
+            this.label253.AutoSize = true;
+            this.label253.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label253.Location = new System.Drawing.Point(20, 197);
+            this.label253.Name = "label253";
+            this.label253.Size = new System.Drawing.Size(134, 15);
+            this.label253.TabIndex = 15;
+            this.label253.Text = "Consequence Category";
+            // 
+            // txtBusInterRoof
+            // 
+            this.txtBusInterRoof.Location = new System.Drawing.Point(425, 116);
+            this.txtBusInterRoof.Name = "txtBusInterRoof";
+            this.txtBusInterRoof.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBusInterRoof.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBusInterRoof.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBusInterRoof.Properties.Appearance.Options.UseFont = true;
+            this.txtBusInterRoof.Size = new System.Drawing.Size(138, 22);
+            this.txtBusInterRoof.TabIndex = 10;
+            // 
+            // txtDowntimeRoof
+            // 
+            this.txtDowntimeRoof.Location = new System.Drawing.Point(425, 88);
+            this.txtDowntimeRoof.Name = "txtDowntimeRoof";
+            this.txtDowntimeRoof.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDowntimeRoof.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDowntimeRoof.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDowntimeRoof.Properties.Appearance.Options.UseFont = true;
+            this.txtDowntimeRoof.Size = new System.Drawing.Size(138, 22);
+            this.txtDowntimeRoof.TabIndex = 7;
+            // 
+            // txtMaterialRoof
+            // 
+            this.txtMaterialRoof.Location = new System.Drawing.Point(425, 32);
+            this.txtMaterialRoof.Name = "txtMaterialRoof";
+            this.txtMaterialRoof.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtMaterialRoof.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaterialRoof.Properties.Appearance.Options.UseBackColor = true;
+            this.txtMaterialRoof.Properties.Appearance.Options.UseFont = true;
+            this.txtMaterialRoof.Size = new System.Drawing.Size(138, 22);
+            this.txtMaterialRoof.TabIndex = 2;
+            // 
+            // txtTotalConsequenceRoof
+            // 
+            this.txtTotalConsequenceRoof.Location = new System.Drawing.Point(425, 167);
+            this.txtTotalConsequenceRoof.Name = "txtTotalConsequenceRoof";
+            this.txtTotalConsequenceRoof.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalConsequenceRoof.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTotalConsequenceRoof.Properties.Appearance.Options.UseBackColor = true;
+            this.txtTotalConsequenceRoof.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalConsequenceRoof.Size = new System.Drawing.Size(138, 22);
+            this.txtTotalConsequenceRoof.TabIndex = 13;
+            // 
+            // txtComDamRoof
+            // 
+            this.txtComDamRoof.Location = new System.Drawing.Point(425, 60);
+            this.txtComDamRoof.Name = "txtComDamRoof";
+            this.txtComDamRoof.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtComDamRoof.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtComDamRoof.Properties.Appearance.Options.UseBackColor = true;
+            this.txtComDamRoof.Properties.Appearance.Options.UseFont = true;
+            this.txtComDamRoof.Size = new System.Drawing.Size(138, 22);
+            this.txtComDamRoof.TabIndex = 4;
+            // 
+            // txtConsequenceCategoryRoof
+            // 
+            this.txtConsequenceCategoryRoof.Location = new System.Drawing.Point(425, 195);
+            this.txtConsequenceCategoryRoof.Name = "txtConsequenceCategoryRoof";
+            this.txtConsequenceCategoryRoof.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtConsequenceCategoryRoof.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtConsequenceCategoryRoof.Properties.Appearance.Options.UseBackColor = true;
+            this.txtConsequenceCategoryRoof.Properties.Appearance.Options.UseFont = true;
+            this.txtConsequenceCategoryRoof.Size = new System.Drawing.Size(138, 22);
+            this.txtConsequenceCategoryRoof.TabIndex = 16;
+            // 
+            // label250
+            // 
+            this.label250.AutoSize = true;
+            this.label250.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label250.Location = new System.Drawing.Point(20, 91);
+            this.label250.Name = "label250";
+            this.label250.Size = new System.Drawing.Size(160, 15);
+            this.label250.TabIndex = 6;
+            this.label250.Text = "Downtime required to repair";
+            // 
+            // label249
+            // 
+            this.label249.AutoSize = true;
+            this.label249.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label249.Location = new System.Drawing.Point(20, 63);
+            this.label249.Name = "label249";
+            this.label249.Size = new System.Drawing.Size(202, 15);
+            this.label249.TabIndex = 3;
+            this.label249.Text = "The component damage cost (US$)";
+            // 
+            // label254
+            // 
+            this.label254.AutoSize = true;
+            this.label254.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label254.Location = new System.Drawing.Point(20, 35);
+            this.label254.Name = "label254";
+            this.label254.Size = new System.Drawing.Size(148, 15);
+            this.label254.TabIndex = 1;
+            this.label254.Text = "Material cost factor  (US$)";
+            // 
+            // label252
+            // 
+            this.label252.AutoSize = true;
+            this.label252.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label252.Location = new System.Drawing.Point(20, 119);
+            this.label252.Name = "label252";
+            this.label252.Size = new System.Drawing.Size(218, 15);
+            this.label252.TabIndex = 9;
+            this.label252.Text = "The cost of business interruption (US$)";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnSaveInputRoof);
+            this.panel8.Controls.Add(this.txtOutageMulRoof);
+            this.panel8.Controls.Add(this.txtPrrodCostRoof);
+            this.panel8.Controls.Add(this.label258);
+            this.panel8.Controls.Add(this.label259);
+            this.panel8.Controls.Add(this.label233);
+            this.panel8.Location = new System.Drawing.Point(17, 20);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(929, 105);
+            this.panel8.TabIndex = 0;
+            // 
+            // btnSaveInputRoof
+            // 
+            this.btnSaveInputRoof.Location = new System.Drawing.Point(734, 61);
+            this.btnSaveInputRoof.Name = "btnSaveInputRoof";
+            this.btnSaveInputRoof.Size = new System.Drawing.Size(79, 25);
+            this.btnSaveInputRoof.TabIndex = 6;
+            this.btnSaveInputRoof.Text = "Update";
+            this.btnSaveInputRoof.UseVisualStyleBackColor = true;
+            this.btnSaveInputRoof.Click += new System.EventHandler(this.btnSaveInputRoof_Click);
+            // 
+            // txtOutageMulRoof
+            // 
+            this.txtOutageMulRoof.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOutageMulRoof.Location = new System.Drawing.Point(425, 69);
+            this.txtOutageMulRoof.Name = "txtOutageMulRoof";
+            this.txtOutageMulRoof.Size = new System.Drawing.Size(182, 22);
+            this.txtOutageMulRoof.TabIndex = 4;
+            // 
+            // txtPrrodCostRoof
+            // 
+            this.txtPrrodCostRoof.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrrodCostRoof.Location = new System.Drawing.Point(425, 38);
+            this.txtPrrodCostRoof.Name = "txtPrrodCostRoof";
+            this.txtPrrodCostRoof.Size = new System.Drawing.Size(182, 22);
+            this.txtPrrodCostRoof.TabIndex = 2;
+            // 
+            // label258
+            // 
+            this.label258.AutoSize = true;
+            this.label258.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label258.Location = new System.Drawing.Point(20, 41);
+            this.label258.Name = "label258";
+            this.label258.Size = new System.Drawing.Size(171, 14);
+            this.label258.TabIndex = 1;
+            this.label258.Text = "Cost of production lost, $/day";
+            // 
+            // label259
+            // 
+            this.label259.AutoSize = true;
+            this.label259.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label259.Location = new System.Drawing.Point(20, 72);
+            this.label259.Name = "label259";
+            this.label259.Size = new System.Drawing.Size(162, 14);
+            this.label259.TabIndex = 3;
+            this.label259.Text = "Equipment Outage Multiplier";
+            // 
+            // label233
+            // 
+            this.label233.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label233.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label233.ForeColor = System.Drawing.Color.White;
+            this.label233.Location = new System.Drawing.Point(0, 0);
+            this.label233.Name = "label233";
+            this.label233.Size = new System.Drawing.Size(929, 17);
+            this.label233.TabIndex = 0;
+            this.label233.Text = "▼ Input";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -6382,8 +6707,8 @@
             this.Size = new System.Drawing.Size(969, 1357);
             this.Load += new System.EventHandler(this.UCRiskFactor_Load_1);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabRisk)).EndInit();
+            this.tabRisk.ResumeLayout(false);
             this.tabPoF.ResumeLayout(false);
             this.Fully.ResumeLayout(false);
             this.pnlDamageFactors.ResumeLayout(false);
@@ -6538,6 +6863,18 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.tabCATankRoof.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBusInterRoof.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDowntimeRoof.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMaterialRoof.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalConsequenceRoof.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComDamRoof.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtConsequenceCategoryRoof.Properties)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -6604,7 +6941,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabControl tabRisk;
         private DevExpress.XtraTab.XtraTabPage tabPoF;
         private DevExpress.XtraTab.XtraTabPage tabCA;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -7081,5 +7418,32 @@
         private System.Windows.Forms.Label label239;
         private System.Windows.Forms.TextBox txtIDFullCOFTankInTabShell;
         private System.Windows.Forms.Button btnSaveInputShell;
+        private DevExpress.XtraTab.XtraTabPage tabCATankRoof;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label233;
+        private DevExpress.XtraEditors.TextEdit txtBusInterRoof;
+        private DevExpress.XtraEditors.TextEdit txtDowntimeRoof;
+        private DevExpress.XtraEditors.TextEdit txtTotalConsequenceRoof;
+        private DevExpress.XtraEditors.TextEdit txtConsequenceCategoryRoof;
+        private System.Windows.Forms.Label label249;
+        private System.Windows.Forms.Label label254;
+        private System.Windows.Forms.Label label252;
+        private System.Windows.Forms.Label label250;
+        private System.Windows.Forms.Label label247;
+        private System.Windows.Forms.Label label257;
+        private System.Windows.Forms.Label label256;
+        private System.Windows.Forms.Label label255;
+        private System.Windows.Forms.Label label248;
+        private System.Windows.Forms.Label label251;
+        private System.Windows.Forms.Label label253;
+        private DevExpress.XtraEditors.TextEdit txtMaterialRoof;
+        private DevExpress.XtraEditors.TextEdit txtComDamRoof;
+        private System.Windows.Forms.Button btnSaveInputRoof;
+        private System.Windows.Forms.TextBox txtOutageMulRoof;
+        private System.Windows.Forms.TextBox txtPrrodCostRoof;
+        private System.Windows.Forms.Label label258;
+        private System.Windows.Forms.Label label259;
     }
 }
