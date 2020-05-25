@@ -612,7 +612,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 float t = 0;
                 API_COMPONENT_TYPE obj = GET_DATA_API_COM();
-                t = obj.GFFSmall * obj.OutageSmall + obj.GFFMedium * obj.OutageMedium + obj.GFFLarge * obj.OutageLarge + obj.OutageRupture * obj.GFFRupture;
+                t = obj.GFFSmall * ca_cmdn_flame(1) + obj.GFFMedium * ca_cmdn_flame(2) + obj.GFFLarge * ca_cmdn_flame(3) + obj.GFFRupture * ca_cmdn_flame(4);
                 float ca_cmd_flame = t / obj.GFFTotal;
                 return Math.Abs(ca_cmd_flame);
             }
