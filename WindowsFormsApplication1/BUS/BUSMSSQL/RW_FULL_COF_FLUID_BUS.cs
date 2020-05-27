@@ -13,7 +13,7 @@ namespace RBI.BUS.BUSMSSQL
         RW_FULL_COF_FLUID_ConnectUtils DAL = new RW_FULL_COF_FLUID_ConnectUtils();
         public void add(RW_FULL_COF_FLUID obj)
         {
-            DAL.add(obj.ID, obj.Cp, obj.k, obj.GFFTotal, obj.Kv_n, obj.ReleasePhase, obj.Cd, obj.Ptrans, obj.NBP, obj.Density, obj.MW, obj.R, obj.Ps, obj.Ts, obj.Patm, obj.fact_di, obj.fact_mit, obj.fact_AIT, obj.g, obj.h);
+            DAL.add(obj.ID, obj.Cp, obj.k, obj.GFFTotal, obj.Kv_n, obj.ReleasePhase, obj.W_max8, obj.Cd, obj.Ptrans, obj.NBP, obj.Density, obj.MW, obj.R, obj.Ps, obj.Ts, obj.Patm, obj.fact_di, obj.fact_mit, obj.fact_AIT, obj.g, obj.h);
         }
     }
 }

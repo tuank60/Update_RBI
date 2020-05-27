@@ -233,6 +233,7 @@ namespace RBI
                     RW_COMPONENT com = uc.ucComp.getData(IDProposal, diameter, thickness, corrosionRate, volume, stress); // mai
                     RW_STREAM stream = uc.ucStream.getData(IDProposal); //mai
                     RW_STREAM op = uc.ucOpera.getDataforStream(IDProposal, temperature, pressure, flowRate); // mai
+                    RW_INPUT_CA_LEVEL_1 caInput = new RW_INPUT_CA_LEVEL_1();
                     treeListProject.FocusedNode.SetValue(0, ass.ProposalName);
                     xtraTabData.SelectedTabPage.Text = treeListProject.FocusedNode.ParentNode.GetValue(0).ToString() + "[" + ass.ProposalName + "]";
                     //<gan full gia tri cho stream>
@@ -254,7 +255,7 @@ namespace RBI
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
-                    Calculation(ThinningType, ass.ComponentID, componentTypeName, eq, com, ma, stream, coat, extTemp, caTank);
+                    Calculation(ThinningType, ass.ComponentID, componentTypeName, eq, com, ma, stream, coat, extTemp, caTank, caInput);
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
@@ -1105,7 +1106,7 @@ namespace RBI
             if (hi.Node != null)
             {
                 IDProposal = listTree1[hi.Node.Id].ID - hi.Node.Level * 100000;
-                Console.WriteLine("ID Proposal " + IDProposal);
+                //Console.WriteLine("ID Proposal " + IDProposal);
                 if (treeListProject.FocusedNode.GetValue(0).ToString() != xtraTabData.SelectedTabPage.Name && treeListProject.FocusedNode.Level == 4)
                 {
                     int equipmentID = busAssessment.getEquipmentID(IDProposal);
@@ -1834,7 +1835,8 @@ namespace RBI
                         DFSCCAgePlus3.Add(damage.DF2);
                         DFSCCAgePlus6.Add(damage.DF3);
                         break;
-                    case 4: //Sulphide
+                    case 4: //
+
                         damage.IsDF = 1;
                         if (damage.DF1 == -1)
                         {
@@ -2232,7 +2234,7 @@ namespace RBI
             //   );
             float risktaget = busRiskTarget.getRiskTarget(FaciID);
             float DF_thamchieu = risktaget / (FC * inspl.GFFTotal * inspl.FMS);
-            Console.WriteLine("DF tham chieu " + DF_thamchieu + " Risk Target " + risktaget + " FC = " + FC);
+            //Console.WriteLine("DF tham chieu " + DF_thamchieu + " Risk Target " + risktaget + " FC = " + FC);
             float[] tempDf = new float[21];
             int k = 15;
             InputInspectionCalculation a = new InputInspectionCalculation();
@@ -2242,8 +2244,8 @@ namespace RBI
             float[] age = inspl.Age;
             float[] risk = new float[15];
             float[] DFtotal = new float[15];
-            for (int i = 0; i < age.Length; i++)
-                Console.WriteLine("age jhsdjhn " + age[i]);
+            //for (int i = 0; i < age.Length; i++)
+            //    Console.WriteLine("age jhsdjhn " + age[i]);
             //int ageAssessment = 10;
             for (int i = 1; i < 16; i++)
             {
@@ -2299,10 +2301,10 @@ namespace RBI
                     break;
                 }
             }
-            for (int i = 0; i < risk.Length; i++)
-            {
-                Console.WriteLine("asdjahdjhsd " + risk[i]);
-            }
+            //for (int i = 0; i < risk.Length; i++)
+            //{
+            //    Console.WriteLine("asdjahdjhsd " + risk[i]);
+            //}
             riskGraph.Risk = risk;
             
             foreach (RW_DAMAGE_MECHANISM d in DMmachenism)
@@ -2349,7 +2351,7 @@ namespace RBI
             }
             #endregion
         }
-        private void CA(out float fc, string apiComponentTypeName, string componentTypeName, RW_COMPONENT com, RW_MATERIAL ma, RW_INPUT_CA_TANK caTank)
+        private void CA(out float fc, string apiComponentTypeName, string componentTypeName, RW_COMPONENT com, RW_MATERIAL ma,RW_INPUT_CA_LEVEL_1 caInput, RW_INPUT_CA_TANK caTank, RW_STREAM st)
         {
             #region CA
             MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
@@ -2358,23 +2360,74 @@ namespace RBI
             CA_CAL.MATERIAL_COST = ma.CostFactor;
             CA_CAL.PRODUCTION_COST = caTank.ProductionCost;
             RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
-            //CA_CAL.FLUID = caInput.API_FLUID;
-            //CA_CAL.FLUID_PHASE = caInput.SYSTEM;
-            //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+            RW_FULL_COF_FLUID rwfcf = new RW_FULL_COF_FLUID();
+            API_COMPONENT_TYPE apt = new API_COMPONENT_TYPE();
+            CA_CAL.FLUID = st.TankFluidName;
+            CA_CAL.FLUID_PHASE = st.StoragePhase;
+            CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
             CA_CAL.COMPONENT_TYPE_NAME = componentTypeName;
             CA_CAL.TANK_DIAMETER = caTank.TANK_DIAMETTER;
             CA_CAL.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
             CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
 
-            //trung gian
+            //hole size area
             rwfholesize.A1 = CA_CAL.a_n(1);
-            Console.WriteLine("gia tri cua A1 la" + rwfholesize.A1);
+            //Console.WriteLine("gia tri cua A1 la" + rwfholesize.A1);
             rwfholesize.A2 = CA_CAL.a_n(2);
-            Console.WriteLine("gia tri cua A2 la" + rwfholesize.A2);
+            //Console.WriteLine("gia tri cua A2 la" + rwfholesize.A2);
             rwfholesize.A3 = CA_CAL.a_n(3);
-            Console.WriteLine("gia tri cua A3 la" + rwfholesize.A3);
+            //Console.WriteLine("gia tri cua A3 la" + rwfholesize.A3);
             rwfholesize.A4 = CA_CAL.a_n(4);
-            Console.WriteLine("gia tri cua A4 la" + rwfholesize.A4);
+            //Console.WriteLine("gia tri cua A4 la" + rwfholesize.A4);
+
+            //release rate
+            CA_CAL.STORED_PRESSURE = st.MaxOperatingPressure*1000;
+            CA_CAL.ATMOSPHERIC_PRESSURE = 101.325f;
+            CA_CAL.STORED_TEMP = st.MaxOperatingTemperature;
+            rwfcf.Cp = CA_CAL.C_P();
+            CA_CAL.RELEASE_PHASE = CA_CAL.GET_RELEASE_PHASE();
+            //Console.WriteLine("cp=" + rwfcf.Cp);
+            //MessageBox.Show
+            rwfholesize.W1 = CA_CAL.W_n(1);
+            //Console.WriteLine("gia tri cua W1 = " + rwfholesize.W1);
+            rwfholesize.W2 = CA_CAL.W_n(2);
+            //Console.WriteLine("gia tri cua W2 = " + rwfholesize.W2);
+            rwfholesize.W3 = CA_CAL.W_n(3);
+            //Console.WriteLine("gia tri cua W3 = " + rwfholesize.W3);
+            rwfholesize.W4 = CA_CAL.W_n(4);
+            //Console.WriteLine("gia tri cua W4 = " + rwfholesize.W4);
+
+            //GFF
+            rwfholesize.GFF_small = CA_CAL.GFF(1);
+            //Console.WriteLine("gffsmall= " + rwfholesize.GFF_small);
+            rwfholesize.GFF_medium = CA_CAL.GFF(2);
+            //Console.WriteLine("gffmedium= " + rwfholesize.GFF_medium);
+            rwfholesize.GFF_large = CA_CAL.GFF(3);
+            //Console.WriteLine("gfflarge= " + rwfholesize.GFF_large);
+            rwfholesize.GFF_rupture = CA_CAL.GFF(4);
+            //Console.WriteLine("gffrupture= " + rwfholesize.GFF_rupture);
+
+            //FLUID INVENTORY AVAIABLE
+            CA_CAL.MASS_INVERT = caInput.Mass_Inventory;
+            CA_CAL.MASS_COMPONENT = caInput.Mass_Component;
+            rwfcf.W_max8 = CA_CAL.W_max8();
+            Console.WriteLine("W_max8= " + rwfcf.W_max8);
+            rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
+            Console.WriteLine("mass_add1= " + rwfholesize.mass_add_1);
+            rwfholesize.mass_add_2 = CA_CAL.mass_addn(2);
+            Console.WriteLine("mass_add2= " + rwfholesize.mass_add_2);
+            rwfholesize.mass_add_3 = CA_CAL.mass_addn(3);
+            Console.WriteLine("mass_add3= " + rwfholesize.mass_add_3);
+            rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
+            Console.WriteLine("mass_add4= " + rwfholesize.mass_add_4);
+            rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
+            Console.WriteLine("mass_avail1= " + rwfholesize.mass_avail_1);
+            rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
+            Console.WriteLine("mass_avail2= " + rwfholesize.mass_avail_2);
+            rwfholesize.mass_avail_1 = CA_CAL.mass_availn(3);
+            Console.WriteLine("mass_avail3= " + rwfholesize.mass_avail_3);
+            rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
+            Console.WriteLine("mass_avail4= " + rwfholesize.mass_avail_4);
 
             //if (hsbus.checkExistCoFHS(rwfholesize.ID))
             //    hsbus.edit(rwfholesize);
@@ -2382,11 +2435,9 @@ namespace RBI
             //    hsbus.add(rwfholesize);
             //CA_CAL.DETECTION_TYPE = caInput.Detection_Type;
             //CA_CAL.ISULATION_TYPE = caInput.Isulation_Type;
-            //CA_CAL.STORED_PRESSURE = caInput.Stored_Pressure;
-            //CA_CAL.ATMOSPHERIC_PRESSURE = 101;
-            //CA_CAL.STORED_TEMP = caInput.Stored_Temp;
-            //CA_CAL.MASS_INVERT = caInput.Mass_Inventory;
-            //CA_CAL.MASS_COMPONENT = caInput.Mass_Component;
+
+
+            
             //CA_CAL.MITIGATION_SYSTEM = caInput.Mitigation_System;
             //CA_CAL.TOXIC_PERCENT = caInput.Toxic_Percent;
             //CA_CAL.RELEASE_DURATION = caInput.Release_Duration;
@@ -2400,7 +2451,7 @@ namespace RBI
             //<calculate CA>
             //RW_CA_LEVEL_1 caLvl1 = new RW_CA_LEVEL_1();
             //caLvl1.ID = caInput.ID;
-            //caLvl1.Release_Phase = CA_CAL.GET_RELEASE_PHASE();
+            
             //caLvl1.fact_di = CA_CAL.fact_di();
             //caLvl1.fact_mit = CA_CAL.fact_mit();
             //caLvl1.fact_ait = CA_CAL.fact_ait();
@@ -2443,7 +2494,7 @@ namespace RBI
             //</Save to Database>
             #endregion
         }
-        private void CA_Tank(out float fc, string API_component, string componentTypeName, RW_EQUIPMENT eq, RW_MATERIAL ma, RW_INPUT_CA_TANK caTank)
+        private void CA_Tank(out float fc, string API_component, string componentTypeName, RW_EQUIPMENT eq, RW_MATERIAL ma, RW_INPUT_CA_TANK caTank, RW_STREAM st)
         {
             #region CA
             MSSQL_CA_CAL CA = new MSSQL_CA_CAL();
@@ -2451,6 +2502,7 @@ namespace RBI
             CA.PRODUCTION_COST = caTank.ProductionCost;
             float FC_Total = 0;
             RW_CA_TANK rwCATank = new RW_CA_TANK();
+            CA.TANK_FLUID = st.TankFluidName;
             if (componentTypeName == "Shell")
             {
                 CA.Soil_type = caTank.Soil_Type; // va thêm
@@ -2616,7 +2668,7 @@ namespace RBI
             //    busFullFCoF.add(fullFCoF);
             #endregion
         }
-        private void Calculation(String ThinningType, int componentID, String componentTypeName, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
+        private void Calculation(String ThinningType, int componentID, String componentTypeName, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank,RW_INPUT_CA_LEVEL_1 caInput)
         {
             InputInspectionCalculation inputInsp;
             MSSQL_DM_CAL cacal;
@@ -2624,7 +2676,7 @@ namespace RBI
             RW_FULL_POF fullpof;
             float FC = 0;
             PoF(out fullpof, out inputInsp, out cacal, out DMmache, ThinningType, componentID, eq, com, ma, st, coat, tem);
-            CA(out FC, inputInsp.ApiComponentType, componentTypeName, com, ma, caTank);
+            CA(out FC, inputInsp.ApiComponentType, componentTypeName, com, ma, caInput, caTank,st);
             InspectionPlan(fullpof, inputInsp, cacal, DMmache, FC);
         }
         private void Calculation_CA_TANK(String componentTypeName, String API_component, String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
@@ -2635,7 +2687,7 @@ namespace RBI
             float FC = 0;
             RW_FULL_POF fullpof;
             PoF(out fullpof, out insp, out cacal, out DMmachenism, ThinningType, componentID, eq, com, ma, st, coat, tem);
-            CA_Tank(out FC, API_component, componentTypeName, eq, ma, caTank);
+            CA_Tank(out FC, API_component, componentTypeName, eq, ma, caTank,st);
             InspectionPlan(fullpof, insp, cacal, DMmachenism, FC);
         }
 
@@ -2797,7 +2849,7 @@ namespace RBI
                 }
             }
             DevExpress.XtraTab.XtraTabPage tabPage = new DevExpress.XtraTab.XtraTabPage();
-            Console.WriteLine("tabpage name: " + tabPage.Name);
+            //Console.WriteLine("tabpage name: " + tabPage.Name);
             tabPage.AutoScroll = true;
             tabPage.AutoScrollMargin = new Size(20, 20);
             tabPage.AutoScrollMinSize = new Size(tabPage.Width, tabPage.Height);
@@ -3346,9 +3398,9 @@ namespace RBI
             busAssessment.edit(ass);
             busEquipment.edit(eq);
             busComponent.edit(com);
-            Console.WriteLine("tank fluid name=" + stream.TankFluidName);
+            //Console.WriteLine("tank fluid name=" + stream.TankFluidName);
             busStream.edit(stream);
-            Console.WriteLine("ID=" + stream.ID);
+            //Console.WriteLine("ID=" + stream.ID);
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
@@ -3732,7 +3784,7 @@ namespace RBI
 
         private void xtraTabData_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Console.WriteLine("Press");
+            //Console.WriteLine("Press");
             xtraTabData.SelectedTabPage.Text += "*";
 
         }

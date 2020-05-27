@@ -501,8 +501,8 @@ namespace RBI.BUS.BUSExcel
                             obj = new RW_ASSESSMENT();
                             obj.EquipmentID = busEquipMaster.getIDbyName(reader[0].ToString());
                             obj.ComponentID = busCompMaster.getIDbyName(reader[1].ToString());
-                            Console.WriteLine("EQID" + busEquipMaster.getIDbyName(reader[0].ToString()));
-                            Console.WriteLine("COID" + busCompMaster.getIDbyName(reader[1].ToString()));
+                            //Console.WriteLine("EQID" + busEquipMaster.getIDbyName(reader[0].ToString()));
+                            //Console.WriteLine("COID" + busCompMaster.getIDbyName(reader[1].ToString()));
                             try
                             {
                                 obj.IsEquipmentLinked = Convert.ToInt32(reader.GetBoolean(5));
@@ -522,7 +522,7 @@ namespace RBI.BUS.BUSExcel
                             }
 
                             obj.ProposalName = "New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1);
-                            Console.WriteLine("New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1));
+                            //Console.WriteLine("New Proposal " + (busAssesment.countProposal(obj.ComponentID) + 1));
                             obj.AdoptedDate = DateTime.Now;
                             obj.RecommendedDate = DateTime.Now;
                             list.Add(obj);
@@ -2097,7 +2097,7 @@ namespace RBI.BUS.BUSExcel
                                 {
                                     obj = new RW_MATERIAL();
                                     obj.ID = list1[i].ID;
-                                    Console.WriteLine("ID proposal"+obj.ID.ToString());
+                                    //Console.WriteLine("ID proposal"+obj.ID.ToString());
                                     obj.MaterialName = reader[1].ToString();
                                     try
                                     {

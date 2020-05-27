@@ -411,7 +411,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 Po[i]= Insp[i] / (Insp[0] + Insp[1] + Insp[2]);   
             }
-            Console.WriteLine("Posterior =" + Po[0]);
+            //Console.WriteLine("Posterior =" + Po[0]);
             return Po;
         }
         public double[] Parameter(float age, int DM_ID)
@@ -510,7 +510,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 1390;
                 else
-                    Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN));
+                    //Console.WriteLine("Dfb: " + DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN));
                 return DAL_CAL.GET_TBL_47(API_ART(Art_THIN(age)), EFF_THIN);
             }
             else
@@ -522,7 +522,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
                 else
                 {
-                    Console.WriteLine("Strength ratio: " + StrengRatio());
+                    //Console.WriteLine("Strength ratio: " + StrengRatio());
                     return (Po[0] * Phi(-Pa[0]) + Po[1] * Phi(-Pa[1]) + Po[2] * Phi(-Pa[2])) / (float)(1.56 * Math.Pow(10, -4));
 
                 }
@@ -620,7 +620,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (LinningType == "Organic - Low Quality")
             {
                 SUSCEP_LINNING = "LowQuality";
-                Console.WriteLine("LowQUality=" + DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING));
+                //Console.WriteLine("LowQUality=" + DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING));
                 return DAL_CAL.GET_TBL_55(YEAR_IN_SERVICE, SUSCEP_LINNING);
             }
             else if (LinningType == "Organic - Medium Quality")
@@ -723,8 +723,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     k = "B";
                 }
             }
-            Console.WriteLine("CAUSTIC K:"+k);
-            Console.WriteLine(NaOHConcentration + ":" + MAX_OP_TEMP);
+            //Console.WriteLine("CAUSTIC K:"+k);
+            //Console.WriteLine(NaOHConcentration + ":" + MAX_OP_TEMP);
             return k;
         }
         private string getSusceptibility_Caustic()
@@ -745,7 +745,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     else if (HEAT_TRACE) sus = "High";
                     else if (STEAM_OUT) sus = "Medium";
                     else sus = "None";
-                    Console.WriteLine("plotinArea = A");
+                    //Console.WriteLine("plotinArea = A");
                 }
                 else
                 {
@@ -779,7 +779,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CAUSTIC_INSP_NUM + CAUSTIC_INSP_EFF;
-                Console.WriteLine("eff cautic" + FIELD);
+                //Console.WriteLine("eff cautic" + FIELD);
                 float DFB_CAUSTIC = DAL_CAL.GET_TBL_63(SVI_CAUSTIC(), FIELD);
                 //Console.WriteLine("CAUSTIC_INSP_NUM:"+CAUSTIC_INSP_NUM + "CAUSTIC:"+DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                 return DFB_CAUSTIC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
@@ -839,9 +839,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = AMINE_INSP_NUM + AMINE_INSP_EFF;
-                Console.WriteLine("eff amine" + FIELD);
+                //Console.WriteLine("eff amine" + FIELD);
                 float DFB_AMIN = DAL_CAL.GET_TBL_63(SVI_AMINE(), FIELD);
-                Console.WriteLine("AMINE DF = "+DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
+                //Console.WriteLine("AMINE DF = "+DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                 return DFB_AMIN * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
             else
@@ -883,7 +883,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (H2SContent <= 1000) env = "Moderate";
                 else env = "High";
             }
-            Console.WriteLine("Sulphide env = "+env);
+            //Console.WriteLine("Sulphide env = "+env);
             return env;
         }
         private string GET_SUSCEPTIBILITY_SULPHIDE()
@@ -915,7 +915,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     sus = (env == "Low") ? "Medium" : "High";
                 }
             }
-            Console.WriteLine("Sulphide sus = " + sus);
+            //Console.WriteLine("Sulphide sus = " + sus);
             return sus;
         }
         private int SVI_SULPHIDE()
@@ -937,9 +937,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = SULPHIDE_INSP_NUM + SULPHIDE_INSP_EFF;
-                Console.WriteLine("EFF" + FIELD);
+                //Console.WriteLine("EFF" + FIELD);
                 float DFB_SULPHIDE = DAL_CAL.GET_TBL_63(SVI_SULPHIDE(), FIELD);
-                Console.WriteLine("DF_SULPHIDE = " + DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
+                //Console.WriteLine("DF_SULPHIDE = " + DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1));
                 return DFB_SULPHIDE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
 
             }
@@ -1059,7 +1059,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = SULFUR_INSP_NUM + SULFUR_INSP_EFF;
                 
                 float DFB_SULFUR = DAL_CAL.GET_TBL_63(SVI_HICSOHIC_H2S(), FIELD);
-                Console.WriteLine("HIC/SOHIC H2S = " + (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom);
+                //Console.WriteLine("HIC/SOHIC H2S = " + (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom);
                 return (DFB_SULFUR * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
             }
             else
@@ -1105,7 +1105,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CACBONATE_INSP_NUM + CACBONATE_INSP_EFF;
-                Console.WriteLine("eff cacbonate"+FIELD);
+                //Console.WriteLine("eff cacbonate"+FIELD);
                 float DFB_CACBONATE = DAL_CAL.GET_TBL_63(SVI_CARBONATE(), FIELD);
                 return DFB_CACBONATE * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
@@ -1224,7 +1224,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = PTA_INSP_NUM + PTA_INSP_EFF;
-                Console.WriteLine("eff PTA" + FIELD);
+                //Console.WriteLine("eff PTA" + FIELD);
                 float DFB_PTA = DAL_CAL.GET_TBL_63(SVI_PTA(), FIELD);
                 return DFB_PTA * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
@@ -1298,7 +1298,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = CLSCC_INSP_NUM + CLSCC_INSP_EFF;
-                Console.WriteLine("eff slscc" + FIELD);
+                //Console.WriteLine("eff slscc" + FIELD);
                 float DFB_CLSCC = DAL_CAL.GET_TBL_63(SVI_CLSCC(), FIELD);
                 return DFB_CLSCC * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
@@ -1346,7 +1346,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HSC_HF_INSP_NUM + HSC_HF_INSP_EFF;
-                Console.WriteLine("eff hschf" + FIELD);
+                //Console.WriteLine("eff hschf" + FIELD);
                 float DFB_HSCHF = DAL_CAL.GET_TBL_63(SVI_HSCHF(), FIELD);
                 return DFB_HSCHF * (float)Math.Pow(Math.Max(age, 1.0), 1.1);
             }
@@ -1404,7 +1404,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FIELD = "E";
                 else
                     FIELD = HICSOHIC_INSP_NUM + HICSOHIC_INSP_EFF;
-                Console.WriteLine("eff hf" + FIELD);
+                //Console.WriteLine("eff hf" + FIELD);
                 float DFB_HICSOHIC_HF = DAL_CAL.GET_TBL_63(SVI_HICSOHIC_HF(), FIELD);
                 return (DFB_HICSOHIC_HF * (float)Math.Pow(Math.Max(age, 1.0), 1.1)) / Fom;
             }
@@ -1855,7 +1855,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 FIELD = "E";
             else
                 FIELD = EXTERN_CLSCC_INSP_NUM + EXTERN_CLSCC_INSP_EFF;
-            Console.WriteLine("EFF"+FIELD);
+            //Console.WriteLine("EFF"+FIELD);
             return DAL_CAL.GET_TBL_63(SVI, FIELD);
         }
         public float DF_EXTERN_CLSCC()
@@ -2334,12 +2334,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (PWHT)
                 {
 
-                    Console.WriteLine("DF_TEMP_EMBRITTLE()=" + DAL_CAL.GET_TBL_205(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK)));
+                    //Console.WriteLine("DF_TEMP_EMBRITTLE()=" + DAL_CAL.GET_TBL_205(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK)));
                     return DAL_CAL.GET_TBL_205(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
                 }
                 else
                 {
-                    Console.WriteLine("df temp=" + DAL_CAL.GET_TBL_204(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK)));
+                    //Console.WriteLine("df temp=" + DAL_CAL.GET_TBL_204(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK)));
                     return DAL_CAL.GET_TBL_204(API_TEMP(TEMP_EMBRITTLE), API_SIZE_BRITTLE(BRITTLE_THICK));
                 }
                     
@@ -2530,7 +2530,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     else
                         DFB_SIGMA = 4196;
                 }
-                Console.WriteLine("DFB_SIGMA=" + DFB_SIGMA);
+
+                //Console.WriteLine("DFB_SIGMA=" + DFB_SIGMA);
                 return DFB_SIGMA;
             }
             else
@@ -2661,7 +2662,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     FBD = 0.02f;
                 else
                     FBD = 1;
-                Console.WriteLine("DFB_PIPE() * FCA * FPC * FCP * FJB * FBD=" + DFB_PIPE() * FCA * FPC * FCP * FJB * FBD);
+                //Console.WriteLine("DFB_PIPE() * FCA * FPC * FCP * FJB * FBD=" + DFB_PIPE() * FCA * FPC * FCP * FJB * FBD);
                 return DFB_PIPE() * FCA * FPC * FCP * FJB * FBD;
             }
             else

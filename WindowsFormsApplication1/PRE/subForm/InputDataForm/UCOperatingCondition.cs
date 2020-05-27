@@ -102,7 +102,7 @@ namespace RBI.PRE.subForm.InputDataForm
                     txtMaximumOperatingTemp.Text = convUnit.CelToFah(objSteam.MaxOperatingTemperature).ToString();
                     txtMinimumOperatingTemp.Text = convUnit.CelToFah(objSteam.MinOperatingTemperature).ToString();
                     txtCriticalExposure.Text = convUnit.CelToFah(objSteam.CriticalExposureTemperature).ToString();
-                    Console.WriteLine("Hha");
+                    //Console.WriteLine("Hha");
                     break;
                 case "K":
                     txtMaximumOperatingTemp.Text = convUnit.CelToKenvin(objSteam.MaxOperatingTemperature).ToString();
@@ -244,7 +244,7 @@ namespace RBI.PRE.subForm.InputDataForm
             return ext;
         }
 
-        public RW_INPUT_CA_LEVEL_1 getDataforCA(int id, string temperatureUnit, string pressureUnit)//thao
+        public RW_INPUT_CA_LEVEL_1 getDataforCA(int id, string temperatureUnit, string pressureUnit)//dat
         {
             RW_INPUT_CA_LEVEL_1 ca = new RW_INPUT_CA_LEVEL_1();
             BUS_UNITS convUnit = new BUS_UNITS();

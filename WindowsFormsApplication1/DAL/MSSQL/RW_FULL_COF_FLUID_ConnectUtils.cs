@@ -12,7 +12,7 @@ namespace RBI.DAL.MSSQL
 {
     class RW_FULL_COF_FLUID_ConnectUtils
     {
-        public void add(int ID, double Cp, double k, double GFFTotal,double Kv_n,String ReleasePhase,double Cd,double Ptrans,double NBP,double Density, double MW,double R, double Ps,double Ts,double Patm, double fact_di, double fact_mit, double fact_AIT, double g, double h)
+        public void add(int ID, double Cp, double k, double GFFTotal,double Kv_n,String ReleasePhase, double W_max8, double Cd,double Ptrans,double NBP,double Density, double MW,double R, double Ps,double Ts,double Patm, double fact_di, double fact_mit, double fact_AIT, double g, double h)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -25,6 +25,7 @@ namespace RBI.DAL.MSSQL
                         ",[GFFTotal]" +
                         ",[Kv_n]" +
                         ",[ReleasePhase]" +
+                        ",[W_max8]"+
                         ",[Cd]" +
                         ",[Ptrans]" +
                         ",[NBP]" +
@@ -46,6 +47,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + GFFTotal + "'" +
                         ",'" + Kv_n + "'" +
                         ",'" + ReleasePhase + "'" +
+                        ",'" + W_max8+"'"+
                         ",'" + Cd + "'" +
                         ",'" + Ptrans + "'" +
                         ",'" + NBP + "'" +
@@ -78,7 +80,7 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, double Cp, double k, double GFFTotal, double Kv_n, String ReleasePhase, double Cd, double Ptrans, double NBP, double Density, double MW, double R, double Ps, double Ts, double Patm, double fact_di, double fact_mit, double fact_AIT, double g, double h)
+        public void edit(int ID, double Cp, double k, double GFFTotal, double Kv_n, String ReleasePhase, double W_max8, double Cd, double Ptrans, double NBP, double Density, double MW, double R, double Ps, double Ts, double Patm, double fact_di, double fact_mit, double fact_AIT, double g, double h)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
@@ -91,6 +93,7 @@ namespace RBI.DAL.MSSQL
                         ",[GFFTotal] ='" + GFFTotal + "'" +
                         ",[Kv_n] ='" + Kv_n + "'" +
                         ",[ReleasePhase] ='" + ReleasePhase + "'" +
+                        ",[W_max8]='"+W_max8+"'"+
                         ",[Cd] ='" + Cd + "'" +
                         ",[Ptrans] ='" + Ptrans + "'" +
                         ",[NBP] ='" + NBP + "'" +
@@ -164,6 +167,7 @@ namespace RBI.DAL.MSSQL
                         ",[GFFTotal]" +
                         ",[Kv_n]" +
                         ",[ReleasePhase]" +
+                        ",[W_max8]"+
                         ",[Cd]" +
                         ",[Ptrans]" +
                         ",[NBP]" +
@@ -212,61 +216,65 @@ namespace RBI.DAL.MSSQL
                             {
                                 obj.ReleasePhase = reader.GetString(5);
                             }
-                            if (!reader.IsDBNull(6))
+                            if(!reader.IsDBNull(6))
                             {
-                                obj.Cd = reader.GetFloat(6);
+                                obj.W_max8 = reader.GetFloat(6);
                             }
                             if (!reader.IsDBNull(7))
                             {
-                                obj.Ptrans = reader.GetFloat(7);
+                                obj.Cd = reader.GetFloat(7);
                             }
                             if (!reader.IsDBNull(8))
                             {
-                                obj.NBP = reader.GetFloat(8);
+                                obj.Ptrans = reader.GetFloat(8);
                             }
                             if (!reader.IsDBNull(9))
                             {
-                                obj.Density = reader.GetFloat(9);
+                                obj.NBP = reader.GetFloat(9);
                             }
                             if (!reader.IsDBNull(10))
                             {
-                                obj.MW = reader.GetFloat(10);
+                                obj.Density = reader.GetFloat(10);
                             }
                             if (!reader.IsDBNull(11))
                             {
-                                obj.R = reader.GetFloat(11);
+                                obj.MW = reader.GetFloat(11);
                             }
                             if (!reader.IsDBNull(12))
                             {
-                                obj.Ps = reader.GetFloat(12);
+                                obj.R = reader.GetFloat(12);
                             }
                             if (!reader.IsDBNull(13))
                             {
-                                obj.Ts = reader.GetFloat(13);
+                                obj.Ps = reader.GetFloat(13);
                             }
                             if (!reader.IsDBNull(14))
                             {
-                                obj.Patm = reader.GetFloat(14);
+                                obj.Ts = reader.GetFloat(14);
                             }
                             if (!reader.IsDBNull(15))
                             {
-                                obj.fact_di = reader.GetFloat(15);
+                                obj.Patm = reader.GetFloat(15);
                             }
                             if (!reader.IsDBNull(16))
                             {
-                                obj.fact_mit = reader.GetFloat(16);
+                                obj.fact_di = reader.GetFloat(16);
                             }
                             if (!reader.IsDBNull(17))
                             {
-                                obj.fact_AIT = reader.GetFloat(17);
+                                obj.fact_mit = reader.GetFloat(17);
                             }
                             if (!reader.IsDBNull(18))
                             {
-                                obj.g = reader.GetFloat(18);
+                                obj.fact_AIT = reader.GetFloat(18);
                             }
                             if (!reader.IsDBNull(19))
                             {
-                                obj.h = reader.GetFloat(19);
+                                obj.g = reader.GetFloat(19);
+                            }
+                            if (!reader.IsDBNull(20))
+                            {
+                                obj.h = reader.GetFloat(20);
                             }
                             list.Add(obj);
 

@@ -19,6 +19,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public double NominalDiameter { set; get; }
         public String FLUID { set; get; }
         public String FLUID_PHASE { set; get; }
+        public String RELEASE_PHASE { set; get; }
         public String API_COMPONENT_TYPE_NAME { set; get; }
         public String COMPONENT_TYPE_NAME { set; get; }
         public String DETECTION_TYPE { set; get; }
@@ -114,7 +115,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return API_TYPE;
         }
-        private API_COMPONENT_TYPE GET_DATA_API_COM()
+        public API_COMPONENT_TYPE GET_DATA_API_COM()
         {
             return API_COMPONENT_BUS.getData(API_COMPONENT_TYPE_NAME);
         }
@@ -124,7 +125,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             return DAL_CAL.GET_RELEASE_PHASE(FLUID);
         }
         // Step 2 release hole size
-        public float d_n(int i)
+        public float d_n(int i) //done
         {
             float dn = 0;
             if (COMPONENT_TYPE_NAME == "Tank Bottom")
@@ -168,61 +169,128 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     dn = (float)Math.Min(NominalDiameter, 406);
 
             }
-            Console.WriteLine("Gia tri d la: " + dn);
+            //Console.WriteLine("Gia tri d la: " + dn);
             return dn;
         }
-        public float a_n(int i)
+        public float a_n(int i) //done
         {
             float a_n = (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 2);
             //Console.WriteLine("gia tri An" + a_n);
             return a_n;
         }
-        private float C_P()
+        public float C_P() //done
         {
+            //Console.WriteLine("FLUID = " + FLUID);
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
-            float CP_C2 = (float)Math.Round((data[6] / STORED_TEMP) / (Math.Sinh(data[6] / STORED_TEMP)), 2);
-            float CP_E2 = (float)Math.Round((data[8] / STORED_TEMP) / (Math.Cosh(data[8] / STORED_TEMP)), 2);
-            if (data[3] == 1)
-                return data[4] + data[5] * STORED_TEMP + data[6] * (float)Math.Pow(STORED_TEMP, 2) + data[7] * (float)Math.Pow(STORED_TEMP, 3);
-            else if (data[3] == 2)
-                return data[4] + data[5] * CP_C2 * CP_C2 + data[6] * CP_E2 * CP_E2;
-            else if (data[3] == 3)
-                return data[4] + data[5] * STORED_TEMP + data[6] * (float)Math.Pow(STORED_TEMP, 2) + data[7] * (float)Math.Pow(STORED_TEMP, 3) + data[8] * (float)Math.Pow(STORED_TEMP, 4);
-            else
-                return 0;
+            //STORED_TEMP = STORED_TEMP + 273;
+            float CP_C2 = (float)Math.Round(Math.Pow((data[6] / (STORED_TEMP+273.15)) / (Math.Sinh(data[6] / (STORED_TEMP+273.15))), 2), 10);
+            float CP_E2 = (float)Math.Round(Math.Pow((data[8] / (STORED_TEMP+273.15)) / (Math.Cosh(data[8] / (STORED_TEMP+273.15))), 2), 10);
+            //Console.WriteLine("NOTE = " + data[3]);
+            //Console.WriteLine("STORED TEMP= " + STORED_TEMP);
+            //Console.WriteLine("gia tri CP_C2= " + CP_C2);
+            //Console.WriteLine("gia tri CP_E2= " + CP_E2);
+            if (STORED_TEMP != 0)
+            {
+                if (data[3] == 1)
+                {
+                    return data[4] + data[5] * (STORED_TEMP+273.15f) + data[6] * (float)Math.Pow((STORED_TEMP+273.15f), 2) + data[7] * (float)Math.Pow((STORED_TEMP+273.15), 3);
+                }
+                if (data[3] == 2)
+                {
+                    return data[4] + data[5] * CP_C2 * CP_C2 + data[6] * CP_E2 * CP_E2;
+                }
+                if (data[3] == 3)
+                {
+                    return data[4] + data[5] * (STORED_TEMP + 273.15f) + data[6] * (float)Math.Pow((STORED_TEMP + 273.15f), 2) + data[7] * (float)Math.Pow((STORED_TEMP + 273.15f), 3) + data[8] * (float)Math.Pow((STORED_TEMP + 273.15f), 4);
+                }
+            }
+            return 0;
         }
-        private float W_n(int i)
+        public float W_n(int i) //done
         {
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float W_n;
             float an = a_n(i);
+            float cp = C_P();
             float k;
             float m_w = data[0];
             float p_trans;
             float gc = 1;
-            if (FLUID_PHASE == "Liquid" || FLUID_PHASE == "Two-phase" || FLUID_PHASE == "Powder")
+            //Console.WriteLine("fluid phase la" + FLUID_PHASE);
+            //Console.WriteLine("Stored_Pressure la " + STORED_PRESSURE);
+            //Console.WriteLine("Atmosphe la " + ATMOSPHERIC_PRESSURE);
+            float R = 8.314f;
+            //float ATMOSPHERIC_PRESSURE = 101.325f;
+            k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
+            //Console.WriteLine("k= " + k);
+            p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 2);
+            //Console.WriteLine("PS= " + p_trans);
+            if ((STORED_TEMP == 0) || (STORED_PRESSURE == 0)){
+                W_n = 0;
+                return W_n;
+            }
+            //Console.WriteLine("release phase la " + RELEASE_PHASE);
+            //Console.WriteLine("liquid density la " + data[1]);
+            if (RELEASE_PHASE != "Liquid")
             {
-                W_n = (float)Math.Round(0.61 * 1 * data[1] * 16.02 * an * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1]) * 16.02) / (DAL_CAL.GET_TBL_3B21(1)), 2);
+
+                if (STORED_PRESSURE > p_trans)
+                {
+                    float x = (float)(((k * m_w * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
+                    //Console.WriteLine("x= " + x);
+                    W_n = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    return W_n;
+                }
+                if (STORED_PRESSURE <= p_trans)
+                {
+                    float x = (float)Math.Round((m_w * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
+                    //Console.WriteLine("x= " + x);
+                    W_n = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    return W_n;
+                }
+                //W_n = (float)Math.Round(0.61 * 1 * data[1] * 16.02 * an * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1]) * 16.02) / (DAL_CAL.GET_TBL_3B21(1)), 2);
             }
             else
             {
-                float R = 8.314f;
-                k = (C_P() / (C_P() - R));
-                p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow((k + 1) / 2, k / (k - 1)), 2);
-                if (STORED_PRESSURE > p_trans)
-                {
-                    float x = (float)((k * m_w * gc / (R * STORED_TEMP)) * Math.Pow(2 / (k + 1), (k + 1) / (k - 1)));
-                    W_n = (float)Math.Round(0.9 * an * STORED_PRESSURE * Math.Sqrt(Math.Abs(x)) / (DAL_CAL.GET_TBL_3B21(2)), 2);
-                }
-                else
-                {
-                    float x = (float)Math.Round((m_w * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 2);
-                    W_n = (float)Math.Round(0.9 * an * STORED_PRESSURE * Math.Sqrt(Math.Abs(x)) / (DAL_CAL.GET_TBL_3B21(2)), 2);
-                }
+                //Console.WriteLine("anfjdsnjas");
+                //Console.WriteLine("data[1]= " + data[1]);
+                //Console.WriteLine("dien tich la " + an);
+                //Console.WriteLine("SIUNIt=" + DAL_CAL.GET_TBL_3B21(1));
+                W_n = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 2);
+                //Console.WriteLine("cai dcm" + W_n);
+                return W_n;
             }
-            return W_n;
+            return 0;         
+            
         }
-        private float W_max8()
+        public float GFF(int i) //done
+        {
+            API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
+            API_COMPONENT_TYPE typename = busapi.getData(API_COMPONENT_TYPE_NAME);
+            float gff = 0;
+            if (i == 1)
+            {
+                gff = (float)Math.Round(typename.GFFSmall,7);
+            }
+            else if (i == 2)
+            {
+                gff = (float)Math.Round(typename.GFFMedium,7);
+            }
+            else if (i == 3)
+            {
+                gff = (float)Math.Round(typename.GFFLarge,7);
+            }
+            else if (i == 4)
+            {
+                gff = (float)Math.Round(typename.GFFRupture,7);
+            }
+            else
+            {
+                gff = 0;
+            }
+            return gff;
+        }
+        public float W_max8()
         {
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float W_max8 = 0;
@@ -231,29 +299,39 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float mw = data[0];
             float p_trans = 0;
             float gc = 1;
-            if (FLUID_PHASE == "Liquid" || FLUID_PHASE == "Two-phase" || FLUID_PHASE == "Powder")
+            float R = 8.314f;
+            float cp = C_P();
+            k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
+            p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 2);
+            if ((STORED_TEMP == 0) || (STORED_PRESSURE == 0))
             {
-                W_max8 = (float)Math.Round(0.61 * 1 * data[1] * 16.02 * an * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)) / (DAL_CAL.GET_TBL_3B21(1)), 2);
+                W_max8 = 0;
+                return W_max8;
+            }
+            if (RELEASE_PHASE != "Liquid")
+            {
+
+                if (STORED_PRESSURE > p_trans)
+                {
+                    float x = (float)(((k * mw * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
+                    W_max8 = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    return W_max8;
+                }
+                if (STORED_PRESSURE <= p_trans)
+                {
+                    float x = (float)Math.Round((mw * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
+                    W_max8 = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    return W_max8;
+                }
             }
             else
             {
-                float R = 8.314f;
-                k = (C_P() / (C_P() - R));
-                p_trans = (float)(ATMOSPHERIC_PRESSURE * Math.Pow((k + 1) / 2, k / (k - 1)));
-                if (STORED_PRESSURE > p_trans)
-                {
-                    float x = (float)((k * mw * gc / (R * STORED_TEMP)) * Math.Pow(2 / (k + 1), (k + 1) / (k - 1)));
-                    W_max8 = (float)Math.Round(0.9 * an * STORED_PRESSURE * Math.Sqrt(Math.Abs(x)) / (DAL_CAL.GET_TBL_3B21(2)), 2);
-                }
-                else
-                {
-                    float x = (float)Math.Round((mw * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 2);
-                    W_max8 = (float)Math.Round(0.9 * an * STORED_PRESSURE * Math.Sqrt(Math.Abs(x)) / (DAL_CAL.GET_TBL_3B21(2)), 2);
-                }
+                W_max8 = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 2);
+                return W_max8;
             }
-            return W_max8;
+            return 0;
         }
-        private float mass_addn(int n)
+        public float mass_addn(int n)
         {
             float mass_addn = 0;
             float Wmax8 = W_max8();

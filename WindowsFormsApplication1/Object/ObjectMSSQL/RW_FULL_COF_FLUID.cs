@@ -14,6 +14,7 @@ namespace RBI.Object.ObjectMSSQL
         public float GFFTotal { get; set; }
         public float Kv_n { get; set; }
         public String ReleasePhase { get; set; }
+        public float W_max8 { get; set; }
         public float Cd { get; set; }
         public float Ptrans { get; set; }
         public float NBP { get; set; }
