@@ -2414,13 +2414,13 @@ namespace RBI
             rwfcf.W_max8 = CA_CAL.W_max8();
             Console.WriteLine("W_max8= " + rwfcf.W_max8);
             rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
-            Console.WriteLine("mass_add1= " + rwfholesize.mass_add_1);
+            //Console.WriteLine("mass_add1= " + rwfholesize.mass_add_1);
             rwfholesize.mass_add_2 = CA_CAL.mass_addn(2);
-            Console.WriteLine("mass_add2= " + rwfholesize.mass_add_2);
+            //Console.WriteLine("mass_add2= " + rwfholesize.mass_add_2);
             rwfholesize.mass_add_3 = CA_CAL.mass_addn(3);
-            Console.WriteLine("mass_add3= " + rwfholesize.mass_add_3);
+            //Console.WriteLine("mass_add3= " + rwfholesize.mass_add_3);
             rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
-            Console.WriteLine("mass_add4= " + rwfholesize.mass_add_4);
+            //Console.WriteLine("mass_add4= " + rwfholesize.mass_add_4);
             rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
             Console.WriteLine("mass_avail1= " + rwfholesize.mass_avail_1);
             rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
