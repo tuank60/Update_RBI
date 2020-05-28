@@ -940,7 +940,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float outage_cmd = 0;
             float t = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
-            t = obj.GFFSmall * obj.OutageSmall + obj.GFFMedium * obj.OutageMedium + obj.GFFLarge * obj.OutageLarge + obj.GFFRupture * obj.GFFRupture;
+            t = obj.GFFSmall * obj.OutageSmall + obj.GFFMedium * obj.OutageMedium + obj.GFFLarge * obj.OutageLarge + obj.GFFRupture * obj.OutageRupture;
             outage_cmd = t / obj.GFFTotal * Outage_mul;
             return outage_cmd;
         }
