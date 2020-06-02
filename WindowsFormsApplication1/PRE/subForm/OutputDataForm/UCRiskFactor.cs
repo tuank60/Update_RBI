@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RBI.Object.ObjectMSSQL;
 using RBI.BUS.BUSMSSQL;
+using RBI.BUS.BUSMSSQL_CAL;
 using RBI.Object;
 
 
@@ -16,8 +17,10 @@ namespace RBI.PRE.subForm.OutputDataForm
 {
     public delegate void DataUCChangedHanlder(object sender, DataUCChangedEventArgs e);
     public delegate void CtrlSHandler(object sender, CtrlSPressEventArgs e);
+    
     public partial class UCRiskFactor : UserControl
     {
+        private int IDProposal;
         public UCRiskFactor()
         {
             InitializeComponent();
@@ -25,6 +28,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         public UCRiskFactor(int ID)
         {
             InitializeComponent();
+            IDProposal = ID;
             riskPoF(ID);
             riskCA(ID);
             //ShowDataOutputCA(ID);
@@ -684,6 +688,87 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
             busCA_Tank.edit(inputShell);
             MessageBox.Show("Update Input", "Coterk RBI");
+        }
+
+        private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            if (tabRisk.SelectedTabPage.Name == "tabCATankShell")
+            {
+                //MessageBox.Show("nothing");
+                LoadDataForControlInTabCATankShell(IDProposal);
+            }   
+            //if (tabPane1.SelectedPage.Name == "tabDamageMechanism")
+            //   DisplayDamagemachanism();
+            else
+            {
+                // if (tabPane1.SelectedPage.Name == "tabInspectionMethod")
+                //  showGridControlMethod();
+            }
+        }
+        private void LoadDataForControlInTabCATankShell(int i)
+        {
+            RW_INPUT_CA_TANK inputTank = new RW_INPUT_CA_TANK();
+            RW_INPUT_CA_TANK_BUS busInputTank = new RW_INPUT_CA_TANK_BUS();
+            inputTank = busInputTank.getData(IDProposal);
+            MSSQL_CA_CAL CA = new MSSQL_CA_CAL();
+            CA.TANK_DIAMETER = inputTank.TANK_DIAMETTER;
+            CA.FLUID_HEIGHT = inputTank.FLUID_HEIGHT;
+            CA.Soil_type = inputTank.Soil_Type; 
+            CA.TANK_FLUID = inputTank.TANK_FLUID; 
+            CA.SHELL_COURSE_HEIGHT = inputTank.SHELL_COURSE_HEIGHT;
+            CA.PREVENTION_BARRIER = inputTank.Prevention_Barrier == 1 ? true : false;
+            CA.EnvironSensitivity = inputTank.Environ_Sensitivity;
+            CA.P_lvdike = inputTank.P_lvdike;
+            CA.P_offsite = inputTank.P_offsite;
+            CA.P_onsite = inputTank.P_onsite;
+            CA.COMPONENT_TYPE_NAME = "Shell";
+            CA.FLUID = inputTank.API_FLUID;
+            txtA1.Text = CA.getEquationConstants(0).ToString();
+            txtA2.Text = CA.getEquationConstants(2).ToString();
+            txtA3.Text = CA.getEquationConstants(4).ToString();
+            txtA4.Text = CA.getEquationConstants(6).ToString();
+            txtB1.Text = CA.getEquationConstants(1).ToString();
+            txtB2.Text = CA.getEquationConstants(3).ToString();
+            txtB3.Text = CA.getEquationConstants(5).ToString();
+            txtB4.Text = CA.getEquationConstants(7).ToString();
+            txtReleaseRateD1.Text = CA.rate_Flammable(1).ToString();
+            txtReleaseRateD2.Text = CA.rate_Flammable(2).ToString();
+            txtReleaseRateD3.Text = CA.rate_Flammable(3).ToString();
+            txtReleaseRateD4.Text = CA.rate_Flammable(4).ToString();
+            txtCONT_CMD_AINL_D1.Text = CA.AINL_Cmd(1).ToString();
+            txtCONT_CMD_AINL_D2.Text = CA.AINL_Cmd(2).ToString();
+            txtCONT_CMD_AINL_D3.Text = CA.AINL_Cmd(3).ToString();
+            txtCONT_CMD_AINL_D4.Text = CA.AINL_Cmd(4).ToString();
+            txtCONT_CMD_AIL_D1.Text = CA.AIL_Cmd(1).ToString();
+            txtCONT_CMD_AIL_D2.Text = CA.AIL_Cmd(2).ToString();
+            txtCONT_CMD_AIL_D3.Text = CA.AIL_Cmd(3).ToString();
+            txtCONT_CMD_AIL_D4.Text = CA.AIL_Cmd(4).ToString();
+            txtCONT_INJ_AINL_D1.Text = CA.AINL_Inj(1).ToString();
+            txtCONT_INJ_AINL_D2.Text = CA.AINL_Inj(2).ToString();
+            txtCONT_INJ_AINL_D3.Text = CA.AINL_Inj(3).ToString();
+            txtCONT_INJ_AINL_D4.Text = CA.AINL_Inj(4).ToString();
+            txtCONT_INJ_AIL_D1.Text = CA.AIL_Inj(1).ToString();
+            txtCONT_INJ_AIL_D2.Text = CA.AIL_Inj(2).ToString();
+            txtCONT_INJ_AIL_D3.Text = CA.AIL_Inj(3).ToString();
+            txtCONT_INJ_AIL_D4.Text = CA.AIL_Inj(4).ToString();
+            txtBlended_CMD_AINL_D1.Text = txtAIT_Blended_CMD_D1.Text = txtCONT_CMD_AINL_D1.Text;
+            txtBlended_CMD_AINL_D2.Text = txtAIT_Blended_CMD_D2.Text = txtCONT_CMD_AINL_D2.Text;
+            txtBlended_CMD_AINL_D3.Text = txtAIT_Blended_CMD_D3.Text = txtCONT_CMD_AINL_D3.Text;
+            txtBlended_CMD_AINL_D4.Text = txtAIT_Blended_CMD_D4.Text = txtCONT_CMD_AINL_D4.Text;
+            txtBlended_CMD_AIL_D1.Text = txtCONT_CMD_AIL_D1.Text;
+            txtBlended_CMD_AIL_D2.Text = txtCONT_CMD_AIL_D2.Text;
+            txtBlended_CMD_AIL_D3.Text = txtCONT_CMD_AIL_D3.Text;
+            txtBlended_CMD_AIL_D4.Text = txtCONT_CMD_AIL_D4.Text;
+            txtBlended_INJ_AINL_D1.Text = txtAIT_Blended_INJ_D1.Text = txtCONT_INJ_AINL_D1.Text;
+            txtBlended_INJ_AINL_D2.Text = txtAIT_Blended_INJ_D2.Text = txtCONT_INJ_AINL_D2.Text;
+            txtBlended_INJ_AINL_D3.Text = txtAIT_Blended_INJ_D3.Text = txtCONT_INJ_AINL_D3.Text;
+            txtBlended_INJ_AINL_D4.Text = txtAIT_Blended_INJ_D4.Text = txtCONT_INJ_AINL_D4.Text;
+            txtBlended_INJ_AIL_D1.Text = txtCONT_INJ_AIL_D1.Text;
+            txtBlended_INJ_AIL_D2.Text = txtCONT_INJ_AIL_D2.Text;
+            txtBlended_INJ_AIL_D3.Text = txtCONT_INJ_AIL_D3.Text;
+            txtBlended_INJ_AIL_D4.Text = txtCONT_INJ_AIL_D4.Text;
+            txtFlammableComponentDamage.Text = CA.ca_cmd_flame_shell().ToString();
+            txtFlammablePersonelInjury.Text = CA.ca_inj_flame_shell().ToString();
         }
     }
 }

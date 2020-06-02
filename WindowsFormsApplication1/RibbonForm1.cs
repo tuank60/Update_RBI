@@ -2504,6 +2504,7 @@ namespace RBI
             float FC_Total = 0;
             RW_CA_TANK rwCATank = new RW_CA_TANK();
             CA.TANK_FLUID = st.TankFluidName;
+            RW_INPUT_CA_TANK_BUS busInputCATank = new RW_INPUT_CA_TANK_BUS();
             if (componentTypeName == "Shell")
             {
                 CA.Soil_type = caTank.Soil_Type; // va thêm
@@ -2517,6 +2518,7 @@ namespace RBI
                 CA.P_offsite = caTank.P_offsite;
                 CA.P_onsite = caTank.P_onsite;
                 CA.API_COMPONENT_TYPE_NAME = API_component;
+                CA.COMPONENT_TYPE_NAME = "Shell";
                 //viet anh them
                 CA.EQUIPMENT_COST = caTank.equipcost;// Process unit replacement costs for component
                 CA.Outage_mul = caTank.EquipOutageMultiplier;
@@ -2586,7 +2588,11 @@ namespace RBI
                 //                    );
 
                 if (busCATank.CheckExistID(rwCATank.ID))
+                {
                     busCATank.edit(rwCATank);
+                    caTank.ID = rwCATank.ID;
+                    busInputCATank.edit(caTank);
+                }    
                 else
                 {
                     busCATank.add(rwCATank);
@@ -2664,7 +2670,10 @@ namespace RBI
                 rwCATank.Consequence = rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
                 rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
                 if (busCATank.CheckExistID(rwCATank.ID))
+                {
                     busCATank.edit(rwCATank);
+                    busInputCATank.edit(caTank);
+                }  
                 else
                 {
                     busCATank.add(rwCATank);
@@ -2731,7 +2740,11 @@ namespace RBI
 
                 rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
                 if (busCATank.CheckExistID(rwCATank.ID))
+                {
                     busCATank.edit(rwCATank);
+                    caTank.ID = rwCATank.ID;
+                    busInputCATank.edit(caTank);
+                }
                 else
                     busCATank.add(rwCATank);
                 FC_Total = rwCATank.Consequence;

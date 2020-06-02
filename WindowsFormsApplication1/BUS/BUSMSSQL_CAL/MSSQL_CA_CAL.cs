@@ -220,7 +220,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             //Console.WriteLine("Stored_Pressure la " + STORED_PRESSURE);
             //Console.WriteLine("Atmosphe la " + ATMOSPHERIC_PRESSURE);
             float R = 8.314f;
-            //float ATMOSPHERIC_PRESSURE = 101.325f;
+            float ATMOSPHERIC_PRESSURE = 101.325f;
             k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
             //Console.WriteLine("k= " + k);
             p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 2);
@@ -1501,6 +1501,78 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             return FC_environ_bottom() + FC_cmd_bottom() + FC_PROD_SHELL();
         }
-       
+        #region Flammable and Toxic Consequence in Shell Tank
+        public float getEquationConstants(int select)
+        {
+            float[] data = { 0, 0, 0, 0, 0, 0, 0, 0};
+            if (FLUID == "Water")
+                return 0;
+            else
+            {
+                float[] dataInTableAPI = DAL_CAL.GET_TBL_58(FLUID);
+                data[0] = dataInTableAPI[2];
+                data[1] = dataInTableAPI[3];
+                data[2] = dataInTableAPI[6];
+                data[3] = dataInTableAPI[7];
+                float[] dataInTableAPI2 = DAL_CAL.GET_TBL_59(FLUID);
+                data[4] = dataInTableAPI2[2];
+                data[5] = dataInTableAPI2[3];
+                data[6] = dataInTableAPI2[6];
+                data[7] = dataInTableAPI2[7];
+            }
+            return data[select];
+        }
+        public float ca_cmd_ainl(int selectA, int selectB, int n)
+        {
+            float ca_cmd_ainl;
+            ca_cmd_ainl = (float)Math.Round(a_inj(selectA) * Math.Pow(effrate_n(selectB, n), b_inj(selectB)) * (1 - fact_mit()), 2);
+            return ca_cmd_ainl;
+        }
+        public float rate_Flammable(int i)
+        {
+            float[] pl_ul = GET_PL_UL();
+            float rate_Flammable = (float)((W_n_Tank(i) * 1.84E-06) * pl_ul[0]);
+            return rate_Flammable > 0 ? rate_Flammable : 0;
+        }
+        public float AINL_Cmd(int i)
+        {
+            float AINL_Cmd = (float)(getEquationConstants(0) * Math.Pow(rate_Flammable(i), getEquationConstants(1)));
+            return AINL_Cmd > 0 ? AINL_Cmd : 0;
+        }
+        public float AIL_Cmd(int i)
+        {
+            float AIL_Cmd = (float)(getEquationConstants(2) * Math.Pow(rate_Flammable(i), getEquationConstants(3)));
+            return AIL_Cmd > 0 ? AIL_Cmd : 0;
+        }
+        public float AINL_Inj(int i)
+        {
+            float AINL_Inj = (float)(getEquationConstants(4) * Math.Pow(rate_Flammable(i), getEquationConstants(5)));
+            return AINL_Inj > 0 ? AINL_Inj : 0;
+        }
+        public float AIL_Inj(int i)
+        {
+            float AIL_Inj = (float)(getEquationConstants(6) * Math.Pow(rate_Flammable(i), getEquationConstants(7)));
+            return AIL_Inj > 0 ? AIL_Inj : 0;
+        }
+        public float ca_cmd_flame_shell()
+        {
+            float t = 0;
+            //API_COMPONENT_TYPE obj = GET_DATA_API_COM();
+            //float test = obj.GFFLarge;
+            //t = obj.GFFSmall * AINL_Cmd(1) + obj.GFFMedium * AINL_Cmd(2) + obj.GFFLarge * AINL_Cmd(3) + obj.GFFRupture * AINL_Cmd(4);
+            //float ca_cmd_flame = t / obj.GFFTotal;
+            t = (float)(7E-05 * AINL_Cmd(1) + 2.5E-05 * AINL_Cmd(2) + 5E-06 * AINL_Cmd(3) + 1E-07 * AINL_Cmd(4));
+            float ca_cmd_flame = t / 0.0001001f;
+            return Math.Abs(ca_cmd_flame);
+
+        }
+        public float ca_inj_flame_shell()
+        {
+            float t;
+            t = (float)(7E-05 * AINL_Inj(1) + 2.5E-05 * AINL_Inj(2) + 5E-06 * AINL_Inj(3) + 1E-07 * AINL_Inj(4));
+            float ca_inj = t / 0.0001001f;
+            return Math.Abs(ca_inj);
+        }
+        #endregion
     }
 }

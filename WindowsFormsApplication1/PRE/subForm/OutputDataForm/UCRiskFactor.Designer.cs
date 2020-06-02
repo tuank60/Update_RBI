@@ -489,7 +489,92 @@
             this.label232 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label231 = new System.Windows.Forms.Label();
+            this.label275 = new System.Windows.Forms.Label();
+            this.label285 = new System.Windows.Forms.Label();
+            this.txtFinalConsequence = new DevExpress.XtraEditors.TextEdit();
+            this.label274 = new System.Windows.Forms.Label();
+            this.txtFinalPersonelInjury = new DevExpress.XtraEditors.TextEdit();
+            this.txtFinalComponentDamage = new DevExpress.XtraEditors.TextEdit();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label284 = new System.Windows.Forms.Label();
+            this.label287 = new System.Windows.Forms.Label();
+            this.label282 = new System.Windows.Forms.Label();
+            this.label278 = new System.Windows.Forms.Label();
+            this.label286 = new System.Windows.Forms.Label();
+            this.label281 = new System.Windows.Forms.Label();
+            this.txtFlammablePersonelInjury = new DevExpress.XtraEditors.TextEdit();
+            this.label283 = new System.Windows.Forms.Label();
+            this.txtFlammableComponentDamage = new DevExpress.XtraEditors.TextEdit();
+            this.label280 = new System.Windows.Forms.Label();
+            this.label279 = new System.Windows.Forms.Label();
+            this.label277 = new System.Windows.Forms.Label();
+            this.txtAIT_Blended_CMD_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AINL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AINL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AINL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AINL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AIL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AIL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseRateD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AIL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_INJ_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AIL_D4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_CMD_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AINL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AINL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AINL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AINL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AIL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AIL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseRateD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AIL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_INJ_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AIL_D3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_CMD_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AINL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AINL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AINL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AINL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtB4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AIL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AIL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseRateD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AIL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_INJ_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AIL_D2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtB3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtB2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtA2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_CMD_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AINL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AINL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AINL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AINL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtA4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtB1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtA1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_INJ_AIL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_INJ_AIL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtReleaseRateD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCONT_CMD_AIL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAIT_Blended_INJ_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtBlended_CMD_AIL_D1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtA3 = new DevExpress.XtraEditors.TextEdit();
+            this.label271 = new System.Windows.Forms.Label();
+            this.label276 = new System.Windows.Forms.Label();
+            this.label265 = new System.Windows.Forms.Label();
+            this.label261 = new System.Windows.Forms.Label();
+            this.label264 = new System.Windows.Forms.Label();
+            this.label272 = new System.Windows.Forms.Label();
+            this.label268 = new System.Windows.Forms.Label();
+            this.label270 = new System.Windows.Forms.Label();
+            this.label263 = new System.Windows.Forms.Label();
+            this.label267 = new System.Windows.Forms.Label();
+            this.label260 = new System.Windows.Forms.Label();
+            this.label273 = new System.Windows.Forms.Label();
+            this.label262 = new System.Windows.Forms.Label();
+            this.label266 = new System.Windows.Forms.Label();
+            this.label269 = new System.Windows.Forms.Label();
             this.label230 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label229 = new System.Windows.Forms.Label();
@@ -710,7 +795,64 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeRuptureShell.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeLeakageShell.Properties)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalConsequence.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalPersonelInjury.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalComponentDamage.Properties)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlammablePersonelInjury.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlammableComponentDamage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA3.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD4.Properties)).BeginInit();
@@ -748,7 +890,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(969, 1357);
+            this.groupBox1.Size = new System.Drawing.Size(969, 2000);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Risk Factor";
@@ -759,7 +901,7 @@
             this.tabRisk.Location = new System.Drawing.Point(3, 17);
             this.tabRisk.Name = "tabRisk";
             this.tabRisk.SelectedTabPage = this.tabPoF;
-            this.tabRisk.Size = new System.Drawing.Size(963, 1337);
+            this.tabRisk.Size = new System.Drawing.Size(963, 1980);
             this.tabRisk.TabIndex = 2;
             this.tabRisk.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraSemiPoF,
@@ -770,12 +912,13 @@
             this.tabCATankBottom,
             this.tabCATankShell,
             this.tabCATankRoof});
+            this.tabRisk.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabRisk_SelectedPageChanged);
             // 
             // tabPoF
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 1312);
+            this.tabPoF.Size = new System.Drawing.Size(961, 1955);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -1516,7 +1659,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1312);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1955);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -1777,7 +1920,7 @@
             this.TabArea.Controls.Add(this.groupBoxIV);
             this.TabArea.Controls.Add(this.groupBox3);
             this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(961, 1312);
+            this.TabArea.Size = new System.Drawing.Size(961, 1955);
             this.TabArea.Text = "Area-based CoF";
             // 
             // groupBoxIV
@@ -3145,7 +3288,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(961, 1312);
+            this.tabCA.Size = new System.Drawing.Size(961, 1955);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -3558,7 +3701,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(961, 1312);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 1955);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -3630,7 +3773,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox7.Size = new System.Drawing.Size(961, 1955);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -4298,7 +4441,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1955);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -4310,7 +4453,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox6.Size = new System.Drawing.Size(961, 1955);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -5215,7 +5358,7 @@
             // 
             this.tabCATankShell.Controls.Add(this.groupBox8);
             this.tabCATankShell.Name = "tabCATankShell";
-            this.tabCATankShell.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 1955);
             this.tabCATankShell.Text = "Financial COF";
             // 
             // groupBox8
@@ -5231,13 +5374,14 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox8.Size = new System.Drawing.Size(961, 1955);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
             // 
             // panel7
             // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.tbCostAssociatedPersonInjury);
             this.panel7.Controls.Add(this.tbCostOfBusinessInterruptionShell);
             this.panel7.Controls.Add(this.tbDamageSurroundEquipmentShell);
@@ -5267,7 +5411,7 @@
             this.panel7.Controls.Add(this.label239);
             this.panel7.Controls.Add(this.label238);
             this.panel7.Controls.Add(this.label232);
-            this.panel7.Location = new System.Drawing.Point(11, 935);
+            this.panel7.Location = new System.Drawing.Point(11, 1578);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(943, 371);
             this.panel7.TabIndex = 6;
@@ -5574,16 +5718,23 @@
             this.label232.ForeColor = System.Drawing.Color.White;
             this.label232.Location = new System.Drawing.Point(0, 0);
             this.label232.Name = "label232";
-            this.label232.Size = new System.Drawing.Size(943, 17);
+            this.label232.Size = new System.Drawing.Size(939, 17);
             this.label232.TabIndex = 0;
             this.label232.Text = "▼ Financial Consequence";
             // 
             // panel6
             // 
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label231);
-            this.panel6.Location = new System.Drawing.Point(11, 834);
+            this.panel6.Controls.Add(this.label275);
+            this.panel6.Controls.Add(this.label285);
+            this.panel6.Controls.Add(this.txtFinalConsequence);
+            this.panel6.Controls.Add(this.label274);
+            this.panel6.Controls.Add(this.txtFinalPersonelInjury);
+            this.panel6.Controls.Add(this.txtFinalComponentDamage);
+            this.panel6.Location = new System.Drawing.Point(9, 1449);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(943, 52);
+            this.panel6.Size = new System.Drawing.Size(943, 106);
             this.panel6.TabIndex = 5;
             // 
             // label231
@@ -5593,31 +5744,1014 @@
             this.label231.ForeColor = System.Drawing.Color.White;
             this.label231.Location = new System.Drawing.Point(0, 0);
             this.label231.Name = "label231";
-            this.label231.Size = new System.Drawing.Size(943, 17);
+            this.label231.Size = new System.Drawing.Size(939, 17);
             this.label231.TabIndex = 0;
             this.label231.Text = "▼ Consequences Areas";
             // 
+            // label275
+            // 
+            this.label275.AutoSize = true;
+            this.label275.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label275.Location = new System.Drawing.Point(13, 28);
+            this.label275.Name = "label275";
+            this.label275.Size = new System.Drawing.Size(259, 15);
+            this.label275.TabIndex = 1;
+            this.label275.Text = "Final Component Damage Consequence Area";
+            // 
+            // label285
+            // 
+            this.label285.AutoSize = true;
+            this.label285.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label285.Location = new System.Drawing.Point(16, 78);
+            this.label285.Name = "label285";
+            this.label285.Size = new System.Drawing.Size(113, 15);
+            this.label285.TabIndex = 5;
+            this.label285.Text = "Final Consequence";
+            // 
+            // txtFinalConsequence
+            // 
+            this.txtFinalConsequence.Location = new System.Drawing.Point(342, 75);
+            this.txtFinalConsequence.Name = "txtFinalConsequence";
+            this.txtFinalConsequence.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFinalConsequence.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinalConsequence.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFinalConsequence.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalConsequence.Size = new System.Drawing.Size(100, 22);
+            this.txtFinalConsequence.TabIndex = 6;
+            // 
+            // label274
+            // 
+            this.label274.AutoSize = true;
+            this.label274.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label274.Location = new System.Drawing.Point(13, 52);
+            this.label274.Name = "label274";
+            this.label274.Size = new System.Drawing.Size(222, 15);
+            this.label274.TabIndex = 3;
+            this.label274.Text = "FinalPersonel Injury Consequence Area";
+            // 
+            // txtFinalPersonelInjury
+            // 
+            this.txtFinalPersonelInjury.Location = new System.Drawing.Point(342, 49);
+            this.txtFinalPersonelInjury.Name = "txtFinalPersonelInjury";
+            this.txtFinalPersonelInjury.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFinalPersonelInjury.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinalPersonelInjury.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFinalPersonelInjury.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalPersonelInjury.Size = new System.Drawing.Size(100, 22);
+            this.txtFinalPersonelInjury.TabIndex = 4;
+            // 
+            // txtFinalComponentDamage
+            // 
+            this.txtFinalComponentDamage.Location = new System.Drawing.Point(342, 21);
+            this.txtFinalComponentDamage.Name = "txtFinalComponentDamage";
+            this.txtFinalComponentDamage.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFinalComponentDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinalComponentDamage.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFinalComponentDamage.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalComponentDamage.Size = new System.Drawing.Size(100, 22);
+            this.txtFinalComponentDamage.TabIndex = 2;
+            // 
             // panel5
             // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.label284);
+            this.panel5.Controls.Add(this.label287);
+            this.panel5.Controls.Add(this.label282);
+            this.panel5.Controls.Add(this.label278);
+            this.panel5.Controls.Add(this.label286);
+            this.panel5.Controls.Add(this.label281);
+            this.panel5.Controls.Add(this.txtFlammablePersonelInjury);
+            this.panel5.Controls.Add(this.label283);
+            this.panel5.Controls.Add(this.txtFlammableComponentDamage);
+            this.panel5.Controls.Add(this.label280);
+            this.panel5.Controls.Add(this.label279);
+            this.panel5.Controls.Add(this.label277);
+            this.panel5.Controls.Add(this.txtAIT_Blended_CMD_D4);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AINL_D4);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AINL_D4);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AINL_D4);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AINL_D4);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AIL_D4);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AIL_D4);
+            this.panel5.Controls.Add(this.txtReleaseRateD4);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AIL_D4);
+            this.panel5.Controls.Add(this.txtAIT_Blended_INJ_D4);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AIL_D4);
+            this.panel5.Controls.Add(this.txtAIT_Blended_CMD_D3);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AINL_D3);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AINL_D3);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AINL_D3);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AINL_D3);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AIL_D3);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AIL_D3);
+            this.panel5.Controls.Add(this.txtReleaseRateD3);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AIL_D3);
+            this.panel5.Controls.Add(this.txtAIT_Blended_INJ_D3);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AIL_D3);
+            this.panel5.Controls.Add(this.txtAIT_Blended_CMD_D2);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AINL_D2);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AINL_D2);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AINL_D2);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AINL_D2);
+            this.panel5.Controls.Add(this.txtB4);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AIL_D2);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AIL_D2);
+            this.panel5.Controls.Add(this.txtReleaseRateD2);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AIL_D2);
+            this.panel5.Controls.Add(this.txtAIT_Blended_INJ_D2);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AIL_D2);
+            this.panel5.Controls.Add(this.txtB3);
+            this.panel5.Controls.Add(this.txtB2);
+            this.panel5.Controls.Add(this.txtA2);
+            this.panel5.Controls.Add(this.txtAIT_Blended_CMD_D1);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AINL_D1);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AINL_D1);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AINL_D1);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AINL_D1);
+            this.panel5.Controls.Add(this.txtA4);
+            this.panel5.Controls.Add(this.txtB1);
+            this.panel5.Controls.Add(this.txtA1);
+            this.panel5.Controls.Add(this.txtCONT_INJ_AIL_D1);
+            this.panel5.Controls.Add(this.txtBlended_INJ_AIL_D1);
+            this.panel5.Controls.Add(this.txtReleaseRateD1);
+            this.panel5.Controls.Add(this.txtCONT_CMD_AIL_D1);
+            this.panel5.Controls.Add(this.txtAIT_Blended_INJ_D1);
+            this.panel5.Controls.Add(this.txtBlended_CMD_AIL_D1);
+            this.panel5.Controls.Add(this.txtA3);
+            this.panel5.Controls.Add(this.label271);
+            this.panel5.Controls.Add(this.label276);
+            this.panel5.Controls.Add(this.label265);
+            this.panel5.Controls.Add(this.label261);
+            this.panel5.Controls.Add(this.label264);
+            this.panel5.Controls.Add(this.label272);
+            this.panel5.Controls.Add(this.label268);
+            this.panel5.Controls.Add(this.label270);
+            this.panel5.Controls.Add(this.label263);
+            this.panel5.Controls.Add(this.label267);
+            this.panel5.Controls.Add(this.label260);
+            this.panel5.Controls.Add(this.label273);
+            this.panel5.Controls.Add(this.label262);
+            this.panel5.Controls.Add(this.label266);
+            this.panel5.Controls.Add(this.label269);
             this.panel5.Controls.Add(this.label230);
-            this.panel5.Location = new System.Drawing.Point(11, 761);
+            this.panel5.Location = new System.Drawing.Point(11, 884);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(943, 47);
-            this.panel5.TabIndex = 4;
+            this.panel5.Size = new System.Drawing.Size(943, 559);
+            this.panel5.TabIndex = 2;
+            // 
+            // label284
+            // 
+            this.label284.AutoSize = true;
+            this.label284.Location = new System.Drawing.Point(761, 172);
+            this.label284.Name = "label284";
+            this.label284.Size = new System.Drawing.Size(58, 15);
+            this.label284.TabIndex = 20;
+            this.label284.Text = "Rupture";
+            // 
+            // label287
+            // 
+            this.label287.AutoSize = true;
+            this.label287.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label287.Location = new System.Drawing.Point(28, 507);
+            this.label287.Name = "label287";
+            this.label287.Size = new System.Drawing.Size(295, 15);
+            this.label287.TabIndex = 76;
+            this.label287.Text = "Flammable Component Damage Consequence Area";
+            // 
+            // label282
+            // 
+            this.label282.AutoSize = true;
+            this.label282.Location = new System.Drawing.Point(501, 172);
+            this.label282.Name = "label282";
+            this.label282.Size = new System.Drawing.Size(59, 15);
+            this.label282.TabIndex = 18;
+            this.label282.Text = "Medium";
+            // 
+            // label278
+            // 
+            this.label278.AutoSize = true;
+            this.label278.Location = new System.Drawing.Point(525, 30);
+            this.label278.Name = "label278";
+            this.label278.Size = new System.Drawing.Size(16, 15);
+            this.label278.TabIndex = 3;
+            this.label278.Text = "B";
+            // 
+            // label286
+            // 
+            this.label286.AutoSize = true;
+            this.label286.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label286.Location = new System.Drawing.Point(28, 531);
+            this.label286.Name = "label286";
+            this.label286.Size = new System.Drawing.Size(261, 15);
+            this.label286.TabIndex = 78;
+            this.label286.Text = "Flammable Personel Injury Consequence Area";
+            // 
+            // label281
+            // 
+            this.label281.AutoSize = true;
+            this.label281.Location = new System.Drawing.Point(28, 172);
+            this.label281.Name = "label281";
+            this.label281.Size = new System.Drawing.Size(126, 15);
+            this.label281.TabIndex = 16;
+            this.label281.Text = "Release Hole Size";
+            // 
+            // txtFlammablePersonelInjury
+            // 
+            this.txtFlammablePersonelInjury.Location = new System.Drawing.Point(357, 524);
+            this.txtFlammablePersonelInjury.Name = "txtFlammablePersonelInjury";
+            this.txtFlammablePersonelInjury.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFlammablePersonelInjury.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlammablePersonelInjury.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFlammablePersonelInjury.Properties.Appearance.Options.UseFont = true;
+            this.txtFlammablePersonelInjury.Size = new System.Drawing.Size(100, 22);
+            this.txtFlammablePersonelInjury.TabIndex = 79;
+            // 
+            // label283
+            // 
+            this.label283.AutoSize = true;
+            this.label283.Location = new System.Drawing.Point(642, 172);
+            this.label283.Name = "label283";
+            this.label283.Size = new System.Drawing.Size(44, 15);
+            this.label283.TabIndex = 19;
+            this.label283.Text = "Large";
+            // 
+            // txtFlammableComponentDamage
+            // 
+            this.txtFlammableComponentDamage.Location = new System.Drawing.Point(357, 500);
+            this.txtFlammableComponentDamage.Name = "txtFlammableComponentDamage";
+            this.txtFlammableComponentDamage.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFlammableComponentDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlammableComponentDamage.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFlammableComponentDamage.Properties.Appearance.Options.UseFont = true;
+            this.txtFlammableComponentDamage.Size = new System.Drawing.Size(100, 22);
+            this.txtFlammableComponentDamage.TabIndex = 77;
+            // 
+            // label280
+            // 
+            this.label280.AutoSize = true;
+            this.label280.Location = new System.Drawing.Point(382, 172);
+            this.label280.Name = "label280";
+            this.label280.Size = new System.Drawing.Size(44, 15);
+            this.label280.TabIndex = 17;
+            this.label280.Text = "Small";
+            // 
+            // label279
+            // 
+            this.label279.AutoSize = true;
+            this.label279.Location = new System.Drawing.Point(28, 30);
+            this.label279.Name = "label279";
+            this.label279.Size = new System.Drawing.Size(196, 15);
+            this.label279.TabIndex = 1;
+            this.label279.Text = "Release Equations Constant  ";
+            // 
+            // label277
+            // 
+            this.label277.AutoSize = true;
+            this.label277.Location = new System.Drawing.Point(395, 32);
+            this.label277.Name = "label277";
+            this.label277.Size = new System.Drawing.Size(15, 15);
+            this.label277.TabIndex = 2;
+            this.label277.Text = "A";
+            // 
+            // txtAIT_Blended_CMD_D4
+            // 
+            this.txtAIT_Blended_CMD_D4.Location = new System.Drawing.Point(747, 445);
+            this.txtAIT_Blended_CMD_D4.Name = "txtAIT_Blended_CMD_D4";
+            this.txtAIT_Blended_CMD_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_CMD_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_CMD_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_CMD_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_CMD_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_CMD_D4.TabIndex = 70;
+            // 
+            // txtBlended_CMD_AINL_D4
+            // 
+            this.txtBlended_CMD_AINL_D4.Location = new System.Drawing.Point(747, 332);
+            this.txtBlended_CMD_AINL_D4.Name = "txtBlended_CMD_AINL_D4";
+            this.txtBlended_CMD_AINL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AINL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AINL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AINL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AINL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AINL_D4.TabIndex = 50;
+            // 
+            // txtCONT_CMD_AINL_D4
+            // 
+            this.txtCONT_CMD_AINL_D4.Location = new System.Drawing.Point(747, 220);
+            this.txtCONT_CMD_AINL_D4.Name = "txtCONT_CMD_AINL_D4";
+            this.txtCONT_CMD_AINL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AINL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AINL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AINL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AINL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AINL_D4.TabIndex = 30;
+            // 
+            // txtCONT_INJ_AINL_D4
+            // 
+            this.txtCONT_INJ_AINL_D4.Location = new System.Drawing.Point(747, 276);
+            this.txtCONT_INJ_AINL_D4.Name = "txtCONT_INJ_AINL_D4";
+            this.txtCONT_INJ_AINL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AINL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AINL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AINL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AINL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AINL_D4.TabIndex = 40;
+            // 
+            // txtBlended_INJ_AINL_D4
+            // 
+            this.txtBlended_INJ_AINL_D4.Location = new System.Drawing.Point(747, 388);
+            this.txtBlended_INJ_AINL_D4.Name = "txtBlended_INJ_AINL_D4";
+            this.txtBlended_INJ_AINL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AINL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AINL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AINL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AINL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AINL_D4.TabIndex = 60;
+            // 
+            // txtCONT_INJ_AIL_D4
+            // 
+            this.txtCONT_INJ_AIL_D4.Location = new System.Drawing.Point(747, 304);
+            this.txtCONT_INJ_AIL_D4.Name = "txtCONT_INJ_AIL_D4";
+            this.txtCONT_INJ_AIL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AIL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AIL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AIL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AIL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AIL_D4.TabIndex = 45;
+            // 
+            // txtBlended_INJ_AIL_D4
+            // 
+            this.txtBlended_INJ_AIL_D4.Location = new System.Drawing.Point(747, 416);
+            this.txtBlended_INJ_AIL_D4.Name = "txtBlended_INJ_AIL_D4";
+            this.txtBlended_INJ_AIL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AIL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AIL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AIL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AIL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AIL_D4.TabIndex = 65;
+            // 
+            // txtReleaseRateD4
+            // 
+            this.txtReleaseRateD4.Location = new System.Drawing.Point(747, 192);
+            this.txtReleaseRateD4.Name = "txtReleaseRateD4";
+            this.txtReleaseRateD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseRateD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseRateD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseRateD4.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseRateD4.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseRateD4.TabIndex = 25;
+            // 
+            // txtCONT_CMD_AIL_D4
+            // 
+            this.txtCONT_CMD_AIL_D4.Location = new System.Drawing.Point(747, 248);
+            this.txtCONT_CMD_AIL_D4.Name = "txtCONT_CMD_AIL_D4";
+            this.txtCONT_CMD_AIL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AIL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AIL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AIL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AIL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AIL_D4.TabIndex = 35;
+            // 
+            // txtAIT_Blended_INJ_D4
+            // 
+            this.txtAIT_Blended_INJ_D4.Location = new System.Drawing.Point(747, 473);
+            this.txtAIT_Blended_INJ_D4.Name = "txtAIT_Blended_INJ_D4";
+            this.txtAIT_Blended_INJ_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_INJ_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_INJ_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_INJ_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_INJ_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_INJ_D4.TabIndex = 75;
+            // 
+            // txtBlended_CMD_AIL_D4
+            // 
+            this.txtBlended_CMD_AIL_D4.Location = new System.Drawing.Point(747, 360);
+            this.txtBlended_CMD_AIL_D4.Name = "txtBlended_CMD_AIL_D4";
+            this.txtBlended_CMD_AIL_D4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AIL_D4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AIL_D4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AIL_D4.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AIL_D4.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AIL_D4.TabIndex = 55;
+            // 
+            // txtAIT_Blended_CMD_D3
+            // 
+            this.txtAIT_Blended_CMD_D3.Location = new System.Drawing.Point(612, 445);
+            this.txtAIT_Blended_CMD_D3.Name = "txtAIT_Blended_CMD_D3";
+            this.txtAIT_Blended_CMD_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_CMD_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_CMD_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_CMD_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_CMD_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_CMD_D3.TabIndex = 69;
+            this.txtAIT_Blended_CMD_D3.Tag = "";
+            // 
+            // txtBlended_CMD_AINL_D3
+            // 
+            this.txtBlended_CMD_AINL_D3.Location = new System.Drawing.Point(612, 332);
+            this.txtBlended_CMD_AINL_D3.Name = "txtBlended_CMD_AINL_D3";
+            this.txtBlended_CMD_AINL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AINL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AINL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AINL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AINL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AINL_D3.TabIndex = 49;
+            // 
+            // txtCONT_CMD_AINL_D3
+            // 
+            this.txtCONT_CMD_AINL_D3.Location = new System.Drawing.Point(612, 220);
+            this.txtCONT_CMD_AINL_D3.Name = "txtCONT_CMD_AINL_D3";
+            this.txtCONT_CMD_AINL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AINL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AINL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AINL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AINL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AINL_D3.TabIndex = 29;
+            // 
+            // txtCONT_INJ_AINL_D3
+            // 
+            this.txtCONT_INJ_AINL_D3.Location = new System.Drawing.Point(612, 276);
+            this.txtCONT_INJ_AINL_D3.Name = "txtCONT_INJ_AINL_D3";
+            this.txtCONT_INJ_AINL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AINL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AINL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AINL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AINL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AINL_D3.TabIndex = 39;
+            // 
+            // txtBlended_INJ_AINL_D3
+            // 
+            this.txtBlended_INJ_AINL_D3.Location = new System.Drawing.Point(612, 388);
+            this.txtBlended_INJ_AINL_D3.Name = "txtBlended_INJ_AINL_D3";
+            this.txtBlended_INJ_AINL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AINL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AINL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AINL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AINL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AINL_D3.TabIndex = 59;
+            // 
+            // txtCONT_INJ_AIL_D3
+            // 
+            this.txtCONT_INJ_AIL_D3.Location = new System.Drawing.Point(612, 304);
+            this.txtCONT_INJ_AIL_D3.Name = "txtCONT_INJ_AIL_D3";
+            this.txtCONT_INJ_AIL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AIL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AIL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AIL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AIL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AIL_D3.TabIndex = 44;
+            // 
+            // txtBlended_INJ_AIL_D3
+            // 
+            this.txtBlended_INJ_AIL_D3.Location = new System.Drawing.Point(612, 416);
+            this.txtBlended_INJ_AIL_D3.Name = "txtBlended_INJ_AIL_D3";
+            this.txtBlended_INJ_AIL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AIL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AIL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AIL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AIL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AIL_D3.TabIndex = 64;
+            // 
+            // txtReleaseRateD3
+            // 
+            this.txtReleaseRateD3.Location = new System.Drawing.Point(612, 192);
+            this.txtReleaseRateD3.Name = "txtReleaseRateD3";
+            this.txtReleaseRateD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseRateD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseRateD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseRateD3.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseRateD3.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseRateD3.TabIndex = 24;
+            // 
+            // txtCONT_CMD_AIL_D3
+            // 
+            this.txtCONT_CMD_AIL_D3.Location = new System.Drawing.Point(612, 248);
+            this.txtCONT_CMD_AIL_D3.Name = "txtCONT_CMD_AIL_D3";
+            this.txtCONT_CMD_AIL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AIL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AIL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AIL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AIL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AIL_D3.TabIndex = 34;
+            // 
+            // txtAIT_Blended_INJ_D3
+            // 
+            this.txtAIT_Blended_INJ_D3.Location = new System.Drawing.Point(612, 473);
+            this.txtAIT_Blended_INJ_D3.Name = "txtAIT_Blended_INJ_D3";
+            this.txtAIT_Blended_INJ_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_INJ_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_INJ_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_INJ_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_INJ_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_INJ_D3.TabIndex = 74;
+            // 
+            // txtBlended_CMD_AIL_D3
+            // 
+            this.txtBlended_CMD_AIL_D3.Location = new System.Drawing.Point(612, 360);
+            this.txtBlended_CMD_AIL_D3.Name = "txtBlended_CMD_AIL_D3";
+            this.txtBlended_CMD_AIL_D3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AIL_D3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AIL_D3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AIL_D3.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AIL_D3.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AIL_D3.TabIndex = 54;
+            // 
+            // txtAIT_Blended_CMD_D2
+            // 
+            this.txtAIT_Blended_CMD_D2.Location = new System.Drawing.Point(484, 445);
+            this.txtAIT_Blended_CMD_D2.Name = "txtAIT_Blended_CMD_D2";
+            this.txtAIT_Blended_CMD_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_CMD_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_CMD_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_CMD_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_CMD_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_CMD_D2.TabIndex = 68;
+            // 
+            // txtBlended_CMD_AINL_D2
+            // 
+            this.txtBlended_CMD_AINL_D2.Location = new System.Drawing.Point(484, 332);
+            this.txtBlended_CMD_AINL_D2.Name = "txtBlended_CMD_AINL_D2";
+            this.txtBlended_CMD_AINL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AINL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AINL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AINL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AINL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AINL_D2.TabIndex = 48;
+            // 
+            // txtCONT_CMD_AINL_D2
+            // 
+            this.txtCONT_CMD_AINL_D2.Location = new System.Drawing.Point(484, 220);
+            this.txtCONT_CMD_AINL_D2.Name = "txtCONT_CMD_AINL_D2";
+            this.txtCONT_CMD_AINL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AINL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AINL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AINL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AINL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AINL_D2.TabIndex = 28;
+            // 
+            // txtCONT_INJ_AINL_D2
+            // 
+            this.txtCONT_INJ_AINL_D2.Location = new System.Drawing.Point(484, 276);
+            this.txtCONT_INJ_AINL_D2.Name = "txtCONT_INJ_AINL_D2";
+            this.txtCONT_INJ_AINL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AINL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AINL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AINL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AINL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AINL_D2.TabIndex = 38;
+            // 
+            // txtBlended_INJ_AINL_D2
+            // 
+            this.txtBlended_INJ_AINL_D2.Location = new System.Drawing.Point(484, 388);
+            this.txtBlended_INJ_AINL_D2.Name = "txtBlended_INJ_AINL_D2";
+            this.txtBlended_INJ_AINL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AINL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AINL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AINL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AINL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AINL_D2.TabIndex = 58;
+            // 
+            // txtB4
+            // 
+            this.txtB4.Location = new System.Drawing.Point(484, 134);
+            this.txtB4.Name = "txtB4";
+            this.txtB4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtB4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtB4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtB4.Properties.Appearance.Options.UseFont = true;
+            this.txtB4.Size = new System.Drawing.Size(100, 22);
+            this.txtB4.TabIndex = 15;
+            // 
+            // txtCONT_INJ_AIL_D2
+            // 
+            this.txtCONT_INJ_AIL_D2.Location = new System.Drawing.Point(484, 304);
+            this.txtCONT_INJ_AIL_D2.Name = "txtCONT_INJ_AIL_D2";
+            this.txtCONT_INJ_AIL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AIL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AIL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AIL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AIL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AIL_D2.TabIndex = 43;
+            // 
+            // txtBlended_INJ_AIL_D2
+            // 
+            this.txtBlended_INJ_AIL_D2.Location = new System.Drawing.Point(484, 416);
+            this.txtBlended_INJ_AIL_D2.Name = "txtBlended_INJ_AIL_D2";
+            this.txtBlended_INJ_AIL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AIL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AIL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AIL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AIL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AIL_D2.TabIndex = 63;
+            // 
+            // txtReleaseRateD2
+            // 
+            this.txtReleaseRateD2.Location = new System.Drawing.Point(484, 192);
+            this.txtReleaseRateD2.Name = "txtReleaseRateD2";
+            this.txtReleaseRateD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseRateD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseRateD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseRateD2.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseRateD2.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseRateD2.TabIndex = 23;
+            // 
+            // txtCONT_CMD_AIL_D2
+            // 
+            this.txtCONT_CMD_AIL_D2.Location = new System.Drawing.Point(484, 248);
+            this.txtCONT_CMD_AIL_D2.Name = "txtCONT_CMD_AIL_D2";
+            this.txtCONT_CMD_AIL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AIL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AIL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AIL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AIL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AIL_D2.TabIndex = 33;
+            // 
+            // txtAIT_Blended_INJ_D2
+            // 
+            this.txtAIT_Blended_INJ_D2.Location = new System.Drawing.Point(484, 473);
+            this.txtAIT_Blended_INJ_D2.Name = "txtAIT_Blended_INJ_D2";
+            this.txtAIT_Blended_INJ_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_INJ_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_INJ_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_INJ_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_INJ_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_INJ_D2.TabIndex = 73;
+            // 
+            // txtBlended_CMD_AIL_D2
+            // 
+            this.txtBlended_CMD_AIL_D2.Location = new System.Drawing.Point(484, 360);
+            this.txtBlended_CMD_AIL_D2.Name = "txtBlended_CMD_AIL_D2";
+            this.txtBlended_CMD_AIL_D2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AIL_D2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AIL_D2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AIL_D2.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AIL_D2.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AIL_D2.TabIndex = 53;
+            // 
+            // txtB3
+            // 
+            this.txtB3.Location = new System.Drawing.Point(484, 106);
+            this.txtB3.Name = "txtB3";
+            this.txtB3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtB3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtB3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtB3.Properties.Appearance.Options.UseFont = true;
+            this.txtB3.Size = new System.Drawing.Size(100, 22);
+            this.txtB3.TabIndex = 12;
+            // 
+            // txtB2
+            // 
+            this.txtB2.Location = new System.Drawing.Point(484, 78);
+            this.txtB2.Name = "txtB2";
+            this.txtB2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtB2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtB2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtB2.Properties.Appearance.Options.UseFont = true;
+            this.txtB2.Size = new System.Drawing.Size(100, 22);
+            this.txtB2.TabIndex = 9;
+            // 
+            // txtA2
+            // 
+            this.txtA2.Location = new System.Drawing.Point(357, 78);
+            this.txtA2.Name = "txtA2";
+            this.txtA2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtA2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtA2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtA2.Properties.Appearance.Options.UseFont = true;
+            this.txtA2.Size = new System.Drawing.Size(100, 22);
+            this.txtA2.TabIndex = 8;
+            // 
+            // txtAIT_Blended_CMD_D1
+            // 
+            this.txtAIT_Blended_CMD_D1.Location = new System.Drawing.Point(357, 445);
+            this.txtAIT_Blended_CMD_D1.Name = "txtAIT_Blended_CMD_D1";
+            this.txtAIT_Blended_CMD_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_CMD_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_CMD_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_CMD_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_CMD_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_CMD_D1.TabIndex = 67;
+            this.txtAIT_Blended_CMD_D1.Tag = "";
+            // 
+            // txtBlended_CMD_AINL_D1
+            // 
+            this.txtBlended_CMD_AINL_D1.Location = new System.Drawing.Point(357, 332);
+            this.txtBlended_CMD_AINL_D1.Name = "txtBlended_CMD_AINL_D1";
+            this.txtBlended_CMD_AINL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AINL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AINL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AINL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AINL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AINL_D1.TabIndex = 47;
+            // 
+            // txtCONT_CMD_AINL_D1
+            // 
+            this.txtCONT_CMD_AINL_D1.Location = new System.Drawing.Point(357, 220);
+            this.txtCONT_CMD_AINL_D1.Name = "txtCONT_CMD_AINL_D1";
+            this.txtCONT_CMD_AINL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AINL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AINL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AINL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AINL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AINL_D1.TabIndex = 27;
+            // 
+            // txtCONT_INJ_AINL_D1
+            // 
+            this.txtCONT_INJ_AINL_D1.Location = new System.Drawing.Point(357, 276);
+            this.txtCONT_INJ_AINL_D1.Name = "txtCONT_INJ_AINL_D1";
+            this.txtCONT_INJ_AINL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AINL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AINL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AINL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AINL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AINL_D1.TabIndex = 37;
+            // 
+            // txtBlended_INJ_AINL_D1
+            // 
+            this.txtBlended_INJ_AINL_D1.Location = new System.Drawing.Point(357, 388);
+            this.txtBlended_INJ_AINL_D1.Name = "txtBlended_INJ_AINL_D1";
+            this.txtBlended_INJ_AINL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AINL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AINL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AINL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AINL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AINL_D1.TabIndex = 57;
+            // 
+            // txtA4
+            // 
+            this.txtA4.Location = new System.Drawing.Point(357, 134);
+            this.txtA4.Name = "txtA4";
+            this.txtA4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtA4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtA4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtA4.Properties.Appearance.Options.UseFont = true;
+            this.txtA4.Size = new System.Drawing.Size(100, 22);
+            this.txtA4.TabIndex = 14;
+            // 
+            // txtB1
+            // 
+            this.txtB1.Location = new System.Drawing.Point(484, 50);
+            this.txtB1.Name = "txtB1";
+            this.txtB1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtB1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtB1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtB1.Properties.Appearance.Options.UseFont = true;
+            this.txtB1.Size = new System.Drawing.Size(100, 22);
+            this.txtB1.TabIndex = 6;
+            // 
+            // txtA1
+            // 
+            this.txtA1.Location = new System.Drawing.Point(357, 50);
+            this.txtA1.Name = "txtA1";
+            this.txtA1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtA1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtA1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtA1.Properties.Appearance.Options.UseFont = true;
+            this.txtA1.Size = new System.Drawing.Size(100, 22);
+            this.txtA1.TabIndex = 5;
+            // 
+            // txtCONT_INJ_AIL_D1
+            // 
+            this.txtCONT_INJ_AIL_D1.Location = new System.Drawing.Point(357, 304);
+            this.txtCONT_INJ_AIL_D1.Name = "txtCONT_INJ_AIL_D1";
+            this.txtCONT_INJ_AIL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_INJ_AIL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_INJ_AIL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_INJ_AIL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_INJ_AIL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_INJ_AIL_D1.TabIndex = 42;
+            // 
+            // txtBlended_INJ_AIL_D1
+            // 
+            this.txtBlended_INJ_AIL_D1.Location = new System.Drawing.Point(357, 416);
+            this.txtBlended_INJ_AIL_D1.Name = "txtBlended_INJ_AIL_D1";
+            this.txtBlended_INJ_AIL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_INJ_AIL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_INJ_AIL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_INJ_AIL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_INJ_AIL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_INJ_AIL_D1.TabIndex = 62;
+            // 
+            // txtReleaseRateD1
+            // 
+            this.txtReleaseRateD1.Location = new System.Drawing.Point(357, 192);
+            this.txtReleaseRateD1.Name = "txtReleaseRateD1";
+            this.txtReleaseRateD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReleaseRateD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleaseRateD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtReleaseRateD1.Properties.Appearance.Options.UseFont = true;
+            this.txtReleaseRateD1.Size = new System.Drawing.Size(100, 22);
+            this.txtReleaseRateD1.TabIndex = 22;
+            // 
+            // txtCONT_CMD_AIL_D1
+            // 
+            this.txtCONT_CMD_AIL_D1.Location = new System.Drawing.Point(357, 248);
+            this.txtCONT_CMD_AIL_D1.Name = "txtCONT_CMD_AIL_D1";
+            this.txtCONT_CMD_AIL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCONT_CMD_AIL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CMD_AIL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCONT_CMD_AIL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtCONT_CMD_AIL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtCONT_CMD_AIL_D1.TabIndex = 32;
+            // 
+            // txtAIT_Blended_INJ_D1
+            // 
+            this.txtAIT_Blended_INJ_D1.Location = new System.Drawing.Point(357, 473);
+            this.txtAIT_Blended_INJ_D1.Name = "txtAIT_Blended_INJ_D1";
+            this.txtAIT_Blended_INJ_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAIT_Blended_INJ_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT_Blended_INJ_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAIT_Blended_INJ_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtAIT_Blended_INJ_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtAIT_Blended_INJ_D1.TabIndex = 72;
+            // 
+            // txtBlended_CMD_AIL_D1
+            // 
+            this.txtBlended_CMD_AIL_D1.Location = new System.Drawing.Point(357, 360);
+            this.txtBlended_CMD_AIL_D1.Name = "txtBlended_CMD_AIL_D1";
+            this.txtBlended_CMD_AIL_D1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtBlended_CMD_AIL_D1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlended_CMD_AIL_D1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtBlended_CMD_AIL_D1.Properties.Appearance.Options.UseFont = true;
+            this.txtBlended_CMD_AIL_D1.Size = new System.Drawing.Size(100, 22);
+            this.txtBlended_CMD_AIL_D1.TabIndex = 52;
+            // 
+            // txtA3
+            // 
+            this.txtA3.Location = new System.Drawing.Point(357, 106);
+            this.txtA3.Name = "txtA3";
+            this.txtA3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtA3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtA3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtA3.Properties.Appearance.Options.UseFont = true;
+            this.txtA3.Size = new System.Drawing.Size(100, 22);
+            this.txtA3.TabIndex = 11;
+            // 
+            // label271
+            // 
+            this.label271.AutoSize = true;
+            this.label271.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label271.Location = new System.Drawing.Point(28, 85);
+            this.label271.Name = "label271";
+            this.label271.Size = new System.Drawing.Size(223, 15);
+            this.label271.TabIndex = 7;
+            this.label271.Text = "Continous Release - Auto-Ignition Likely";
+            // 
+            // label276
+            // 
+            this.label276.AutoSize = true;
+            this.label276.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label276.Location = new System.Drawing.Point(28, 452);
+            this.label276.Name = "label276";
+            this.label276.Size = new System.Drawing.Size(155, 15);
+            this.label276.TabIndex = 66;
+            this.label276.Text = "AIT Blended-CMD CA(m^2)";
+            // 
+            // label265
+            // 
+            this.label265.AutoSize = true;
+            this.label265.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label265.Location = new System.Drawing.Point(28, 339);
+            this.label265.Name = "label265";
+            this.label265.Size = new System.Drawing.Size(165, 15);
+            this.label265.TabIndex = 46;
+            this.label265.Text = "Blended-CMD-AINL CA(m^2)";
+            // 
+            // label261
+            // 
+            this.label261.AutoSize = true;
+            this.label261.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label261.Location = new System.Drawing.Point(28, 227);
+            this.label261.Name = "label261";
+            this.label261.Size = new System.Drawing.Size(152, 15);
+            this.label261.TabIndex = 26;
+            this.label261.Text = "CONT-CMD-AINL CA(m^2)";
+            // 
+            // label264
+            // 
+            this.label264.AutoSize = true;
+            this.label264.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label264.Location = new System.Drawing.Point(28, 283);
+            this.label264.Name = "label264";
+            this.label264.Size = new System.Drawing.Size(142, 15);
+            this.label264.TabIndex = 36;
+            this.label264.Text = "CONT-INJ-AINL CA(m^2)";
+            // 
+            // label272
+            // 
+            this.label272.AutoSize = true;
+            this.label272.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label272.Location = new System.Drawing.Point(28, 395);
+            this.label272.Name = "label272";
+            this.label272.Size = new System.Drawing.Size(155, 15);
+            this.label272.TabIndex = 56;
+            this.label272.Text = "Blended-INJ-AINL CA(m^2)";
+            // 
+            // label268
+            // 
+            this.label268.AutoSize = true;
+            this.label268.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label268.Location = new System.Drawing.Point(28, 141);
+            this.label268.Name = "label268";
+            this.label268.Size = new System.Drawing.Size(245, 15);
+            this.label268.TabIndex = 13;
+            this.label268.Text = "Instantaneous Release - Auto-Ignition Likely";
+            // 
+            // label270
+            // 
+            this.label270.AutoSize = true;
+            this.label270.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label270.Location = new System.Drawing.Point(28, 57);
+            this.label270.Name = "label270";
+            this.label270.Size = new System.Drawing.Size(245, 15);
+            this.label270.TabIndex = 4;
+            this.label270.Text = "Continous Release - Auto-Ignition Not Likely";
+            // 
+            // label263
+            // 
+            this.label263.AutoSize = true;
+            this.label263.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label263.Location = new System.Drawing.Point(28, 311);
+            this.label263.Name = "label263";
+            this.label263.Size = new System.Drawing.Size(133, 15);
+            this.label263.TabIndex = 41;
+            this.label263.Text = "CONT-INJ-AIL CA(m^2)";
+            // 
+            // label267
+            // 
+            this.label267.AutoSize = true;
+            this.label267.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label267.Location = new System.Drawing.Point(28, 423);
+            this.label267.Name = "label267";
+            this.label267.Size = new System.Drawing.Size(146, 15);
+            this.label267.TabIndex = 61;
+            this.label267.Text = "Blended-INJ-AIL CA(m^2)";
+            // 
+            // label260
+            // 
+            this.label260.AutoSize = true;
+            this.label260.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label260.Location = new System.Drawing.Point(28, 199);
+            this.label260.Name = "label260";
+            this.label260.Size = new System.Drawing.Size(112, 15);
+            this.label260.TabIndex = 21;
+            this.label260.Text = "Release rate (Kg/s)";
+            // 
+            // label273
+            // 
+            this.label273.AutoSize = true;
+            this.label273.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label273.Location = new System.Drawing.Point(28, 480);
+            this.label273.Name = "label273";
+            this.label273.Size = new System.Drawing.Size(145, 15);
+            this.label273.TabIndex = 71;
+            this.label273.Text = "AIT Blended-INJ CA(m^2)";
+            // 
+            // label262
+            // 
+            this.label262.AutoSize = true;
+            this.label262.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label262.Location = new System.Drawing.Point(28, 255);
+            this.label262.Name = "label262";
+            this.label262.Size = new System.Drawing.Size(143, 15);
+            this.label262.TabIndex = 31;
+            this.label262.Text = "CONT-CMD-AIL CA(m^2)";
+            // 
+            // label266
+            // 
+            this.label266.AutoSize = true;
+            this.label266.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label266.Location = new System.Drawing.Point(28, 367);
+            this.label266.Name = "label266";
+            this.label266.Size = new System.Drawing.Size(156, 15);
+            this.label266.TabIndex = 51;
+            this.label266.Text = "Blended-CMD-AIL CA(m^2)";
+            // 
+            // label269
+            // 
+            this.label269.AutoSize = true;
+            this.label269.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label269.Location = new System.Drawing.Point(28, 113);
+            this.label269.Name = "label269";
+            this.label269.Size = new System.Drawing.Size(267, 15);
+            this.label269.TabIndex = 10;
+            this.label269.Text = "Instantaneous Release - Auto-Ignition Not Likely";
             // 
             // label230
             // 
             this.label230.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label230.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label230.Dock = System.Windows.Forms.DockStyle.Top;
             this.label230.ForeColor = System.Drawing.Color.White;
             this.label230.Location = new System.Drawing.Point(0, 0);
             this.label230.Name = "label230";
-            this.label230.Size = new System.Drawing.Size(943, 17);
+            this.label230.Size = new System.Drawing.Size(939, 17);
             this.label230.TabIndex = 0;
-            this.label230.Text = "▼ Toxic Consequences Area";
+            this.label230.Text = "▼ Flammable Consequences ";
             // 
             // panel4
             // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.label229);
             this.panel4.Location = new System.Drawing.Point(11, 623);
             this.panel4.Name = "panel4";
@@ -5631,9 +6765,9 @@
             this.label229.ForeColor = System.Drawing.Color.White;
             this.label229.Location = new System.Drawing.Point(0, 0);
             this.label229.Name = "label229";
-            this.label229.Size = new System.Drawing.Size(943, 17);
+            this.label229.Size = new System.Drawing.Size(939, 17);
             this.label229.TabIndex = 0;
-            this.label229.Text = "▼ Flammable Consequences";
+            this.label229.Text = "▼ Toxic Consequences Area";
             // 
             // panel3
             // 
@@ -6378,7 +7512,7 @@
             // 
             this.tabCATankRoof.Controls.Add(this.groupBox9);
             this.tabCATankRoof.Name = "tabCATankRoof";
-            this.tabCATankRoof.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankRoof.Size = new System.Drawing.Size(961, 1955);
             this.tabCATankRoof.Text = "Financial COF";
             // 
             // groupBox9
@@ -6389,7 +7523,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox9.Size = new System.Drawing.Size(961, 1955);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -6704,7 +7838,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UCRiskFactor";
-            this.Size = new System.Drawing.Size(969, 1357);
+            this.Size = new System.Drawing.Size(969, 2000);
             this.Load += new System.EventHandler(this.UCRiskFactor_Load_1);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabRisk)).EndInit();
@@ -6842,7 +7976,66 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeRuptureShell.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeLeakageShell.Properties)).EndInit();
             this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalConsequence.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalPersonelInjury.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalComponentDamage.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlammablePersonelInjury.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFlammableComponentDamage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_CMD_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AINL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AINL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AINL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AINL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_INJ_AIL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_INJ_AIL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtReleaseRateD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCONT_CMD_AIL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAIT_Blended_INJ_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtA3.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -7445,5 +8638,90 @@
         private System.Windows.Forms.TextBox txtPrrodCostRoof;
         private System.Windows.Forms.Label label258;
         private System.Windows.Forms.Label label259;
+        private DevExpress.XtraEditors.TextEdit txtB4;
+        private DevExpress.XtraEditors.TextEdit txtB3;
+        private DevExpress.XtraEditors.TextEdit txtA2;
+        private DevExpress.XtraEditors.TextEdit txtA4;
+        private DevExpress.XtraEditors.TextEdit txtA1;
+        private DevExpress.XtraEditors.TextEdit txtA3;
+        private System.Windows.Forms.Label label271;
+        private System.Windows.Forms.Label label268;
+        private System.Windows.Forms.Label label270;
+        private System.Windows.Forms.Label label269;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_CMD_D4;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AINL_D4;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AINL_D4;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AINL_D4;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AINL_D4;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AIL_D4;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AIL_D4;
+        private DevExpress.XtraEditors.TextEdit txtReleaseRateD4;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AIL_D4;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_INJ_D4;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AIL_D4;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_CMD_D3;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AINL_D3;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AINL_D3;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AINL_D3;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AINL_D3;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AIL_D3;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AIL_D3;
+        private DevExpress.XtraEditors.TextEdit txtReleaseRateD3;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AIL_D3;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_INJ_D3;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AIL_D3;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_CMD_D2;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AINL_D2;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AINL_D2;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AINL_D2;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AINL_D2;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AIL_D2;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AIL_D2;
+        private DevExpress.XtraEditors.TextEdit txtReleaseRateD2;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AIL_D2;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_INJ_D2;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AIL_D2;
+        private DevExpress.XtraEditors.TextEdit txtB2;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_CMD_D1;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AINL_D1;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AINL_D1;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AINL_D1;
+        private DevExpress.XtraEditors.TextEdit txtFinalComponentDamage;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AINL_D1;
+        private DevExpress.XtraEditors.TextEdit txtB1;
+        private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AIL_D1;
+        private DevExpress.XtraEditors.TextEdit txtFinalPersonelInjury;
+        private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AIL_D1;
+        private DevExpress.XtraEditors.TextEdit txtReleaseRateD1;
+        private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AIL_D1;
+        private DevExpress.XtraEditors.TextEdit txtAIT_Blended_INJ_D1;
+        private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AIL_D1;
+        private System.Windows.Forms.Label label276;
+        private System.Windows.Forms.Label label265;
+        private System.Windows.Forms.Label label261;
+        private System.Windows.Forms.Label label275;
+        private System.Windows.Forms.Label label264;
+        private System.Windows.Forms.Label label272;
+        private System.Windows.Forms.Label label274;
+        private System.Windows.Forms.Label label263;
+        private System.Windows.Forms.Label label267;
+        private System.Windows.Forms.Label label260;
+        private System.Windows.Forms.Label label273;
+        private System.Windows.Forms.Label label262;
+        private System.Windows.Forms.Label label266;
+        private System.Windows.Forms.Label label284;
+        private System.Windows.Forms.Label label282;
+        private System.Windows.Forms.Label label278;
+        private System.Windows.Forms.Label label281;
+        private System.Windows.Forms.Label label283;
+        private System.Windows.Forms.Label label280;
+        private System.Windows.Forms.Label label279;
+        private System.Windows.Forms.Label label277;
+        private System.Windows.Forms.Label label285;
+        private DevExpress.XtraEditors.TextEdit txtFinalConsequence;
+        private System.Windows.Forms.Label label287;
+        private System.Windows.Forms.Label label286;
+        private DevExpress.XtraEditors.TextEdit txtFlammablePersonelInjury;
+        private DevExpress.XtraEditors.TextEdit txtFlammableComponentDamage;
     }
 }

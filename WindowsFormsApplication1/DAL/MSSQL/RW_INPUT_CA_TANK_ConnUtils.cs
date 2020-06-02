@@ -157,7 +157,7 @@ namespace RBI.DAL.MSSQL
                             obj.FLUID_HEIGHT = (float)reader.GetDouble(0);
                             obj.SHELL_COURSE_HEIGHT = (float)reader.GetDouble(1);
                             obj.TANK_DIAMETTER = (float)reader.GetDouble(2);
-                            obj.Prevention_Barrier = reader.GetInt32(3);
+                            obj.Prevention_Barrier = reader.GetBoolean(3)?1:0;
                             obj.Environ_Sensitivity = reader.GetString(4);
                             obj.P_lvdike = (float)reader.GetDouble(5);
                             obj.P_onsite = (float)reader.GetDouble(6);
@@ -172,8 +172,8 @@ namespace RBI.DAL.MSSQL
             }
             catch
             {
-                obj.ID = 0;
-                //MessageBox.Show("GET DATA FAIL!", "ERROR!");
+                //obj.ID = 0;
+                MessageBox.Show("GET DATA FAIL!", "ERROR!");
             }
             finally
             {
