@@ -136,10 +136,10 @@ namespace RBI.DAL.MSSQL
                         {
                             obj.ID = ID;
                             obj.Mitigation = reader.GetString(1);
-                            obj.DetectionType = reader.GetString(1);
-                            obj.IsolationType = reader.GetString(2);
-                            obj.mass_comp = (float)reader.GetDouble(3);
-                            obj.mass_inv = (float)reader.GetDouble(4);
+                            obj.DetectionType = reader.GetString(2);
+                            obj.IsolationType = reader.GetString(3);
+                            obj.mass_comp = (float)reader.GetDouble(4);
+                            obj.mass_inv = (float)reader.GetDouble(5);
                         }
                     }
                 }

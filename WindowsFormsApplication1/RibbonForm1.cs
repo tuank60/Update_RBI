@@ -2364,7 +2364,8 @@ namespace RBI
             RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
             RW_FULL_COF_FLUID rwfcf = new RW_FULL_COF_FLUID();
             API_COMPONENT_TYPE apt = new API_COMPONENT_TYPE();
-            RW_FULL_COF_INPUT fullcofinput = new RW_FULL_COF_INPUT();
+            RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
+            RW_FULL_COF_INPUT fullcofinput = busfcip.getData(IDProposal);
             CA_CAL.FLUID = st.TankFluidName;
             CA_CAL.FLUID_PHASE = st.StoragePhase;
             CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
@@ -2423,14 +2424,6 @@ namespace RBI
             //Console.WriteLine("mass_add3= " + rwfholesize.mass_add_3);
             rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
             //Console.WriteLine("mass_add4= " + rwfholesize.mass_add_4);
-            rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
-            //Console.WriteLine("mass_avail1= " + rwfholesize.mass_avail_1);
-            rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
-            //Console.WriteLine("mass_avail2= " + rwfholesize.mass_avail_2);
-            rwfholesize.mass_avail_1 = CA_CAL.mass_availn(3);
-            //Console.WriteLine("mass_avail3= " + rwfholesize.mass_avail_3);
-            rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
-            //Console.WriteLine("mass_avail4= " + rwfholesize.mass_avail_4);
 
             //Mass Available
             rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
@@ -2454,21 +2447,63 @@ namespace RBI
 
             //Release Type
             rwfholesize.ReleaseType_1 = CA_CAL.releaseType(1);
-            Console.WriteLine("release type 1= " + rwfholesize.ReleaseType_1);
+            //Console.WriteLine("release type 1= " + rwfholesize.ReleaseType_1);
             rwfholesize.ReleaseType_2 = CA_CAL.releaseType(2);
-            Console.WriteLine("release type 2= " + rwfholesize.ReleaseType_2);
+            //Console.WriteLine("release type 2= " + rwfholesize.ReleaseType_2);
             rwfholesize.ReleaseType_3 = CA_CAL.releaseType(3);
-            Console.WriteLine("release type 3= " + rwfholesize.ReleaseType_3);
+            //Console.WriteLine("release type 3= " + rwfholesize.ReleaseType_3);
             rwfholesize.ReleaseType_4 = CA_CAL.releaseType(4);
-            Console.WriteLine("release type 4= " + rwfholesize.ReleaseType_4);
+            //Console.WriteLine("release type 4= " + rwfholesize.ReleaseType_4);
 
             //Max Leak Duration
             CA_CAL.DETECTION_TYPE = fullcofinput.DetectionType;
             //fullcofinput.DetectionType=CA_CAL.convertdetectionclass();
-            Console.WriteLine("detection type = " +fullcofinput.DetectionType);
+            //Console.WriteLine("detection type = " +fullcofinput.DetectionType);
             CA_CAL.ISULATION_TYPE = fullcofinput.IsolationType;
+            //Console.WriteLine("isolation type = " + fullcofinput.IsolationType);
+            //Console.WriteLine("mass_comp= " + fullcofinput.mass_comp);
+            //Console.WriteLine("mass_invertory= " + fullcofinput.mass_inv);
 
-            if(hsbus.checkExistCoFHS(rwfholesize.ID))
+            rwfcf.fact_di = CA_CAL.fact_di();
+            //Console.WriteLine("fact_di = " + rwfcf.fact_di);
+            rwfholesize.ld_max_1 = CA_CAL.ld_n_max(1);
+            //Console.WriteLine("ldlmax1= " + rwfholesize.ld_max_1);
+            rwfholesize.ld_max_2 = CA_CAL.ld_n_max(2);
+            //Console.WriteLine("ldlmax2= " + rwfholesize.ld_max_2);
+            rwfholesize.ld_max_3 = CA_CAL.ld_n_max(3);
+            //Console.WriteLine("ldlmax3= " + rwfholesize.ld_max_3);
+            rwfholesize.ld_max_4 = CA_CAL.ld_n_max(4);
+            //Console.WriteLine("ldlmax4= " + rwfholesize.ld_max_4);
+
+            rwfholesize.rate_1 = CA_CAL.rate_n(1);
+            //Console.WriteLine("rate_1= " + rwfholesize.rate_1);
+            rwfholesize.rate_2 = CA_CAL.rate_n(2);
+            //Console.WriteLine("rate_2= " + rwfholesize.rate_2);
+            rwfholesize.rate_3 = CA_CAL.rate_n(3);
+            //Console.WriteLine("rate_3= " + rwfholesize.rate_3);
+            rwfholesize.rate_4 = CA_CAL.rate_n(4);
+            //Console.WriteLine("rate_4= " + rwfholesize.rate_4);
+
+            rwfholesize.ld_1 = CA_CAL.ld_n(1);
+            Console.WriteLine("ld 1= " + rwfholesize.ld_1);
+            rwfholesize.ld_2 = CA_CAL.ld_n(2);
+            Console.WriteLine("ld 2= " + rwfholesize.ld_2);
+            rwfholesize.ld_3 = CA_CAL.ld_n(3);
+            Console.WriteLine("ld 3= " + rwfholesize.ld_3);
+            rwfholesize.ld_4 = CA_CAL.ld_n(4);
+            Console.WriteLine("ld 4= " + rwfholesize.ld_4);
+
+            rwfholesize.mass_1 = CA_CAL.mass_n(1);
+            Console.WriteLine("mass_1= " + rwfholesize.mass_1);
+            rwfholesize.mass_2 = CA_CAL.mass_n(2);
+            Console.WriteLine("mass_2= " + rwfholesize.mass_2);
+            rwfholesize.mass_3 = CA_CAL.mass_n(3);
+            Console.WriteLine("mass_3= " + rwfholesize.mass_3);
+            rwfholesize.mass_4 = CA_CAL.mass_n(4);
+            Console.WriteLine("mass_4= " + rwfholesize.mass_4);
+
+
+            if (hsbus.checkExistCoFHS(rwfholesize.ID))
                 hsbus.edit(rwfholesize);
             else
                 hsbus.add(rwfholesize);

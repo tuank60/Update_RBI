@@ -168,10 +168,15 @@ namespace RBI.PRE.subForm.OutputDataForm
             textBox56.Text = obj.mass_4.ToString();
 
         }
+        public void initinput()
+        {
+
+        }
         public void initCAP()
         {
 
         }
+        
         public void riskCA(int ID)
         {
             RW_FULL_FCOF_BUS fullPoFBus = new RW_FULL_FCOF_BUS();
@@ -565,6 +570,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             panelCAP.Height = 21;
             panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
             panelRHP.Height = 21;
+            //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+            //panelFCA.Height = 21;
         }
 
         private void lblInput_Click(object sender, EventArgs e)
@@ -577,6 +584,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
             else if (lblInput.Text == "▶ Input")
             {
@@ -586,6 +594,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
         }
 
@@ -598,6 +607,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
             else if (lblFQF.Text == "▶ Fully-Quantitive Financial Consequence of Failture and Category")
             {
@@ -606,6 +616,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
         }
 
@@ -617,6 +628,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lbllnfinput.Text = "▶ Influencing Inputs";
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
             else if (lbllnfinput.Text == "▶ Influencing Inputs")
             {
@@ -624,6 +636,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lbllnfinput.Text = "▼ Influencing Inputs";
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
         }
 
@@ -634,12 +647,14 @@ namespace RBI.PRE.subForm.OutputDataForm
                 panelCAP.Height = 368;
                 lblCAP.Text = "▶ Consequence Analysis Properties";
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
             else if (lblCAP.Text == "▶ Consequence Analysis Properties")
             {
                 panelCAP.Height = 21;
                 lblCAP.Text = "▼ Influencing Inputs";
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
         }
 
@@ -649,11 +664,26 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 panelRHP.Height = 342;
                 lblRHP.Text = "▶ Release Holes Properties";
+                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
             else if (lblRHP.Text == "▶ Release Holes Properties")
             {
                 panelRHP.Height = 21;
                 lblRHP.Text = "▼ Release Holes Properties";
+                //panelFCA.Top = panelFCA.Top + panelFCA.Height + 13;
+            }
+        }
+        private void lblFCA_Click(object sender, EventArgs e)
+        {
+            if (lblFCA.Text == "▼ Flammable Consequence Area")
+            {
+                panelFCA.Height = 342;
+                lblFCA.Text = "▶ Flammable Consequence Area";
+            }
+            else if (lblFCA.Text == "▶ Flammable Consequence Area")
+            {
+                panelFCA.Height = 21;
+                lblFCA.Text = "▼ Flammable Consequence Area";
             }
         }
 
@@ -930,5 +960,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             }
               //  MessageBox.Show("shfgsdhfgsd");
         }
+
+        
     }
 }

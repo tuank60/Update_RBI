@@ -224,13 +224,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
             k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
             //Console.WriteLine("k= " + k);
             p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 5);
-            Console.WriteLine("PS= " + p_trans);
+            //Console.WriteLine("PS= " + p_trans);
             if ((STORED_TEMP == 0) || (STORED_PRESSURE == 0)){
                 W_n = 0;
                 return W_n;
             }
-            Console.WriteLine("release phase la " + RELEASE_PHASE);
-            Console.WriteLine("liquid density la " + data[1]);
+            //Console.WriteLine("release phase la " + RELEASE_PHASE);
+            //Console.WriteLine("liquid density la " + data[1]);
             if (RELEASE_PHASE != "Liquid")
             {
 
@@ -339,7 +339,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             mass_addn = 180 * Math.Min(Wmax8, Wn);
             return mass_addn;
         }
-        public float mass_availn(int n)
+        public float mass_availn(int n) // ok
         {
             float mass_availn = 0;
             float massaddn = mass_addn(n);
@@ -369,7 +369,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             String detection_class = "X";
             //char isolation_class = 'Y';
-            Console.WriteLine("DETECTION TYPE= " + DETECTION_TYPE);
+            //Console.WriteLine("DETECTION TYPE= " + DETECTION_TYPE);
             if (DETECTION_TYPE != " ") {
                 if (DETECTION_TYPE == "Instrumentation designed specifically to detect material losses by changes in operating conditions (i.e., loss of pressure or flow) in the system")
                 {
@@ -422,7 +422,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 5;
                 else
-                    ld_max = 0;
+                    ld_max = 0.00336f;
             }
             else if (DETECTION_TYPE == "A" && ISULATION_TYPE == "B")
             {
@@ -433,7 +433,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 10;
                 else
-                    ld_max = 0;
+                    ld_max = 0.00336f;
             }
             else if (DETECTION_TYPE == "A" && ISULATION_TYPE == "C")
             {
@@ -444,7 +444,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0;
+                    ld_max = 0.00336f;
             }
             else if ((ISULATION_TYPE == "A" || ISULATION_TYPE == "B") && DETECTION_TYPE == "B")
             {
@@ -455,7 +455,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0;
+                    ld_max = 0.00336f;
             }
             else if (DETECTION_TYPE == "B" && ISULATION_TYPE == "C")
             {
@@ -466,7 +466,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0;
+                    ld_max = 0.00336f;
             }
             else if (DETECTION_TYPE == "C" && (ISULATION_TYPE == "A" || ISULATION_TYPE == "B" || ISULATION_TYPE == "C"))
             {
@@ -477,7 +477,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0;
+                    ld_max = 0.00336f;
             }
             else
                 ld_max = 0;
