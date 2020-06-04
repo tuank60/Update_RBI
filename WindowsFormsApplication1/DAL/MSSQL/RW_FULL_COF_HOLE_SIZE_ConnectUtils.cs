@@ -19,7 +19,6 @@ namespace RBI.DAL.MSSQL
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
-                        " " +
                         "INSERT INTO [dbo].[RW_FULL_COF_HOLE_SIZE]" +
                         "([ID]" +
                         ",[GFF_small]" +
@@ -70,9 +69,9 @@ namespace RBI.DAL.MSSQL
                         ",[factIC_2]" +
                         ",[factIC_3]" +
                         ",[factIC_4]" +
-                        ",[ReleaseType_1])" +
-                        ",[ReleaseType_2])" +
-                        ",[ReleaseType_3])" +
+                        ",[ReleaseType_1]" +
+                        ",[ReleaseType_2]" +
+                        ",[ReleaseType_3]" +
                         ",[ReleaseType_4])" +
                         "VALUES" +
                         "('" + ID + "'" +
@@ -124,16 +123,16 @@ namespace RBI.DAL.MSSQL
                         ",'" + factIC_2 + "'" +
                         ",'" + factIC_3 + "'" +
                         ",'" + factIC_4 + "'" +
-                        ",'" + ReleaseType_1 + "')" +
-                        ",'" + ReleaseType_2 + "')" +
-                        ",'" + ReleaseType_3 + "')" +
-                        ",'" + ReleaseType_4 + "')" +
-                        " ";
+                        ",'" + ReleaseType_1 + "'" +
+                        ",'" + ReleaseType_2 + "'" +
+                        ",'" + ReleaseType_3 + "'" +
+                        ",'" + ReleaseType_4 + "')" ;
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
+                Console.WriteLine("ksad" + sql);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -261,7 +260,8 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             List<RW_FULL_COF_HOLE_SIZE> list = new List<RW_FULL_COF_HOLE_SIZE>();
             RW_FULL_COF_HOLE_SIZE obj = null;
-            String sql = "Use[rbi] Select [ID]" +
+            String sql = "Use[rbi] "+
+                        "Select [ID]" +
                         ",[GFF_small]" +
                         ",[GFF_medium]" +
                         ",[GFF_large]" +
@@ -310,9 +310,9 @@ namespace RBI.DAL.MSSQL
                         ",[factIC_2]" +
                         ",[factIC_3]" +
                         ",[factIC_4]" +
-                        ",[ReleaseType_1])" +
-                        ",[ReleaseType_2])" +
-                        ",[ReleaseType_3])" +
+                        ",[ReleaseType_1]" +
+                        ",[ReleaseType_2]" +
+                        ",[ReleaseType_3]" +
                         ",[ReleaseType_4])" +
                           "From [dbo].[RW_FULL_COF_HOLE_SIZE] ";
             try
@@ -516,6 +516,22 @@ namespace RBI.DAL.MSSQL
                             {
                                 obj.factIC_4 = reader.GetFloat(49);
                             }
+                            if (!reader.IsDBNull(50))
+                            {
+                                obj.ReleaseType_1 = reader.GetString(50);
+                            }
+                            if (!reader.IsDBNull(51))
+                            {
+                                obj.ReleaseType_2 = reader.GetString(51);
+                            }
+                            if (!reader.IsDBNull(52))
+                            {
+                                obj.ReleaseType_3 = reader.GetString(52);
+                            }
+                            if (!reader.IsDBNull(53))
+                            {
+                                obj.ReleaseType_4 = reader.GetString(53);
+                            }
                             list.Add(obj);
 
                         }
@@ -538,7 +554,8 @@ namespace RBI.DAL.MSSQL
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             RW_FULL_COF_HOLE_SIZE obj = new RW_FULL_COF_HOLE_SIZE();
-            String sql = "Use[rbi] Select [ID]" +
+            String sql = "Use[rbi] "+
+                        " Select [ID]" +
                         ",[GFF_small]" +
                         ",[GFF_medium]" +
                         ",[GFF_large]" +
@@ -587,16 +604,17 @@ namespace RBI.DAL.MSSQL
                         ",[factIC_2]" +
                         ",[factIC_3]" +
                         ",[factIC_4]" +
-                        ",[ReleaseType_1])" +
-                        ",[ReleaseType_2])" +
-                        ",[ReleaseType_3])" +
-                        ",[ReleaseType_4])" +
+                        ",[ReleaseType_1]" +
+                        ",[ReleaseType_2]" +
+                        ",[ReleaseType_3]" +
+                        ",[ReleaseType_4]" +
                           "From [dbo].[RW_FULL_COF_HOLE_SIZE] WHERE [ID] = '" + ID + "' ";
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
+                Console.WriteLine("hehe= " + sql);
                 using (DbDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
@@ -611,190 +629,204 @@ namespace RBI.DAL.MSSQL
                             obj.GFF_rupture = reader.GetDouble(4);
                             if (!reader.IsDBNull(5))
                             {
-                                obj.A1 = reader.GetFloat(5);
+                                obj.A1 = (float)reader.GetDouble(5);
 
                             }
                             if (!reader.IsDBNull(6))
                             {
-                                obj.A2 = reader.GetFloat(7);
+                                obj.A2 = (float)reader.GetDouble(6);
+
+                            }
+                            if (!reader.IsDBNull(7))
+                            {
+                                obj.A3 = (float)reader.GetDouble(7);
 
                             }
                             if (!reader.IsDBNull(8))
                             {
-                                obj.A3 = reader.GetFloat(8);
+                                obj.A4 = (float)reader.GetDouble(8);
 
                             }
                             if (!reader.IsDBNull(9))
                             {
-                                obj.A4 = reader.GetFloat(9);
-
+                                obj.W1 = (float)reader.GetDouble(9);
                             }
                             if (!reader.IsDBNull(10))
                             {
-                                obj.W1 = reader.GetFloat(10);
+                                obj.W2 = (float)reader.GetDouble(10);
                             }
                             if (!reader.IsDBNull(11))
                             {
-                                obj.W2 = reader.GetFloat(11);
+                                obj.W3 = (float)reader.GetDouble(11);
                             }
                             if (!reader.IsDBNull(12))
                             {
-                                obj.W3 = reader.GetFloat(12);
+                                obj.W4 = (float)reader.GetDouble(12);
                             }
                             if (!reader.IsDBNull(13))
                             {
-                                obj.W4 = reader.GetFloat(13);
+                                obj.t_n1 = (float)reader.GetDouble(13);
+
                             }
                             if (!reader.IsDBNull(14))
                             {
-                                obj.t_n1 = reader.GetFloat(14);
+                                obj.t_n2 = (float)reader.GetDouble(14);
 
                             }
                             if (!reader.IsDBNull(15))
                             {
-                                obj.t_n2 = reader.GetFloat(15);
+                                obj.t_n3 = (float)reader.GetDouble(15);
 
                             }
                             if (!reader.IsDBNull(16))
                             {
-                                obj.t_n3 = reader.GetFloat(16);
+                                obj.t_n4 = (float)reader.GetDouble(16);
 
                             }
                             if (!reader.IsDBNull(17))
                             {
-                                obj.t_n4 = reader.GetFloat(17);
-
+                                obj.ld_max_1 = (float)reader.GetDouble(17);
                             }
                             if (!reader.IsDBNull(18))
                             {
-                                obj.ld_max_1 = reader.GetFloat(18);
+                                obj.ld_max_2 = (float)reader.GetDouble(18);
                             }
                             if (!reader.IsDBNull(19))
                             {
-                                obj.ld_max_2 = reader.GetFloat(19);
+                                obj.ld_max_3 = (float)reader.GetDouble(19);
                             }
                             if (!reader.IsDBNull(20))
                             {
-                                obj.ld_max_3 = reader.GetFloat(20);
+                                obj.ld_max_4 = (float)reader.GetDouble(20);
                             }
                             if (!reader.IsDBNull(21))
                             {
-                                obj.ld_max_4 = reader.GetFloat(21);
+                                obj.mass_add_1 = (float)reader.GetDouble(21);
                             }
                             if (!reader.IsDBNull(22))
                             {
-                                obj.mass_add_1 = reader.GetFloat(22);
+                                obj.mass_add_2 = (float)reader.GetDouble(22);
                             }
                             if (!reader.IsDBNull(23))
                             {
-                                obj.mass_add_2 = reader.GetFloat(23);
+                                obj.mass_add_3 = (float)reader.GetDouble(23);
                             }
                             if (!reader.IsDBNull(24))
                             {
-                                obj.mass_add_3 = reader.GetFloat(24);
+                                obj.mass_add_4 = (float)reader.GetDouble(24);
                             }
                             if (!reader.IsDBNull(25))
                             {
-                                obj.mass_add_4 = reader.GetFloat(25);
+                                obj.mass_avail_1 = (float)reader.GetDouble(25);
                             }
                             if (!reader.IsDBNull(26))
                             {
-                                obj.mass_avail_1 = reader.GetFloat(26);
+                                obj.mass_avail_2 = (float)reader.GetDouble(26);
                             }
                             if (!reader.IsDBNull(27))
                             {
-                                obj.mass_avail_2 = reader.GetFloat(27);
+                                obj.mass_avail_3 = (float)reader.GetDouble(27);
                             }
                             if (!reader.IsDBNull(28))
                             {
-                                obj.mass_avail_3 = reader.GetFloat(28);
+                                obj.mass_avail_4 = (float)reader.GetDouble(28);
                             }
                             if (!reader.IsDBNull(29))
                             {
-                                obj.mass_avail_4 = reader.GetFloat(29);
+                                obj.rate_1 = (float)reader.GetDouble(29);
                             }
                             if (!reader.IsDBNull(30))
                             {
-                                obj.rate_1 = reader.GetFloat(30);
+                                obj.rate_2 = (float)reader.GetDouble(30);
                             }
                             if (!reader.IsDBNull(31))
                             {
-                                obj.rate_2 = reader.GetFloat(31);
+                                obj.rate_3 = (float)reader.GetDouble(31);
                             }
                             if (!reader.IsDBNull(32))
                             {
-                                obj.rate_3 = reader.GetFloat(32);
+                                obj.rate_4 = (float)reader.GetDouble(32);
                             }
                             if (!reader.IsDBNull(33))
                             {
-                                obj.rate_4 = reader.GetFloat(33);
+                                obj.ld_1 = (float)reader.GetDouble(33);
                             }
                             if (!reader.IsDBNull(34))
                             {
-                                obj.ld_1 = reader.GetFloat(34);
+                                obj.ld_2 = (float)reader.GetDouble(34);
                             }
                             if (!reader.IsDBNull(35))
                             {
-                                obj.ld_2 = reader.GetFloat(35);
+                                obj.ld_3 = (float)reader.GetDouble(35);
                             }
                             if (!reader.IsDBNull(36))
                             {
-                                obj.ld_3 = reader.GetFloat(36);
+                                obj.ld_4 = (float)reader.GetDouble(36);
                             }
                             if (!reader.IsDBNull(37))
                             {
-                                obj.ld_4 = reader.GetFloat(37);
+                                obj.mass_1 = (float)reader.GetDouble(37);
                             }
                             if (!reader.IsDBNull(38))
                             {
-                                obj.mass_1 = reader.GetFloat(38);
+                                obj.mass_2 = (float)reader.GetDouble(38);
                             }
                             if (!reader.IsDBNull(39))
                             {
-                                obj.mass_2 = reader.GetFloat(39);
+                                obj.mass_3 = (float)reader.GetDouble(39);
                             }
                             if (!reader.IsDBNull(40))
                             {
-                                obj.mass_3 = reader.GetFloat(40);
+                                obj.mass_4 = (float)reader.GetDouble(40);
                             }
                             if (!reader.IsDBNull(41))
                             {
-                                obj.mass_4 = reader.GetFloat(41);
+                                obj.eneff_1 = (float)reader.GetDouble(41);
                             }
                             if (!reader.IsDBNull(42))
                             {
-                                obj.eneff_1 = reader.GetFloat(42);
+                                obj.eneff_2 = (float)reader.GetDouble(42);
                             }
                             if (!reader.IsDBNull(43))
                             {
-                                obj.eneff_2 = reader.GetFloat(43);
+                                obj.eneff_3 = (float)reader.GetDouble(43);
                             }
                             if (!reader.IsDBNull(44))
                             {
-                                obj.eneff_3 = reader.GetFloat(44);
+                                obj.eneff_4 = (float)reader.GetDouble(44);
                             }
                             if (!reader.IsDBNull(45))
                             {
-                                obj.eneff_4 = reader.GetFloat(45);
+                                obj.factIC_1 = (float)reader.GetDouble(45);
                             }
                             if (!reader.IsDBNull(46))
                             {
-                                obj.factIC_1 = reader.GetFloat(46);
+                                obj.factIC_2 = (float)reader.GetDouble(46);
                             }
                             if (!reader.IsDBNull(47))
                             {
-                                obj.factIC_2 = reader.GetFloat(47);
+                                obj.factIC_3 = (float)reader.GetDouble(47);
                             }
                             if (!reader.IsDBNull(48))
                             {
-                                obj.factIC_3 = reader.GetFloat(48);
+                                obj.factIC_4 = (float)reader.GetDouble(48);
                             }
                             if (!reader.IsDBNull(49))
                             {
-                                obj.factIC_4 = reader.GetFloat(49);
+                                obj.ReleaseType_1 = reader.GetString(49);
                             }
-                            //list.Add(obj);
-
+                            if (!reader.IsDBNull(50))
+                            {
+                                obj.ReleaseType_2 = reader.GetString(50);
+                            }
+                            if (!reader.IsDBNull(51))
+                            {
+                                obj.ReleaseType_3 = reader.GetString(51);
+                            }
+                            if (!reader.IsDBNull(52))
+                            {
+                                obj.ReleaseType_4 = reader.GetString(52);
+                            }
                         }
                     }
 
@@ -817,7 +849,7 @@ namespace RBI.DAL.MSSQL
             Boolean IsExist = false;
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "select GFF_n from rbi.dbo.RW_FULL_COF_HOLE_SIZE where ID = '" + ID + "'";
+            String sql = "select GFF_small from rbi.dbo.RW_FULL_COF_HOLE_SIZE where ID = '" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();

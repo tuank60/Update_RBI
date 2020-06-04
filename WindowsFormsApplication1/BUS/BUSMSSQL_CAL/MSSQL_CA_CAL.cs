@@ -174,7 +174,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float a_n(int i) //done
         {
-            float a_n = (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 2);
+            float a_n = (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 5);
             //Console.WriteLine("gia tri An" + a_n);
             return a_n;
         }
@@ -223,14 +223,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
             //float ATMOSPHERIC_PRESSURE = 101.325f;
             k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
             //Console.WriteLine("k= " + k);
-            p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 2);
-            //Console.WriteLine("PS= " + p_trans);
+            p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 5);
+            Console.WriteLine("PS= " + p_trans);
             if ((STORED_TEMP == 0) || (STORED_PRESSURE == 0)){
                 W_n = 0;
                 return W_n;
             }
-            //Console.WriteLine("release phase la " + RELEASE_PHASE);
-            //Console.WriteLine("liquid density la " + data[1]);
+            Console.WriteLine("release phase la " + RELEASE_PHASE);
+            Console.WriteLine("liquid density la " + data[1]);
             if (RELEASE_PHASE != "Liquid")
             {
 
@@ -256,7 +256,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 //Console.WriteLine("data[1]= " + data[1]);
                 //Console.WriteLine("dien tich la " + an);
                 //Console.WriteLine("SIUNIt=" + DAL_CAL.GET_TBL_3B21(1));
-                W_n = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 2);
+                W_n = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 5);
                 //Console.WriteLine("cai dcm" + W_n);
                 return W_n;
             }
@@ -290,7 +290,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return gff;
         }
-        public float W_max8()
+        public float W_max8() //done
         {
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float W_max8 = 0;
@@ -302,7 +302,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float R = 8.314f;
             float cp = C_P();
             k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
-            p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 2);
+            p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 5);
             if ((STORED_TEMP == 0) || (STORED_PRESSURE == 0))
             {
                 W_max8 = 0;
@@ -326,12 +326,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             else
             {
-                W_max8 = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 2);
+                W_max8 = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 5);
                 return W_max8;
             }
             return 0;
         }
-        public float mass_addn(int n)
+        public float mass_addn(int n) //done
         {
             float mass_addn = 0;
             float Wmax8 = W_max8();
@@ -343,17 +343,17 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             float mass_availn = 0;
             float massaddn = mass_addn(n);
-            mass_availn = Math.Min(MASS_COMPONENT + massaddn, MASS_INVERT);
+            mass_availn = Math.Min(massaddn, MASS_INVERT);
             return mass_availn;
         }
-        public float t_n(int n)
+        public float t_n(int n) //done
         {
-            float t_n = 0;
+            float t_n = 0; 
             float Wn = W_n(n);
             t_n = (DAL_CAL.GET_TBL_3B21(3)) / Wn;
             return t_n;
         }
-        public String releaseType(int n)
+        public String releaseType(int n) //done
         {
             double tn = t_n(n);
             double dn = d_n(n);
@@ -364,6 +364,28 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return "Instantaneous";
             else
                 return "Continuous";
+        }
+        public String convertdetectionclass()
+        {
+            String detection_class = "X";
+            //char isolation_class = 'Y';
+            Console.WriteLine("DETECTION TYPE= " + DETECTION_TYPE);
+            if (DETECTION_TYPE != " ") {
+                if (DETECTION_TYPE == "Instrumentation designed specifically to detect material losses by changes in operating conditions (i.e., loss of pressure or flow) in the system")
+                {
+                    detection_class = "A";
+                }
+                else if (DETECTION_TYPE == "Suitably located detectors to determine when the material is present outside the pressure-containing envelope")
+                {
+                    detection_class = "B";
+                }
+                else 
+                {
+                    detection_class = "C";
+                }
+            }
+            return detection_class;
+
         }
         public float fact_di()
         {

@@ -254,10 +254,10 @@
             this.label134 = new System.Windows.Forms.Label();
             this.lblFQF = new System.Windows.Forms.Label();
             this.panelInput = new System.Windows.Forms.Panel();
+            this.cbDetectionSystem = new DevExpress.XtraEditors.ImageComboBoxEdit();
             this.label135 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtFM = new System.Windows.Forms.TextBox();
             this.label136 = new System.Windows.Forms.Label();
             this.label137 = new System.Windows.Forms.Label();
@@ -652,6 +652,7 @@
             this.groupBox3.SuspendLayout();
             this.panelFQF.SuspendLayout();
             this.panelInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbDetectionSystem.Properties)).BeginInit();
             this.tabCA.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -770,12 +771,14 @@
             this.tabCATankBottom,
             this.tabCATankShell,
             this.tabCATankRoof});
+            this.tabRisk.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabRisk_SelectedPageChanged);
+            this.tabRisk.TabIndexChanged += new System.EventHandler(this.tabRisk_TabIndexChanged);
             // 
             // tabPoF
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 1312);
+            this.tabPoF.Size = new System.Drawing.Size(961, 1310);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -1516,7 +1519,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1312);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 1310);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -1777,7 +1780,7 @@
             this.TabArea.Controls.Add(this.groupBoxIV);
             this.TabArea.Controls.Add(this.groupBox3);
             this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(961, 1312);
+            this.TabArea.Size = new System.Drawing.Size(961, 1310);
             this.TabArea.Text = "Area-based CoF";
             // 
             // groupBoxIV
@@ -3013,10 +3016,10 @@
             // panelInput
             // 
             this.panelInput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelInput.Controls.Add(this.cbDetectionSystem);
             this.panelInput.Controls.Add(this.label135);
             this.panelInput.Controls.Add(this.comboBox3);
             this.panelInput.Controls.Add(this.comboBox2);
-            this.panelInput.Controls.Add(this.comboBox1);
             this.panelInput.Controls.Add(this.txtFM);
             this.panelInput.Controls.Add(this.label136);
             this.panelInput.Controls.Add(this.label137);
@@ -3027,6 +3030,20 @@
             this.panelInput.Name = "panelInput";
             this.panelInput.Size = new System.Drawing.Size(945, 142);
             this.panelInput.TabIndex = 1;
+            // 
+            // cbDetectionSystem
+            // 
+            this.cbDetectionSystem.Location = new System.Drawing.Point(363, 55);
+            this.cbDetectionSystem.Name = "cbDetectionSystem";
+            this.cbDetectionSystem.Properties.Appearance.BackColor = System.Drawing.Color.Red;
+            this.cbDetectionSystem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.cbDetectionSystem.Properties.Appearance.Options.UseBackColor = true;
+            this.cbDetectionSystem.Properties.Appearance.Options.UseForeColor = true;
+            this.cbDetectionSystem.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbDetectionSystem.Size = new System.Drawing.Size(249, 20);
+            this.cbDetectionSystem.TabIndex = 10;
+            this.cbDetectionSystem.SelectedIndexChanged += new System.EventHandler(this.cbDetectionSystem_SelectedIndexChanged);
             // 
             // label135
             // 
@@ -3062,22 +3079,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(249, 21);
             this.comboBox2.TabIndex = 7;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.Red;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Instrumentation designed specifically to detect material losses by changes in ope" +
-                "ration conditions(i.e.loss of pressure or flow) in the system",
-            "Suitably located detectors to determine when the material is present outside the " +
-                "pressure containing envelope",
-            "Visual detectuin, cameras, or detectors with marginal coverage"});
-            this.comboBox1.Location = new System.Drawing.Point(363, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 21);
-            this.comboBox1.TabIndex = 6;
             // 
             // txtFM
             // 
@@ -3145,7 +3146,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(961, 1312);
+            this.tabCA.Size = new System.Drawing.Size(961, 1310);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -3558,7 +3559,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(961, 1312);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 1310);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -3630,7 +3631,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox7.Size = new System.Drawing.Size(961, 1310);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -4298,7 +4299,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 1310);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -4310,7 +4311,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox6.Size = new System.Drawing.Size(961, 1310);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -5215,7 +5216,7 @@
             // 
             this.tabCATankShell.Controls.Add(this.groupBox8);
             this.tabCATankShell.Name = "tabCATankShell";
-            this.tabCATankShell.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 1310);
             this.tabCATankShell.Text = "Financial COF";
             // 
             // groupBox8
@@ -5231,7 +5232,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox8.Size = new System.Drawing.Size(961, 1310);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -6378,7 +6379,7 @@
             // 
             this.tabCATankRoof.Controls.Add(this.groupBox9);
             this.tabCATankRoof.Name = "tabCATankRoof";
-            this.tabCATankRoof.Size = new System.Drawing.Size(961, 1312);
+            this.tabCATankRoof.Size = new System.Drawing.Size(961, 1310);
             this.tabCATankRoof.Text = "Financial COF";
             // 
             // groupBox9
@@ -6389,7 +6390,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(961, 1312);
+            this.groupBox9.Size = new System.Drawing.Size(961, 1310);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -6777,6 +6778,7 @@
             this.panelFQF.PerformLayout();
             this.panelInput.ResumeLayout(false);
             this.panelInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbDetectionSystem.Properties)).EndInit();
             this.tabCA.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -7302,7 +7304,6 @@
         private System.Windows.Forms.Label label135;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox txtFM;
         private System.Windows.Forms.Label label136;
         private System.Windows.Forms.Label label137;
@@ -7445,5 +7446,6 @@
         private System.Windows.Forms.TextBox txtPrrodCostRoof;
         private System.Windows.Forms.Label label258;
         private System.Windows.Forms.Label label259;
+        private DevExpress.XtraEditors.ImageComboBoxEdit cbDetectionSystem;
     }
 }

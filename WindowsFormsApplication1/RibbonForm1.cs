@@ -250,12 +250,13 @@ namespace RBI
                     RW_MATERIAL ma = uc.ucMaterial.getData(IDProposal, temperature, pressure, corrosion);
                     UCInspectionHistorySubform ucInsHisSub = uc.ucInspectionHistory;
                     RW_INPUT_CA_TANK caTank = new RW_INPUT_CA_TANK();
+                    RW_FULL_COF_INPUT fcinput = new RW_FULL_COF_INPUT();
 
                     //RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
                     String ThinningType = uc.ucRiskFactor.type;
-                    Calculation(ThinningType, ass.ComponentID, componentTypeName, eq, com, ma, stream, coat, extTemp, caTank, caInput);
+                    Calculation(ThinningType, ass.ComponentID, componentTypeName, eq, com, ma, stream, coat, extTemp, caTank, caInput, fcinput);
                     MessageBox.Show("Calculation Finished!", "Cortek RBI", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     //Save Data
                     SaveDatatoDatabase(ass, eq, com, stream, extTemp, coat, ma);
@@ -2352,7 +2353,7 @@ namespace RBI
             }
             #endregion
         }
-        private void CA(out float fc, string apiComponentTypeName, string componentTypeName, RW_COMPONENT com, RW_MATERIAL ma,RW_INPUT_CA_LEVEL_1 caInput, RW_INPUT_CA_TANK caTank, RW_STREAM st)
+        private void CA(out float fc, string apiComponentTypeName, string componentTypeName, RW_COMPONENT com, RW_MATERIAL ma,RW_INPUT_CA_LEVEL_1 caInput, RW_INPUT_CA_TANK caTank, RW_STREAM st, RW_FULL_COF_INPUT fcinput)
         {
             #region CA
             MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
@@ -2363,6 +2364,7 @@ namespace RBI
             RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
             RW_FULL_COF_FLUID rwfcf = new RW_FULL_COF_FLUID();
             API_COMPONENT_TYPE apt = new API_COMPONENT_TYPE();
+            RW_FULL_COF_INPUT fullcofinput = new RW_FULL_COF_INPUT();
             CA_CAL.FLUID = st.TankFluidName;
             CA_CAL.FLUID_PHASE = st.StoragePhase;
             CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
@@ -2370,7 +2372,7 @@ namespace RBI
             CA_CAL.TANK_DIAMETER = caTank.TANK_DIAMETTER;
             CA_CAL.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
             CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
-
+            rwfholesize.ID = IDProposal;
             //hole size area
             rwfholesize.A1 = CA_CAL.a_n(1);
             //Console.WriteLine("gia tri cua A1 la" + rwfholesize.A1);
@@ -2390,13 +2392,13 @@ namespace RBI
             //Console.WriteLine("cp=" + rwfcf.Cp);
             //MessageBox.Show
             rwfholesize.W1 = CA_CAL.W_n(1);
-            //Console.WriteLine("gia tri cua W1 = " + rwfholesize.W1);
+            Console.WriteLine("gia tri cua W1 = " + rwfholesize.W1);
             rwfholesize.W2 = CA_CAL.W_n(2);
-            //Console.WriteLine("gia tri cua W2 = " + rwfholesize.W2);
+            Console.WriteLine("gia tri cua W2 = " + rwfholesize.W2);
             rwfholesize.W3 = CA_CAL.W_n(3);
-            //Console.WriteLine("gia tri cua W3 = " + rwfholesize.W3);
+            Console.WriteLine("gia tri cua W3 = " + rwfholesize.W3);
             rwfholesize.W4 = CA_CAL.W_n(4);
-            //Console.WriteLine("gia tri cua W4 = " + rwfholesize.W4);
+            Console.WriteLine("gia tri cua W4 = " + rwfholesize.W4);
 
             //GFF
             rwfholesize.GFF_small = CA_CAL.GFF(1);
@@ -2409,8 +2411,8 @@ namespace RBI
             //Console.WriteLine("gffrupture= " + rwfholesize.GFF_rupture);
 
             //FLUID INVENTORY AVAIABLE
-            CA_CAL.MASS_INVERT = caInput.Mass_Inventory;
-            CA_CAL.MASS_COMPONENT = caInput.Mass_Component;
+            CA_CAL.MASS_INVERT = fullcofinput.mass_inv;
+            CA_CAL.MASS_COMPONENT = fullcofinput.mass_comp;
             rwfcf.W_max8 = CA_CAL.W_max8();
             Console.WriteLine("W_max8= " + rwfcf.W_max8);
             rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
@@ -2422,23 +2424,58 @@ namespace RBI
             rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
             //Console.WriteLine("mass_add4= " + rwfholesize.mass_add_4);
             rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
-            Console.WriteLine("mass_avail1= " + rwfholesize.mass_avail_1);
+            //Console.WriteLine("mass_avail1= " + rwfholesize.mass_avail_1);
             rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
-            Console.WriteLine("mass_avail2= " + rwfholesize.mass_avail_2);
+            //Console.WriteLine("mass_avail2= " + rwfholesize.mass_avail_2);
             rwfholesize.mass_avail_1 = CA_CAL.mass_availn(3);
-            Console.WriteLine("mass_avail3= " + rwfholesize.mass_avail_3);
+            //Console.WriteLine("mass_avail3= " + rwfholesize.mass_avail_3);
             rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
-            Console.WriteLine("mass_avail4= " + rwfholesize.mass_avail_4);
+            //Console.WriteLine("mass_avail4= " + rwfholesize.mass_avail_4);
 
-            //if (hsbus.checkExistCoFHS(rwfholesize.ID))
-            //    hsbus.edit(rwfholesize);
-            //else
-            //    hsbus.add(rwfholesize);
-            //CA_CAL.DETECTION_TYPE = caInput.Detection_Type;
-            //CA_CAL.ISULATION_TYPE = caInput.Isulation_Type;
+            //Mass Available
+            rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
+            Console.WriteLine("mass avaiable1= " + rwfholesize.mass_avail_1);
+            rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
+            Console.WriteLine("mass avaiable2= " + rwfholesize.mass_avail_2);
+            rwfholesize.mass_avail_3 = CA_CAL.mass_availn(3);
+            Console.WriteLine("mass avaiable3= " + rwfholesize.mass_avail_3);
+            rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
+            Console.WriteLine("mass avaiable4= " + rwfholesize.mass_avail_4);
+
+            //time required to release
+            rwfholesize.t_n1 = CA_CAL.t_n(1);
+            //Console.WriteLine("tn1= " + rwfholesize.t_n1);
+            rwfholesize.t_n2 = CA_CAL.t_n(2);
+            //Console.WriteLine("tn2= " + rwfholesize.t_n2);
+            rwfholesize.t_n3 = CA_CAL.t_n(3);
+            //Console.WriteLine("tn3= " + rwfholesize.t_n3);
+            rwfholesize.t_n4 = CA_CAL.t_n(4);
+            //Console.WriteLine("tn4= " + rwfholesize.t_n4);
+
+            //Release Type
+            rwfholesize.ReleaseType_1 = CA_CAL.releaseType(1);
+            Console.WriteLine("release type 1= " + rwfholesize.ReleaseType_1);
+            rwfholesize.ReleaseType_2 = CA_CAL.releaseType(2);
+            Console.WriteLine("release type 2= " + rwfholesize.ReleaseType_2);
+            rwfholesize.ReleaseType_3 = CA_CAL.releaseType(3);
+            Console.WriteLine("release type 3= " + rwfholesize.ReleaseType_3);
+            rwfholesize.ReleaseType_4 = CA_CAL.releaseType(4);
+            Console.WriteLine("release type 4= " + rwfholesize.ReleaseType_4);
+
+            //Max Leak Duration
+            CA_CAL.DETECTION_TYPE = fullcofinput.DetectionType;
+            //fullcofinput.DetectionType=CA_CAL.convertdetectionclass();
+            Console.WriteLine("detection type = " +fullcofinput.DetectionType);
+            CA_CAL.ISULATION_TYPE = fullcofinput.IsolationType;
+
+            if(hsbus.checkExistCoFHS(rwfholesize.ID))
+                hsbus.edit(rwfholesize);
+            else
+                hsbus.add(rwfholesize);
 
 
-            
+
+
             //CA_CAL.MITIGATION_SYSTEM = caInput.Mitigation_System;
             //CA_CAL.TOXIC_PERCENT = caInput.Toxic_Percent;
             //CA_CAL.RELEASE_DURATION = caInput.Release_Duration;
@@ -2748,7 +2785,7 @@ namespace RBI
             //    busFullFCoF.add(fullFCoF);
             #endregion
         }
-        private void Calculation(String ThinningType, int componentID, String componentTypeName, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank,RW_INPUT_CA_LEVEL_1 caInput)
+        private void Calculation(String ThinningType, int componentID, String componentTypeName, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank,RW_INPUT_CA_LEVEL_1 caInput, RW_FULL_COF_INPUT fcinput)
         {
             InputInspectionCalculation inputInsp;
             MSSQL_DM_CAL cacal;
@@ -2756,7 +2793,7 @@ namespace RBI
             RW_FULL_POF fullpof;
             float FC = 0;
             PoF(out fullpof, out inputInsp, out cacal, out DMmache, ThinningType, componentID, eq, com, ma, st, coat, tem);
-            CA(out FC, inputInsp.ApiComponentType, componentTypeName, com, ma, caInput, caTank,st);
+            CA(out FC, inputInsp.ApiComponentType, componentTypeName, com, ma, caInput, caTank,st, fcinput);
             InspectionPlan(fullpof, inputInsp, cacal, DMmache, FC);
         }
         private void Calculation_CA_TANK(String componentTypeName, String API_component, String ThinningType, int componentID, RW_EQUIPMENT eq, RW_COMPONENT com, RW_MATERIAL ma, RW_STREAM st, RW_COATING coat, RW_EXTCOR_TEMPERATURE tem, RW_INPUT_CA_TANK caTank)
@@ -3829,6 +3866,7 @@ namespace RBI
         RW_EQUIPMENT_BUS busEquipment = new RW_EQUIPMENT_BUS();
         RW_COMPONENT_BUS busComponent = new RW_COMPONENT_BUS();
         RW_STREAM_BUS busStream = new RW_STREAM_BUS();
+        RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
         RW_EXTCOR_TEMPERATURE_BUS busExtcorTemp = new RW_EXTCOR_TEMPERATURE_BUS();
         RW_MATERIAL_BUS busMaterial = new RW_MATERIAL_BUS();
         RW_COATING_BUS busCoating = new RW_COATING_BUS();
@@ -3836,6 +3874,7 @@ namespace RBI
         RW_INPUT_CA_LEVEL_1_BUS busInputCALevel1 = new RW_INPUT_CA_LEVEL_1_BUS();
         RW_INPUT_CA_TANK_BUS busInputCATank = new RW_INPUT_CA_TANK_BUS();
         //RW_CA_LEVEL_1_BUS busCALevel1 = new RW_CA_LEVEL_1_BUS();
+        RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
         RW_CA_TANK_BUS busCATank = new RW_CA_TANK_BUS();
         RW_FULL_POF_BUS busFullPoF = new RW_FULL_POF_BUS();
         RW_FULL_FCOF_BUS busFullFCoF = new RW_FULL_FCOF_BUS();

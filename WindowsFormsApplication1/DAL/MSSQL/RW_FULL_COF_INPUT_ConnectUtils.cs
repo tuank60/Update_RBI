@@ -111,6 +111,51 @@ namespace RBI.DAL.MSSQL
         }
         ///get datasource
         ///
+        public RW_FULL_COF_INPUT getData(int ID)
+        {
+            RW_FULL_COF_INPUT obj = new RW_FULL_COF_INPUT();
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = " Use[rbi] Select[ID]" +
+                        ",[Mitigation]" +
+                        ",[DetectionType]" +
+                        ",[IsolationType]" +
+                        ",[mass_comp]" +
+                        ",[mass_inv]" +
+                          "From [dbo].[RW_FULL_COF_INPUT]  ";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj.ID = ID;
+                            obj.Mitigation = reader.GetString(1);
+                            obj.DetectionType = reader.GetString(1);
+                            obj.IsolationType = reader.GetString(2);
+                            obj.mass_comp = (float)reader.GetDouble(3);
+                            obj.mass_inv = (float)reader.GetDouble(4);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                obj.ID = 0;
+                //MessageBox.Show("GET DATA FAIL!", "ERROR!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
         public List<RW_FULL_COF_INPUT> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();

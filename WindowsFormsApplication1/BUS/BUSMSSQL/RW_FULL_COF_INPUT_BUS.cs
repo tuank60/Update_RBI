@@ -23,6 +23,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.delete(obj.ID);
         }
+        public RW_FULL_COF_INPUT getData(int ID)
+        {
+            return DAL.getData(ID);
+        }
         public List<RW_FULL_COF_INPUT> getDataSource()
         {
             return DAL.getDataSource();

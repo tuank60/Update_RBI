@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RBI.Object.ObjectMSSQL;
 using RBI.BUS.BUSMSSQL;
 using RBI.Object;
+using RBI.BUS.BUSMSSQL_CAL;
 
 
 namespace RBI.PRE.subForm.OutputDataForm
@@ -18,15 +19,30 @@ namespace RBI.PRE.subForm.OutputDataForm
     public delegate void CtrlSHandler(object sender, CtrlSPressEventArgs e);
     public partial class UCRiskFactor : UserControl
     {
+        string[] itemDetectionSystem= { "Instrumentation designed specifically to detect material losses by changes in operating conditions (i.e., loss of pressure or flow) in the system",
+                                        "Suitably located detectors to determine when the material is present outside the pressure-containing envelope",
+                                        "Visual detection, cameras, or detectors with marginal coverage" };
+        string[] itemIsolationSystem= { "Isolation or shutdown systems activated directly from process instrumentation or detectors, with no operator intervention",
+                                        "Isolation or shutdown systems activated by operators in the control room or other suitable locations remote from the leak",
+                                        "Isolation dependent on manually-operated valves" };
+        string[] itemMitigationSystem= {"Inventory Blowdown, coupled with isolation system actived remotely or automatically",
+                                        "Fire water deluge system and monitors",
+                                        "Foam spray system",
+                                        "Fire water monitor only",
+                                        "None"};
         public UCRiskFactor()
         {
             InitializeComponent();
         }
+        private int id = -1;
         public UCRiskFactor(int ID)
         {
+            id = ID;
             InitializeComponent();
             riskPoF(ID);
             riskCA(ID);
+            addItemDetectionSystem();
+            initAreabaseCOF(ID);
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
             //initData_Tank(ID);
@@ -88,14 +104,73 @@ namespace RBI.PRE.subForm.OutputDataForm
             txt36PoFCategory.Text = obj.PoFAP2Category;
             txt72PoFCategory.Text = obj.PoFAP3Category;
         }
-        public void AreabaseCOF(int ID)
+        public void initAreabaseCOF(int ID)
         {
             RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
-            RW_FULL_COF_HOLE_SIZE fullhs = new RW_FULL_COF_HOLE_SIZE();
-            textBox26.Text = fullhs.A1.ToString();
-            textBox36.Text = fullhs.A2.ToString();
-            textBox47.Text = fullhs.A3.ToString();
-            textBox58.Text = fullhs.A4.ToString();
+            RW_FULL_COF_HOLE_SIZE obj = hsbus.getData(ID);
+            RW_FULL_COF_INPUT_BUS fcipbus= new RW_FULL_COF_INPUT_BUS();
+            RW_FULL_COF_INPUT fcip = fcipbus.getData(ID);
+
+            //Console.WriteLine("haha tuan giat= " + obj.A1.ToString());
+            textBox26.Text = obj.A1.ToString();
+            textBox36.Text = obj.A2.ToString();
+            textBox47.Text = obj.A3.ToString();
+            textBox58.Text = obj.A4.ToString();
+
+            textBox25.Text = obj.W1.ToString();
+            textBox35.Text = obj.W2.ToString();
+            textBox46.Text = obj.W3.ToString();
+            textBox57.Text = obj.W4.ToString();
+
+            textBox16.Text = obj.GFF_small.ToString();
+            textBox15.Text = obj.GFF_medium.ToString();
+            textBox37.Text = obj.GFF_large.ToString();
+            textBox48.Text = obj.GFF_rupture.ToString();
+
+            textBox17.Text = obj.mass_add_1.ToString();
+            textBox27.Text = obj.mass_add_2.ToString();
+            textBox38.Text = obj.mass_add_3.ToString();
+            textBox49.Text = obj.mass_add_4.ToString();
+
+            textBox18.Text = obj.mass_avail_1.ToString();
+            textBox28.Text = obj.mass_avail_2.ToString();
+            textBox39.Text = obj.mass_avail_3.ToString();
+            textBox50.Text = obj.mass_avail_4.ToString();
+
+            textBox19.Text = obj.t_n1.ToString();
+            textBox29.Text = obj.t_n2.ToString();
+            textBox40.Text = obj.t_n3.ToString();
+            textBox51.Text = obj.t_n4.ToString();
+
+            textBox20.Text = obj.ReleaseType_1.ToString();
+            textBox30.Text = obj.ReleaseType_2.ToString();
+            textBox41.Text = obj.ReleaseType_3.ToString();
+            textBox52.Text = obj.ReleaseType_4.ToString();
+
+            textBox21.Text = obj.ld_max_1.ToString();
+            textBox31.Text = obj.ld_max_2.ToString();
+            textBox42.Text = obj.ld_max_3.ToString();
+            textBox53.Text = obj.ld_max_4.ToString();
+
+            textBox22.Text = obj.rate_1.ToString();
+            textBox32.Text = obj.rate_2.ToString();
+            textBox43.Text = obj.rate_3.ToString();
+            textBox54.Text = obj.rate_4.ToString();
+
+            textBox23.Text = obj.ld_1.ToString();
+            textBox33.Text = obj.ld_2.ToString();
+            textBox44.Text = obj.ld_3.ToString();
+            textBox55.Text = obj.ld_4.ToString();
+
+            textBox24.Text = obj.mass_1.ToString();
+            textBox34.Text = obj.mass_2.ToString();
+            textBox45.Text = obj.mass_3.ToString();
+            textBox56.Text = obj.mass_4.ToString();
+
+        }
+        public void initCAP()
+        {
+
         }
         public void riskCA(int ID)
         {
@@ -214,6 +289,15 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankShell.PageVisible = false;
             }
         }
+        private void addItemDetectionSystem()
+        {
+            cbDetectionSystem.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemDetectionSystem.Length; i++)
+            {
+                cbDetectionSystem.Properties.Items.Add(itemDetectionSystem[i], i, i);
+            }
+        }
+
 
         private void initData_Roof(int ID)
         {
@@ -684,6 +768,167 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
             busCA_Tank.edit(inputShell);
             MessageBox.Show("Update Input", "Coterk RBI");
+        }
+        private void showData(int ID, float mass_inv, String DetectionType, String IsolationType, String Mitigation )
+        {
+            //RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
+            RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
+            //RW_FULL_COF_INPUT fcip = busfcip.getDataSource(ID);
+
+        }
+        public void getData(int ID)
+        {
+            RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
+            RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
+            fcip.ID=ID;
+            if (cbDetectionSystem.Text == itemDetectionSystem[0])
+            {
+                fcip.DetectionType = "A";
+            }
+            else if (cbDetectionSystem.Text == itemDetectionSystem[1])
+            {
+                fcip.DetectionType = "B";
+            }
+            else
+            {
+                fcip.DetectionType = "C";
+            }
+            //fcip.DetectionType = cbDetectionSystem.Text;
+            if (comboBox2.Text == itemIsolationSystem[0])
+            {
+                fcip.IsolationType = "A";
+            }
+            else if (comboBox2.Text == itemIsolationSystem[1])
+            {
+                fcip.IsolationType = "B";
+            }
+            else
+            {
+                fcip.IsolationType = "C";
+            }
+            fcip.Mitigation = comboBox3.Text;
+            fcipbus.add(fcip);
+          //  fcip.mass_inv = txtFM.Text;
+           // return fcip;
+
+        }
+
+        private void cbDetectionSystem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabRisk_TabIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+        void calculatioArea()
+        {
+
+        }
+        private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
+            
+            if (tabRisk.SelectedTabPage.Name == "TabArea")
+            {
+                RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
+                COMPONENT_MASTER_BUS busComponentMaster = new COMPONENT_MASTER_BUS();
+                COMPONENT_TYPE__BUS busComponentType = new COMPONENT_TYPE__BUS();
+                RW_EQUIPMENT_BUS busEquipment = new RW_EQUIPMENT_BUS();
+                RW_COMPONENT_BUS busComponent = new RW_COMPONENT_BUS();
+                MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+                RW_COMPONENT com = new RW_COMPONENT();
+                RW_MATERIAL ma = new RW_MATERIAL();
+                RW_INPUT_CA_TANK caTank = new RW_INPUT_CA_TANK();
+                RW_STREAM st = new RW_STREAM();
+                com.ID = id;
+                int[] eq_comID = busAssessment.getEquipmentID_ComponentID(id);
+                COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
+
+                String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
+                
+
+                //<input CA Lavel 1>
+                CA_CAL.NominalDiameter = com.NominalDiameter;
+                CA_CAL.MATERIAL_COST = ma.CostFactor;
+                CA_CAL.PRODUCTION_COST = caTank.ProductionCost;
+                RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
+                RW_FULL_COF_FLUID rwfcf = new RW_FULL_COF_FLUID();
+                API_COMPONENT_TYPE apt = new API_COMPONENT_TYPE();
+                RW_FULL_COF_INPUT fullcofinput = new RW_FULL_COF_INPUT();
+                CA_CAL.FLUID = st.TankFluidName;
+                CA_CAL.FLUID_PHASE = st.StoragePhase;
+                //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+                CA_CAL.COMPONENT_TYPE_NAME = componentTypeName;
+                CA_CAL.TANK_DIAMETER = caTank.TANK_DIAMETTER;
+                CA_CAL.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
+                //rwfholesize.ID = id;
+                //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+
+                rwfholesize.A1 = CA_CAL.a_n(1);
+                rwfholesize.A2 = CA_CAL.a_n(2);
+                rwfholesize.A3 = CA_CAL.a_n(3);
+                rwfholesize.A4 = CA_CAL.a_n(4);
+
+                //release rate
+                CA_CAL.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
+                CA_CAL.ATMOSPHERIC_PRESSURE = 101.325f;
+                CA_CAL.STORED_TEMP = st.MaxOperatingTemperature;
+                rwfcf.Cp = CA_CAL.C_P();
+                CA_CAL.RELEASE_PHASE = CA_CAL.GET_RELEASE_PHASE();
+                rwfholesize.W1 = CA_CAL.W_n(1);
+                rwfholesize.W2 = CA_CAL.W_n(2);
+                rwfholesize.W3 = CA_CAL.W_n(3);
+                rwfholesize.W4 = CA_CAL.W_n(4);
+
+                //GFF
+                rwfholesize.GFF_small = CA_CAL.GFF(1);
+                rwfholesize.GFF_medium = CA_CAL.GFF(2);
+                rwfholesize.GFF_large = CA_CAL.GFF(3);
+                rwfholesize.GFF_rupture = CA_CAL.GFF(4);
+
+                //FLUID INVENTORY AVAIABLE
+                CA_CAL.MASS_INVERT = fullcofinput.mass_inv;
+                CA_CAL.MASS_COMPONENT = fullcofinput.mass_comp;
+                rwfcf.W_max8 = CA_CAL.W_max8();
+                Console.WriteLine("W_max8= " + rwfcf.W_max8);
+                rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
+                rwfholesize.mass_add_2 = CA_CAL.mass_addn(2);
+                rwfholesize.mass_add_3 = CA_CAL.mass_addn(3);
+                rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
+
+                rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
+                rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
+                rwfholesize.mass_avail_1 = CA_CAL.mass_availn(3);
+                rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
+
+                //Mass Available
+                rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
+                rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
+                rwfholesize.mass_avail_3 = CA_CAL.mass_availn(3);
+                rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
+
+                //time required to release
+                rwfholesize.t_n1 = CA_CAL.t_n(1);
+                rwfholesize.t_n2 = CA_CAL.t_n(2);
+                rwfholesize.t_n3 = CA_CAL.t_n(3);
+                rwfholesize.t_n4 = CA_CAL.t_n(4);
+
+                //Release Type
+                rwfholesize.ReleaseType_1 = CA_CAL.releaseType(1);
+                rwfholesize.ReleaseType_2 = CA_CAL.releaseType(2);
+                rwfholesize.ReleaseType_3 = CA_CAL.releaseType(3);
+                rwfholesize.ReleaseType_4 = CA_CAL.releaseType(4);
+
+                //Max Leak Duration
+                CA_CAL.DETECTION_TYPE = fullcofinput.DetectionType;
+                CA_CAL.ISULATION_TYPE = fullcofinput.IsolationType;
+                //    MSSQL_CA_CAL ca = new MSSQL_CA_CAL();
+                //    ca.MASS_INVERT = float.Parse(txtFM.Text);
+                //    //MessageBox.Show("cai dmm" + ca.MASS_INVERT);
+
+            }
+              //  MessageBox.Show("shfgsdhfgsd");
         }
     }
 }

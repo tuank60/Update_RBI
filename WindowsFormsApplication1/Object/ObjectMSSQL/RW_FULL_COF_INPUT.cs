@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RBI.Object.ObjectMSSQL
 {
-    class RW_FULL_COF_INPUT
+    public class RW_FULL_COF_INPUT
     {
         public int ID { get; set; }
         public String Mitigation { get; set; }
