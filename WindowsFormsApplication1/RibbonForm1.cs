@@ -2574,11 +2574,12 @@ namespace RBI
 
                 rwCATank.FC_Environ = rwCATank.FC_Environ_Rupture + rwCATank.FC_Environ_Leak;
                 rwCATank.Component_Damage_Cost = float.IsNaN(CA.fc_cmd()) ? 0 : CA.fc_cmd();
-                rwCATank.Business_Cost = float.IsNaN(CA.fc_prod()) ? 0 : CA.fc_prod();
+                //rwCATank.Business_Cost = float.IsNaN(CA.fc_prod()) ? 0 : CA.fc_prod();
                 
-                rwCATank.Consequence = rwCATank.FC_Environ + rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
-                rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
-                FC_Total = rwCATank.Consequence;
+                //rwCATank.Consequence = rwCATank.FC_Environ + rwCATank.Business_Cost + rwCATank.Component_Damage_Cost;
+                //rwCATank.ConsequenceCategory = CA.FC_Category(rwCATank.Consequence);
+                //FC_Total = rwCATank.Consequence;
+
                 //Console.WriteLine("CA tank " + rwCATank.FC_Environ_Rupture + "\n" +
                 //                     rwCATank.FC_Environ_Leak + "\n" +
                 //                     rwCATank.FC_Environ + "\n" +

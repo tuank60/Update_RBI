@@ -491,10 +491,10 @@
             this.label231 = new System.Windows.Forms.Label();
             this.label275 = new System.Windows.Forms.Label();
             this.label285 = new System.Windows.Forms.Label();
-            this.txtFinalConsequence = new DevExpress.XtraEditors.TextEdit();
+            this.txtFinalConsequenceShell = new DevExpress.XtraEditors.TextEdit();
             this.label274 = new System.Windows.Forms.Label();
-            this.txtFinalPersonelInjury = new DevExpress.XtraEditors.TextEdit();
-            this.txtFinalComponentDamage = new DevExpress.XtraEditors.TextEdit();
+            this.txtFinalPersonelInjuryShell = new DevExpress.XtraEditors.TextEdit();
+            this.txtFinalComponentDamageShell = new DevExpress.XtraEditors.TextEdit();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label284 = new System.Windows.Forms.Label();
             this.label287 = new System.Windows.Forms.Label();
@@ -577,6 +577,38 @@
             this.label269 = new System.Windows.Forms.Label();
             this.label230 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label288 = new System.Windows.Forms.Label();
+            this.label289 = new System.Windows.Forms.Label();
+            this.label290 = new System.Windows.Forms.Label();
+            this.label291 = new System.Windows.Forms.Label();
+            this.label292 = new System.Windows.Forms.Label();
+            this.txtToxicReleaseMassD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDinD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicCAD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicLeakDurationD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCinD4 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicReleaseMassD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDinD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicCAD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicLeakDurationD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCinD3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicReleaseMassD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDinD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicCAD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicLeakDurationD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCinD2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicConsequence = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicReleaseMassD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDinD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicCAD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtToxicLeakDurationD1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtCinD1 = new DevExpress.XtraEditors.TextEdit();
+            this.label293 = new System.Windows.Forms.Label();
+            this.label294 = new System.Windows.Forms.Label();
+            this.label295 = new System.Windows.Forms.Label();
+            this.label296 = new System.Windows.Forms.Label();
+            this.label297 = new System.Windows.Forms.Label();
+            this.label298 = new System.Windows.Forms.Label();
             this.label229 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label225 = new System.Windows.Forms.Label();
@@ -627,9 +659,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label194 = new System.Windows.Forms.Label();
             this.label195 = new System.Windows.Forms.Label();
-            this.textBox59 = new System.Windows.Forms.TextBox();
+            this.txtTotalConsequenceShell = new System.Windows.Forms.TextBox();
             this.label201 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.txtConsequenceCategoryShell = new System.Windows.Forms.TextBox();
             this.label193 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSaveInputShell = new System.Windows.Forms.Button();
@@ -795,9 +827,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeRuptureShell.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeLeakageShell.Properties)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinalConsequence.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinalPersonelInjury.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinalComponentDamage.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalConsequenceShell.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalPersonelInjuryShell.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalComponentDamageShell.Properties)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFlammablePersonelInjury.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFlammableComponentDamage.Properties)).BeginInit();
@@ -854,6 +886,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA3.Properties)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicConsequence.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD1.Properties)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLeakDurationShellD4.Properties)).BeginInit();
@@ -5728,10 +5781,10 @@
             this.panel6.Controls.Add(this.label231);
             this.panel6.Controls.Add(this.label275);
             this.panel6.Controls.Add(this.label285);
-            this.panel6.Controls.Add(this.txtFinalConsequence);
+            this.panel6.Controls.Add(this.txtFinalConsequenceShell);
             this.panel6.Controls.Add(this.label274);
-            this.panel6.Controls.Add(this.txtFinalPersonelInjury);
-            this.panel6.Controls.Add(this.txtFinalComponentDamage);
+            this.panel6.Controls.Add(this.txtFinalPersonelInjuryShell);
+            this.panel6.Controls.Add(this.txtFinalComponentDamageShell);
             this.panel6.Location = new System.Drawing.Point(9, 1449);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(943, 106);
@@ -5762,22 +5815,22 @@
             // 
             this.label285.AutoSize = true;
             this.label285.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label285.Location = new System.Drawing.Point(16, 78);
+            this.label285.Location = new System.Drawing.Point(13, 78);
             this.label285.Name = "label285";
             this.label285.Size = new System.Drawing.Size(113, 15);
             this.label285.TabIndex = 5;
             this.label285.Text = "Final Consequence";
             // 
-            // txtFinalConsequence
+            // txtFinalConsequenceShell
             // 
-            this.txtFinalConsequence.Location = new System.Drawing.Point(342, 75);
-            this.txtFinalConsequence.Name = "txtFinalConsequence";
-            this.txtFinalConsequence.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFinalConsequence.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtFinalConsequence.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFinalConsequence.Properties.Appearance.Options.UseFont = true;
-            this.txtFinalConsequence.Size = new System.Drawing.Size(100, 22);
-            this.txtFinalConsequence.TabIndex = 6;
+            this.txtFinalConsequenceShell.Location = new System.Drawing.Point(342, 75);
+            this.txtFinalConsequenceShell.Name = "txtFinalConsequenceShell";
+            this.txtFinalConsequenceShell.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFinalConsequenceShell.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinalConsequenceShell.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFinalConsequenceShell.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalConsequenceShell.Size = new System.Drawing.Size(100, 22);
+            this.txtFinalConsequenceShell.TabIndex = 6;
             // 
             // label274
             // 
@@ -5789,27 +5842,27 @@
             this.label274.TabIndex = 3;
             this.label274.Text = "FinalPersonel Injury Consequence Area";
             // 
-            // txtFinalPersonelInjury
+            // txtFinalPersonelInjuryShell
             // 
-            this.txtFinalPersonelInjury.Location = new System.Drawing.Point(342, 49);
-            this.txtFinalPersonelInjury.Name = "txtFinalPersonelInjury";
-            this.txtFinalPersonelInjury.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFinalPersonelInjury.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtFinalPersonelInjury.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFinalPersonelInjury.Properties.Appearance.Options.UseFont = true;
-            this.txtFinalPersonelInjury.Size = new System.Drawing.Size(100, 22);
-            this.txtFinalPersonelInjury.TabIndex = 4;
+            this.txtFinalPersonelInjuryShell.Location = new System.Drawing.Point(342, 49);
+            this.txtFinalPersonelInjuryShell.Name = "txtFinalPersonelInjuryShell";
+            this.txtFinalPersonelInjuryShell.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFinalPersonelInjuryShell.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinalPersonelInjuryShell.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFinalPersonelInjuryShell.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalPersonelInjuryShell.Size = new System.Drawing.Size(100, 22);
+            this.txtFinalPersonelInjuryShell.TabIndex = 4;
             // 
-            // txtFinalComponentDamage
+            // txtFinalComponentDamageShell
             // 
-            this.txtFinalComponentDamage.Location = new System.Drawing.Point(342, 21);
-            this.txtFinalComponentDamage.Name = "txtFinalComponentDamage";
-            this.txtFinalComponentDamage.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFinalComponentDamage.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtFinalComponentDamage.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFinalComponentDamage.Properties.Appearance.Options.UseFont = true;
-            this.txtFinalComponentDamage.Size = new System.Drawing.Size(100, 22);
-            this.txtFinalComponentDamage.TabIndex = 2;
+            this.txtFinalComponentDamageShell.Location = new System.Drawing.Point(342, 21);
+            this.txtFinalComponentDamageShell.Name = "txtFinalComponentDamageShell";
+            this.txtFinalComponentDamageShell.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtFinalComponentDamageShell.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinalComponentDamageShell.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFinalComponentDamageShell.Properties.Appearance.Options.UseFont = true;
+            this.txtFinalComponentDamageShell.Size = new System.Drawing.Size(100, 22);
+            this.txtFinalComponentDamageShell.TabIndex = 2;
             // 
             // panel5
             // 
@@ -5894,7 +5947,7 @@
             this.panel5.Controls.Add(this.label266);
             this.panel5.Controls.Add(this.label269);
             this.panel5.Controls.Add(this.label230);
-            this.panel5.Location = new System.Drawing.Point(11, 884);
+            this.panel5.Location = new System.Drawing.Point(11, 868);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(943, 559);
             this.panel5.TabIndex = 2;
@@ -6752,11 +6805,379 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel4.Controls.Add(this.label288);
+            this.panel4.Controls.Add(this.label289);
+            this.panel4.Controls.Add(this.label290);
+            this.panel4.Controls.Add(this.label291);
+            this.panel4.Controls.Add(this.label292);
+            this.panel4.Controls.Add(this.txtToxicReleaseMassD4);
+            this.panel4.Controls.Add(this.txtDinD4);
+            this.panel4.Controls.Add(this.txtToxicCAD4);
+            this.panel4.Controls.Add(this.txtToxicLeakDurationD4);
+            this.panel4.Controls.Add(this.txtCinD4);
+            this.panel4.Controls.Add(this.txtToxicReleaseMassD3);
+            this.panel4.Controls.Add(this.txtDinD3);
+            this.panel4.Controls.Add(this.txtToxicCAD3);
+            this.panel4.Controls.Add(this.txtToxicLeakDurationD3);
+            this.panel4.Controls.Add(this.txtCinD3);
+            this.panel4.Controls.Add(this.txtToxicReleaseMassD2);
+            this.panel4.Controls.Add(this.txtDinD2);
+            this.panel4.Controls.Add(this.txtToxicCAD2);
+            this.panel4.Controls.Add(this.txtToxicLeakDurationD2);
+            this.panel4.Controls.Add(this.txtCinD2);
+            this.panel4.Controls.Add(this.txtToxicConsequence);
+            this.panel4.Controls.Add(this.txtToxicReleaseMassD1);
+            this.panel4.Controls.Add(this.txtDinD1);
+            this.panel4.Controls.Add(this.txtToxicCAD1);
+            this.panel4.Controls.Add(this.txtToxicLeakDurationD1);
+            this.panel4.Controls.Add(this.txtCinD1);
+            this.panel4.Controls.Add(this.label293);
+            this.panel4.Controls.Add(this.label294);
+            this.panel4.Controls.Add(this.label295);
+            this.panel4.Controls.Add(this.label296);
+            this.panel4.Controls.Add(this.label297);
+            this.panel4.Controls.Add(this.label298);
             this.panel4.Controls.Add(this.label229);
             this.panel4.Location = new System.Drawing.Point(11, 623);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(943, 121);
+            this.panel4.Size = new System.Drawing.Size(943, 221);
             this.panel4.TabIndex = 3;
+            // 
+            // label288
+            // 
+            this.label288.AutoSize = true;
+            this.label288.Location = new System.Drawing.Point(759, 27);
+            this.label288.Name = "label288";
+            this.label288.Size = new System.Drawing.Size(58, 15);
+            this.label288.TabIndex = 5;
+            this.label288.Text = "Rupture";
+            // 
+            // label289
+            // 
+            this.label289.AutoSize = true;
+            this.label289.Location = new System.Drawing.Point(499, 27);
+            this.label289.Name = "label289";
+            this.label289.Size = new System.Drawing.Size(59, 15);
+            this.label289.TabIndex = 3;
+            this.label289.Text = "Medium";
+            // 
+            // label290
+            // 
+            this.label290.AutoSize = true;
+            this.label290.Location = new System.Drawing.Point(26, 27);
+            this.label290.Name = "label290";
+            this.label290.Size = new System.Drawing.Size(126, 15);
+            this.label290.TabIndex = 1;
+            this.label290.Text = "Release Hole Size";
+            // 
+            // label291
+            // 
+            this.label291.AutoSize = true;
+            this.label291.Location = new System.Drawing.Point(640, 27);
+            this.label291.Name = "label291";
+            this.label291.Size = new System.Drawing.Size(44, 15);
+            this.label291.TabIndex = 4;
+            this.label291.Text = "Large";
+            // 
+            // label292
+            // 
+            this.label292.AutoSize = true;
+            this.label292.Location = new System.Drawing.Point(380, 27);
+            this.label292.Name = "label292";
+            this.label292.Size = new System.Drawing.Size(44, 15);
+            this.label292.TabIndex = 2;
+            this.label292.Text = "Small";
+            // 
+            // txtToxicReleaseMassD4
+            // 
+            this.txtToxicReleaseMassD4.Location = new System.Drawing.Point(745, 75);
+            this.txtToxicReleaseMassD4.Name = "txtToxicReleaseMassD4";
+            this.txtToxicReleaseMassD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicReleaseMassD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicReleaseMassD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicReleaseMassD4.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicReleaseMassD4.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicReleaseMassD4.TabIndex = 15;
+            // 
+            // txtDinD4
+            // 
+            this.txtDinD4.Location = new System.Drawing.Point(745, 131);
+            this.txtDinD4.Name = "txtDinD4";
+            this.txtDinD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDinD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDinD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDinD4.Properties.Appearance.Options.UseFont = true;
+            this.txtDinD4.Size = new System.Drawing.Size(100, 22);
+            this.txtDinD4.TabIndex = 25;
+            // 
+            // txtToxicCAD4
+            // 
+            this.txtToxicCAD4.Location = new System.Drawing.Point(745, 159);
+            this.txtToxicCAD4.Name = "txtToxicCAD4";
+            this.txtToxicCAD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicCAD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCAD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicCAD4.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicCAD4.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicCAD4.TabIndex = 30;
+            // 
+            // txtToxicLeakDurationD4
+            // 
+            this.txtToxicLeakDurationD4.Location = new System.Drawing.Point(745, 47);
+            this.txtToxicLeakDurationD4.Name = "txtToxicLeakDurationD4";
+            this.txtToxicLeakDurationD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicLeakDurationD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicLeakDurationD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicLeakDurationD4.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicLeakDurationD4.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicLeakDurationD4.TabIndex = 10;
+            // 
+            // txtCinD4
+            // 
+            this.txtCinD4.Location = new System.Drawing.Point(745, 103);
+            this.txtCinD4.Name = "txtCinD4";
+            this.txtCinD4.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCinD4.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCinD4.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCinD4.Properties.Appearance.Options.UseFont = true;
+            this.txtCinD4.Size = new System.Drawing.Size(100, 22);
+            this.txtCinD4.TabIndex = 20;
+            // 
+            // txtToxicReleaseMassD3
+            // 
+            this.txtToxicReleaseMassD3.Location = new System.Drawing.Point(610, 75);
+            this.txtToxicReleaseMassD3.Name = "txtToxicReleaseMassD3";
+            this.txtToxicReleaseMassD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicReleaseMassD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicReleaseMassD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicReleaseMassD3.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicReleaseMassD3.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicReleaseMassD3.TabIndex = 14;
+            // 
+            // txtDinD3
+            // 
+            this.txtDinD3.Location = new System.Drawing.Point(610, 131);
+            this.txtDinD3.Name = "txtDinD3";
+            this.txtDinD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDinD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDinD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDinD3.Properties.Appearance.Options.UseFont = true;
+            this.txtDinD3.Size = new System.Drawing.Size(100, 22);
+            this.txtDinD3.TabIndex = 24;
+            // 
+            // txtToxicCAD3
+            // 
+            this.txtToxicCAD3.Location = new System.Drawing.Point(610, 159);
+            this.txtToxicCAD3.Name = "txtToxicCAD3";
+            this.txtToxicCAD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicCAD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCAD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicCAD3.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicCAD3.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicCAD3.TabIndex = 29;
+            // 
+            // txtToxicLeakDurationD3
+            // 
+            this.txtToxicLeakDurationD3.Location = new System.Drawing.Point(610, 47);
+            this.txtToxicLeakDurationD3.Name = "txtToxicLeakDurationD3";
+            this.txtToxicLeakDurationD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicLeakDurationD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicLeakDurationD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicLeakDurationD3.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicLeakDurationD3.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicLeakDurationD3.TabIndex = 9;
+            // 
+            // txtCinD3
+            // 
+            this.txtCinD3.Location = new System.Drawing.Point(610, 103);
+            this.txtCinD3.Name = "txtCinD3";
+            this.txtCinD3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCinD3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCinD3.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCinD3.Properties.Appearance.Options.UseFont = true;
+            this.txtCinD3.Size = new System.Drawing.Size(100, 22);
+            this.txtCinD3.TabIndex = 19;
+            // 
+            // txtToxicReleaseMassD2
+            // 
+            this.txtToxicReleaseMassD2.Location = new System.Drawing.Point(482, 75);
+            this.txtToxicReleaseMassD2.Name = "txtToxicReleaseMassD2";
+            this.txtToxicReleaseMassD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicReleaseMassD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicReleaseMassD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicReleaseMassD2.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicReleaseMassD2.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicReleaseMassD2.TabIndex = 13;
+            // 
+            // txtDinD2
+            // 
+            this.txtDinD2.Location = new System.Drawing.Point(482, 131);
+            this.txtDinD2.Name = "txtDinD2";
+            this.txtDinD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDinD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDinD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDinD2.Properties.Appearance.Options.UseFont = true;
+            this.txtDinD2.Size = new System.Drawing.Size(100, 22);
+            this.txtDinD2.TabIndex = 23;
+            // 
+            // txtToxicCAD2
+            // 
+            this.txtToxicCAD2.Location = new System.Drawing.Point(482, 159);
+            this.txtToxicCAD2.Name = "txtToxicCAD2";
+            this.txtToxicCAD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicCAD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCAD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicCAD2.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicCAD2.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicCAD2.TabIndex = 28;
+            // 
+            // txtToxicLeakDurationD2
+            // 
+            this.txtToxicLeakDurationD2.Location = new System.Drawing.Point(482, 47);
+            this.txtToxicLeakDurationD2.Name = "txtToxicLeakDurationD2";
+            this.txtToxicLeakDurationD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicLeakDurationD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicLeakDurationD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicLeakDurationD2.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicLeakDurationD2.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicLeakDurationD2.TabIndex = 8;
+            // 
+            // txtCinD2
+            // 
+            this.txtCinD2.Location = new System.Drawing.Point(482, 103);
+            this.txtCinD2.Name = "txtCinD2";
+            this.txtCinD2.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCinD2.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCinD2.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCinD2.Properties.Appearance.Options.UseFont = true;
+            this.txtCinD2.Size = new System.Drawing.Size(100, 22);
+            this.txtCinD2.TabIndex = 18;
+            // 
+            // txtToxicConsequence
+            // 
+            this.txtToxicConsequence.Location = new System.Drawing.Point(355, 187);
+            this.txtToxicConsequence.Name = "txtToxicConsequence";
+            this.txtToxicConsequence.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicConsequence.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicConsequence.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicConsequence.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicConsequence.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicConsequence.TabIndex = 32;
+            // 
+            // txtToxicReleaseMassD1
+            // 
+            this.txtToxicReleaseMassD1.Location = new System.Drawing.Point(355, 75);
+            this.txtToxicReleaseMassD1.Name = "txtToxicReleaseMassD1";
+            this.txtToxicReleaseMassD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicReleaseMassD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicReleaseMassD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicReleaseMassD1.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicReleaseMassD1.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicReleaseMassD1.TabIndex = 12;
+            // 
+            // txtDinD1
+            // 
+            this.txtDinD1.Location = new System.Drawing.Point(355, 131);
+            this.txtDinD1.Name = "txtDinD1";
+            this.txtDinD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDinD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtDinD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDinD1.Properties.Appearance.Options.UseFont = true;
+            this.txtDinD1.Size = new System.Drawing.Size(100, 22);
+            this.txtDinD1.TabIndex = 22;
+            // 
+            // txtToxicCAD1
+            // 
+            this.txtToxicCAD1.Location = new System.Drawing.Point(355, 159);
+            this.txtToxicCAD1.Name = "txtToxicCAD1";
+            this.txtToxicCAD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicCAD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCAD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicCAD1.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicCAD1.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicCAD1.TabIndex = 27;
+            // 
+            // txtToxicLeakDurationD1
+            // 
+            this.txtToxicLeakDurationD1.Location = new System.Drawing.Point(355, 47);
+            this.txtToxicLeakDurationD1.Name = "txtToxicLeakDurationD1";
+            this.txtToxicLeakDurationD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtToxicLeakDurationD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicLeakDurationD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtToxicLeakDurationD1.Properties.Appearance.Options.UseFont = true;
+            this.txtToxicLeakDurationD1.Size = new System.Drawing.Size(100, 22);
+            this.txtToxicLeakDurationD1.TabIndex = 7;
+            // 
+            // txtCinD1
+            // 
+            this.txtCinD1.Location = new System.Drawing.Point(355, 103);
+            this.txtCinD1.Name = "txtCinD1";
+            this.txtCinD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCinD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCinD1.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCinD1.Properties.Appearance.Options.UseFont = true;
+            this.txtCinD1.Size = new System.Drawing.Size(100, 22);
+            this.txtCinD1.TabIndex = 17;
+            // 
+            // label293
+            // 
+            this.label293.AutoSize = true;
+            this.label293.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label293.Location = new System.Drawing.Point(26, 194);
+            this.label293.Name = "label293";
+            this.label293.Size = new System.Drawing.Size(262, 15);
+            this.label293.TabIndex = 31;
+            this.label293.Text = "Toxic Personel Injury Consequence Area (m^2)";
+            // 
+            // label294
+            // 
+            this.label294.AutoSize = true;
+            this.label294.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label294.Location = new System.Drawing.Point(26, 82);
+            this.label294.Name = "label294";
+            this.label294.Size = new System.Drawing.Size(177, 15);
+            this.label294.TabIndex = 11;
+            this.label294.Text = "Toxic Release mass rate (Kg/s)";
+            // 
+            // label295
+            // 
+            this.label295.AutoSize = true;
+            this.label295.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label295.Location = new System.Drawing.Point(26, 138);
+            this.label295.Name = "label295";
+            this.label295.Size = new System.Drawing.Size(67, 15);
+            this.label295.TabIndex = 21;
+            this.label295.Text = "Constant D";
+            // 
+            // label296
+            // 
+            this.label296.AutoSize = true;
+            this.label296.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label296.Location = new System.Drawing.Point(26, 166);
+            this.label296.Name = "label296";
+            this.label296.Size = new System.Drawing.Size(89, 15);
+            this.label296.TabIndex = 26;
+            this.label296.Text = "Toxic CA (m^2)";
+            // 
+            // label297
+            // 
+            this.label297.AutoSize = true;
+            this.label297.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label297.Location = new System.Drawing.Point(26, 54);
+            this.label297.Name = "label297";
+            this.label297.Size = new System.Drawing.Size(171, 15);
+            this.label297.TabIndex = 6;
+            this.label297.Text = "Toxic Leak Duration (Minutes)";
+            // 
+            // label298
+            // 
+            this.label298.AutoSize = true;
+            this.label298.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label298.Location = new System.Drawing.Point(26, 110);
+            this.label298.Name = "label298";
+            this.label298.Size = new System.Drawing.Size(66, 15);
+            this.label298.TabIndex = 16;
+            this.label298.Text = "Constant C";
             // 
             // label229
             // 
@@ -7286,9 +7707,9 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.label194);
             this.panel2.Controls.Add(this.label195);
-            this.panel2.Controls.Add(this.textBox59);
+            this.panel2.Controls.Add(this.txtTotalConsequenceShell);
             this.panel2.Controls.Add(this.label201);
-            this.panel2.Controls.Add(this.textBox60);
+            this.panel2.Controls.Add(this.txtConsequenceCategoryShell);
             this.panel2.Controls.Add(this.label193);
             this.panel2.Location = new System.Drawing.Point(11, 219);
             this.panel2.Name = "panel2";
@@ -7314,14 +7735,14 @@
             this.label195.TabIndex = 1;
             this.label195.Text = "The total consequence (US$)";
             // 
-            // textBox59
+            // txtTotalConsequenceShell
             // 
-            this.textBox59.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox59.Location = new System.Drawing.Point(355, 32);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(100, 21);
-            this.textBox59.TabIndex = 2;
+            this.txtTotalConsequenceShell.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTotalConsequenceShell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtTotalConsequenceShell.Location = new System.Drawing.Point(355, 32);
+            this.txtTotalConsequenceShell.Name = "txtTotalConsequenceShell";
+            this.txtTotalConsequenceShell.Size = new System.Drawing.Size(100, 21);
+            this.txtTotalConsequenceShell.TabIndex = 2;
             // 
             // label201
             // 
@@ -7333,14 +7754,14 @@
             this.label201.TabIndex = 4;
             this.label201.Text = "Consequence Category";
             // 
-            // textBox60
+            // txtConsequenceCategoryShell
             // 
-            this.textBox60.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox60.Location = new System.Drawing.Point(355, 59);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(100, 21);
-            this.textBox60.TabIndex = 5;
+            this.txtConsequenceCategoryShell.BackColor = System.Drawing.SystemColors.Control;
+            this.txtConsequenceCategoryShell.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtConsequenceCategoryShell.Location = new System.Drawing.Point(355, 59);
+            this.txtConsequenceCategoryShell.Name = "txtConsequenceCategoryShell";
+            this.txtConsequenceCategoryShell.Size = new System.Drawing.Size(100, 21);
+            this.txtConsequenceCategoryShell.TabIndex = 5;
             // 
             // label193
             // 
@@ -7977,9 +8398,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbWithinDikeLeakageShell.Properties)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinalConsequence.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinalPersonelInjury.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinalComponentDamage.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalConsequenceShell.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalPersonelInjuryShell.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinalComponentDamageShell.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFlammablePersonelInjury.Properties)).EndInit();
@@ -8037,6 +8458,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBlended_CMD_AIL_D1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtA3.Properties)).EndInit();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicConsequence.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDinD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCinD1.Properties)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReleaseVolumeLeakageShellD4.Properties)).EndInit();
@@ -8577,9 +9020,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label194;
         private System.Windows.Forms.Label label195;
-        private System.Windows.Forms.TextBox textBox59;
+        private System.Windows.Forms.TextBox txtTotalConsequenceShell;
         private System.Windows.Forms.Label label201;
-        private System.Windows.Forms.TextBox textBox60;
+        private System.Windows.Forms.TextBox txtConsequenceCategoryShell;
         private System.Windows.Forms.Label label193;
         private DevExpress.XtraEditors.TextEdit tbFCenvRuptureShell;
         private DevExpress.XtraEditors.TextEdit tbFCenvLeakageShell;
@@ -8686,11 +9129,11 @@
         private DevExpress.XtraEditors.TextEdit txtBlended_CMD_AINL_D1;
         private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AINL_D1;
         private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AINL_D1;
-        private DevExpress.XtraEditors.TextEdit txtFinalComponentDamage;
+        private DevExpress.XtraEditors.TextEdit txtFinalComponentDamageShell;
         private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AINL_D1;
         private DevExpress.XtraEditors.TextEdit txtB1;
         private DevExpress.XtraEditors.TextEdit txtCONT_INJ_AIL_D1;
-        private DevExpress.XtraEditors.TextEdit txtFinalPersonelInjury;
+        private DevExpress.XtraEditors.TextEdit txtFinalPersonelInjuryShell;
         private DevExpress.XtraEditors.TextEdit txtBlended_INJ_AIL_D1;
         private DevExpress.XtraEditors.TextEdit txtReleaseRateD1;
         private DevExpress.XtraEditors.TextEdit txtCONT_CMD_AIL_D1;
@@ -8718,10 +9161,42 @@
         private System.Windows.Forms.Label label279;
         private System.Windows.Forms.Label label277;
         private System.Windows.Forms.Label label285;
-        private DevExpress.XtraEditors.TextEdit txtFinalConsequence;
+        private DevExpress.XtraEditors.TextEdit txtFinalConsequenceShell;
         private System.Windows.Forms.Label label287;
         private System.Windows.Forms.Label label286;
         private DevExpress.XtraEditors.TextEdit txtFlammablePersonelInjury;
         private DevExpress.XtraEditors.TextEdit txtFlammableComponentDamage;
+        private System.Windows.Forms.Label label288;
+        private System.Windows.Forms.Label label289;
+        private System.Windows.Forms.Label label290;
+        private System.Windows.Forms.Label label291;
+        private System.Windows.Forms.Label label292;
+        private DevExpress.XtraEditors.TextEdit txtToxicReleaseMassD4;
+        private DevExpress.XtraEditors.TextEdit txtDinD4;
+        private DevExpress.XtraEditors.TextEdit txtToxicCAD4;
+        private DevExpress.XtraEditors.TextEdit txtToxicLeakDurationD4;
+        private DevExpress.XtraEditors.TextEdit txtCinD4;
+        private DevExpress.XtraEditors.TextEdit txtToxicReleaseMassD3;
+        private DevExpress.XtraEditors.TextEdit txtDinD3;
+        private DevExpress.XtraEditors.TextEdit txtToxicCAD3;
+        private DevExpress.XtraEditors.TextEdit txtToxicLeakDurationD3;
+        private DevExpress.XtraEditors.TextEdit txtCinD3;
+        private DevExpress.XtraEditors.TextEdit txtToxicReleaseMassD2;
+        private DevExpress.XtraEditors.TextEdit txtDinD2;
+        private DevExpress.XtraEditors.TextEdit txtToxicCAD2;
+        private DevExpress.XtraEditors.TextEdit txtToxicLeakDurationD2;
+        private DevExpress.XtraEditors.TextEdit txtCinD2;
+        private DevExpress.XtraEditors.TextEdit txtToxicConsequence;
+        private DevExpress.XtraEditors.TextEdit txtToxicReleaseMassD1;
+        private DevExpress.XtraEditors.TextEdit txtDinD1;
+        private DevExpress.XtraEditors.TextEdit txtToxicCAD1;
+        private DevExpress.XtraEditors.TextEdit txtToxicLeakDurationD1;
+        private DevExpress.XtraEditors.TextEdit txtCinD1;
+        private System.Windows.Forms.Label label293;
+        private System.Windows.Forms.Label label294;
+        private System.Windows.Forms.Label label295;
+        private System.Windows.Forms.Label label296;
+        private System.Windows.Forms.Label label297;
+        private System.Windows.Forms.Label label298;
     }
 }

@@ -952,7 +952,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             outage_affa = (float)Math.Pow(10, b);
             return outage_affa;
         }
-        public float fc_prod() //Business Interruption Costs
+        public float fc_prod() //Business Interruption Costs 
         {
             float fc_prod = (outage_cmd() + outage_affa()) * PRODUCTION_COST;
             return fc_prod;
@@ -1572,6 +1572,105 @@ namespace RBI.BUS.BUSMSSQL_CAL
             t = (float)(7E-05 * AINL_Inj(1) + 2.5E-05 * AINL_Inj(2) + 5E-06 * AINL_Inj(3) + 1E-07 * AINL_Inj(4));
             float ca_inj = t / 0.0001001f;
             return Math.Abs(ca_inj);
+        }
+        public float leakDurationToxic(int i)
+        {
+            float[] pl_ul = GET_PL_UL();
+            float volume_Fluid_Shell = Lvol_above_i();
+            float mass_Available = volume_Fluid_Shell * pl_ul[0];
+            return Math.Min((float)(mass_Available / rate_Flammable(i)), (float)3600.0);
+        }
+        public float releaseFluidPercentToxic;
+        public float releaseRateMass(int i)
+        {
+            return (float)(releaseFluidPercentToxic * rate_Flammable(i));
+        }
+        private float ldToxicMinutes(int i)
+        {
+            return (float)(Math.Min(Math.Max((double)(leakDurationToxic(i) / 60.0), (double)5.0), 60.0));
+        }
+        public float ConstC(int i)
+        {
+            float input = ldToxicMinutes(i);
+            if (input >= 60)
+                return 1.2266f;
+            else if (input >= 40)
+                return 1.2297f;
+            else if (input >= 20)
+                return 1.2370f;
+            else if (input >= 10)
+                return 1.2410f;
+            else if (input >= 5)
+                return 1.2411f;
+            else
+                return 0.9674f;
+        }
+        public float ConstD(int i)
+        {
+            float input = ldToxicMinutes(i);
+            if (input >= 60)
+                return 4.4365f;
+            else if (input >= 40)
+                return 4.3626f;
+            else if (input >= 20)
+                return 4.238f;
+            else if (input >= 10)
+                return 4.0948f;
+            else if (input >= 5)
+                return 3.9686f;
+            else
+                return 2.7840f;
+        }
+        public float toxic_Inj(int i)
+        {
+            return (float)(DAL_CAL.GET_TBL_3B21(8) * Math.Pow(10.0, (ConstC(i) * Math.Log10(DAL_CAL.GET_TBL_3B21(4) * releaseRateMass(i))) + ConstD(i)));
+        }
+        public float total_toxic_Inj()
+        {
+            API_COMPONENT_TYPE obj = GET_DATA_API_COM();
+            float t = 0;
+            t = obj.GFFSmall * toxic_Inj(1) + obj.GFFMedium * toxic_Inj(2) + obj.GFFLarge * toxic_Inj(3) + obj.GFFRupture * toxic_Inj(4);
+            float total_toxic_Inj = t / obj.GFFTotal;
+            return Math.Abs(total_toxic_Inj);
+        }
+        public float ca_cmd_shell()
+        {
+            return ca_cmd_flame_shell();
+        }
+        public float ca_inj_shell()
+        {
+            float cainjflame = ca_inj_flame_shell();
+            float cainjtoxic = total_toxic_Inj();
+            return Math.Max(cainjflame, cainjtoxic);
+        }
+        public float Final_consequence_shell()
+        {
+            float cacmdshell = ca_cmd_shell();
+            float cainjshell = ca_inj_shell();
+            return Math.Max(cacmdshell, cainjshell);
+        }
+        public float fc_affa_tank() //Damage Costs to Surrounding Equipment in Affected Area
+        {
+            float fc_affa = 0;
+            float cacmd = ca_cmd_shell();
+            fc_affa = cacmd * EQUIPMENT_COST;
+            return fc_affa;
+        }
+        public float fc_prod_tank() //Business Interruption Costs 
+        {
+            float fc_prod = (outage_cmd() + outage_affa_tank()) * PRODUCTION_COST;
+            return fc_prod;
+        }
+        public float fc_inj_tank()
+        {
+            float fc_inj = ca_inj_shell() * PERSON_DENSITY * INJURE_COST;
+            return fc_inj;
+        }
+        public float outage_affa_tank()
+        {
+            float outage_affa = 0;
+            outage_affa = (float)(Math.Pow(10.0, 1.242 + (0.585 * Math.Log10(fc_affa_tank() * Math.Pow(10.0, -6.0)))));
+            return outage_affa;
         }
         #endregion
     }
