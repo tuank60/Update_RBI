@@ -138,6 +138,8 @@ namespace RBI.PRE.subForm.InputDataForm
                 tank.API_FLUID = "C13-C16";
             else if (tank.TANK_FLUID == "Fuel Oil" || tank.TANK_FLUID == "Crude Oil")
                 tank.API_FLUID = "C17-C25";
+            else if (tank.TANK_FLUID == "Water")
+                tank.API_FLUID = "Water";
             else
                 tank.API_FLUID = "C25+";
             return tank;

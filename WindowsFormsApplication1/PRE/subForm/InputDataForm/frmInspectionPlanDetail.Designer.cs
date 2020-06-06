@@ -177,6 +177,7 @@
             this.gridColumn80 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn156 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn157 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn155 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAP2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colAP3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRLI = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -348,7 +349,6 @@
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn155 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
@@ -1909,6 +1909,14 @@
             this.gridColumn157.Name = "gridColumn157";
             this.gridColumn157.Visible = true;
             this.gridColumn157.VisibleIndex = 3;
+            // 
+            // gridColumn155
+            // 
+            this.gridColumn155.Caption = "AP1";
+            this.gridColumn155.FieldName = "AP1";
+            this.gridColumn155.Name = "gridColumn155";
+            this.gridColumn155.Visible = true;
+            this.gridColumn155.VisibleIndex = 4;
             // 
             // colAP2
             // 
@@ -3566,14 +3574,6 @@
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 2;
             this.gridColumn6.Width = 49;
-            // 
-            // gridColumn155
-            // 
-            this.gridColumn155.Caption = "AP1";
-            this.gridColumn155.FieldName = "AP1";
-            this.gridColumn155.Name = "gridColumn155";
-            this.gridColumn155.Visible = true;
-            this.gridColumn155.VisibleIndex = 4;
             // 
             // frmInspectionPlanDetail
             // 
