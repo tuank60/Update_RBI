@@ -223,6 +223,7 @@
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_UNITS.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\Corrosion_Rate.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL.cs" />
+    <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL_FLAMMABLE.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_DM_CAL.cs" />
     <Compile Include="BUS\BUSXML\ReadXML.cs" />
     <Compile Include="BUS\sendEmail.cs" />

@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RBI.Object.ObjectMSSQL;
 using RBI.BUS.BUSMSSQL;
-using RBI.BUS.BUSMSSQL_CAL;
 using RBI.Object;
+using RBI.BUS.BUSMSSQL_CAL;
 
 
 namespace RBI.PRE.subForm.OutputDataForm
@@ -45,8 +45,9 @@ namespace RBI.PRE.subForm.OutputDataForm
             riskPoF(ID);
             riskCA(ID);
             addItemDetectionSystem();
-            //initAreabaseCOF(ID); //Hiện đang lỗi ở hàm này
-
+            initAreabaseCOF(ID); //Hiện đang lỗi ở hàm này
+            addItemIsolationSystem();
+            addItemMitigation();
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
             //initData_Tank(ID);
@@ -305,6 +306,23 @@ namespace RBI.PRE.subForm.OutputDataForm
                 cbDetectionSystem.Properties.Items.Add(itemDetectionSystem[i], i, i);
             }
         }
+        private void addItemIsolationSystem()
+        {
+            cbIsolationSystem.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemIsolationSystem.Length; i++)
+            {
+                cbIsolationSystem.Properties.Items.Add(itemIsolationSystem[i], i, i);
+            }
+        }
+        private void addItemMitigation()
+        {
+            cbMitigationSystem.Properties.Items.Add("", -1, -1);
+            for (int i = 0; i < itemMitigationSystem.Length; i++)
+            {
+                cbMitigationSystem.Properties.Items.Add(itemMitigationSystem[i], i, i);
+            }
+        }
+
 
 
         private void initData_Roof(int ID)
@@ -685,6 +703,20 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lblFCA.Text = "▼ Flammable Consequence Area";
             }
         }
+        private void lblTCA_Click(object sender, EventArgs e)
+        {
+            if (lblTCA.Text == "▼ Toxic Consequence Area")
+            {
+                panelTCA.Height = 398;
+                lblTCA.Text = "▶ Toxic Consequence Area";
+            }
+            else if (lblTCA.Text == "▶ Toxic Consequence Area")
+            {
+                panelTCA.Height = 21;
+                lblTCA.Text = "▼ Toxic Consequence Area";
+            }
+        }
+
 
         #endregion
         #region Xu ly su kien khi data thay doi
@@ -800,45 +832,25 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
         private void showData(int ID, float mass_inv, String DetectionType, String IsolationType, String Mitigation )
         {
-            //RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
             RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
-            //RW_FULL_COF_INPUT fcip = busfcip.getDataSource(ID);
+            RW_FULL_COF_INPUT obj = busfcip.getData(ID);
+            cbDetectionSystem.SelectedItem = obj.DetectionType;
+            cbIsolationSystem.SelectedItem = obj.IsolationType;
+            cbMitigationSystem.SelectedItem = obj.Mitigation;
+            txtFM.Text = obj.mass_inv.ToString();
 
         }
         public void getData(int ID)
         {
             RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
             RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
-            fcip.ID=ID;
-            if (cbDetectionSystem.Text == itemDetectionSystem[0])
-            {
-                fcip.DetectionType = "A";
-            }
-            else if (cbDetectionSystem.Text == itemDetectionSystem[1])
-            {
-                fcip.DetectionType = "B";
-            }
-            else
-            {
-                fcip.DetectionType = "C";
-            }
-            //fcip.DetectionType = cbDetectionSystem.Text;
-            if (comboBox2.Text == itemIsolationSystem[0])
-            {
-                fcip.IsolationType = "A";
-            }
-            else if (comboBox2.Text == itemIsolationSystem[1])
-            {
-                fcip.IsolationType = "B";
-            }
-            else
-            {
-                fcip.IsolationType = "C";
-            }
-            fcip.Mitigation = comboBox3.Text;
+            fcip.ID = ID;
+            fcip.DetectionType = cbDetectionSystem.Text;
+            fcip.IsolationType = cbIsolationSystem.Text;
+            fcip.Mitigation = cbMitigationSystem.Text;
+            fcip.mass_inv = float.Parse(txtFM.Text);
             fcipbus.add(fcip);
-          //  fcip.mass_inv = txtFM.Text;
-           // return fcip;
+            // return fcip;
 
         }
 
@@ -969,7 +981,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 // if (tabPane1.SelectedPage.Name == "tabInspectionMethod")
                 //  showGridControlMethod();
             }
-            //  MessageBox.Show("shfgsdhfgsd");
+            MessageBox.Show("shfgsdhfgsd");
         }
 
         
@@ -1103,5 +1115,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtConsequenceCategoryShell.Text = CA.FC_Category(FC);
 
         }
+
+
+        
     }
 }
