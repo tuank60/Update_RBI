@@ -17,6 +17,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
         public String FLUID { set; get; }
+        public float MITIGATION_SYSTEM { get; set; }
+        public float STORE_TEMP { get; set; }
+        public String FLUID_PHASE { set; get; }
+        public float TOXIC_PERCENT { get; set; }
         private String TYPE_FLUID()
         {
             String API_TYPE = null;
@@ -67,14 +71,41 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return API_TYPE;
         }
+        public String GET_AMBIENT()
+        {
+            //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
+            return DAL_CAL.GET_RELEASE_PHASE(FLUID);
+        }
+        public float GET_NBP()
+        {
+            //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
+            return DAL_CAL.GET_NBP(FLUID);
+        }
+        public String GET_RELEASE_PHASE()
+        {
+            if(FLUID_PHASE=="Gas")
+            {
+                return "Gas";
+            }
+            else if (GET_AMBIENT() == "Liquid" && FLUID_PHASE == "Liquid")
+            {
+                return "Liquid";
+            }
+            else if (GET_NBP() <= 300)
+            {
+                return "Liquid";
+            }
+            else
+                return "Gas";
+        }
         public float fact_mit()
         {
             float fact_mit = 0;
-            if (CA_CAL.MITIGATION_SYSTEM == "Inventory blowdown, couple with isolation system classification B or higher")
+            if (CA_CAL.MITIGATION_SYSTEM == "Inventory Blowdown, coupled with isolation system actived remotely or automatically")
                 fact_mit = 0.25f;
             else if (CA_CAL.MITIGATION_SYSTEM == "Fire water deluge system and monitors")
                 fact_mit = 0.2f;
-            else if (CA_CAL.MITIGATION_SYSTEM == "Fire water monitors only")
+            else if (CA_CAL.MITIGATION_SYSTEM == "Fire water monitor only")
                 fact_mit = 0.05f;
             else
                 fact_mit = 0.15f;
@@ -82,18 +113,20 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float eneff_n(int n)
         {
-            //mass_n = CA_CAL.mass_n(n);
             float eff = (float)(4 * Math.Log10(DAL_CAL.GET_TBL_3B21(4) * CA_CAL.mass_n(n)) - 15);
-            if (eff == 0)
+            if (eff < 1 )
                 return 1;
             else
                 return eff;
         }
         public float a_cont(int select)
         {
+            //Console.WriteLine("hihi" + FLUID);
             float[] data = DAL_CAL.GET_TBL_58(FLUID);
+            //Console.WriteLine("gfoasd" + data[0]);
             float[] a_cont = { 0, 0, 0, 0 };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            Console.WriteLine("release phase= " +GET_RELEASE_PHASE());
+            if (GET_RELEASE_PHASE() == "Gas")
             {
                 a_cont[0] = data[0];
                 a_cont[1] = data[4];
@@ -107,16 +140,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 a_cont[2] = data[10];
                 a_cont[3] = data[14];
             }
-            if (a_cont[select - 1] == 0)
-                return 1;
-            else
                 return a_cont[select - 1];
         }
         public float b_cont(int select)
         {
             float[] data = DAL_CAL.GET_TBL_58(FLUID);
             float[] b_cont = { 0, 0, 0, 0 };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            if (GET_RELEASE_PHASE() == "Gas")
             {
                 b_cont[0] = data[1];
                 b_cont[1] = data[5];
@@ -132,11 +162,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return b_cont[select - 1];
         }
-        private float a_inj(int select)
+        public float a_inj(int select)
         {
             float[] data = DAL_CAL.GET_TBL_59(FLUID);
             float[] a_inj = { 0, 0, 0, 0 };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            if (GET_RELEASE_PHASE() == "Gas")
             {
                 a_inj[0] = data[0];
                 a_inj[1] = data[4];
@@ -152,11 +182,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return a_inj[select - 1];
         }
-        private float b_inj(int select)
+        public float b_inj(int select)
         {
             float[] data = DAL_CAL.GET_TBL_59(FLUID);
             float[] b_inj = { 0, 0, 0, 0 };//{ data[1], data[3], data[5], data[7], data[9], data[11], data[13], data[15] };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            if (GET_RELEASE_PHASE() == "Gas")
             {
                 b_inj[0] = data[1];
                 b_inj[1] = data[5];
@@ -172,14 +202,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return b_inj[select - 1];
         }
-        private float ca_cmdn_cont(int select, int n)
+        public float ca_cmdn_cont(int select, int n)
         {
             float ca_cmdn_cont = 0;
             String API_FLUID_TYPE = TYPE_FLUID();
-            if ((CA_CAL.GET_RELEASE_PHASE() == "Liquid") && (API_FLUID_TYPE == "TYPE 0"))
-                ca_cmdn_cont = (float)Math.Round(Math.Min(a_cont(select) * Math.Pow(CA_CAL.rate_n(n), b_cont(select)), DAL_CAL.GET_TBL_3B21(7)) * (1 - CA_CAL.fact_mit()), 2);
-            else
-                ca_cmdn_cont = (float)Math.Round(a_cont(select) * Math.Pow(CA_CAL.rate_n(n), b_cont(select)) * (1 - CA_CAL.fact_mit()), 2);
+            Console.WriteLine("API_FLUID_TYPE= " + API_FLUID_TYPE);
+            float x = CA_CAL.rate_n(n) * (TOXIC_PERCENT / 100);
+            Console.WriteLine("x= " +x);
+            ca_cmdn_cont = (float)Math.Round(a_cont(select) * Math.Pow(x, b_cont(select)) * (1 - fact_mit()), 5);
             return ca_cmdn_cont;
         }
         private float effrate_n(int select, int n)
