@@ -256,3 +256,6 @@ C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Release\RBI.csproj.
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe.licenses
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.pdb
+D:\rbi code\10.6\Update_RBI\Update_RBI\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe.config
+D:\rbi code\10.6\Update_RBI\Update_RBI\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe
+D:\rbi code\10.6\Update_RBI\Update_RBI\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.pdb

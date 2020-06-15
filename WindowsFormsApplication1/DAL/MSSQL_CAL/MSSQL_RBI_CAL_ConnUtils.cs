@@ -91,39 +91,6 @@ namespace RBI.DAL.MSSQL_CAL
             }
             return data;
         }
-        public float GET_NBP(String fluid)
-        {
-            conn = MSSQLDBUtils.GetDBConnection();
-            conn.Open();
-            float data = 0;
-            String sql = "USE [rbi] SELECT [NBP] FROM [dbo].[TBL_52_CA_PROPERTIES_LEVEL_1] WHERE [Fluid] = '" + fluid + "'";
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = sql;
-                using (DbDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        if (reader.HasRows)
-                        {
-                            data = (float)reader.GetDouble(0);
-                        }
-                    }
-                }
-            }
-            catch
-            {
-                MessageBox.Show("GET TBL_52 FAIL!");
-            }
-            finally
-            {
-                conn.Close();
-                conn.Dispose();
-            }
-            return data;
-        }
         // get all data from TBL_58
         public float[] GET_TBL_58(String fluid)
         {

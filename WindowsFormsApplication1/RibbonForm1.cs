@@ -251,7 +251,9 @@ namespace RBI
                     UCInspectionHistorySubform ucInsHisSub = uc.ucInspectionHistory;
                     RW_INPUT_CA_TANK caTank = new RW_INPUT_CA_TANK();
                     RW_FULL_COF_INPUT fcinput = new RW_FULL_COF_INPUT();
-
+                    //RW_FULL_COF_INPUT
+                    //UCRiskFactor ucRiskfactor = new UCRiskFactor();
+                    //RW_FULL_COF_INPUT fcip = uc.ucRiskFactor.getData(IDProposal);
                     //RW_INPUT_CA_LEVEL_1 caInput = uc.ucCA.getData(IDProposal);
                     String _tabName = xtraTabData.SelectedTabPage.Text;
                     String componentNumber = _tabName.Substring(0, _tabName.IndexOf("["));
@@ -591,7 +593,6 @@ namespace RBI
             RW_INPUT_CA_TANK rwInputCATank = new RW_INPUT_CA_TANK();
             RW_FULL_COF_TANK rwCOFTank = new RW_FULL_COF_TANK();
             RW_RISK_GRAPH rwRiskGraph = new RW_RISK_GRAPH();
-            RW_FULL_COF_HOLE_SIZE rwfchs = new RW_FULL_COF_HOLE_SIZE();
             /*-----------------Tìm đuôi Proposal có giá trị lớn nhất-------------------*/
             List<string> lstProposalName = busAssessment.AllName();
             List<int> number = new List<int>();
@@ -646,6 +647,10 @@ namespace RBI
             busAssessment.add(rwass);
             List<RW_ASSESSMENT> listAss = busAssessment.getDataSource();
             int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);
+            RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
+            fcip.ID = ID;
+            RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
+            fcipbus.add(fcip);
             rwEq.ID = ID;
             rwCom.ID = ID;
             rwCoat.ID = ID;
@@ -654,7 +659,6 @@ namespace RBI
             rwFullPoF.ID = ID;
             rwMaterial.ID = ID;
             rwExtTemp.ID = ID;
-            rwfchs.ID = ID;
             rwCoat.ExternalCoatingDate = DateTime.Now;
             busEquipment.add(rwEq);
             busComponent.add(rwCom);
@@ -662,7 +666,6 @@ namespace RBI
             busMaterial.add(rwMaterial);
             busStream.add(rwStream);
             busExtcorTemp.add(rwExtTemp);
-            hsbus.add(rwfchs);
             int[] eq_comID = busAssessment.getEquipmentID_ComponentID(ID);
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
 
@@ -2488,32 +2491,22 @@ namespace RBI
             //Console.WriteLine("rate_4= " + rwfholesize.rate_4);
 
             rwfholesize.ld_1 = CA_CAL.ld_n(1);
-            //Console.WriteLine("ld 1= " + rwfholesize.ld_1);
+            Console.WriteLine("ld 1= " + rwfholesize.ld_1);
             rwfholesize.ld_2 = CA_CAL.ld_n(2);
-            //Console.WriteLine("ld 2= " + rwfholesize.ld_2);
+            Console.WriteLine("ld 2= " + rwfholesize.ld_2);
             rwfholesize.ld_3 = CA_CAL.ld_n(3);
-            //Console.WriteLine("ld 3= " + rwfholesize.ld_3);
+            Console.WriteLine("ld 3= " + rwfholesize.ld_3);
             rwfholesize.ld_4 = CA_CAL.ld_n(4);
-            //Console.WriteLine("ld 4= " + rwfholesize.ld_4);
+            Console.WriteLine("ld 4= " + rwfholesize.ld_4);
 
             rwfholesize.mass_1 = CA_CAL.mass_n(1);
-            //Console.WriteLine("mass_1= " + rwfholesize.mass_1);
+            Console.WriteLine("mass_1= " + rwfholesize.mass_1);
             rwfholesize.mass_2 = CA_CAL.mass_n(2);
-            //Console.WriteLine("mass_2= " + rwfholesize.mass_2);
+            Console.WriteLine("mass_2= " + rwfholesize.mass_2);
             rwfholesize.mass_3 = CA_CAL.mass_n(3);
-            //Console.WriteLine("mass_3= " + rwfholesize.mass_3);
+            Console.WriteLine("mass_3= " + rwfholesize.mass_3);
             rwfholesize.mass_4 = CA_CAL.mass_n(4);
-            //Console.WriteLine("mass_4= " + rwfholesize.mass_4);
-
-            rwfholesize.eneff_1 = CA_CAL.eneff_n(1);
-            Console.WriteLine("eneff1= " + rwfholesize.eneff_1);
-            rwfholesize.eneff_2 = CA_CAL.eneff_n(2);
-            Console.WriteLine("eneff2= " + rwfholesize.eneff_2);
-            rwfholesize.eneff_3 = CA_CAL.eneff_n(3);
-            Console.WriteLine("eneff3= " + rwfholesize.eneff_3);
-            rwfholesize.eneff_4 = CA_CAL.eneff_n(4);
-            Console.WriteLine("eneff4= " + rwfholesize.eneff_4);
-
+            Console.WriteLine("mass_4= " + rwfholesize.mass_4);
 
 
             if (hsbus.checkExistCoFHS(rwfholesize.ID))
@@ -3567,6 +3560,7 @@ namespace RBI
             busExtcorTemp.edit(extTemp);
             busCoating.edit(coat);
             busMaterial.edit(ma);
+            
             //busCorrosionRate.edit(corate);
             //busInputCALevel1.edit(ca);
             //Console.WriteLine("tank fluid name="+stream.TankFluidName);

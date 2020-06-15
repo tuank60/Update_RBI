@@ -122,7 +122,7 @@ namespace RBI.DAL.MSSQL
                         ",[IsolationType]" +
                         ",[mass_comp]" +
                         ",[mass_inv]" +
-                          "From [dbo].[RW_FULL_COF_INPUT]  ";
+                          "From [dbo].[RW_FULL_COF_INPUT] Where [ID] ='" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -147,7 +147,7 @@ namespace RBI.DAL.MSSQL
             catch
             {
                 obj.ID = 0;
-                //MessageBox.Show("GET DATA FAIL!", "ERROR!");
+                MessageBox.Show("GET DATA FAIL!", "ERROR!");
             }
             finally
             {
