@@ -20,13 +20,13 @@ namespace RBI.PRE.subForm.OutputDataForm
     
     public partial class UCRiskFactor : UserControl
     {
-        String[] itemDetectionSystem= { "Instrumentation designed specifically to detect material losses by changes in operating conditions (i.e., loss of pressure or flow) in the system",
+        string[] itemDetectionSystem= { "Instrumentation designed specifically to detect material losses by changes in operating conditions (i.e., loss of pressure or flow) in the system",
                                         "Suitably located detectors to determine when the material is present outside the pressure-containing envelope",
                                         "Visual detection, cameras, or detectors with marginal coverage" };
-        String[] itemIsolationSystem= { "Isolation or shutdown systems activated directly from process instrumentation or detectors, with no operator intervention",
+        string[] itemIsolationSystem= { "Isolation or shutdown systems activated directly from process instrumentation or detectors, with no operator intervention",
                                         "Isolation or shutdown systems activated by operators in the control room or other suitable locations remote from the leak",
                                         "Isolation dependent on manually-operated valves" };
-        String[] itemMitigationSystem= {"Inventory Blowdown, coupled with isolation system actived remotely or automatically",
+        string[] itemMitigationSystem= {"Inventory Blowdown, coupled with isolation system actived remotely or automatically",
                                         "Fire water deluge system and monitors",
                                         "Foam spray system",
                                         "Fire water monitor only",
@@ -35,7 +35,6 @@ namespace RBI.PRE.subForm.OutputDataForm
         public UCRiskFactor()
         {
             InitializeComponent();
-            //addItemDetectionSystem();
         }
         private int id = -1;
         public UCRiskFactor(int ID)
@@ -112,65 +111,65 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
         public void initAreabaseCOF(int ID) //lỗi hàm này
         {
-        //    RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
-        //    RW_FULL_COF_HOLE_SIZE obj = hsbus.getData(ID);
-        //    RW_FULL_COF_INPUT_BUS fcipbus= new RW_FULL_COF_INPUT_BUS();
-        //    RW_FULL_COF_INPUT fcip = fcipbus.getData(ID);
+            RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = hsbus.getData(ID);
+            RW_FULL_COF_INPUT_BUS fcipbus= new RW_FULL_COF_INPUT_BUS();
+            RW_FULL_COF_INPUT fcip = fcipbus.getData(ID);
 
-        //    textBox26.Text = obj.A1.ToString();
-        //    textBox36.Text = obj.A2.ToString();
-        //    textBox47.Text = obj.A3.ToString();
-        //    textBox58.Text = obj.A4.ToString();
+            txtHoleSizeAreaSmall.Text = obj.A1.ToString();
+            txtHoleSizeAreaMedium.Text = obj.A2.ToString();
+            txtHoleSizeAreaLarge.Text = obj.A3.ToString();
+            txtHoleSizeAreaRupture.Text = obj.A4.ToString();
 
-        //    textBox25.Text = obj.W1.ToString();
-        //    textBox35.Text = obj.W2.ToString();
-        //    textBox46.Text = obj.W3.ToString();
-        //    textBox57.Text = obj.W4.ToString();
+            txtReleaseRateSmall.Text = obj.W1.ToString();
+            txtReleaseRateMedium.Text = obj.W2.ToString();
+            txtReleaseRateLarge.Text = obj.W3.ToString();
+            txtReleaseRateRupture.Text = obj.W4.ToString();
 
-        //    textBox16.Text = obj.GFF_small.ToString();
-        //    textBox15.Text = obj.GFF_medium.ToString();
-        //    textBox37.Text = obj.GFF_large.ToString();
-        //    textBox48.Text = obj.GFF_rupture.ToString();
+            txtGffSmall.Text = obj.GFF_small.ToString();
+            txtGffMedium.Text = obj.GFF_medium.ToString();
+            txtGffLarge.Text = obj.GFF_large.ToString();
+            txtGffRupture.Text = obj.GFF_rupture.ToString();
 
-        //    textBox17.Text = obj.mass_add_1.ToString();
-        //    textBox27.Text = obj.mass_add_2.ToString();
-        //    textBox38.Text = obj.mass_add_3.ToString();
-        //    textBox49.Text = obj.mass_add_4.ToString();
+            txtMassAddSmall.Text = obj.mass_add_1.ToString();
+            txtMassAddMedium.Text = obj.mass_add_2.ToString();
+            txtMassAddLarge.Text = obj.mass_add_3.ToString();
+            txtMassAddRupture.Text = obj.mass_add_4.ToString();
 
-        //    textBox18.Text = obj.mass_avail_1.ToString();
-        //    textBox28.Text = obj.mass_avail_2.ToString();
-        //    textBox39.Text = obj.mass_avail_3.ToString();
-        //    textBox50.Text = obj.mass_avail_4.ToString();
+            txtMassAvailSmall.Text = obj.mass_avail_1.ToString();
+            txtMassAvailMedium.Text = obj.mass_avail_2.ToString();
+            txtMassAvailLarge.Text = obj.mass_avail_3.ToString();
+            txtMassAvailRupture.Text = obj.mass_avail_4.ToString();
 
-        //    textBox19.Text = obj.t_n1.ToString();
-        //    textBox29.Text = obj.t_n2.ToString();
-        //    textBox40.Text = obj.t_n3.ToString();
-        //    textBox51.Text = obj.t_n4.ToString();
+            txtTnSmall.Text = obj.t_n1.ToString();
+            txtTnMedium.Text = obj.t_n2.ToString();
+            txtTnLarge.Text = obj.t_n3.ToString();
+            txtTnRupture.Text = obj.t_n4.ToString();
 
-        //    textBox20.Text = obj.ReleaseType_1.ToString();
-        //    textBox30.Text = obj.ReleaseType_2.ToString();
-        //    textBox41.Text = obj.ReleaseType_3.ToString();
-        //    textBox52.Text = obj.ReleaseType_4.ToString();
+            txtReleaseTypeSmall.Text = obj.ReleaseType_1.ToString();
+            txtReleaseTypeMedium.Text = obj.ReleaseType_2.ToString();
+            txtReleaseTypeLarge.Text = obj.ReleaseType_3.ToString();
+            txtReleaseTypeRupture.Text = obj.ReleaseType_4.ToString();
 
-        //    textBox21.Text = obj.ld_max_1.ToString();
-        //    textBox31.Text = obj.ld_max_2.ToString();
-        //    textBox42.Text = obj.ld_max_3.ToString();
-        //    textBox53.Text = obj.ld_max_4.ToString();
+            txtLdMaxSmall.Text = obj.ld_max_1.ToString();
+            txtLdMaxMedium.Text = obj.ld_max_2.ToString();
+            txtLdMaxLarge.Text = obj.ld_max_3.ToString();
+            txtLdMaxRupture.Text = obj.ld_max_4.ToString();
 
-        //    textBox22.Text = obj.rate_1.ToString();
-        //    textBox32.Text = obj.rate_2.ToString();
-        //    textBox43.Text = obj.rate_3.ToString();
-        //    textBox54.Text = obj.rate_4.ToString();
+            txtRatenSmall.Text = obj.rate_1.ToString();
+            txtRatenMedium.Text = obj.rate_2.ToString();
+            txtRatenLarge.Text = obj.rate_3.ToString();
+            txtRatenRupture.Text = obj.rate_4.ToString();
 
-        //    textBox23.Text = obj.ld_1.ToString();
-        //    textBox33.Text = obj.ld_2.ToString();
-        //    textBox44.Text = obj.ld_3.ToString();
-        //    textBox55.Text = obj.ld_4.ToString();
+            txtLdSmall.Text = obj.ld_1.ToString();
+            txtLdMedium.Text = obj.ld_2.ToString();
+            txtLdLarge.Text = obj.ld_3.ToString();
+            txtLdRupture.Text = obj.ld_4.ToString();
 
-        //    textBox24.Text = obj.mass_1.ToString();
-        //    textBox34.Text = obj.mass_2.ToString();
-        //    textBox45.Text = obj.mass_3.ToString();
-        //    textBox56.Text = obj.mass_4.ToString();
+            txtReleaseMassSmall.Text = obj.mass_1.ToString();
+            txtReleaseMassMedium.Text = obj.mass_2.ToString();
+            txtReleaseMassLarge.Text = obj.mass_3.ToString();
+            txtReleaseMassRupture.Text = obj.mass_4.ToString();
 
         }
         public void initinput()
@@ -258,7 +257,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCA.PageVisible = false;
                 tabCAShell.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
-                
+                TabArea.PageVisible = false;
                 tabCAShell.PageVisible = true;
                 tabCATankShell.PageVisible = true;
                 tabCATankRoof.PageVisible = false;
@@ -297,12 +296,10 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = true;
                 tabCATankShell.PageVisible = false;
-                TabArea.PageVisible = true;
             }
         }
         private void addItemDetectionSystem()
         {
-            
             cbDetectionSystem.Properties.Items.Add("", -1, -1);
             for (int i = 0; i < itemDetectionSystem.Length; i++)
             {
@@ -843,46 +840,18 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtFM.Text = obj.mass_inv.ToString();
 
         }
-        public void getData(int ID)//luu database
+        public void getData(int ID)
         {
             RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
             RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
-            if(cbDetectionSystem.Text!="" && txtFM.Text!=""&& cbIsolationSystem.Text!="" && cbMitigationSystem.Text!="")
-            {
-                fcip.ID = ID;
-                fcip.mass_inv = float.Parse(txtFM.Text);
-                if (cbDetectionSystem.SelectedIndex == 0) fcip.DetectionType = "A";
-                else if (cbDetectionSystem.SelectedIndex == 1) fcip.DetectionType = "B";
-                else if (cbDetectionSystem.SelectedIndex == 2) fcip.DetectionType = "C";
-                fcip.Mitigation= cbMitigationSystem.SelectedItem.ToString();
-                if (cbIsolationSystem.SelectedIndex == 0) fcip.IsolationType = "A";
-                if (cbIsolationSystem.SelectedIndex == 1) fcip.IsolationType = "B";
-                if (cbIsolationSystem.SelectedIndex == 3) fcip.IsolationType = "C";
-                fcip.mass_comp = 0;
-                fcipbus.edit(fcip);
-            }
-        }
-        public void showDataTabArea(int ID)//lay database
-        {
-            RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
-            RW_FULL_COF_INPUT fcip = fcipbus.getData(ID);
-            txtFM.Text = fcip.mass_inv.ToString();
-            if (fcip.DetectionType == "A")
-                cbDetectionSystem.SelectedIndex = 0;
-            else if (fcip.DetectionType == "B")
-                cbDetectionSystem.SelectedIndex = 1;
-            else if (fcip.DetectionType == "B")
-                cbDetectionSystem.SelectedIndex = 2;
-            else cbDetectionSystem.SelectedIndex = -1;
-            if (fcip.IsolationType == "A")
-                cbIsolationSystem.SelectedIndex = 0;
-            else if (fcip.IsolationType == "B")
-                cbIsolationSystem.SelectedIndex = 1;
-            else if (fcip.IsolationType == "C")
-                cbIsolationSystem.SelectedIndex = 2;
-            else 
-                cbIsolationSystem.SelectedIndex = -1;
-            cbMitigationSystem.SelectItemByDescription(fcip.Mitigation);
+            fcip.ID = ID;
+            fcip.DetectionType = cbDetectionSystem.Text;
+            fcip.IsolationType = cbIsolationSystem.Text;
+            fcip.Mitigation = cbMitigationSystem.Text;
+            fcip.mass_inv = float.Parse(txtFM.Text);
+            fcipbus.add(fcip);
+            // return fcip;
+
         }
 
         private void cbDetectionSystem_SelectedIndexChanged(object sender, EventArgs e)
@@ -900,122 +869,106 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
         private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
-            
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
+            RW_STREAM_BUS busst = new RW_STREAM_BUS();
+            RW_STREAM st = busst.getData(IDProposal);
+            CA_CAL_FLA.FLUID = st.TankFluidName;
+            CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_FLA.TOXIC_PERCENT = st.ReleaseFluidPercentToxic;
+            CA_CAL_FLA.IDProposal = IDProposal;
+            //CA_CAL_FLA.fact_mit=
+
             if (tabRisk.SelectedTabPage.Name == "TabArea")
             {
                 
-                showDataTabArea(id);
-                RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
-                COMPONENT_MASTER_BUS busComponentMaster = new COMPONENT_MASTER_BUS();
-                COMPONENT_TYPE__BUS busComponentType = new COMPONENT_TYPE__BUS();
-                RW_EQUIPMENT_BUS busEquipment = new RW_EQUIPMENT_BUS();
-                RW_COMPONENT_BUS busComponent = new RW_COMPONENT_BUS();
-                MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
-                RW_COMPONENT com = new RW_COMPONENT();
-                RW_MATERIAL ma = new RW_MATERIAL();
-                RW_INPUT_CA_TANK caTank = new RW_INPUT_CA_TANK();
-                RW_STREAM st = new RW_STREAM();
-                com.ID = id;
-                int[] eq_comID = busAssessment.getEquipmentID_ComponentID(id);
-                COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
+                Console.WriteLine("fact_mit= " + CA_CAL_FLA.fact_mit());
+                Console.WriteLine("fact_ait= " + CA_CAL_FLA.fact_ait());
+                txtAContAINLCMD_model.Text = CA_CAL_FLA.a_cmd(1).ToString();
+                txtAContAILCMD_model.Text = CA_CAL_FLA.a_cmd(2).ToString();
+                txtAInstAINLCMD_model.Text = CA_CAL_FLA.a_cmd(3).ToString();
+                txtAInstAILCMD_model.Text = CA_CAL_FLA.a_cmd(4).ToString();
+                txtBContAINLCMD_model.Text = CA_CAL_FLA.b_cmd(1).ToString();
+                txtBContAILCMD_model.Text = CA_CAL_FLA.b_cmd(2).ToString();
+                txtBInstAINLCMD_model.Text = CA_CAL_FLA.b_cmd(3).ToString();
+                txtBInstAILCMD_model.Text = CA_CAL_FLA.b_cmd(4).ToString();
+                txtAContAINLINJ_model.Text = CA_CAL_FLA.a_inj(1).ToString();
+                txtAContAILINJ_model.Text = CA_CAL_FLA.a_inj(2).ToString();
+                txtAInstAINLINJ_model.Text = CA_CAL_FLA.a_inj(3).ToString();
+                txtAInstAILINJ_model.Text = CA_CAL_FLA.a_inj(4).ToString();
+                txtBContAINLINJ_model.Text = CA_CAL_FLA.b_inj(1).ToString();
+                txtBContAILINJ_model.Text = CA_CAL_FLA.b_inj(2).ToString();
+                txtBInstAINLINJ_model.Text = CA_CAL_FLA.b_inj(3).ToString();
+                txtBInstAILINJ_model.Text = CA_CAL_FLA.b_inj(4).ToString();
 
-                String componentTypeName = busComponentType.getComponentTypeName(componentMaster.ComponentTypeID);
-                
+                txtEneffSmall_model.Text = CA_CAL_FLA.eneff_n(1).ToString();
+                txtEneffMedium_model.Text = CA_CAL_FLA.eneff_n(2).ToString();
+                txtEneffLarge_model.Text = CA_CAL_FLA.eneff_n(3).ToString();
+                txtEneffRupture_model.Text = CA_CAL_FLA.eneff_n(4).ToString();
 
-                //<input CA Lavel 1>
-                CA_CAL.NominalDiameter = com.NominalDiameter;
-                CA_CAL.MATERIAL_COST = ma.CostFactor;
-                CA_CAL.PRODUCTION_COST = caTank.ProductionCost;
-                RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
-                RW_FULL_COF_FLUID rwfcf = new RW_FULL_COF_FLUID();
-                API_COMPONENT_TYPE apt = new API_COMPONENT_TYPE();
-                RW_FULL_COF_INPUT fullcofinput = new RW_FULL_COF_INPUT();
-                CA_CAL.FLUID = st.TankFluidName;
-                CA_CAL.FLUID_PHASE = st.StoragePhase;
-                //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
-                CA_CAL.COMPONENT_TYPE_NAME = componentTypeName;
-                CA_CAL.TANK_DIAMETER = caTank.TANK_DIAMETTER;
-                CA_CAL.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
-                //rwfholesize.ID = id;
-                //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+                txtContCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 1).ToString();
+                txtContCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_cont(1,2).ToString();
+                txtContCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_cont(1,3).ToString();
+                txtContCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_cont(1,4).ToString();
+                txtContCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 1).ToString();
+                txtContCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 2).ToString();
+                txtContCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 3).ToString();
+                txtContCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 4).ToString();
+                txtInstCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 1).ToString();
+                txtInstCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 2).ToString();
+                txtInstCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 3).ToString();
+                txtInstCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 4).ToString();
+                txtInstCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 1).ToString();
+                txtInstCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 2).ToString();
+                txtInstCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 3).ToString();
+                txtInstCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 4).ToString();
+                txtContINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_cont(1, 1).ToString();
+                txtContINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_cont(1, 2).ToString();
+                txtContINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_cont(1, 3).ToString();
+                txtContINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_cont(1, 4).ToString();
+                txtContINJAILSmall_model.Text = CA_CAL_FLA.ca_injn_cont(2, 1).ToString();
+                txtContINJAILMedium_model.Text = CA_CAL_FLA.ca_injn_cont(2, 2).ToString();
+                txtContINJAILLarge_model.Text = CA_CAL_FLA.ca_injn_cont(2, 3).ToString();
+                txtContINJAILRupture_model.Text = CA_CAL_FLA.ca_injn_cont(2, 4).ToString();
+                txtInstINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_inst(3, 1).ToString();
+                txtInstINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_inst(3, 2).ToString();
+                txtInstINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_inst(3, 3).ToString();
+                txtInstINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_inst(3, 4).ToString();
+                txtInstINJAILSmall_model.Text = CA_CAL_FLA.ca_injn_inst(4, 1).ToString();
+                txtInstINJAILMedium_model.Text = CA_CAL_FLA.ca_injn_inst(4, 2).ToString();
+                txtInstINJAILLarge_model.Text = CA_CAL_FLA.ca_injn_inst(4, 3).ToString();
+                txtInstINJAILRupture_model.Text = CA_CAL_FLA.ca_injn_inst(4, 4).ToString();
 
-                rwfholesize.A1 = CA_CAL.a_n(1);
-                rwfholesize.A2 = CA_CAL.a_n(2);
-                rwfholesize.A3 = CA_CAL.a_n(3);
-                rwfholesize.A4 = CA_CAL.a_n(4);
+                txtBlendFactorSmall_model.Text = CA_CAL_FLA.fact_n_ic(1).ToString();
+                txtBlendFactorMedium_model.Text = CA_CAL_FLA.fact_n_ic(2).ToString();
+                txtBlendFactorLarge_model.Text = CA_CAL_FLA.fact_n_ic(3).ToString();
+                txtBlendFactorRupture_model.Text = CA_CAL_FLA.fact_n_ic(4).ToString();
+                txtBlendCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_ainl(1).ToString();
+                txtBlendCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_ainl(2).ToString();
+                txtBlendCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_ainl(3).ToString();
+                txtBlendCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_ainl(4).ToString();
+                txtBlendCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_ail(1).ToString();
+                txtBlendCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_ail(2).ToString();
+                txtBlendCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_ail(3).ToString();
+                txtBlendCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_ail(4).ToString();
+                txtBlendINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_ainl(1).ToString();
+                txtBlendINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_ainl(2).ToString();
+                txtBlendINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_ainl(3).ToString();
+                txtBlendINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_ainl(4).ToString();
+                txtBlendINJAILSmall_model.Text = CA_CAL_FLA.ca_inji_ail(1).ToString();
+                txtBlendINJAILMedium_model.Text = CA_CAL_FLA.ca_inji_ail(2).ToString();
+                txtBlendINJAILLarge_model.Text = CA_CAL_FLA.ca_inji_ail(3).ToString();
+                txtBlendINJAILRupture_model.Text = CA_CAL_FLA.ca_inji_ail(4).ToString();
+                txtAITBlendCMDSmall_model.Text = CA_CAL_FLA.ca_cmdn_flame(1).ToString();
+                txtAITBlendCMDMedium_model.Text = CA_CAL_FLA.ca_cmdn_flame(2).ToString();
+                txtAITBlendCMDLarge_model.Text = CA_CAL_FLA.ca_cmdn_flame(3).ToString();
+                txtAITBlendCMDRupture_model.Text = CA_CAL_FLA.ca_cmdn_flame(4).ToString();
+                txtAITBlendINJSmall_model.Text = CA_CAL_FLA.ca_injn_flame(1).ToString();
+                txtAITBlendINJMedium_model.Text = CA_CAL_FLA.ca_injn_flame(2).ToString();
+                txtAITBlendINJLarge_model.Text = CA_CAL_FLA.ca_injn_flame(3).ToString();
+                txtAITBlendINJRupture_model.Text = CA_CAL_FLA.ca_injn_flame(4).ToString();
 
-                //release rate
-                CA_CAL.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
-                CA_CAL.ATMOSPHERIC_PRESSURE = 101.325f;
-                CA_CAL.STORED_TEMP = st.MaxOperatingTemperature;
-                rwfcf.Cp = CA_CAL.C_P();
-                CA_CAL.RELEASE_PHASE = CA_CAL.GET_RELEASE_PHASE();
-                rwfholesize.W1 = CA_CAL.W_n(1);
-                rwfholesize.W2 = CA_CAL.W_n(2);
-                rwfholesize.W3 = CA_CAL.W_n(3);
-                rwfholesize.W4 = CA_CAL.W_n(4);
-
-                //GFF
-                rwfholesize.GFF_small = CA_CAL.GFF(1);
-                rwfholesize.GFF_medium = CA_CAL.GFF(2);
-                rwfholesize.GFF_large = CA_CAL.GFF(3);
-                rwfholesize.GFF_rupture = CA_CAL.GFF(4);
-
-                //FLUID INVENTORY AVAIABLE
-                CA_CAL.MASS_INVERT = fullcofinput.mass_inv;
-                CA_CAL.MASS_COMPONENT = fullcofinput.mass_comp;
-                rwfcf.W_max8 = CA_CAL.W_max8();
-                Console.WriteLine("W_max8= " + rwfcf.W_max8);
-                rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
-                rwfholesize.mass_add_2 = CA_CAL.mass_addn(2);
-                rwfholesize.mass_add_3 = CA_CAL.mass_addn(3);
-                rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
-
-                rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
-                rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
-                rwfholesize.mass_avail_1 = CA_CAL.mass_availn(3);
-                rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
-
-                //Mass Available
-                rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
-                rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
-                rwfholesize.mass_avail_3 = CA_CAL.mass_availn(3);
-                rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
-
-                //time required to release
-                rwfholesize.t_n1 = CA_CAL.t_n(1);
-                rwfholesize.t_n2 = CA_CAL.t_n(2);
-                rwfholesize.t_n3 = CA_CAL.t_n(3);
-                rwfholesize.t_n4 = CA_CAL.t_n(4);
-
-                //Release Type
-                rwfholesize.ReleaseType_1 = CA_CAL.releaseType(1);
-                rwfholesize.ReleaseType_2 = CA_CAL.releaseType(2);
-                rwfholesize.ReleaseType_3 = CA_CAL.releaseType(3);
-                rwfholesize.ReleaseType_4 = CA_CAL.releaseType(4);
-
-                //Max Leak Duration
-                CA_CAL.DETECTION_TYPE = fullcofinput.DetectionType;
-                CA_CAL.ISULATION_TYPE = fullcofinput.IsolationType;
-                //    MSSQL_CA_CAL ca = new MSSQL_CA_CAL();
-                //    ca.MASS_INVERT = float.Parse(txtFM.Text);
-                //    //MessageBox.Show("cai dmm" + ca.MASS_INVERT);
-
+                MessageBox.Show("shfgsdhfgsd");
             }
-            else if (tabRisk.SelectedTabPage.Name == "tabCATankShell")
-            {
-                //MessageBox.Show("nothing");
-                LoadDataForControlInTabCATankShell(IDProposal);
-            }
-            //if (tabPane1.SelectedPage.Name == "tabDamageMechanism")
-            //   DisplayDamagemachanism();
-            //else if(tabRisk.SelectedTabPage.Name == "TabArea")
-            //{
-            //    showDataTabArea(id);
-            //    // if (tabPane1.SelectedPage.Name == "tabInspectionMethod")
-            //    //  showGridControlMethod();
-            //}
-            
         }
 
         
@@ -1150,24 +1103,7 @@ namespace RBI.PRE.subForm.OutputDataForm
 
         }
 
-        private void cbDetectionSystem_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            getData(id);
-        }
 
-        private void txtFM_TextChanged(object sender, EventArgs e)
-        {
-            getData(id);
-        }
-
-        private void cbIsolationSystem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            getData(id);
-        }
-
-        private void cbMitigationSystem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            getData(id);
-        }
+        
     }
 }

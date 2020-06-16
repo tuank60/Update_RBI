@@ -112,6 +112,7 @@ namespace RBI.PRE.subForm.InputDataForm
             //stream.FluidLeaveDikePercent
             //stream.FluidLeaveDikeRemainOnSitePercent
             //stream.FluidGoOffSitePercent
+            stream.ReleaseFluidPercentToxic = (float)numToxicFluidPercent.Value;
             return stream;
         }
         private void addItemsExposureAmine()

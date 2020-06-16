@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using RBI.Object.ObjectMSSQL;
 namespace RBI.BUS.BUSMSSQL
 {
-    class RW_FULL_COF_HOLE_SIZE_BUS
+    public class RW_FULL_COF_HOLE_SIZE_BUS
     {
         RW_FULL_COF_HOLE_SIZE_ConnectUtils DAL = new RW_FULL_COF_HOLE_SIZE_ConnectUtils();
         public void add(RW_FULL_COF_HOLE_SIZE obj)

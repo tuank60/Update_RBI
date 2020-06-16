@@ -13,10 +13,17 @@ namespace RBI.BUS.BUSMSSQL_CAL
 {
     public class MSSQL_CA_CAL_FLAMMABLE
     {
+        public String FLUID { set; get; }
+        public int IDProposal { get; set; }
+        public float MITIGATION_SYSTEM { get; set; }
+        public float STORE_TEMP { get; set; }
+        public String FLUID_PHASE { set; get; }
+        public float TOXIC_PERCENT { get; set; }
+
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
-        public String FLUID { set; get; }
+
         private String TYPE_FLUID()
         {
             String API_TYPE = null;
@@ -67,14 +74,41 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return API_TYPE;
         }
+        public String GET_AMBIENT()
+        {
+            //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
+            return DAL_CAL.GET_RELEASE_PHASE(FLUID);
+        }
+        public float GET_NBP()
+        {
+            //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
+            return DAL_CAL.GET_NBP(FLUID);
+        }
+        public String GET_RELEASE_PHASE()
+        {
+            if(FLUID_PHASE=="Gas")
+            {
+                return "Gas";
+            }
+            else if (GET_AMBIENT() == "Liquid" && FLUID_PHASE == "Liquid")
+            {
+                return "Liquid";
+            }
+            else if (GET_NBP() <= 300)
+            {
+                return "Liquid";
+            }
+            else
+                return "Gas";
+        }
         public float fact_mit()
         {
             float fact_mit = 0;
-            if (CA_CAL.MITIGATION_SYSTEM == "Inventory blowdown, couple with isolation system classification B or higher")
+            if (CA_CAL.MITIGATION_SYSTEM == "Inventory Blowdown, coupled with isolation system actived remotely or automatically")
                 fact_mit = 0.25f;
             else if (CA_CAL.MITIGATION_SYSTEM == "Fire water deluge system and monitors")
                 fact_mit = 0.2f;
-            else if (CA_CAL.MITIGATION_SYSTEM == "Fire water monitors only")
+            else if (CA_CAL.MITIGATION_SYSTEM == "Fire water monitor only")
                 fact_mit = 0.05f;
             else
                 fact_mit = 0.15f;
@@ -82,61 +116,63 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float eneff_n(int n)
         {
-            //mass_n = CA_CAL.mass_n(n);
             float eff = (float)(4 * Math.Log10(DAL_CAL.GET_TBL_3B21(4) * CA_CAL.mass_n(n)) - 15);
-            if (eff == 0)
+            if (eff < 1 )
                 return 1;
             else
                 return eff;
         }
-        public float a_cont(int select)
+        public float a_cmd(int select)
         {
             float[] data = DAL_CAL.GET_TBL_58(FLUID);
-            float[] a_cont = { 0, 0, 0, 0 };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            float[] a_cmd = { 0, 0, 0, 0 };
+            if (GET_RELEASE_PHASE() == "Gas")
             {
-                a_cont[0] = data[0];
-                a_cont[1] = data[4];
-                a_cont[2] = data[8];
-                a_cont[3] = data[12];
+                a_cmd[0] = data[0];
+                a_cmd[1] = data[4];
+                a_cmd[2] = data[8];
+                a_cmd[3] = data[12];
             }
             else
             {
-                a_cont[0] = data[2];
-                a_cont[1] = data[6];
-                a_cont[2] = data[10];
-                a_cont[3] = data[14];
+                a_cmd[0] = data[2];
+                a_cmd[1] = data[6];
+                a_cmd[2] = data[10];
+                a_cmd[3] = data[14];
             }
-            if (a_cont[select - 1] == 0)
-                return 1;
-            else
-                return a_cont[select - 1];
+            if (a_cmd[select - 1] == 1)
+                return 0;
+            else                   
+                return a_cmd[select - 1];
         }
-        public float b_cont(int select)
+        public float b_cmd(int select)
         {
             float[] data = DAL_CAL.GET_TBL_58(FLUID);
-            float[] b_cont = { 0, 0, 0, 0 };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            float[] b_cmd = { 0, 0, 0, 0 };
+            if (GET_RELEASE_PHASE() == "Gas")
             {
-                b_cont[0] = data[1];
-                b_cont[1] = data[5];
-                b_cont[2] = data[9];
-                b_cont[3] = data[13];
+                b_cmd[0] = data[1];
+                b_cmd[1] = data[5];
+                b_cmd[2] = data[9];
+                b_cmd[3] = data[13];
             }
             else
             {
-                b_cont[0] = data[3];
-                b_cont[1] = data[7];
-                b_cont[2] = data[11];
-                b_cont[3] = data[15];
+                b_cmd[0] = data[3];
+                b_cmd[1] = data[7];
+                b_cmd[2] = data[11];
+                b_cmd[3] = data[15];
             }
-            return b_cont[select - 1];
+            if (b_cmd[select - 1] == 1)
+                return 0;
+            else
+                return b_cmd[select - 1];
         }
-        private float a_inj(int select)
+        public float a_inj(int select)
         {
             float[] data = DAL_CAL.GET_TBL_59(FLUID);
             float[] a_inj = { 0, 0, 0, 0 };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            if (GET_RELEASE_PHASE() == "Gas")
             {
                 a_inj[0] = data[0];
                 a_inj[1] = data[4];
@@ -152,11 +188,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return a_inj[select - 1];
         }
-        private float b_inj(int select)
+        public float b_inj(int select)
         {
             float[] data = DAL_CAL.GET_TBL_59(FLUID);
             float[] b_inj = { 0, 0, 0, 0 };//{ data[1], data[3], data[5], data[7], data[9], data[11], data[13], data[15] };
-            if (CA_CAL.GET_RELEASE_PHASE() == "Gas")
+            if (GET_RELEASE_PHASE() == "Gas")
             {
                 b_inj[0] = data[1];
                 b_inj[1] = data[5];
@@ -172,14 +208,31 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return b_inj[select - 1];
         }
-        private float ca_cmdn_cont(int select, int n)
+        public float ca_cmdn_cont(int select, int n) // thieu truong hop toxic
         {
+            RW_FULL_COF_HOLE_SIZE_BUS busfchs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = busfchs.getData(IDProposal);
             float ca_cmdn_cont = 0;
             String API_FLUID_TYPE = TYPE_FLUID();
-            if ((CA_CAL.GET_RELEASE_PHASE() == "Liquid") && (API_FLUID_TYPE == "TYPE 0"))
-                ca_cmdn_cont = (float)Math.Round(Math.Min(a_cont(select) * Math.Pow(CA_CAL.rate_n(n), b_cont(select)), DAL_CAL.GET_TBL_3B21(7)) * (1 - CA_CAL.fact_mit()), 2);
+            Console.WriteLine("API_FLUID_TYPE= " + API_FLUID_TYPE);
+            Console.WriteLine("toxic persent= " + TOXIC_PERCENT);
+            float x = 0;
+            if (n == 1){
+                x = obj.rate_1;
+            }
+            else if (n== 2){
+                x = obj.rate_2;
+
+            }
+            else if (n == 3)
+            {
+                x = obj.rate_3;
+            }
             else
-                ca_cmdn_cont = (float)Math.Round(a_cont(select) * Math.Pow(CA_CAL.rate_n(n), b_cont(select)) * (1 - CA_CAL.fact_mit()), 2);
+            {
+                x = obj.rate_4;
+            }
+            ca_cmdn_cont = (float)Math.Round(a_cmd(select) * Math.Pow( x, b_cmd(select)) * (1 - fact_mit()), 5);
             return ca_cmdn_cont;
         }
         private float effrate_n(int select, int n)
@@ -187,38 +240,106 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float effrate_n = 0;
             String API_FLUID_TYPE = TYPE_FLUID();
             if ((CA_CAL.GET_RELEASE_PHASE() == "Liquid") && (API_FLUID_TYPE == "TYPE 0"))
-                effrate_n = (float)Math.Round((1 / (DAL_CAL.GET_TBL_3B21(4)) * Math.Exp(Math.Log10(ca_cmdn_cont(select, n) / (a_cont(select) * (DAL_CAL.GET_TBL_3B21(8)))) * Math.Pow(b_cont(select), -1))), 2);
+                effrate_n = (float)Math.Round((1 / (DAL_CAL.GET_TBL_3B21(4)) * Math.Exp(Math.Log10(ca_cmdn_cont(select, n) / (a_cmd(select) * (DAL_CAL.GET_TBL_3B21(8)))) * Math.Pow(b_cmd(select), -1))), 2);
             else
                 effrate_n = CA_CAL.rate_n(n);
             return effrate_n;
         }
-        private float ca_cmdn_inst(int select, int n)
+        public float ca_cmdn_inst(int select, int n)
         {
             float ca_cmdn_inst = 0;
             String API_FLUID_TYPE = TYPE_FLUID();
-            if ((CA_CAL.GET_RELEASE_PHASE() == "Liquid") && (API_FLUID_TYPE == "TYPE 0"))
-                ca_cmdn_inst = (float)Math.Round(Math.Min(a_cont(select) * Math.Pow(CA_CAL.mass_n(n), b_cont(select)), (DAL_CAL.GET_TBL_3B21(7))) * ((1 - CA_CAL.fact_mit()) / eneff_n(n)), 2);
-            else
-                ca_cmdn_inst = (float)Math.Round(a_cont(select) * Math.Pow(CA_CAL.mass_n(n), b_cont(select)) * (1 - CA_CAL.fact_mit()), 2);
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (n == 1)
+            {
+                ca_cmdn_inst = (float)Math.Round(a_cmd(select) * Math.Pow((obj.mass_1), b_cmd(select)) * ((1 - fact_mit()) / obj.eneff_1), 5);
+            }
+            else if (n == 2)
+            {
+                ca_cmdn_inst = (float)Math.Round(a_cmd(select) * Math.Pow((obj.mass_2), b_cmd(select)) * ((1 - fact_mit()) / obj.eneff_2), 5);
+            }
+            else if (n == 3)
+            {
+                ca_cmdn_inst = (float)Math.Round(a_cmd(select) * Math.Pow((obj.mass_3), b_cmd(select)) * ((1 - fact_mit()) / obj.eneff_3), 5);
+            }
+            else if (n == 4)
+            {
+                ca_cmdn_inst = (float)Math.Round(a_cmd(select) * Math.Pow((obj.mass_4), b_cmd(select)) * ((1 - fact_mit()) / obj.eneff_4), 5);
+            }
+           
             return ca_cmdn_inst;
         }
         public float ca_injn_cont(int select, int n)
         {
             float ca_injn_cont;
-            ca_injn_cont = (float)Math.Round(a_inj(select) * Math.Pow(effrate_n(select, n), b_inj(select)) * (1 - CA_CAL.fact_mit()), 2);
+            RW_FULL_COF_HOLE_SIZE_BUS busfchs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = busfchs.getData(IDProposal);
+            String API_FLUID_TYPE = TYPE_FLUID();
+            float x = 0;
+            if (n == 1)
+            {
+                x = obj.rate_1;
+            }
+            else if (n == 2)
+            {
+                x = obj.rate_2;
+
+            }
+            else if (n == 3)
+            {
+                x = obj.rate_3;
+            }
+            else
+            {
+                x = obj.rate_4;
+            }
+            ca_injn_cont = (float)Math.Round(a_inj(select) * Math.Pow(x, b_inj(select)) * (1 - fact_mit()), 5);
             return ca_injn_cont;
         }
         public float ca_injn_inst(int select, int n)
         {
-            float ca_injn_inst;
-            ca_injn_inst = (float)Math.Round(a_inj(select) * Math.Pow(effrate_n(select, n), b_inj(select)) * ((1 - CA_CAL.fact_mit()) / eneff_n(n)), 2);
+            float ca_injn_inst=0;
+            String API_FLUID_TYPE = TYPE_FLUID();
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (n == 1)
+            {
+                ca_injn_inst = (float)Math.Round(a_inj(select) * Math.Pow((obj.mass_1), b_inj(select)) * ((1 - fact_mit()) / obj.eneff_1), 5);
+            }
+            else if (n == 2)
+            {
+                ca_injn_inst = (float)Math.Round(a_inj(select) * Math.Pow((obj.mass_2), b_inj(select)) * ((1 - fact_mit()) / obj.eneff_2), 5);
+            }
+            else if (n == 3)
+            {
+                ca_injn_inst = (float)Math.Round(a_inj(select) * Math.Pow((obj.mass_3), b_inj(select)) * ((1 - fact_mit()) / obj.eneff_3), 5);
+            }
+            else if (n == 4)
+            {
+                ca_injn_inst = (float)Math.Round(a_inj(select) * Math.Pow((obj.mass_4), b_inj(select)) * ((1 - fact_mit()) / obj.eneff_4), 5);
+            }
+          
             return ca_injn_inst;
         }
         public double fact_n_ic(int n)
         {
-            String releasetype = CA_CAL.releaseType(n);
-            if (releasetype == "Continuous")
-                return Math.Min(CA_CAL.rate_n(n) / (DAL_CAL.GET_TBL_3B21(5)), 1.0);
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (obj.ReleaseType_1 == "Continuous" && n == 1)
+                return obj.factIC_1;
+            else if (obj.ReleaseType_2 == "Continuous" && n == 2)
+            {
+                return obj.factIC_2;
+            }
+            else if (obj.ReleaseType_3 == "Continuous" && n == 3)
+            {
+                return obj.factIC_3;
+            }
+            else if (obj.ReleaseType_4 == "Continuous" && n == 4)
+            {
+                return obj.factIC_4;
+            }
             else
                 return 1.0;
         }
@@ -227,26 +348,125 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float fact_ait = 0;
             float ait = 273 + (float)Math.Round((data[9] - 32) / 1.8, 2);
-            if ((CA_CAL.STORED_TEMP + (DAL_CAL.GET_TBL_3B21(6))) <= ait)
+            Console.WriteLine("ait= " + ait);
+            if ((CA_CAL.STORED_TEMP + (DAL_CAL.GET_TBL_3B21(7))) <= ait)
                 fact_ait = 0;
-            else if ((CA_CAL.STORED_TEMP - (DAL_CAL.GET_TBL_3B21(6))) >= ait)
+            else if ((CA_CAL.STORED_TEMP - (DAL_CAL.GET_TBL_3B21(7))) >= ait)
                 fact_ait = 1;
             else
-                fact_ait = (CA_CAL.STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(6))) / (2 * (DAL_CAL.GET_TBL_3B21(6)));
+                fact_ait = (CA_CAL.STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
+            Console.WriteLine("hfsdjabsad= " + fact_ait);
             return fact_ait;
+        }
+        public float ca_cmdn_ainl(int n)
+        {
+            float ca_cmdn_ainl = 0;
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (n == 1)
+            {
+                ca_cmdn_ainl = (float)(ca_cmdn_inst(3, 1) * obj.factIC_1 + ca_cmdn_cont(1, 1) * (1 - obj.factIC_1));
+            }
+            else if (n == 2)
+            {
+                ca_cmdn_ainl = (float)(ca_cmdn_inst(3, 2) * obj.factIC_2 + ca_cmdn_cont(1, 2) * (1 - obj.factIC_2));
+            }
+            else if (n == 3)
+            {
+                ca_cmdn_ainl = (float)(ca_cmdn_inst(3, 3) * obj.factIC_3 + ca_cmdn_cont(1, 3) * (1 - obj.factIC_3));
+            }
+            else
+            {
+                ca_cmdn_ainl = (float)(ca_cmdn_inst(3, 4) * obj.factIC_4 + ca_cmdn_cont(1, 4) * (1 - obj.factIC_4));
+            }
+
+            return ca_cmdn_ainl;
+        }
+        public float ca_cmdn_ail(int n)
+        {
+            float ca_cmdn_ail = 0;
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (n == 1)
+            {
+                ca_cmdn_ail = (float)(ca_cmdn_inst(4, 1) * obj.factIC_1 + ca_cmdn_cont(2, 1) * (1 - obj.factIC_1));
+            }
+            else if (n == 2)
+            {
+                ca_cmdn_ail = (float)(ca_cmdn_inst(4, 2) * obj.factIC_2 + ca_cmdn_cont(2, 2) * (1 - obj.factIC_2));
+            }
+            else if (n == 3)
+            {
+                ca_cmdn_ail = (float)(ca_cmdn_inst(4, 3) * obj.factIC_3 + ca_cmdn_cont(2, 3) * (1 - obj.factIC_3));
+            }
+            else
+            {
+                ca_cmdn_ail = (float)(ca_cmdn_inst(4, 4) * obj.factIC_4 + ca_cmdn_cont(2, 4) * (1 - obj.factIC_4));
+            }
+
+            return ca_cmdn_ail;
+        }
+        public float ca_injn_ainl(int n)
+        {
+            float ca_injn_ainl = 0;
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (n == 1)
+            {
+                ca_injn_ainl = (float)(Math.Abs(ca_injn_inst(3, 1)) * obj.factIC_1 + Math.Abs(ca_injn_cont(1, 1)) * (1 - obj.factIC_1));
+            }
+            else if (n == 2)
+            {
+                ca_injn_ainl = (float)(Math.Abs(ca_injn_inst(3, 2)) * obj.factIC_2 + Math.Abs(ca_injn_cont(1, 2)) * (1 - obj.factIC_2));
+            }
+            else if (n == 3)
+            {
+                ca_injn_ainl = (float)(Math.Abs(ca_injn_inst(3, 3)) * obj.factIC_3 + Math.Abs(ca_injn_cont(1, 3)) * (1 - obj.factIC_3));
+            }
+            else
+            {
+                ca_injn_ainl = (float)(Math.Abs(ca_injn_inst(3, 4)) * obj.factIC_4 + Math.Abs(ca_injn_cont(1, 4)) * (1 - obj.factIC_4));
+            }
+
+            return ca_injn_ainl;
+        }
+        public float ca_inji_ail(int n)
+        {
+            float ca_inji_ail = 0;
+            RW_FULL_COF_HOLE_SIZE_BUS bushs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bushs.getData(IDProposal);
+            if (n == 1)
+            {
+                ca_inji_ail = (float)(Math.Abs(ca_injn_inst(4, 1)) * obj.factIC_1 + Math.Abs(ca_injn_cont(2, 1)) * (1 - obj.factIC_1));
+            }
+            else if (n == 2)
+            {
+                ca_inji_ail = (float)(Math.Abs(ca_injn_inst(4, 2)) * obj.factIC_2 + Math.Abs(ca_injn_cont(2, 2)) * (1 - obj.factIC_2));
+            }
+            else if (n == 3)
+            {
+                ca_inji_ail = (float)(Math.Abs(ca_injn_inst(4, 3)) * obj.factIC_3 + Math.Abs(ca_injn_cont(2, 3)) * (1 - obj.factIC_3));
+            }
+            else
+            {
+                ca_inji_ail = (float)(Math.Abs(ca_injn_inst(4, 4)) * obj.factIC_4 + Math.Abs(ca_injn_cont(2, 4)) * (1 - obj.factIC_4));
+            }
+
+
+            return ca_inji_ail;
         }
         public float ca_cmdn_flame(int n)
         {
             float ca_cmdn_flame = 0;
-            float caailcmdn = (float)(ca_cmdn_cont(2, n) * fact_n_ic(n) + ca_cmdn_inst(4, n) * (1 - fact_n_ic(n)));
-            float caainlcmdn = (float)(ca_cmdn_cont(1, n) * fact_n_ic(n) + ca_cmdn_inst(3, n) * (1 - fact_n_ic(n)));
+            float caailcmdn = (float)ca_cmdn_ainl(n);
+            float caainlcmdn = (float)ca_cmdn_ail(n);
             ca_cmdn_flame = caailcmdn * fact_ait() + caainlcmdn * (1 - fact_ait());
             return ca_cmdn_flame;
         }
         public float ca_injn_flame(int n)
         {
-            float caailinjn = (float)(Math.Abs(ca_injn_cont(2, n)) * fact_n_ic(n) + Math.Abs(ca_injn_inst(4, n)) * (1 - fact_n_ic(n)));
-            float caainlinjn = (float)(Math.Abs(ca_injn_cont(1, n)) * fact_n_ic(n) + Math.Abs(ca_injn_inst(3, n)) * (1 - fact_n_ic(n)));
+            float caailinjn = (float)ca_inji_ail(n);
+            float caainlinjn = (float)ca_inji_ail(n);
             return caailinjn * fact_ait() + caainlinjn * (1 - fact_ait());
 
         }

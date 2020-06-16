@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RBI.Object.ObjectMSSQL
 {
-    class RW_FULL_COF_HOLE_SIZE
+    public class RW_FULL_COF_HOLE_SIZE
     {
         public int ID { get; set; }
         public double GFF_small { get; set; }

@@ -120,9 +120,30 @@ namespace RBI.BUS.BUSMSSQL_CAL
             return API_COMPONENT_BUS.getData(API_COMPONENT_TYPE_NAME);
         }
 
-        public String GET_RELEASE_PHASE()
+        public String GET_AMBIENT()
         {
             return DAL_CAL.GET_RELEASE_PHASE(FLUID);
+        }
+        public float GET_NBP()
+        {
+            return DAL_CAL.GET_NBP(FLUID);
+        }
+        public String GET_RELEASE_PHASE()
+        {
+            if(FLUID_PHASE == "Gas")
+            {
+                return "Gas";
+            }
+            if (GET_AMBIENT() == "Liquid" && FLUID_PHASE == "Liquid")
+            {
+                return "Liquid";
+            }
+            else if (GET_NBP() <= 300)
+            {
+                return "Liquid";
+            }
+            else
+                return "Gas";
         }
         // Step 2 release hole size
         public float d_n(int i) //done
@@ -522,7 +543,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float eneff_n(int n)
         {
             float eff = (float)(4 * Math.Log10(DAL_CAL.GET_TBL_3B21(4) * mass_n(n)) - 15);
-            if (eff == 0)
+            if (eff < 1)
                 return 1;
             else
                 return eff;
@@ -545,9 +566,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 a_cont[2] = data[10];
                 a_cont[3] = data[14];
             }
-            if (a_cont[select - 1] == 0)
-                return 1;
-            else
                 return a_cont[select - 1];
         }
         public float b_cont(int select)
@@ -614,6 +632,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             float ca_cmdn_cont = 0;
             String API_FLUID_TYPE = TYPE_FLUID();
+            
             if ((GET_RELEASE_PHASE() == "Liquid") && (API_FLUID_TYPE == "TYPE 0"))
                 ca_cmdn_cont = (float)Math.Round(Math.Min(a_cont(select) * Math.Pow(rate_n(n), b_cont(select)), DAL_CAL.GET_TBL_3B21(7)) * (1 - fact_mit()), 2);
             else
@@ -652,13 +671,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
             ca_injn_inst = (float)Math.Round(a_inj(select) * Math.Pow(effrate_n(select, n), b_inj(select)) * ((1 - fact_mit()) / eneff_n(n)), 2);
             return ca_injn_inst;
         }
-        public double fact_n_ic(int n)
+        public float fact_n_ic(int n)
         {
             String releasetype = releaseType(n);
             if (releasetype == "Continuous")
-                return Math.Min(rate_n(n) / (DAL_CAL.GET_TBL_3B21(5)), 1.0);
+                return (float)Math.Round(Math.Min((rate_n(n) / (DAL_CAL.GET_TBL_3B21(6))), 1.0),5);
             else
-                return 1.0;
+                return 1.0f;
         }
         public float fact_ait()
         {
@@ -670,7 +689,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else if ((STORED_TEMP - (DAL_CAL.GET_TBL_3B21(6))) >= ait)
                 fact_ait = 1;
             else
-                fact_ait = (STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(6))) / (2 * (DAL_CAL.GET_TBL_3B21(6)));
+                fact_ait = (STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
             return fact_ait;
         }
         public float ca_cmdn_flame(int n)
