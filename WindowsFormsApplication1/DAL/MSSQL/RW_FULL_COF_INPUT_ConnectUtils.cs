@@ -122,7 +122,7 @@ namespace RBI.DAL.MSSQL
                         ",[IsolationType]" +
                         ",[mass_comp]" +
                         ",[mass_inv]" +
-                          "From [dbo].[RW_FULL_COF_INPUT]  ";
+                          "From [dbo].[RW_FULL_COF_INPUT]WHERE [ID] ='" + ID + "'"; 
             try
             {
                 SqlCommand cmd = new SqlCommand();

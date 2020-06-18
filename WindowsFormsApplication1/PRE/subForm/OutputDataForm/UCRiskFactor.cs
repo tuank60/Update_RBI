@@ -840,20 +840,48 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtFM.Text = obj.mass_inv.ToString();
 
         }
-        public void getData(int ID)
+        public void getData(int ID)//luu database
         {
             RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
             RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
-            fcip.ID = ID;
-            fcip.DetectionType = cbDetectionSystem.Text;
-            fcip.IsolationType = cbIsolationSystem.Text;
-            fcip.Mitigation = cbMitigationSystem.Text;
-            fcip.mass_inv = float.Parse(txtFM.Text);
-            fcipbus.add(fcip);
-            // return fcip;
+            if (cbDetectionSystem.Text != "" && txtFM.Text != "" && cbIsolationSystem.Text != "" && cbMitigationSystem.Text != "")
+            {
+                fcip.ID = ID;
+                fcip.mass_inv = float.Parse(txtFM.Text);
+                if (cbDetectionSystem.SelectedIndex == 0) fcip.DetectionType = "A";
+                else if (cbDetectionSystem.SelectedIndex == 1) fcip.DetectionType = "B";
+                else if (cbDetectionSystem.SelectedIndex == 2) fcip.DetectionType = "C";
+                fcip.Mitigation = cbMitigationSystem.SelectedItem.ToString();
+                if (cbIsolationSystem.SelectedIndex == 0) fcip.IsolationType = "A";
+                if (cbIsolationSystem.SelectedIndex == 1) fcip.IsolationType = "B";
+                if (cbIsolationSystem.SelectedIndex == 2) fcip.IsolationType = "C";
+                fcip.mass_comp = 0;
+                fcipbus.edit(fcip);
 
+            }
         }
-
+        public void showDataTabArea(int ID)//lay database
+        {
+            RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
+            RW_FULL_COF_INPUT fcip = fcipbus.getData(ID);
+            txtFM.Text = fcip.mass_inv.ToString();
+            if (fcip.DetectionType == "A")
+                cbDetectionSystem.SelectedIndex = 0;
+            else if (fcip.DetectionType == "B")
+                cbDetectionSystem.SelectedIndex = 1;
+            else if (fcip.DetectionType == "C")
+                cbDetectionSystem.SelectedIndex = 2;
+            else cbDetectionSystem.SelectedIndex = -1;
+            if (fcip.IsolationType == "A")
+                cbIsolationSystem.SelectedIndex = 0;
+            else if (fcip.IsolationType == "B")
+                cbIsolationSystem.SelectedIndex = 1;
+            else if (fcip.IsolationType == "C")
+                cbIsolationSystem.SelectedIndex = 2;
+            else
+                cbIsolationSystem.SelectedIndex = -1;
+            cbMitigationSystem.SelectItemByDescription(fcip.Mitigation);
+        }
         private void cbDetectionSystem_SelectedIndexChanged(object sender, EventArgs e)
         {
             
@@ -869,6 +897,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
         private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
+            
             MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
             RW_STREAM_BUS busst = new RW_STREAM_BUS();
             RW_STREAM st = busst.getData(IDProposal);
@@ -880,7 +909,7 @@ namespace RBI.PRE.subForm.OutputDataForm
 
             if (tabRisk.SelectedTabPage.Name == "TabArea")
             {
-                
+                showDataTabArea(id);
                 Console.WriteLine("fact_mit= " + CA_CAL_FLA.fact_mit());
                 Console.WriteLine("fact_ait= " + CA_CAL_FLA.fact_ait());
                 txtAContAINLCMD_model.Text = CA_CAL_FLA.a_cmd(1).ToString();
@@ -967,7 +996,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 txtAITBlendINJLarge_model.Text = CA_CAL_FLA.ca_injn_flame(3).ToString();
                 txtAITBlendINJRupture_model.Text = CA_CAL_FLA.ca_injn_flame(4).ToString();
 
-                MessageBox.Show("shfgsdhfgsd");
+               // MessageBox.Show("shfgsdhfgsd");
             }
         }
 
@@ -1103,7 +1132,24 @@ namespace RBI.PRE.subForm.OutputDataForm
 
         }
 
+        private void txtFM_TextChanged(object sender, EventArgs e)
+        {
+            getData(id);
+        }
 
-        
+        private void cbDetectionSystem_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            getData(id);
+        }
+
+        private void cbIsolationSystem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getData(id);
+        }
+
+        private void cbMitigationSystem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            getData(id);
+        }
     }
 }

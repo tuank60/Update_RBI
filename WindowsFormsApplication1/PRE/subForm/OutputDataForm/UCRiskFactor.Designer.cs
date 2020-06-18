@@ -6693,6 +6693,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbMitigationSystem.Size = new System.Drawing.Size(249, 20);
             this.cbMitigationSystem.TabIndex = 21;
+            this.cbMitigationSystem.SelectedIndexChanged += new System.EventHandler(this.cbMitigationSystem_SelectedIndexChanged);
             // 
             // cbIsolationSystem
             // 
@@ -6706,6 +6707,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbIsolationSystem.Size = new System.Drawing.Size(249, 20);
             this.cbIsolationSystem.TabIndex = 20;
+            this.cbIsolationSystem.SelectedIndexChanged += new System.EventHandler(this.cbIsolationSystem_SelectedIndexChanged);
             // 
             // cbDetectionSystem
             // 
@@ -6719,6 +6721,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbDetectionSystem.Size = new System.Drawing.Size(249, 20);
             this.cbDetectionSystem.TabIndex = 19;
+            this.cbDetectionSystem.SelectedIndexChanged += new System.EventHandler(this.cbDetectionSystem_SelectedIndexChanged_1);
             // 
             // label135
             // 
@@ -6738,6 +6741,7 @@
             this.txtFM.Name = "txtFM";
             this.txtFM.Size = new System.Drawing.Size(107, 20);
             this.txtFM.TabIndex = 17;
+            this.txtFM.TextChanged += new System.EventHandler(this.txtFM_TextChanged);
             // 
             // label136
             // 

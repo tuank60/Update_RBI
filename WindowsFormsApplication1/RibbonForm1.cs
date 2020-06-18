@@ -647,6 +647,10 @@ namespace RBI
             busAssessment.add(rwass);
             List<RW_ASSESSMENT> listAss = busAssessment.getDataSource();
             int ID = listAss.Max(RW_ASSESSMENT => RW_ASSESSMENT.ID);
+            RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
+            fcip.ID = ID;
+            RW_FULL_COF_INPUT_BUS fcipbus = new RW_FULL_COF_INPUT_BUS();
+            fcipbus.add(fcip);
             rwEq.ID = ID;
             rwCom.ID = ID;
             rwCoat.ID = ID;
