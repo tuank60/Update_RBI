@@ -2383,7 +2383,7 @@ namespace RBI
             CA_CAL.COMPONENT_TYPE_NAME = componentTypeName;
             CA_CAL.TANK_DIAMETER = caTank.TANK_DIAMETTER;
             CA_CAL.PREVENTION_BARRIER = caTank.Prevention_Barrier == 1 ? true : false;
-            CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
+            //CA_CAL.API_COMPONENT_TYPE_NAME = apiComponentTypeName;
             rwfholesize.ID = IDProposal;
             //hole size area
             rwfholesize.A1 = CA_CAL.a_n(1);

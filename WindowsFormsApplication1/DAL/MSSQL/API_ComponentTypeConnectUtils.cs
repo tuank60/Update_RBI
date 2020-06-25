@@ -199,6 +199,68 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
+        public API_COMPONENT_TYPE getDatabyID(int APIComponentTypeID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            API_COMPONENT_TYPE obj = new API_COMPONENT_TYPE();
+            String sql = " Use [rbi] Select [APIComponentTypeID]" +
+                          ",[APIComponentTypeName]" +
+                          ",[GFFSmall]" +
+                          ",[GFFMedium]" +
+                          ",[GFFLarge]" +
+                          ",[GFFRupture]" +
+                          ",[GFFTotal]" +
+                          ",[HoleCostSmall]" +
+                          ",[HoleCostMedium]" +
+                          ",[HoleCostLarge]" +
+                          ",[HoleCostRupture]" +
+                          ",[OutageSmall]" +
+                          ",[OutageMedium]" +
+                          ",[OutageLarge]" +
+                          ",[OutageRupture]" +
+                          "From [dbo].[API_COMPONENT_TYPE] Where [APIComponentTypeID] ='" + APIComponentTypeID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            obj.APIComponentTypeID = reader.GetInt32(0);
+                            obj.APIComponentTypeName = reader.GetString(1);
+                            obj.GFFSmall = (float)reader.GetDouble(2);
+                            obj.GFFMedium = (float)reader.GetDouble(3);
+                            obj.GFFLarge = (float)reader.GetDouble(4);
+                            obj.GFFRupture = (float)reader.GetDouble(5);
+                            obj.GFFTotal = (float)reader.GetDouble(6);
+                            obj.HoleCostSmall = (float)reader.GetDouble(7);
+                            obj.HoleCostMedium = (float)reader.GetDouble(8);
+                            obj.HoleCostLarge = (float)reader.GetDouble(9);
+                            obj.HoleCostRupture = (float)reader.GetDouble(10);
+                            obj.OutageSmall = (float)reader.GetDouble(11);
+                            obj.OutageMedium = (float)reader.GetDouble(12);
+                            obj.OutageLarge = (float)reader.GetDouble(13);
+                            obj.OutageRupture = (float)reader.GetDouble(14);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return obj;
+        }
         public List<API_COMPONENT_TYPE> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();

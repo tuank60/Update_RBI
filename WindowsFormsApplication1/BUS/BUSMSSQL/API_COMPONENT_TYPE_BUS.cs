@@ -37,6 +37,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getData(APIComponentTypeName);
         }
+        public API_COMPONENT_TYPE getDatabyID(int APIComponentTypeID)
+        {
+            return DAL.getDatabyID(APIComponentTypeID);
+        }
         public float getGFFTotal(String ComponentType)
         {
             return DAL.getGFFTotal(ComponentType);

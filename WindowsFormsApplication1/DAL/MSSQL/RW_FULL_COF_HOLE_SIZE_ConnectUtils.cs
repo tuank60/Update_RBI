@@ -614,7 +614,7 @@ namespace RBI.DAL.MSSQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
-                Console.WriteLine("hehe= " + sql);
+                //Console.WriteLine("hehe= " + sql);
                 using (DbDataReader reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
