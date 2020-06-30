@@ -918,6 +918,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             Console.WriteLine("toxic percent= " + CA_CAL_FLA.TOXIC_PERCENT);
             CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
             CA_CAL_FLA.IDProposal = IDProposal;
+            CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
             //CA_CAL_FLA.fact_mit=
 
             if (tabRisk.SelectedTabPage.Name == "TabArea")
@@ -1096,6 +1097,21 @@ namespace RBI.PRE.subForm.OutputDataForm
                 txtAITBlendINJRupture_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(4).ToString();
                 txtFlammableCDCA_toxic.Text = CA_CAL_FLA.ca_cmd_flame_toxic().ToString();
                 txtFlammablePICA_toxic.Text = CA_CAL_FLA.ca_inj_flame_toxic().ToString();
+
+                //Non F Non T
+                txtCONT_CA1.Text = CA_CAL_FLA.ca_injn_contnfnt(1).ToString();
+                txtCONT_CA2.Text = CA_CAL_FLA.ca_injn_contnfnt(2).ToString();
+                txtCONT_CA3.Text = CA_CAL_FLA.ca_injn_contnfnt(3).ToString();
+                txtCONT_CA4.Text = CA_CAL_FLA.ca_injn_contnfnt(4).ToString();
+                txtINST_CA1.Text = CA_CAL_FLA.ca_injn_instnfnt(1).ToString();
+                txtINST_CA2.Text = CA_CAL_FLA.ca_injn_instnfnt(2).ToString();
+                txtINST_CA3.Text = CA_CAL_FLA.ca_injn_instnfnt(3).ToString();
+                txtINST_CA4.Text = CA_CAL_FLA.ca_injn_instnfnt(4).ToString();
+                txtBlend_CA1.Text = CA_CAL_FLA.ca_injn_leaknfnt(1).ToString();
+                txtBlend_CA2.Text = CA_CAL_FLA.ca_injn_leaknfnt(2).ToString();
+                txtBlend_CA3.Text = CA_CAL_FLA.ca_injn_leaknfnt(3).ToString();
+                txtBlend_CA4.Text = CA_CAL_FLA.ca_injn_leaknfnt(4).ToString();
+                txtNonFlammableNonToxicCon.Text = CA_CAL_FLA.ca_inj_nfnt().ToString();
             }
         }
 
@@ -1249,6 +1265,11 @@ namespace RBI.PRE.subForm.OutputDataForm
         private void cbMitigationSystem_SelectedIndexChanged(object sender, EventArgs e)
         {
             getData(id);
+        }
+
+        private void textBox280_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

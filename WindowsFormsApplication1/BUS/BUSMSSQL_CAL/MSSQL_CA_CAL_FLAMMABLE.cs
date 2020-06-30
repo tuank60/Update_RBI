@@ -894,5 +894,131 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return Math.Abs(ca_inj_flame_toxic);
             }
         }
+        #region non flamable non toxic
+        public float STORED_PRESSURE { set; get; }
+        private float ATMOSPHERIC_PRESSURE = 101.325f;
+        public float ca_injn_contnfnt(int n)
+        {
+            RW_FULL_COF_HOLE_SIZE_BUS busfchs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = busfchs.getData(IDProposal);
+            float x = 0;
+            if (n == 1)
+            {
+                x = obj.rate_1;
+            }
+            else if (n == 2)
+            {
+                x = obj.rate_2;
+
+            }
+            else if (n == 3)
+            {
+                x = obj.rate_3;
+            }
+            else
+            {
+                x = obj.rate_4;
+            }
+            float ca_injn_cont = 0;
+            float g = (float)Math.Round(2696 - 21.9 * (DAL_CAL.GET_TBL_3B21(11)) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE) + 1.474 * Math.Pow(((DAL_CAL.GET_TBL_3B21(11)) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE)), 2), 4);
+            float h = (float)Math.Round(0.31 - 0.00032 * Math.Pow(((DAL_CAL.GET_TBL_3B21(11)) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE) - 40), 2), 4);
+            if (FLUID == "Steam")
+                ca_injn_cont = (float)Math.Round((DAL_CAL.GET_TBL_3B21(9)) * x, 4);
+            else
+                ca_injn_cont = (float)Math.Round(0.2 * (DAL_CAL.GET_TBL_3B21(8)) * g * Math.Pow((DAL_CAL.GET_TBL_3B21(4)) * x, h), 2);
+            return ca_injn_cont;
+        }
+        public float ca_injn_instnfnt(int n)
+        {
+            RW_FULL_COF_HOLE_SIZE_BUS busfchs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = busfchs.getData(IDProposal);
+            float mass_n = 0;
+            if (n == 1)
+            {
+                mass_n = obj.mass_1;
+            }
+            else if (n == 2)
+            {
+                mass_n = obj.mass_2;
+
+            }
+            else if (n == 3)
+            {
+                mass_n = obj.mass_3;
+            }
+            else
+            {
+                mass_n = obj.mass_4;
+            }
+            float ca_injn_inst = 0;
+            if (FLUID == "Steam")
+                ca_injn_inst = (float)Math.Round((DAL_CAL.GET_TBL_3B21(10)) * Math.Pow(mass_n, 0.6384), 4);
+            else
+                ca_injn_inst = 0;
+            return ca_injn_inst;
+        }
+        public float fact_n_icnfnt(int n)
+        {
+            RW_FULL_COF_HOLE_SIZE_BUS busfchs = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = busfchs.getData(IDProposal);
+            float x = 0;
+            if (n == 1)
+            {
+                x = obj.rate_1;
+            }
+            else if (n == 2)
+            {
+                x = obj.rate_2;
+
+            }
+            else if (n == 3)
+            {
+                x = obj.rate_3;
+            }
+            else
+            {
+                x = obj.rate_4;
+            }
+            float fact_n_icnfnt = 0;
+            if (FLUID == "Steam")
+                fact_n_icnfnt = Math.Min(x / (DAL_CAL.GET_TBL_3B21(5)), 1);
+            else
+                fact_n_icnfnt = 0;
+            return fact_n_icnfnt;
+        }
+        public float ca_injn_leaknfnt(int n)
+        {
+            return ca_injn_instnfnt(n) * fact_n_icnfnt(n) + ca_injn_contnfnt(n) * (1 - fact_n_icnfnt(n));
+        }
+        private Boolean checkNone()
+        {
+            Boolean check = false;
+            string[] itemsNoneTF = { "Steam", "Acid", "Caustic" };
+            for (int i = 0; i < itemsNoneTF.Length; i++)
+            {
+                if (FLUID == itemsNoneTF[i])
+                {
+                    check = true;
+                    break;
+                }
+            }
+            return check;
+        }
+        public float ca_inj_nfnt()
+        {
+            if (!checkNone())
+            {
+                return 0;
+            }
+            else
+            {
+                float t = 0;
+                API_COMPONENT_TYPE obj = GET_DATA_API_COM();
+                t = obj.GFFSmall * ca_injn_leaknfnt(1) + obj.GFFMedium * ca_injn_leaknfnt(2) + obj.GFFLarge * ca_injn_leaknfnt(3) + obj.GFFRupture * ca_injn_leaknfnt(4);
+                float ca_inj_nfnt = t / obj.GFFTotal;
+                return Math.Abs(ca_inj_nfnt);
+            }
+        }
+        #endregion
     }
 }
