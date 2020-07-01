@@ -70,7 +70,8 @@ namespace RBI.PRE.subForm.InputDataForm
             txtpHWater.Text = obj.WaterpH.ToString();
             txbModelFluid.Text = obj.TankFluidName;
             txbToxicFluid.Text = obj.ToxicFluidName;
-            cbPhaseFluidStorage.SelectedItem = obj.StoragePhase;
+            cbPhaseFluidStorage.SelectItemByDescription(obj.StoragePhase);
+            //cbPhaseFluidStorage.SelectedItem = 
         }
         public RW_STREAM getData(int ID)
         {
