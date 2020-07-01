@@ -45,9 +45,10 @@ namespace RBI.PRE.subForm.OutputDataForm
             riskPoF(ID);
             riskCA(ID);
             addItemDetectionSystem();
-            initAreabaseCOF(ID); //Hiện đang lỗi ở hàm này
+            initAreabaseCOF(ID); 
             addItemIsolationSystem();
             addItemMitigation();
+            initinput();
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
             //initData_Tank(ID);
@@ -109,7 +110,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             txt36PoFCategory.Text = obj.PoFAP2Category;
             txt72PoFCategory.Text = obj.PoFAP3Category;
         }
-        public void initAreabaseCOF(int ID) //lỗi hàm này
+        public void initAreabaseCOF(int ID) 
         {
             RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
             RW_FULL_COF_HOLE_SIZE obj = hsbus.getData(ID);
@@ -174,7 +175,29 @@ namespace RBI.PRE.subForm.OutputDataForm
         }
         public void initinput()
         {
-
+            RW_COMPONENT_BUS buscomponent = new RW_COMPONENT_BUS();
+            RW_COMPONENT component = buscomponent.getData(IDProposal);
+            RW_STREAM_BUS bustream = new RW_STREAM_BUS();
+            RW_STREAM st = bustream.getData(IDProposal);
+            RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
+            COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+            COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
+            //Console.WriteLine("id pro= " + IDProposal);
+            int apicomponentID = com.APIComponentTypeID;
+            int equipmentID = com.EquipmentID;
+            //Console.WriteLine("apicom id= " + apicomponentID);
+            API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
+            API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
+            txtACT.Text = api.APIComponentTypeName.ToString();
+            txtLL.Text = st.LiquidLevel.ToString();
+            txtMF.Text = st.TankFluidName;
+            txtTFP.Text = st.ReleaseFluidPercentToxic.ToString();
+            txtDia.Text = component.NominalDiameter.ToString();
+            txtComponent.Text = component.ComponentVolume.ToString();
+            txtTF.Text = st.ToxicFluidName.ToString();
+            txtPhase.Text = st.StoragePhase.ToString();
+            txtMOT.Text = st.MaxOperatingTemperature.ToString();
+            txtMOP.Text = ((st.MaxOperatingPressure)*1000).ToString();
         }
         public void initCAP()
         {
@@ -906,19 +929,20 @@ namespace RBI.PRE.subForm.OutputDataForm
             //Console.WriteLine("id com= " + componentID);
             COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
             COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
-            Console.WriteLine("id pro= " + IDProposal);
+            //Console.WriteLine("id pro= " + IDProposal);
             int apicomponentID = com.APIComponentTypeID;
-            Console.WriteLine("apicom id= " + apicomponentID);
+            //Console.WriteLine("apicom id= " + apicomponentID);
             API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
             API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
             CA_CAL_FLA.FLUID = st.TankFluidName;
             CA_CAL_FLA.FlUID_TOXIC = st.ToxicFluidName;
             CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
             CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic)/100;
-            Console.WriteLine("toxic percent= " + CA_CAL_FLA.TOXIC_PERCENT);
+            //Console.WriteLine("toxic percent= " + CA_CAL_FLA.TOXIC_PERCENT);
             CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
             CA_CAL_FLA.IDProposal = IDProposal;
             CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
+            CA_CAL_FLA.STORE_TEMP = st.MaxOperatingTemperature;
             //CA_CAL_FLA.fact_mit=
 
             if (tabRisk.SelectedTabPage.Name == "TabArea")

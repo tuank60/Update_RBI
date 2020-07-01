@@ -432,7 +432,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (n == 1)
             {
                 x = obj.rate_1*TOXIC_PERCENT;
-                Console.WriteLine("x= " + x);
+                //Console.WriteLine("x= " + x);
             }
             else if (n == 2)
             {
@@ -564,8 +564,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             RW_STREAM st = busst.getData(IDProposal);
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float fact_ait = 0;
-            float ait = 273+(float)Math.Round(
-                (data[9] - 32) / 1.8, 2);
+            float ait = 273+(float)Math.Round((data[9] - 32) / 1.8, 2);
             if ((CA_CAL.STORED_TEMP + (DAL_CAL.GET_TBL_3B21(7))) <= ait)
                 fact_ait = 0;
             else if ((CA_CAL.STORED_TEMP - (DAL_CAL.GET_TBL_3B21(7))) >= ait)
@@ -580,14 +579,15 @@ namespace RBI.BUS.BUSMSSQL_CAL
             RW_STREAM st = busst.getData(IDProposal);
             float[] data = DAL_CAL.GET_TBL_52(FlUID_TOXIC);
             float fact_ait_toxic = 0;
-            float ait = 273 + (float)Math.Round(
-                (data[9] - 32) / 1.8, 2);
+            float ait =(float)Math.Round((data[9] - 32) / 1.8, 2);
+            //Console.WriteLine("ait= " + ait);
             if ((CA_CAL.STORED_TEMP + (DAL_CAL.GET_TBL_3B21(7))) <= ait)
                 fact_ait_toxic = 0;
             else if ((CA_CAL.STORED_TEMP - (DAL_CAL.GET_TBL_3B21(7))) >= ait)
                 fact_ait_toxic = 1;
             else
-                fact_ait_toxic = (CA_CAL.STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
+                fact_ait_toxic = (STORE_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
+            //Console.WriteLine("fact_ait_toxic= " + fact_ait_toxic);
             return fact_ait_toxic;
         }
         public float ca_cmdn_ainl(int n)
@@ -824,7 +824,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             string[] itemsToxic = { "H2S", "HFAcid", "CO", "HCL", "Nitric Acid", "ALCL3", "NO2", "Phosgene", "TDI", "PO", "EE", "EO", "Pyrophoric", "Ammonia", "Chlorine"};
             for (int i = 0; i < itemsToxic.Length; i++)
             {
-                if (FLUID == itemsToxic[i])
+                if (FlUID_TOXIC == itemsToxic[i])
                 {
                     checkToxic = true;
                     break;
