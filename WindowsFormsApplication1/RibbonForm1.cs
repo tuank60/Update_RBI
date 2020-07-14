@@ -2404,13 +2404,13 @@ namespace RBI
             //Console.WriteLine("cp=" + rwfcf.Cp);
             //MessageBox.Show
             rwfholesize.W1 = CA_CAL.W_n(1);
-            Console.WriteLine("gia tri cua W1 = " + rwfholesize.W1);
+            //Console.WriteLine("gia tri cua W1 = " + rwfholesize.W1);
             rwfholesize.W2 = CA_CAL.W_n(2);
-            Console.WriteLine("gia tri cua W2 = " + rwfholesize.W2);
+           // Console.WriteLine("gia tri cua W2 = " + rwfholesize.W2);
             rwfholesize.W3 = CA_CAL.W_n(3);
-            Console.WriteLine("gia tri cua W3 = " + rwfholesize.W3);
+            //Console.WriteLine("gia tri cua W3 = " + rwfholesize.W3);
             rwfholesize.W4 = CA_CAL.W_n(4);
-            Console.WriteLine("gia tri cua W4 = " + rwfholesize.W4);
+            //Console.WriteLine("gia tri cua W4 = " + rwfholesize.W4);
 
             //GFF
             rwfholesize.GFF_small = CA_CAL.GFF(1);
@@ -2426,7 +2426,7 @@ namespace RBI
             CA_CAL.MASS_INVERT = fullcofinput.mass_inv;
             CA_CAL.MASS_COMPONENT = fullcofinput.mass_comp;
             rwfcf.W_max8 = CA_CAL.W_max8();
-            Console.WriteLine("W_max8= " + rwfcf.W_max8);
+            //Console.WriteLine("W_max8= " + rwfcf.W_max8);
             rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
             //Console.WriteLine("mass_add1= " + rwfholesize.mass_add_1);
             rwfholesize.mass_add_2 = CA_CAL.mass_addn(2);
@@ -2438,13 +2438,13 @@ namespace RBI
 
             //Mass Available
             rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
-            Console.WriteLine("mass avaiable1= " + rwfholesize.mass_avail_1);
+            //Console.WriteLine("mass avaiable1= " + rwfholesize.mass_avail_1);
             rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
-            Console.WriteLine("mass avaiable2= " + rwfholesize.mass_avail_2);
+            //Console.WriteLine("mass avaiable2= " + rwfholesize.mass_avail_2);
             rwfholesize.mass_avail_3 = CA_CAL.mass_availn(3);
-            Console.WriteLine("mass avaiable3= " + rwfholesize.mass_avail_3);
+            //Console.WriteLine("mass avaiable3= " + rwfholesize.mass_avail_3);
             rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
-            Console.WriteLine("mass avaiable4= " + rwfholesize.mass_avail_4);
+            //Console.WriteLine("mass avaiable4= " + rwfholesize.mass_avail_4);
 
             //time required to release
             rwfholesize.t_n1 = CA_CAL.t_n(1);
@@ -2523,13 +2523,13 @@ namespace RBI
             //Console.WriteLine("eneff4= " + rwfholesize.eneff_4);
 
             rwfholesize.factIC_1 = CA_CAL.fact_n_ic(1);
-            Console.WriteLine("fact_1_ic= " + rwfholesize.factIC_1);
+            //Console.WriteLine("fact_1_ic= " + rwfholesize.factIC_1);
             rwfholesize.factIC_2 = CA_CAL.fact_n_ic(2);
-            Console.WriteLine("fact_2_ic= " + rwfholesize.factIC_2);
+            //Console.WriteLine("fact_2_ic= " + rwfholesize.factIC_2);
             rwfholesize.factIC_3 = CA_CAL.fact_n_ic(3);
-            Console.WriteLine("fact_3_ic= " + rwfholesize.factIC_3);
+           // Console.WriteLine("fact_3_ic= " + rwfholesize.factIC_3);
             rwfholesize.factIC_4 = CA_CAL.fact_n_ic(4);
-            Console.WriteLine("fact_4_ic= " + rwfholesize.factIC_4);
+            //Console.WriteLine("fact_4_ic= " + rwfholesize.factIC_4);
 
 
 

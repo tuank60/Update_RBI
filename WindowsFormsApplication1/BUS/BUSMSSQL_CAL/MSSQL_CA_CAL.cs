@@ -39,6 +39,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float EQUIPMENT_COST { set; get; }
         private String TOXIC_PHASE { set; get; }
         public float Outage_mul { set; get; } //viet anh them
+        public int IDProposal { set; get; }
         public String FC_Category(float fc)
         {
             if (fc <= 10000)
@@ -311,6 +312,12 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return gff;
         }
+        //public String fluid_type()
+        //{
+        //    String data = DAL_CAL.GET_FLUID_TYPE(FLUID);
+        //    Console.WriteLine("fluid type= " + data);
+        //    return data;
+        //}
         public float W_max8() //done
         {
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
@@ -443,7 +450,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 5;
                 else
-                    ld_max = 0.00336f;
+                    ld_max = 0.00442f;
             }
             else if (DETECTION_TYPE == "A" && ISULATION_TYPE == "B")
             {
@@ -454,7 +461,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 10;
                 else
-                    ld_max = 0.00336f;
+                    ld_max = 0.00414f;
             }
             else if (DETECTION_TYPE == "A" && ISULATION_TYPE == "C")
             {
@@ -465,7 +472,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.00336f;
+                    ld_max = 0.00368f;
             }
             else if ((ISULATION_TYPE == "A" || ISULATION_TYPE == "B") && DETECTION_TYPE == "B")
             {
@@ -476,7 +483,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.00336f;
+                    ld_max = 0.0039f;
             }
             else if (DETECTION_TYPE == "B" && ISULATION_TYPE == "C")
             {
@@ -487,7 +494,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.00336f;
+                    ld_max = 0.0039f;
             }
             else if (DETECTION_TYPE == "C" && (ISULATION_TYPE == "A" || ISULATION_TYPE == "B" || ISULATION_TYPE == "C"))
             {
@@ -498,7 +505,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.00336f;
+                    ld_max = 0.00331f;
             }
             else
                 ld_max = 0;
@@ -761,26 +768,35 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             return TOXIC_PERCENT * mass_n(n) / 100;
         }
-        public TOXIC_511_512 getToxic(string type)
+        public TOXIC_511_512 getToxic(string type, string toxicName)
         {
-            TOXIC_511_512 obj = new TOXIC_511_512();
-            List<TOXIC_511_512> list = DAL_CAL.GET_TBL_511_512();
+            //float[] n;
             if (type == "Instantaneous")
             {
                 RELEASE_DURATION = "Instantaneous Releases";
             }
-            for (int i = 0; i < list.Count; i++)
+            else
             {
-                if (list[i].ToxicName == FLUID && list[i].ReleaseDuration == RELEASE_DURATION)
-                    obj = list[i];
+                //dieu kien de gan RELEASE_DURATION ra 5 10 20 60
             }
+            //TOXIC_511_512 obj = new TOXIC_511_512();
+            TOXIC_511_512 obj = DAL_CAL.GET_TBL_511_512(FLUID, RELEASE_DURATION);
+            //Console.WriteLine("type= " + type);
+            //for (int i = 0; i < list.Count; i++)
+            //{
+            //   obj = list[i];
+            //}
             return obj;
         }
-        public TOXIC_513 getToxic513(string type)
+        public TOXIC_513 getToxic513(string type, string toxic, string releasephase, int n)
         {
-            TOXIC_513 obj = new TOXIC_513();
-            List<TOXIC_513> list = DAL_CAL.GET_TBL_513();
-            if (FLUID_PHASE == "Vapor")
+            RW_STREAM_BUS busst = new RW_STREAM_BUS();
+            RW_STREAM st = busst.getData(IDProposal);
+            RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
+            String ReleasePhase = GET_RELEASE_PHASE();
+            Console.WriteLine("releasephase= " + ReleasePhase);
+            if (ReleasePhase == "Gas")
                 TOXIC_PHASE = "Gas";
             else
                 TOXIC_PHASE = "Liquid";
@@ -788,43 +804,44 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 RELEASE_DURATION = "Instantaneous Releases";
             }
-            for (int i = 0; i < list.Count; i++)
-            {
-                if (list[i].TOXIC_NAME == FLUID && list[i].TOXIC_TYPE == TOXIC_PHASE && list[i].DURATION == RELEASE_DURATION)
-                    obj = list[i];
-            }
+
+            TOXIC_513 obj = DAL_CAL.GET_TBL_513(FLUID, RELEASE_DURATION, " ");
             return obj;
         }
         public float ca_injn_tox(int n)
         {
+            RW_STREAM_BUS busst = new RW_STREAM_BUS();
+            RW_STREAM st = busst.getData(IDProposal);
             float C8 = DAL_CAL.GET_TBL_3B21(8);
             float C4 = DAL_CAL.GET_TBL_3B21(4);
             String releasetype = releaseType(n);
-            TOXIC_511_512 obj = getToxic(releasetype);
-            TOXIC_513 obj1 = getToxic513(releasetype);
+            String toxicName = st.ToxicFluidName;
+            String releasephase = GET_RELEASE_PHASE();
+            TOXIC_511_512 obj = getToxic(releasetype, toxicName);
+            TOXIC_513 obj1 = getToxic513(releasetype, toxicName, releasephase, n);
             if (obj.ToxicName == "HF" || obj.ToxicName == "H2S")
             {
                 double log = 0;
                 if (releasetype == "Continuous")
-                    log = obj.a * Math.Log10(C4 * rate_tox_n(n)) + obj.b;
+                    log = obj.e * Math.Log10(C4 * rate_tox_n(n)) + obj.f;
                 else
-                    log = obj.a * Math.Log10(C4 * mass_tox_n(n)) + obj.b;
+                    log = obj.f * Math.Log10(C4 * mass_tox_n(n)) + obj.f;
                 return (float)Math.Round(C8 * Math.Pow(10, log), 4);
             }
             else if (obj.ToxicName == "Ammonia" || obj.ToxicName == "Chlorine")
             {
                 if (releasetype == "Continuous")
-                    return (float)Math.Round(obj.a * Math.Pow(rate_tox_n(n), obj.b), 4);
+                    return (float)Math.Round(obj.e * Math.Pow(rate_tox_n(n), obj.e), 4);
                 else
-                    return (float)Math.Round(obj.a * Math.Pow(mass_tox_n(n), obj.b), 4);
+                    return (float)Math.Round(obj.f * Math.Pow(mass_tox_n(n), obj.f), 4);
             }
-            else if (obj1.TOXIC_NAME == "AlCl3" || obj1.TOXIC_NAME == "CO" || obj1.TOXIC_NAME == "HCl" || obj1.TOXIC_NAME == "Nitric Acid" || obj1.TOXIC_NAME == "NO2"
-                    || obj1.TOXIC_NAME == "Phosgene" || obj1.TOXIC_NAME == "TDI" || obj1.TOXIC_NAME == "EE" || obj1.TOXIC_NAME == "EO" || obj1.TOXIC_NAME == "PO")
+            else if (obj1.Toxic == "AlCl3" || obj1.Toxic == "CO" || obj1.Toxic == "HCl" || obj1.Toxic == "Nitric Acid" || obj1.Toxic == "NO2"
+                    || obj1.Toxic == "Phosgene" || obj1.Toxic == "TDI" || obj1.Toxic == "EE" || obj1.Toxic == "EO" || obj1.Toxic == "PO")
             {
                 if (releasetype == "Continuous")
-                    return (float)Math.Round(obj1.a * Math.Pow(rate_tox_n(n), obj1.b), 4);
+                    return (float)Math.Round(obj1.e * Math.Pow(rate_tox_n(n), obj1.f), 4);
                 else
-                    return (float)Math.Round(obj1.a * Math.Pow(mass_tox_n(n), obj1.b), 4);
+                    return (float)Math.Round(obj1.e * Math.Pow(mass_tox_n(n), obj1.f), 4);
             }
             else
             {

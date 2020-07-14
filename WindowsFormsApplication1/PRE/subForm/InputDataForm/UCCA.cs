@@ -26,7 +26,7 @@ namespace RBI.PRE.subForm.InputDataForm
         string[] itemsToxic = { "H2S", "HF", "CO", "HCl", "Nitric Acid", "AlCl3", "NO2", "Phosgene", "TDI", "PO", "EE", "EO", "Ammonia", "Chlorine" };
         string[] itemsNoneTF = { "Steam", "Acid", "Caustic" };
         string[] itemsIsulationType = { "A", "B", "C" };
-        List<String> timeDuration;
+        //List<String> timeDuration;
         string ReleasePhase;
         public UCCA()
         {
@@ -92,13 +92,13 @@ namespace RBI.PRE.subForm.InputDataForm
             }
             //for(int i = 0; i < itemsRe)
             setUpReleaseDuration();
-            for(int i = 0; i< timeDuration.Count; i++)
-            {
-                if(ca.Release_Duration == timeDuration[i])
-                {
-                    cbReleaseDuration.SelectedIndex = i + 1;
-                }
-            }
+            //for(int i = 0; i< timeDuration.Count; i++)
+            //{
+            //    if(ca.Release_Duration == timeDuration[i])
+            //    {
+            //        cbReleaseDuration.SelectedIndex = i + 1;
+            //    }
+            //}
             //cbReleaseDuration.SelectedItem = ca.Release_Duration;
 
             for (int i = 0; i < itemsMittigationSystem.Length; i++)
@@ -303,60 +303,61 @@ namespace RBI.PRE.subForm.InputDataForm
             //}
             setUpReleaseDuration();
         }
-        private void setUpReleaseDuration()
+        public void setUpReleaseDuration()
         {
-            timeDuration = new List<string>();
-            cbReleaseDuration.Enabled = false;
-            List<TOXIC_511_512> list511 = bus.getList511_512();
-            List<TOXIC_513> list513 = bus.getList513();
-            if (cbFluidPhase.Text == "Vapor")
-            {
-                ReleasePhase = "Gas";
-            }
-            else if (cbFluidPhase.Text == "Liquid" || cbFluidPhase.Text == "Powder")
-            {
-                ReleasePhase = "Liquid";
-            }
-            else
-            {
-                ReleasePhase = "";
-            }
-            if (cbFluid.Text == "H2S" || cbFluid.Text == "HF" || cbFluid.Text == "Ammonia" || cbFluid.Text == "Chlorine")
-            {
-                for (int i = 0; i < list511.Count; i++)
-                {
-                    if (cbFluid.Text == list511[i].ToxicName)
-                    {
-                        cbReleaseDuration.Enabled = true;
-                        timeDuration.Add(list511[i].ReleaseDuration);
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < list513.Count; i++)
-                {
-                    if (cbFluid.Text == list513[i].TOXIC_NAME && ReleasePhase == list513[i].TOXIC_TYPE)
-                    {
-                        cbReleaseDuration.Enabled = true;
-                        timeDuration.Add(list513[i].DURATION);
-                    }
-                }
-            }
-            if (timeDuration.Count != 0)
-            {
-                txtToxicPercent.Enabled = true;
-            }
-            else
-            {
-                txtToxicPercent.Enabled = false;
-            }
-            clearData();
-            cbReleaseDuration.Properties.Items.Add("", -1, -1);
-            for (int i = 0; i < timeDuration.Count; i++)
-            {
-                cbReleaseDuration.Properties.Items.Add(timeDuration[i], i, i);
-            }
+            //timeDuration = new List<string>();
+            //cbReleaseDuration.Enabled = false;
+            
+            //TOXIC_511_512 list511 = bus.getList511_512("","");
+            //List<TOXIC_513> list513 = bus.getList513("","","");
+            //if (cbFluidPhase.Text == "Vapor")
+            //{
+            //    ReleasePhase = "Gas";
+            //}
+            //else if (cbFluidPhase.Text == "Liquid" || cbFluidPhase.Text == "Powder")
+            //{
+            //    ReleasePhase = "Liquid";
+            //}
+            //else
+            //{
+            //    ReleasePhase = "";
+            //}
+            //if (cbFluid.Text == "H2S" || cbFluid.Text == "HF" || cbFluid.Text == "Ammonia" || cbFluid.Text == "Chlorine")
+            //{
+            //    for (int i = 0; i < list511.Count; i++)
+            //    {
+            //        if (cbFluid.Text == list511[i].ToxicName)
+            //        {
+            //            cbReleaseDuration.Enabled = true;
+            //            timeDuration.Add(list511[i].ContitnuousReleaseDuration);
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    for (int i = 0; i < list513.Count; i++)
+            //    {
+            //        if (cbFluid.Text == list513[i].TOXIC_NAME && ReleasePhase == list513[i].TOXIC_TYPE)
+            //        {
+            //            cbReleaseDuration.Enabled = true;
+            //            timeDuration.Add(list513[i].DURATION);
+            //        }
+            //    }
+            //}
+            //if (timeDuration.Count != 0)
+            //{
+            //    txtToxicPercent.Enabled = true;
+            //}
+            //else
+            //{
+            //    txtToxicPercent.Enabled = false;
+            //}
+            //clearData();
+            //cbReleaseDuration.Properties.Items.Add("", -1, -1);
+            //for (int i = 0; i < timeDuration.Count; i++)
+            //{
+            //    cbReleaseDuration.Properties.Items.Add(timeDuration[i], i, i);
+            //}
         }
 
         #region Key Press Event

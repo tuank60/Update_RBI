@@ -58,6 +58,39 @@ namespace RBI.DAL.MSSQL_CAL
             }
             return data;
         }
+        public String GET_FLUID_TYPE(String fluid)
+        {
+            conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String data = null;
+            String sql = "USE [rbi] SELECT [FluidType] FROM [dbo].[TBL_52_CA_PROPERTIES_LEVEL_1] WHERE [Fluid] = '" + fluid + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            data = reader.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("GET TBL_52 FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return data;
+        }
         public String GET_RELEASE_PHASE(String fluid)
         {
             conn = MSSQLDBUtils.GetDBConnection();
@@ -421,13 +454,13 @@ namespace RBI.DAL.MSSQL_CAL
             }
             return data;
         }
-        public List<TOXIC_511_512> GET_TBL_511_512()
+        public TOXIC_511_512 GET_TBL_511_512(string toxicName,string ContitnuousReleaseDuration)
         {
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            String sql = "USE[rbi] SELECT * FROM [rbi].[dbo].[TBL_511_512_CA_GAS_TOXIC]";
-            List<TOXIC_511_512> list = new List<TOXIC_511_512>();
-            TOXIC_511_512 obj = null;
+            String sql = "USE[rbi] SELECT * FROM [rbi].[dbo].[TBL_511_512_CA_GAS_TOXIC] WHERE [ToxicName] = '" + toxicName + "' AND [ContitnuousReleaseDuration] = '" + ContitnuousReleaseDuration + "'";
+            TOXIC_511_512 obj = new TOXIC_511_512();
+            //Console.WriteLine("sql= " + sql);
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -439,12 +472,14 @@ namespace RBI.DAL.MSSQL_CAL
                     {
                         if (reader.HasRows)
                         {
-                            obj = new TOXIC_511_512();
+                      
                             obj.ToxicName = reader.GetString(0);
-                            obj.ReleaseDuration = reader.GetString(1);
-                            obj.a = (float)reader.GetDouble(2);
-                            obj.b = (float)reader.GetDouble(3);
-                            list.Add(obj);
+                            obj.ContitnuousReleaseDuration = reader.GetString(1);
+                            obj.c = (float)reader.GetDouble(2);
+                            obj.d = (float)reader.GetDouble(3);
+                            obj.e = (float)reader.GetDouble(4);
+                            obj.f = (float)reader.GetDouble(5);
+                            
                         }
                     }
                 }
@@ -458,15 +493,15 @@ namespace RBI.DAL.MSSQL_CAL
                 conn.Close();
                 conn.Dispose();
             }
-            return list;
+            return obj;
         }
-        public List<TOXIC_513> GET_TBL_513()
+        public TOXIC_513 GET_TBL_513(String Toxic, String ReleaseType, String ContinuousReleasesDuration)
         {
             conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            List<TOXIC_513> list = new List<TOXIC_513>();
-            TOXIC_513 obj = null;
-            String sql = "USE[rbi] SELECT * FROM [rbi].[dbo].[TBL_513_CA_TOXIC]";
+            String sql = "USE[rbi] SELECT * FROM [rbi].[dbo].[TBL_513_CA_TOXIC] WHERE [Toxic] = '" + Toxic + "' AND [ReleaseType] = '" + ReleaseType + "' AND [ContinuousReleasesDuration] = '" + ContinuousReleasesDuration + "'";
+            //Console.WriteLine("sql= " + sql);
+            TOXIC_513 obj = new TOXIC_513();
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -478,13 +513,14 @@ namespace RBI.DAL.MSSQL_CAL
                     {
                         if (reader.HasRows)
                         {
-                            obj = new TOXIC_513();
-                            obj.TOXIC_NAME = reader.GetString(0);
-                            obj.TOXIC_TYPE = reader.GetString(1);
-                            obj.DURATION = reader.GetString(2);
-                            obj.a = (float)reader.GetDouble(3);
-                            obj.b = (float)reader.GetDouble(4);
-                            list.Add(obj);
+                            obj.Toxic = reader.GetString(0);
+                            obj.ReleaseType = reader.GetString(1);
+                            obj.ContinuousReleasesDuration = reader.GetString(2);
+                            obj.c = (float)reader.GetDouble(3);
+                            obj.d = (float)reader.GetDouble(4);
+                            obj.e = (float)reader.GetDouble(5);
+                            obj.f = (float)reader.GetDouble(6);
+                            
                         }
                     }
                 }
@@ -498,7 +534,7 @@ namespace RBI.DAL.MSSQL_CAL
                 conn.Close();
                 conn.Dispose();
             }
-            return list;
+            return obj;
         }
         // Thinning
         // get DATA FROM TBL_45

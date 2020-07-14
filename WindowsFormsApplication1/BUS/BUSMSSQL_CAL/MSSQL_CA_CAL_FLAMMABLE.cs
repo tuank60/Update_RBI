@@ -119,12 +119,15 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float fact_mit()
         {
+            RW_FULL_COF_INPUT_BUS bus = new RW_FULL_COF_INPUT_BUS();
+            RW_FULL_COF_INPUT obj = bus.getData(IDProposal);
+            //Console.WriteLine("fact mit= " + obj.Mitigation);
             float fact_mit = 0;
-            if (CA_CAL.MITIGATION_SYSTEM == "Inventory Blowdown, coupled with isolation system actived remotely or automatically")
+            if (obj.Mitigation == "Inventory Blowdown, coupled with isolation system actived remotely or automatically")
                 fact_mit = 0.25f;
-            else if (CA_CAL.MITIGATION_SYSTEM == "Fire water deluge system and monitors")
+            else if (obj.Mitigation == "Fire water deluge system and monitors")
                 fact_mit = 0.2f;
-            else if (CA_CAL.MITIGATION_SYSTEM == "Fire water monitor only")
+            else if (obj.Mitigation == "Fire water monitor only")
                 fact_mit = 0.05f;
             else
                 fact_mit = 0.15f;

@@ -11,13 +11,13 @@ namespace RBI.BUS.BUSMSSQL_CAL
     class BUS_TOXIC
     {
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
-        public List<TOXIC_511_512> getList511_512()
+        public TOXIC_511_512 getList511_512(string toxicName, string Conti)
         {
-            return DAL_CAL.GET_TBL_511_512();
+            return DAL_CAL.GET_TBL_511_512(toxicName, Conti);
         }
-        public List<TOXIC_513> getList513()
+        public TOXIC_513 getList513(string Toxic, string ReleaseType, string ContinuousReleasesDuration)
         {
-            return DAL_CAL.GET_TBL_513();
+            return DAL_CAL.GET_TBL_513(Toxic, ReleaseType, ContinuousReleasesDuration);
         }
     }
 }

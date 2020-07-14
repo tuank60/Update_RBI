@@ -318,19 +318,19 @@
             this.label154 = new System.Windows.Forms.Label();
             this.label153 = new System.Windows.Forms.Label();
             this.label152 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRMRF = new System.Windows.Forms.TextBox();
+            this.txtCARF = new System.Windows.Forms.TextBox();
+            this.txtLiquidDensity = new System.Windows.Forms.TextBox();
+            this.txtVapourDensity = new System.Windows.Forms.TextBox();
+            this.txtMW = new System.Windows.Forms.TextBox();
+            this.txtAIT = new System.Windows.Forms.TextBox();
+            this.txtNBP = new System.Windows.Forms.TextBox();
+            this.txtCp = new System.Windows.Forms.TextBox();
+            this.txtK = new System.Windows.Forms.TextBox();
+            this.txtAmbientState = new System.Windows.Forms.TextBox();
+            this.txtReleasePhase = new System.Windows.Forms.TextBox();
+            this.txtToxicFluidType = new System.Windows.Forms.TextBox();
+            this.txtModelFluidType = new System.Windows.Forms.TextBox();
             this.label151 = new System.Windows.Forms.Label();
             this.label150 = new System.Windows.Forms.Label();
             this.label149 = new System.Windows.Forms.Label();
@@ -4155,19 +4155,19 @@
             this.panelCAP.Controls.Add(this.label154);
             this.panelCAP.Controls.Add(this.label153);
             this.panelCAP.Controls.Add(this.label152);
-            this.panelCAP.Controls.Add(this.textBox14);
-            this.panelCAP.Controls.Add(this.textBox13);
-            this.panelCAP.Controls.Add(this.textBox12);
-            this.panelCAP.Controls.Add(this.textBox11);
-            this.panelCAP.Controls.Add(this.textBox10);
-            this.panelCAP.Controls.Add(this.textBox9);
-            this.panelCAP.Controls.Add(this.textBox8);
-            this.panelCAP.Controls.Add(this.textBox7);
-            this.panelCAP.Controls.Add(this.textBox6);
-            this.panelCAP.Controls.Add(this.textBox5);
-            this.panelCAP.Controls.Add(this.textBox4);
-            this.panelCAP.Controls.Add(this.textBox3);
-            this.panelCAP.Controls.Add(this.textBox2);
+            this.panelCAP.Controls.Add(this.txtRMRF);
+            this.panelCAP.Controls.Add(this.txtCARF);
+            this.panelCAP.Controls.Add(this.txtLiquidDensity);
+            this.panelCAP.Controls.Add(this.txtVapourDensity);
+            this.panelCAP.Controls.Add(this.txtMW);
+            this.panelCAP.Controls.Add(this.txtAIT);
+            this.panelCAP.Controls.Add(this.txtNBP);
+            this.panelCAP.Controls.Add(this.txtCp);
+            this.panelCAP.Controls.Add(this.txtK);
+            this.panelCAP.Controls.Add(this.txtAmbientState);
+            this.panelCAP.Controls.Add(this.txtReleasePhase);
+            this.panelCAP.Controls.Add(this.txtToxicFluidType);
+            this.panelCAP.Controls.Add(this.txtModelFluidType);
             this.panelCAP.Controls.Add(this.label151);
             this.panelCAP.Controls.Add(this.label150);
             this.panelCAP.Controls.Add(this.label149);
@@ -4238,109 +4238,109 @@
             this.label152.TabIndex = 28;
             this.label152.Text = "kg/m3";
             // 
-            // textBox14
+            // txtRMRF
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox14.Location = new System.Drawing.Point(244, 310);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(174, 20);
-            this.textBox14.TabIndex = 27;
+            this.txtRMRF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtRMRF.Location = new System.Drawing.Point(244, 310);
+            this.txtRMRF.Name = "txtRMRF";
+            this.txtRMRF.Size = new System.Drawing.Size(174, 20);
+            this.txtRMRF.TabIndex = 27;
             // 
-            // textBox13
+            // txtCARF
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox13.Location = new System.Drawing.Point(244, 335);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(174, 20);
-            this.textBox13.TabIndex = 26;
+            this.txtCARF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCARF.Location = new System.Drawing.Point(244, 335);
+            this.txtCARF.Name = "txtCARF";
+            this.txtCARF.Size = new System.Drawing.Size(174, 20);
+            this.txtCARF.TabIndex = 26;
             // 
-            // textBox12
+            // txtLiquidDensity
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox12.Location = new System.Drawing.Point(244, 85);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(174, 20);
-            this.textBox12.TabIndex = 25;
+            this.txtLiquidDensity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLiquidDensity.Location = new System.Drawing.Point(244, 85);
+            this.txtLiquidDensity.Name = "txtLiquidDensity";
+            this.txtLiquidDensity.Size = new System.Drawing.Size(174, 20);
+            this.txtLiquidDensity.TabIndex = 25;
             // 
-            // textBox11
+            // txtVapourDensity
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox11.Location = new System.Drawing.Point(244, 110);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(174, 20);
-            this.textBox11.TabIndex = 24;
+            this.txtVapourDensity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtVapourDensity.Location = new System.Drawing.Point(244, 110);
+            this.txtVapourDensity.Name = "txtVapourDensity";
+            this.txtVapourDensity.Size = new System.Drawing.Size(174, 20);
+            this.txtVapourDensity.TabIndex = 24;
             // 
-            // textBox10
+            // txtMW
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox10.Location = new System.Drawing.Point(244, 135);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(174, 20);
-            this.textBox10.TabIndex = 23;
+            this.txtMW.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMW.Location = new System.Drawing.Point(244, 135);
+            this.txtMW.Name = "txtMW";
+            this.txtMW.Size = new System.Drawing.Size(174, 20);
+            this.txtMW.TabIndex = 23;
             // 
-            // textBox9
+            // txtAIT
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox9.Location = new System.Drawing.Point(244, 160);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(174, 20);
-            this.textBox9.TabIndex = 22;
+            this.txtAIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAIT.Location = new System.Drawing.Point(244, 160);
+            this.txtAIT.Name = "txtAIT";
+            this.txtAIT.Size = new System.Drawing.Size(174, 20);
+            this.txtAIT.TabIndex = 22;
             // 
-            // textBox8
+            // txtNBP
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox8.Location = new System.Drawing.Point(244, 185);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(174, 20);
-            this.textBox8.TabIndex = 21;
+            this.txtNBP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNBP.Location = new System.Drawing.Point(244, 185);
+            this.txtNBP.Name = "txtNBP";
+            this.txtNBP.Size = new System.Drawing.Size(174, 20);
+            this.txtNBP.TabIndex = 21;
             // 
-            // textBox7
+            // txtCp
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox7.Location = new System.Drawing.Point(244, 210);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 20);
-            this.textBox7.TabIndex = 20;
+            this.txtCp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCp.Location = new System.Drawing.Point(244, 210);
+            this.txtCp.Name = "txtCp";
+            this.txtCp.Size = new System.Drawing.Size(174, 20);
+            this.txtCp.TabIndex = 20;
             // 
-            // textBox6
+            // txtK
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox6.Location = new System.Drawing.Point(244, 235);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 20);
-            this.textBox6.TabIndex = 19;
+            this.txtK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtK.Location = new System.Drawing.Point(244, 235);
+            this.txtK.Name = "txtK";
+            this.txtK.Size = new System.Drawing.Size(174, 20);
+            this.txtK.TabIndex = 19;
             // 
-            // textBox5
+            // txtAmbientState
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(244, 260);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 20);
-            this.textBox5.TabIndex = 18;
+            this.txtAmbientState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAmbientState.Location = new System.Drawing.Point(244, 260);
+            this.txtAmbientState.Name = "txtAmbientState";
+            this.txtAmbientState.Size = new System.Drawing.Size(174, 20);
+            this.txtAmbientState.TabIndex = 18;
             // 
-            // textBox4
+            // txtReleasePhase
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(244, 285);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 20);
-            this.textBox4.TabIndex = 17;
+            this.txtReleasePhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtReleasePhase.Location = new System.Drawing.Point(244, 285);
+            this.txtReleasePhase.Name = "txtReleasePhase";
+            this.txtReleasePhase.Size = new System.Drawing.Size(174, 20);
+            this.txtReleasePhase.TabIndex = 17;
             // 
-            // textBox3
+            // txtToxicFluidType
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(244, 60);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 20);
-            this.textBox3.TabIndex = 16;
+            this.txtToxicFluidType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicFluidType.Location = new System.Drawing.Point(244, 60);
+            this.txtToxicFluidType.Name = "txtToxicFluidType";
+            this.txtToxicFluidType.Size = new System.Drawing.Size(174, 20);
+            this.txtToxicFluidType.TabIndex = 16;
             // 
-            // textBox2
+            // txtModelFluidType
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(244, 34);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtModelFluidType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtModelFluidType.Location = new System.Drawing.Point(244, 34);
+            this.txtModelFluidType.Name = "txtModelFluidType";
+            this.txtModelFluidType.Size = new System.Drawing.Size(174, 20);
+            this.txtModelFluidType.TabIndex = 15;
             // 
             // label151
             // 
@@ -12662,19 +12662,19 @@
         private System.Windows.Forms.Label label154;
         private System.Windows.Forms.Label label153;
         private System.Windows.Forms.Label label152;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRMRF;
+        private System.Windows.Forms.TextBox txtCARF;
+        private System.Windows.Forms.TextBox txtLiquidDensity;
+        private System.Windows.Forms.TextBox txtVapourDensity;
+        private System.Windows.Forms.TextBox txtMW;
+        private System.Windows.Forms.TextBox txtAIT;
+        private System.Windows.Forms.TextBox txtNBP;
+        private System.Windows.Forms.TextBox txtCp;
+        private System.Windows.Forms.TextBox txtK;
+        private System.Windows.Forms.TextBox txtAmbientState;
+        private System.Windows.Forms.TextBox txtReleasePhase;
+        private System.Windows.Forms.TextBox txtToxicFluidType;
+        private System.Windows.Forms.TextBox txtModelFluidType;
         private System.Windows.Forms.Label label151;
         private System.Windows.Forms.Label label150;
         private System.Windows.Forms.Label label149;

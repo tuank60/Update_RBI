@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace RBI.Object.ObjectMSSQL_CAL
 {
-    class TOXIC_511_512
+    public class TOXIC_511_512
     {
         public String ToxicName { set; get; }
-        public String ReleaseDuration { set; get; }
-        public float a { set; get; }
-        public float b { set; get; }
+        public String ContitnuousReleaseDuration { set; get; }
+        public float c { set; get; }
+        public float d { set; get; }
+        public float e { set; get; }
+        public float f { set; get; }
     }
 }
