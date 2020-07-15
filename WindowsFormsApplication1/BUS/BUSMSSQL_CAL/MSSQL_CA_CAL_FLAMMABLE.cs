@@ -923,12 +923,17 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 x = obj.rate_4;
             }
             float ca_injn_cont = 0;
-            float g = (float)Math.Round(2696 - 21.9 * (DAL_CAL.GET_TBL_3B21(11)) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE) + 1.474 * Math.Pow(((DAL_CAL.GET_TBL_3B21(11)) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE)), 2), 4);
-            float h = (float)Math.Round(0.31 - 0.00032 * Math.Pow(((DAL_CAL.GET_TBL_3B21(11)) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE) - 40), 2), 4);
+            float num3 = 590;
+            double g = (2696.0 - (3.1754999999999995 * (num3 - 101.325))) + (1.474 * Math.Pow(0.145 * (num3 - 101.325), 2.0));
+            double h = 0.31 - (0.00032 * Math.Pow((0.145 * (num3 - 101.325)) - 40.0, 2.0));
+            //float g = (float)(2696 - 21.9 * (0.145) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE) + 1.474 * Math.Pow(((0.145) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE)), 2));
+            //float h = (float)(0.31 - 0.00032 * Math.Pow((0.145*(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) - 40),2));
             if (FLUID == "Steam")
                 ca_injn_cont = (float)Math.Round((DAL_CAL.GET_TBL_3B21(9)) * x, 4);
+            else if (FLUID == "Water")
+                ca_injn_cont = 0;
             else
-                ca_injn_cont = (float)Math.Round(0.2 * (DAL_CAL.GET_TBL_3B21(8)) * g * Math.Pow((DAL_CAL.GET_TBL_3B21(4)) * x, h), 2);
+                ca_injn_cont = (float)Math.Round(0.2 * (0.0929) * g * Math.Pow((2.205) * x, h), 2);
             return ca_injn_cont;
         }
         public float ca_injn_instnfnt(int n)
@@ -984,7 +989,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             float fact_n_icnfnt = 0;
             if (FLUID == "Steam")
-                fact_n_icnfnt = Math.Min(x / (DAL_CAL.GET_TBL_3B21(5)), 1);
+                fact_n_icnfnt = Math.Min(x / (25.2f), 1);
             else
                 fact_n_icnfnt = 0;
             return fact_n_icnfnt;

@@ -46,7 +46,6 @@ namespace RBI.PRE.subForm.OutputDataForm
             riskPoF(ID);
             riskCA(ID);
             addItemDetectionSystem();
-            initAreabaseCOF(ID); 
             addItemIsolationSystem();
             addItemMitigation();
             initinput();
@@ -291,7 +290,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankShell.PageVisible = true;
                 tabCATankRoof.PageVisible = false;
                 initData_InputTank(ID);
-
+                LoadDataForControlInTabCATankShell(ID);
             }
             else if (compTypeID == 14) //fixed roof
             {
@@ -325,6 +324,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = true;
                 tabCATankShell.PageVisible = false;
+                initAreabaseCOF(ID);
             }
         }
         private void addItemDetectionSystem()
@@ -1303,10 +1303,10 @@ namespace RBI.PRE.subForm.OutputDataForm
                 txtINST_CA2.Text = CA_CAL_FLA.ca_injn_instnfnt(2).ToString();
                 txtINST_CA3.Text = CA_CAL_FLA.ca_injn_instnfnt(3).ToString();
                 txtINST_CA4.Text = CA_CAL_FLA.ca_injn_instnfnt(4).ToString();
-                txtBlend_CA1.Text = CA_CAL_FLA.ca_injn_leaknfnt(1).ToString();
-                txtBlend_CA2.Text = CA_CAL_FLA.ca_injn_leaknfnt(2).ToString();
-                txtBlend_CA3.Text = CA_CAL_FLA.ca_injn_leaknfnt(3).ToString();
-                txtBlend_CA4.Text = CA_CAL_FLA.ca_injn_leaknfnt(4).ToString();
+                txtBlend_CA1.Text = CA_CAL_FLA.fact_n_icnfnt(1).ToString();
+                txtBlend_CA2.Text = CA_CAL_FLA.fact_n_icnfnt(2).ToString();
+                txtBlend_CA3.Text = CA_CAL_FLA.fact_n_icnfnt(3).ToString();
+                txtBlend_CA4.Text = CA_CAL_FLA.fact_n_icnfnt(4).ToString();
                 txtNonFlammableNonToxicCon.Text = CA_CAL_FLA.ca_inj_nfnt().ToString();
             }
         }
