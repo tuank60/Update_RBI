@@ -189,6 +189,13 @@ namespace RBI.PRE.subForm.OutputDataForm
             int equipmentID = com.EquipmentID;
             API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
             API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
+            RW_FULL_COF_FLUID_BUS busrwcfc = new RW_FULL_COF_FLUID_BUS();
+            RW_FULL_COF_FLUID rwcfc = busrwcfc.getData(IDProposal);
+            CA_CAL.FLUID = st.TankFluidName;
+            CA_CAL_FLA.FlUID_TOXIC = st.ToxicFluidName;
+            String data = DAL_CAL.GET_FLUID_TYPE(CA_CAL.FLUID);
+            String data1 = DAL_CAL.GET_FLUID_TYPE(CA_CAL_FLA.FlUID_TOXIC);
+            float[] data3 = DAL_CAL.GET_TBL_52(CA_CAL.FLUID);
             txtACT.Text = api.APIComponentTypeName.ToString();
             txtLL.Text = st.LiquidLevel.ToString();
             txtMF.Text = st.TankFluidName;
@@ -199,10 +206,19 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtPhase.Text = st.StoragePhase.ToString();
             txtMOT.Text = st.MaxOperatingTemperature.ToString();
             txtMOP.Text = ((st.MaxOperatingPressure)*1000).ToString();
-            //txtModelFluidType.Text=DAL_CAL.GET_FLUID_TYPE()
-            txtCp.Text = CA_CAL.C_P().ToString();
-            //txtK.Text=
-            txtCARF.Text = CA_CAL_FLA.fact_mit().ToString();
+            txtModelFluidType.Text = data.ToString();
+            txtToxicFluidType.Text = data1.ToString();
+            txtCp.Text = rwcfc.Cp.ToString();
+            txtLiquidDensity.Text = rwcfc.Density.ToString();
+            //txtVapourDensity.Text
+            txtMW.Text = rwcfc.MW.ToString();
+            txtAIT.Text = ((data3[9]-32)/1.8f).ToString();
+            txtNBP.Text = rwcfc.NBP.ToString();
+            txtK.Text = rwcfc.k.ToString();
+            txtAmbientState.Text = rwcfc.ambient.ToString();
+            txtReleasePhase.Text = rwcfc.ReleasePhase.ToString();
+            txtRMRF.Text = rwcfc.fact_di.ToString();
+            txtCARF.Text = rwcfc.fact_mit.ToString();
         }
         public void initCAP()
         {
@@ -1295,19 +1311,26 @@ namespace RBI.PRE.subForm.OutputDataForm
 
 
                 //Non F Non T
-                txtCONT_CA1.Text = CA_CAL_FLA.ca_injn_contnfnt(1).ToString();
-                txtCONT_CA2.Text = CA_CAL_FLA.ca_injn_contnfnt(2).ToString();
-                txtCONT_CA3.Text = CA_CAL_FLA.ca_injn_contnfnt(3).ToString();
-                txtCONT_CA4.Text = CA_CAL_FLA.ca_injn_contnfnt(4).ToString();
-                txtINST_CA1.Text = CA_CAL_FLA.ca_injn_instnfnt(1).ToString();
-                txtINST_CA2.Text = CA_CAL_FLA.ca_injn_instnfnt(2).ToString();
-                txtINST_CA3.Text = CA_CAL_FLA.ca_injn_instnfnt(3).ToString();
-                txtINST_CA4.Text = CA_CAL_FLA.ca_injn_instnfnt(4).ToString();
-                txtBlend_CA1.Text = CA_CAL_FLA.fact_n_icnfnt(1).ToString();
-                txtBlend_CA2.Text = CA_CAL_FLA.fact_n_icnfnt(2).ToString();
-                txtBlend_CA3.Text = CA_CAL_FLA.fact_n_icnfnt(3).ToString();
-                txtBlend_CA4.Text = CA_CAL_FLA.fact_n_icnfnt(4).ToString();
-                txtNonFlammableNonToxicCon.Text = CA_CAL_FLA.ca_inj_nfnt().ToString();
+                if (CA_CAL_FLA.FLUID == "Water" || CA_CAL_FLA.FLUID == "Steam" || CA_CAL_FLA.FLUID == "Water" || CA_CAL_FLA.FLUID == "Acid" || CA_CAL_FLA.FLUID == "Caustic")
+                {
+                    txtCONT_CA1.Text = CA_CAL_FLA.ca_injn_contnfnt(1).ToString();
+                    txtCONT_CA2.Text = CA_CAL_FLA.ca_injn_contnfnt(2).ToString();
+                    txtCONT_CA3.Text = CA_CAL_FLA.ca_injn_contnfnt(3).ToString();
+                    txtCONT_CA4.Text = CA_CAL_FLA.ca_injn_contnfnt(4).ToString();
+                    txtINST_CA1.Text = CA_CAL_FLA.ca_injn_instnfnt(1).ToString();
+                    txtINST_CA2.Text = CA_CAL_FLA.ca_injn_instnfnt(2).ToString();
+                    txtINST_CA3.Text = CA_CAL_FLA.ca_injn_instnfnt(3).ToString();
+                    txtINST_CA4.Text = CA_CAL_FLA.ca_injn_instnfnt(4).ToString();
+                    txtBlend_CA1.Text = CA_CAL_FLA.fact_n_icnfnt(1).ToString();
+                    txtBlend_CA2.Text = CA_CAL_FLA.fact_n_icnfnt(2).ToString();
+                    txtBlend_CA3.Text = CA_CAL_FLA.fact_n_icnfnt(3).ToString();
+                    txtBlend_CA4.Text = CA_CAL_FLA.fact_n_icnfnt(4).ToString();
+                    txtNonFlammableNonToxicCon.Text = CA_CAL_FLA.ca_inj_nfnt().ToString();
+                }
+                else
+                {
+                    panelNonTF.Visible = false;
+                }
             }
         }
 

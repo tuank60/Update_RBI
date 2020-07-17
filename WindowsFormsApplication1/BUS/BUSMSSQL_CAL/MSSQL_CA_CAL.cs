@@ -197,20 +197,16 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float a_n(int i) //done
         {
             float a_n = (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 5);
-            //Console.WriteLine("gia tri An" + a_n);
+
             return a_n;
         }
         public float C_P() //done
         {
-            //Console.WriteLine("FLUID = " + FLUID);
+
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
-            //STORED_TEMP = STORED_TEMP + 273;
+
             float CP_C2 = (float)Math.Round(Math.Pow((data[6] / (STORED_TEMP+273.15)) / (Math.Sinh(data[6] / (STORED_TEMP+273.15))), 2), 10);
             float CP_E2 = (float)Math.Round(Math.Pow((data[8] / (STORED_TEMP+273.15)) / (Math.Cosh(data[8] / (STORED_TEMP+273.15))), 2), 10);
-            //Console.WriteLine("NOTE = " + data[3]);
-            //Console.WriteLine("STORED TEMP= " + STORED_TEMP);
-            //Console.WriteLine("gia tri CP_C2= " + CP_C2);
-            //Console.WriteLine("gia tri CP_E2= " + CP_E2);
             if (STORED_TEMP != 0)
             {
                 if (data[3] == 1)
@@ -238,48 +234,39 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float m_w = data[0];
             float p_trans;
             float gc = 1;
-            //Console.WriteLine("fluid phase la" + FLUID_PHASE);
-            //Console.WriteLine("Stored_Pressure la " + STORED_PRESSURE);
-            //Console.WriteLine("Atmosphe la " + ATMOSPHERIC_PRESSURE);
             float R = 8.314f;
             float ATMOSPHERIC_PRESSURE = 101.325f;
             k = (float)Math.Max((double)(cp / (cp - R)), (double)1.01);
-            //Console.WriteLine("k= " + k);
+
             p_trans = (float)Math.Round(ATMOSPHERIC_PRESSURE * Math.Pow(((k + 1) / 2), (k / (k - 1))), 5);
-            //Console.WriteLine("PS= " + p_trans);
+
             if ((STORED_TEMP == 0) || (STORED_PRESSURE == 0)){
                 W_n = 0;
                 return W_n;
             }
-            //Console.WriteLine("release phase la " + RELEASE_PHASE);
-            //Console.WriteLine("liquid density la " + data[1]);
             if (RELEASE_PHASE != "Liquid")
             {
 
                 if (STORED_PRESSURE > p_trans)
                 {
                     float x = (float)(((k * m_w * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
-                    //Console.WriteLine("x= " + x);
+
                     W_n = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
                     return W_n;
                 }
                 if (STORED_PRESSURE <= p_trans)
                 {
                     float x = (float)Math.Round((m_w * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
-                    //Console.WriteLine("x= " + x);
+
                     W_n = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
                     return W_n;
                 }
-                //W_n = (float)Math.Round(0.61 * 1 * data[1] * 16.02 * an * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1]) * 16.02) / (DAL_CAL.GET_TBL_3B21(1)), 2);
+                
             }
             else
-            {
-                //Console.WriteLine("anfjdsnjas");
-                //Console.WriteLine("data[1]= " + data[1]);
-                //Console.WriteLine("dien tich la " + an);
-                //Console.WriteLine("SIUNIt=" + DAL_CAL.GET_TBL_3B21(1));
+            {              
                 W_n = (float)Math.Round((0.61 * data[1] * 16.02 * an) / (DAL_CAL.GET_TBL_3B21(1)) * Math.Sqrt(2 * gc * Math.Abs(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) / (data[1] * 16.02)), 5);
-                //Console.WriteLine("cai dcm" + W_n);
+
                 return W_n;
             }
             return 0;         
@@ -312,12 +299,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return gff;
         }
-        //public String fluid_type()
-        //{
-        //    String data = DAL_CAL.GET_FLUID_TYPE(FLUID);
-        //    Console.WriteLine("fluid type= " + data);
-        //    return data;
-        //}
         public float W_max8() //done
         {
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
@@ -393,28 +374,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             else
                 return "Continuous";
         }
-        public String convertdetectionclass()
-        {
-            String detection_class = "X";
-            //char isolation_class = 'Y';
-            //Console.WriteLine("DETECTION TYPE= " + DETECTION_TYPE);
-            if (DETECTION_TYPE != " ") {
-                if (DETECTION_TYPE == "Instrumentation designed specifically to detect material losses by changes in operating conditions (i.e., loss of pressure or flow) in the system")
-                {
-                    detection_class = "A";
-                }
-                else if (DETECTION_TYPE == "Suitably located detectors to determine when the material is present outside the pressure-containing envelope")
-                {
-                    detection_class = "B";
-                }
-                else 
-                {
-                    detection_class = "C";
-                }
-            }
-            return detection_class;
-
-        }
         public float fact_di()
         {
             float fact_di = 0;
@@ -431,6 +390,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 fact_di = 0.1f;
             }
             else if (DETECTION_TYPE == "B" && ISULATION_TYPE == "B")
+            {
+                fact_di = 0.15f;
+            }
+            else if (DETECTION_TYPE == "B" && ISULATION_TYPE == "A")
             {
                 fact_di = 0.15f;
             }
@@ -536,12 +499,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float fact_mit()
         {
+            RW_FULL_COF_INPUT_BUS bus = new RW_FULL_COF_INPUT_BUS();
+            RW_FULL_COF_INPUT obj = bus.getData(IDProposal);
             float fact_mit = 0;
-            if (MITIGATION_SYSTEM == "Inventory blowdown, couple with isolation system classification B or higher")
+            if (obj.Mitigation == "Inventory Blowdown, coupled with isolation system actived remotely or automatically")
                 fact_mit = 0.25f;
-            else if (MITIGATION_SYSTEM == "Fire water deluge system and monitors")
+            else if (obj.Mitigation == "Fire water deluge system and monitors")
                 fact_mit = 0.2f;
-            else if (MITIGATION_SYSTEM == "Fire water monitors only")
+            else if (obj.Mitigation == "Fire water monitor only")
                 fact_mit = 0.05f;
             else
                 fact_mit = 0.15f;

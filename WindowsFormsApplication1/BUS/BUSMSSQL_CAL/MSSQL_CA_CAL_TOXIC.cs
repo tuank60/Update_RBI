@@ -119,7 +119,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 rate_tox = TOXIC_PERCENT * obj.W4;
             }
-            //Console.WriteLine("TOXIC_PERCENT= " + TOXIC_PERCENT);
             return rate_tox;
 
         }
@@ -361,19 +360,10 @@ namespace RBI.BUS.BUSMSSQL_CAL
             API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
             API_COMPONENT_TYPE obj = busapi.getDatabyID(apicomponentID);
             Console.WriteLine("Toxic name= " + ToxicName);
-            Console.WriteLine("releases type1= " + releasetype1);
-            Console.WriteLine("releases type2= " + releasetype2);
-            Console.WriteLine("releases type3= " + releasetype3);
-            Console.WriteLine("releases type4= " + releasetype4);
-            Console.WriteLine("releases phase= " + releasephase);
             float ca_injn_tox1 = ca_injn_tox(releasetype1, ToxicName, releasephase, 1);
             float ca_injn_tox2 = ca_injn_tox(releasetype2, ToxicName, releasephase, 2);
             float ca_injn_tox3 = ca_injn_tox(releasetype3, ToxicName, releasephase, 3);
             float ca_injn_tox4 = ca_injn_tox(releasetype4, ToxicName, releasephase, 4);
-            Console.WriteLine("ca_injn_tox1= " + ca_injn_tox1);
-            Console.WriteLine("ca_injn_tox2= " + ca_injn_tox2);
-            Console.WriteLine("ca_injn_tox3= " + ca_injn_tox3);
-            Console.WriteLine("ca_injn_tox4= " + ca_injn_tox4);
             float t = obj.GFFSmall * ca_injn_tox1 + obj.GFFMedium * ca_injn_tox2 + obj.GFFLarge * ca_injn_tox3 + obj.GFFRupture * ca_injn_tox4;
             float ca_inj_tox = t / obj.GFFTotal;
             return Math.Abs(ca_inj_tox);

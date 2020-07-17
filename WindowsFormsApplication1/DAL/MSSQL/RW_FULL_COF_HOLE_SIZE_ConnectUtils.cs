@@ -132,7 +132,7 @@ namespace RBI.DAL.MSSQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
-                Console.WriteLine("ksad" + sql);
+                //Console.WriteLine("ksad" + sql);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)

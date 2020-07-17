@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RBI.Object.ObjectMSSQL
 {
-    class RW_FULL_COF_FLUID
+    public class RW_FULL_COF_FLUID
     {
         public int ID { get; set; }
         public float Cp { get; set; }
@@ -29,5 +29,6 @@ namespace RBI.Object.ObjectMSSQL
         public float fact_AIT { get; set; }
         public float g { get; set; }
         public float h { get; set; }
+        public String ambient { get; set; }
     }
 }

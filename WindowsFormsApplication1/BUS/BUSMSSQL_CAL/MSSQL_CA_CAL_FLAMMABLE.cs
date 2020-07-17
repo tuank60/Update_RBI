@@ -76,6 +76,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return API_TYPE;
         }
+
         public API_COMPONENT_TYPE GET_DATA_API_COM()
         {
             return API_COMPONENT_BUS.getData(API_COMPONENT_TYPE_NAME);
@@ -121,7 +122,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             RW_FULL_COF_INPUT_BUS bus = new RW_FULL_COF_INPUT_BUS();
             RW_FULL_COF_INPUT obj = bus.getData(IDProposal);
-            //Console.WriteLine("fact mit= " + obj.Mitigation);
             float fact_mit = 0;
             if (obj.Mitigation == "Inventory Blowdown, coupled with isolation system actived remotely or automatically")
                 fact_mit = 0.25f;
@@ -435,7 +435,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (n == 1)
             {
                 x = obj.rate_1*TOXIC_PERCENT;
-                //Console.WriteLine("x= " + x);
             }
             else if (n == 2)
             {
@@ -574,6 +573,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 fact_ait = 1;
             else
                 fact_ait = (CA_CAL.STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
+            Console.WriteLine("fact_ait= " + fact_ait);
             return fact_ait;
         }
         public float fact_ait_toxic()
@@ -899,7 +899,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         #region non flamable non toxic
         public float STORED_PRESSURE { set; get; }
-        private float ATMOSPHERIC_PRESSURE = 101.325f;
+        public float ATMOSPHERIC_PRESSURE = 101.325f;
         public float ca_injn_contnfnt(int n)
         {
             RW_FULL_COF_HOLE_SIZE_BUS busfchs = new RW_FULL_COF_HOLE_SIZE_BUS();
