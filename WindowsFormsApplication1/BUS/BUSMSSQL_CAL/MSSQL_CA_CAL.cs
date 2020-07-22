@@ -1368,7 +1368,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 
                 double m = DAL_CAL.GET_TBL_3B21(40) - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
                 //m = m / 3;
-                 ps = (DAL_CAL.GET_TBL_3B21(39) + 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
+                 ps = (DAL_CAL.GET_TBL_3B21(39) * 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
                  //Console.WriteLine("th sau 2, n=" +n+" "+ (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
                  return ((float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
                  
@@ -1464,6 +1464,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float FC_leak_environ_bottom()
         {
+            if (TANK_FLUID == "Water") return 0;
             float sum = 0;
             int[] cost = getCost();
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
@@ -1504,6 +1505,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float FC_rupture_environ_bottom()
         {
+            if (TANK_FLUID == "Water") return 0;
             int[] cost = getCost();
             return Bbl_rupture_indike_bottom() * cost[0] + Bbl_rupture_ssonsite_bottom() * cost[1] + Bbl_rupture_ssoffsite_bottom() * cost[2] + Bbl_rupture_water_bottom() * cost[5];
            

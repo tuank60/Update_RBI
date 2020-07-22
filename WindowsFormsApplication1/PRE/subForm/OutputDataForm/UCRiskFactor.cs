@@ -206,8 +206,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtPhase.Text = st.StoragePhase.ToString();
             txtMOT.Text = st.MaxOperatingTemperature.ToString();
             txtMOP.Text = ((st.MaxOperatingPressure)*1000).ToString();
-            txtModelFluidType.Text = data.ToString();
-            txtToxicFluidType.Text = data1.ToString();
+          //  txtModelFluidType.Text = data.ToString();
+            //txtToxicFluidType.Text = data1.ToString();
             txtCp.Text = rwcfc.Cp.ToString();
             txtLiquidDensity.Text = rwcfc.Density.ToString();
             //txtVapourDensity.Text
@@ -215,8 +215,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtAIT.Text = ((data3[9]-32)/1.8f).ToString();
             txtNBP.Text = rwcfc.NBP.ToString();
             txtK.Text = rwcfc.k.ToString();
-            txtAmbientState.Text = rwcfc.ambient.ToString();
-            txtReleasePhase.Text = rwcfc.ReleasePhase.ToString();
+            //txtAmbientState.Text = rwcfc.ambient.ToString();
+            //txtReleasePhase.Text = rwcfc.ReleasePhase.ToString();
             txtRMRF.Text = rwcfc.fact_di.ToString();
             txtCARF.Text = rwcfc.fact_mit.ToString();
         }
