@@ -2435,6 +2435,7 @@ namespace RBI
             rwfcf.fact_mit = CA_CAL_FLA.fact_mit();
             rwfcf.fact_AIT = CA_CAL_FLA.fact_ait();
             rwfcf.ambient = CA_CAL.GET_AMBIENT();
+            //rwfcf.g = (float)(2696 - (3.1754999999999995f * (590 - 101.325f))) + (1.474f * Math.Pow(0.145f * (590 - 101.325f), 2));
 
             //FLUID INVENTORY AVAIABLE
             CA_CAL.MASS_INVERT = fullcofinput.mass_inv;

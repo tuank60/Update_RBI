@@ -923,11 +923,24 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 x = obj.rate_4;
             }
             float ca_injn_cont = 0;
-            float num3 = 590;
+            float num3 = 0;
+            if (STORED_PRESSURE < 163)
+            {
+                num3 = 163;
+            }
+            else
+            {
+                if (STORED_PRESSURE > 590)
+                {
+                    num3 = 590;
+                }
+                else
+                {
+                    num3 = STORED_PRESSURE;
+                }
+            }
             double g = (2696.0 - (3.1754999999999995 * (num3 - 101.325))) + (1.474 * Math.Pow(0.145 * (num3 - 101.325), 2.0));
             double h = 0.31 - (0.00032 * Math.Pow((0.145 * (num3 - 101.325)) - 40.0, 2.0));
-            //float g = (float)(2696 - 21.9 * (0.145) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE) + 1.474 * Math.Pow(((0.145) * (STORED_PRESSURE - ATMOSPHERIC_PRESSURE)), 2));
-            //float h = (float)(0.31 - 0.00032 * Math.Pow((0.145*(STORED_PRESSURE - ATMOSPHERIC_PRESSURE) - 40),2));
             if (FLUID == "Steam")
                 ca_injn_cont = (float)Math.Round((DAL_CAL.GET_TBL_3B21(9)) * x, 4);
             else if (FLUID == "Water")
@@ -1027,6 +1040,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 return Math.Abs(ca_inj_nfnt);
             }
         }
+
         #endregion
     }
 }

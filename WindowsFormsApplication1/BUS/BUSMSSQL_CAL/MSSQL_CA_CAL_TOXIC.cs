@@ -359,7 +359,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             int apicomponentID = com.APIComponentTypeID;
             API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
             API_COMPONENT_TYPE obj = busapi.getDatabyID(apicomponentID);
-            Console.WriteLine("Toxic name= " + ToxicName);
+            //Console.WriteLine("Toxic name= " + ToxicName);
             float ca_injn_tox1 = ca_injn_tox(releasetype1, ToxicName, releasephase, 1);
             float ca_injn_tox2 = ca_injn_tox(releasetype2, ToxicName, releasephase, 2);
             float ca_injn_tox3 = ca_injn_tox(releasetype3, ToxicName, releasephase, 3);

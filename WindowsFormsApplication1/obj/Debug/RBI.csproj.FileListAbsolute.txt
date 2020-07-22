@@ -1354,11 +1354,6 @@ C:\Users\khact\Desktop\newww\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.c
 C:\Users\khact\Desktop\newww\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.CopyComplete
 C:\Users\khact\Desktop\newww\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\khact\Desktop\newww\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
-C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\DevExpress.BonusSkins.v18.1.dll
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\DevExpress.Charts.v18.1.Core.dll
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\DevExpress.Data.v18.1.dll
@@ -1611,7 +1606,6 @@ C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.test.reso
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.WaitForm1.resources
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.XtraUserControl1.resources
 C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.GenerateResource.Cache
-C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe.licenses
 C:\Users\khact\Desktop\11.5\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
 C:\Users\khact\Desktop\11.5\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
 C:\Users\khact\Desktop\11.5\Update_RBI\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
@@ -2711,3 +2705,14 @@ C:\Users\VietAnhPC\Desktop\source15-7\Update_RBI\WindowsFormsApplication1\obj\De
 C:\Users\VietAnhPC\Desktop\source15-7\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.CopyComplete
 C:\Users\VietAnhPC\Desktop\source15-7\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 C:\Users\VietAnhPC\Desktop\source15-7\Update_RBI\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\RBI.exe.config
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\RBI.exe.manifest
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\RBI.application
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\RBI.exe
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\RBI.pdb
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.exe.licenses
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.TrustInfo.xml
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.exe.manifest
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.application
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.exe
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.pdb

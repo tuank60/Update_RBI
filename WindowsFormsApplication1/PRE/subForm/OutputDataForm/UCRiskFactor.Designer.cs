@@ -1102,6 +1102,75 @@
             this.label258 = new System.Windows.Forms.Label();
             this.label259 = new System.Windows.Forms.Label();
             this.label233 = new System.Windows.Forms.Label();
+            this.tabCAnormal = new DevExpress.XtraTab.XtraTabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.panelIV = new System.Windows.Forms.Panel();
+            this.txtFoFE = new System.Windows.Forms.TextBox();
+            this.txtMaterialcostfactor = new System.Windows.Forms.TextBox();
+            this.label455 = new System.Windows.Forms.Label();
+            this.label454 = new System.Windows.Forms.Label();
+            this.label453 = new System.Windows.Forms.Label();
+            this.txtOutage_rupture = new System.Windows.Forms.TextBox();
+            this.txtCost_rupture = new System.Windows.Forms.TextBox();
+            this.txtGFF_rupture = new System.Windows.Forms.TextBox();
+            this.txtOutage_large = new System.Windows.Forms.TextBox();
+            this.txtCost_large = new System.Windows.Forms.TextBox();
+            this.txtGFF_large = new System.Windows.Forms.TextBox();
+            this.txtOutage_medium = new System.Windows.Forms.TextBox();
+            this.txtCost_medium = new System.Windows.Forms.TextBox();
+            this.txtGFF_medium = new System.Windows.Forms.TextBox();
+            this.txtOutage_small = new System.Windows.Forms.TextBox();
+            this.txtFinancialcomdamage = new System.Windows.Forms.TextBox();
+            this.txtFinancialdamageSurround = new System.Windows.Forms.TextBox();
+            this.txtNoofSurroundingEquip = new System.Windows.Forms.TextBox();
+            this.txtFinancialConsequenceLostProduct = new System.Windows.Forms.TextBox();
+            this.txtFinancialConsequenceSerious = new System.Windows.Forms.TextBox();
+            this.txtEnvironmentalCost = new System.Windows.Forms.TextBox();
+            this.txtNoofDowntimeRepairSpecific = new System.Windows.Forms.TextBox();
+            this.txtCost_small = new System.Windows.Forms.TextBox();
+            this.txtGFF_small = new System.Windows.Forms.TextBox();
+            this.label463 = new System.Windows.Forms.Label();
+            this.label464 = new System.Windows.Forms.Label();
+            this.label465 = new System.Windows.Forms.Label();
+            this.label466 = new System.Windows.Forms.Label();
+            this.label467 = new System.Windows.Forms.Label();
+            this.label468 = new System.Windows.Forms.Label();
+            this.label469 = new System.Windows.Forms.Label();
+            this.label470 = new System.Windows.Forms.Label();
+            this.label471 = new System.Windows.Forms.Label();
+            this.label472 = new System.Windows.Forms.Label();
+            this.label473 = new System.Windows.Forms.Label();
+            this.label474 = new System.Windows.Forms.Label();
+            this.label475 = new System.Windows.Forms.Label();
+            this.label476 = new System.Windows.Forms.Label();
+            this.label477 = new System.Windows.Forms.Label();
+            this.label479 = new System.Windows.Forms.Label();
+            this.paneloutputCoF = new System.Windows.Forms.Panel();
+            this.label449 = new System.Windows.Forms.Label();
+            this.txtCoFC = new System.Windows.Forms.TextBox();
+            this.label450 = new System.Windows.Forms.Label();
+            this.txtFCoF = new System.Windows.Forms.TextBox();
+            this.label451 = new System.Windows.Forms.Label();
+            this.label452 = new System.Windows.Forms.Label();
+            this.panelinputFCoF = new System.Windows.Forms.Panel();
+            this.label460 = new System.Windows.Forms.Label();
+            this.label459 = new System.Windows.Forms.Label();
+            this.label458 = new System.Windows.Forms.Label();
+            this.label457 = new System.Windows.Forms.Label();
+            this.label456 = new System.Windows.Forms.Label();
+            this.txtECUP = new System.Windows.Forms.TextBox();
+            this.txtTCAWSIOFOP = new System.Windows.Forms.TextBox();
+            this.txtTuPDoDoE = new System.Windows.Forms.TextBox();
+            this.txtLoPC = new System.Windows.Forms.TextBox();
+            this.txtEOM = new System.Windows.Forms.TextBox();
+            this.txtPURCFC = new System.Windows.Forms.TextBox();
+            this.label448 = new System.Windows.Forms.Label();
+            this.label442 = new System.Windows.Forms.Label();
+            this.label443 = new System.Windows.Forms.Label();
+            this.label444 = new System.Windows.Forms.Label();
+            this.label445 = new System.Windows.Forms.Label();
+            this.label446 = new System.Windows.Forms.Label();
+            this.label447 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -1345,6 +1414,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtComDamRoof.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConsequenceCategoryRoof.Properties)).BeginInit();
             this.panel8.SuspendLayout();
+            this.tabCAnormal.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.panelIV.SuspendLayout();
+            this.paneloutputCoF.SuspendLayout();
+            this.panelinputFCoF.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1376,7 +1450,8 @@
             this.tabCAShell,
             this.tabCATankBottom,
             this.tabCATankShell,
-            this.tabCATankRoof});
+            this.tabCATankRoof,
+            this.tabCAnormal});
             this.tabRisk.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabRisk_SelectedPageChanged);
             this.tabRisk.TabIndexChanged += new System.EventHandler(this.tabRisk_TabIndexChanged);
             // 
@@ -7405,7 +7480,7 @@
             // 
             this.cbMitigationSystem.Location = new System.Drawing.Point(364, 102);
             this.cbMitigationSystem.Name = "cbMitigationSystem";
-            this.cbMitigationSystem.Properties.Appearance.BackColor = System.Drawing.Color.Red;
+            this.cbMitigationSystem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbMitigationSystem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.cbMitigationSystem.Properties.Appearance.Options.UseBackColor = true;
             this.cbMitigationSystem.Properties.Appearance.Options.UseForeColor = true;
@@ -7419,7 +7494,7 @@
             // 
             this.cbIsolationSystem.Location = new System.Drawing.Point(364, 76);
             this.cbIsolationSystem.Name = "cbIsolationSystem";
-            this.cbIsolationSystem.Properties.Appearance.BackColor = System.Drawing.Color.Red;
+            this.cbIsolationSystem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbIsolationSystem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.cbIsolationSystem.Properties.Appearance.Options.UseBackColor = true;
             this.cbIsolationSystem.Properties.Appearance.Options.UseForeColor = true;
@@ -7433,7 +7508,7 @@
             // 
             this.cbDetectionSystem.Location = new System.Drawing.Point(364, 53);
             this.cbDetectionSystem.Name = "cbDetectionSystem";
-            this.cbDetectionSystem.Properties.Appearance.BackColor = System.Drawing.Color.Red;
+            this.cbDetectionSystem.Properties.Appearance.BackColor = System.Drawing.Color.White;
             this.cbDetectionSystem.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.cbDetectionSystem.Properties.Appearance.Options.UseBackColor = true;
             this.cbDetectionSystem.Properties.Appearance.Options.UseForeColor = true;
@@ -7455,7 +7530,7 @@
             // 
             // txtFM
             // 
-            this.txtFM.BackColor = System.Drawing.Color.Red;
+            this.txtFM.BackColor = System.Drawing.Color.White;
             this.txtFM.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFM.Location = new System.Drawing.Point(364, 28);
             this.txtFM.Name = "txtFM";
@@ -12395,6 +12470,678 @@
             this.label233.TabIndex = 0;
             this.label233.Text = "▼ Input";
             // 
+            // tabCAnormal
+            // 
+            this.tabCAnormal.Controls.Add(this.groupBox10);
+            this.tabCAnormal.Name = "tabCAnormal";
+            this.tabCAnormal.Size = new System.Drawing.Size(961, 2673);
+            this.tabCAnormal.Text = "Financial COF";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.panelIV);
+            this.groupBox10.Controls.Add(this.paneloutputCoF);
+            this.groupBox10.Controls.Add(this.panelinputFCoF);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.groupBox10.Location = new System.Drawing.Point(0, 0);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(959, 788);
+            this.groupBox10.TabIndex = 0;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Fully-Quantitative Financial Consequence of Faillures";
+            // 
+            // panelIV
+            // 
+            this.panelIV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelIV.Controls.Add(this.txtFoFE);
+            this.panelIV.Controls.Add(this.txtMaterialcostfactor);
+            this.panelIV.Controls.Add(this.label455);
+            this.panelIV.Controls.Add(this.label454);
+            this.panelIV.Controls.Add(this.label453);
+            this.panelIV.Controls.Add(this.txtOutage_rupture);
+            this.panelIV.Controls.Add(this.txtCost_rupture);
+            this.panelIV.Controls.Add(this.txtGFF_rupture);
+            this.panelIV.Controls.Add(this.txtOutage_large);
+            this.panelIV.Controls.Add(this.txtCost_large);
+            this.panelIV.Controls.Add(this.txtGFF_large);
+            this.panelIV.Controls.Add(this.txtOutage_medium);
+            this.panelIV.Controls.Add(this.txtCost_medium);
+            this.panelIV.Controls.Add(this.txtGFF_medium);
+            this.panelIV.Controls.Add(this.txtOutage_small);
+            this.panelIV.Controls.Add(this.txtFinancialcomdamage);
+            this.panelIV.Controls.Add(this.txtFinancialdamageSurround);
+            this.panelIV.Controls.Add(this.txtNoofSurroundingEquip);
+            this.panelIV.Controls.Add(this.txtFinancialConsequenceLostProduct);
+            this.panelIV.Controls.Add(this.txtFinancialConsequenceSerious);
+            this.panelIV.Controls.Add(this.txtEnvironmentalCost);
+            this.panelIV.Controls.Add(this.txtNoofDowntimeRepairSpecific);
+            this.panelIV.Controls.Add(this.txtCost_small);
+            this.panelIV.Controls.Add(this.txtGFF_small);
+            this.panelIV.Controls.Add(this.label463);
+            this.panelIV.Controls.Add(this.label464);
+            this.panelIV.Controls.Add(this.label465);
+            this.panelIV.Controls.Add(this.label466);
+            this.panelIV.Controls.Add(this.label467);
+            this.panelIV.Controls.Add(this.label468);
+            this.panelIV.Controls.Add(this.label469);
+            this.panelIV.Controls.Add(this.label470);
+            this.panelIV.Controls.Add(this.label471);
+            this.panelIV.Controls.Add(this.label472);
+            this.panelIV.Controls.Add(this.label473);
+            this.panelIV.Controls.Add(this.label474);
+            this.panelIV.Controls.Add(this.label475);
+            this.panelIV.Controls.Add(this.label476);
+            this.panelIV.Controls.Add(this.label477);
+            this.panelIV.Controls.Add(this.label479);
+            this.panelIV.Location = new System.Drawing.Point(8, 327);
+            this.panelIV.Name = "panelIV";
+            this.panelIV.Size = new System.Drawing.Size(945, 442);
+            this.panelIV.TabIndex = 4;
+            // 
+            // txtFoFE
+            // 
+            this.txtFoFE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFoFE.Location = new System.Drawing.Point(383, 70);
+            this.txtFoFE.Name = "txtFoFE";
+            this.txtFoFE.Size = new System.Drawing.Size(133, 20);
+            this.txtFoFE.TabIndex = 76;
+            // 
+            // txtMaterialcostfactor
+            // 
+            this.txtMaterialcostfactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMaterialcostfactor.Location = new System.Drawing.Point(383, 41);
+            this.txtMaterialcostfactor.Name = "txtMaterialcostfactor";
+            this.txtMaterialcostfactor.Size = new System.Drawing.Size(133, 20);
+            this.txtMaterialcostfactor.TabIndex = 75;
+            // 
+            // label455
+            // 
+            this.label455.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label455.Location = new System.Drawing.Point(4, 70);
+            this.label455.Name = "label455";
+            this.label455.Size = new System.Drawing.Size(231, 20);
+            this.label455.TabIndex = 74;
+            this.label455.Text = "Fraction of Fluid to Evaporate in 24 Hours";
+            // 
+            // label454
+            // 
+            this.label454.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label454.Location = new System.Drawing.Point(4, 44);
+            this.label454.Name = "label454";
+            this.label454.Size = new System.Drawing.Size(186, 17);
+            this.label454.TabIndex = 73;
+            this.label454.Text = "Material Cost Factor";
+            // 
+            // label453
+            // 
+            this.label453.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label453.Location = new System.Drawing.Point(4, 400);
+            this.label453.Name = "label453";
+            this.label453.Size = new System.Drawing.Size(322, 17);
+            this.label453.TabIndex = 72;
+            this.label453.Text = "Piece of Equipment that is being Evaluated";
+            // 
+            // txtOutage_rupture
+            // 
+            this.txtOutage_rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtOutage_rupture.Location = new System.Drawing.Point(803, 209);
+            this.txtOutage_rupture.Name = "txtOutage_rupture";
+            this.txtOutage_rupture.Size = new System.Drawing.Size(133, 20);
+            this.txtOutage_rupture.TabIndex = 71;
+            // 
+            // txtCost_rupture
+            // 
+            this.txtCost_rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCost_rupture.Location = new System.Drawing.Point(803, 184);
+            this.txtCost_rupture.Name = "txtCost_rupture";
+            this.txtCost_rupture.Size = new System.Drawing.Size(133, 20);
+            this.txtCost_rupture.TabIndex = 62;
+            // 
+            // txtGFF_rupture
+            // 
+            this.txtGFF_rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGFF_rupture.Location = new System.Drawing.Point(803, 158);
+            this.txtGFF_rupture.Name = "txtGFF_rupture";
+            this.txtGFF_rupture.Size = new System.Drawing.Size(133, 20);
+            this.txtGFF_rupture.TabIndex = 61;
+            // 
+            // txtOutage_large
+            // 
+            this.txtOutage_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtOutage_large.Location = new System.Drawing.Point(663, 209);
+            this.txtOutage_large.Name = "txtOutage_large";
+            this.txtOutage_large.Size = new System.Drawing.Size(133, 20);
+            this.txtOutage_large.TabIndex = 60;
+            // 
+            // txtCost_large
+            // 
+            this.txtCost_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCost_large.Location = new System.Drawing.Point(663, 184);
+            this.txtCost_large.Name = "txtCost_large";
+            this.txtCost_large.Size = new System.Drawing.Size(133, 20);
+            this.txtCost_large.TabIndex = 51;
+            // 
+            // txtGFF_large
+            // 
+            this.txtGFF_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGFF_large.Location = new System.Drawing.Point(663, 158);
+            this.txtGFF_large.Name = "txtGFF_large";
+            this.txtGFF_large.Size = new System.Drawing.Size(133, 20);
+            this.txtGFF_large.TabIndex = 50;
+            // 
+            // txtOutage_medium
+            // 
+            this.txtOutage_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtOutage_medium.Location = new System.Drawing.Point(523, 209);
+            this.txtOutage_medium.Name = "txtOutage_medium";
+            this.txtOutage_medium.Size = new System.Drawing.Size(133, 20);
+            this.txtOutage_medium.TabIndex = 49;
+            // 
+            // txtCost_medium
+            // 
+            this.txtCost_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCost_medium.Location = new System.Drawing.Point(523, 184);
+            this.txtCost_medium.Name = "txtCost_medium";
+            this.txtCost_medium.Size = new System.Drawing.Size(133, 20);
+            this.txtCost_medium.TabIndex = 40;
+            // 
+            // txtGFF_medium
+            // 
+            this.txtGFF_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGFF_medium.Location = new System.Drawing.Point(523, 158);
+            this.txtGFF_medium.Name = "txtGFF_medium";
+            this.txtGFF_medium.Size = new System.Drawing.Size(133, 20);
+            this.txtGFF_medium.TabIndex = 39;
+            // 
+            // txtOutage_small
+            // 
+            this.txtOutage_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtOutage_small.Location = new System.Drawing.Point(383, 208);
+            this.txtOutage_small.Name = "txtOutage_small";
+            this.txtOutage_small.Size = new System.Drawing.Size(133, 20);
+            this.txtOutage_small.TabIndex = 38;
+            // 
+            // txtFinancialcomdamage
+            // 
+            this.txtFinancialcomdamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinancialcomdamage.Location = new System.Drawing.Point(383, 233);
+            this.txtFinancialcomdamage.Name = "txtFinancialcomdamage";
+            this.txtFinancialcomdamage.Size = new System.Drawing.Size(133, 20);
+            this.txtFinancialcomdamage.TabIndex = 37;
+            // 
+            // txtFinancialdamageSurround
+            // 
+            this.txtFinancialdamageSurround.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinancialdamageSurround.Location = new System.Drawing.Point(383, 258);
+            this.txtFinancialdamageSurround.Name = "txtFinancialdamageSurround";
+            this.txtFinancialdamageSurround.Size = new System.Drawing.Size(133, 20);
+            this.txtFinancialdamageSurround.TabIndex = 36;
+            // 
+            // txtNoofSurroundingEquip
+            // 
+            this.txtNoofSurroundingEquip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNoofSurroundingEquip.Location = new System.Drawing.Point(383, 283);
+            this.txtNoofSurroundingEquip.Name = "txtNoofSurroundingEquip";
+            this.txtNoofSurroundingEquip.Size = new System.Drawing.Size(133, 20);
+            this.txtNoofSurroundingEquip.TabIndex = 35;
+            // 
+            // txtFinancialConsequenceLostProduct
+            // 
+            this.txtFinancialConsequenceLostProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinancialConsequenceLostProduct.Location = new System.Drawing.Point(383, 308);
+            this.txtFinancialConsequenceLostProduct.Name = "txtFinancialConsequenceLostProduct";
+            this.txtFinancialConsequenceLostProduct.Size = new System.Drawing.Size(133, 20);
+            this.txtFinancialConsequenceLostProduct.TabIndex = 34;
+            // 
+            // txtFinancialConsequenceSerious
+            // 
+            this.txtFinancialConsequenceSerious.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFinancialConsequenceSerious.Location = new System.Drawing.Point(383, 333);
+            this.txtFinancialConsequenceSerious.Name = "txtFinancialConsequenceSerious";
+            this.txtFinancialConsequenceSerious.Size = new System.Drawing.Size(133, 20);
+            this.txtFinancialConsequenceSerious.TabIndex = 33;
+            // 
+            // txtEnvironmentalCost
+            // 
+            this.txtEnvironmentalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEnvironmentalCost.Location = new System.Drawing.Point(383, 358);
+            this.txtEnvironmentalCost.Name = "txtEnvironmentalCost";
+            this.txtEnvironmentalCost.Size = new System.Drawing.Size(133, 20);
+            this.txtEnvironmentalCost.TabIndex = 32;
+            // 
+            // txtNoofDowntimeRepairSpecific
+            // 
+            this.txtNoofDowntimeRepairSpecific.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNoofDowntimeRepairSpecific.Location = new System.Drawing.Point(383, 383);
+            this.txtNoofDowntimeRepairSpecific.Name = "txtNoofDowntimeRepairSpecific";
+            this.txtNoofDowntimeRepairSpecific.Size = new System.Drawing.Size(133, 20);
+            this.txtNoofDowntimeRepairSpecific.TabIndex = 31;
+            // 
+            // txtCost_small
+            // 
+            this.txtCost_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCost_small.Location = new System.Drawing.Point(383, 183);
+            this.txtCost_small.Name = "txtCost_small";
+            this.txtCost_small.Size = new System.Drawing.Size(133, 20);
+            this.txtCost_small.TabIndex = 29;
+            // 
+            // txtGFF_small
+            // 
+            this.txtGFF_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtGFF_small.Location = new System.Drawing.Point(383, 157);
+            this.txtGFF_small.Name = "txtGFF_small";
+            this.txtGFF_small.Size = new System.Drawing.Size(133, 20);
+            this.txtGFF_small.TabIndex = 28;
+            // 
+            // label463
+            // 
+            this.label463.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label463.Location = new System.Drawing.Point(4, 308);
+            this.label463.Name = "label463";
+            this.label463.Size = new System.Drawing.Size(297, 17);
+            this.label463.TabIndex = 25;
+            this.label463.Text = "Financial Consequenve of Lost Production";
+            // 
+            // label464
+            // 
+            this.label464.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label464.Location = new System.Drawing.Point(4, 333);
+            this.label464.Name = "label464";
+            this.label464.Size = new System.Drawing.Size(336, 17);
+            this.label464.TabIndex = 24;
+            this.label464.Text = "Financial Consequence Serious Injury to Personnel";
+            // 
+            // label465
+            // 
+            this.label465.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label465.Location = new System.Drawing.Point(4, 358);
+            this.label465.Name = "label465";
+            this.label465.Size = new System.Drawing.Size(393, 17);
+            this.label465.TabIndex = 23;
+            this.label465.Text = "Environmental Cost to Clean Up the Weighted Spil Volume";
+            // 
+            // label466
+            // 
+            this.label466.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label466.Location = new System.Drawing.Point(4, 383);
+            this.label466.Name = "label466";
+            this.label466.Size = new System.Drawing.Size(322, 17);
+            this.label466.TabIndex = 22;
+            this.label466.Text = "No. of Downtime Days to Repair the Specific";
+            // 
+            // label467
+            // 
+            this.label467.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label467.Location = new System.Drawing.Point(4, 183);
+            this.label467.Name = "label467";
+            this.label467.Size = new System.Drawing.Size(157, 17);
+            this.label467.TabIndex = 21;
+            this.label467.Text = "Equipment Repair Cost";
+            // 
+            // label468
+            // 
+            this.label468.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label468.Location = new System.Drawing.Point(4, 208);
+            this.label468.Name = "label468";
+            this.label468.Size = new System.Drawing.Size(297, 16);
+            this.label468.TabIndex = 20;
+            this.label468.Text = "No. of Downtime Days To Repair Damage Outage";
+            // 
+            // label469
+            // 
+            this.label469.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label469.Location = new System.Drawing.Point(4, 233);
+            this.label469.Name = "label469";
+            this.label469.Size = new System.Drawing.Size(322, 17);
+            this.label469.TabIndex = 19;
+            this.label469.Text = "Financial Consequence of Component Damage";
+            // 
+            // label470
+            // 
+            this.label470.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label470.Location = new System.Drawing.Point(4, 258);
+            this.label470.Name = "label470";
+            this.label470.Size = new System.Drawing.Size(336, 15);
+            this.label470.TabIndex = 18;
+            this.label470.Text = "Financial Consequence of Damage to Surrounding Equipment";
+            // 
+            // label471
+            // 
+            this.label471.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label471.Location = new System.Drawing.Point(4, 283);
+            this.label471.Name = "label471";
+            this.label471.Size = new System.Drawing.Size(433, 17);
+            this.label471.TabIndex = 17;
+            this.label471.Text = "No. of Downtime Days To Repair Damage to The Surrounding Equip";
+            // 
+            // label472
+            // 
+            this.label472.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label472.Location = new System.Drawing.Point(4, 157);
+            this.label472.Name = "label472";
+            this.label472.Size = new System.Drawing.Size(186, 17);
+            this.label472.TabIndex = 16;
+            this.label472.Text = "Generic Failture Frequency";
+            // 
+            // label473
+            // 
+            this.label473.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label473.Location = new System.Drawing.Point(4, 130);
+            this.label473.Name = "label473";
+            this.label473.Size = new System.Drawing.Size(157, 17);
+            this.label473.TabIndex = 15;
+            this.label473.Text = "Release Hole Size Area";
+            // 
+            // label474
+            // 
+            this.label474.AutoSize = true;
+            this.label474.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label474.Location = new System.Drawing.Point(851, 130);
+            this.label474.Name = "label474";
+            this.label474.Size = new System.Drawing.Size(58, 15);
+            this.label474.TabIndex = 6;
+            this.label474.Text = "Rupture";
+            // 
+            // label475
+            // 
+            this.label475.AutoSize = true;
+            this.label475.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label475.Location = new System.Drawing.Point(418, 130);
+            this.label475.Name = "label475";
+            this.label475.Size = new System.Drawing.Size(44, 15);
+            this.label475.TabIndex = 5;
+            this.label475.Text = "Small";
+            // 
+            // label476
+            // 
+            this.label476.AutoSize = true;
+            this.label476.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label476.Location = new System.Drawing.Point(559, 131);
+            this.label476.Name = "label476";
+            this.label476.Size = new System.Drawing.Size(59, 15);
+            this.label476.TabIndex = 4;
+            this.label476.Text = "Medium";
+            // 
+            // label477
+            // 
+            this.label477.AutoSize = true;
+            this.label477.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label477.Location = new System.Drawing.Point(710, 130);
+            this.label477.Name = "label477";
+            this.label477.Size = new System.Drawing.Size(44, 15);
+            this.label477.TabIndex = 3;
+            this.label477.Text = "Large";
+            // 
+            // label479
+            // 
+            this.label479.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label479.ForeColor = System.Drawing.Color.White;
+            this.label479.Location = new System.Drawing.Point(-2, 0);
+            this.label479.Name = "label479";
+            this.label479.Size = new System.Drawing.Size(945, 21);
+            this.label479.TabIndex = 1;
+            this.label479.Text = "▼ Release Holes Properties";
+            // 
+            // paneloutputCoF
+            // 
+            this.paneloutputCoF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.paneloutputCoF.Controls.Add(this.label449);
+            this.paneloutputCoF.Controls.Add(this.txtCoFC);
+            this.paneloutputCoF.Controls.Add(this.label450);
+            this.paneloutputCoF.Controls.Add(this.txtFCoF);
+            this.paneloutputCoF.Controls.Add(this.label451);
+            this.paneloutputCoF.Controls.Add(this.label452);
+            this.paneloutputCoF.Location = new System.Drawing.Point(8, 234);
+            this.paneloutputCoF.Name = "paneloutputCoF";
+            this.paneloutputCoF.Size = new System.Drawing.Size(945, 87);
+            this.paneloutputCoF.TabIndex = 3;
+            // 
+            // label449
+            // 
+            this.label449.AutoSize = true;
+            this.label449.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label449.Location = new System.Drawing.Point(547, 34);
+            this.label449.Name = "label449";
+            this.label449.Size = new System.Drawing.Size(13, 13);
+            this.label449.TabIndex = 6;
+            this.label449.Text = "$";
+            // 
+            // txtCoFC
+            // 
+            this.txtCoFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCoFC.Location = new System.Drawing.Point(363, 55);
+            this.txtCoFC.Name = "txtCoFC";
+            this.txtCoFC.Size = new System.Drawing.Size(177, 20);
+            this.txtCoFC.TabIndex = 5;
+            // 
+            // label450
+            // 
+            this.label450.AutoSize = true;
+            this.label450.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label450.Location = new System.Drawing.Point(3, 59);
+            this.label450.Name = "label450";
+            this.label450.Size = new System.Drawing.Size(188, 15);
+            this.label450.TabIndex = 4;
+            this.label450.Text = "Consequence of Failure Category";
+            // 
+            // txtFCoF
+            // 
+            this.txtFCoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFCoF.Location = new System.Drawing.Point(363, 31);
+            this.txtFCoF.Name = "txtFCoF";
+            this.txtFCoF.Size = new System.Drawing.Size(177, 20);
+            this.txtFCoF.TabIndex = 3;
+            // 
+            // label451
+            // 
+            this.label451.AutoSize = true;
+            this.label451.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label451.Location = new System.Drawing.Point(3, 34);
+            this.label451.Name = "label451";
+            this.label451.Size = new System.Drawing.Size(190, 15);
+            this.label451.TabIndex = 2;
+            this.label451.Text = "Financial Consequence of Failure";
+            // 
+            // label452
+            // 
+            this.label452.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label452.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label452.ForeColor = System.Drawing.Color.White;
+            this.label452.Location = new System.Drawing.Point(0, 0);
+            this.label452.Name = "label452";
+            this.label452.Size = new System.Drawing.Size(945, 21);
+            this.label452.TabIndex = 1;
+            this.label452.Text = "▼ Fully-Quantitive Financial Consequence of Failture and Category";
+            // 
+            // panelinputFCoF
+            // 
+            this.panelinputFCoF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelinputFCoF.Controls.Add(this.label460);
+            this.panelinputFCoF.Controls.Add(this.label459);
+            this.panelinputFCoF.Controls.Add(this.label458);
+            this.panelinputFCoF.Controls.Add(this.label457);
+            this.panelinputFCoF.Controls.Add(this.label456);
+            this.panelinputFCoF.Controls.Add(this.txtECUP);
+            this.panelinputFCoF.Controls.Add(this.txtTCAWSIOFOP);
+            this.panelinputFCoF.Controls.Add(this.txtTuPDoDoE);
+            this.panelinputFCoF.Controls.Add(this.txtLoPC);
+            this.panelinputFCoF.Controls.Add(this.txtEOM);
+            this.panelinputFCoF.Controls.Add(this.txtPURCFC);
+            this.panelinputFCoF.Controls.Add(this.label448);
+            this.panelinputFCoF.Controls.Add(this.label442);
+            this.panelinputFCoF.Controls.Add(this.label443);
+            this.panelinputFCoF.Controls.Add(this.label444);
+            this.panelinputFCoF.Controls.Add(this.label445);
+            this.panelinputFCoF.Controls.Add(this.label446);
+            this.panelinputFCoF.Controls.Add(this.label447);
+            this.panelinputFCoF.Location = new System.Drawing.Point(8, 25);
+            this.panelinputFCoF.Name = "panelinputFCoF";
+            this.panelinputFCoF.Size = new System.Drawing.Size(945, 202);
+            this.panelinputFCoF.TabIndex = 2;
+            // 
+            // label460
+            // 
+            this.label460.AutoSize = true;
+            this.label460.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label460.Location = new System.Drawing.Point(528, 164);
+            this.label460.Name = "label460";
+            this.label460.Size = new System.Drawing.Size(45, 13);
+            this.label460.TabIndex = 28;
+            this.label460.Text = "$/Barrel";
+            // 
+            // label459
+            // 
+            this.label459.AutoSize = true;
+            this.label459.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label459.Location = new System.Drawing.Point(528, 139);
+            this.label459.Name = "label459";
+            this.label459.Size = new System.Drawing.Size(13, 13);
+            this.label459.TabIndex = 7;
+            this.label459.Text = "$";
+            // 
+            // label458
+            // 
+            this.label458.AutoSize = true;
+            this.label458.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label458.Location = new System.Drawing.Point(528, 111);
+            this.label458.Name = "label458";
+            this.label458.Size = new System.Drawing.Size(79, 13);
+            this.label458.TabIndex = 27;
+            this.label458.Text = "Personnel/m^2";
+            // 
+            // label457
+            // 
+            this.label457.AutoSize = true;
+            this.label457.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label457.Location = new System.Drawing.Point(528, 86);
+            this.label457.Name = "label457";
+            this.label457.Size = new System.Drawing.Size(35, 13);
+            this.label457.TabIndex = 26;
+            this.label457.Text = "$/day";
+            // 
+            // label456
+            // 
+            this.label456.AutoSize = true;
+            this.label456.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label456.Location = new System.Drawing.Point(528, 30);
+            this.label456.Name = "label456";
+            this.label456.Size = new System.Drawing.Size(38, 13);
+            this.label456.TabIndex = 25;
+            this.label456.Text = "$/m^2";
+            // 
+            // txtECUP
+            // 
+            this.txtECUP.Location = new System.Drawing.Point(422, 161);
+            this.txtECUP.Name = "txtECUP";
+            this.txtECUP.Size = new System.Drawing.Size(100, 21);
+            this.txtECUP.TabIndex = 24;
+            // 
+            // txtTCAWSIOFOP
+            // 
+            this.txtTCAWSIOFOP.Location = new System.Drawing.Point(422, 134);
+            this.txtTCAWSIOFOP.Name = "txtTCAWSIOFOP";
+            this.txtTCAWSIOFOP.Size = new System.Drawing.Size(100, 21);
+            this.txtTCAWSIOFOP.TabIndex = 23;
+            // 
+            // txtTuPDoDoE
+            // 
+            this.txtTuPDoDoE.Location = new System.Drawing.Point(422, 106);
+            this.txtTuPDoDoE.Name = "txtTuPDoDoE";
+            this.txtTuPDoDoE.Size = new System.Drawing.Size(100, 21);
+            this.txtTuPDoDoE.TabIndex = 22;
+            // 
+            // txtLoPC
+            // 
+            this.txtLoPC.Location = new System.Drawing.Point(422, 80);
+            this.txtLoPC.Name = "txtLoPC";
+            this.txtLoPC.Size = new System.Drawing.Size(100, 21);
+            this.txtLoPC.TabIndex = 21;
+            // 
+            // txtEOM
+            // 
+            this.txtEOM.Location = new System.Drawing.Point(422, 53);
+            this.txtEOM.Name = "txtEOM";
+            this.txtEOM.Size = new System.Drawing.Size(100, 21);
+            this.txtEOM.TabIndex = 20;
+            // 
+            // txtPURCFC
+            // 
+            this.txtPURCFC.Location = new System.Drawing.Point(422, 28);
+            this.txtPURCFC.Name = "txtPURCFC";
+            this.txtPURCFC.Size = new System.Drawing.Size(100, 21);
+            this.txtPURCFC.TabIndex = 19;
+            // 
+            // label448
+            // 
+            this.label448.AutoSize = true;
+            this.label448.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label448.Location = new System.Drawing.Point(4, 167);
+            this.label448.Name = "label448";
+            this.label448.Size = new System.Drawing.Size(163, 15);
+            this.label448.TabIndex = 18;
+            this.label448.Text = "Environmental clean up Cost";
+            // 
+            // label442
+            // 
+            this.label442.AutoSize = true;
+            this.label442.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label442.Location = new System.Drawing.Point(4, 140);
+            this.label442.Name = "label442";
+            this.label442.Size = new System.Drawing.Size(336, 15);
+            this.label442.TabIndex = 17;
+            this.label442.Text = "The cost associated with serious injury of fatality of personnel";
+            // 
+            // label443
+            // 
+            this.label443.AutoSize = true;
+            this.label443.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label443.Location = new System.Drawing.Point(4, 112);
+            this.label443.Name = "label443";
+            this.label443.Size = new System.Drawing.Size(306, 15);
+            this.label443.TabIndex = 16;
+            this.label443.Text = "The unit Population Density of Personnel or Employees";
+            // 
+            // label444
+            // 
+            this.label444.AutoSize = true;
+            this.label444.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label444.Location = new System.Drawing.Point(4, 86);
+            this.label444.Name = "label444";
+            this.label444.Size = new System.Drawing.Size(135, 15);
+            this.label444.TabIndex = 15;
+            this.label444.Text = "Loss of Production Cost";
+            // 
+            // label445
+            // 
+            this.label445.AutoSize = true;
+            this.label445.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label445.Location = new System.Drawing.Point(4, 59);
+            this.label445.Name = "label445";
+            this.label445.Size = new System.Drawing.Size(164, 15);
+            this.label445.TabIndex = 14;
+            this.label445.Text = "Equipment Outage Multiplier";
+            // 
+            // label446
+            // 
+            this.label446.AutoSize = true;
+            this.label446.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label446.Location = new System.Drawing.Point(4, 28);
+            this.label446.Name = "label446";
+            this.label446.Size = new System.Drawing.Size(231, 15);
+            this.label446.TabIndex = 13;
+            this.label446.Text = "Process unit replace costs for component";
+            // 
+            // label447
+            // 
+            this.label447.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label447.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label447.ForeColor = System.Drawing.Color.White;
+            this.label447.Location = new System.Drawing.Point(0, 0);
+            this.label447.Name = "label447";
+            this.label447.Size = new System.Drawing.Size(945, 21);
+            this.label447.TabIndex = 0;
+            this.label447.Text = "▼ Input";
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -12709,6 +13456,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtConsequenceCategoryRoof.Properties)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.tabCAnormal.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.panelIV.ResumeLayout(false);
+            this.panelIV.PerformLayout();
+            this.paneloutputCoF.ResumeLayout(false);
+            this.paneloutputCoF.PerformLayout();
+            this.panelinputFCoF.ResumeLayout(false);
+            this.panelinputFCoF.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -13795,5 +14550,74 @@
         private System.Windows.Forms.Label label407;
         private System.Windows.Forms.Label label435;
         private System.Windows.Forms.Label label436;
+        private DevExpress.XtraTab.XtraTabPage tabCAnormal;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Panel panelinputFCoF;
+        private System.Windows.Forms.TextBox txtECUP;
+        private System.Windows.Forms.TextBox txtTCAWSIOFOP;
+        private System.Windows.Forms.TextBox txtTuPDoDoE;
+        private System.Windows.Forms.TextBox txtLoPC;
+        private System.Windows.Forms.TextBox txtEOM;
+        private System.Windows.Forms.TextBox txtPURCFC;
+        private System.Windows.Forms.Label label448;
+        private System.Windows.Forms.Label label442;
+        private System.Windows.Forms.Label label443;
+        private System.Windows.Forms.Label label444;
+        private System.Windows.Forms.Label label445;
+        private System.Windows.Forms.Label label446;
+        private System.Windows.Forms.Label label447;
+        private System.Windows.Forms.Panel paneloutputCoF;
+        private System.Windows.Forms.Label label449;
+        private System.Windows.Forms.TextBox txtCoFC;
+        private System.Windows.Forms.Label label450;
+        private System.Windows.Forms.TextBox txtFCoF;
+        private System.Windows.Forms.Label label451;
+        private System.Windows.Forms.Label label452;
+        private System.Windows.Forms.Panel panelIV;
+        private System.Windows.Forms.TextBox txtOutage_rupture;
+        private System.Windows.Forms.TextBox txtCost_rupture;
+        private System.Windows.Forms.TextBox txtGFF_rupture;
+        private System.Windows.Forms.TextBox txtOutage_large;
+        private System.Windows.Forms.TextBox txtCost_large;
+        private System.Windows.Forms.TextBox txtGFF_large;
+        private System.Windows.Forms.TextBox txtOutage_medium;
+        private System.Windows.Forms.TextBox txtCost_medium;
+        private System.Windows.Forms.TextBox txtGFF_medium;
+        private System.Windows.Forms.TextBox txtOutage_small;
+        private System.Windows.Forms.TextBox txtFinancialcomdamage;
+        private System.Windows.Forms.TextBox txtFinancialdamageSurround;
+        private System.Windows.Forms.TextBox txtNoofSurroundingEquip;
+        private System.Windows.Forms.TextBox txtFinancialConsequenceLostProduct;
+        private System.Windows.Forms.TextBox txtFinancialConsequenceSerious;
+        private System.Windows.Forms.TextBox txtEnvironmentalCost;
+        private System.Windows.Forms.TextBox txtNoofDowntimeRepairSpecific;
+        private System.Windows.Forms.TextBox txtCost_small;
+        private System.Windows.Forms.TextBox txtGFF_small;
+        private System.Windows.Forms.Label label463;
+        private System.Windows.Forms.Label label464;
+        private System.Windows.Forms.Label label465;
+        private System.Windows.Forms.Label label466;
+        private System.Windows.Forms.Label label467;
+        private System.Windows.Forms.Label label468;
+        private System.Windows.Forms.Label label469;
+        private System.Windows.Forms.Label label470;
+        private System.Windows.Forms.Label label471;
+        private System.Windows.Forms.Label label472;
+        private System.Windows.Forms.Label label473;
+        private System.Windows.Forms.Label label474;
+        private System.Windows.Forms.Label label475;
+        private System.Windows.Forms.Label label476;
+        private System.Windows.Forms.Label label477;
+        private System.Windows.Forms.Label label479;
+        private System.Windows.Forms.Label label453;
+        private System.Windows.Forms.TextBox txtFoFE;
+        private System.Windows.Forms.TextBox txtMaterialcostfactor;
+        private System.Windows.Forms.Label label455;
+        private System.Windows.Forms.Label label454;
+        private System.Windows.Forms.Label label460;
+        private System.Windows.Forms.Label label459;
+        private System.Windows.Forms.Label label458;
+        private System.Windows.Forms.Label label457;
+        private System.Windows.Forms.Label label456;
     }
 }

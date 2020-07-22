@@ -340,6 +340,8 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCA.PageVisible = true;
                 tabCATankShell.PageVisible = false;
+                tabCAnormal.PageVisible = true;
+                tabCATankRoof.PageVisible = false;
                 initAreabaseCOF(ID);
             }
         }
