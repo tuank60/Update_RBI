@@ -594,6 +594,7 @@ namespace RBI
             RW_RISK_GRAPH rwRiskGraph = new RW_RISK_GRAPH();
             RW_FULL_COF_HOLE_SIZE rwfchs = new RW_FULL_COF_HOLE_SIZE();
             RW_FULL_COF_INPUT rwFcinput = new RW_FULL_COF_INPUT();
+            RW_FULL_FINALCOF rwffinal = new RW_FULL_FINALCOF();
             /*-----------------Tìm đuôi Proposal có giá trị lớn nhất-------------------*/
             List<string> lstProposalName = busAssessment.AllName();
             List<int> number = new List<int>();
@@ -671,7 +672,7 @@ namespace RBI
             busExtcorTemp.add(rwExtTemp);
             hsbus.add(rwfchs);
             busFcinput.add(rwFcinput);
-
+            busfinal.add(rwffinal);
             int[] eq_comID = busAssessment.getEquipmentID_ComponentID(ID);
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
 
@@ -3934,6 +3935,7 @@ namespace RBI
         RW_DAMAGE_MECHANISM_BUS busDamageMechanism = new RW_DAMAGE_MECHANISM_BUS();
         RW_FULL_COF_TANK_BUS busFullCofTank = new RW_FULL_COF_TANK_BUS();
         RW_FULL_COF_INPUT_BUS busFcinput = new RW_FULL_COF_INPUT_BUS();
+        RW_FULL_FINALCOF_BUS busfinal = new RW_FULL_FINALCOF_BUS();
         //</BUS>
         #endregion
         #region Unit String

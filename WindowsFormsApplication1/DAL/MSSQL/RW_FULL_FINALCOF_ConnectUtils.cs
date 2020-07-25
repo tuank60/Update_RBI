@@ -10,34 +10,37 @@ using System.Windows.Forms;
 
 namespace RBI.DAL.MSSQL
 {
-    class RW_FULL_COF_INPUT_ConnectUtils
+    class RW_FULL_FINALCOF_ConnectUtils
     {
-        public void add(int ID, String Mitigation, String DetectionType, String IsolationType, double mass_comp, double mass_inv)
+        public void add(int ID, double ComponentDamageCosts, double EquipmentOutageMultiplier, double LossProductCost, double PopDen, double InjCost, double EnviCost)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
                         " " +
-                        "INSERT INTO [dbo].[RW_FULL_COF_INPUT]" +
+                        "INSERT INTO [dbo].[RW_FULL_FINALCOF]" +
                         "([ID]" +
-                        ",[Mitigation]" +
-                        ",[DetectionType]" +
-                        ",[IsolationType]" +
-                        ",[mass_comp]" +
-                        ",[mass_inv])" +
+                        ",[ComponentDamageCosts]" +
+                        ",[EquipmentOutageMultiplier]" +
+                        ",[LossProductCost]" +
+                        ",[PopDen]" +
+                        ",[InjCost])" +
+                        ",[EnviCost])" +
                         "VALUES" +
                         "('" + ID + "'" +
-                        ",'" + Mitigation + "'" +
-                        ",'" + DetectionType + "'" +
-                        ",'" + IsolationType + "'" +
-                        ",'" + mass_comp + "'" +
-                        ",'" + mass_inv + "')" +
+                        ",'" + ComponentDamageCosts + "'" +
+                        ",'" + EquipmentOutageMultiplier + "'" +
+                        ",'" + LossProductCost + "'" +
+                        ",'" + PopDen + "'" +
+                        ",'" + InjCost + "')" +
+                        ",'" + EnviCost + "')" +
                         " ";
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
+                Console.WriteLine("sql= " + sql);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -50,27 +53,27 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
-        public void edit(int ID, String Mitigation, String DetectionType, String IsolationType, double mass_comp, double mass_inv)
+        public void edit(int ID, double ComponentDamageCosts, double EquipmentOutageMultiplier, double LossProductCost, double PopDen, double InjCost, double EnviCost)
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +
                         " " +
-                        "UPDATE [dbo].[RW_FULL_COF_INPUT]" +
+                        "UPDATE [dbo].[RW_FULL_FINALCOF]" +
                         "SET [ID] = '" + ID + "'" +
-                        ",[Mitigation] = '" + Mitigation + "'" +
-                        ",[DetectionType] = '" + DetectionType + "'" +
-                        ",[IsolationType] = '" + IsolationType + "'" +
-                        ",[mass_comp] = '" + mass_comp + "'" +
-                        ",[mass_inv] = '" + mass_inv + "'" +
-                       
+                        ",[ComponentDamageCosts] = '" + ComponentDamageCosts + "'" +
+                        ",[EquipmentOutageMultiplier] = '" + EquipmentOutageMultiplier + "'" +
+                        ",[LossProductCost] = '" + LossProductCost + "'" +
+                        ",[PopDen] = '" + PopDen + "'" +
+                        ",[InjCost] = '" + InjCost + "'" +
+                        ",[EnviCost] = '" + EnviCost + "'" +
                         " WHERE [ID] = '" + ID + "'" +
                         " ";
             try
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                //Console.WriteLine("sql= " + sql);
+                Console.WriteLine("sqledit= " + sql);
                 cmd.CommandText = sql;
                 cmd.ExecuteNonQuery();
             }
@@ -90,7 +93,7 @@ namespace RBI.DAL.MSSQL
             conn.Open();
             String sql = "USE [rbi]" +
                         " " +
-                        "DELETE FROM [dbo].[RW_FULL_COF_INPUT]" +
+                        "DELETE FROM [dbo].[RW_FULL_FINALCOF]" +
                         " WHERE [ID] ='" + ID + "'" +
                         " ";
             try
@@ -112,18 +115,19 @@ namespace RBI.DAL.MSSQL
         }
         ///get datasource
         ///
-        public RW_FULL_COF_INPUT getData(int ID)
+        public RW_FULL_FINALCOF getData(int ID)
         {
-            RW_FULL_COF_INPUT obj = new RW_FULL_COF_INPUT();
+            RW_FULL_FINALCOF obj = new RW_FULL_FINALCOF();
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = " Use[rbi] Select[ID]" +
-                        ",[Mitigation]" +
-                        ",[DetectionType]" +
-                        ",[IsolationType]" +
-                        ",[mass_comp]" +
-                        ",[mass_inv]" +
-                          "From [dbo].[RW_FULL_COF_INPUT]WHERE [ID] ='" + ID + "'"; 
+                        ",[ComponentDamageCosts]" +
+                        ",[EquipmentOutageMultiplier]" +
+                        ",[LossProductCost]" +
+                        ",[PopDen]" +
+                        ",[InjCost]" +
+                        ",[EnviCost]" +
+                          "From [dbo].[RW_FULL_FINALCOF] WHERE [ID] ='" + ID + "'";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -136,19 +140,20 @@ namespace RBI.DAL.MSSQL
                         if (reader.HasRows)
                         {
                             obj.ID = ID;
-                            obj.Mitigation = reader.GetString(1);
-                            obj.DetectionType = reader.GetString(2);
-                            obj.IsolationType = reader.GetString(3);
-                            obj.mass_comp = (float)reader.GetDouble(4);
-                            obj.mass_inv = (float)reader.GetDouble(5);
+                            obj.ComponentDamageCosts = (float)reader.GetDouble(1);
+                            obj.EquipmentOutageMultiplier = (float)reader.GetDouble(2);
+                            obj.LossProductCost = (float)reader.GetDouble(3);
+                            obj.PopDen = (float)reader.GetDouble(4);
+                            obj.InjCost = (float)reader.GetDouble(5);
+                            obj.EnviCost = (float)reader.GetDouble(6);
                         }
                     }
                 }
             }
-            catch
+            catch (Exception e)
             {
-                obj.ID = 0;
-                //MessageBox.Show("GET DATA FAIL!", "ERROR!");
+                obj.ID = -1;
+                MessageBox.Show("GET DATA FAIL!",e.ToString() );
             }
             finally
             {
@@ -157,19 +162,20 @@ namespace RBI.DAL.MSSQL
             }
             return obj;
         }
-        public List<RW_FULL_COF_INPUT> getDataSource()
+        public List<RW_FULL_FINALCOF> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
-            List<RW_FULL_COF_INPUT> list = new List<RW_FULL_COF_INPUT>();
-            RW_FULL_COF_INPUT obj = null;
+            List<RW_FULL_FINALCOF> list = new List<RW_FULL_FINALCOF>();
+            RW_FULL_FINALCOF obj = null;
             String sql = " Use[rbi] Select[ID]" +
-                        ",[Mitigation]" +
-                        ",[DetectionType]" +
-                        ",[IsolationType]" +
-                        ",[mass_comp]" +
-                        ",[mass_inv]" +
-                          "From [dbo].[RW_FULL_COF_INPUT]  ";
+                        ",[ComponentDamageCosts]" +
+                        ",[EquipmentOutageMultiplier]" +
+                        ",[LossProductCost]" +
+                        ",[PopDen]" +
+                        ",[InjCost])" +
+                        ",[EnviCost])" +
+                          "From [dbo].[RW_FULL_FINALCOF]  ";
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -181,34 +187,38 @@ namespace RBI.DAL.MSSQL
                     {
                         if (reader.HasRows)
                         {
-                            obj = new RW_FULL_COF_INPUT();
+                            obj = new RW_FULL_FINALCOF();
                             obj.ID = reader.GetInt32(0);
                             if (!reader.IsDBNull(1))
                             {
-                                obj.Mitigation = reader.GetString(1);
+                                obj.ComponentDamageCosts = reader.GetFloat(1);
                             }
                             if (!reader.IsDBNull(2))
                             {
-                                obj.DetectionType = reader.GetString(2);
+                                obj.EquipmentOutageMultiplier = reader.GetFloat(2);
                             }
                             if (!reader.IsDBNull(3))
                             {
-                                obj.IsolationType = reader.GetString(3);
+                                obj.LossProductCost = reader.GetFloat(3);
                             }
                             if (!reader.IsDBNull(4))
                             {
-                                obj.mass_comp = reader.GetFloat(4);
+                                obj.PopDen = reader.GetFloat(4);
                             }
                             if (!reader.IsDBNull(5))
                             {
-                                obj.mass_inv = reader.GetFloat(5);
+                                obj.InjCost = reader.GetFloat(5);
+                            }
+                            if (!reader.IsDBNull(6))
+                            {
+                                obj.EnviCost = reader.GetFloat(6);
                             }
                             list.Add(obj);
                         }
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.ToString(), "GET DATA FAIL");
             }

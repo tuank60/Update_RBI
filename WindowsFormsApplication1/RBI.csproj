@@ -231,6 +231,7 @@
     <Compile Include="BUS\BUSMSSQL\RW_FULL_COF_INPUT_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_FULL_COF_TANK_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_FULL_FCOF_BUS.cs" />
+    <Compile Include="BUS\BUSMSSQL\RW_FULL_FINALCOF_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_FULL_POF_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_INPUT_CA_LEVEL_1_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL\RW_INPUT_CA_TANK_BUS.cs" />
@@ -329,6 +330,7 @@
     <Compile Include="DAL\MSSQL\RW_FULL_COF_INPUT_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_FULL_COF_TANK_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_FULL_FCOF_ConnectUtils.cs" />
+    <Compile Include="DAL\MSSQL\RW_FULL_FINALCOF_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_FULL_POF_ConnectUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_INPUT_CA_LEVEL_1_ConnUtils.cs" />
     <Compile Include="DAL\MSSQL\RW_INPUT_CA_TANK_ConnUtils.cs" />
@@ -423,6 +425,7 @@
     <Compile Include="Object\ObjectMSSQL\RW_FULL_COF_INPUT.cs" />
     <Compile Include="Object\ObjectMSSQL\RW_FULL_COF_TANK.cs" />
     <Compile Include="Object\ObjectMSSQL\RW_FULL_FCOF.cs" />
+    <Compile Include="Object\ObjectMSSQL\RW_FULL_FINALCOF.cs" />
     <Compile Include="Object\ObjectMSSQL\RW_FULL_POF.cs" />
     <Compile Include="Object\ObjectMSSQL\RW_INPUT_CA_LEVEL_1.cs" />
     <Compile Include="Object\ObjectMSSQL\RW_INPUT_CA_TANK.cs" />

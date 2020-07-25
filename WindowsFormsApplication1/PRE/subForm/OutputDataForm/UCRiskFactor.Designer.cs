@@ -646,7 +646,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panelFQF = new System.Windows.Forms.Panel();
             this.label126 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCA2 = new System.Windows.Forms.TextBox();
             this.label133 = new System.Windows.Forms.Label();
             this.txtCA1 = new System.Windows.Forms.TextBox();
             this.label134 = new System.Windows.Forms.Label();
@@ -1453,7 +1453,6 @@
             this.tabCATankRoof,
             this.tabCAnormal});
             this.tabRisk.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.tabRisk_SelectedPageChanged);
-            this.tabRisk.TabIndexChanged += new System.EventHandler(this.tabRisk_TabIndexChanged);
             // 
             // tabPoF
             // 
@@ -7390,7 +7389,7 @@
             // 
             this.panelFQF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelFQF.Controls.Add(this.label126);
-            this.panelFQF.Controls.Add(this.textBox1);
+            this.panelFQF.Controls.Add(this.txtCA2);
             this.panelFQF.Controls.Add(this.label133);
             this.panelFQF.Controls.Add(this.txtCA1);
             this.panelFQF.Controls.Add(this.label134);
@@ -7410,13 +7409,13 @@
             this.label126.TabIndex = 6;
             this.label126.Text = "m";
             // 
-            // textBox1
+            // txtCA2
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(363, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtCA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCA2.Location = new System.Drawing.Point(363, 55);
+            this.txtCA2.Name = "txtCA2";
+            this.txtCA2.Size = new System.Drawing.Size(177, 20);
+            this.txtCA2.TabIndex = 5;
             // 
             // label133
             // 
@@ -13035,6 +13034,7 @@
             this.txtECUP.Name = "txtECUP";
             this.txtECUP.Size = new System.Drawing.Size(100, 21);
             this.txtECUP.TabIndex = 24;
+            this.txtECUP.TextChanged += new System.EventHandler(this.txtECUP_TextChanged);
             // 
             // txtTCAWSIOFOP
             // 
@@ -13042,6 +13042,7 @@
             this.txtTCAWSIOFOP.Name = "txtTCAWSIOFOP";
             this.txtTCAWSIOFOP.Size = new System.Drawing.Size(100, 21);
             this.txtTCAWSIOFOP.TabIndex = 23;
+            this.txtTCAWSIOFOP.TextChanged += new System.EventHandler(this.txtTCAWSIOFOP_TextChanged);
             // 
             // txtTuPDoDoE
             // 
@@ -13049,6 +13050,7 @@
             this.txtTuPDoDoE.Name = "txtTuPDoDoE";
             this.txtTuPDoDoE.Size = new System.Drawing.Size(100, 21);
             this.txtTuPDoDoE.TabIndex = 22;
+            this.txtTuPDoDoE.TextChanged += new System.EventHandler(this.txtTuPDoDoE_TextChanged);
             // 
             // txtLoPC
             // 
@@ -13056,6 +13058,7 @@
             this.txtLoPC.Name = "txtLoPC";
             this.txtLoPC.Size = new System.Drawing.Size(100, 21);
             this.txtLoPC.TabIndex = 21;
+            this.txtLoPC.TextChanged += new System.EventHandler(this.txtLoPC_TextChanged);
             // 
             // txtEOM
             // 
@@ -13063,6 +13066,7 @@
             this.txtEOM.Name = "txtEOM";
             this.txtEOM.Size = new System.Drawing.Size(100, 21);
             this.txtEOM.TabIndex = 20;
+            this.txtEOM.TextChanged += new System.EventHandler(this.txtEOM_TextChanged);
             // 
             // txtPURCFC
             // 
@@ -13070,6 +13074,7 @@
             this.txtPURCFC.Name = "txtPURCFC";
             this.txtPURCFC.Size = new System.Drawing.Size(100, 21);
             this.txtPURCFC.TabIndex = 19;
+            this.txtPURCFC.TextChanged += new System.EventHandler(this.txtPURCFC_TextChanged);
             // 
             // label448
             // 
@@ -13882,7 +13887,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Panel panelFQF;
         private System.Windows.Forms.Label label126;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCA2;
         private System.Windows.Forms.Label label133;
         private System.Windows.Forms.TextBox txtCA1;
         private System.Windows.Forms.Label label134;

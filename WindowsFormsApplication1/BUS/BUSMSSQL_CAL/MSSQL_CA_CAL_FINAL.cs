@@ -1,20 +1,20 @@
-﻿using System;
+﻿using RBI.BUS.BUSMSSQL;
+using RBI.Object.ObjectMSSQL;
+using RBI.Object.ObjectMSSQL_CAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RBI.DAL.MSSQL_CAL;
 using RBI.BUS.BUSMSSQL_CAL;
-using RBI.BUS.BUSMSSQL;
-using RBI.Object.ObjectMSSQL;
-using RBI.Object.ObjectMSSQL_CAL;
 
 namespace RBI.BUS.BUSMSSQL_CAL
 {
     public class MSSQL_CA_CAL_FINAL
     {
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
-        MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
+        //MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
         MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
@@ -27,30 +27,64 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public String FLUID { get; set; }
         public float ENVIRON_COST { get; set; }
         public float Outage_mul { get; set; }
+        public int IDProposal { get; set; }
+        public String RELEASE_DURATION { set; get; }
+        public String TOXIC_PHASE { set; get; }
+        public String FLUID_TOXIC { get; set; }
+        public String FLUID_PHASE { set; get; }
+        public float TOXIC_PERCENT { get; set; }
+        public float STORE_TEMP { get; set; }
+
 
 
         public API_COMPONENT_TYPE GET_DATA_API_COM()
         {
             return API_COMPONENT_BUS.getData(API_COMPONENT_TYPE_NAME);
         }
-        public float ca_cmd()
+        public String GET_AMBIENT()
         {
-            float cacmdflame = CA_CAL_FLA.ca_cmd_flame();
-            return cacmdflame;
+            //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
+            return DAL_CAL.GET_RELEASE_PHASE(FLUID);
         }
-        public float ca_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
+        public String GET_AMBIENT_TOXIC()
         {
-            float cainjflame = CA_CAL_FLA.ca_inj_flame();
-            float cainjtox = CA_CAL_TOX.ca_inj_tox(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
-            float cainjnfnt = CA_CAL_FLA.ca_inj_nfnt();
-            return Math.Max(cainjflame, cainjnfnt);
+            //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
+            return DAL_CAL.GET_RELEASE_PHASE(FLUID_TOXIC);
+        }
+        public float GET_NBP()
+        {
+            //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
+            return DAL_CAL.GET_NBP(FLUID);
+        }
+        public float GET_NBP_TOXIC()
+        {
+            //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
+            return DAL_CAL.GET_NBP(FLUID_TOXIC);
+        }
+        public String GET_RELEASE_PHASE()
+        {
+            if (FLUID_PHASE == "Gas")
+            {
+                return "Gas";
+            }
+            else if (GET_AMBIENT() == "Liquid" && FLUID_PHASE == "Liquid")
+            {
+                return "Liquid";
+            }
+            else if (GET_NBP() <= 300)
+            {
+                return "Liquid";
+            }
+            else
+                return "Gas";
         }
         // Step 12: financial
         public float fc_cmd() //Component Damage Cost
-        {
+        {           
             float fc_cmd = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             float t = 0;
+            //Console.WriteLine("gfftotal= " + obj.GFFTotal);
             t = obj.GFFSmall * obj.HoleCostSmall + obj.GFFMedium * obj.HoleCostMedium + obj.GFFLarge * obj.HoleCostLarge + obj.GFFRupture * obj.HoleCostRupture;
             fc_cmd = t * MATERIAL_COST / obj.GFFTotal;
             return fc_cmd;
@@ -58,7 +92,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float fc_affa() //Damage Costs to Surrounding Equipment in Affected Area
         {
             float fc_affa = 0;
-            float cacmd = ca_cmd();
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE(FLUID, API_COMPONENT_TYPE_NAME, IDProposal, STORE_TEMP);
+            float cacmd = CA_CAL_FLA.ca_cmd();
+            Console.WriteLine("ca_cmd= " + cacmd);
             fc_affa = cacmd * EQUIPMENT_COST;
             return fc_affa;
         }
@@ -86,7 +122,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float fc_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase) //Potential Injury Costs
         {
-            float fc_inj = ca_inj(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase) * PERSON_DENSITY * INJURE_COST;
+            float fc_inj = CA_CAL_TOX.ca_inj(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase) * PERSON_DENSITY * INJURE_COST;
             return fc_inj;
         }
         public float vol_n_env(int n)

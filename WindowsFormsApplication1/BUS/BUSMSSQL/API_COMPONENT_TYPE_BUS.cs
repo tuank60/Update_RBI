@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RBI.BUS.BUSMSSQL
 {
-    class API_COMPONENT_TYPE_BUS
+    public class API_COMPONENT_TYPE_BUS
     {
         API_ComponentTypeConnectUtils DAL = new API_ComponentTypeConnectUtils();
         public void add (API_COMPONENT_TYPE obj)

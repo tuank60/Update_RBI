@@ -14,7 +14,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
     public class MSSQL_CA_CAL_FLAMMABLE
     {
         public String FLUID { set; get; }
-        public String FlUID_TOXIC { get; set; }
+        public String FLUID_TOXIC { get; set; }
         public int IDProposal { get; set; }
         public float MITIGATION_SYSTEM { get; set; }
         public float STORE_TEMP { get; set; }
@@ -25,7 +25,19 @@ namespace RBI.BUS.BUSMSSQL_CAL
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+        //MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
 
+        public MSSQL_CA_CAL_FLAMMABLE(String f, String api, int id, float Ts)
+        {
+            FLUID = f;
+            API_COMPONENT_TYPE_NAME=api;
+            IDProposal = id;
+            STORE_TEMP = Ts;
+        }
+        public MSSQL_CA_CAL_FLAMMABLE()
+        {
+
+        }
         private String TYPE_FLUID()
         {
             String API_TYPE = null;
@@ -89,7 +101,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public String GET_AMBIENT_TOXIC()
         {
             //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
-            return DAL_CAL.GET_RELEASE_PHASE(FlUID_TOXIC);
+            return DAL_CAL.GET_RELEASE_PHASE(FLUID_TOXIC);
         }
         public float GET_NBP()
         {
@@ -99,7 +111,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float GET_NBP_TOXIC()
         {
             //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
-            return DAL_CAL.GET_NBP(FlUID_TOXIC);
+            return DAL_CAL.GET_NBP(FLUID_TOXIC);
         }
         public String GET_RELEASE_PHASE()
         {
@@ -229,7 +241,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float a_cmd_toxic(int select)
         {
-            float[] data = DAL_CAL.GET_TBL_58(FlUID_TOXIC);
+            float[] data = DAL_CAL.GET_TBL_58(FLUID_TOXIC);
             float[] a_cmd_toxic = { 0, 0, 0, 0 };
             if (GET_RELEASE_PHASE() == "Gas")
             {
@@ -252,7 +264,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float b_cmd_toxic(int select)
         {
-            float[] data = DAL_CAL.GET_TBL_58(FlUID_TOXIC);
+            float[] data = DAL_CAL.GET_TBL_58(FLUID_TOXIC);
             float[] b_cmd_toxic = { 0, 0, 0, 0 };
             if (GET_RELEASE_PHASE() == "Gas")
             {
@@ -275,7 +287,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float a_inj_toxic(int select)
         {
-            float[] data = DAL_CAL.GET_TBL_59(FlUID_TOXIC);
+            float[] data = DAL_CAL.GET_TBL_59(FLUID_TOXIC);
             float[] a_inj_toxic = { 0, 0, 0, 0 };
             if (GET_RELEASE_PHASE() == "Gas")
             {
@@ -295,7 +307,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float b_inj_toxic(int select)
         {
-            float[] data = DAL_CAL.GET_TBL_59(FlUID_TOXIC);
+            float[] data = DAL_CAL.GET_TBL_59(FLUID_TOXIC);
             float[] b_inj_toxic = { 0, 0, 0, 0 };//{ data[1], data[3], data[5], data[7], data[9], data[11], data[13], data[15] };
             if (GET_RELEASE_PHASE() == "Gas")
             {
@@ -567,20 +579,20 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float fact_ait = 0;
             float ait = 273+(float)Math.Round((data[9] - 32) / 1.8, 2);
-            if ((CA_CAL.STORED_TEMP + (DAL_CAL.GET_TBL_3B21(7))) <= ait)
+            if ((STORE_TEMP + (DAL_CAL.GET_TBL_3B21(7))) <= ait)
                 fact_ait = 0;
-            else if ((CA_CAL.STORED_TEMP - (DAL_CAL.GET_TBL_3B21(7))) >= ait)
+            else if ((STORE_TEMP - (DAL_CAL.GET_TBL_3B21(7))) >= ait)
                 fact_ait = 1;
             else
-                fact_ait = (CA_CAL.STORED_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
-            Console.WriteLine("fact_ait= " + fact_ait);
+                fact_ait = (STORE_TEMP - ait + (DAL_CAL.GET_TBL_3B21(7))) / (2 * (DAL_CAL.GET_TBL_3B21(7)));
+            //Console.WriteLine("fact_ait= " + fact_ait);
             return fact_ait;
         }
         public float fact_ait_toxic()
         {
             RW_STREAM_BUS busst = new RW_STREAM_BUS();
             RW_STREAM st = busst.getData(IDProposal);
-            float[] data = DAL_CAL.GET_TBL_52(FlUID_TOXIC);
+            float[] data = DAL_CAL.GET_TBL_52(FLUID_TOXIC);
             float fact_ait_toxic = 0;
             float ait =(float)Math.Round((data[9] - 32) / 1.8, 2);
             //Console.WriteLine("ait= " + ait);
@@ -827,7 +839,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             string[] itemsToxic = { "H2S", "HFAcid", "CO", "HCL", "Nitric Acid", "ALCL3", "NO2", "Phosgene", "TDI", "PO", "EE", "EO", "Pyrophoric", "Ammonia", "Chlorine"};
             for (int i = 0; i < itemsToxic.Length; i++)
             {
-                if (FlUID_TOXIC == itemsToxic[i])
+                if (FLUID_TOXIC == itemsToxic[i])
                 {
                     checkToxic = true;
                     break;
@@ -840,6 +852,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             if (!checkFlame())
             {
+                //Console.WriteLine("xxxxxxxxxxxxxxxxxx");
                 return 0;
             }
             else
@@ -1042,5 +1055,31 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
 
         #endregion
+        //#region CA
+        public float ca_cmd()
+        {
+            float cacmdflame = ca_cmd_flame();
+            Console.WriteLine("ca_cmd= " + cacmdflame);
+            return cacmdflame;
+        }
+        //public float ca_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
+        //{
+        //    float cainjflame = ca_inj_flame();
+        //    Console.WriteLine("ca_inj= " + cainjflame);
+        //    float cainjtox = CA_CAL_TOX.ca_inj_tox(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
+        //    Console.WriteLine("ca_inj_tox= " + cainjtox);
+        //    float cainjnfnt = ca_inj_nfnt();
+        //    Console.WriteLine("ca_inj_nfnt= " + cainjnfnt);
+        //    Console.WriteLine("ca= " + Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt));
+        //    return Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt);
+        //}
+        //public float ca_consequence(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
+        //{
+        //    float cacmd = ca_cmd();
+        //    float cainj = ca_inj(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
+        //    Console.WriteLine("max= " + Math.Max(cacmd, cainj));
+        //    return Math.Max(cacmd, cainj);
+        //}
+        //#endregion
     }
 }

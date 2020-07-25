@@ -49,6 +49,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             addItemIsolationSystem();
             addItemMitigation();
             initinput();
+            //initOutputCA();
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
             //initData_Tank(ID);
@@ -192,9 +193,9 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_COF_FLUID_BUS busrwcfc = new RW_FULL_COF_FLUID_BUS();
             RW_FULL_COF_FLUID rwcfc = busrwcfc.getData(IDProposal);
             CA_CAL.FLUID = st.TankFluidName;
-            CA_CAL_FLA.FlUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_FLA.FLUID_TOXIC = st.ToxicFluidName;
             String data = DAL_CAL.GET_FLUID_TYPE(CA_CAL.FLUID);
-            String data1 = DAL_CAL.GET_FLUID_TYPE(CA_CAL_FLA.FlUID_TOXIC);
+            String data1 = DAL_CAL.GET_FLUID_TYPE(CA_CAL_FLA.FLUID_TOXIC);
             float[] data3 = DAL_CAL.GET_TBL_52(CA_CAL.FLUID);
             txtACT.Text = api.APIComponentTypeName.ToString();
             txtLL.Text = st.LiquidLevel.ToString();
@@ -206,13 +207,21 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtPhase.Text = st.StoragePhase.ToString();
             txtMOT.Text = st.MaxOperatingTemperature.ToString();
             txtMOP.Text = ((st.MaxOperatingPressure)*1000).ToString();
-          //  txtModelFluidType.Text = data.ToString();
+            //txtModelFluidType.Text = data.ToString();
             //txtToxicFluidType.Text = data1.ToString();
             txtCp.Text = rwcfc.Cp.ToString();
             txtLiquidDensity.Text = rwcfc.Density.ToString();
             //txtVapourDensity.Text
             txtMW.Text = rwcfc.MW.ToString();
-            txtAIT.Text = ((data3[9]-32)/1.8f).ToString();
+            float a = ((data3[9]-32)/1.8f);
+            if (a < 0)
+            {
+                txtAIT.Text = 0.ToString();
+            }
+            else
+            {
+                txtAIT.Text = a.ToString();
+            }
             txtNBP.Text = rwcfc.NBP.ToString();
             txtK.Text = rwcfc.k.ToString();
             //txtAmbientState.Text = rwcfc.ambient.ToString();
@@ -220,10 +229,39 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtRMRF.Text = rwcfc.fact_di.ToString();
             txtCARF.Text = rwcfc.fact_mit.ToString();
         }
-        public void initCAP()
-        {
-
-        }
+        //public void initOutputCA()
+        //{
+        //    MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+        //    MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
+        //    MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
+        //    RW_STREAM_BUS busst = new RW_STREAM_BUS();
+        //    RW_STREAM st = busst.getData(IDProposal);
+        //    RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
+        //    COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+        //    COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
+        //    int apicomponentID = com.APIComponentTypeID;
+        //    API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
+        //    API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
+        //    RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
+        //    RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
+        //    CA_CAL_FLA.FLUID = st.TankFluidName;
+        //    CA_CAL_TOX.FLUID = st.TankFluidName;
+        //    CA_CAL_FLA.FlUID_TOXIC = st.ToxicFluidName;
+        //    CA_CAL_TOX.FLUID_TOXIC = st.ToxicFluidName;
+        //    CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
+        //    CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+        //    CA_CAL_TOX.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+        //    CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+        //    CA_CAL_TOX.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+        //    CA_CAL_FLA.IDProposal = IDProposal;
+        //    CA_CAL_TOX.IDProposal = IDProposal;
+        //    CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
+        //    CA_CAL_FLA.STORE_TEMP = st.MaxOperatingTemperature;
+        //    String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
+        //    CA_CAL_FLA.FLUID = st.TankFluidName;
+        //    txtCA1.Text = CA_CAL_FLA.ca_consequence(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FLA.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
+        //    txtCA2.Text = "E";
+        //}
         
         public void riskCA(int ID)
         {
@@ -877,16 +915,15 @@ namespace RBI.PRE.subForm.OutputDataForm
             busCA_Tank.edit(inputShell);
             MessageBox.Show("Update Input", "Coterk RBI");
         }
-        private void showData(int ID, float mass_inv, String DetectionType, String IsolationType, String Mitigation )
-        {
-            RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
-            RW_FULL_COF_INPUT obj = busfcip.getData(ID);
-            cbDetectionSystem.SelectedItem = obj.DetectionType;
-            cbIsolationSystem.SelectedItem = obj.IsolationType;
-            cbMitigationSystem.SelectedItem = obj.Mitigation;
-            txtFM.Text = obj.mass_inv.ToString();
-
-        }
+        //private void showData(int ID, float mass_inv, String DetectionType, String IsolationType, String Mitigation )
+        //{
+        //    RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
+        //    RW_FULL_COF_INPUT obj = busfcip.getData(ID);
+        //    cbDetectionSystem.SelectedItem = obj.DetectionType;
+        //    cbIsolationSystem.SelectedItem = obj.IsolationType;
+        //    cbMitigationSystem.SelectedItem = obj.Mitigation;
+        //    txtFM.Text = obj.mass_inv.ToString();
+        //}
         public void getData(int ID)//luu database
         {
             RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
@@ -929,24 +966,40 @@ namespace RBI.PRE.subForm.OutputDataForm
                 cbIsolationSystem.SelectedIndex = 0;
             cbMitigationSystem.SelectItemByDescription(fcip.Mitigation);
         }
-        private void cbDetectionSystem_SelectedIndexChanged(object sender, EventArgs e)
+        public void getDataFINALCOF(int ID)//luu database
         {
-            
+            if (txtPURCFC.Text != "" && txtEOM.Text!="" && txtLoPC.Text!=""&& txtTuPDoDoE.Text!=""&& txtTCAWSIOFOP.Text!=""&& txtECUP.Text!="")
+            {
+                RW_FULL_FINALCOF ffcof = new RW_FULL_FINALCOF();
+                RW_FULL_FINALCOF_BUS ffcofbus = new RW_FULL_FINALCOF_BUS();
+                ffcof.ID = ID;
+                ffcof.ComponentDamageCosts = float.Parse(txtPURCFC.Text);
+                ffcof.EquipmentOutageMultiplier = float.Parse(txtEOM.Text);
+                ffcof.LossProductCost = float.Parse(txtLoPC.Text);
+                ffcof.PopDen = float.Parse(txtTuPDoDoE.Text);
+                ffcof.InjCost = float.Parse(txtTCAWSIOFOP.Text);
+                ffcof.EnviCost = float.Parse(txtECUP.Text);
+                ffcofbus.edit(ffcof);
+            }
         }
-
-        private void tabRisk_TabIndexChanged(object sender, EventArgs e)
+        public void showDataFinalCoF(int ID)//lay database
         {
-           
-        }
-        void calculatioArea()
-        {
-
+            RW_FULL_FINALCOF_BUS ffcofbus = new RW_FULL_FINALCOF_BUS();
+            RW_FULL_FINALCOF ffcof = ffcofbus.getData(ID);
+            txtPURCFC.Text = ffcof.ComponentDamageCosts.ToString();
+            //Console.WriteLine("cost= " + ffcof.ComponentDamageCosts);
+            txtEOM.Text = ffcof.EquipmentOutageMultiplier.ToString();
+            txtLoPC.Text = ffcof.LossProductCost.ToString();
+            txtTuPDoDoE.Text = ffcof.PopDen.ToString();
+            txtTCAWSIOFOP.Text = ffcof.InjCost.ToString();
+            txtECUP.Text = ffcof.EnviCost.ToString();
         }
         private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
             MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
             MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
+            MSSQL_CA_CAL_FINAL CA_CAL_FIN = new MSSQL_CA_CAL_FINAL();
             RW_STREAM_BUS busst = new RW_STREAM_BUS();
             RW_STREAM st = busst.getData(IDProposal);
             RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
@@ -961,24 +1014,42 @@ namespace RBI.PRE.subForm.OutputDataForm
             API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
             RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
             RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
+            RW_MATERIAL_BUS busmater = new RW_MATERIAL_BUS();
+            RW_MATERIAL mater = busmater.getData(IDProposal);
+            RW_FULL_FINALCOF_BUS busfin = new RW_FULL_FINALCOF_BUS();
+            RW_FULL_FINALCOF fin = busfin.getData(IDProposal);
             CA_CAL_FLA.FLUID = st.TankFluidName;
             CA_CAL_TOX.FLUID = st.TankFluidName;
-            CA_CAL_FLA.FlUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_FIN.FLUID = st.TankFluidName;
+            CA_CAL_FLA.FLUID_TOXIC = st.ToxicFluidName;
             CA_CAL_TOX.FLUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_FIN.FLUID_TOXIC = st.ToxicFluidName;
             CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_TOX.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_FIN.FLUID_PHASE = st.StoragePhase;
             CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic)/100;
             CA_CAL_TOX.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
-            //Console.WriteLine("toxic percent= " + CA_CAL_FLA.TOXIC_PERCENT);
+            CA_CAL_FIN.TOXIC_PERCENT= (st.ReleaseFluidPercentToxic) / 100;
             CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
             CA_CAL_TOX.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+            CA_CAL_FIN.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
             CA_CAL_FLA.IDProposal = IDProposal;
             CA_CAL_TOX.IDProposal = IDProposal;
+            CA_CAL_FIN.IDProposal = IDProposal;
             CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
             CA_CAL_FLA.STORE_TEMP = st.MaxOperatingTemperature;
+            CA_CAL_FIN.STORE_TEMP = st.MaxOperatingTemperature;
+            CA_CAL_FIN.MATERIAL_COST = mater.CostFactor;
+            CA_CAL_FIN.INJURE_COST = fin.InjCost;
+            CA_CAL_FIN.PERSON_DENSITY = fin.PopDen;
+            CA_CAL_FIN.PRODUCTION_COST = fin.LossProductCost;
+            CA_CAL_FIN.Outage_mul = fin.EquipmentOutageMultiplier;
+            CA_CAL_FIN.EQUIPMENT_COST = fin.ComponentDamageCosts;
             String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
             //CA_CAL_FLA.fact_mit=
 
             if (tabRisk.SelectedTabPage.Name == "TabArea")
+            #region tabarea
             {
                 showDataTabArea(id);
                 //Model
@@ -1073,6 +1144,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                     txtAITBlendINJRupture_model.Text = CA_CAL_FLA.ca_injn_ait(4).ToString();
                     txtFlammableCDCA_model.Text = CA_CAL_FLA.ca_cmd_flame().ToString();
                     txtFlammablePICA_model.Text = CA_CAL_FLA.ca_inj_flame().ToString();
+                    
                 }
 
                 else
@@ -1083,9 +1155,9 @@ namespace RBI.PRE.subForm.OutputDataForm
 
                     // Toxic             
 
-                if (CA_CAL_FLA.FlUID_TOXIC == "H2S" || CA_CAL_FLA.FlUID_TOXIC == "CO" || CA_CAL_FLA.FlUID_TOXIC == "PO" || CA_CAL_FLA.FlUID_TOXIC == "EE" || CA_CAL_FLA.FlUID_TOXIC == "EO" || CA_CAL_FLA.FlUID_TOXIC == "Pyrophoric")
+                if (CA_CAL_FLA.FLUID_TOXIC == "H2S" || CA_CAL_FLA.FLUID_TOXIC == "CO" || CA_CAL_FLA.FLUID_TOXIC == "PO" || CA_CAL_FLA.FLUID_TOXIC == "EE" || CA_CAL_FLA.FLUID_TOXIC == "EO" || CA_CAL_FLA.FLUID_TOXIC == "Pyrophoric")
                 {
-                    tabtoxic.Name = CA_CAL_FLA.FlUID_TOXIC;
+                    tabtoxic.Name = CA_CAL_FLA.FLUID_TOXIC;
                     txtAContAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(1).ToString();
                     txtAContAILCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(2).ToString();
                     txtAInstAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(3).ToString();
@@ -1333,6 +1405,56 @@ namespace RBI.PRE.subForm.OutputDataForm
                 {
                     panelNonTF.Visible = false;
                 }
+                txtCA1.Text = CA_CAL_TOX.ca_consequence(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+                txtCA2.Text = "E";
+            }
+            #endregion
+            if (tabRisk.SelectedTabPage.Name == "tabCAnormal")
+            {
+                showDataFinalCoF(id);
+                txtMaterialcostfactor.Text = mater.CostFactor.ToString();
+                txtFoFE.Text = "0.5";
+                txtGFF_small.Text = api.GFFSmall.ToString();
+                txtGFF_medium.Text = api.GFFMedium.ToString();
+                txtGFF_large.Text = api.GFFLarge.ToString();
+                txtGFF_rupture.Text = api.GFFRupture.ToString();
+                txtCost_small.Text = api.HoleCostSmall.ToString();
+                txtCost_medium.Text = api.HoleCostMedium.ToString();
+                txtCost_large.Text = api.HoleCostLarge.ToString();
+                txtCost_rupture.Text = api.HoleCostRupture.ToString();
+                txtOutage_small.Text = api.OutageSmall.ToString();
+                txtOutage_medium.Text = api.OutageMedium.ToString();
+                txtOutage_large.Text = api.OutageLarge.ToString();
+                txtOutage_rupture.Text = api.OutageRupture.ToString();
+                txtFinancialcomdamage.Text = CA_CAL_FIN.fc_cmd().ToString();
+                txtFinancialdamageSurround.Text = CA_CAL_FIN.fc_affa().ToString();
+                txtNoofSurroundingEquip.Text = CA_CAL_FIN.outage_affa().ToString();
+                txtFinancialConsequenceLostProduct.Text = CA_CAL_FIN.fc_prod().ToString();
+                txtFinancialConsequenceSerious.Text = CA_CAL_FIN.fc_inj(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FIN.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+                txtEnvironmentalCost.Text = CA_CAL_FIN.fc_environ().ToString();
+                txtNoofDowntimeRepairSpecific.Text = CA_CAL_FIN.outage_cmd().ToString();
+                float a = CA_CAL_FIN.fc(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FIN.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE());
+                txtFCoF.Text = a.ToString();
+                if (a <= 10000)
+                {
+                    txtCoFC.Text = "A";
+                }
+                if(a>10000 && a <= 100000)
+                {
+                    txtCoFC.Text = "B";
+                }
+                if(a>100000 && a<= 1000000)
+                {
+                    txtCoFC.Text = "C";
+                }
+                if(a>1000000 && a <= 10000000)
+                {
+                    txtCoFC.Text = "D";
+                }
+                if (a > 10000000)
+                {
+                    txtCoFC.Text = "E";
+                }
             }
         }
 
@@ -1491,6 +1613,36 @@ namespace RBI.PRE.subForm.OutputDataForm
         private void textBox280_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPURCFC_TextChanged(object sender, EventArgs e)
+        {
+            getDataFINALCOF(id);
+        }
+
+        private void txtEOM_TextChanged(object sender, EventArgs e)
+        {
+            getDataFINALCOF(id);
+        }
+
+        private void txtLoPC_TextChanged(object sender, EventArgs e)
+        {
+            getDataFINALCOF(id);
+        }
+
+        private void txtTuPDoDoE_TextChanged(object sender, EventArgs e)
+        {
+            getDataFINALCOF(id);
+        }
+
+        private void txtTCAWSIOFOP_TextChanged(object sender, EventArgs e)
+        {
+            getDataFINALCOF(id);
+        }
+
+        private void txtECUP_TextChanged(object sender, EventArgs e)
+        {
+            getDataFINALCOF(id);
         }
     }
 }

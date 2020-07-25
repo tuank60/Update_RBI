@@ -23,8 +23,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public int IDProposal { get; set; }
 
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
-        MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
+        MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();        
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+        MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
         public API_COMPONENT_TYPE GET_DATA_API_COM()
         {
             return API_COMPONENT_BUS.getData(API_COMPONENT_TYPE_NAME);
@@ -275,12 +276,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
             float C8 = 0.0929f;
             float C4 = 2.205f;
-            //String releasetype = CA_CAL.releaseType(n);
-            //String toxicName = st.ToxicFluidName;
-            //String releasephase = CA_CAL.GET_RELEASE_PHASE();
-            //Console.WriteLine("Toxic name= " + ToxicName);
-            //Console.WriteLine("releases type= " + releasetype);
-            //Console.WriteLine("releases phase= " + releasephase);
             TOXIC_511_512 obj = getToxic(releasetype, ToxicName, n);
             //Console.WriteLine("Toxic name_1= " + obj.ToxicName);
             TOXIC_513 obj1 = getToxic513(releasephase, ToxicName, n);
@@ -351,16 +346,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return check;
         }
+        
         public float ca_inj_tox(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
         {
-            RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
-            COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
-            COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
-            int apicomponentID = com.APIComponentTypeID;
-            API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
-            API_COMPONENT_TYPE obj = busapi.getDatabyID(apicomponentID);
+            API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             //Console.WriteLine("Toxic name= " + ToxicName);
+            Console.WriteLine("gfftotal= " + obj.GFFTotal);
             float ca_injn_tox1 = ca_injn_tox(releasetype1, ToxicName, releasephase, 1);
+            Console.WriteLine("ca-injn-tox= " + ca_injn_tox1);
             float ca_injn_tox2 = ca_injn_tox(releasetype2, ToxicName, releasephase, 2);
             float ca_injn_tox3 = ca_injn_tox(releasetype3, ToxicName, releasephase, 3);
             float ca_injn_tox4 = ca_injn_tox(releasetype4, ToxicName, releasephase, 4);
@@ -369,5 +362,31 @@ namespace RBI.BUS.BUSMSSQL_CAL
             return Math.Abs(ca_inj_tox);
 
         }
+        #region
+        //public float ca_cmd()
+        //{
+        //    float cacmdflame = CA_CAL_FLA.ca_cmd_flame();
+        //    Console.WriteLine("ca_cmd= " + cacmdflame);
+        //    return cacmdflame;
+        //}
+        public float ca_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
+        {
+            float cainjflame = CA_CAL_FLA.ca_inj_flame();
+            Console.WriteLine("ca_inj= " + cainjflame);
+            float cainjtox = ca_inj_tox(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
+            Console.WriteLine("ca_inj_tox= " + cainjtox);
+            float cainjnfnt = CA_CAL_FLA.ca_inj_nfnt();
+            Console.WriteLine("ca_inj_nfnt= " + cainjnfnt);
+            Console.WriteLine("ca= " + Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt));
+            return Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt);
+        }
+        public float ca_consequence(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
+        {
+            float cacmd = CA_CAL_FLA.ca_cmd();
+            float cainj = ca_inj(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
+            Console.WriteLine("max= " + Math.Max(cacmd, cainj));
+            return Math.Max(cacmd, cainj);
+        }
+        #endregion
     }
 }
