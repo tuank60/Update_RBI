@@ -49,7 +49,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             addItemIsolationSystem();
             addItemMitigation();
             initinput();
-            //initOutputCA();
+            initOutputCA();
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
             //initData_Tank(ID);
@@ -229,40 +229,39 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtRMRF.Text = rwcfc.fact_di.ToString();
             txtCARF.Text = rwcfc.fact_mit.ToString();
         }
-        //public void initOutputCA()
-        //{
-        //    MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
-        //    MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
-        //    MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
-        //    RW_STREAM_BUS busst = new RW_STREAM_BUS();
-        //    RW_STREAM st = busst.getData(IDProposal);
-        //    RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
-        //    COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
-        //    COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
-        //    int apicomponentID = com.APIComponentTypeID;
-        //    API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
-        //    API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
-        //    RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
-        //    RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
-        //    CA_CAL_FLA.FLUID = st.TankFluidName;
-        //    CA_CAL_TOX.FLUID = st.TankFluidName;
-        //    CA_CAL_FLA.FlUID_TOXIC = st.ToxicFluidName;
-        //    CA_CAL_TOX.FLUID_TOXIC = st.ToxicFluidName;
-        //    CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
-        //    CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
-        //    CA_CAL_TOX.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
-        //    CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
-        //    CA_CAL_TOX.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
-        //    CA_CAL_FLA.IDProposal = IDProposal;
-        //    CA_CAL_TOX.IDProposal = IDProposal;
-        //    CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
-        //    CA_CAL_FLA.STORE_TEMP = st.MaxOperatingTemperature;
-        //    String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
-        //    CA_CAL_FLA.FLUID = st.TankFluidName;
-        //    txtCA1.Text = CA_CAL_FLA.ca_consequence(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FLA.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
-        //    txtCA2.Text = "E";
-        //}
+        public void initOutputCA()
+        {
+            MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
+            MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
+            RW_STREAM_BUS busst = new RW_STREAM_BUS();
+            RW_STREAM st = busst.getData(IDProposal);
+            RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
+            COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+            COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
+            int apicomponentID = com.APIComponentTypeID;
+            API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
+            API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
+            RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
+            CA_CAL_FLA.FLUID = st.TankFluidName;
+            CA_CAL_TOX.FLUID = st.TankFluidName;
+            CA_CAL_FLA.FLUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_TOX.FLUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+            CA_CAL_TOX.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+            CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+            CA_CAL_TOX.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+            CA_CAL_FLA.IDProposal = IDProposal;
+            CA_CAL_TOX.IDProposal = IDProposal;
+            CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
+            CA_CAL_FLA.STORE_TEMP = st.MaxOperatingTemperature;
+            String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
+            CA_CAL_FLA.FLUID = st.TankFluidName;
         
+        }
+
         public void riskCA(int ID)
         {
             RW_FULL_FCOF_BUS fullPoFBus = new RW_FULL_FCOF_BUS();
@@ -321,6 +320,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankShell.PageVisible = false;
                 TabArea.PageVisible = false;
                 tabCATankRoof.PageVisible = false;
+                tabCAnormal.PageVisible = false;
             }
             else if (compTypeID == 8) 
             {
@@ -331,6 +331,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankShell.PageVisible = true;
                 TabArea.PageVisible = false;
                 tabCATankRoof.PageVisible = false;
+                tabCAnormal.PageVisible = false;
             }
             else if (compTypeID == 13) //shell
             {
@@ -345,6 +346,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankRoof.PageVisible = false;
                 initData_InputTank(ID);
                 LoadDataForControlInTabCATankShell(ID);
+                tabCAnormal.PageVisible = false;
             }
             else if (compTypeID == 14) //fixed roof
             {
@@ -357,6 +359,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankRoof.PageVisible = true;
                 initData_InputTank(ID);
                 initData_Roof(ID);
+                tabCAnormal.PageVisible = false;
             }
             else if (compTypeID == 15) //floating roof
             {
@@ -369,6 +372,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCATankRoof.PageVisible = true;
                 initData_InputTank(ID);
                 initData_Roof(ID);
+                tabCAnormal.PageVisible = false;
             }
             else
             {
@@ -672,8 +676,12 @@ namespace RBI.PRE.subForm.OutputDataForm
             panelCAP.Height = 21;
             panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
             panelRHP.Height = 21;
-            //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
-            //panelFCA.Height = 21;
+            panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+            panelFCA.Height = 21;
+            panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+            panelTCA.Height = 21;
+            panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
+            panelNonTF.Height = 21;
         }
 
         private void lblInput_Click(object sender, EventArgs e)
@@ -684,9 +692,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lblInput.Text = "▶ Input";
                 panelFQF.Top = panelInput.Top + panelInput.Height + 13;
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
-                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
-                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                
             }
             else if (lblInput.Text == "▶ Input")
             {
@@ -694,9 +700,6 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lblInput.Text = "▼ Input";
                 panelFQF.Top = panelInput.Top + panelInput.Height + 13;
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
-                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
-                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
         }
 
@@ -707,18 +710,12 @@ namespace RBI.PRE.subForm.OutputDataForm
                 panelFQF.Height = 87;
                 lblFQF.Text = "▶ Fully-Quantitive Financial Consequence of Failture and Category";
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
-                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
-                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
             else if (lblFQF.Text == "▶ Fully-Quantitive Financial Consequence of Failture and Category")
             {
                 panelFQF.Height = 21;
                 lblFQF.Text = "▼ Fully-Quantitive Financial Consequence of Failture and Category";
                 groupBoxIV.Top = panelFQF.Top + panelFQF.Height + 13;
-                panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
-                panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
             }
         }
 
@@ -730,7 +727,9 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lbllnfinput.Text = "▶ Influencing Inputs";
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
             else if (lbllnfinput.Text == "▶ Influencing Inputs")
             {
@@ -738,7 +737,9 @@ namespace RBI.PRE.subForm.OutputDataForm
                 lbllnfinput.Text = "▼ Influencing Inputs";
                 panelCAP.Top = panelInflu.Top + panelInflu.Height + 13;
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
         }
 
@@ -749,14 +750,18 @@ namespace RBI.PRE.subForm.OutputDataForm
                 panelCAP.Height = 368;
                 lblCAP.Text = "▶ Consequence Analysis Properties";
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
             else if (lblCAP.Text == "▶ Consequence Analysis Properties")
             {
                 panelCAP.Height = 21;
                 lblCAP.Text = "▼ Consequence Analysis Properties";
                 panelRHP.Top = panelCAP.Top + panelCAP.Height + 13;
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
         }
 
@@ -766,39 +771,62 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 panelRHP.Height = 342;
                 lblRHP.Text = "▶ Release Holes Properties";
-                //panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
             else if (lblRHP.Text == "▶ Release Holes Properties")
             {
                 panelRHP.Height = 21;
                 lblRHP.Text = "▼ Release Holes Properties";
-                //panelFCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelFCA.Top = panelRHP.Top + panelRHP.Height + 13;
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
         }
         private void lblFCA_Click(object sender, EventArgs e)
         {
             if (lblFCA.Text == "▼ Flammable Consequence Area")
             {
-                panelFCA.Height = 342;
+                panelFCA.Height = 831;
                 lblFCA.Text = "▶ Flammable Consequence Area";
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
             else if (lblFCA.Text == "▶ Flammable Consequence Area")
             {
                 panelFCA.Height = 21;
                 lblFCA.Text = "▼ Flammable Consequence Area";
+                panelTCA.Top = panelFCA.Top + panelFCA.Height + 13;
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
         }
         private void lblTCA_Click(object sender, EventArgs e)
         {
             if (lblTCA.Text == "▼ Toxic Consequence Area")
             {
-                panelTCA.Height = 398;
+                panelTCA.Height = 342;
                 lblTCA.Text = "▶ Toxic Consequence Area";
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
             }
             else if (lblTCA.Text == "▶ Toxic Consequence Area")
             {
                 panelTCA.Height = 21;
                 lblTCA.Text = "▼ Toxic Consequence Area";
+                panelNonTF.Top = panelTCA.Top + panelTCA.Height + 13;
+            }
+        }
+        private void lblNonTF_Click(object sender, EventArgs e)
+        {
+            if (lblNonTF.Text == "▼ Non-Flammable Non-Toxic Consequence Area")
+            {
+                panelNonTF.Height = 192;
+                lblNonTF.Text = "▶ Non-Flammable Non-Toxic Consequence Area";
+            }
+            else if (lblNonTF.Text == "▶ Non-Flammable Non-Toxic Consequence Area")
+            {
+                panelNonTF.Height = 21;
+                lblNonTF.Text = "▼ Non-Flammable Non-Toxic Consequence Area";
             }
         }
 
@@ -915,15 +943,6 @@ namespace RBI.PRE.subForm.OutputDataForm
             busCA_Tank.edit(inputShell);
             MessageBox.Show("Update Input", "Coterk RBI");
         }
-        //private void showData(int ID, float mass_inv, String DetectionType, String IsolationType, String Mitigation )
-        //{
-        //    RW_FULL_COF_INPUT_BUS busfcip = new RW_FULL_COF_INPUT_BUS();
-        //    RW_FULL_COF_INPUT obj = busfcip.getData(ID);
-        //    cbDetectionSystem.SelectedItem = obj.DetectionType;
-        //    cbIsolationSystem.SelectedItem = obj.IsolationType;
-        //    cbMitigationSystem.SelectedItem = obj.Mitigation;
-        //    txtFM.Text = obj.mass_inv.ToString();
-        //}
         public void getData(int ID)//luu database
         {
             RW_FULL_COF_INPUT fcip = new RW_FULL_COF_INPUT();
@@ -1045,6 +1064,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             CA_CAL_FIN.PRODUCTION_COST = fin.LossProductCost;
             CA_CAL_FIN.Outage_mul = fin.EquipmentOutageMultiplier;
             CA_CAL_FIN.EQUIPMENT_COST = fin.ComponentDamageCosts;
+            CA_CAL_FIN.ENVIRON_COST = fin.EnviCost;
             String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
             //CA_CAL_FLA.fact_mit=
 
@@ -1058,7 +1078,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                     CA_CAL_FLA.FLUID == "Methanol" || CA_CAL_FLA.FLUID == "PO" || CA_CAL_FLA.FLUID == "Aromatics" || CA_CAL_FLA.FLUID == "Styrene" || CA_CAL_FLA.FLUID == "EEA" || CA_CAL_FLA.FLUID == "EE" ||
                     CA_CAL_FLA.FLUID == "EG" || CA_CAL_FLA.FLUID == "EO" || CA_CAL_FLA.FLUID == "Pyrophoric" || CA_CAL_FLA.FLUID == "Ammonia" || CA_CAL_FLA.FLUID == "Chlorine")
                 {
-                    tabmodel.Name = CA_CAL_FLA.FLUID;
+                    tabControlFlammable.Name = CA_CAL_FLA.FLUID;
                     txtAContAINLCMD_model.Text = CA_CAL_FLA.a_cmd(1).ToString();
                     txtAContAILCMD_model.Text = CA_CAL_FLA.a_cmd(2).ToString();
                     txtAInstAINLCMD_model.Text = CA_CAL_FLA.a_cmd(3).ToString();
@@ -1149,7 +1169,7 @@ namespace RBI.PRE.subForm.OutputDataForm
 
                 else
                 {
-                    tabmodel.PageVisible = false;
+                    panelFCA.Visible = false;
                 }
 
 
@@ -1413,7 +1433,49 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 showDataFinalCoF(id);
                 txtMaterialcostfactor.Text = mater.CostFactor.ToString();
-                txtFoFE.Text = "0.5";
+                switch (CA_CAL_FIN.FLUID)
+                {
+                    case "C6-C8":
+                        txtFoFE.Text = "0.9";
+                        break;
+                    case "Acid":
+                        txtFoFE.Text = "0.9";
+                        break;
+                    case "C9-C12":
+                        txtFoFE.Text = "0.5";
+                        break;
+                    case "C13-C16":
+                        txtFoFE.Text = "0.1";
+                        break;
+                    case "C17-C25":
+                        txtFoFE.Text = "0.05";
+                        break;
+                    case "C25+":
+                        txtFoFE.Text = "0.02";
+                        break;
+                    case "Nitric Acid":
+                        txtFoFE.Text = "0.8";
+                        break;
+                    case "NO2":
+                    case "EE":
+                        txtFoFE.Text = "0.75";
+                        break;
+                    case "TDI":
+                        txtFoFE.Text = "0.15";
+                        break;
+                    case "Styrene":
+                        txtFoFE.Text = "0.6";
+                        break;
+                    case "EEA":
+                        txtFoFE.Text = "0.65";
+                        break;
+                    case "EG":
+                        txtFoFE.Text = "0.45";
+                        break;
+                    default:
+                        txtFoFE.Text = "0";
+                        break;
+                }
                 txtGFF_small.Text = api.GFFSmall.ToString();
                 txtGFF_medium.Text = api.GFFMedium.ToString();
                 txtGFF_large.Text = api.GFFLarge.ToString();
@@ -1456,6 +1518,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                     txtCoFC.Text = "E";
                 }
             }
+            
         }
 
         
@@ -1644,5 +1707,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         {
             getDataFINALCOF(id);
         }
+
+        
     }
 }

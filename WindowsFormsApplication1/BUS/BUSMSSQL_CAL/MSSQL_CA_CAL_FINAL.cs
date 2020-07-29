@@ -15,7 +15,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
     {
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
         //MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
-        MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
+        //MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
         public string API_COMPONENT_TYPE_NAME { get; set; }
@@ -46,21 +46,21 @@ namespace RBI.BUS.BUSMSSQL_CAL
             //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
             return DAL_CAL.GET_RELEASE_PHASE(FLUID);
         }
-        public String GET_AMBIENT_TOXIC()
-        {
-            //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
-            return DAL_CAL.GET_RELEASE_PHASE(FLUID_TOXIC);
-        }
+        //public String GET_AMBIENT_TOXIC()
+        //{
+        //    //Console.WriteLine(DAL_CAL.GET_RELEASE_PHASE(FLUID));
+        //    return DAL_CAL.GET_RELEASE_PHASE(FLUID_TOXIC);
+        //}
         public float GET_NBP()
         {
             //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
             return DAL_CAL.GET_NBP(FLUID);
         }
-        public float GET_NBP_TOXIC()
-        {
-            //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
-            return DAL_CAL.GET_NBP(FLUID_TOXIC);
-        }
+        //public float GET_NBP_TOXIC()
+        //{
+        //    //Console.WriteLine(DAL_CAL.GET_NBP(FLUID));
+        //    return DAL_CAL.GET_NBP(FLUID_TOXIC);
+        //}
         public String GET_RELEASE_PHASE()
         {
             if (FLUID_PHASE == "Gas")
@@ -84,7 +84,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float fc_cmd = 0;
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             float t = 0;
-            //Console.WriteLine("gfftotal= " + obj.GFFTotal);
             t = obj.GFFSmall * obj.HoleCostSmall + obj.GFFMedium * obj.HoleCostMedium + obj.GFFLarge * obj.HoleCostLarge + obj.GFFRupture * obj.HoleCostRupture;
             fc_cmd = t * MATERIAL_COST / obj.GFFTotal;
             return fc_cmd;
@@ -92,9 +91,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float fc_affa() //Damage Costs to Surrounding Equipment in Affected Area
         {
             float fc_affa = 0;
-            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE(FLUID, API_COMPONENT_TYPE_NAME, IDProposal, STORE_TEMP);
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE(FLUID, API_COMPONENT_TYPE_NAME, IDProposal, STORE_TEMP, FLUID_TOXIC, FLUID_PHASE);
             float cacmd = CA_CAL_FLA.ca_cmd();
-            Console.WriteLine("ca_cmd= " + cacmd);
             fc_affa = cacmd * EQUIPMENT_COST;
             return fc_affa;
         }
@@ -122,17 +120,21 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float fc_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase) //Potential Injury Costs
         {
+            MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC(FLUID, API_COMPONENT_TYPE_NAME, IDProposal, STORE_TEMP, FLUID_TOXIC, FLUID_PHASE, RELEASE_DURATION, TOXIC_PHASE, TOXIC_PERCENT);
             float fc_inj = CA_CAL_TOX.ca_inj(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase) * PERSON_DENSITY * INJURE_COST;
             return fc_inj;
         }
         public float vol_n_env(int n)
         {
+            RW_FULL_COF_HOLE_SIZE_BUS bus = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE obj = bus.getData(IDProposal);
             float vol_n_env = 0;
-            float massn = CA_CAL.mass_n(n);
             float frac_evap = 1;
             switch (FLUID)
             {
                 case "C6-C8":
+                    frac_evap = 0.9f;
+                    break;
                 case "Acid":
                     frac_evap = 0.9f;
                     break;
@@ -168,11 +170,26 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     frac_evap = 0.45f;
                     break;
                 default:
-                    frac_evap = 1;
+                    frac_evap = 0;
                     break;
             }
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
-            vol_n_env = (float)((DAL_CAL.GET_TBL_3B21(13)) * massn * (1 - frac_evap) / (data[1] * 16.02));
+            if (n == 1)
+            {
+                vol_n_env = (float)(1.8* obj.mass_1 * (1 - frac_evap) / (data[1] * 16.02));
+            }
+            if (n == 2)
+            {
+                vol_n_env = (float)(1.8* obj.mass_2 * (1 - frac_evap) / (data[1] * 16.02));
+            }
+            if (n == 3)
+            {
+                vol_n_env = (float)(1.8* obj.mass_3 * (1 - frac_evap) / (data[1] * 16.02));
+            }
+            if (n == 4)
+            {
+                vol_n_env = (float)(1.8 * obj.mass_4 * (1 - frac_evap) / (data[1] * 16.02));
+            }
             return vol_n_env;
         }
         public float fc_environ() //Environmental Cleanup Costs

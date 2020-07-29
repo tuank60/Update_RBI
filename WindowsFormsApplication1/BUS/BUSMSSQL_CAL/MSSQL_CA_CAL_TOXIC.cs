@@ -21,11 +21,28 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public String TOXIC_PHASE { set; get; }
         public string API_COMPONENT_TYPE_NAME { get; set; }
         public int IDProposal { get; set; }
+        public float STORE_TEMP { get; set; }
 
         API_COMPONENT_TYPE_BUS API_COMPONENT_BUS = new API_COMPONENT_TYPE_BUS();
         MSSQL_RBI_CAL_ConnUtils DAL_CAL = new MSSQL_RBI_CAL_ConnUtils();        
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
-        MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
+        
+        public MSSQL_CA_CAL_TOXIC(String f, String api, int id, float Ts, String ft, String ff, String rd,String tp, float tper)
+        {
+            FLUID = f;
+            API_COMPONENT_TYPE_NAME = api;
+            IDProposal = id;
+            STORE_TEMP = Ts;
+            FLUID_TOXIC = ft;
+            FLUID_PHASE = ff;
+            RELEASE_DURATION = rd;
+            TOXIC_PHASE = tp;
+            TOXIC_PERCENT = tper;
+        }
+        public MSSQL_CA_CAL_TOXIC()
+        {
+
+        }
         public API_COMPONENT_TYPE GET_DATA_API_COM()
         {
             return API_COMPONENT_BUS.getData(API_COMPONENT_TYPE_NAME);
@@ -294,7 +311,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (releasetype == "Continuous")
                     return (float)Math.Round(obj.e * Math.Pow(rate_tox_n(n), obj.f), 4);
                 else
-                    return (float)Math.Round(obj.e * Math.Pow(mass_tox_n(n), obj.f), 4);
+                    return (float)Math.Round(obj.e * Math.Pow(mass_tox_n(n), obj.f)*1000, 4);
             }
             else if (ToxicName == "AlCl3" || ToxicName == "CO" || ToxicName == "HCl" || ToxicName == "Nitric Acid" || ToxicName == "NO2"
                     || ToxicName == "Phosgene" || ToxicName == "TDI" || ToxicName == "EE" || ToxicName == "EO" || ToxicName == "PO")
@@ -302,7 +319,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (releasetype == "Continuous")
                     return (float)Math.Round(obj1.e * Math.Pow(rate_tox_n(n), obj1.f), 4);
                 else
-                    return (float)Math.Round(obj1.e * Math.Pow(mass_tox_n(n), obj1.f), 4);
+                    return (float)Math.Round(obj1.e * Math.Pow(rate_tox_n(n), obj1.f), 4);
             }
             else
             {
@@ -351,9 +368,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();
             //Console.WriteLine("Toxic name= " + ToxicName);
-            Console.WriteLine("gfftotal= " + obj.GFFTotal);
             float ca_injn_tox1 = ca_injn_tox(releasetype1, ToxicName, releasephase, 1);
-            Console.WriteLine("ca-injn-tox= " + ca_injn_tox1);
             float ca_injn_tox2 = ca_injn_tox(releasetype2, ToxicName, releasephase, 2);
             float ca_injn_tox3 = ca_injn_tox(releasetype3, ToxicName, releasephase, 3);
             float ca_injn_tox4 = ca_injn_tox(releasetype4, ToxicName, releasephase, 4);
@@ -371,20 +386,21 @@ namespace RBI.BUS.BUSMSSQL_CAL
         //}
         public float ca_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
         {
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE(FLUID, API_COMPONENT_TYPE_NAME, IDProposal, STORE_TEMP, FLUID_TOXIC, FLUID_PHASE);
             float cainjflame = CA_CAL_FLA.ca_inj_flame();
-            Console.WriteLine("ca_inj= " + cainjflame);
+            //Console.WriteLine("ca_inj= " + cainjflame);
             float cainjtox = ca_inj_tox(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
-            Console.WriteLine("ca_inj_tox= " + cainjtox);
+            //Console.WriteLine("ca_inj_tox= " + cainjtox);
             float cainjnfnt = CA_CAL_FLA.ca_inj_nfnt();
             Console.WriteLine("ca_inj_nfnt= " + cainjnfnt);
-            Console.WriteLine("ca= " + Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt));
             return Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt);
         }
         public float ca_consequence(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)
         {
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE(FLUID, API_COMPONENT_TYPE_NAME, IDProposal, STORE_TEMP, FLUID_TOXIC, FLUID_PHASE);
             float cacmd = CA_CAL_FLA.ca_cmd();
             float cainj = ca_inj(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
-            Console.WriteLine("max= " + Math.Max(cacmd, cainj));
+            //Console.WriteLine("max= " + Math.Max(cacmd, cainj));
             return Math.Max(cacmd, cainj);
         }
         #endregion

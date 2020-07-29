@@ -27,12 +27,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
         MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
         //MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
 
-        public MSSQL_CA_CAL_FLAMMABLE(String f, String api, int id, float Ts)
+        public MSSQL_CA_CAL_FLAMMABLE(String f, String api, int id, float Ts,String ft, String ff)
         {
             FLUID = f;
             API_COMPONENT_TYPE_NAME=api;
             IDProposal = id;
             STORE_TEMP = Ts;
+            FLUID_TOXIC = ft;
+            FLUID_PHASE = ff;
         }
         public MSSQL_CA_CAL_FLAMMABLE()
         {
@@ -1059,7 +1061,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float ca_cmd()
         {
             float cacmdflame = ca_cmd_flame();
-            Console.WriteLine("ca_cmd= " + cacmdflame);
             return cacmdflame;
         }
         //public float ca_inj(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)

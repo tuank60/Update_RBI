@@ -123,6 +123,410 @@
             this.lblLF1 = new System.Windows.Forms.Label();
             this.TabArea = new DevExpress.XtraTab.XtraTabPage();
             this.groupBoxIV = new System.Windows.Forms.GroupBox();
+            this.panelNonTF = new System.Windows.Forms.Panel();
+            this.label406 = new System.Windows.Forms.Label();
+            this.lblNonTF = new System.Windows.Forms.Label();
+            this.label405 = new System.Windows.Forms.Label();
+            this.label400 = new System.Windows.Forms.Label();
+            this.label404 = new System.Windows.Forms.Label();
+            this.txtNonFlammableNonToxicCon = new System.Windows.Forms.TextBox();
+            this.label403 = new System.Windows.Forms.Label();
+            this.txtBlend_CA2 = new System.Windows.Forms.TextBox();
+            this.label394 = new System.Windows.Forms.Label();
+            this.txtCONT_CA3 = new System.Windows.Forms.TextBox();
+            this.label395 = new System.Windows.Forms.Label();
+            this.txtINST_CA3 = new System.Windows.Forms.TextBox();
+            this.label396 = new System.Windows.Forms.Label();
+            this.txtBlend_CA3 = new System.Windows.Forms.TextBox();
+            this.label397 = new System.Windows.Forms.Label();
+            this.label402 = new System.Windows.Forms.Label();
+            this.txtBlend_CA4 = new System.Windows.Forms.TextBox();
+            this.txtCONT_CA4 = new System.Windows.Forms.TextBox();
+            this.label398 = new System.Windows.Forms.Label();
+            this.label401 = new System.Windows.Forms.Label();
+            this.txtINST_CA1 = new System.Windows.Forms.TextBox();
+            this.txtINST_CA4 = new System.Windows.Forms.TextBox();
+            this.txtCONT_CA1 = new System.Windows.Forms.TextBox();
+            this.txtINST_CA2 = new System.Windows.Forms.TextBox();
+            this.txtBlend_CA1 = new System.Windows.Forms.TextBox();
+            this.txtCONT_CA2 = new System.Windows.Forms.TextBox();
+            this.label399 = new System.Windows.Forms.Label();
+            this.panelTCA = new System.Windows.Forms.Panel();
+            this.tabControlToxic = new DevExpress.XtraTab.XtraTabControl();
+            this.tabToxic1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label441 = new System.Windows.Forms.Label();
+            this.label375 = new System.Windows.Forms.Label();
+            this.label440 = new System.Windows.Forms.Label();
+            this.txtContFMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.label439 = new System.Windows.Forms.Label();
+            this.txtContEMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.label438 = new System.Windows.Forms.Label();
+            this.txtContFLarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.label437 = new System.Windows.Forms.Label();
+            this.txtMassRateLarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtFlammalbePICA_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtMassRateMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.label366 = new System.Windows.Forms.Label();
+            this.txtContDMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.label367 = new System.Windows.Forms.Label();
+            this.txtMassMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.label368 = new System.Windows.Forms.Label();
+            this.txtLDToxicLarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.label369 = new System.Windows.Forms.Label();
+            this.txtContELarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.label370 = new System.Windows.Forms.Label();
+            this.txtMassLarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.label371 = new System.Windows.Forms.Label();
+            this.txtToxicCAMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.label372 = new System.Windows.Forms.Label();
+            this.txtContCLarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.label373 = new System.Windows.Forms.Label();
+            this.txtContDLarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.label374 = new System.Windows.Forms.Label();
+            this.txtToxicCALarge_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContDRupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.label379 = new System.Windows.Forms.Label();
+            this.txtLDToxicRupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContERupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.label378 = new System.Windows.Forms.Label();
+            this.txtToxicCASmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContCRupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContFRupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContCMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtMassSmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.label377 = new System.Windows.Forms.Label();
+            this.txtMassRateRupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtLDToxicMedium_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtMassRateSmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.label376 = new System.Windows.Forms.Label();
+            this.txtMassRupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContDSmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContFSmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtLDToxicSmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtToxicCARupture_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContESmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.txtContCSmall_toxic1 = new System.Windows.Forms.TextBox();
+            this.tabToxic2 = new DevExpress.XtraTab.XtraTabPage();
+            this.label380 = new System.Windows.Forms.Label();
+            this.label381 = new System.Windows.Forms.Label();
+            this.label382 = new System.Windows.Forms.Label();
+            this.txtContFMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.label383 = new System.Windows.Forms.Label();
+            this.txtContEMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.label384 = new System.Windows.Forms.Label();
+            this.txtContFLarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.label385 = new System.Windows.Forms.Label();
+            this.txtMassRateLarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtFlammalbePICA_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtMassRateMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.label386 = new System.Windows.Forms.Label();
+            this.txtContDMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.label387 = new System.Windows.Forms.Label();
+            this.txtMassMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.label388 = new System.Windows.Forms.Label();
+            this.txtLDToxicLarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.label389 = new System.Windows.Forms.Label();
+            this.txtContELarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.label390 = new System.Windows.Forms.Label();
+            this.txtMassLarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.label391 = new System.Windows.Forms.Label();
+            this.txtToxicCAMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.label392 = new System.Windows.Forms.Label();
+            this.txtContCLarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.label393 = new System.Windows.Forms.Label();
+            this.txtContDLarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.label490 = new System.Windows.Forms.Label();
+            this.txtToxicCALarge_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContDRupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.label491 = new System.Windows.Forms.Label();
+            this.txtLDToxicRupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContERupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.label492 = new System.Windows.Forms.Label();
+            this.txtToxicCASmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContCRupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContFRupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContCMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtMassSmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.label493 = new System.Windows.Forms.Label();
+            this.txtMassRateRupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtLDToxicMedium_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtMassRateSmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.label494 = new System.Windows.Forms.Label();
+            this.txtMassRupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContDSmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContFSmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtLDToxicSmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtToxicCARupture_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContESmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.txtContCSmall_toxic2 = new System.Windows.Forms.TextBox();
+            this.lblTCA = new System.Windows.Forms.Label();
+            this.panelFCA = new System.Windows.Forms.Panel();
+            this.tabControlFlammable = new DevExpress.XtraTab.XtraTabControl();
+            this.tabmodel = new DevExpress.XtraTab.XtraTabPage();
+            this.txtFlammablePICA_model = new System.Windows.Forms.TextBox();
+            this.txtFlammableCDCA_model = new System.Windows.Forms.TextBox();
+            this.label299 = new System.Windows.Forms.Label();
+            this.label260 = new System.Windows.Forms.Label();
+            this.txtAContAILCMD_model = new System.Windows.Forms.TextBox();
+            this.label330 = new System.Windows.Forms.Label();
+            this.label434 = new System.Windows.Forms.Label();
+            this.label329 = new System.Windows.Forms.Label();
+            this.label433 = new System.Windows.Forms.Label();
+            this.label327 = new System.Windows.Forms.Label();
+            this.label432 = new System.Windows.Forms.Label();
+            this.label326 = new System.Windows.Forms.Label();
+            this.label431 = new System.Windows.Forms.Label();
+            this.label325 = new System.Windows.Forms.Label();
+            this.label430 = new System.Windows.Forms.Label();
+            this.label323 = new System.Windows.Forms.Label();
+            this.label429 = new System.Windows.Forms.Label();
+            this.label322 = new System.Windows.Forms.Label();
+            this.label428 = new System.Windows.Forms.Label();
+            this.label320 = new System.Windows.Forms.Label();
+            this.label427 = new System.Windows.Forms.Label();
+            this.label319 = new System.Windows.Forms.Label();
+            this.label426 = new System.Windows.Forms.Label();
+            this.txtAContAINLCMD_model = new System.Windows.Forms.TextBox();
+            this.label425 = new System.Windows.Forms.Label();
+            this.txtAInstAINLCMD_model = new System.Windows.Forms.TextBox();
+            this.label424 = new System.Windows.Forms.Label();
+            this.txtAInstAILCMD_model = new System.Windows.Forms.TextBox();
+            this.label423 = new System.Windows.Forms.Label();
+            this.txtAContAINLINJ_model = new System.Windows.Forms.TextBox();
+            this.label421 = new System.Windows.Forms.Label();
+            this.txtAContAILINJ_model = new System.Windows.Forms.TextBox();
+            this.label420 = new System.Windows.Forms.Label();
+            this.txtAInstAINLINJ_model = new System.Windows.Forms.TextBox();
+            this.label419 = new System.Windows.Forms.Label();
+            this.txtAInstAILINJ_model = new System.Windows.Forms.TextBox();
+            this.txtBContAINLCMD_model = new System.Windows.Forms.TextBox();
+            this.txtBContAILCMD_model = new System.Windows.Forms.TextBox();
+            this.txtBInstAINLCMD_model = new System.Windows.Forms.TextBox();
+            this.txtBInstAILCMD_model = new System.Windows.Forms.TextBox();
+            this.label300 = new System.Windows.Forms.Label();
+            this.txtBContAINLINJ_model = new System.Windows.Forms.TextBox();
+            this.label301 = new System.Windows.Forms.Label();
+            this.txtBContAILINJ_model = new System.Windows.Forms.TextBox();
+            this.label302 = new System.Windows.Forms.Label();
+            this.txtBInstAINLINJ_model = new System.Windows.Forms.TextBox();
+            this.label303 = new System.Windows.Forms.Label();
+            this.txtBInstAILINJ_model = new System.Windows.Forms.TextBox();
+            this.label304 = new System.Windows.Forms.Label();
+            this.label318 = new System.Windows.Forms.Label();
+            this.txtAITBlendINJRupture_model = new System.Windows.Forms.TextBox();
+            this.label317 = new System.Windows.Forms.Label();
+            this.txtBlendINJAINLSmall_model = new System.Windows.Forms.TextBox();
+            this.label316 = new System.Windows.Forms.Label();
+            this.txtBlendINJAILSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILMedium_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLMedium_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILRupture_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLLarge_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendINJSmall_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLMedium_model = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAINLRupture_model = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILMedium_model = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAILRupture_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAILMedium_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDRupture_model = new System.Windows.Forms.TextBox();
+            this.txtEneffLarge_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendINJMedium_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAILLarge_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAILLarge_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDLarge_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLMedium_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDMedium_model = new System.Windows.Forms.TextBox();
+            this.txtContCMDAINLLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAINLLarge_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAILMedium_model = new System.Windows.Forms.TextBox();
+            this.txtAITBlendINJLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAINLLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAILMedium_model = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAINLMedium_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILLarge_model = new System.Windows.Forms.TextBox();
+            this.txtBlendFactorMedium_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILMedium_model = new System.Windows.Forms.TextBox();
+            this.txtBlendFactorLarge_model = new System.Windows.Forms.TextBox();
+            this.label305 = new System.Windows.Forms.Label();
+            this.label331 = new System.Windows.Forms.Label();
+            this.label306 = new System.Windows.Forms.Label();
+            this.txtInstINJAILLarge_model = new System.Windows.Forms.TextBox();
+            this.label307 = new System.Windows.Forms.Label();
+            this.txtEneffRupture_model = new System.Windows.Forms.TextBox();
+            this.label308 = new System.Windows.Forms.Label();
+            this.txtBlendCMDAINLMedium_model = new System.Windows.Forms.TextBox();
+            this.label309 = new System.Windows.Forms.Label();
+            this.label328 = new System.Windows.Forms.Label();
+            this.label310 = new System.Windows.Forms.Label();
+            this.txtContCMDAINLRupture_model = new System.Windows.Forms.TextBox();
+            this.label311 = new System.Windows.Forms.Label();
+            this.txtContCMDAINLMedium_model = new System.Windows.Forms.TextBox();
+            this.label312 = new System.Windows.Forms.Label();
+            this.label324 = new System.Windows.Forms.Label();
+            this.label313 = new System.Windows.Forms.Label();
+            this.txtEneffMedium_model = new System.Windows.Forms.TextBox();
+            this.label314 = new System.Windows.Forms.Label();
+            this.label321 = new System.Windows.Forms.Label();
+            this.label315 = new System.Windows.Forms.Label();
+            this.txtBlendFactorRupture_model = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILRupture_model = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILSmall_model = new System.Windows.Forms.TextBox();
+            this.txtEneffSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLRupture_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAILRupture_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAINLRupture_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLSmall_model = new System.Windows.Forms.TextBox();
+            this.txtContCMDAINLSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILRupture_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLRupture_model = new System.Windows.Forms.TextBox();
+            this.txtInstINJAILSmall_model = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILSmall_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAILSmall_model = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAINLSmall_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLRupture_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAILRupture_model = new System.Windows.Forms.TextBox();
+            this.txtBlendFactorSmall_model = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLSmall_model = new System.Windows.Forms.TextBox();
+            this.tabtoxic = new DevExpress.XtraTab.XtraTabPage();
+            this.txtFlammablePICA_toxic = new System.Windows.Forms.TextBox();
+            this.txtFlammableCDCA_toxic = new System.Windows.Forms.TextBox();
+            this.label332 = new System.Windows.Forms.Label();
+            this.label333 = new System.Windows.Forms.Label();
+            this.txtAContAILCMD_toxic = new System.Windows.Forms.TextBox();
+            this.label334 = new System.Windows.Forms.Label();
+            this.label335 = new System.Windows.Forms.Label();
+            this.label336 = new System.Windows.Forms.Label();
+            this.label337 = new System.Windows.Forms.Label();
+            this.label338 = new System.Windows.Forms.Label();
+            this.label339 = new System.Windows.Forms.Label();
+            this.label340 = new System.Windows.Forms.Label();
+            this.label341 = new System.Windows.Forms.Label();
+            this.label342 = new System.Windows.Forms.Label();
+            this.label343 = new System.Windows.Forms.Label();
+            this.label344 = new System.Windows.Forms.Label();
+            this.label345 = new System.Windows.Forms.Label();
+            this.label346 = new System.Windows.Forms.Label();
+            this.label347 = new System.Windows.Forms.Label();
+            this.label348 = new System.Windows.Forms.Label();
+            this.label349 = new System.Windows.Forms.Label();
+            this.label350 = new System.Windows.Forms.Label();
+            this.label351 = new System.Windows.Forms.Label();
+            this.txtAContAINLCMD_toxic = new System.Windows.Forms.TextBox();
+            this.label352 = new System.Windows.Forms.Label();
+            this.txtAInstAINLCMD_toxic = new System.Windows.Forms.TextBox();
+            this.label353 = new System.Windows.Forms.Label();
+            this.txtAInstAILCMD_toxic = new System.Windows.Forms.TextBox();
+            this.label354 = new System.Windows.Forms.Label();
+            this.txtAContAINLINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label355 = new System.Windows.Forms.Label();
+            this.txtAContAILINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label356 = new System.Windows.Forms.Label();
+            this.txtAInstAINLINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label357 = new System.Windows.Forms.Label();
+            this.txtAInstAILINJ_toxic = new System.Windows.Forms.TextBox();
+            this.txtBContAINLCMD_toxic = new System.Windows.Forms.TextBox();
+            this.txtBContAILCMD_toxic = new System.Windows.Forms.TextBox();
+            this.txtBInstAINLCMD_toxic = new System.Windows.Forms.TextBox();
+            this.txtBInstAILCMD_toxic = new System.Windows.Forms.TextBox();
+            this.label358 = new System.Windows.Forms.Label();
+            this.txtBContAINLINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label359 = new System.Windows.Forms.Label();
+            this.txtBContAILINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label360 = new System.Windows.Forms.Label();
+            this.txtBInstAINLINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label361 = new System.Windows.Forms.Label();
+            this.txtBInstAILINJ_toxic = new System.Windows.Forms.TextBox();
+            this.label362 = new System.Windows.Forms.Label();
+            this.label363 = new System.Windows.Forms.Label();
+            this.txtAITBlendINJRupture_toxic = new System.Windows.Forms.TextBox();
+            this.label364 = new System.Windows.Forms.Label();
+            this.txtBlendINJAINLSmall_toxic = new System.Windows.Forms.TextBox();
+            this.label365 = new System.Windows.Forms.Label();
+            this.txtBlendINJAILSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendINJSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAINLRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAILRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAILMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtEneffLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendINJMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAILLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAILLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendCMDMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtContCMDAINLLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAINLLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAILMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtAITBlendINJLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAINLLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAILMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendINJAINLMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILLarge_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendFactorMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAILMedium_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendFactorLarge_toxic = new System.Windows.Forms.TextBox();
+            this.label407 = new System.Windows.Forms.Label();
+            this.label408 = new System.Windows.Forms.Label();
+            this.label461 = new System.Windows.Forms.Label();
+            this.txtInstINJAILLarge_toxic = new System.Windows.Forms.TextBox();
+            this.label462 = new System.Windows.Forms.Label();
+            this.txtEneffRupture_toxic = new System.Windows.Forms.TextBox();
+            this.label478 = new System.Windows.Forms.Label();
+            this.txtBlendCMDAINLMedium_toxic = new System.Windows.Forms.TextBox();
+            this.label480 = new System.Windows.Forms.Label();
+            this.label481 = new System.Windows.Forms.Label();
+            this.label482 = new System.Windows.Forms.Label();
+            this.txtContCMDAINLRupture_toxic = new System.Windows.Forms.TextBox();
+            this.label483 = new System.Windows.Forms.Label();
+            this.txtContCMDAINLMedium_toxic = new System.Windows.Forms.TextBox();
+            this.label484 = new System.Windows.Forms.Label();
+            this.label485 = new System.Windows.Forms.Label();
+            this.label486 = new System.Windows.Forms.Label();
+            this.txtEneffMedium_toxic = new System.Windows.Forms.TextBox();
+            this.label487 = new System.Windows.Forms.Label();
+            this.label488 = new System.Windows.Forms.Label();
+            this.label489 = new System.Windows.Forms.Label();
+            this.txtBlendFactorRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtContCMDAILSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtEneffSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAILRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAINLRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAINLSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtContCMDAINLSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAINLRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstINJAILSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtInstCMDAILSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAILSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendCMDAINLSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAILRupture_toxic = new System.Windows.Forms.TextBox();
+            this.txtBlendFactorSmall_toxic = new System.Windows.Forms.TextBox();
+            this.txtContINJAINLSmall_toxic = new System.Windows.Forms.TextBox();
+            this.lblFCA = new System.Windows.Forms.Label();
             this.panelRHP = new System.Windows.Forms.Panel();
             this.label418 = new System.Windows.Forms.Label();
             this.label417 = new System.Windows.Forms.Label();
@@ -195,138 +599,6 @@
             this.label158 = new System.Windows.Forms.Label();
             this.label157 = new System.Windows.Forms.Label();
             this.lblRHP = new System.Windows.Forms.Label();
-            this.panelNonTF = new System.Windows.Forms.Panel();
-            this.label406 = new System.Windows.Forms.Label();
-            this.label405 = new System.Windows.Forms.Label();
-            this.label404 = new System.Windows.Forms.Label();
-            this.label403 = new System.Windows.Forms.Label();
-            this.label394 = new System.Windows.Forms.Label();
-            this.label395 = new System.Windows.Forms.Label();
-            this.label396 = new System.Windows.Forms.Label();
-            this.label397 = new System.Windows.Forms.Label();
-            this.txtBlend_CA4 = new System.Windows.Forms.TextBox();
-            this.label398 = new System.Windows.Forms.Label();
-            this.txtINST_CA1 = new System.Windows.Forms.TextBox();
-            this.txtCONT_CA1 = new System.Windows.Forms.TextBox();
-            this.txtBlend_CA1 = new System.Windows.Forms.TextBox();
-            this.label399 = new System.Windows.Forms.Label();
-            this.txtCONT_CA2 = new System.Windows.Forms.TextBox();
-            this.label400 = new System.Windows.Forms.Label();
-            this.txtINST_CA2 = new System.Windows.Forms.TextBox();
-            this.txtINST_CA4 = new System.Windows.Forms.TextBox();
-            this.label401 = new System.Windows.Forms.Label();
-            this.txtCONT_CA4 = new System.Windows.Forms.TextBox();
-            this.label402 = new System.Windows.Forms.Label();
-            this.txtBlend_CA3 = new System.Windows.Forms.TextBox();
-            this.txtINST_CA3 = new System.Windows.Forms.TextBox();
-            this.txtCONT_CA3 = new System.Windows.Forms.TextBox();
-            this.txtBlend_CA2 = new System.Windows.Forms.TextBox();
-            this.txtNonFlammableNonToxicCon = new System.Windows.Forms.TextBox();
-            this.label422 = new System.Windows.Forms.Label();
-            this.panelTCA = new System.Windows.Forms.Panel();
-            this.tabControlToxic = new DevExpress.XtraTab.XtraTabControl();
-            this.tabToxic1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label441 = new System.Windows.Forms.Label();
-            this.label440 = new System.Windows.Forms.Label();
-            this.label439 = new System.Windows.Forms.Label();
-            this.label438 = new System.Windows.Forms.Label();
-            this.label437 = new System.Windows.Forms.Label();
-            this.txtFlammalbePICA_toxic1 = new System.Windows.Forms.TextBox();
-            this.label366 = new System.Windows.Forms.Label();
-            this.label367 = new System.Windows.Forms.Label();
-            this.label368 = new System.Windows.Forms.Label();
-            this.label369 = new System.Windows.Forms.Label();
-            this.label370 = new System.Windows.Forms.Label();
-            this.label371 = new System.Windows.Forms.Label();
-            this.label372 = new System.Windows.Forms.Label();
-            this.label373 = new System.Windows.Forms.Label();
-            this.label374 = new System.Windows.Forms.Label();
-            this.txtContDRupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.label375 = new System.Windows.Forms.Label();
-            this.txtContERupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtToxicCASmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContFRupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassSmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassRateRupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassRateSmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassRupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContFSmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtToxicCARupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContCSmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContESmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtLDToxicSmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContDSmall_toxic1 = new System.Windows.Forms.TextBox();
-            this.label376 = new System.Windows.Forms.Label();
-            this.txtLDToxicMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.label377 = new System.Windows.Forms.Label();
-            this.txtContCMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContCRupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.label378 = new System.Windows.Forms.Label();
-            this.txtLDToxicRupture_toxic1 = new System.Windows.Forms.TextBox();
-            this.label379 = new System.Windows.Forms.Label();
-            this.txtToxicCALarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContDLarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContCLarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtToxicCAMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassLarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContELarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtLDToxicLarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContDMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassRateMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtMassRateLarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContFLarge_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContEMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.txtContFMedium_toxic1 = new System.Windows.Forms.TextBox();
-            this.tabToxic2 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtFlammalbePICA_toxic2 = new System.Windows.Forms.TextBox();
-            this.label380 = new System.Windows.Forms.Label();
-            this.label381 = new System.Windows.Forms.Label();
-            this.label382 = new System.Windows.Forms.Label();
-            this.label383 = new System.Windows.Forms.Label();
-            this.label384 = new System.Windows.Forms.Label();
-            this.label385 = new System.Windows.Forms.Label();
-            this.label386 = new System.Windows.Forms.Label();
-            this.label387 = new System.Windows.Forms.Label();
-            this.label388 = new System.Windows.Forms.Label();
-            this.txtContDRupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.label389 = new System.Windows.Forms.Label();
-            this.txtContERupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtToxicCASmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContFRupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassSmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassRateRupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassRateSmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassRupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContFSmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtToxicCARupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContCSmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContESmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtLDToxicSmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContDSmall_toxic2 = new System.Windows.Forms.TextBox();
-            this.label390 = new System.Windows.Forms.Label();
-            this.txtLDToxicMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.label391 = new System.Windows.Forms.Label();
-            this.txtContCMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContCRupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.label392 = new System.Windows.Forms.Label();
-            this.txtLDToxicRupture_toxic2 = new System.Windows.Forms.TextBox();
-            this.label393 = new System.Windows.Forms.Label();
-            this.txtToxicCALarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContDLarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContCLarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtToxicCAMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassLarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContELarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtLDToxicLarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContDMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassRateMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtMassRateLarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContFLarge_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContEMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.txtContFMedium_toxic2 = new System.Windows.Forms.TextBox();
-            this.lblTCA = new System.Windows.Forms.Label();
             this.panelCAP = new System.Windows.Forms.Panel();
             this.label156 = new System.Windows.Forms.Label();
             this.label155 = new System.Windows.Forms.Label();
@@ -361,260 +633,6 @@
             this.label173 = new System.Windows.Forms.Label();
             this.label174 = new System.Windows.Forms.Label();
             this.lblCAP = new System.Windows.Forms.Label();
-            this.panelFCA = new System.Windows.Forms.Panel();
-            this.tabFlammable = new DevExpress.XtraTab.XtraTabControl();
-            this.tabmodel = new DevExpress.XtraTab.XtraTabPage();
-            this.label408 = new System.Windows.Forms.Label();
-            this.label407 = new System.Windows.Forms.Label();
-            this.label434 = new System.Windows.Forms.Label();
-            this.label433 = new System.Windows.Forms.Label();
-            this.label432 = new System.Windows.Forms.Label();
-            this.label431 = new System.Windows.Forms.Label();
-            this.label430 = new System.Windows.Forms.Label();
-            this.label429 = new System.Windows.Forms.Label();
-            this.label428 = new System.Windows.Forms.Label();
-            this.label427 = new System.Windows.Forms.Label();
-            this.label426 = new System.Windows.Forms.Label();
-            this.label425 = new System.Windows.Forms.Label();
-            this.label424 = new System.Windows.Forms.Label();
-            this.label423 = new System.Windows.Forms.Label();
-            this.label421 = new System.Windows.Forms.Label();
-            this.label420 = new System.Windows.Forms.Label();
-            this.label419 = new System.Windows.Forms.Label();
-            this.txtFlammablePICA_model = new System.Windows.Forms.TextBox();
-            this.txtFlammableCDCA_model = new System.Windows.Forms.TextBox();
-            this.label260 = new System.Windows.Forms.Label();
-            this.label299 = new System.Windows.Forms.Label();
-            this.label300 = new System.Windows.Forms.Label();
-            this.label301 = new System.Windows.Forms.Label();
-            this.label302 = new System.Windows.Forms.Label();
-            this.label303 = new System.Windows.Forms.Label();
-            this.label304 = new System.Windows.Forms.Label();
-            this.txtAITBlendINJRupture_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILSmall_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILRupture_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendINJSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLRupture_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILRupture_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDRupture_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendINJMedium_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILLarge_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDLarge_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDMedium_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLLarge_model = new System.Windows.Forms.TextBox();
-            this.txtAITBlendINJLarge_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILMedium_model = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLMedium_model = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILLarge_model = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILMedium_model = new System.Windows.Forms.TextBox();
-            this.label305 = new System.Windows.Forms.Label();
-            this.label306 = new System.Windows.Forms.Label();
-            this.label307 = new System.Windows.Forms.Label();
-            this.label308 = new System.Windows.Forms.Label();
-            this.label309 = new System.Windows.Forms.Label();
-            this.label310 = new System.Windows.Forms.Label();
-            this.label311 = new System.Windows.Forms.Label();
-            this.label312 = new System.Windows.Forms.Label();
-            this.label313 = new System.Windows.Forms.Label();
-            this.label314 = new System.Windows.Forms.Label();
-            this.label315 = new System.Windows.Forms.Label();
-            this.txtContCMDAILRupture_model = new System.Windows.Forms.TextBox();
-            this.label316 = new System.Windows.Forms.Label();
-            this.label317 = new System.Windows.Forms.Label();
-            this.txtInstCMDAINLRupture_model = new System.Windows.Forms.TextBox();
-            this.label318 = new System.Windows.Forms.Label();
-            this.txtBlendCMDAINLRupture_model = new System.Windows.Forms.TextBox();
-            this.txtBInstAILINJ_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBInstAINLINJ_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILRupture_model = new System.Windows.Forms.TextBox();
-            this.txtBContAILINJ_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBContAINLINJ_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAILSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBInstAILCMD_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLRupture_model = new System.Windows.Forms.TextBox();
-            this.txtBInstAINLCMD_model = new System.Windows.Forms.TextBox();
-            this.txtBlendFactorSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBContAILCMD_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLSmall_model = new System.Windows.Forms.TextBox();
-            this.txtBContAINLCMD_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAILRupture_model = new System.Windows.Forms.TextBox();
-            this.txtAInstAILINJ_model = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAINLSmall_model = new System.Windows.Forms.TextBox();
-            this.txtAInstAINLINJ_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILSmall_model = new System.Windows.Forms.TextBox();
-            this.txtAContAILINJ_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLRupture_model = new System.Windows.Forms.TextBox();
-            this.txtAContAINLINJ_model = new System.Windows.Forms.TextBox();
-            this.txtContCMDAINLSmall_model = new System.Windows.Forms.TextBox();
-            this.txtAInstAILCMD_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAINLSmall_model = new System.Windows.Forms.TextBox();
-            this.txtAInstAINLCMD_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILRupture_model = new System.Windows.Forms.TextBox();
-            this.txtAContAILCMD_model = new System.Windows.Forms.TextBox();
-            this.txtEneffSmall_model = new System.Windows.Forms.TextBox();
-            this.txtAContAINLCMD_model = new System.Windows.Forms.TextBox();
-            this.txtContCMDAILSmall_model = new System.Windows.Forms.TextBox();
-            this.label319 = new System.Windows.Forms.Label();
-            this.txtBlendFactorRupture_model = new System.Windows.Forms.TextBox();
-            this.label320 = new System.Windows.Forms.Label();
-            this.label321 = new System.Windows.Forms.Label();
-            this.label322 = new System.Windows.Forms.Label();
-            this.txtEneffMedium_model = new System.Windows.Forms.TextBox();
-            this.label323 = new System.Windows.Forms.Label();
-            this.label324 = new System.Windows.Forms.Label();
-            this.label325 = new System.Windows.Forms.Label();
-            this.txtContCMDAINLMedium_model = new System.Windows.Forms.TextBox();
-            this.label326 = new System.Windows.Forms.Label();
-            this.txtContCMDAINLRupture_model = new System.Windows.Forms.TextBox();
-            this.label327 = new System.Windows.Forms.Label();
-            this.label328 = new System.Windows.Forms.Label();
-            this.label329 = new System.Windows.Forms.Label();
-            this.txtBlendCMDAINLMedium_model = new System.Windows.Forms.TextBox();
-            this.label330 = new System.Windows.Forms.Label();
-            this.txtEneffRupture_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILLarge_model = new System.Windows.Forms.TextBox();
-            this.label331 = new System.Windows.Forms.Label();
-            this.txtBlendFactorLarge_model = new System.Windows.Forms.TextBox();
-            this.txtBlendFactorMedium_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLLarge_model = new System.Windows.Forms.TextBox();
-            this.txtContCMDAILLarge_model = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAINLLarge_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILMedium_model = new System.Windows.Forms.TextBox();
-            this.txtContCMDAINLLarge_model = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLMedium_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAILLarge_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAINLLarge_model = new System.Windows.Forms.TextBox();
-            this.txtEneffLarge_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAILMedium_model = new System.Windows.Forms.TextBox();
-            this.txtContCMDAILMedium_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLMedium_model = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLLarge_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILLarge_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAINLMedium_model = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILMedium_model = new System.Windows.Forms.TextBox();
-            this.tabtoxic = new DevExpress.XtraTab.XtraTabPage();
-            this.txtFlammablePICA_toxic = new System.Windows.Forms.TextBox();
-            this.txtFlammableCDCA_toxic = new System.Windows.Forms.TextBox();
-            this.label332 = new System.Windows.Forms.Label();
-            this.label333 = new System.Windows.Forms.Label();
-            this.label334 = new System.Windows.Forms.Label();
-            this.label335 = new System.Windows.Forms.Label();
-            this.label336 = new System.Windows.Forms.Label();
-            this.label337 = new System.Windows.Forms.Label();
-            this.label338 = new System.Windows.Forms.Label();
-            this.txtAITBlendINJRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendINJSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendINJMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendCMDMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtAITBlendINJLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAILMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendINJAINLMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAILMedium_toxic = new System.Windows.Forms.TextBox();
-            this.label339 = new System.Windows.Forms.Label();
-            this.label340 = new System.Windows.Forms.Label();
-            this.label341 = new System.Windows.Forms.Label();
-            this.label342 = new System.Windows.Forms.Label();
-            this.label343 = new System.Windows.Forms.Label();
-            this.label344 = new System.Windows.Forms.Label();
-            this.label345 = new System.Windows.Forms.Label();
-            this.label346 = new System.Windows.Forms.Label();
-            this.label347 = new System.Windows.Forms.Label();
-            this.label348 = new System.Windows.Forms.Label();
-            this.label349 = new System.Windows.Forms.Label();
-            this.txtContCMDAILRupture_toxic = new System.Windows.Forms.TextBox();
-            this.label350 = new System.Windows.Forms.Label();
-            this.label351 = new System.Windows.Forms.Label();
-            this.txtInstCMDAINLRupture_toxic = new System.Windows.Forms.TextBox();
-            this.label352 = new System.Windows.Forms.Label();
-            this.txtBlendCMDAINLRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtBInstAILINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBInstAINLINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtBContAILINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBContAINLINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAILSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBInstAILCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtBInstAINLCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendFactorSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBContAILCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtBContAINLCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAILRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtAInstAILINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAINLSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtAInstAINLINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtAContAILINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtAContAINLINJ_toxic = new System.Windows.Forms.TextBox();
-            this.txtContCMDAINLSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtAInstAILCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAINLSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtAInstAINLCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtAContAILCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtEneffSmall_toxic = new System.Windows.Forms.TextBox();
-            this.txtAContAINLCMD_toxic = new System.Windows.Forms.TextBox();
-            this.txtContCMDAILSmall_toxic = new System.Windows.Forms.TextBox();
-            this.label353 = new System.Windows.Forms.Label();
-            this.txtBlendFactorRupture_toxic = new System.Windows.Forms.TextBox();
-            this.label354 = new System.Windows.Forms.Label();
-            this.label355 = new System.Windows.Forms.Label();
-            this.label356 = new System.Windows.Forms.Label();
-            this.txtEneffMedium_toxic = new System.Windows.Forms.TextBox();
-            this.label357 = new System.Windows.Forms.Label();
-            this.label358 = new System.Windows.Forms.Label();
-            this.label359 = new System.Windows.Forms.Label();
-            this.txtContCMDAINLMedium_toxic = new System.Windows.Forms.TextBox();
-            this.label360 = new System.Windows.Forms.Label();
-            this.txtContCMDAINLRupture_toxic = new System.Windows.Forms.TextBox();
-            this.label361 = new System.Windows.Forms.Label();
-            this.label362 = new System.Windows.Forms.Label();
-            this.label363 = new System.Windows.Forms.Label();
-            this.txtBlendCMDAINLMedium_toxic = new System.Windows.Forms.TextBox();
-            this.label364 = new System.Windows.Forms.Label();
-            this.txtEneffRupture_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILLarge_toxic = new System.Windows.Forms.TextBox();
-            this.label365 = new System.Windows.Forms.Label();
-            this.txtBlendFactorLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendFactorMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtContCMDAILLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtBlendCMDAINLLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAILMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtContCMDAINLLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstINJAINLMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAILLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAINLLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtEneffLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAILMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtContCMDAILMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtContINJAINLLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILLarge_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAINLMedium_toxic = new System.Windows.Forms.TextBox();
-            this.txtInstCMDAILMedium_toxic = new System.Windows.Forms.TextBox();
-            this.lblFCA = new System.Windows.Forms.Label();
             this.panelInflu = new System.Windows.Forms.Panel();
             this.label435 = new System.Windows.Forms.Label();
             this.label436 = new System.Windows.Forms.Label();
@@ -1230,19 +1248,19 @@
             this.panelLF1.SuspendLayout();
             this.TabArea.SuspendLayout();
             this.groupBoxIV.SuspendLayout();
-            this.panelRHP.SuspendLayout();
             this.panelNonTF.SuspendLayout();
             this.panelTCA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlToxic)).BeginInit();
             this.tabControlToxic.SuspendLayout();
             this.tabToxic1.SuspendLayout();
             this.tabToxic2.SuspendLayout();
-            this.panelCAP.SuspendLayout();
             this.panelFCA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabFlammable)).BeginInit();
-            this.tabFlammable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlFlammable)).BeginInit();
+            this.tabControlFlammable.SuspendLayout();
             this.tabmodel.SuspendLayout();
             this.tabtoxic.SuspendLayout();
+            this.panelRHP.SuspendLayout();
+            this.panelCAP.SuspendLayout();
             this.panelInflu.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panelFQF.SuspendLayout();
@@ -1429,7 +1447,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(969, 2718);
+            this.groupBox1.Size = new System.Drawing.Size(969, 2720);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Risk Factor";
@@ -1440,7 +1458,7 @@
             this.tabRisk.Location = new System.Drawing.Point(3, 17);
             this.tabRisk.Name = "tabRisk";
             this.tabRisk.SelectedTabPage = this.tabPoF;
-            this.tabRisk.Size = new System.Drawing.Size(963, 2698);
+            this.tabRisk.Size = new System.Drawing.Size(963, 2700);
             this.tabRisk.TabIndex = 2;
             this.tabRisk.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraSemiPoF,
@@ -1458,7 +1476,7 @@
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 2673);
+            this.tabPoF.Size = new System.Drawing.Size(961, 2675);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -2199,7 +2217,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 2673);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 2675);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -2460,24 +2478,3850 @@
             this.TabArea.Controls.Add(this.groupBoxIV);
             this.TabArea.Controls.Add(this.groupBox3);
             this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(961, 2673);
+            this.TabArea.Size = new System.Drawing.Size(961, 2675);
             this.TabArea.Text = "Area-based CoF";
             // 
             // groupBoxIV
             // 
-            this.groupBoxIV.Controls.Add(this.panelRHP);
             this.groupBoxIV.Controls.Add(this.panelNonTF);
             this.groupBoxIV.Controls.Add(this.panelTCA);
-            this.groupBoxIV.Controls.Add(this.panelCAP);
             this.groupBoxIV.Controls.Add(this.panelFCA);
+            this.groupBoxIV.Controls.Add(this.panelRHP);
+            this.groupBoxIV.Controls.Add(this.panelCAP);
             this.groupBoxIV.Controls.Add(this.panelInflu);
             this.groupBoxIV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBoxIV.Location = new System.Drawing.Point(3, 286);
             this.groupBoxIV.Name = "groupBoxIV";
-            this.groupBoxIV.Size = new System.Drawing.Size(956, 2377);
+            this.groupBoxIV.Size = new System.Drawing.Size(956, 2385);
             this.groupBoxIV.TabIndex = 2;
             this.groupBoxIV.TabStop = false;
             this.groupBoxIV.Text = "Intermediate Values";
+            // 
+            // panelNonTF
+            // 
+            this.panelNonTF.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelNonTF.Controls.Add(this.label406);
+            this.panelNonTF.Controls.Add(this.lblNonTF);
+            this.panelNonTF.Controls.Add(this.label405);
+            this.panelNonTF.Controls.Add(this.label400);
+            this.panelNonTF.Controls.Add(this.label404);
+            this.panelNonTF.Controls.Add(this.txtNonFlammableNonToxicCon);
+            this.panelNonTF.Controls.Add(this.label403);
+            this.panelNonTF.Controls.Add(this.txtBlend_CA2);
+            this.panelNonTF.Controls.Add(this.label394);
+            this.panelNonTF.Controls.Add(this.txtCONT_CA3);
+            this.panelNonTF.Controls.Add(this.label395);
+            this.panelNonTF.Controls.Add(this.txtINST_CA3);
+            this.panelNonTF.Controls.Add(this.label396);
+            this.panelNonTF.Controls.Add(this.txtBlend_CA3);
+            this.panelNonTF.Controls.Add(this.label397);
+            this.panelNonTF.Controls.Add(this.label402);
+            this.panelNonTF.Controls.Add(this.txtBlend_CA4);
+            this.panelNonTF.Controls.Add(this.txtCONT_CA4);
+            this.panelNonTF.Controls.Add(this.label398);
+            this.panelNonTF.Controls.Add(this.label401);
+            this.panelNonTF.Controls.Add(this.txtINST_CA1);
+            this.panelNonTF.Controls.Add(this.txtINST_CA4);
+            this.panelNonTF.Controls.Add(this.txtCONT_CA1);
+            this.panelNonTF.Controls.Add(this.txtINST_CA2);
+            this.panelNonTF.Controls.Add(this.txtBlend_CA1);
+            this.panelNonTF.Controls.Add(this.txtCONT_CA2);
+            this.panelNonTF.Controls.Add(this.label399);
+            this.panelNonTF.Location = new System.Drawing.Point(6, 2161);
+            this.panelNonTF.Name = "panelNonTF";
+            this.panelNonTF.Size = new System.Drawing.Size(945, 192);
+            this.panelNonTF.TabIndex = 5;
+            // 
+            // label406
+            // 
+            this.label406.AutoSize = true;
+            this.label406.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label406.Location = new System.Drawing.Point(884, 74);
+            this.label406.Name = "label406";
+            this.label406.Size = new System.Drawing.Size(21, 13);
+            this.label406.TabIndex = 11;
+            this.label406.Text = "m2";
+            // 
+            // lblNonTF
+            // 
+            this.lblNonTF.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblNonTF.ForeColor = System.Drawing.Color.White;
+            this.lblNonTF.Location = new System.Drawing.Point(-2, 0);
+            this.lblNonTF.Name = "lblNonTF";
+            this.lblNonTF.Size = new System.Drawing.Size(945, 21);
+            this.lblNonTF.TabIndex = 1;
+            this.lblNonTF.Text = "▼ Non-Flammable Non-Toxic Consequence Area";
+            this.lblNonTF.Click += new System.EventHandler(this.lblNonTF_Click);
+            // 
+            // label405
+            // 
+            this.label405.AutoSize = true;
+            this.label405.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label405.Location = new System.Drawing.Point(884, 96);
+            this.label405.Name = "label405";
+            this.label405.Size = new System.Drawing.Size(21, 13);
+            this.label405.TabIndex = 17;
+            this.label405.Text = "m2";
+            // 
+            // label400
+            // 
+            this.label400.AutoSize = true;
+            this.label400.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label400.Location = new System.Drawing.Point(275, 40);
+            this.label400.Name = "label400";
+            this.label400.Size = new System.Drawing.Size(44, 15);
+            this.label400.TabIndex = 2;
+            this.label400.Text = "Small";
+            // 
+            // label404
+            // 
+            this.label404.AutoSize = true;
+            this.label404.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label404.Location = new System.Drawing.Point(884, 121);
+            this.label404.Name = "label404";
+            this.label404.Size = new System.Drawing.Size(21, 13);
+            this.label404.TabIndex = 23;
+            this.label404.Text = "m2";
+            // 
+            // txtNonFlammableNonToxicCon
+            // 
+            this.txtNonFlammableNonToxicCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtNonFlammableNonToxicCon.Location = new System.Drawing.Point(368, 144);
+            this.txtNonFlammableNonToxicCon.Name = "txtNonFlammableNonToxicCon";
+            this.txtNonFlammableNonToxicCon.Size = new System.Drawing.Size(229, 20);
+            this.txtNonFlammableNonToxicCon.TabIndex = 25;
+            // 
+            // label403
+            // 
+            this.label403.AutoSize = true;
+            this.label403.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label403.Location = new System.Drawing.Point(612, 147);
+            this.label403.Name = "label403";
+            this.label403.Size = new System.Drawing.Size(21, 13);
+            this.label403.TabIndex = 26;
+            this.label403.Text = "m2";
+            // 
+            // txtBlend_CA2
+            // 
+            this.txtBlend_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlend_CA2.Location = new System.Drawing.Point(408, 118);
+            this.txtBlend_CA2.Name = "txtBlend_CA2";
+            this.txtBlend_CA2.Size = new System.Drawing.Size(133, 20);
+            this.txtBlend_CA2.TabIndex = 20;
+            // 
+            // label394
+            // 
+            this.label394.AutoSize = true;
+            this.label394.Location = new System.Drawing.Point(8, 144);
+            this.label394.Name = "label394";
+            this.label394.Size = new System.Drawing.Size(263, 15);
+            this.label394.TabIndex = 24;
+            this.label394.Text = "Non-Flammable Non-Toxic Consequence Area";
+            // 
+            // txtCONT_CA3
+            // 
+            this.txtCONT_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CA3.Location = new System.Drawing.Point(576, 67);
+            this.txtCONT_CA3.Name = "txtCONT_CA3";
+            this.txtCONT_CA3.Size = new System.Drawing.Size(133, 20);
+            this.txtCONT_CA3.TabIndex = 9;
+            // 
+            // label395
+            // 
+            this.label395.AutoSize = true;
+            this.label395.Location = new System.Drawing.Point(8, 119);
+            this.label395.Name = "label395";
+            this.label395.Size = new System.Drawing.Size(57, 15);
+            this.label395.TabIndex = 18;
+            this.label395.Text = "Blend CA";
+            // 
+            // txtINST_CA3
+            // 
+            this.txtINST_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtINST_CA3.Location = new System.Drawing.Point(576, 93);
+            this.txtINST_CA3.Name = "txtINST_CA3";
+            this.txtINST_CA3.Size = new System.Drawing.Size(133, 20);
+            this.txtINST_CA3.TabIndex = 15;
+            // 
+            // label396
+            // 
+            this.label396.AutoSize = true;
+            this.label396.Location = new System.Drawing.Point(8, 94);
+            this.label396.Name = "label396";
+            this.label396.Size = new System.Drawing.Size(52, 15);
+            this.label396.TabIndex = 12;
+            this.label396.Text = "INST CA";
+            // 
+            // txtBlend_CA3
+            // 
+            this.txtBlend_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlend_CA3.Location = new System.Drawing.Point(576, 118);
+            this.txtBlend_CA3.Name = "txtBlend_CA3";
+            this.txtBlend_CA3.Size = new System.Drawing.Size(133, 20);
+            this.txtBlend_CA3.TabIndex = 21;
+            // 
+            // label397
+            // 
+            this.label397.AutoSize = true;
+            this.label397.Location = new System.Drawing.Point(8, 68);
+            this.label397.Name = "label397";
+            this.label397.Size = new System.Drawing.Size(58, 15);
+            this.label397.TabIndex = 6;
+            this.label397.Text = "CONT CA";
+            // 
+            // label402
+            // 
+            this.label402.AutoSize = true;
+            this.label402.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label402.Location = new System.Drawing.Point(623, 40);
+            this.label402.Name = "label402";
+            this.label402.Size = new System.Drawing.Size(44, 15);
+            this.label402.TabIndex = 4;
+            this.label402.Text = "Large";
+            // 
+            // txtBlend_CA4
+            // 
+            this.txtBlend_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlend_CA4.Location = new System.Drawing.Point(745, 118);
+            this.txtBlend_CA4.Name = "txtBlend_CA4";
+            this.txtBlend_CA4.Size = new System.Drawing.Size(133, 20);
+            this.txtBlend_CA4.TabIndex = 22;
+            // 
+            // txtCONT_CA4
+            // 
+            this.txtCONT_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CA4.Location = new System.Drawing.Point(745, 67);
+            this.txtCONT_CA4.Name = "txtCONT_CA4";
+            this.txtCONT_CA4.Size = new System.Drawing.Size(133, 20);
+            this.txtCONT_CA4.TabIndex = 10;
+            // 
+            // label398
+            // 
+            this.label398.AutoSize = true;
+            this.label398.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label398.Location = new System.Drawing.Point(8, 40);
+            this.label398.Name = "label398";
+            this.label398.Size = new System.Drawing.Size(122, 15);
+            this.label398.TabIndex = 1;
+            this.label398.Text = "Release hole size";
+            // 
+            // label401
+            // 
+            this.label401.AutoSize = true;
+            this.label401.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label401.Location = new System.Drawing.Point(444, 40);
+            this.label401.Name = "label401";
+            this.label401.Size = new System.Drawing.Size(59, 15);
+            this.label401.TabIndex = 3;
+            this.label401.Text = "Medium";
+            // 
+            // txtINST_CA1
+            // 
+            this.txtINST_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtINST_CA1.Location = new System.Drawing.Point(240, 93);
+            this.txtINST_CA1.Name = "txtINST_CA1";
+            this.txtINST_CA1.Size = new System.Drawing.Size(133, 20);
+            this.txtINST_CA1.TabIndex = 13;
+            // 
+            // txtINST_CA4
+            // 
+            this.txtINST_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtINST_CA4.Location = new System.Drawing.Point(745, 93);
+            this.txtINST_CA4.Name = "txtINST_CA4";
+            this.txtINST_CA4.Size = new System.Drawing.Size(133, 20);
+            this.txtINST_CA4.TabIndex = 16;
+            // 
+            // txtCONT_CA1
+            // 
+            this.txtCONT_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CA1.Location = new System.Drawing.Point(240, 67);
+            this.txtCONT_CA1.Name = "txtCONT_CA1";
+            this.txtCONT_CA1.Size = new System.Drawing.Size(133, 20);
+            this.txtCONT_CA1.TabIndex = 7;
+            // 
+            // txtINST_CA2
+            // 
+            this.txtINST_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtINST_CA2.Location = new System.Drawing.Point(408, 93);
+            this.txtINST_CA2.Name = "txtINST_CA2";
+            this.txtINST_CA2.Size = new System.Drawing.Size(133, 20);
+            this.txtINST_CA2.TabIndex = 14;
+            // 
+            // txtBlend_CA1
+            // 
+            this.txtBlend_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlend_CA1.Location = new System.Drawing.Point(240, 118);
+            this.txtBlend_CA1.Name = "txtBlend_CA1";
+            this.txtBlend_CA1.Size = new System.Drawing.Size(133, 20);
+            this.txtBlend_CA1.TabIndex = 19;
+            // 
+            // txtCONT_CA2
+            // 
+            this.txtCONT_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCONT_CA2.Location = new System.Drawing.Point(408, 67);
+            this.txtCONT_CA2.Name = "txtCONT_CA2";
+            this.txtCONT_CA2.Size = new System.Drawing.Size(133, 20);
+            this.txtCONT_CA2.TabIndex = 8;
+            // 
+            // label399
+            // 
+            this.label399.AutoSize = true;
+            this.label399.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label399.Location = new System.Drawing.Point(793, 40);
+            this.label399.Name = "label399";
+            this.label399.Size = new System.Drawing.Size(58, 15);
+            this.label399.TabIndex = 5;
+            this.label399.Text = "Rupture";
+            // 
+            // panelTCA
+            // 
+            this.panelTCA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelTCA.Controls.Add(this.tabControlToxic);
+            this.panelTCA.Controls.Add(this.lblTCA);
+            this.panelTCA.Location = new System.Drawing.Point(6, 1813);
+            this.panelTCA.Name = "panelTCA";
+            this.panelTCA.Size = new System.Drawing.Size(945, 342);
+            this.panelTCA.TabIndex = 4;
+            // 
+            // tabControlToxic
+            // 
+            this.tabControlToxic.Location = new System.Drawing.Point(1, 24);
+            this.tabControlToxic.Name = "tabControlToxic";
+            this.tabControlToxic.SelectedTabPage = this.tabToxic1;
+            this.tabControlToxic.Size = new System.Drawing.Size(936, 311);
+            this.tabControlToxic.TabIndex = 2;
+            this.tabControlToxic.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabToxic1,
+            this.tabToxic2});
+            // 
+            // tabToxic1
+            // 
+            this.tabToxic1.Controls.Add(this.label441);
+            this.tabToxic1.Controls.Add(this.label375);
+            this.tabToxic1.Controls.Add(this.label440);
+            this.tabToxic1.Controls.Add(this.txtContFMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.label439);
+            this.tabToxic1.Controls.Add(this.txtContEMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.label438);
+            this.tabToxic1.Controls.Add(this.txtContFLarge_toxic1);
+            this.tabToxic1.Controls.Add(this.label437);
+            this.tabToxic1.Controls.Add(this.txtMassRateLarge_toxic1);
+            this.tabToxic1.Controls.Add(this.txtFlammalbePICA_toxic1);
+            this.tabToxic1.Controls.Add(this.txtMassRateMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.label366);
+            this.tabToxic1.Controls.Add(this.txtContDMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.label367);
+            this.tabToxic1.Controls.Add(this.txtMassMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.label368);
+            this.tabToxic1.Controls.Add(this.txtLDToxicLarge_toxic1);
+            this.tabToxic1.Controls.Add(this.label369);
+            this.tabToxic1.Controls.Add(this.txtContELarge_toxic1);
+            this.tabToxic1.Controls.Add(this.label370);
+            this.tabToxic1.Controls.Add(this.txtMassLarge_toxic1);
+            this.tabToxic1.Controls.Add(this.label371);
+            this.tabToxic1.Controls.Add(this.txtToxicCAMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.label372);
+            this.tabToxic1.Controls.Add(this.txtContCLarge_toxic1);
+            this.tabToxic1.Controls.Add(this.label373);
+            this.tabToxic1.Controls.Add(this.txtContDLarge_toxic1);
+            this.tabToxic1.Controls.Add(this.label374);
+            this.tabToxic1.Controls.Add(this.txtToxicCALarge_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContDRupture_toxic1);
+            this.tabToxic1.Controls.Add(this.label379);
+            this.tabToxic1.Controls.Add(this.txtLDToxicRupture_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContERupture_toxic1);
+            this.tabToxic1.Controls.Add(this.label378);
+            this.tabToxic1.Controls.Add(this.txtToxicCASmall_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContCRupture_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContFRupture_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContCMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.txtMassSmall_toxic1);
+            this.tabToxic1.Controls.Add(this.label377);
+            this.tabToxic1.Controls.Add(this.txtMassRateRupture_toxic1);
+            this.tabToxic1.Controls.Add(this.txtLDToxicMedium_toxic1);
+            this.tabToxic1.Controls.Add(this.txtMassRateSmall_toxic1);
+            this.tabToxic1.Controls.Add(this.label376);
+            this.tabToxic1.Controls.Add(this.txtMassRupture_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContDSmall_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContFSmall_toxic1);
+            this.tabToxic1.Controls.Add(this.txtLDToxicSmall_toxic1);
+            this.tabToxic1.Controls.Add(this.txtToxicCARupture_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContESmall_toxic1);
+            this.tabToxic1.Controls.Add(this.txtContCSmall_toxic1);
+            this.tabToxic1.Name = "tabToxic1";
+            this.tabToxic1.Size = new System.Drawing.Size(934, 286);
+            this.tabToxic1.Text = "tabToxic1";
+            // 
+            // label441
+            // 
+            this.label441.AutoSize = true;
+            this.label441.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label441.Location = new System.Drawing.Point(635, 260);
+            this.label441.Name = "label441";
+            this.label441.Size = new System.Drawing.Size(18, 13);
+            this.label441.TabIndex = 298;
+            this.label441.Text = "m²";
+            // 
+            // label375
+            // 
+            this.label375.AutoSize = true;
+            this.label375.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label375.Location = new System.Drawing.Point(9, 18);
+            this.label375.Name = "label375";
+            this.label375.Size = new System.Drawing.Size(122, 15);
+            this.label375.TabIndex = 0;
+            this.label375.Text = "Release hole size";
+            // 
+            // label440
+            // 
+            this.label440.AutoSize = true;
+            this.label440.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label440.Location = new System.Drawing.Point(910, 223);
+            this.label440.Name = "label440";
+            this.label440.Size = new System.Drawing.Size(18, 13);
+            this.label440.TabIndex = 297;
+            this.label440.Text = "m²";
+            // 
+            // txtContFMedium_toxic1
+            // 
+            this.txtContFMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFMedium_toxic1.Location = new System.Drawing.Point(431, 145);
+            this.txtContFMedium_toxic1.Name = "txtContFMedium_toxic1";
+            this.txtContFMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContFMedium_toxic1.TabIndex = 27;
+            // 
+            // label439
+            // 
+            this.label439.AutoSize = true;
+            this.label439.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label439.Location = new System.Drawing.Point(910, 199);
+            this.label439.Name = "label439";
+            this.label439.Size = new System.Drawing.Size(19, 13);
+            this.label439.TabIndex = 296;
+            this.label439.Text = "kg";
+            // 
+            // txtContEMedium_toxic1
+            // 
+            this.txtContEMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContEMedium_toxic1.Location = new System.Drawing.Point(431, 120);
+            this.txtContEMedium_toxic1.Name = "txtContEMedium_toxic1";
+            this.txtContEMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContEMedium_toxic1.TabIndex = 22;
+            // 
+            // label438
+            // 
+            this.label438.AutoSize = true;
+            this.label438.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label438.Location = new System.Drawing.Point(910, 173);
+            this.label438.Name = "label438";
+            this.label438.Size = new System.Drawing.Size(29, 13);
+            this.label438.TabIndex = 295;
+            this.label438.Text = "kg/s";
+            // 
+            // txtContFLarge_toxic1
+            // 
+            this.txtContFLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFLarge_toxic1.Location = new System.Drawing.Point(599, 146);
+            this.txtContFLarge_toxic1.Name = "txtContFLarge_toxic1";
+            this.txtContFLarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContFLarge_toxic1.TabIndex = 28;
+            // 
+            // label437
+            // 
+            this.label437.AutoSize = true;
+            this.label437.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label437.Location = new System.Drawing.Point(904, 47);
+            this.label437.Name = "label437";
+            this.label437.Size = new System.Drawing.Size(47, 13);
+            this.label437.TabIndex = 294;
+            this.label437.Text = "seconds";
+            // 
+            // txtMassRateLarge_toxic1
+            // 
+            this.txtMassRateLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateLarge_toxic1.Location = new System.Drawing.Point(599, 171);
+            this.txtMassRateLarge_toxic1.Name = "txtMassRateLarge_toxic1";
+            this.txtMassRateLarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateLarge_toxic1.TabIndex = 33;
+            // 
+            // txtFlammalbePICA_toxic1
+            // 
+            this.txtFlammalbePICA_toxic1.Location = new System.Drawing.Point(348, 257);
+            this.txtFlammalbePICA_toxic1.Name = "txtFlammalbePICA_toxic1";
+            this.txtFlammalbePICA_toxic1.Size = new System.Drawing.Size(270, 21);
+            this.txtFlammalbePICA_toxic1.TabIndex = 46;
+            // 
+            // txtMassRateMedium_toxic1
+            // 
+            this.txtMassRateMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateMedium_toxic1.Location = new System.Drawing.Point(431, 170);
+            this.txtMassRateMedium_toxic1.Name = "txtMassRateMedium_toxic1";
+            this.txtMassRateMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateMedium_toxic1.TabIndex = 32;
+            // 
+            // label366
+            // 
+            this.label366.AutoSize = true;
+            this.label366.Location = new System.Drawing.Point(12, 265);
+            this.label366.Name = "label366";
+            this.label366.Size = new System.Drawing.Size(227, 13);
+            this.label366.TabIndex = 45;
+            this.label366.Text = "Flammable Personal Injury Consequence Area";
+            // 
+            // txtContDMedium_toxic1
+            // 
+            this.txtContDMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDMedium_toxic1.Location = new System.Drawing.Point(431, 95);
+            this.txtContDMedium_toxic1.Name = "txtContDMedium_toxic1";
+            this.txtContDMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContDMedium_toxic1.TabIndex = 17;
+            // 
+            // label367
+            // 
+            this.label367.AutoSize = true;
+            this.label367.Location = new System.Drawing.Point(9, 227);
+            this.label367.Name = "label367";
+            this.label367.Size = new System.Drawing.Size(49, 13);
+            this.label367.TabIndex = 40;
+            this.label367.Text = "Toxic CA";
+            // 
+            // txtMassMedium_toxic1
+            // 
+            this.txtMassMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassMedium_toxic1.Location = new System.Drawing.Point(431, 195);
+            this.txtMassMedium_toxic1.Name = "txtMassMedium_toxic1";
+            this.txtMassMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassMedium_toxic1.TabIndex = 37;
+            // 
+            // label368
+            // 
+            this.label368.AutoSize = true;
+            this.label368.Location = new System.Drawing.Point(9, 202);
+            this.label368.Name = "label368";
+            this.label368.Size = new System.Drawing.Size(100, 13);
+            this.label368.TabIndex = 35;
+            this.label368.Text = "Toxic Release mass";
+            // 
+            // txtLDToxicLarge_toxic1
+            // 
+            this.txtLDToxicLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicLarge_toxic1.Location = new System.Drawing.Point(599, 45);
+            this.txtLDToxicLarge_toxic1.Name = "txtLDToxicLarge_toxic1";
+            this.txtLDToxicLarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicLarge_toxic1.TabIndex = 8;
+            // 
+            // label369
+            // 
+            this.label369.AutoSize = true;
+            this.label369.Location = new System.Drawing.Point(9, 177);
+            this.label369.Name = "label369";
+            this.label369.Size = new System.Drawing.Size(123, 13);
+            this.label369.TabIndex = 30;
+            this.label369.Text = "Toxic Release mass rate";
+            // 
+            // txtContELarge_toxic1
+            // 
+            this.txtContELarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContELarge_toxic1.Location = new System.Drawing.Point(599, 121);
+            this.txtContELarge_toxic1.Name = "txtContELarge_toxic1";
+            this.txtContELarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContELarge_toxic1.TabIndex = 23;
+            // 
+            // label370
+            // 
+            this.label370.AutoSize = true;
+            this.label370.Location = new System.Drawing.Point(9, 152);
+            this.label370.Name = "label370";
+            this.label370.Size = new System.Drawing.Size(60, 13);
+            this.label370.TabIndex = 25;
+            this.label370.Text = "Constant F";
+            // 
+            // txtMassLarge_toxic1
+            // 
+            this.txtMassLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassLarge_toxic1.Location = new System.Drawing.Point(599, 196);
+            this.txtMassLarge_toxic1.Name = "txtMassLarge_toxic1";
+            this.txtMassLarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassLarge_toxic1.TabIndex = 38;
+            // 
+            // label371
+            // 
+            this.label371.AutoSize = true;
+            this.label371.Location = new System.Drawing.Point(9, 127);
+            this.label371.Name = "label371";
+            this.label371.Size = new System.Drawing.Size(60, 13);
+            this.label371.TabIndex = 20;
+            this.label371.Text = "Constant E";
+            // 
+            // txtToxicCAMedium_toxic1
+            // 
+            this.txtToxicCAMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCAMedium_toxic1.Location = new System.Drawing.Point(431, 220);
+            this.txtToxicCAMedium_toxic1.Name = "txtToxicCAMedium_toxic1";
+            this.txtToxicCAMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCAMedium_toxic1.TabIndex = 42;
+            // 
+            // label372
+            // 
+            this.label372.AutoSize = true;
+            this.label372.Location = new System.Drawing.Point(9, 102);
+            this.label372.Name = "label372";
+            this.label372.Size = new System.Drawing.Size(61, 13);
+            this.label372.TabIndex = 15;
+            this.label372.Text = "Constant D";
+            // 
+            // txtContCLarge_toxic1
+            // 
+            this.txtContCLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCLarge_toxic1.Location = new System.Drawing.Point(599, 71);
+            this.txtContCLarge_toxic1.Name = "txtContCLarge_toxic1";
+            this.txtContCLarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContCLarge_toxic1.TabIndex = 13;
+            // 
+            // label373
+            // 
+            this.label373.AutoSize = true;
+            this.label373.Location = new System.Drawing.Point(9, 77);
+            this.label373.Name = "label373";
+            this.label373.Size = new System.Drawing.Size(61, 13);
+            this.label373.TabIndex = 10;
+            this.label373.Text = "Constant C";
+            // 
+            // txtContDLarge_toxic1
+            // 
+            this.txtContDLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDLarge_toxic1.Location = new System.Drawing.Point(599, 96);
+            this.txtContDLarge_toxic1.Name = "txtContDLarge_toxic1";
+            this.txtContDLarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContDLarge_toxic1.TabIndex = 18;
+            // 
+            // label374
+            // 
+            this.label374.AutoSize = true;
+            this.label374.Location = new System.Drawing.Point(9, 51);
+            this.label374.Name = "label374";
+            this.label374.Size = new System.Drawing.Size(101, 13);
+            this.label374.TabIndex = 5;
+            this.label374.Text = "Toxic Leak Duration";
+            // 
+            // txtToxicCALarge_toxic1
+            // 
+            this.txtToxicCALarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCALarge_toxic1.Location = new System.Drawing.Point(599, 221);
+            this.txtToxicCALarge_toxic1.Name = "txtToxicCALarge_toxic1";
+            this.txtToxicCALarge_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCALarge_toxic1.TabIndex = 43;
+            // 
+            // txtContDRupture_toxic1
+            // 
+            this.txtContDRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDRupture_toxic1.Location = new System.Drawing.Point(767, 96);
+            this.txtContDRupture_toxic1.Name = "txtContDRupture_toxic1";
+            this.txtContDRupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContDRupture_toxic1.TabIndex = 19;
+            // 
+            // label379
+            // 
+            this.label379.AutoSize = true;
+            this.label379.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label379.Location = new System.Drawing.Point(646, 17);
+            this.label379.Name = "label379";
+            this.label379.Size = new System.Drawing.Size(44, 15);
+            this.label379.TabIndex = 3;
+            this.label379.Text = "Large";
+            // 
+            // txtLDToxicRupture_toxic1
+            // 
+            this.txtLDToxicRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicRupture_toxic1.Location = new System.Drawing.Point(767, 45);
+            this.txtLDToxicRupture_toxic1.Name = "txtLDToxicRupture_toxic1";
+            this.txtLDToxicRupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicRupture_toxic1.TabIndex = 9;
+            // 
+            // txtContERupture_toxic1
+            // 
+            this.txtContERupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContERupture_toxic1.Location = new System.Drawing.Point(767, 121);
+            this.txtContERupture_toxic1.Name = "txtContERupture_toxic1";
+            this.txtContERupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContERupture_toxic1.TabIndex = 24;
+            // 
+            // label378
+            // 
+            this.label378.AutoSize = true;
+            this.label378.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label378.Location = new System.Drawing.Point(467, 17);
+            this.label378.Name = "label378";
+            this.label378.Size = new System.Drawing.Size(59, 15);
+            this.label378.TabIndex = 2;
+            this.label378.Text = "Medium";
+            // 
+            // txtToxicCASmall_toxic1
+            // 
+            this.txtToxicCASmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCASmall_toxic1.Location = new System.Drawing.Point(263, 220);
+            this.txtToxicCASmall_toxic1.Name = "txtToxicCASmall_toxic1";
+            this.txtToxicCASmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCASmall_toxic1.TabIndex = 41;
+            // 
+            // txtContCRupture_toxic1
+            // 
+            this.txtContCRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCRupture_toxic1.Location = new System.Drawing.Point(767, 71);
+            this.txtContCRupture_toxic1.Name = "txtContCRupture_toxic1";
+            this.txtContCRupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContCRupture_toxic1.TabIndex = 14;
+            // 
+            // txtContFRupture_toxic1
+            // 
+            this.txtContFRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFRupture_toxic1.Location = new System.Drawing.Point(767, 146);
+            this.txtContFRupture_toxic1.Name = "txtContFRupture_toxic1";
+            this.txtContFRupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContFRupture_toxic1.TabIndex = 29;
+            // 
+            // txtContCMedium_toxic1
+            // 
+            this.txtContCMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMedium_toxic1.Location = new System.Drawing.Point(431, 70);
+            this.txtContCMedium_toxic1.Name = "txtContCMedium_toxic1";
+            this.txtContCMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMedium_toxic1.TabIndex = 12;
+            // 
+            // txtMassSmall_toxic1
+            // 
+            this.txtMassSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassSmall_toxic1.Location = new System.Drawing.Point(263, 195);
+            this.txtMassSmall_toxic1.Name = "txtMassSmall_toxic1";
+            this.txtMassSmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassSmall_toxic1.TabIndex = 36;
+            // 
+            // label377
+            // 
+            this.label377.AutoSize = true;
+            this.label377.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label377.Location = new System.Drawing.Point(298, 17);
+            this.label377.Name = "label377";
+            this.label377.Size = new System.Drawing.Size(44, 15);
+            this.label377.TabIndex = 1;
+            this.label377.Text = "Small";
+            // 
+            // txtMassRateRupture_toxic1
+            // 
+            this.txtMassRateRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateRupture_toxic1.Location = new System.Drawing.Point(767, 171);
+            this.txtMassRateRupture_toxic1.Name = "txtMassRateRupture_toxic1";
+            this.txtMassRateRupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateRupture_toxic1.TabIndex = 34;
+            // 
+            // txtLDToxicMedium_toxic1
+            // 
+            this.txtLDToxicMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicMedium_toxic1.Location = new System.Drawing.Point(431, 44);
+            this.txtLDToxicMedium_toxic1.Name = "txtLDToxicMedium_toxic1";
+            this.txtLDToxicMedium_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicMedium_toxic1.TabIndex = 7;
+            // 
+            // txtMassRateSmall_toxic1
+            // 
+            this.txtMassRateSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateSmall_toxic1.Location = new System.Drawing.Point(263, 170);
+            this.txtMassRateSmall_toxic1.Name = "txtMassRateSmall_toxic1";
+            this.txtMassRateSmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateSmall_toxic1.TabIndex = 31;
+            // 
+            // label376
+            // 
+            this.label376.AutoSize = true;
+            this.label376.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label376.Location = new System.Drawing.Point(815, 17);
+            this.label376.Name = "label376";
+            this.label376.Size = new System.Drawing.Size(58, 15);
+            this.label376.TabIndex = 4;
+            this.label376.Text = "Rupture";
+            // 
+            // txtMassRupture_toxic1
+            // 
+            this.txtMassRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRupture_toxic1.Location = new System.Drawing.Point(767, 196);
+            this.txtMassRupture_toxic1.Name = "txtMassRupture_toxic1";
+            this.txtMassRupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRupture_toxic1.TabIndex = 39;
+            // 
+            // txtContDSmall_toxic1
+            // 
+            this.txtContDSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDSmall_toxic1.Location = new System.Drawing.Point(263, 95);
+            this.txtContDSmall_toxic1.Name = "txtContDSmall_toxic1";
+            this.txtContDSmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContDSmall_toxic1.TabIndex = 16;
+            // 
+            // txtContFSmall_toxic1
+            // 
+            this.txtContFSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFSmall_toxic1.Location = new System.Drawing.Point(263, 145);
+            this.txtContFSmall_toxic1.Name = "txtContFSmall_toxic1";
+            this.txtContFSmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContFSmall_toxic1.TabIndex = 26;
+            // 
+            // txtLDToxicSmall_toxic1
+            // 
+            this.txtLDToxicSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicSmall_toxic1.Location = new System.Drawing.Point(263, 44);
+            this.txtLDToxicSmall_toxic1.Name = "txtLDToxicSmall_toxic1";
+            this.txtLDToxicSmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicSmall_toxic1.TabIndex = 6;
+            // 
+            // txtToxicCARupture_toxic1
+            // 
+            this.txtToxicCARupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCARupture_toxic1.Location = new System.Drawing.Point(767, 221);
+            this.txtToxicCARupture_toxic1.Name = "txtToxicCARupture_toxic1";
+            this.txtToxicCARupture_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCARupture_toxic1.TabIndex = 44;
+            // 
+            // txtContESmall_toxic1
+            // 
+            this.txtContESmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContESmall_toxic1.Location = new System.Drawing.Point(263, 120);
+            this.txtContESmall_toxic1.Name = "txtContESmall_toxic1";
+            this.txtContESmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContESmall_toxic1.TabIndex = 21;
+            // 
+            // txtContCSmall_toxic1
+            // 
+            this.txtContCSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCSmall_toxic1.Location = new System.Drawing.Point(263, 70);
+            this.txtContCSmall_toxic1.Name = "txtContCSmall_toxic1";
+            this.txtContCSmall_toxic1.Size = new System.Drawing.Size(133, 20);
+            this.txtContCSmall_toxic1.TabIndex = 11;
+            // 
+            // tabToxic2
+            // 
+            this.tabToxic2.Controls.Add(this.label380);
+            this.tabToxic2.Controls.Add(this.label381);
+            this.tabToxic2.Controls.Add(this.label382);
+            this.tabToxic2.Controls.Add(this.txtContFMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.label383);
+            this.tabToxic2.Controls.Add(this.txtContEMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.label384);
+            this.tabToxic2.Controls.Add(this.txtContFLarge_toxic2);
+            this.tabToxic2.Controls.Add(this.label385);
+            this.tabToxic2.Controls.Add(this.txtMassRateLarge_toxic2);
+            this.tabToxic2.Controls.Add(this.txtFlammalbePICA_toxic2);
+            this.tabToxic2.Controls.Add(this.txtMassRateMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.label386);
+            this.tabToxic2.Controls.Add(this.txtContDMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.label387);
+            this.tabToxic2.Controls.Add(this.txtMassMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.label388);
+            this.tabToxic2.Controls.Add(this.txtLDToxicLarge_toxic2);
+            this.tabToxic2.Controls.Add(this.label389);
+            this.tabToxic2.Controls.Add(this.txtContELarge_toxic2);
+            this.tabToxic2.Controls.Add(this.label390);
+            this.tabToxic2.Controls.Add(this.txtMassLarge_toxic2);
+            this.tabToxic2.Controls.Add(this.label391);
+            this.tabToxic2.Controls.Add(this.txtToxicCAMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.label392);
+            this.tabToxic2.Controls.Add(this.txtContCLarge_toxic2);
+            this.tabToxic2.Controls.Add(this.label393);
+            this.tabToxic2.Controls.Add(this.txtContDLarge_toxic2);
+            this.tabToxic2.Controls.Add(this.label490);
+            this.tabToxic2.Controls.Add(this.txtToxicCALarge_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContDRupture_toxic2);
+            this.tabToxic2.Controls.Add(this.label491);
+            this.tabToxic2.Controls.Add(this.txtLDToxicRupture_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContERupture_toxic2);
+            this.tabToxic2.Controls.Add(this.label492);
+            this.tabToxic2.Controls.Add(this.txtToxicCASmall_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContCRupture_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContFRupture_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContCMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.txtMassSmall_toxic2);
+            this.tabToxic2.Controls.Add(this.label493);
+            this.tabToxic2.Controls.Add(this.txtMassRateRupture_toxic2);
+            this.tabToxic2.Controls.Add(this.txtLDToxicMedium_toxic2);
+            this.tabToxic2.Controls.Add(this.txtMassRateSmall_toxic2);
+            this.tabToxic2.Controls.Add(this.label494);
+            this.tabToxic2.Controls.Add(this.txtMassRupture_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContDSmall_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContFSmall_toxic2);
+            this.tabToxic2.Controls.Add(this.txtLDToxicSmall_toxic2);
+            this.tabToxic2.Controls.Add(this.txtToxicCARupture_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContESmall_toxic2);
+            this.tabToxic2.Controls.Add(this.txtContCSmall_toxic2);
+            this.tabToxic2.Name = "tabToxic2";
+            this.tabToxic2.Size = new System.Drawing.Size(934, 286);
+            this.tabToxic2.Text = "tabToxic2";
+            // 
+            // label380
+            // 
+            this.label380.AutoSize = true;
+            this.label380.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label380.Location = new System.Drawing.Point(635, 260);
+            this.label380.Name = "label380";
+            this.label380.Size = new System.Drawing.Size(18, 13);
+            this.label380.TabIndex = 350;
+            this.label380.Text = "m²";
+            // 
+            // label381
+            // 
+            this.label381.AutoSize = true;
+            this.label381.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label381.Location = new System.Drawing.Point(9, 18);
+            this.label381.Name = "label381";
+            this.label381.Size = new System.Drawing.Size(122, 15);
+            this.label381.TabIndex = 299;
+            this.label381.Text = "Release hole size";
+            // 
+            // label382
+            // 
+            this.label382.AutoSize = true;
+            this.label382.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label382.Location = new System.Drawing.Point(910, 223);
+            this.label382.Name = "label382";
+            this.label382.Size = new System.Drawing.Size(18, 13);
+            this.label382.TabIndex = 349;
+            this.label382.Text = "m²";
+            // 
+            // txtContFMedium_toxic2
+            // 
+            this.txtContFMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFMedium_toxic2.Location = new System.Drawing.Point(431, 145);
+            this.txtContFMedium_toxic2.Name = "txtContFMedium_toxic2";
+            this.txtContFMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContFMedium_toxic2.TabIndex = 326;
+            // 
+            // label383
+            // 
+            this.label383.AutoSize = true;
+            this.label383.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label383.Location = new System.Drawing.Point(910, 199);
+            this.label383.Name = "label383";
+            this.label383.Size = new System.Drawing.Size(19, 13);
+            this.label383.TabIndex = 348;
+            this.label383.Text = "kg";
+            // 
+            // txtContEMedium_toxic2
+            // 
+            this.txtContEMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContEMedium_toxic2.Location = new System.Drawing.Point(431, 120);
+            this.txtContEMedium_toxic2.Name = "txtContEMedium_toxic2";
+            this.txtContEMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContEMedium_toxic2.TabIndex = 321;
+            // 
+            // label384
+            // 
+            this.label384.AutoSize = true;
+            this.label384.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label384.Location = new System.Drawing.Point(910, 173);
+            this.label384.Name = "label384";
+            this.label384.Size = new System.Drawing.Size(29, 13);
+            this.label384.TabIndex = 347;
+            this.label384.Text = "kg/s";
+            // 
+            // txtContFLarge_toxic2
+            // 
+            this.txtContFLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFLarge_toxic2.Location = new System.Drawing.Point(599, 146);
+            this.txtContFLarge_toxic2.Name = "txtContFLarge_toxic2";
+            this.txtContFLarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContFLarge_toxic2.TabIndex = 327;
+            // 
+            // label385
+            // 
+            this.label385.AutoSize = true;
+            this.label385.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label385.Location = new System.Drawing.Point(904, 47);
+            this.label385.Name = "label385";
+            this.label385.Size = new System.Drawing.Size(47, 13);
+            this.label385.TabIndex = 346;
+            this.label385.Text = "seconds";
+            // 
+            // txtMassRateLarge_toxic2
+            // 
+            this.txtMassRateLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateLarge_toxic2.Location = new System.Drawing.Point(599, 171);
+            this.txtMassRateLarge_toxic2.Name = "txtMassRateLarge_toxic2";
+            this.txtMassRateLarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateLarge_toxic2.TabIndex = 332;
+            // 
+            // txtFlammalbePICA_toxic2
+            // 
+            this.txtFlammalbePICA_toxic2.Location = new System.Drawing.Point(348, 257);
+            this.txtFlammalbePICA_toxic2.Name = "txtFlammalbePICA_toxic2";
+            this.txtFlammalbePICA_toxic2.Size = new System.Drawing.Size(270, 21);
+            this.txtFlammalbePICA_toxic2.TabIndex = 345;
+            // 
+            // txtMassRateMedium_toxic2
+            // 
+            this.txtMassRateMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateMedium_toxic2.Location = new System.Drawing.Point(431, 170);
+            this.txtMassRateMedium_toxic2.Name = "txtMassRateMedium_toxic2";
+            this.txtMassRateMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateMedium_toxic2.TabIndex = 331;
+            // 
+            // label386
+            // 
+            this.label386.AutoSize = true;
+            this.label386.Location = new System.Drawing.Point(12, 265);
+            this.label386.Name = "label386";
+            this.label386.Size = new System.Drawing.Size(227, 13);
+            this.label386.TabIndex = 344;
+            this.label386.Text = "Flammable Personal Injury Consequence Area";
+            // 
+            // txtContDMedium_toxic2
+            // 
+            this.txtContDMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDMedium_toxic2.Location = new System.Drawing.Point(431, 95);
+            this.txtContDMedium_toxic2.Name = "txtContDMedium_toxic2";
+            this.txtContDMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContDMedium_toxic2.TabIndex = 316;
+            // 
+            // label387
+            // 
+            this.label387.AutoSize = true;
+            this.label387.Location = new System.Drawing.Point(9, 227);
+            this.label387.Name = "label387";
+            this.label387.Size = new System.Drawing.Size(49, 13);
+            this.label387.TabIndex = 339;
+            this.label387.Text = "Toxic CA";
+            // 
+            // txtMassMedium_toxic2
+            // 
+            this.txtMassMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassMedium_toxic2.Location = new System.Drawing.Point(431, 195);
+            this.txtMassMedium_toxic2.Name = "txtMassMedium_toxic2";
+            this.txtMassMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassMedium_toxic2.TabIndex = 336;
+            // 
+            // label388
+            // 
+            this.label388.AutoSize = true;
+            this.label388.Location = new System.Drawing.Point(9, 202);
+            this.label388.Name = "label388";
+            this.label388.Size = new System.Drawing.Size(100, 13);
+            this.label388.TabIndex = 334;
+            this.label388.Text = "Toxic Release mass";
+            // 
+            // txtLDToxicLarge_toxic2
+            // 
+            this.txtLDToxicLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicLarge_toxic2.Location = new System.Drawing.Point(599, 45);
+            this.txtLDToxicLarge_toxic2.Name = "txtLDToxicLarge_toxic2";
+            this.txtLDToxicLarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicLarge_toxic2.TabIndex = 307;
+            // 
+            // label389
+            // 
+            this.label389.AutoSize = true;
+            this.label389.Location = new System.Drawing.Point(9, 177);
+            this.label389.Name = "label389";
+            this.label389.Size = new System.Drawing.Size(123, 13);
+            this.label389.TabIndex = 329;
+            this.label389.Text = "Toxic Release mass rate";
+            // 
+            // txtContELarge_toxic2
+            // 
+            this.txtContELarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContELarge_toxic2.Location = new System.Drawing.Point(599, 121);
+            this.txtContELarge_toxic2.Name = "txtContELarge_toxic2";
+            this.txtContELarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContELarge_toxic2.TabIndex = 322;
+            // 
+            // label390
+            // 
+            this.label390.AutoSize = true;
+            this.label390.Location = new System.Drawing.Point(9, 152);
+            this.label390.Name = "label390";
+            this.label390.Size = new System.Drawing.Size(60, 13);
+            this.label390.TabIndex = 324;
+            this.label390.Text = "Constant F";
+            // 
+            // txtMassLarge_toxic2
+            // 
+            this.txtMassLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassLarge_toxic2.Location = new System.Drawing.Point(599, 196);
+            this.txtMassLarge_toxic2.Name = "txtMassLarge_toxic2";
+            this.txtMassLarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassLarge_toxic2.TabIndex = 337;
+            // 
+            // label391
+            // 
+            this.label391.AutoSize = true;
+            this.label391.Location = new System.Drawing.Point(9, 127);
+            this.label391.Name = "label391";
+            this.label391.Size = new System.Drawing.Size(60, 13);
+            this.label391.TabIndex = 319;
+            this.label391.Text = "Constant E";
+            // 
+            // txtToxicCAMedium_toxic2
+            // 
+            this.txtToxicCAMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCAMedium_toxic2.Location = new System.Drawing.Point(431, 220);
+            this.txtToxicCAMedium_toxic2.Name = "txtToxicCAMedium_toxic2";
+            this.txtToxicCAMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCAMedium_toxic2.TabIndex = 341;
+            // 
+            // label392
+            // 
+            this.label392.AutoSize = true;
+            this.label392.Location = new System.Drawing.Point(9, 102);
+            this.label392.Name = "label392";
+            this.label392.Size = new System.Drawing.Size(61, 13);
+            this.label392.TabIndex = 314;
+            this.label392.Text = "Constant D";
+            // 
+            // txtContCLarge_toxic2
+            // 
+            this.txtContCLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCLarge_toxic2.Location = new System.Drawing.Point(599, 71);
+            this.txtContCLarge_toxic2.Name = "txtContCLarge_toxic2";
+            this.txtContCLarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContCLarge_toxic2.TabIndex = 312;
+            // 
+            // label393
+            // 
+            this.label393.AutoSize = true;
+            this.label393.Location = new System.Drawing.Point(9, 77);
+            this.label393.Name = "label393";
+            this.label393.Size = new System.Drawing.Size(61, 13);
+            this.label393.TabIndex = 309;
+            this.label393.Text = "Constant C";
+            // 
+            // txtContDLarge_toxic2
+            // 
+            this.txtContDLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDLarge_toxic2.Location = new System.Drawing.Point(599, 96);
+            this.txtContDLarge_toxic2.Name = "txtContDLarge_toxic2";
+            this.txtContDLarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContDLarge_toxic2.TabIndex = 317;
+            // 
+            // label490
+            // 
+            this.label490.AutoSize = true;
+            this.label490.Location = new System.Drawing.Point(9, 51);
+            this.label490.Name = "label490";
+            this.label490.Size = new System.Drawing.Size(101, 13);
+            this.label490.TabIndex = 304;
+            this.label490.Text = "Toxic Leak Duration";
+            // 
+            // txtToxicCALarge_toxic2
+            // 
+            this.txtToxicCALarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCALarge_toxic2.Location = new System.Drawing.Point(599, 221);
+            this.txtToxicCALarge_toxic2.Name = "txtToxicCALarge_toxic2";
+            this.txtToxicCALarge_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCALarge_toxic2.TabIndex = 342;
+            // 
+            // txtContDRupture_toxic2
+            // 
+            this.txtContDRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDRupture_toxic2.Location = new System.Drawing.Point(767, 96);
+            this.txtContDRupture_toxic2.Name = "txtContDRupture_toxic2";
+            this.txtContDRupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContDRupture_toxic2.TabIndex = 318;
+            // 
+            // label491
+            // 
+            this.label491.AutoSize = true;
+            this.label491.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label491.Location = new System.Drawing.Point(646, 17);
+            this.label491.Name = "label491";
+            this.label491.Size = new System.Drawing.Size(44, 15);
+            this.label491.TabIndex = 302;
+            this.label491.Text = "Large";
+            // 
+            // txtLDToxicRupture_toxic2
+            // 
+            this.txtLDToxicRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicRupture_toxic2.Location = new System.Drawing.Point(767, 45);
+            this.txtLDToxicRupture_toxic2.Name = "txtLDToxicRupture_toxic2";
+            this.txtLDToxicRupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicRupture_toxic2.TabIndex = 308;
+            // 
+            // txtContERupture_toxic2
+            // 
+            this.txtContERupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContERupture_toxic2.Location = new System.Drawing.Point(767, 121);
+            this.txtContERupture_toxic2.Name = "txtContERupture_toxic2";
+            this.txtContERupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContERupture_toxic2.TabIndex = 323;
+            // 
+            // label492
+            // 
+            this.label492.AutoSize = true;
+            this.label492.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label492.Location = new System.Drawing.Point(467, 17);
+            this.label492.Name = "label492";
+            this.label492.Size = new System.Drawing.Size(59, 15);
+            this.label492.TabIndex = 301;
+            this.label492.Text = "Medium";
+            // 
+            // txtToxicCASmall_toxic2
+            // 
+            this.txtToxicCASmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCASmall_toxic2.Location = new System.Drawing.Point(263, 220);
+            this.txtToxicCASmall_toxic2.Name = "txtToxicCASmall_toxic2";
+            this.txtToxicCASmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCASmall_toxic2.TabIndex = 340;
+            // 
+            // txtContCRupture_toxic2
+            // 
+            this.txtContCRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCRupture_toxic2.Location = new System.Drawing.Point(767, 71);
+            this.txtContCRupture_toxic2.Name = "txtContCRupture_toxic2";
+            this.txtContCRupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContCRupture_toxic2.TabIndex = 313;
+            // 
+            // txtContFRupture_toxic2
+            // 
+            this.txtContFRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFRupture_toxic2.Location = new System.Drawing.Point(767, 146);
+            this.txtContFRupture_toxic2.Name = "txtContFRupture_toxic2";
+            this.txtContFRupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContFRupture_toxic2.TabIndex = 328;
+            // 
+            // txtContCMedium_toxic2
+            // 
+            this.txtContCMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMedium_toxic2.Location = new System.Drawing.Point(431, 70);
+            this.txtContCMedium_toxic2.Name = "txtContCMedium_toxic2";
+            this.txtContCMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMedium_toxic2.TabIndex = 311;
+            // 
+            // txtMassSmall_toxic2
+            // 
+            this.txtMassSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassSmall_toxic2.Location = new System.Drawing.Point(263, 195);
+            this.txtMassSmall_toxic2.Name = "txtMassSmall_toxic2";
+            this.txtMassSmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassSmall_toxic2.TabIndex = 335;
+            // 
+            // label493
+            // 
+            this.label493.AutoSize = true;
+            this.label493.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label493.Location = new System.Drawing.Point(298, 17);
+            this.label493.Name = "label493";
+            this.label493.Size = new System.Drawing.Size(44, 15);
+            this.label493.TabIndex = 300;
+            this.label493.Text = "Small";
+            // 
+            // txtMassRateRupture_toxic2
+            // 
+            this.txtMassRateRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateRupture_toxic2.Location = new System.Drawing.Point(767, 171);
+            this.txtMassRateRupture_toxic2.Name = "txtMassRateRupture_toxic2";
+            this.txtMassRateRupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateRupture_toxic2.TabIndex = 333;
+            // 
+            // txtLDToxicMedium_toxic2
+            // 
+            this.txtLDToxicMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicMedium_toxic2.Location = new System.Drawing.Point(431, 44);
+            this.txtLDToxicMedium_toxic2.Name = "txtLDToxicMedium_toxic2";
+            this.txtLDToxicMedium_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicMedium_toxic2.TabIndex = 306;
+            // 
+            // txtMassRateSmall_toxic2
+            // 
+            this.txtMassRateSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRateSmall_toxic2.Location = new System.Drawing.Point(263, 170);
+            this.txtMassRateSmall_toxic2.Name = "txtMassRateSmall_toxic2";
+            this.txtMassRateSmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRateSmall_toxic2.TabIndex = 330;
+            // 
+            // label494
+            // 
+            this.label494.AutoSize = true;
+            this.label494.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label494.Location = new System.Drawing.Point(815, 17);
+            this.label494.Name = "label494";
+            this.label494.Size = new System.Drawing.Size(58, 15);
+            this.label494.TabIndex = 303;
+            this.label494.Text = "Rupture";
+            // 
+            // txtMassRupture_toxic2
+            // 
+            this.txtMassRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtMassRupture_toxic2.Location = new System.Drawing.Point(767, 196);
+            this.txtMassRupture_toxic2.Name = "txtMassRupture_toxic2";
+            this.txtMassRupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtMassRupture_toxic2.TabIndex = 338;
+            // 
+            // txtContDSmall_toxic2
+            // 
+            this.txtContDSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContDSmall_toxic2.Location = new System.Drawing.Point(263, 95);
+            this.txtContDSmall_toxic2.Name = "txtContDSmall_toxic2";
+            this.txtContDSmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContDSmall_toxic2.TabIndex = 315;
+            // 
+            // txtContFSmall_toxic2
+            // 
+            this.txtContFSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContFSmall_toxic2.Location = new System.Drawing.Point(263, 145);
+            this.txtContFSmall_toxic2.Name = "txtContFSmall_toxic2";
+            this.txtContFSmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContFSmall_toxic2.TabIndex = 325;
+            // 
+            // txtLDToxicSmall_toxic2
+            // 
+            this.txtLDToxicSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLDToxicSmall_toxic2.Location = new System.Drawing.Point(263, 44);
+            this.txtLDToxicSmall_toxic2.Name = "txtLDToxicSmall_toxic2";
+            this.txtLDToxicSmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtLDToxicSmall_toxic2.TabIndex = 305;
+            // 
+            // txtToxicCARupture_toxic2
+            // 
+            this.txtToxicCARupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtToxicCARupture_toxic2.Location = new System.Drawing.Point(767, 221);
+            this.txtToxicCARupture_toxic2.Name = "txtToxicCARupture_toxic2";
+            this.txtToxicCARupture_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtToxicCARupture_toxic2.TabIndex = 343;
+            // 
+            // txtContESmall_toxic2
+            // 
+            this.txtContESmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContESmall_toxic2.Location = new System.Drawing.Point(263, 120);
+            this.txtContESmall_toxic2.Name = "txtContESmall_toxic2";
+            this.txtContESmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContESmall_toxic2.TabIndex = 320;
+            // 
+            // txtContCSmall_toxic2
+            // 
+            this.txtContCSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCSmall_toxic2.Location = new System.Drawing.Point(263, 70);
+            this.txtContCSmall_toxic2.Name = "txtContCSmall_toxic2";
+            this.txtContCSmall_toxic2.Size = new System.Drawing.Size(133, 20);
+            this.txtContCSmall_toxic2.TabIndex = 310;
+            // 
+            // lblTCA
+            // 
+            this.lblTCA.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblTCA.ForeColor = System.Drawing.Color.White;
+            this.lblTCA.Location = new System.Drawing.Point(-2, 0);
+            this.lblTCA.Name = "lblTCA";
+            this.lblTCA.Size = new System.Drawing.Size(945, 21);
+            this.lblTCA.TabIndex = 1;
+            this.lblTCA.Text = "▼ Toxic Consequence Area";
+            this.lblTCA.Click += new System.EventHandler(this.lblTCA_Click);
+            // 
+            // panelFCA
+            // 
+            this.panelFCA.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelFCA.Controls.Add(this.tabControlFlammable);
+            this.panelFCA.Controls.Add(this.lblFCA);
+            this.panelFCA.Location = new System.Drawing.Point(6, 976);
+            this.panelFCA.Name = "panelFCA";
+            this.panelFCA.Size = new System.Drawing.Size(945, 831);
+            this.panelFCA.TabIndex = 3;
+            // 
+            // tabControlFlammable
+            // 
+            this.tabControlFlammable.Location = new System.Drawing.Point(1, 24);
+            this.tabControlFlammable.Name = "tabControlFlammable";
+            this.tabControlFlammable.SelectedTabPage = this.tabmodel;
+            this.tabControlFlammable.Size = new System.Drawing.Size(937, 800);
+            this.tabControlFlammable.TabIndex = 2;
+            this.tabControlFlammable.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.tabmodel,
+            this.tabtoxic});
+            // 
+            // tabmodel
+            // 
+            this.tabmodel.Controls.Add(this.txtFlammablePICA_model);
+            this.tabmodel.Controls.Add(this.txtFlammableCDCA_model);
+            this.tabmodel.Controls.Add(this.label299);
+            this.tabmodel.Controls.Add(this.label260);
+            this.tabmodel.Controls.Add(this.txtAContAILCMD_model);
+            this.tabmodel.Controls.Add(this.label330);
+            this.tabmodel.Controls.Add(this.label434);
+            this.tabmodel.Controls.Add(this.label329);
+            this.tabmodel.Controls.Add(this.label433);
+            this.tabmodel.Controls.Add(this.label327);
+            this.tabmodel.Controls.Add(this.label432);
+            this.tabmodel.Controls.Add(this.label326);
+            this.tabmodel.Controls.Add(this.label431);
+            this.tabmodel.Controls.Add(this.label325);
+            this.tabmodel.Controls.Add(this.label430);
+            this.tabmodel.Controls.Add(this.label323);
+            this.tabmodel.Controls.Add(this.label429);
+            this.tabmodel.Controls.Add(this.label322);
+            this.tabmodel.Controls.Add(this.label428);
+            this.tabmodel.Controls.Add(this.label320);
+            this.tabmodel.Controls.Add(this.label427);
+            this.tabmodel.Controls.Add(this.label319);
+            this.tabmodel.Controls.Add(this.label426);
+            this.tabmodel.Controls.Add(this.txtAContAINLCMD_model);
+            this.tabmodel.Controls.Add(this.label425);
+            this.tabmodel.Controls.Add(this.txtAInstAINLCMD_model);
+            this.tabmodel.Controls.Add(this.label424);
+            this.tabmodel.Controls.Add(this.txtAInstAILCMD_model);
+            this.tabmodel.Controls.Add(this.label423);
+            this.tabmodel.Controls.Add(this.txtAContAINLINJ_model);
+            this.tabmodel.Controls.Add(this.label421);
+            this.tabmodel.Controls.Add(this.txtAContAILINJ_model);
+            this.tabmodel.Controls.Add(this.label420);
+            this.tabmodel.Controls.Add(this.txtAInstAINLINJ_model);
+            this.tabmodel.Controls.Add(this.label419);
+            this.tabmodel.Controls.Add(this.txtAInstAILINJ_model);
+            this.tabmodel.Controls.Add(this.txtBContAINLCMD_model);
+            this.tabmodel.Controls.Add(this.txtBContAILCMD_model);
+            this.tabmodel.Controls.Add(this.txtBInstAINLCMD_model);
+            this.tabmodel.Controls.Add(this.txtBInstAILCMD_model);
+            this.tabmodel.Controls.Add(this.label300);
+            this.tabmodel.Controls.Add(this.txtBContAINLINJ_model);
+            this.tabmodel.Controls.Add(this.label301);
+            this.tabmodel.Controls.Add(this.txtBContAILINJ_model);
+            this.tabmodel.Controls.Add(this.label302);
+            this.tabmodel.Controls.Add(this.txtBInstAINLINJ_model);
+            this.tabmodel.Controls.Add(this.label303);
+            this.tabmodel.Controls.Add(this.txtBInstAILINJ_model);
+            this.tabmodel.Controls.Add(this.label304);
+            this.tabmodel.Controls.Add(this.label318);
+            this.tabmodel.Controls.Add(this.txtAITBlendINJRupture_model);
+            this.tabmodel.Controls.Add(this.label317);
+            this.tabmodel.Controls.Add(this.txtBlendINJAINLSmall_model);
+            this.tabmodel.Controls.Add(this.label316);
+            this.tabmodel.Controls.Add(this.txtBlendINJAILSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAILMedium_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAILSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAINLMedium_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendCMDSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAILLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAILRupture_model);
+            this.tabmodel.Controls.Add(this.txtContINJAINLLarge_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendINJSmall_model);
+            this.tabmodel.Controls.Add(this.txtContINJAINLMedium_model);
+            this.tabmodel.Controls.Add(this.txtBlendINJAINLRupture_model);
+            this.tabmodel.Controls.Add(this.txtContCMDAILMedium_model);
+            this.tabmodel.Controls.Add(this.txtBlendINJAILRupture_model);
+            this.tabmodel.Controls.Add(this.txtContINJAILMedium_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendCMDRupture_model);
+            this.tabmodel.Controls.Add(this.txtEneffLarge_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendINJMedium_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAINLLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendINJAILLarge_model);
+            this.tabmodel.Controls.Add(this.txtContINJAILLarge_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendCMDLarge_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAINLMedium_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendCMDMedium_model);
+            this.tabmodel.Controls.Add(this.txtContCMDAINLLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendINJAINLLarge_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAILMedium_model);
+            this.tabmodel.Controls.Add(this.txtAITBlendINJLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAINLLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendINJAILMedium_model);
+            this.tabmodel.Controls.Add(this.txtContCMDAILLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendINJAINLMedium_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAINLLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAILLarge_model);
+            this.tabmodel.Controls.Add(this.txtBlendFactorMedium_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAILMedium_model);
+            this.tabmodel.Controls.Add(this.txtBlendFactorLarge_model);
+            this.tabmodel.Controls.Add(this.label305);
+            this.tabmodel.Controls.Add(this.label331);
+            this.tabmodel.Controls.Add(this.label306);
+            this.tabmodel.Controls.Add(this.txtInstINJAILLarge_model);
+            this.tabmodel.Controls.Add(this.label307);
+            this.tabmodel.Controls.Add(this.txtEneffRupture_model);
+            this.tabmodel.Controls.Add(this.label308);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAINLMedium_model);
+            this.tabmodel.Controls.Add(this.label309);
+            this.tabmodel.Controls.Add(this.label328);
+            this.tabmodel.Controls.Add(this.label310);
+            this.tabmodel.Controls.Add(this.txtContCMDAINLRupture_model);
+            this.tabmodel.Controls.Add(this.label311);
+            this.tabmodel.Controls.Add(this.txtContCMDAINLMedium_model);
+            this.tabmodel.Controls.Add(this.label312);
+            this.tabmodel.Controls.Add(this.label324);
+            this.tabmodel.Controls.Add(this.label313);
+            this.tabmodel.Controls.Add(this.txtEneffMedium_model);
+            this.tabmodel.Controls.Add(this.label314);
+            this.tabmodel.Controls.Add(this.label321);
+            this.tabmodel.Controls.Add(this.label315);
+            this.tabmodel.Controls.Add(this.txtBlendFactorRupture_model);
+            this.tabmodel.Controls.Add(this.txtContCMDAILRupture_model);
+            this.tabmodel.Controls.Add(this.txtContCMDAILSmall_model);
+            this.tabmodel.Controls.Add(this.txtEneffSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAINLRupture_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAILRupture_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAINLRupture_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAINLSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAINLSmall_model);
+            this.tabmodel.Controls.Add(this.txtContCMDAINLSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAILRupture_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAINLRupture_model);
+            this.tabmodel.Controls.Add(this.txtInstINJAILSmall_model);
+            this.tabmodel.Controls.Add(this.txtInstCMDAILSmall_model);
+            this.tabmodel.Controls.Add(this.txtContINJAILSmall_model);
+            this.tabmodel.Controls.Add(this.txtBlendCMDAINLSmall_model);
+            this.tabmodel.Controls.Add(this.txtContINJAINLRupture_model);
+            this.tabmodel.Controls.Add(this.txtContINJAILRupture_model);
+            this.tabmodel.Controls.Add(this.txtBlendFactorSmall_model);
+            this.tabmodel.Controls.Add(this.txtContINJAINLSmall_model);
+            this.tabmodel.Name = "tabmodel";
+            this.tabmodel.Size = new System.Drawing.Size(935, 775);
+            this.tabmodel.Text = "tabmodel";
+            // 
+            // txtFlammablePICA_model
+            // 
+            this.txtFlammablePICA_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlammablePICA_model.Location = new System.Drawing.Point(306, 737);
+            this.txtFlammablePICA_model.Name = "txtFlammablePICA_model";
+            this.txtFlammablePICA_model.Size = new System.Drawing.Size(301, 20);
+            this.txtFlammablePICA_model.TabIndex = 303;
+            // 
+            // txtFlammableCDCA_model
+            // 
+            this.txtFlammableCDCA_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlammableCDCA_model.Location = new System.Drawing.Point(306, 703);
+            this.txtFlammableCDCA_model.Name = "txtFlammableCDCA_model";
+            this.txtFlammableCDCA_model.Size = new System.Drawing.Size(301, 20);
+            this.txtFlammableCDCA_model.TabIndex = 302;
+            // 
+            // label299
+            // 
+            this.label299.AutoSize = true;
+            this.label299.Location = new System.Drawing.Point(15, 741);
+            this.label299.Name = "label299";
+            this.label299.Size = new System.Drawing.Size(227, 13);
+            this.label299.TabIndex = 301;
+            this.label299.Text = "Flammable Personal Injury Consequence Area";
+            // 
+            // label260
+            // 
+            this.label260.AutoSize = true;
+            this.label260.Location = new System.Drawing.Point(16, 710);
+            this.label260.Name = "label260";
+            this.label260.Size = new System.Drawing.Size(251, 13);
+            this.label260.TabIndex = 300;
+            this.label260.Text = "Flammable Component Damage Consequence Area";
+            // 
+            // txtAContAILCMD_model
+            // 
+            this.txtAContAILCMD_model.Location = new System.Drawing.Point(337, 61);
+            this.txtAContAILCMD_model.Name = "txtAContAILCMD_model";
+            this.txtAContAILCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAILCMD_model.TabIndex = 170;
+            // 
+            // label330
+            // 
+            this.label330.AutoSize = true;
+            this.label330.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label330.Location = new System.Drawing.Point(15, 15);
+            this.label330.Name = "label330";
+            this.label330.Size = new System.Drawing.Size(192, 15);
+            this.label330.TabIndex = 160;
+            this.label330.Text = "Release equations constants";
+            // 
+            // label434
+            // 
+            this.label434.AutoSize = true;
+            this.label434.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label434.Location = new System.Drawing.Point(880, 659);
+            this.label434.Name = "label434";
+            this.label434.Size = new System.Drawing.Size(18, 13);
+            this.label434.TabIndex = 299;
+            this.label434.Text = "m²";
+            // 
+            // label329
+            // 
+            this.label329.AutoSize = true;
+            this.label329.Location = new System.Drawing.Point(15, 45);
+            this.label329.Name = "label329";
+            this.label329.Size = new System.Drawing.Size(237, 13);
+            this.label329.TabIndex = 161;
+            this.label329.Text = "Continous Release-Auto Ignition Not Likely-CMD";
+            // 
+            // label433
+            // 
+            this.label433.AutoSize = true;
+            this.label433.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label433.Location = new System.Drawing.Point(880, 635);
+            this.label433.Name = "label433";
+            this.label433.Size = new System.Drawing.Size(18, 13);
+            this.label433.TabIndex = 298;
+            this.label433.Text = "m²";
+            // 
+            // label327
+            // 
+            this.label327.AutoSize = true;
+            this.label327.Location = new System.Drawing.Point(15, 69);
+            this.label327.Name = "label327";
+            this.label327.Size = new System.Drawing.Size(217, 13);
+            this.label327.TabIndex = 162;
+            this.label327.Text = "Continous Release-Auto Ignition Likely-CMD";
+            // 
+            // label432
+            // 
+            this.label432.AutoSize = true;
+            this.label432.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label432.Location = new System.Drawing.Point(880, 610);
+            this.label432.Name = "label432";
+            this.label432.Size = new System.Drawing.Size(18, 13);
+            this.label432.TabIndex = 297;
+            this.label432.Text = "m²";
+            // 
+            // label326
+            // 
+            this.label326.AutoSize = true;
+            this.label326.Location = new System.Drawing.Point(15, 93);
+            this.label326.Name = "label326";
+            this.label326.Size = new System.Drawing.Size(259, 13);
+            this.label326.TabIndex = 163;
+            this.label326.Text = "Instantaneous Release-Auto Ignition Not Likely-CMD";
+            // 
+            // label431
+            // 
+            this.label431.AutoSize = true;
+            this.label431.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label431.Location = new System.Drawing.Point(880, 585);
+            this.label431.Name = "label431";
+            this.label431.Size = new System.Drawing.Size(18, 13);
+            this.label431.TabIndex = 296;
+            this.label431.Text = "m²";
+            // 
+            // label325
+            // 
+            this.label325.AutoSize = true;
+            this.label325.Location = new System.Drawing.Point(15, 117);
+            this.label325.Name = "label325";
+            this.label325.Size = new System.Drawing.Size(239, 13);
+            this.label325.TabIndex = 164;
+            this.label325.Text = "Instantaneous Release-Auto Ignition Likely-CMD";
+            // 
+            // label430
+            // 
+            this.label430.AutoSize = true;
+            this.label430.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label430.Location = new System.Drawing.Point(880, 560);
+            this.label430.Name = "label430";
+            this.label430.Size = new System.Drawing.Size(18, 13);
+            this.label430.TabIndex = 295;
+            this.label430.Text = "m²";
+            // 
+            // label323
+            // 
+            this.label323.AutoSize = true;
+            this.label323.Location = new System.Drawing.Point(15, 141);
+            this.label323.Name = "label323";
+            this.label323.Size = new System.Drawing.Size(231, 13);
+            this.label323.TabIndex = 165;
+            this.label323.Text = "Continous Release-Auto Ignition Not Likely-INJ";
+            // 
+            // label429
+            // 
+            this.label429.AutoSize = true;
+            this.label429.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label429.Location = new System.Drawing.Point(880, 534);
+            this.label429.Name = "label429";
+            this.label429.Size = new System.Drawing.Size(18, 13);
+            this.label429.TabIndex = 294;
+            this.label429.Text = "m²";
+            // 
+            // label322
+            // 
+            this.label322.AutoSize = true;
+            this.label322.Location = new System.Drawing.Point(15, 165);
+            this.label322.Name = "label322";
+            this.label322.Size = new System.Drawing.Size(211, 13);
+            this.label322.TabIndex = 166;
+            this.label322.Text = "Continous Release-Auto Ignition Likely-INJ";
+            // 
+            // label428
+            // 
+            this.label428.AutoSize = true;
+            this.label428.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label428.Location = new System.Drawing.Point(880, 481);
+            this.label428.Name = "label428";
+            this.label428.Size = new System.Drawing.Size(18, 13);
+            this.label428.TabIndex = 293;
+            this.label428.Text = "m²";
+            // 
+            // label320
+            // 
+            this.label320.AutoSize = true;
+            this.label320.Location = new System.Drawing.Point(15, 189);
+            this.label320.Name = "label320";
+            this.label320.Size = new System.Drawing.Size(253, 13);
+            this.label320.TabIndex = 167;
+            this.label320.Text = "Instantaneous Release-Auto Ignition Not Likely-INJ";
+            // 
+            // label427
+            // 
+            this.label427.AutoSize = true;
+            this.label427.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label427.Location = new System.Drawing.Point(880, 455);
+            this.label427.Name = "label427";
+            this.label427.Size = new System.Drawing.Size(18, 13);
+            this.label427.TabIndex = 292;
+            this.label427.Text = "m²";
+            // 
+            // label319
+            // 
+            this.label319.AutoSize = true;
+            this.label319.Location = new System.Drawing.Point(15, 213);
+            this.label319.Name = "label319";
+            this.label319.Size = new System.Drawing.Size(233, 13);
+            this.label319.TabIndex = 168;
+            this.label319.Text = "Instantaneous Release-Auto Ignition Likely-INJ";
+            // 
+            // label426
+            // 
+            this.label426.AutoSize = true;
+            this.label426.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label426.Location = new System.Drawing.Point(880, 431);
+            this.label426.Name = "label426";
+            this.label426.Size = new System.Drawing.Size(18, 13);
+            this.label426.TabIndex = 291;
+            this.label426.Text = "m²";
+            // 
+            // txtAContAINLCMD_model
+            // 
+            this.txtAContAINLCMD_model.Location = new System.Drawing.Point(337, 37);
+            this.txtAContAINLCMD_model.Name = "txtAContAINLCMD_model";
+            this.txtAContAINLCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAINLCMD_model.TabIndex = 169;
+            // 
+            // label425
+            // 
+            this.label425.AutoSize = true;
+            this.label425.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label425.Location = new System.Drawing.Point(880, 405);
+            this.label425.Name = "label425";
+            this.label425.Size = new System.Drawing.Size(18, 13);
+            this.label425.TabIndex = 290;
+            this.label425.Text = "m²";
+            // 
+            // txtAInstAINLCMD_model
+            // 
+            this.txtAInstAINLCMD_model.Location = new System.Drawing.Point(337, 85);
+            this.txtAInstAINLCMD_model.Name = "txtAInstAINLCMD_model";
+            this.txtAInstAINLCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAINLCMD_model.TabIndex = 171;
+            // 
+            // label424
+            // 
+            this.label424.AutoSize = true;
+            this.label424.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label424.Location = new System.Drawing.Point(880, 380);
+            this.label424.Name = "label424";
+            this.label424.Size = new System.Drawing.Size(18, 13);
+            this.label424.TabIndex = 289;
+            this.label424.Text = "m²";
+            // 
+            // txtAInstAILCMD_model
+            // 
+            this.txtAInstAILCMD_model.Location = new System.Drawing.Point(337, 109);
+            this.txtAInstAILCMD_model.Name = "txtAInstAILCMD_model";
+            this.txtAInstAILCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAILCMD_model.TabIndex = 172;
+            // 
+            // label423
+            // 
+            this.label423.AutoSize = true;
+            this.label423.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label423.Location = new System.Drawing.Point(880, 356);
+            this.label423.Name = "label423";
+            this.label423.Size = new System.Drawing.Size(18, 13);
+            this.label423.TabIndex = 288;
+            this.label423.Text = "m²";
+            // 
+            // txtAContAINLINJ_model
+            // 
+            this.txtAContAINLINJ_model.Location = new System.Drawing.Point(337, 133);
+            this.txtAContAINLINJ_model.Name = "txtAContAINLINJ_model";
+            this.txtAContAINLINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAINLINJ_model.TabIndex = 173;
+            // 
+            // label421
+            // 
+            this.label421.AutoSize = true;
+            this.label421.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label421.Location = new System.Drawing.Point(880, 331);
+            this.label421.Name = "label421";
+            this.label421.Size = new System.Drawing.Size(18, 13);
+            this.label421.TabIndex = 287;
+            this.label421.Text = "m²";
+            // 
+            // txtAContAILINJ_model
+            // 
+            this.txtAContAILINJ_model.Location = new System.Drawing.Point(337, 157);
+            this.txtAContAILINJ_model.Name = "txtAContAILINJ_model";
+            this.txtAContAILINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAILINJ_model.TabIndex = 174;
+            // 
+            // label420
+            // 
+            this.label420.AutoSize = true;
+            this.label420.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label420.Location = new System.Drawing.Point(880, 310);
+            this.label420.Name = "label420";
+            this.label420.Size = new System.Drawing.Size(18, 13);
+            this.label420.TabIndex = 286;
+            this.label420.Text = "m²";
+            // 
+            // txtAInstAINLINJ_model
+            // 
+            this.txtAInstAINLINJ_model.Location = new System.Drawing.Point(337, 181);
+            this.txtAInstAINLINJ_model.Name = "txtAInstAINLINJ_model";
+            this.txtAInstAINLINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAINLINJ_model.TabIndex = 175;
+            // 
+            // label419
+            // 
+            this.label419.AutoSize = true;
+            this.label419.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label419.Location = new System.Drawing.Point(875, 283);
+            this.label419.Name = "label419";
+            this.label419.Size = new System.Drawing.Size(43, 13);
+            this.label419.TabIndex = 285;
+            this.label419.Text = "minutes";
+            // 
+            // txtAInstAILINJ_model
+            // 
+            this.txtAInstAILINJ_model.Location = new System.Drawing.Point(337, 205);
+            this.txtAInstAILINJ_model.Name = "txtAInstAILINJ_model";
+            this.txtAInstAILINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAILINJ_model.TabIndex = 176;
+            // 
+            // txtBContAINLCMD_model
+            // 
+            this.txtBContAINLCMD_model.Location = new System.Drawing.Point(441, 37);
+            this.txtBContAINLCMD_model.Name = "txtBContAINLCMD_model";
+            this.txtBContAINLCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAINLCMD_model.TabIndex = 177;
+            // 
+            // txtBContAILCMD_model
+            // 
+            this.txtBContAILCMD_model.Location = new System.Drawing.Point(441, 61);
+            this.txtBContAILCMD_model.Name = "txtBContAILCMD_model";
+            this.txtBContAILCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAILCMD_model.TabIndex = 178;
+            // 
+            // txtBInstAINLCMD_model
+            // 
+            this.txtBInstAINLCMD_model.Location = new System.Drawing.Point(441, 85);
+            this.txtBInstAINLCMD_model.Name = "txtBInstAINLCMD_model";
+            this.txtBInstAINLCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAINLCMD_model.TabIndex = 179;
+            // 
+            // txtBInstAILCMD_model
+            // 
+            this.txtBInstAILCMD_model.Location = new System.Drawing.Point(441, 109);
+            this.txtBInstAILCMD_model.Name = "txtBInstAILCMD_model";
+            this.txtBInstAILCMD_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAILCMD_model.TabIndex = 180;
+            // 
+            // label300
+            // 
+            this.label300.AutoSize = true;
+            this.label300.Location = new System.Drawing.Point(16, 662);
+            this.label300.Name = "label300";
+            this.label300.Size = new System.Drawing.Size(102, 13);
+            this.label300.TabIndex = 271;
+            this.label300.Text = "AIT Blended-INJ CA";
+            // 
+            // txtBContAINLINJ_model
+            // 
+            this.txtBContAINLINJ_model.Location = new System.Drawing.Point(441, 133);
+            this.txtBContAINLINJ_model.Name = "txtBContAINLINJ_model";
+            this.txtBContAINLINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAINLINJ_model.TabIndex = 181;
+            // 
+            // label301
+            // 
+            this.label301.AutoSize = true;
+            this.label301.Location = new System.Drawing.Point(16, 637);
+            this.label301.Name = "label301";
+            this.label301.Size = new System.Drawing.Size(108, 13);
+            this.label301.TabIndex = 270;
+            this.label301.Text = "AIT Blended-CMD CA";
+            // 
+            // txtBContAILINJ_model
+            // 
+            this.txtBContAILINJ_model.Location = new System.Drawing.Point(441, 157);
+            this.txtBContAILINJ_model.Name = "txtBContAILINJ_model";
+            this.txtBContAILINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAILINJ_model.TabIndex = 182;
+            // 
+            // label302
+            // 
+            this.label302.AutoSize = true;
+            this.label302.Location = new System.Drawing.Point(16, 612);
+            this.label302.Name = "label302";
+            this.label302.Size = new System.Drawing.Size(102, 13);
+            this.label302.TabIndex = 269;
+            this.label302.Text = "Blended-INJ-AIL CA";
+            // 
+            // txtBInstAINLINJ_model
+            // 
+            this.txtBInstAINLINJ_model.Location = new System.Drawing.Point(441, 181);
+            this.txtBInstAINLINJ_model.Name = "txtBInstAINLINJ_model";
+            this.txtBInstAINLINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAINLINJ_model.TabIndex = 183;
+            // 
+            // label303
+            // 
+            this.label303.AutoSize = true;
+            this.label303.Location = new System.Drawing.Point(16, 587);
+            this.label303.Name = "label303";
+            this.label303.Size = new System.Drawing.Size(109, 13);
+            this.label303.TabIndex = 268;
+            this.label303.Text = "Blended-INJ-AINL CA";
+            // 
+            // txtBInstAILINJ_model
+            // 
+            this.txtBInstAILINJ_model.Location = new System.Drawing.Point(441, 205);
+            this.txtBInstAILINJ_model.Name = "txtBInstAILINJ_model";
+            this.txtBInstAILINJ_model.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAILINJ_model.TabIndex = 184;
+            // 
+            // label304
+            // 
+            this.label304.AutoSize = true;
+            this.label304.Location = new System.Drawing.Point(16, 562);
+            this.label304.Name = "label304";
+            this.label304.Size = new System.Drawing.Size(108, 13);
+            this.label304.TabIndex = 267;
+            this.label304.Text = "Blended-CMD-AIL CA";
+            // 
+            // label318
+            // 
+            this.label318.AutoSize = true;
+            this.label318.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label318.Location = new System.Drawing.Point(375, 10);
+            this.label318.Name = "label318";
+            this.label318.Size = new System.Drawing.Size(18, 18);
+            this.label318.TabIndex = 185;
+            this.label318.Text = "A";
+            // 
+            // txtAITBlendINJRupture_model
+            // 
+            this.txtAITBlendINJRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJRupture_model.Location = new System.Drawing.Point(736, 656);
+            this.txtAITBlendINJRupture_model.Name = "txtAITBlendINJRupture_model";
+            this.txtAITBlendINJRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJRupture_model.TabIndex = 262;
+            // 
+            // label317
+            // 
+            this.label317.AutoSize = true;
+            this.label317.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label317.Location = new System.Drawing.Point(476, 10);
+            this.label317.Name = "label317";
+            this.label317.Size = new System.Drawing.Size(18, 18);
+            this.label317.TabIndex = 186;
+            this.label317.Text = "B";
+            // 
+            // txtBlendINJAINLSmall_model
+            // 
+            this.txtBlendINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLSmall_model.Location = new System.Drawing.Point(232, 580);
+            this.txtBlendINJAINLSmall_model.Name = "txtBlendINJAINLSmall_model";
+            this.txtBlendINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLSmall_model.TabIndex = 250;
+            // 
+            // label316
+            // 
+            this.label316.AutoSize = true;
+            this.label316.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label316.Location = new System.Drawing.Point(16, 253);
+            this.label316.Name = "label316";
+            this.label316.Size = new System.Drawing.Size(122, 15);
+            this.label316.TabIndex = 187;
+            this.label316.Text = "Release hole size";
+            // 
+            // txtBlendINJAILSmall_model
+            // 
+            this.txtBlendINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILSmall_model.Location = new System.Drawing.Point(232, 605);
+            this.txtBlendINJAILSmall_model.Name = "txtBlendINJAILSmall_model";
+            this.txtBlendINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILSmall_model.TabIndex = 249;
+            // 
+            // txtInstCMDAILMedium_model
+            // 
+            this.txtInstCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILMedium_model.Location = new System.Drawing.Point(400, 380);
+            this.txtInstCMDAILMedium_model.Name = "txtInstCMDAILMedium_model";
+            this.txtInstCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILMedium_model.TabIndex = 211;
+            // 
+            // txtBlendCMDAILSmall_model
+            // 
+            this.txtBlendCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILSmall_model.Location = new System.Drawing.Point(232, 555);
+            this.txtBlendCMDAILSmall_model.Name = "txtBlendCMDAILSmall_model";
+            this.txtBlendCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILSmall_model.TabIndex = 251;
+            // 
+            // txtInstCMDAINLMedium_model
+            // 
+            this.txtInstCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLMedium_model.Location = new System.Drawing.Point(400, 355);
+            this.txtInstCMDAINLMedium_model.Name = "txtInstCMDAINLMedium_model";
+            this.txtInstCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLMedium_model.TabIndex = 212;
+            // 
+            // txtAITBlendCMDSmall_model
+            // 
+            this.txtAITBlendCMDSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDSmall_model.Location = new System.Drawing.Point(232, 630);
+            this.txtAITBlendCMDSmall_model.Name = "txtAITBlendCMDSmall_model";
+            this.txtAITBlendCMDSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDSmall_model.TabIndex = 248;
+            // 
+            // txtInstCMDAILLarge_model
+            // 
+            this.txtInstCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILLarge_model.Location = new System.Drawing.Point(568, 381);
+            this.txtInstCMDAILLarge_model.Name = "txtInstCMDAILLarge_model";
+            this.txtInstCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILLarge_model.TabIndex = 222;
+            // 
+            // txtBlendCMDAILRupture_model
+            // 
+            this.txtBlendCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILRupture_model.Location = new System.Drawing.Point(736, 556);
+            this.txtBlendCMDAILRupture_model.Name = "txtBlendCMDAILRupture_model";
+            this.txtBlendCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILRupture_model.TabIndex = 266;
+            // 
+            // txtContINJAINLLarge_model
+            // 
+            this.txtContINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLLarge_model.Location = new System.Drawing.Point(568, 406);
+            this.txtContINJAINLLarge_model.Name = "txtContINJAINLLarge_model";
+            this.txtContINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLLarge_model.TabIndex = 221;
+            // 
+            // txtAITBlendINJSmall_model
+            // 
+            this.txtAITBlendINJSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJSmall_model.Location = new System.Drawing.Point(232, 655);
+            this.txtAITBlendINJSmall_model.Name = "txtAITBlendINJSmall_model";
+            this.txtAITBlendINJSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJSmall_model.TabIndex = 247;
+            // 
+            // txtContINJAINLMedium_model
+            // 
+            this.txtContINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLMedium_model.Location = new System.Drawing.Point(400, 405);
+            this.txtContINJAINLMedium_model.Name = "txtContINJAINLMedium_model";
+            this.txtContINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLMedium_model.TabIndex = 210;
+            // 
+            // txtBlendINJAINLRupture_model
+            // 
+            this.txtBlendINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLRupture_model.Location = new System.Drawing.Point(736, 581);
+            this.txtBlendINJAINLRupture_model.Name = "txtBlendINJAINLRupture_model";
+            this.txtBlendINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLRupture_model.TabIndex = 265;
+            // 
+            // txtContCMDAILMedium_model
+            // 
+            this.txtContCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILMedium_model.Location = new System.Drawing.Point(400, 330);
+            this.txtContCMDAILMedium_model.Name = "txtContCMDAILMedium_model";
+            this.txtContCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILMedium_model.TabIndex = 213;
+            // 
+            // txtBlendINJAILRupture_model
+            // 
+            this.txtBlendINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILRupture_model.Location = new System.Drawing.Point(736, 606);
+            this.txtBlendINJAILRupture_model.Name = "txtBlendINJAILRupture_model";
+            this.txtBlendINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILRupture_model.TabIndex = 264;
+            // 
+            // txtContINJAILMedium_model
+            // 
+            this.txtContINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILMedium_model.Location = new System.Drawing.Point(400, 430);
+            this.txtContINJAILMedium_model.Name = "txtContINJAILMedium_model";
+            this.txtContINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILMedium_model.TabIndex = 209;
+            // 
+            // txtAITBlendCMDRupture_model
+            // 
+            this.txtAITBlendCMDRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDRupture_model.Location = new System.Drawing.Point(736, 631);
+            this.txtAITBlendCMDRupture_model.Name = "txtAITBlendCMDRupture_model";
+            this.txtAITBlendCMDRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDRupture_model.TabIndex = 263;
+            // 
+            // txtEneffLarge_model
+            // 
+            this.txtEneffLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffLarge_model.Location = new System.Drawing.Point(568, 280);
+            this.txtEneffLarge_model.Name = "txtEneffLarge_model";
+            this.txtEneffLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffLarge_model.TabIndex = 214;
+            // 
+            // txtAITBlendINJMedium_model
+            // 
+            this.txtAITBlendINJMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJMedium_model.Location = new System.Drawing.Point(400, 655);
+            this.txtAITBlendINJMedium_model.Name = "txtAITBlendINJMedium_model";
+            this.txtAITBlendINJMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJMedium_model.TabIndex = 252;
+            // 
+            // txtInstCMDAINLLarge_model
+            // 
+            this.txtInstCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLLarge_model.Location = new System.Drawing.Point(568, 356);
+            this.txtInstCMDAINLLarge_model.Name = "txtInstCMDAINLLarge_model";
+            this.txtInstCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLLarge_model.TabIndex = 223;
+            // 
+            // txtBlendINJAILLarge_model
+            // 
+            this.txtBlendINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILLarge_model.Location = new System.Drawing.Point(568, 606);
+            this.txtBlendINJAILLarge_model.Name = "txtBlendINJAILLarge_model";
+            this.txtBlendINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILLarge_model.TabIndex = 259;
+            // 
+            // txtContINJAILLarge_model
+            // 
+            this.txtContINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILLarge_model.Location = new System.Drawing.Point(568, 431);
+            this.txtContINJAILLarge_model.Name = "txtContINJAILLarge_model";
+            this.txtContINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILLarge_model.TabIndex = 220;
+            // 
+            // txtAITBlendCMDLarge_model
+            // 
+            this.txtAITBlendCMDLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDLarge_model.Location = new System.Drawing.Point(568, 631);
+            this.txtAITBlendCMDLarge_model.Name = "txtAITBlendCMDLarge_model";
+            this.txtAITBlendCMDLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDLarge_model.TabIndex = 258;
+            // 
+            // txtInstINJAINLMedium_model
+            // 
+            this.txtInstINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLMedium_model.Location = new System.Drawing.Point(400, 455);
+            this.txtInstINJAINLMedium_model.Name = "txtInstINJAINLMedium_model";
+            this.txtInstINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLMedium_model.TabIndex = 208;
+            // 
+            // txtAITBlendCMDMedium_model
+            // 
+            this.txtAITBlendCMDMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDMedium_model.Location = new System.Drawing.Point(400, 630);
+            this.txtAITBlendCMDMedium_model.Name = "txtAITBlendCMDMedium_model";
+            this.txtAITBlendCMDMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDMedium_model.TabIndex = 253;
+            // 
+            // txtContCMDAINLLarge_model
+            // 
+            this.txtContCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLLarge_model.Location = new System.Drawing.Point(568, 306);
+            this.txtContCMDAINLLarge_model.Name = "txtContCMDAINLLarge_model";
+            this.txtContCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLLarge_model.TabIndex = 215;
+            // 
+            // txtBlendINJAINLLarge_model
+            // 
+            this.txtBlendINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLLarge_model.Location = new System.Drawing.Point(568, 581);
+            this.txtBlendINJAINLLarge_model.Name = "txtBlendINJAINLLarge_model";
+            this.txtBlendINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLLarge_model.TabIndex = 260;
+            // 
+            // txtInstINJAILMedium_model
+            // 
+            this.txtInstINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILMedium_model.Location = new System.Drawing.Point(400, 480);
+            this.txtInstINJAILMedium_model.Name = "txtInstINJAILMedium_model";
+            this.txtInstINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILMedium_model.TabIndex = 207;
+            // 
+            // txtAITBlendINJLarge_model
+            // 
+            this.txtAITBlendINJLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJLarge_model.Location = new System.Drawing.Point(568, 656);
+            this.txtAITBlendINJLarge_model.Name = "txtAITBlendINJLarge_model";
+            this.txtAITBlendINJLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJLarge_model.TabIndex = 257;
+            // 
+            // txtBlendCMDAINLLarge_model
+            // 
+            this.txtBlendCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLLarge_model.Location = new System.Drawing.Point(568, 531);
+            this.txtBlendCMDAINLLarge_model.Name = "txtBlendCMDAINLLarge_model";
+            this.txtBlendCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLLarge_model.TabIndex = 216;
+            // 
+            // txtBlendINJAILMedium_model
+            // 
+            this.txtBlendINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILMedium_model.Location = new System.Drawing.Point(400, 605);
+            this.txtBlendINJAILMedium_model.Name = "txtBlendINJAILMedium_model";
+            this.txtBlendINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILMedium_model.TabIndex = 254;
+            // 
+            // txtContCMDAILLarge_model
+            // 
+            this.txtContCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILLarge_model.Location = new System.Drawing.Point(568, 331);
+            this.txtContCMDAILLarge_model.Name = "txtContCMDAILLarge_model";
+            this.txtContCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILLarge_model.TabIndex = 224;
+            // 
+            // txtBlendINJAINLMedium_model
+            // 
+            this.txtBlendINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLMedium_model.Location = new System.Drawing.Point(400, 580);
+            this.txtBlendINJAINLMedium_model.Name = "txtBlendINJAINLMedium_model";
+            this.txtBlendINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLMedium_model.TabIndex = 255;
+            // 
+            // txtInstINJAINLLarge_model
+            // 
+            this.txtInstINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLLarge_model.Location = new System.Drawing.Point(568, 456);
+            this.txtInstINJAINLLarge_model.Name = "txtInstINJAINLLarge_model";
+            this.txtInstINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLLarge_model.TabIndex = 219;
+            // 
+            // txtBlendCMDAILLarge_model
+            // 
+            this.txtBlendCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILLarge_model.Location = new System.Drawing.Point(568, 556);
+            this.txtBlendCMDAILLarge_model.Name = "txtBlendCMDAILLarge_model";
+            this.txtBlendCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILLarge_model.TabIndex = 261;
+            // 
+            // txtBlendFactorMedium_model
+            // 
+            this.txtBlendFactorMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorMedium_model.Location = new System.Drawing.Point(400, 505);
+            this.txtBlendFactorMedium_model.Name = "txtBlendFactorMedium_model";
+            this.txtBlendFactorMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorMedium_model.TabIndex = 206;
+            // 
+            // txtBlendCMDAILMedium_model
+            // 
+            this.txtBlendCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILMedium_model.Location = new System.Drawing.Point(400, 555);
+            this.txtBlendCMDAILMedium_model.Name = "txtBlendCMDAILMedium_model";
+            this.txtBlendCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILMedium_model.TabIndex = 256;
+            // 
+            // txtBlendFactorLarge_model
+            // 
+            this.txtBlendFactorLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorLarge_model.Location = new System.Drawing.Point(568, 506);
+            this.txtBlendFactorLarge_model.Name = "txtBlendFactorLarge_model";
+            this.txtBlendFactorLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorLarge_model.TabIndex = 217;
+            // 
+            // label305
+            // 
+            this.label305.AutoSize = true;
+            this.label305.Location = new System.Drawing.Point(16, 537);
+            this.label305.Name = "label305";
+            this.label305.Size = new System.Drawing.Size(115, 13);
+            this.label305.TabIndex = 246;
+            this.label305.Text = "Blended-CMD-AINL CA";
+            // 
+            // label331
+            // 
+            this.label331.AutoSize = true;
+            this.label331.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label331.Location = new System.Drawing.Point(615, 252);
+            this.label331.Name = "label331";
+            this.label331.Size = new System.Drawing.Size(44, 15);
+            this.label331.TabIndex = 188;
+            this.label331.Text = "Large";
+            // 
+            // label306
+            // 
+            this.label306.AutoSize = true;
+            this.label306.Location = new System.Drawing.Point(16, 512);
+            this.label306.Name = "label306";
+            this.label306.Size = new System.Drawing.Size(126, 13);
+            this.label306.TabIndex = 245;
+            this.label306.Text = "Blending Factor, Fact_IC";
+            // 
+            // txtInstINJAILLarge_model
+            // 
+            this.txtInstINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILLarge_model.Location = new System.Drawing.Point(568, 481);
+            this.txtInstINJAILLarge_model.Name = "txtInstINJAILLarge_model";
+            this.txtInstINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILLarge_model.TabIndex = 218;
+            // 
+            // label307
+            // 
+            this.label307.AutoSize = true;
+            this.label307.Location = new System.Drawing.Point(16, 487);
+            this.label307.Name = "label307";
+            this.label307.Size = new System.Drawing.Size(87, 13);
+            this.label307.TabIndex = 244;
+            this.label307.Text = "INST-INJ-AIL CA";
+            // 
+            // txtEneffRupture_model
+            // 
+            this.txtEneffRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffRupture_model.Location = new System.Drawing.Point(736, 280);
+            this.txtEneffRupture_model.Name = "txtEneffRupture_model";
+            this.txtEneffRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffRupture_model.TabIndex = 225;
+            // 
+            // label308
+            // 
+            this.label308.AutoSize = true;
+            this.label308.Location = new System.Drawing.Point(16, 462);
+            this.label308.Name = "label308";
+            this.label308.Size = new System.Drawing.Size(94, 13);
+            this.label308.TabIndex = 243;
+            this.label308.Text = "INST-INJ-AINL CA";
+            // 
+            // txtBlendCMDAINLMedium_model
+            // 
+            this.txtBlendCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLMedium_model.Location = new System.Drawing.Point(400, 530);
+            this.txtBlendCMDAINLMedium_model.Name = "txtBlendCMDAINLMedium_model";
+            this.txtBlendCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLMedium_model.TabIndex = 205;
+            // 
+            // label309
+            // 
+            this.label309.AutoSize = true;
+            this.label309.Location = new System.Drawing.Point(16, 437);
+            this.label309.Name = "label309";
+            this.label309.Size = new System.Drawing.Size(92, 13);
+            this.label309.TabIndex = 242;
+            this.label309.Text = "CONT-INJ-AIL CA";
+            // 
+            // label328
+            // 
+            this.label328.AutoSize = true;
+            this.label328.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label328.Location = new System.Drawing.Point(436, 252);
+            this.label328.Name = "label328";
+            this.label328.Size = new System.Drawing.Size(59, 15);
+            this.label328.TabIndex = 189;
+            this.label328.Text = "Medium";
+            // 
+            // label310
+            // 
+            this.label310.AutoSize = true;
+            this.label310.Location = new System.Drawing.Point(16, 412);
+            this.label310.Name = "label310";
+            this.label310.Size = new System.Drawing.Size(99, 13);
+            this.label310.TabIndex = 241;
+            this.label310.Text = "CONT-INJ-AINL CA";
+            // 
+            // txtContCMDAINLRupture_model
+            // 
+            this.txtContCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLRupture_model.Location = new System.Drawing.Point(736, 306);
+            this.txtContCMDAINLRupture_model.Name = "txtContCMDAINLRupture_model";
+            this.txtContCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLRupture_model.TabIndex = 226;
+            // 
+            // label311
+            // 
+            this.label311.AutoSize = true;
+            this.label311.Location = new System.Drawing.Point(16, 387);
+            this.label311.Name = "label311";
+            this.label311.Size = new System.Drawing.Size(93, 13);
+            this.label311.TabIndex = 240;
+            this.label311.Text = "INST-CMD-AIL CA";
+            // 
+            // txtContCMDAINLMedium_model
+            // 
+            this.txtContCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLMedium_model.Location = new System.Drawing.Point(400, 305);
+            this.txtContCMDAINLMedium_model.Name = "txtContCMDAINLMedium_model";
+            this.txtContCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLMedium_model.TabIndex = 204;
+            // 
+            // label312
+            // 
+            this.label312.AutoSize = true;
+            this.label312.Location = new System.Drawing.Point(16, 362);
+            this.label312.Name = "label312";
+            this.label312.Size = new System.Drawing.Size(100, 13);
+            this.label312.TabIndex = 239;
+            this.label312.Text = "INST-CMD-AINL CA";
+            // 
+            // label324
+            // 
+            this.label324.AutoSize = true;
+            this.label324.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label324.Location = new System.Drawing.Point(267, 252);
+            this.label324.Name = "label324";
+            this.label324.Size = new System.Drawing.Size(44, 15);
+            this.label324.TabIndex = 190;
+            this.label324.Text = "Small";
+            // 
+            // label313
+            // 
+            this.label313.AutoSize = true;
+            this.label313.Location = new System.Drawing.Point(16, 337);
+            this.label313.Name = "label313";
+            this.label313.Size = new System.Drawing.Size(98, 13);
+            this.label313.TabIndex = 238;
+            this.label313.Text = "CONT-CMD-AIL CA";
+            // 
+            // txtEneffMedium_model
+            // 
+            this.txtEneffMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffMedium_model.Location = new System.Drawing.Point(400, 279);
+            this.txtEneffMedium_model.Name = "txtEneffMedium_model";
+            this.txtEneffMedium_model.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffMedium_model.TabIndex = 203;
+            // 
+            // label314
+            // 
+            this.label314.AutoSize = true;
+            this.label314.Location = new System.Drawing.Point(16, 312);
+            this.label314.Name = "label314";
+            this.label314.Size = new System.Drawing.Size(105, 13);
+            this.label314.TabIndex = 237;
+            this.label314.Text = "CONT-CMD-AINL CA";
+            // 
+            // label321
+            // 
+            this.label321.AutoSize = true;
+            this.label321.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label321.Location = new System.Drawing.Point(784, 252);
+            this.label321.Name = "label321";
+            this.label321.Size = new System.Drawing.Size(58, 15);
+            this.label321.TabIndex = 191;
+            this.label321.Text = "Rupture";
+            // 
+            // label315
+            // 
+            this.label315.AutoSize = true;
+            this.label315.Location = new System.Drawing.Point(16, 286);
+            this.label315.Name = "label315";
+            this.label315.Size = new System.Drawing.Size(177, 13);
+            this.label315.TabIndex = 236;
+            this.label315.Text = "Energy Efficiency Correction Factor";
+            // 
+            // txtBlendFactorRupture_model
+            // 
+            this.txtBlendFactorRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorRupture_model.Location = new System.Drawing.Point(736, 506);
+            this.txtBlendFactorRupture_model.Name = "txtBlendFactorRupture_model";
+            this.txtBlendFactorRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorRupture_model.TabIndex = 228;
+            // 
+            // txtContCMDAILRupture_model
+            // 
+            this.txtContCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILRupture_model.Location = new System.Drawing.Point(736, 331);
+            this.txtContCMDAILRupture_model.Name = "txtContCMDAILRupture_model";
+            this.txtContCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILRupture_model.TabIndex = 235;
+            // 
+            // txtContCMDAILSmall_model
+            // 
+            this.txtContCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILSmall_model.Location = new System.Drawing.Point(232, 330);
+            this.txtContCMDAILSmall_model.Name = "txtContCMDAILSmall_model";
+            this.txtContCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILSmall_model.TabIndex = 202;
+            // 
+            // txtEneffSmall_model
+            // 
+            this.txtEneffSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffSmall_model.Location = new System.Drawing.Point(232, 279);
+            this.txtEneffSmall_model.Name = "txtEneffSmall_model";
+            this.txtEneffSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffSmall_model.TabIndex = 192;
+            // 
+            // txtInstCMDAINLRupture_model
+            // 
+            this.txtInstCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLRupture_model.Location = new System.Drawing.Point(736, 356);
+            this.txtInstCMDAINLRupture_model.Name = "txtInstCMDAINLRupture_model";
+            this.txtInstCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLRupture_model.TabIndex = 234;
+            // 
+            // txtInstINJAILRupture_model
+            // 
+            this.txtInstINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILRupture_model.Location = new System.Drawing.Point(736, 481);
+            this.txtInstINJAILRupture_model.Name = "txtInstINJAILRupture_model";
+            this.txtInstINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILRupture_model.TabIndex = 229;
+            // 
+            // txtBlendCMDAINLRupture_model
+            // 
+            this.txtBlendCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLRupture_model.Location = new System.Drawing.Point(736, 531);
+            this.txtBlendCMDAINLRupture_model.Name = "txtBlendCMDAINLRupture_model";
+            this.txtBlendCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLRupture_model.TabIndex = 227;
+            // 
+            // txtInstCMDAINLSmall_model
+            // 
+            this.txtInstCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLSmall_model.Location = new System.Drawing.Point(232, 355);
+            this.txtInstCMDAINLSmall_model.Name = "txtInstCMDAINLSmall_model";
+            this.txtInstCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLSmall_model.TabIndex = 201;
+            // 
+            // txtInstINJAINLSmall_model
+            // 
+            this.txtInstINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLSmall_model.Location = new System.Drawing.Point(232, 455);
+            this.txtInstINJAINLSmall_model.Name = "txtInstINJAINLSmall_model";
+            this.txtInstINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLSmall_model.TabIndex = 197;
+            // 
+            // txtContCMDAINLSmall_model
+            // 
+            this.txtContCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLSmall_model.Location = new System.Drawing.Point(232, 305);
+            this.txtContCMDAINLSmall_model.Name = "txtContCMDAINLSmall_model";
+            this.txtContCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLSmall_model.TabIndex = 193;
+            // 
+            // txtInstCMDAILRupture_model
+            // 
+            this.txtInstCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILRupture_model.Location = new System.Drawing.Point(736, 381);
+            this.txtInstCMDAILRupture_model.Name = "txtInstCMDAILRupture_model";
+            this.txtInstCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILRupture_model.TabIndex = 233;
+            // 
+            // txtInstINJAINLRupture_model
+            // 
+            this.txtInstINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLRupture_model.Location = new System.Drawing.Point(736, 456);
+            this.txtInstINJAINLRupture_model.Name = "txtInstINJAINLRupture_model";
+            this.txtInstINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLRupture_model.TabIndex = 230;
+            // 
+            // txtInstINJAILSmall_model
+            // 
+            this.txtInstINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILSmall_model.Location = new System.Drawing.Point(232, 480);
+            this.txtInstINJAILSmall_model.Name = "txtInstINJAILSmall_model";
+            this.txtInstINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILSmall_model.TabIndex = 196;
+            // 
+            // txtInstCMDAILSmall_model
+            // 
+            this.txtInstCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILSmall_model.Location = new System.Drawing.Point(232, 380);
+            this.txtInstCMDAILSmall_model.Name = "txtInstCMDAILSmall_model";
+            this.txtInstCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILSmall_model.TabIndex = 200;
+            // 
+            // txtContINJAILSmall_model
+            // 
+            this.txtContINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILSmall_model.Location = new System.Drawing.Point(232, 430);
+            this.txtContINJAILSmall_model.Name = "txtContINJAILSmall_model";
+            this.txtContINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILSmall_model.TabIndex = 198;
+            // 
+            // txtBlendCMDAINLSmall_model
+            // 
+            this.txtBlendCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLSmall_model.Location = new System.Drawing.Point(232, 530);
+            this.txtBlendCMDAINLSmall_model.Name = "txtBlendCMDAINLSmall_model";
+            this.txtBlendCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLSmall_model.TabIndex = 194;
+            // 
+            // txtContINJAINLRupture_model
+            // 
+            this.txtContINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLRupture_model.Location = new System.Drawing.Point(736, 406);
+            this.txtContINJAINLRupture_model.Name = "txtContINJAINLRupture_model";
+            this.txtContINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLRupture_model.TabIndex = 232;
+            // 
+            // txtContINJAILRupture_model
+            // 
+            this.txtContINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILRupture_model.Location = new System.Drawing.Point(736, 431);
+            this.txtContINJAILRupture_model.Name = "txtContINJAILRupture_model";
+            this.txtContINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILRupture_model.TabIndex = 231;
+            // 
+            // txtBlendFactorSmall_model
+            // 
+            this.txtBlendFactorSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorSmall_model.Location = new System.Drawing.Point(232, 505);
+            this.txtBlendFactorSmall_model.Name = "txtBlendFactorSmall_model";
+            this.txtBlendFactorSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorSmall_model.TabIndex = 195;
+            // 
+            // txtContINJAINLSmall_model
+            // 
+            this.txtContINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLSmall_model.Location = new System.Drawing.Point(232, 405);
+            this.txtContINJAINLSmall_model.Name = "txtContINJAINLSmall_model";
+            this.txtContINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLSmall_model.TabIndex = 199;
+            // 
+            // tabtoxic
+            // 
+            this.tabtoxic.Controls.Add(this.txtFlammablePICA_toxic);
+            this.tabtoxic.Controls.Add(this.txtFlammableCDCA_toxic);
+            this.tabtoxic.Controls.Add(this.label332);
+            this.tabtoxic.Controls.Add(this.label333);
+            this.tabtoxic.Controls.Add(this.txtAContAILCMD_toxic);
+            this.tabtoxic.Controls.Add(this.label334);
+            this.tabtoxic.Controls.Add(this.label335);
+            this.tabtoxic.Controls.Add(this.label336);
+            this.tabtoxic.Controls.Add(this.label337);
+            this.tabtoxic.Controls.Add(this.label338);
+            this.tabtoxic.Controls.Add(this.label339);
+            this.tabtoxic.Controls.Add(this.label340);
+            this.tabtoxic.Controls.Add(this.label341);
+            this.tabtoxic.Controls.Add(this.label342);
+            this.tabtoxic.Controls.Add(this.label343);
+            this.tabtoxic.Controls.Add(this.label344);
+            this.tabtoxic.Controls.Add(this.label345);
+            this.tabtoxic.Controls.Add(this.label346);
+            this.tabtoxic.Controls.Add(this.label347);
+            this.tabtoxic.Controls.Add(this.label348);
+            this.tabtoxic.Controls.Add(this.label349);
+            this.tabtoxic.Controls.Add(this.label350);
+            this.tabtoxic.Controls.Add(this.label351);
+            this.tabtoxic.Controls.Add(this.txtAContAINLCMD_toxic);
+            this.tabtoxic.Controls.Add(this.label352);
+            this.tabtoxic.Controls.Add(this.txtAInstAINLCMD_toxic);
+            this.tabtoxic.Controls.Add(this.label353);
+            this.tabtoxic.Controls.Add(this.txtAInstAILCMD_toxic);
+            this.tabtoxic.Controls.Add(this.label354);
+            this.tabtoxic.Controls.Add(this.txtAContAINLINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label355);
+            this.tabtoxic.Controls.Add(this.txtAContAILINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label356);
+            this.tabtoxic.Controls.Add(this.txtAInstAINLINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label357);
+            this.tabtoxic.Controls.Add(this.txtAInstAILINJ_toxic);
+            this.tabtoxic.Controls.Add(this.txtBContAINLCMD_toxic);
+            this.tabtoxic.Controls.Add(this.txtBContAILCMD_toxic);
+            this.tabtoxic.Controls.Add(this.txtBInstAINLCMD_toxic);
+            this.tabtoxic.Controls.Add(this.txtBInstAILCMD_toxic);
+            this.tabtoxic.Controls.Add(this.label358);
+            this.tabtoxic.Controls.Add(this.txtBContAINLINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label359);
+            this.tabtoxic.Controls.Add(this.txtBContAILINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label360);
+            this.tabtoxic.Controls.Add(this.txtBInstAINLINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label361);
+            this.tabtoxic.Controls.Add(this.txtBInstAILINJ_toxic);
+            this.tabtoxic.Controls.Add(this.label362);
+            this.tabtoxic.Controls.Add(this.label363);
+            this.tabtoxic.Controls.Add(this.txtAITBlendINJRupture_toxic);
+            this.tabtoxic.Controls.Add(this.label364);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAINLSmall_toxic);
+            this.tabtoxic.Controls.Add(this.label365);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAILSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAILMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAILSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAINLMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendCMDSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAILLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAILRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAINLLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendINJSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAINLMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAINLRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtContCMDAILMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAILRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAILMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendCMDRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtEneffLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendINJMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAINLLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAILLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAILLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendCMDLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAINLMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendCMDMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtContCMDAINLLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAINLLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAILMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtAITBlendINJLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAILMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtContCMDAILLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendINJAINLMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAINLLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAILLarge_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendFactorMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAILMedium_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendFactorLarge_toxic);
+            this.tabtoxic.Controls.Add(this.label407);
+            this.tabtoxic.Controls.Add(this.label408);
+            this.tabtoxic.Controls.Add(this.label461);
+            this.tabtoxic.Controls.Add(this.txtInstINJAILLarge_toxic);
+            this.tabtoxic.Controls.Add(this.label462);
+            this.tabtoxic.Controls.Add(this.txtEneffRupture_toxic);
+            this.tabtoxic.Controls.Add(this.label478);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLMedium_toxic);
+            this.tabtoxic.Controls.Add(this.label480);
+            this.tabtoxic.Controls.Add(this.label481);
+            this.tabtoxic.Controls.Add(this.label482);
+            this.tabtoxic.Controls.Add(this.txtContCMDAINLRupture_toxic);
+            this.tabtoxic.Controls.Add(this.label483);
+            this.tabtoxic.Controls.Add(this.txtContCMDAINLMedium_toxic);
+            this.tabtoxic.Controls.Add(this.label484);
+            this.tabtoxic.Controls.Add(this.label485);
+            this.tabtoxic.Controls.Add(this.label486);
+            this.tabtoxic.Controls.Add(this.txtEneffMedium_toxic);
+            this.tabtoxic.Controls.Add(this.label487);
+            this.tabtoxic.Controls.Add(this.label488);
+            this.tabtoxic.Controls.Add(this.label489);
+            this.tabtoxic.Controls.Add(this.txtBlendFactorRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtContCMDAILRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtContCMDAILSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtEneffSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAINLRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAILRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAINLSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAINLSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtContCMDAINLSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAILRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAINLRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstINJAILSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtInstCMDAILSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAILSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAINLRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAILRupture_toxic);
+            this.tabtoxic.Controls.Add(this.txtBlendFactorSmall_toxic);
+            this.tabtoxic.Controls.Add(this.txtContINJAINLSmall_toxic);
+            this.tabtoxic.Name = "tabtoxic";
+            this.tabtoxic.Size = new System.Drawing.Size(935, 775);
+            this.tabtoxic.Text = "tabtoxic";
+            // 
+            // txtFlammablePICA_toxic
+            // 
+            this.txtFlammablePICA_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlammablePICA_toxic.Location = new System.Drawing.Point(306, 737);
+            this.txtFlammablePICA_toxic.Name = "txtFlammablePICA_toxic";
+            this.txtFlammablePICA_toxic.Size = new System.Drawing.Size(301, 20);
+            this.txtFlammablePICA_toxic.TabIndex = 434;
+            // 
+            // txtFlammableCDCA_toxic
+            // 
+            this.txtFlammableCDCA_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtFlammableCDCA_toxic.Location = new System.Drawing.Point(306, 703);
+            this.txtFlammableCDCA_toxic.Name = "txtFlammableCDCA_toxic";
+            this.txtFlammableCDCA_toxic.Size = new System.Drawing.Size(301, 20);
+            this.txtFlammableCDCA_toxic.TabIndex = 433;
+            // 
+            // label332
+            // 
+            this.label332.AutoSize = true;
+            this.label332.Location = new System.Drawing.Point(16, 740);
+            this.label332.Name = "label332";
+            this.label332.Size = new System.Drawing.Size(227, 13);
+            this.label332.TabIndex = 432;
+            this.label332.Text = "Flammable Personal Injury Consequence Area";
+            // 
+            // label333
+            // 
+            this.label333.AutoSize = true;
+            this.label333.Location = new System.Drawing.Point(16, 710);
+            this.label333.Name = "label333";
+            this.label333.Size = new System.Drawing.Size(251, 13);
+            this.label333.TabIndex = 431;
+            this.label333.Text = "Flammable Component Damage Consequence Area";
+            // 
+            // txtAContAILCMD_toxic
+            // 
+            this.txtAContAILCMD_toxic.Location = new System.Drawing.Point(337, 61);
+            this.txtAContAILCMD_toxic.Name = "txtAContAILCMD_toxic";
+            this.txtAContAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAILCMD_toxic.TabIndex = 314;
+            // 
+            // label334
+            // 
+            this.label334.AutoSize = true;
+            this.label334.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label334.Location = new System.Drawing.Point(15, 15);
+            this.label334.Name = "label334";
+            this.label334.Size = new System.Drawing.Size(192, 15);
+            this.label334.TabIndex = 304;
+            this.label334.Text = "Release equations constants";
+            // 
+            // label335
+            // 
+            this.label335.AutoSize = true;
+            this.label335.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label335.Location = new System.Drawing.Point(880, 659);
+            this.label335.Name = "label335";
+            this.label335.Size = new System.Drawing.Size(18, 13);
+            this.label335.TabIndex = 430;
+            this.label335.Text = "m²";
+            // 
+            // label336
+            // 
+            this.label336.AutoSize = true;
+            this.label336.Location = new System.Drawing.Point(15, 45);
+            this.label336.Name = "label336";
+            this.label336.Size = new System.Drawing.Size(237, 13);
+            this.label336.TabIndex = 305;
+            this.label336.Text = "Continous Release-Auto Ignition Not Likely-CMD";
+            // 
+            // label337
+            // 
+            this.label337.AutoSize = true;
+            this.label337.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label337.Location = new System.Drawing.Point(880, 635);
+            this.label337.Name = "label337";
+            this.label337.Size = new System.Drawing.Size(18, 13);
+            this.label337.TabIndex = 429;
+            this.label337.Text = "m²";
+            // 
+            // label338
+            // 
+            this.label338.AutoSize = true;
+            this.label338.Location = new System.Drawing.Point(15, 69);
+            this.label338.Name = "label338";
+            this.label338.Size = new System.Drawing.Size(217, 13);
+            this.label338.TabIndex = 306;
+            this.label338.Text = "Continous Release-Auto Ignition Likely-CMD";
+            // 
+            // label339
+            // 
+            this.label339.AutoSize = true;
+            this.label339.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label339.Location = new System.Drawing.Point(880, 610);
+            this.label339.Name = "label339";
+            this.label339.Size = new System.Drawing.Size(18, 13);
+            this.label339.TabIndex = 428;
+            this.label339.Text = "m²";
+            // 
+            // label340
+            // 
+            this.label340.AutoSize = true;
+            this.label340.Location = new System.Drawing.Point(15, 93);
+            this.label340.Name = "label340";
+            this.label340.Size = new System.Drawing.Size(259, 13);
+            this.label340.TabIndex = 307;
+            this.label340.Text = "Instantaneous Release-Auto Ignition Not Likely-CMD";
+            // 
+            // label341
+            // 
+            this.label341.AutoSize = true;
+            this.label341.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label341.Location = new System.Drawing.Point(880, 585);
+            this.label341.Name = "label341";
+            this.label341.Size = new System.Drawing.Size(18, 13);
+            this.label341.TabIndex = 427;
+            this.label341.Text = "m²";
+            // 
+            // label342
+            // 
+            this.label342.AutoSize = true;
+            this.label342.Location = new System.Drawing.Point(15, 117);
+            this.label342.Name = "label342";
+            this.label342.Size = new System.Drawing.Size(239, 13);
+            this.label342.TabIndex = 308;
+            this.label342.Text = "Instantaneous Release-Auto Ignition Likely-CMD";
+            // 
+            // label343
+            // 
+            this.label343.AutoSize = true;
+            this.label343.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label343.Location = new System.Drawing.Point(880, 560);
+            this.label343.Name = "label343";
+            this.label343.Size = new System.Drawing.Size(18, 13);
+            this.label343.TabIndex = 426;
+            this.label343.Text = "m²";
+            // 
+            // label344
+            // 
+            this.label344.AutoSize = true;
+            this.label344.Location = new System.Drawing.Point(15, 141);
+            this.label344.Name = "label344";
+            this.label344.Size = new System.Drawing.Size(231, 13);
+            this.label344.TabIndex = 309;
+            this.label344.Text = "Continous Release-Auto Ignition Not Likely-INJ";
+            // 
+            // label345
+            // 
+            this.label345.AutoSize = true;
+            this.label345.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label345.Location = new System.Drawing.Point(880, 534);
+            this.label345.Name = "label345";
+            this.label345.Size = new System.Drawing.Size(18, 13);
+            this.label345.TabIndex = 425;
+            this.label345.Text = "m²";
+            // 
+            // label346
+            // 
+            this.label346.AutoSize = true;
+            this.label346.Location = new System.Drawing.Point(15, 165);
+            this.label346.Name = "label346";
+            this.label346.Size = new System.Drawing.Size(211, 13);
+            this.label346.TabIndex = 310;
+            this.label346.Text = "Continous Release-Auto Ignition Likely-INJ";
+            // 
+            // label347
+            // 
+            this.label347.AutoSize = true;
+            this.label347.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label347.Location = new System.Drawing.Point(880, 481);
+            this.label347.Name = "label347";
+            this.label347.Size = new System.Drawing.Size(18, 13);
+            this.label347.TabIndex = 424;
+            this.label347.Text = "m²";
+            // 
+            // label348
+            // 
+            this.label348.AutoSize = true;
+            this.label348.Location = new System.Drawing.Point(15, 189);
+            this.label348.Name = "label348";
+            this.label348.Size = new System.Drawing.Size(253, 13);
+            this.label348.TabIndex = 311;
+            this.label348.Text = "Instantaneous Release-Auto Ignition Not Likely-INJ";
+            // 
+            // label349
+            // 
+            this.label349.AutoSize = true;
+            this.label349.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label349.Location = new System.Drawing.Point(880, 455);
+            this.label349.Name = "label349";
+            this.label349.Size = new System.Drawing.Size(18, 13);
+            this.label349.TabIndex = 423;
+            this.label349.Text = "m²";
+            // 
+            // label350
+            // 
+            this.label350.AutoSize = true;
+            this.label350.Location = new System.Drawing.Point(15, 213);
+            this.label350.Name = "label350";
+            this.label350.Size = new System.Drawing.Size(233, 13);
+            this.label350.TabIndex = 312;
+            this.label350.Text = "Instantaneous Release-Auto Ignition Likely-INJ";
+            // 
+            // label351
+            // 
+            this.label351.AutoSize = true;
+            this.label351.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label351.Location = new System.Drawing.Point(880, 431);
+            this.label351.Name = "label351";
+            this.label351.Size = new System.Drawing.Size(18, 13);
+            this.label351.TabIndex = 422;
+            this.label351.Text = "m²";
+            // 
+            // txtAContAINLCMD_toxic
+            // 
+            this.txtAContAINLCMD_toxic.Location = new System.Drawing.Point(337, 37);
+            this.txtAContAINLCMD_toxic.Name = "txtAContAINLCMD_toxic";
+            this.txtAContAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAINLCMD_toxic.TabIndex = 313;
+            // 
+            // label352
+            // 
+            this.label352.AutoSize = true;
+            this.label352.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label352.Location = new System.Drawing.Point(880, 405);
+            this.label352.Name = "label352";
+            this.label352.Size = new System.Drawing.Size(18, 13);
+            this.label352.TabIndex = 421;
+            this.label352.Text = "m²";
+            // 
+            // txtAInstAINLCMD_toxic
+            // 
+            this.txtAInstAINLCMD_toxic.Location = new System.Drawing.Point(337, 85);
+            this.txtAInstAINLCMD_toxic.Name = "txtAInstAINLCMD_toxic";
+            this.txtAInstAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAINLCMD_toxic.TabIndex = 315;
+            // 
+            // label353
+            // 
+            this.label353.AutoSize = true;
+            this.label353.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label353.Location = new System.Drawing.Point(880, 380);
+            this.label353.Name = "label353";
+            this.label353.Size = new System.Drawing.Size(18, 13);
+            this.label353.TabIndex = 420;
+            this.label353.Text = "m²";
+            // 
+            // txtAInstAILCMD_toxic
+            // 
+            this.txtAInstAILCMD_toxic.Location = new System.Drawing.Point(337, 109);
+            this.txtAInstAILCMD_toxic.Name = "txtAInstAILCMD_toxic";
+            this.txtAInstAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAILCMD_toxic.TabIndex = 316;
+            // 
+            // label354
+            // 
+            this.label354.AutoSize = true;
+            this.label354.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label354.Location = new System.Drawing.Point(880, 356);
+            this.label354.Name = "label354";
+            this.label354.Size = new System.Drawing.Size(18, 13);
+            this.label354.TabIndex = 419;
+            this.label354.Text = "m²";
+            // 
+            // txtAContAINLINJ_toxic
+            // 
+            this.txtAContAINLINJ_toxic.Location = new System.Drawing.Point(337, 133);
+            this.txtAContAINLINJ_toxic.Name = "txtAContAINLINJ_toxic";
+            this.txtAContAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAINLINJ_toxic.TabIndex = 317;
+            // 
+            // label355
+            // 
+            this.label355.AutoSize = true;
+            this.label355.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label355.Location = new System.Drawing.Point(880, 331);
+            this.label355.Name = "label355";
+            this.label355.Size = new System.Drawing.Size(18, 13);
+            this.label355.TabIndex = 418;
+            this.label355.Text = "m²";
+            // 
+            // txtAContAILINJ_toxic
+            // 
+            this.txtAContAILINJ_toxic.Location = new System.Drawing.Point(337, 157);
+            this.txtAContAILINJ_toxic.Name = "txtAContAILINJ_toxic";
+            this.txtAContAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAContAILINJ_toxic.TabIndex = 318;
+            // 
+            // label356
+            // 
+            this.label356.AutoSize = true;
+            this.label356.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label356.Location = new System.Drawing.Point(880, 310);
+            this.label356.Name = "label356";
+            this.label356.Size = new System.Drawing.Size(18, 13);
+            this.label356.TabIndex = 417;
+            this.label356.Text = "m²";
+            // 
+            // txtAInstAINLINJ_toxic
+            // 
+            this.txtAInstAINLINJ_toxic.Location = new System.Drawing.Point(337, 181);
+            this.txtAInstAINLINJ_toxic.Name = "txtAInstAINLINJ_toxic";
+            this.txtAInstAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAINLINJ_toxic.TabIndex = 319;
+            // 
+            // label357
+            // 
+            this.label357.AutoSize = true;
+            this.label357.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label357.Location = new System.Drawing.Point(875, 283);
+            this.label357.Name = "label357";
+            this.label357.Size = new System.Drawing.Size(43, 13);
+            this.label357.TabIndex = 416;
+            this.label357.Text = "minutes";
+            // 
+            // txtAInstAILINJ_toxic
+            // 
+            this.txtAInstAILINJ_toxic.Location = new System.Drawing.Point(337, 205);
+            this.txtAInstAILINJ_toxic.Name = "txtAInstAILINJ_toxic";
+            this.txtAInstAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtAInstAILINJ_toxic.TabIndex = 320;
+            // 
+            // txtBContAINLCMD_toxic
+            // 
+            this.txtBContAINLCMD_toxic.Location = new System.Drawing.Point(441, 37);
+            this.txtBContAINLCMD_toxic.Name = "txtBContAINLCMD_toxic";
+            this.txtBContAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAINLCMD_toxic.TabIndex = 321;
+            // 
+            // txtBContAILCMD_toxic
+            // 
+            this.txtBContAILCMD_toxic.Location = new System.Drawing.Point(441, 61);
+            this.txtBContAILCMD_toxic.Name = "txtBContAILCMD_toxic";
+            this.txtBContAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAILCMD_toxic.TabIndex = 322;
+            // 
+            // txtBInstAINLCMD_toxic
+            // 
+            this.txtBInstAINLCMD_toxic.Location = new System.Drawing.Point(441, 85);
+            this.txtBInstAINLCMD_toxic.Name = "txtBInstAINLCMD_toxic";
+            this.txtBInstAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAINLCMD_toxic.TabIndex = 323;
+            // 
+            // txtBInstAILCMD_toxic
+            // 
+            this.txtBInstAILCMD_toxic.Location = new System.Drawing.Point(441, 109);
+            this.txtBInstAILCMD_toxic.Name = "txtBInstAILCMD_toxic";
+            this.txtBInstAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAILCMD_toxic.TabIndex = 324;
+            // 
+            // label358
+            // 
+            this.label358.AutoSize = true;
+            this.label358.Location = new System.Drawing.Point(16, 662);
+            this.label358.Name = "label358";
+            this.label358.Size = new System.Drawing.Size(102, 13);
+            this.label358.TabIndex = 415;
+            this.label358.Text = "AIT Blended-INJ CA";
+            // 
+            // txtBContAINLINJ_toxic
+            // 
+            this.txtBContAINLINJ_toxic.Location = new System.Drawing.Point(441, 133);
+            this.txtBContAINLINJ_toxic.Name = "txtBContAINLINJ_toxic";
+            this.txtBContAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAINLINJ_toxic.TabIndex = 325;
+            // 
+            // label359
+            // 
+            this.label359.AutoSize = true;
+            this.label359.Location = new System.Drawing.Point(16, 637);
+            this.label359.Name = "label359";
+            this.label359.Size = new System.Drawing.Size(108, 13);
+            this.label359.TabIndex = 414;
+            this.label359.Text = "AIT Blended-CMD CA";
+            // 
+            // txtBContAILINJ_toxic
+            // 
+            this.txtBContAILINJ_toxic.Location = new System.Drawing.Point(441, 157);
+            this.txtBContAILINJ_toxic.Name = "txtBContAILINJ_toxic";
+            this.txtBContAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBContAILINJ_toxic.TabIndex = 326;
+            // 
+            // label360
+            // 
+            this.label360.AutoSize = true;
+            this.label360.Location = new System.Drawing.Point(16, 612);
+            this.label360.Name = "label360";
+            this.label360.Size = new System.Drawing.Size(102, 13);
+            this.label360.TabIndex = 413;
+            this.label360.Text = "Blended-INJ-AIL CA";
+            // 
+            // txtBInstAINLINJ_toxic
+            // 
+            this.txtBInstAINLINJ_toxic.Location = new System.Drawing.Point(441, 181);
+            this.txtBInstAINLINJ_toxic.Name = "txtBInstAINLINJ_toxic";
+            this.txtBInstAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAINLINJ_toxic.TabIndex = 327;
+            // 
+            // label361
+            // 
+            this.label361.AutoSize = true;
+            this.label361.Location = new System.Drawing.Point(16, 587);
+            this.label361.Name = "label361";
+            this.label361.Size = new System.Drawing.Size(109, 13);
+            this.label361.TabIndex = 412;
+            this.label361.Text = "Blended-INJ-AINL CA";
+            // 
+            // txtBInstAILINJ_toxic
+            // 
+            this.txtBInstAILINJ_toxic.Location = new System.Drawing.Point(441, 205);
+            this.txtBInstAILINJ_toxic.Name = "txtBInstAILINJ_toxic";
+            this.txtBInstAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
+            this.txtBInstAILINJ_toxic.TabIndex = 328;
+            // 
+            // label362
+            // 
+            this.label362.AutoSize = true;
+            this.label362.Location = new System.Drawing.Point(16, 562);
+            this.label362.Name = "label362";
+            this.label362.Size = new System.Drawing.Size(108, 13);
+            this.label362.TabIndex = 411;
+            this.label362.Text = "Blended-CMD-AIL CA";
+            // 
+            // label363
+            // 
+            this.label363.AutoSize = true;
+            this.label363.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label363.Location = new System.Drawing.Point(375, 10);
+            this.label363.Name = "label363";
+            this.label363.Size = new System.Drawing.Size(18, 18);
+            this.label363.TabIndex = 329;
+            this.label363.Text = "A";
+            // 
+            // txtAITBlendINJRupture_toxic
+            // 
+            this.txtAITBlendINJRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJRupture_toxic.Location = new System.Drawing.Point(736, 656);
+            this.txtAITBlendINJRupture_toxic.Name = "txtAITBlendINJRupture_toxic";
+            this.txtAITBlendINJRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJRupture_toxic.TabIndex = 406;
+            // 
+            // label364
+            // 
+            this.label364.AutoSize = true;
+            this.label364.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label364.Location = new System.Drawing.Point(476, 10);
+            this.label364.Name = "label364";
+            this.label364.Size = new System.Drawing.Size(18, 18);
+            this.label364.TabIndex = 330;
+            this.label364.Text = "B";
+            // 
+            // txtBlendINJAINLSmall_toxic
+            // 
+            this.txtBlendINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLSmall_toxic.Location = new System.Drawing.Point(232, 580);
+            this.txtBlendINJAINLSmall_toxic.Name = "txtBlendINJAINLSmall_toxic";
+            this.txtBlendINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLSmall_toxic.TabIndex = 394;
+            // 
+            // label365
+            // 
+            this.label365.AutoSize = true;
+            this.label365.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label365.Location = new System.Drawing.Point(16, 253);
+            this.label365.Name = "label365";
+            this.label365.Size = new System.Drawing.Size(122, 15);
+            this.label365.TabIndex = 331;
+            this.label365.Text = "Release hole size";
+            // 
+            // txtBlendINJAILSmall_toxic
+            // 
+            this.txtBlendINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILSmall_toxic.Location = new System.Drawing.Point(232, 605);
+            this.txtBlendINJAILSmall_toxic.Name = "txtBlendINJAILSmall_toxic";
+            this.txtBlendINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILSmall_toxic.TabIndex = 393;
+            // 
+            // txtInstCMDAILMedium_toxic
+            // 
+            this.txtInstCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILMedium_toxic.Location = new System.Drawing.Point(400, 380);
+            this.txtInstCMDAILMedium_toxic.Name = "txtInstCMDAILMedium_toxic";
+            this.txtInstCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILMedium_toxic.TabIndex = 355;
+            // 
+            // txtBlendCMDAILSmall_toxic
+            // 
+            this.txtBlendCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILSmall_toxic.Location = new System.Drawing.Point(232, 555);
+            this.txtBlendCMDAILSmall_toxic.Name = "txtBlendCMDAILSmall_toxic";
+            this.txtBlendCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILSmall_toxic.TabIndex = 395;
+            // 
+            // txtInstCMDAINLMedium_toxic
+            // 
+            this.txtInstCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLMedium_toxic.Location = new System.Drawing.Point(400, 355);
+            this.txtInstCMDAINLMedium_toxic.Name = "txtInstCMDAINLMedium_toxic";
+            this.txtInstCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLMedium_toxic.TabIndex = 356;
+            // 
+            // txtAITBlendCMDSmall_toxic
+            // 
+            this.txtAITBlendCMDSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDSmall_toxic.Location = new System.Drawing.Point(232, 630);
+            this.txtAITBlendCMDSmall_toxic.Name = "txtAITBlendCMDSmall_toxic";
+            this.txtAITBlendCMDSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDSmall_toxic.TabIndex = 392;
+            // 
+            // txtInstCMDAILLarge_toxic
+            // 
+            this.txtInstCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILLarge_toxic.Location = new System.Drawing.Point(568, 381);
+            this.txtInstCMDAILLarge_toxic.Name = "txtInstCMDAILLarge_toxic";
+            this.txtInstCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILLarge_toxic.TabIndex = 366;
+            // 
+            // txtBlendCMDAILRupture_toxic
+            // 
+            this.txtBlendCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILRupture_toxic.Location = new System.Drawing.Point(736, 556);
+            this.txtBlendCMDAILRupture_toxic.Name = "txtBlendCMDAILRupture_toxic";
+            this.txtBlendCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILRupture_toxic.TabIndex = 410;
+            // 
+            // txtContINJAINLLarge_toxic
+            // 
+            this.txtContINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLLarge_toxic.Location = new System.Drawing.Point(568, 406);
+            this.txtContINJAINLLarge_toxic.Name = "txtContINJAINLLarge_toxic";
+            this.txtContINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLLarge_toxic.TabIndex = 365;
+            // 
+            // txtAITBlendINJSmall_toxic
+            // 
+            this.txtAITBlendINJSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJSmall_toxic.Location = new System.Drawing.Point(232, 655);
+            this.txtAITBlendINJSmall_toxic.Name = "txtAITBlendINJSmall_toxic";
+            this.txtAITBlendINJSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJSmall_toxic.TabIndex = 391;
+            // 
+            // txtContINJAINLMedium_toxic
+            // 
+            this.txtContINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLMedium_toxic.Location = new System.Drawing.Point(400, 405);
+            this.txtContINJAINLMedium_toxic.Name = "txtContINJAINLMedium_toxic";
+            this.txtContINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLMedium_toxic.TabIndex = 354;
+            // 
+            // txtBlendINJAINLRupture_toxic
+            // 
+            this.txtBlendINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLRupture_toxic.Location = new System.Drawing.Point(736, 581);
+            this.txtBlendINJAINLRupture_toxic.Name = "txtBlendINJAINLRupture_toxic";
+            this.txtBlendINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLRupture_toxic.TabIndex = 409;
+            // 
+            // txtContCMDAILMedium_toxic
+            // 
+            this.txtContCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILMedium_toxic.Location = new System.Drawing.Point(400, 330);
+            this.txtContCMDAILMedium_toxic.Name = "txtContCMDAILMedium_toxic";
+            this.txtContCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILMedium_toxic.TabIndex = 357;
+            // 
+            // txtBlendINJAILRupture_toxic
+            // 
+            this.txtBlendINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILRupture_toxic.Location = new System.Drawing.Point(736, 606);
+            this.txtBlendINJAILRupture_toxic.Name = "txtBlendINJAILRupture_toxic";
+            this.txtBlendINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILRupture_toxic.TabIndex = 408;
+            // 
+            // txtContINJAILMedium_toxic
+            // 
+            this.txtContINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILMedium_toxic.Location = new System.Drawing.Point(400, 430);
+            this.txtContINJAILMedium_toxic.Name = "txtContINJAILMedium_toxic";
+            this.txtContINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILMedium_toxic.TabIndex = 353;
+            // 
+            // txtAITBlendCMDRupture_toxic
+            // 
+            this.txtAITBlendCMDRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDRupture_toxic.Location = new System.Drawing.Point(736, 631);
+            this.txtAITBlendCMDRupture_toxic.Name = "txtAITBlendCMDRupture_toxic";
+            this.txtAITBlendCMDRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDRupture_toxic.TabIndex = 407;
+            // 
+            // txtEneffLarge_toxic
+            // 
+            this.txtEneffLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffLarge_toxic.Location = new System.Drawing.Point(568, 280);
+            this.txtEneffLarge_toxic.Name = "txtEneffLarge_toxic";
+            this.txtEneffLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffLarge_toxic.TabIndex = 358;
+            // 
+            // txtAITBlendINJMedium_toxic
+            // 
+            this.txtAITBlendINJMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJMedium_toxic.Location = new System.Drawing.Point(400, 655);
+            this.txtAITBlendINJMedium_toxic.Name = "txtAITBlendINJMedium_toxic";
+            this.txtAITBlendINJMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJMedium_toxic.TabIndex = 396;
+            // 
+            // txtInstCMDAINLLarge_toxic
+            // 
+            this.txtInstCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLLarge_toxic.Location = new System.Drawing.Point(568, 356);
+            this.txtInstCMDAINLLarge_toxic.Name = "txtInstCMDAINLLarge_toxic";
+            this.txtInstCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLLarge_toxic.TabIndex = 367;
+            // 
+            // txtBlendINJAILLarge_toxic
+            // 
+            this.txtBlendINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILLarge_toxic.Location = new System.Drawing.Point(568, 606);
+            this.txtBlendINJAILLarge_toxic.Name = "txtBlendINJAILLarge_toxic";
+            this.txtBlendINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILLarge_toxic.TabIndex = 403;
+            // 
+            // txtContINJAILLarge_toxic
+            // 
+            this.txtContINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILLarge_toxic.Location = new System.Drawing.Point(568, 431);
+            this.txtContINJAILLarge_toxic.Name = "txtContINJAILLarge_toxic";
+            this.txtContINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILLarge_toxic.TabIndex = 364;
+            // 
+            // txtAITBlendCMDLarge_toxic
+            // 
+            this.txtAITBlendCMDLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDLarge_toxic.Location = new System.Drawing.Point(568, 631);
+            this.txtAITBlendCMDLarge_toxic.Name = "txtAITBlendCMDLarge_toxic";
+            this.txtAITBlendCMDLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDLarge_toxic.TabIndex = 402;
+            // 
+            // txtInstINJAINLMedium_toxic
+            // 
+            this.txtInstINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLMedium_toxic.Location = new System.Drawing.Point(400, 455);
+            this.txtInstINJAINLMedium_toxic.Name = "txtInstINJAINLMedium_toxic";
+            this.txtInstINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLMedium_toxic.TabIndex = 352;
+            // 
+            // txtAITBlendCMDMedium_toxic
+            // 
+            this.txtAITBlendCMDMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendCMDMedium_toxic.Location = new System.Drawing.Point(400, 630);
+            this.txtAITBlendCMDMedium_toxic.Name = "txtAITBlendCMDMedium_toxic";
+            this.txtAITBlendCMDMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendCMDMedium_toxic.TabIndex = 397;
+            // 
+            // txtContCMDAINLLarge_toxic
+            // 
+            this.txtContCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLLarge_toxic.Location = new System.Drawing.Point(568, 306);
+            this.txtContCMDAINLLarge_toxic.Name = "txtContCMDAINLLarge_toxic";
+            this.txtContCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLLarge_toxic.TabIndex = 359;
+            // 
+            // txtBlendINJAINLLarge_toxic
+            // 
+            this.txtBlendINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLLarge_toxic.Location = new System.Drawing.Point(568, 581);
+            this.txtBlendINJAINLLarge_toxic.Name = "txtBlendINJAINLLarge_toxic";
+            this.txtBlendINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLLarge_toxic.TabIndex = 404;
+            // 
+            // txtInstINJAILMedium_toxic
+            // 
+            this.txtInstINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILMedium_toxic.Location = new System.Drawing.Point(400, 480);
+            this.txtInstINJAILMedium_toxic.Name = "txtInstINJAILMedium_toxic";
+            this.txtInstINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILMedium_toxic.TabIndex = 351;
+            // 
+            // txtAITBlendINJLarge_toxic
+            // 
+            this.txtAITBlendINJLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAITBlendINJLarge_toxic.Location = new System.Drawing.Point(568, 656);
+            this.txtAITBlendINJLarge_toxic.Name = "txtAITBlendINJLarge_toxic";
+            this.txtAITBlendINJLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtAITBlendINJLarge_toxic.TabIndex = 401;
+            // 
+            // txtBlendCMDAINLLarge_toxic
+            // 
+            this.txtBlendCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLLarge_toxic.Location = new System.Drawing.Point(568, 531);
+            this.txtBlendCMDAINLLarge_toxic.Name = "txtBlendCMDAINLLarge_toxic";
+            this.txtBlendCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLLarge_toxic.TabIndex = 360;
+            // 
+            // txtBlendINJAILMedium_toxic
+            // 
+            this.txtBlendINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAILMedium_toxic.Location = new System.Drawing.Point(400, 605);
+            this.txtBlendINJAILMedium_toxic.Name = "txtBlendINJAILMedium_toxic";
+            this.txtBlendINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAILMedium_toxic.TabIndex = 398;
+            // 
+            // txtContCMDAILLarge_toxic
+            // 
+            this.txtContCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILLarge_toxic.Location = new System.Drawing.Point(568, 331);
+            this.txtContCMDAILLarge_toxic.Name = "txtContCMDAILLarge_toxic";
+            this.txtContCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILLarge_toxic.TabIndex = 368;
+            // 
+            // txtBlendINJAINLMedium_toxic
+            // 
+            this.txtBlendINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendINJAINLMedium_toxic.Location = new System.Drawing.Point(400, 580);
+            this.txtBlendINJAINLMedium_toxic.Name = "txtBlendINJAINLMedium_toxic";
+            this.txtBlendINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendINJAINLMedium_toxic.TabIndex = 399;
+            // 
+            // txtInstINJAINLLarge_toxic
+            // 
+            this.txtInstINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLLarge_toxic.Location = new System.Drawing.Point(568, 456);
+            this.txtInstINJAINLLarge_toxic.Name = "txtInstINJAINLLarge_toxic";
+            this.txtInstINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLLarge_toxic.TabIndex = 363;
+            // 
+            // txtBlendCMDAILLarge_toxic
+            // 
+            this.txtBlendCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILLarge_toxic.Location = new System.Drawing.Point(568, 556);
+            this.txtBlendCMDAILLarge_toxic.Name = "txtBlendCMDAILLarge_toxic";
+            this.txtBlendCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILLarge_toxic.TabIndex = 405;
+            // 
+            // txtBlendFactorMedium_toxic
+            // 
+            this.txtBlendFactorMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorMedium_toxic.Location = new System.Drawing.Point(400, 505);
+            this.txtBlendFactorMedium_toxic.Name = "txtBlendFactorMedium_toxic";
+            this.txtBlendFactorMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorMedium_toxic.TabIndex = 350;
+            // 
+            // txtBlendCMDAILMedium_toxic
+            // 
+            this.txtBlendCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAILMedium_toxic.Location = new System.Drawing.Point(400, 555);
+            this.txtBlendCMDAILMedium_toxic.Name = "txtBlendCMDAILMedium_toxic";
+            this.txtBlendCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAILMedium_toxic.TabIndex = 400;
+            // 
+            // txtBlendFactorLarge_toxic
+            // 
+            this.txtBlendFactorLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorLarge_toxic.Location = new System.Drawing.Point(568, 506);
+            this.txtBlendFactorLarge_toxic.Name = "txtBlendFactorLarge_toxic";
+            this.txtBlendFactorLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorLarge_toxic.TabIndex = 361;
+            // 
+            // label407
+            // 
+            this.label407.AutoSize = true;
+            this.label407.Location = new System.Drawing.Point(16, 537);
+            this.label407.Name = "label407";
+            this.label407.Size = new System.Drawing.Size(115, 13);
+            this.label407.TabIndex = 390;
+            this.label407.Text = "Blended-CMD-AINL CA";
+            // 
+            // label408
+            // 
+            this.label408.AutoSize = true;
+            this.label408.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label408.Location = new System.Drawing.Point(615, 252);
+            this.label408.Name = "label408";
+            this.label408.Size = new System.Drawing.Size(44, 15);
+            this.label408.TabIndex = 332;
+            this.label408.Text = "Large";
+            // 
+            // label461
+            // 
+            this.label461.AutoSize = true;
+            this.label461.Location = new System.Drawing.Point(16, 512);
+            this.label461.Name = "label461";
+            this.label461.Size = new System.Drawing.Size(126, 13);
+            this.label461.TabIndex = 389;
+            this.label461.Text = "Blending Factor, Fact_IC";
+            // 
+            // txtInstINJAILLarge_toxic
+            // 
+            this.txtInstINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILLarge_toxic.Location = new System.Drawing.Point(568, 481);
+            this.txtInstINJAILLarge_toxic.Name = "txtInstINJAILLarge_toxic";
+            this.txtInstINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILLarge_toxic.TabIndex = 362;
+            // 
+            // label462
+            // 
+            this.label462.AutoSize = true;
+            this.label462.Location = new System.Drawing.Point(16, 487);
+            this.label462.Name = "label462";
+            this.label462.Size = new System.Drawing.Size(87, 13);
+            this.label462.TabIndex = 388;
+            this.label462.Text = "INST-INJ-AIL CA";
+            // 
+            // txtEneffRupture_toxic
+            // 
+            this.txtEneffRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffRupture_toxic.Location = new System.Drawing.Point(736, 280);
+            this.txtEneffRupture_toxic.Name = "txtEneffRupture_toxic";
+            this.txtEneffRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffRupture_toxic.TabIndex = 369;
+            // 
+            // label478
+            // 
+            this.label478.AutoSize = true;
+            this.label478.Location = new System.Drawing.Point(16, 461);
+            this.label478.Name = "label478";
+            this.label478.Size = new System.Drawing.Size(94, 13);
+            this.label478.TabIndex = 387;
+            this.label478.Text = "INST-INJ-AINL CA";
+            // 
+            // txtBlendCMDAINLMedium_toxic
+            // 
+            this.txtBlendCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLMedium_toxic.Location = new System.Drawing.Point(400, 530);
+            this.txtBlendCMDAINLMedium_toxic.Name = "txtBlendCMDAINLMedium_toxic";
+            this.txtBlendCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLMedium_toxic.TabIndex = 349;
+            // 
+            // label480
+            // 
+            this.label480.AutoSize = true;
+            this.label480.Location = new System.Drawing.Point(16, 437);
+            this.label480.Name = "label480";
+            this.label480.Size = new System.Drawing.Size(92, 13);
+            this.label480.TabIndex = 386;
+            this.label480.Text = "CONT-INJ-AIL CA";
+            // 
+            // label481
+            // 
+            this.label481.AutoSize = true;
+            this.label481.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label481.Location = new System.Drawing.Point(436, 252);
+            this.label481.Name = "label481";
+            this.label481.Size = new System.Drawing.Size(59, 15);
+            this.label481.TabIndex = 333;
+            this.label481.Text = "Medium";
+            // 
+            // label482
+            // 
+            this.label482.AutoSize = true;
+            this.label482.Location = new System.Drawing.Point(16, 412);
+            this.label482.Name = "label482";
+            this.label482.Size = new System.Drawing.Size(99, 13);
+            this.label482.TabIndex = 385;
+            this.label482.Text = "CONT-INJ-AINL CA";
+            // 
+            // txtContCMDAINLRupture_toxic
+            // 
+            this.txtContCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLRupture_toxic.Location = new System.Drawing.Point(736, 306);
+            this.txtContCMDAINLRupture_toxic.Name = "txtContCMDAINLRupture_toxic";
+            this.txtContCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLRupture_toxic.TabIndex = 370;
+            // 
+            // label483
+            // 
+            this.label483.AutoSize = true;
+            this.label483.Location = new System.Drawing.Point(16, 387);
+            this.label483.Name = "label483";
+            this.label483.Size = new System.Drawing.Size(93, 13);
+            this.label483.TabIndex = 384;
+            this.label483.Text = "INST-CMD-AIL CA";
+            // 
+            // txtContCMDAINLMedium_toxic
+            // 
+            this.txtContCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLMedium_toxic.Location = new System.Drawing.Point(400, 305);
+            this.txtContCMDAINLMedium_toxic.Name = "txtContCMDAINLMedium_toxic";
+            this.txtContCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLMedium_toxic.TabIndex = 348;
+            // 
+            // label484
+            // 
+            this.label484.AutoSize = true;
+            this.label484.Location = new System.Drawing.Point(16, 362);
+            this.label484.Name = "label484";
+            this.label484.Size = new System.Drawing.Size(100, 13);
+            this.label484.TabIndex = 383;
+            this.label484.Text = "INST-CMD-AINL CA";
+            // 
+            // label485
+            // 
+            this.label485.AutoSize = true;
+            this.label485.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label485.Location = new System.Drawing.Point(267, 252);
+            this.label485.Name = "label485";
+            this.label485.Size = new System.Drawing.Size(44, 15);
+            this.label485.TabIndex = 334;
+            this.label485.Text = "Small";
+            // 
+            // label486
+            // 
+            this.label486.AutoSize = true;
+            this.label486.Location = new System.Drawing.Point(16, 337);
+            this.label486.Name = "label486";
+            this.label486.Size = new System.Drawing.Size(98, 13);
+            this.label486.TabIndex = 382;
+            this.label486.Text = "CONT-CMD-AIL CA";
+            // 
+            // txtEneffMedium_toxic
+            // 
+            this.txtEneffMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffMedium_toxic.Location = new System.Drawing.Point(400, 279);
+            this.txtEneffMedium_toxic.Name = "txtEneffMedium_toxic";
+            this.txtEneffMedium_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffMedium_toxic.TabIndex = 347;
+            // 
+            // label487
+            // 
+            this.label487.AutoSize = true;
+            this.label487.Location = new System.Drawing.Point(16, 312);
+            this.label487.Name = "label487";
+            this.label487.Size = new System.Drawing.Size(105, 13);
+            this.label487.TabIndex = 381;
+            this.label487.Text = "CONT-CMD-AINL CA";
+            // 
+            // label488
+            // 
+            this.label488.AutoSize = true;
+            this.label488.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label488.Location = new System.Drawing.Point(784, 252);
+            this.label488.Name = "label488";
+            this.label488.Size = new System.Drawing.Size(58, 15);
+            this.label488.TabIndex = 335;
+            this.label488.Text = "Rupture";
+            // 
+            // label489
+            // 
+            this.label489.AutoSize = true;
+            this.label489.Location = new System.Drawing.Point(16, 286);
+            this.label489.Name = "label489";
+            this.label489.Size = new System.Drawing.Size(177, 13);
+            this.label489.TabIndex = 380;
+            this.label489.Text = "Energy Efficiency Correction Factor";
+            // 
+            // txtBlendFactorRupture_toxic
+            // 
+            this.txtBlendFactorRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorRupture_toxic.Location = new System.Drawing.Point(736, 506);
+            this.txtBlendFactorRupture_toxic.Name = "txtBlendFactorRupture_toxic";
+            this.txtBlendFactorRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorRupture_toxic.TabIndex = 372;
+            // 
+            // txtContCMDAILRupture_toxic
+            // 
+            this.txtContCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILRupture_toxic.Location = new System.Drawing.Point(736, 331);
+            this.txtContCMDAILRupture_toxic.Name = "txtContCMDAILRupture_toxic";
+            this.txtContCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILRupture_toxic.TabIndex = 379;
+            // 
+            // txtContCMDAILSmall_toxic
+            // 
+            this.txtContCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAILSmall_toxic.Location = new System.Drawing.Point(232, 330);
+            this.txtContCMDAILSmall_toxic.Name = "txtContCMDAILSmall_toxic";
+            this.txtContCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAILSmall_toxic.TabIndex = 346;
+            // 
+            // txtEneffSmall_toxic
+            // 
+            this.txtEneffSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtEneffSmall_toxic.Location = new System.Drawing.Point(232, 279);
+            this.txtEneffSmall_toxic.Name = "txtEneffSmall_toxic";
+            this.txtEneffSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtEneffSmall_toxic.TabIndex = 336;
+            // 
+            // txtInstCMDAINLRupture_toxic
+            // 
+            this.txtInstCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLRupture_toxic.Location = new System.Drawing.Point(736, 356);
+            this.txtInstCMDAINLRupture_toxic.Name = "txtInstCMDAINLRupture_toxic";
+            this.txtInstCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLRupture_toxic.TabIndex = 378;
+            // 
+            // txtInstINJAILRupture_toxic
+            // 
+            this.txtInstINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILRupture_toxic.Location = new System.Drawing.Point(736, 481);
+            this.txtInstINJAILRupture_toxic.Name = "txtInstINJAILRupture_toxic";
+            this.txtInstINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILRupture_toxic.TabIndex = 373;
+            // 
+            // txtBlendCMDAINLRupture_toxic
+            // 
+            this.txtBlendCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLRupture_toxic.Location = new System.Drawing.Point(736, 531);
+            this.txtBlendCMDAINLRupture_toxic.Name = "txtBlendCMDAINLRupture_toxic";
+            this.txtBlendCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLRupture_toxic.TabIndex = 371;
+            // 
+            // txtInstCMDAINLSmall_toxic
+            // 
+            this.txtInstCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAINLSmall_toxic.Location = new System.Drawing.Point(232, 355);
+            this.txtInstCMDAINLSmall_toxic.Name = "txtInstCMDAINLSmall_toxic";
+            this.txtInstCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAINLSmall_toxic.TabIndex = 345;
+            // 
+            // txtInstINJAINLSmall_toxic
+            // 
+            this.txtInstINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLSmall_toxic.Location = new System.Drawing.Point(232, 455);
+            this.txtInstINJAINLSmall_toxic.Name = "txtInstINJAINLSmall_toxic";
+            this.txtInstINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLSmall_toxic.TabIndex = 341;
+            // 
+            // txtContCMDAINLSmall_toxic
+            // 
+            this.txtContCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContCMDAINLSmall_toxic.Location = new System.Drawing.Point(232, 305);
+            this.txtContCMDAINLSmall_toxic.Name = "txtContCMDAINLSmall_toxic";
+            this.txtContCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContCMDAINLSmall_toxic.TabIndex = 337;
+            // 
+            // txtInstCMDAILRupture_toxic
+            // 
+            this.txtInstCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILRupture_toxic.Location = new System.Drawing.Point(736, 381);
+            this.txtInstCMDAILRupture_toxic.Name = "txtInstCMDAILRupture_toxic";
+            this.txtInstCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILRupture_toxic.TabIndex = 377;
+            // 
+            // txtInstINJAINLRupture_toxic
+            // 
+            this.txtInstINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAINLRupture_toxic.Location = new System.Drawing.Point(736, 456);
+            this.txtInstINJAINLRupture_toxic.Name = "txtInstINJAINLRupture_toxic";
+            this.txtInstINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAINLRupture_toxic.TabIndex = 374;
+            // 
+            // txtInstINJAILSmall_toxic
+            // 
+            this.txtInstINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstINJAILSmall_toxic.Location = new System.Drawing.Point(232, 480);
+            this.txtInstINJAILSmall_toxic.Name = "txtInstINJAILSmall_toxic";
+            this.txtInstINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstINJAILSmall_toxic.TabIndex = 340;
+            // 
+            // txtInstCMDAILSmall_toxic
+            // 
+            this.txtInstCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtInstCMDAILSmall_toxic.Location = new System.Drawing.Point(232, 380);
+            this.txtInstCMDAILSmall_toxic.Name = "txtInstCMDAILSmall_toxic";
+            this.txtInstCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtInstCMDAILSmall_toxic.TabIndex = 344;
+            // 
+            // txtContINJAILSmall_toxic
+            // 
+            this.txtContINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILSmall_toxic.Location = new System.Drawing.Point(232, 430);
+            this.txtContINJAILSmall_toxic.Name = "txtContINJAILSmall_toxic";
+            this.txtContINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILSmall_toxic.TabIndex = 342;
+            // 
+            // txtBlendCMDAINLSmall_toxic
+            // 
+            this.txtBlendCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendCMDAINLSmall_toxic.Location = new System.Drawing.Point(232, 530);
+            this.txtBlendCMDAINLSmall_toxic.Name = "txtBlendCMDAINLSmall_toxic";
+            this.txtBlendCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendCMDAINLSmall_toxic.TabIndex = 338;
+            // 
+            // txtContINJAINLRupture_toxic
+            // 
+            this.txtContINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLRupture_toxic.Location = new System.Drawing.Point(736, 406);
+            this.txtContINJAINLRupture_toxic.Name = "txtContINJAINLRupture_toxic";
+            this.txtContINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLRupture_toxic.TabIndex = 376;
+            // 
+            // txtContINJAILRupture_toxic
+            // 
+            this.txtContINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAILRupture_toxic.Location = new System.Drawing.Point(736, 431);
+            this.txtContINJAILRupture_toxic.Name = "txtContINJAILRupture_toxic";
+            this.txtContINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAILRupture_toxic.TabIndex = 375;
+            // 
+            // txtBlendFactorSmall_toxic
+            // 
+            this.txtBlendFactorSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtBlendFactorSmall_toxic.Location = new System.Drawing.Point(232, 505);
+            this.txtBlendFactorSmall_toxic.Name = "txtBlendFactorSmall_toxic";
+            this.txtBlendFactorSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtBlendFactorSmall_toxic.TabIndex = 339;
+            // 
+            // txtContINJAINLSmall_toxic
+            // 
+            this.txtContINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtContINJAINLSmall_toxic.Location = new System.Drawing.Point(232, 405);
+            this.txtContINJAINLSmall_toxic.Name = "txtContINJAINLSmall_toxic";
+            this.txtContINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
+            this.txtContINJAINLSmall_toxic.TabIndex = 343;
+            // 
+            // lblFCA
+            // 
+            this.lblFCA.BackColor = System.Drawing.SystemColors.Highlight;
+            this.lblFCA.ForeColor = System.Drawing.Color.White;
+            this.lblFCA.Location = new System.Drawing.Point(-2, 0);
+            this.lblFCA.Name = "lblFCA";
+            this.lblFCA.Size = new System.Drawing.Size(945, 21);
+            this.lblFCA.TabIndex = 1;
+            this.lblFCA.Text = "▼ Flammable Consequence Area";
+            this.lblFCA.Click += new System.EventHandler(this.lblFCA_Click);
             // 
             // panelRHP
             // 
@@ -3159,1267 +7003,6 @@
             this.lblRHP.Text = "▼ Release Holes Properties";
             this.lblRHP.Click += new System.EventHandler(this.lblRHP_Click);
             // 
-            // panelNonTF
-            // 
-            this.panelNonTF.Controls.Add(this.label406);
-            this.panelNonTF.Controls.Add(this.label405);
-            this.panelNonTF.Controls.Add(this.label404);
-            this.panelNonTF.Controls.Add(this.label403);
-            this.panelNonTF.Controls.Add(this.label394);
-            this.panelNonTF.Controls.Add(this.label395);
-            this.panelNonTF.Controls.Add(this.label396);
-            this.panelNonTF.Controls.Add(this.label397);
-            this.panelNonTF.Controls.Add(this.txtBlend_CA4);
-            this.panelNonTF.Controls.Add(this.label398);
-            this.panelNonTF.Controls.Add(this.txtINST_CA1);
-            this.panelNonTF.Controls.Add(this.txtCONT_CA1);
-            this.panelNonTF.Controls.Add(this.txtBlend_CA1);
-            this.panelNonTF.Controls.Add(this.label399);
-            this.panelNonTF.Controls.Add(this.txtCONT_CA2);
-            this.panelNonTF.Controls.Add(this.label400);
-            this.panelNonTF.Controls.Add(this.txtINST_CA2);
-            this.panelNonTF.Controls.Add(this.txtINST_CA4);
-            this.panelNonTF.Controls.Add(this.label401);
-            this.panelNonTF.Controls.Add(this.txtCONT_CA4);
-            this.panelNonTF.Controls.Add(this.label402);
-            this.panelNonTF.Controls.Add(this.txtBlend_CA3);
-            this.panelNonTF.Controls.Add(this.txtINST_CA3);
-            this.panelNonTF.Controls.Add(this.txtCONT_CA3);
-            this.panelNonTF.Controls.Add(this.txtBlend_CA2);
-            this.panelNonTF.Controls.Add(this.txtNonFlammableNonToxicCon);
-            this.panelNonTF.Controls.Add(this.label422);
-            this.panelNonTF.Location = new System.Drawing.Point(4, 2153);
-            this.panelNonTF.Name = "panelNonTF";
-            this.panelNonTF.Size = new System.Drawing.Size(952, 200);
-            this.panelNonTF.TabIndex = 0;
-            // 
-            // label406
-            // 
-            this.label406.AutoSize = true;
-            this.label406.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label406.Location = new System.Drawing.Point(906, 70);
-            this.label406.Name = "label406";
-            this.label406.Size = new System.Drawing.Size(21, 13);
-            this.label406.TabIndex = 11;
-            this.label406.Text = "m2";
-            // 
-            // label405
-            // 
-            this.label405.AutoSize = true;
-            this.label405.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label405.Location = new System.Drawing.Point(906, 92);
-            this.label405.Name = "label405";
-            this.label405.Size = new System.Drawing.Size(21, 13);
-            this.label405.TabIndex = 17;
-            this.label405.Text = "m2";
-            // 
-            // label404
-            // 
-            this.label404.AutoSize = true;
-            this.label404.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label404.Location = new System.Drawing.Point(906, 117);
-            this.label404.Name = "label404";
-            this.label404.Size = new System.Drawing.Size(21, 13);
-            this.label404.TabIndex = 23;
-            this.label404.Text = "m2";
-            // 
-            // label403
-            // 
-            this.label403.AutoSize = true;
-            this.label403.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label403.Location = new System.Drawing.Point(634, 143);
-            this.label403.Name = "label403";
-            this.label403.Size = new System.Drawing.Size(21, 13);
-            this.label403.TabIndex = 26;
-            this.label403.Text = "m2";
-            // 
-            // label394
-            // 
-            this.label394.AutoSize = true;
-            this.label394.Location = new System.Drawing.Point(30, 140);
-            this.label394.Name = "label394";
-            this.label394.Size = new System.Drawing.Size(263, 15);
-            this.label394.TabIndex = 24;
-            this.label394.Text = "Non-Flammable Non-Toxic Consequence Area";
-            // 
-            // label395
-            // 
-            this.label395.AutoSize = true;
-            this.label395.Location = new System.Drawing.Point(30, 115);
-            this.label395.Name = "label395";
-            this.label395.Size = new System.Drawing.Size(57, 15);
-            this.label395.TabIndex = 18;
-            this.label395.Text = "Blend CA";
-            // 
-            // label396
-            // 
-            this.label396.AutoSize = true;
-            this.label396.Location = new System.Drawing.Point(30, 90);
-            this.label396.Name = "label396";
-            this.label396.Size = new System.Drawing.Size(52, 15);
-            this.label396.TabIndex = 12;
-            this.label396.Text = "INST CA";
-            // 
-            // label397
-            // 
-            this.label397.AutoSize = true;
-            this.label397.Location = new System.Drawing.Point(30, 64);
-            this.label397.Name = "label397";
-            this.label397.Size = new System.Drawing.Size(58, 15);
-            this.label397.TabIndex = 6;
-            this.label397.Text = "CONT CA";
-            // 
-            // txtBlend_CA4
-            // 
-            this.txtBlend_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlend_CA4.Location = new System.Drawing.Point(767, 114);
-            this.txtBlend_CA4.Name = "txtBlend_CA4";
-            this.txtBlend_CA4.Size = new System.Drawing.Size(133, 20);
-            this.txtBlend_CA4.TabIndex = 22;
-            // 
-            // label398
-            // 
-            this.label398.AutoSize = true;
-            this.label398.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label398.Location = new System.Drawing.Point(30, 36);
-            this.label398.Name = "label398";
-            this.label398.Size = new System.Drawing.Size(122, 15);
-            this.label398.TabIndex = 1;
-            this.label398.Text = "Release hole size";
-            // 
-            // txtINST_CA1
-            // 
-            this.txtINST_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtINST_CA1.Location = new System.Drawing.Point(262, 89);
-            this.txtINST_CA1.Name = "txtINST_CA1";
-            this.txtINST_CA1.Size = new System.Drawing.Size(133, 20);
-            this.txtINST_CA1.TabIndex = 13;
-            // 
-            // txtCONT_CA1
-            // 
-            this.txtCONT_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCONT_CA1.Location = new System.Drawing.Point(262, 63);
-            this.txtCONT_CA1.Name = "txtCONT_CA1";
-            this.txtCONT_CA1.Size = new System.Drawing.Size(133, 20);
-            this.txtCONT_CA1.TabIndex = 7;
-            // 
-            // txtBlend_CA1
-            // 
-            this.txtBlend_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlend_CA1.Location = new System.Drawing.Point(262, 114);
-            this.txtBlend_CA1.Name = "txtBlend_CA1";
-            this.txtBlend_CA1.Size = new System.Drawing.Size(133, 20);
-            this.txtBlend_CA1.TabIndex = 19;
-            // 
-            // label399
-            // 
-            this.label399.AutoSize = true;
-            this.label399.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label399.Location = new System.Drawing.Point(815, 36);
-            this.label399.Name = "label399";
-            this.label399.Size = new System.Drawing.Size(58, 15);
-            this.label399.TabIndex = 5;
-            this.label399.Text = "Rupture";
-            // 
-            // txtCONT_CA2
-            // 
-            this.txtCONT_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCONT_CA2.Location = new System.Drawing.Point(430, 63);
-            this.txtCONT_CA2.Name = "txtCONT_CA2";
-            this.txtCONT_CA2.Size = new System.Drawing.Size(133, 20);
-            this.txtCONT_CA2.TabIndex = 8;
-            // 
-            // label400
-            // 
-            this.label400.AutoSize = true;
-            this.label400.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label400.Location = new System.Drawing.Point(297, 36);
-            this.label400.Name = "label400";
-            this.label400.Size = new System.Drawing.Size(44, 15);
-            this.label400.TabIndex = 2;
-            this.label400.Text = "Small";
-            // 
-            // txtINST_CA2
-            // 
-            this.txtINST_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtINST_CA2.Location = new System.Drawing.Point(430, 89);
-            this.txtINST_CA2.Name = "txtINST_CA2";
-            this.txtINST_CA2.Size = new System.Drawing.Size(133, 20);
-            this.txtINST_CA2.TabIndex = 14;
-            // 
-            // txtINST_CA4
-            // 
-            this.txtINST_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtINST_CA4.Location = new System.Drawing.Point(767, 89);
-            this.txtINST_CA4.Name = "txtINST_CA4";
-            this.txtINST_CA4.Size = new System.Drawing.Size(133, 20);
-            this.txtINST_CA4.TabIndex = 16;
-            // 
-            // label401
-            // 
-            this.label401.AutoSize = true;
-            this.label401.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label401.Location = new System.Drawing.Point(466, 36);
-            this.label401.Name = "label401";
-            this.label401.Size = new System.Drawing.Size(59, 15);
-            this.label401.TabIndex = 3;
-            this.label401.Text = "Medium";
-            // 
-            // txtCONT_CA4
-            // 
-            this.txtCONT_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCONT_CA4.Location = new System.Drawing.Point(767, 63);
-            this.txtCONT_CA4.Name = "txtCONT_CA4";
-            this.txtCONT_CA4.Size = new System.Drawing.Size(133, 20);
-            this.txtCONT_CA4.TabIndex = 10;
-            // 
-            // label402
-            // 
-            this.label402.AutoSize = true;
-            this.label402.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label402.Location = new System.Drawing.Point(645, 36);
-            this.label402.Name = "label402";
-            this.label402.Size = new System.Drawing.Size(44, 15);
-            this.label402.TabIndex = 4;
-            this.label402.Text = "Large";
-            // 
-            // txtBlend_CA3
-            // 
-            this.txtBlend_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlend_CA3.Location = new System.Drawing.Point(598, 114);
-            this.txtBlend_CA3.Name = "txtBlend_CA3";
-            this.txtBlend_CA3.Size = new System.Drawing.Size(133, 20);
-            this.txtBlend_CA3.TabIndex = 21;
-            // 
-            // txtINST_CA3
-            // 
-            this.txtINST_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtINST_CA3.Location = new System.Drawing.Point(598, 89);
-            this.txtINST_CA3.Name = "txtINST_CA3";
-            this.txtINST_CA3.Size = new System.Drawing.Size(133, 20);
-            this.txtINST_CA3.TabIndex = 15;
-            // 
-            // txtCONT_CA3
-            // 
-            this.txtCONT_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtCONT_CA3.Location = new System.Drawing.Point(598, 63);
-            this.txtCONT_CA3.Name = "txtCONT_CA3";
-            this.txtCONT_CA3.Size = new System.Drawing.Size(133, 20);
-            this.txtCONT_CA3.TabIndex = 9;
-            // 
-            // txtBlend_CA2
-            // 
-            this.txtBlend_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlend_CA2.Location = new System.Drawing.Point(430, 114);
-            this.txtBlend_CA2.Name = "txtBlend_CA2";
-            this.txtBlend_CA2.Size = new System.Drawing.Size(133, 20);
-            this.txtBlend_CA2.TabIndex = 20;
-            // 
-            // txtNonFlammableNonToxicCon
-            // 
-            this.txtNonFlammableNonToxicCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtNonFlammableNonToxicCon.Location = new System.Drawing.Point(390, 140);
-            this.txtNonFlammableNonToxicCon.Name = "txtNonFlammableNonToxicCon";
-            this.txtNonFlammableNonToxicCon.Size = new System.Drawing.Size(229, 20);
-            this.txtNonFlammableNonToxicCon.TabIndex = 25;
-            // 
-            // label422
-            // 
-            this.label422.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label422.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label422.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label422.ForeColor = System.Drawing.Color.White;
-            this.label422.Location = new System.Drawing.Point(0, 0);
-            this.label422.Name = "label422";
-            this.label422.Size = new System.Drawing.Size(952, 21);
-            this.label422.TabIndex = 0;
-            this.label422.Text = "▼ Non-Flammable Non-Toxic Consequence Area";
-            this.label422.Click += new System.EventHandler(this.lblTCA_Click);
-            // 
-            // panelTCA
-            // 
-            this.panelTCA.Controls.Add(this.tabControlToxic);
-            this.panelTCA.Controls.Add(this.lblTCA);
-            this.panelTCA.Location = new System.Drawing.Point(2, 1808);
-            this.panelTCA.Name = "panelTCA";
-            this.panelTCA.Size = new System.Drawing.Size(956, 339);
-            this.panelTCA.TabIndex = 5;
-            // 
-            // tabControlToxic
-            // 
-            this.tabControlToxic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlToxic.Location = new System.Drawing.Point(0, 21);
-            this.tabControlToxic.Name = "tabControlToxic";
-            this.tabControlToxic.SelectedTabPage = this.tabToxic1;
-            this.tabControlToxic.Size = new System.Drawing.Size(956, 318);
-            this.tabControlToxic.TabIndex = 0;
-            this.tabControlToxic.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tabToxic1,
-            this.tabToxic2});
-            // 
-            // tabToxic1
-            // 
-            this.tabToxic1.Controls.Add(this.label441);
-            this.tabToxic1.Controls.Add(this.label440);
-            this.tabToxic1.Controls.Add(this.label439);
-            this.tabToxic1.Controls.Add(this.label438);
-            this.tabToxic1.Controls.Add(this.label437);
-            this.tabToxic1.Controls.Add(this.txtFlammalbePICA_toxic1);
-            this.tabToxic1.Controls.Add(this.label366);
-            this.tabToxic1.Controls.Add(this.label367);
-            this.tabToxic1.Controls.Add(this.label368);
-            this.tabToxic1.Controls.Add(this.label369);
-            this.tabToxic1.Controls.Add(this.label370);
-            this.tabToxic1.Controls.Add(this.label371);
-            this.tabToxic1.Controls.Add(this.label372);
-            this.tabToxic1.Controls.Add(this.label373);
-            this.tabToxic1.Controls.Add(this.label374);
-            this.tabToxic1.Controls.Add(this.txtContDRupture_toxic1);
-            this.tabToxic1.Controls.Add(this.label375);
-            this.tabToxic1.Controls.Add(this.txtContERupture_toxic1);
-            this.tabToxic1.Controls.Add(this.txtToxicCASmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContFRupture_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassSmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassRateRupture_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassRateSmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassRupture_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContFSmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtToxicCARupture_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContCSmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContESmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtLDToxicSmall_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContDSmall_toxic1);
-            this.tabToxic1.Controls.Add(this.label376);
-            this.tabToxic1.Controls.Add(this.txtLDToxicMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.label377);
-            this.tabToxic1.Controls.Add(this.txtContCMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContCRupture_toxic1);
-            this.tabToxic1.Controls.Add(this.label378);
-            this.tabToxic1.Controls.Add(this.txtLDToxicRupture_toxic1);
-            this.tabToxic1.Controls.Add(this.label379);
-            this.tabToxic1.Controls.Add(this.txtToxicCALarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContDLarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContCLarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtToxicCAMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassLarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContELarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtLDToxicLarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContDMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassRateMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.txtMassRateLarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContFLarge_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContEMedium_toxic1);
-            this.tabToxic1.Controls.Add(this.txtContFMedium_toxic1);
-            this.tabToxic1.Name = "tabToxic1";
-            this.tabToxic1.Size = new System.Drawing.Size(954, 293);
-            this.tabToxic1.Text = "tabToxic1";
-            // 
-            // label441
-            // 
-            this.label441.AutoSize = true;
-            this.label441.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label441.Location = new System.Drawing.Point(635, 265);
-            this.label441.Name = "label441";
-            this.label441.Size = new System.Drawing.Size(18, 13);
-            this.label441.TabIndex = 298;
-            this.label441.Text = "m²";
-            // 
-            // label440
-            // 
-            this.label440.AutoSize = true;
-            this.label440.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label440.Location = new System.Drawing.Point(910, 228);
-            this.label440.Name = "label440";
-            this.label440.Size = new System.Drawing.Size(18, 13);
-            this.label440.TabIndex = 297;
-            this.label440.Text = "m²";
-            // 
-            // label439
-            // 
-            this.label439.AutoSize = true;
-            this.label439.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label439.Location = new System.Drawing.Point(910, 204);
-            this.label439.Name = "label439";
-            this.label439.Size = new System.Drawing.Size(19, 13);
-            this.label439.TabIndex = 296;
-            this.label439.Text = "kg";
-            // 
-            // label438
-            // 
-            this.label438.AutoSize = true;
-            this.label438.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label438.Location = new System.Drawing.Point(910, 178);
-            this.label438.Name = "label438";
-            this.label438.Size = new System.Drawing.Size(29, 13);
-            this.label438.TabIndex = 295;
-            this.label438.Text = "kg/s";
-            // 
-            // label437
-            // 
-            this.label437.AutoSize = true;
-            this.label437.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label437.Location = new System.Drawing.Point(904, 52);
-            this.label437.Name = "label437";
-            this.label437.Size = new System.Drawing.Size(47, 13);
-            this.label437.TabIndex = 294;
-            this.label437.Text = "seconds";
-            // 
-            // txtFlammalbePICA_toxic1
-            // 
-            this.txtFlammalbePICA_toxic1.Location = new System.Drawing.Point(348, 262);
-            this.txtFlammalbePICA_toxic1.Name = "txtFlammalbePICA_toxic1";
-            this.txtFlammalbePICA_toxic1.Size = new System.Drawing.Size(270, 21);
-            this.txtFlammalbePICA_toxic1.TabIndex = 46;
-            // 
-            // label366
-            // 
-            this.label366.AutoSize = true;
-            this.label366.Location = new System.Drawing.Point(12, 270);
-            this.label366.Name = "label366";
-            this.label366.Size = new System.Drawing.Size(227, 13);
-            this.label366.TabIndex = 45;
-            this.label366.Text = "Flammable Personal Injury Consequence Area";
-            // 
-            // label367
-            // 
-            this.label367.AutoSize = true;
-            this.label367.Location = new System.Drawing.Point(9, 232);
-            this.label367.Name = "label367";
-            this.label367.Size = new System.Drawing.Size(49, 13);
-            this.label367.TabIndex = 40;
-            this.label367.Text = "Toxic CA";
-            // 
-            // label368
-            // 
-            this.label368.AutoSize = true;
-            this.label368.Location = new System.Drawing.Point(9, 207);
-            this.label368.Name = "label368";
-            this.label368.Size = new System.Drawing.Size(100, 13);
-            this.label368.TabIndex = 35;
-            this.label368.Text = "Toxic Release mass";
-            // 
-            // label369
-            // 
-            this.label369.AutoSize = true;
-            this.label369.Location = new System.Drawing.Point(9, 182);
-            this.label369.Name = "label369";
-            this.label369.Size = new System.Drawing.Size(123, 13);
-            this.label369.TabIndex = 30;
-            this.label369.Text = "Toxic Release mass rate";
-            // 
-            // label370
-            // 
-            this.label370.AutoSize = true;
-            this.label370.Location = new System.Drawing.Point(9, 157);
-            this.label370.Name = "label370";
-            this.label370.Size = new System.Drawing.Size(60, 13);
-            this.label370.TabIndex = 25;
-            this.label370.Text = "Constant F";
-            // 
-            // label371
-            // 
-            this.label371.AutoSize = true;
-            this.label371.Location = new System.Drawing.Point(9, 132);
-            this.label371.Name = "label371";
-            this.label371.Size = new System.Drawing.Size(60, 13);
-            this.label371.TabIndex = 20;
-            this.label371.Text = "Constant E";
-            // 
-            // label372
-            // 
-            this.label372.AutoSize = true;
-            this.label372.Location = new System.Drawing.Point(9, 107);
-            this.label372.Name = "label372";
-            this.label372.Size = new System.Drawing.Size(61, 13);
-            this.label372.TabIndex = 15;
-            this.label372.Text = "Constant D";
-            // 
-            // label373
-            // 
-            this.label373.AutoSize = true;
-            this.label373.Location = new System.Drawing.Point(9, 82);
-            this.label373.Name = "label373";
-            this.label373.Size = new System.Drawing.Size(61, 13);
-            this.label373.TabIndex = 10;
-            this.label373.Text = "Constant C";
-            // 
-            // label374
-            // 
-            this.label374.AutoSize = true;
-            this.label374.Location = new System.Drawing.Point(9, 56);
-            this.label374.Name = "label374";
-            this.label374.Size = new System.Drawing.Size(101, 13);
-            this.label374.TabIndex = 5;
-            this.label374.Text = "Toxic Leak Duration";
-            // 
-            // txtContDRupture_toxic1
-            // 
-            this.txtContDRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDRupture_toxic1.Location = new System.Drawing.Point(767, 101);
-            this.txtContDRupture_toxic1.Name = "txtContDRupture_toxic1";
-            this.txtContDRupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContDRupture_toxic1.TabIndex = 19;
-            // 
-            // label375
-            // 
-            this.label375.AutoSize = true;
-            this.label375.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label375.Location = new System.Drawing.Point(9, 23);
-            this.label375.Name = "label375";
-            this.label375.Size = new System.Drawing.Size(122, 15);
-            this.label375.TabIndex = 0;
-            this.label375.Text = "Release hole size";
-            // 
-            // txtContERupture_toxic1
-            // 
-            this.txtContERupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContERupture_toxic1.Location = new System.Drawing.Point(767, 126);
-            this.txtContERupture_toxic1.Name = "txtContERupture_toxic1";
-            this.txtContERupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContERupture_toxic1.TabIndex = 24;
-            // 
-            // txtToxicCASmall_toxic1
-            // 
-            this.txtToxicCASmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCASmall_toxic1.Location = new System.Drawing.Point(263, 225);
-            this.txtToxicCASmall_toxic1.Name = "txtToxicCASmall_toxic1";
-            this.txtToxicCASmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCASmall_toxic1.TabIndex = 41;
-            // 
-            // txtContFRupture_toxic1
-            // 
-            this.txtContFRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFRupture_toxic1.Location = new System.Drawing.Point(767, 151);
-            this.txtContFRupture_toxic1.Name = "txtContFRupture_toxic1";
-            this.txtContFRupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContFRupture_toxic1.TabIndex = 29;
-            // 
-            // txtMassSmall_toxic1
-            // 
-            this.txtMassSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassSmall_toxic1.Location = new System.Drawing.Point(263, 200);
-            this.txtMassSmall_toxic1.Name = "txtMassSmall_toxic1";
-            this.txtMassSmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassSmall_toxic1.TabIndex = 36;
-            // 
-            // txtMassRateRupture_toxic1
-            // 
-            this.txtMassRateRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateRupture_toxic1.Location = new System.Drawing.Point(767, 176);
-            this.txtMassRateRupture_toxic1.Name = "txtMassRateRupture_toxic1";
-            this.txtMassRateRupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateRupture_toxic1.TabIndex = 34;
-            // 
-            // txtMassRateSmall_toxic1
-            // 
-            this.txtMassRateSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateSmall_toxic1.Location = new System.Drawing.Point(263, 175);
-            this.txtMassRateSmall_toxic1.Name = "txtMassRateSmall_toxic1";
-            this.txtMassRateSmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateSmall_toxic1.TabIndex = 31;
-            // 
-            // txtMassRupture_toxic1
-            // 
-            this.txtMassRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRupture_toxic1.Location = new System.Drawing.Point(767, 201);
-            this.txtMassRupture_toxic1.Name = "txtMassRupture_toxic1";
-            this.txtMassRupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRupture_toxic1.TabIndex = 39;
-            // 
-            // txtContFSmall_toxic1
-            // 
-            this.txtContFSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFSmall_toxic1.Location = new System.Drawing.Point(263, 150);
-            this.txtContFSmall_toxic1.Name = "txtContFSmall_toxic1";
-            this.txtContFSmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContFSmall_toxic1.TabIndex = 26;
-            // 
-            // txtToxicCARupture_toxic1
-            // 
-            this.txtToxicCARupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCARupture_toxic1.Location = new System.Drawing.Point(767, 226);
-            this.txtToxicCARupture_toxic1.Name = "txtToxicCARupture_toxic1";
-            this.txtToxicCARupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCARupture_toxic1.TabIndex = 44;
-            // 
-            // txtContCSmall_toxic1
-            // 
-            this.txtContCSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCSmall_toxic1.Location = new System.Drawing.Point(263, 75);
-            this.txtContCSmall_toxic1.Name = "txtContCSmall_toxic1";
-            this.txtContCSmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContCSmall_toxic1.TabIndex = 11;
-            // 
-            // txtContESmall_toxic1
-            // 
-            this.txtContESmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContESmall_toxic1.Location = new System.Drawing.Point(263, 125);
-            this.txtContESmall_toxic1.Name = "txtContESmall_toxic1";
-            this.txtContESmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContESmall_toxic1.TabIndex = 21;
-            // 
-            // txtLDToxicSmall_toxic1
-            // 
-            this.txtLDToxicSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicSmall_toxic1.Location = new System.Drawing.Point(263, 49);
-            this.txtLDToxicSmall_toxic1.Name = "txtLDToxicSmall_toxic1";
-            this.txtLDToxicSmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicSmall_toxic1.TabIndex = 6;
-            // 
-            // txtContDSmall_toxic1
-            // 
-            this.txtContDSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDSmall_toxic1.Location = new System.Drawing.Point(263, 100);
-            this.txtContDSmall_toxic1.Name = "txtContDSmall_toxic1";
-            this.txtContDSmall_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContDSmall_toxic1.TabIndex = 16;
-            // 
-            // label376
-            // 
-            this.label376.AutoSize = true;
-            this.label376.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label376.Location = new System.Drawing.Point(815, 22);
-            this.label376.Name = "label376";
-            this.label376.Size = new System.Drawing.Size(58, 15);
-            this.label376.TabIndex = 4;
-            this.label376.Text = "Rupture";
-            // 
-            // txtLDToxicMedium_toxic1
-            // 
-            this.txtLDToxicMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicMedium_toxic1.Location = new System.Drawing.Point(431, 49);
-            this.txtLDToxicMedium_toxic1.Name = "txtLDToxicMedium_toxic1";
-            this.txtLDToxicMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicMedium_toxic1.TabIndex = 7;
-            // 
-            // label377
-            // 
-            this.label377.AutoSize = true;
-            this.label377.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label377.Location = new System.Drawing.Point(298, 22);
-            this.label377.Name = "label377";
-            this.label377.Size = new System.Drawing.Size(44, 15);
-            this.label377.TabIndex = 1;
-            this.label377.Text = "Small";
-            // 
-            // txtContCMedium_toxic1
-            // 
-            this.txtContCMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMedium_toxic1.Location = new System.Drawing.Point(431, 75);
-            this.txtContCMedium_toxic1.Name = "txtContCMedium_toxic1";
-            this.txtContCMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMedium_toxic1.TabIndex = 12;
-            // 
-            // txtContCRupture_toxic1
-            // 
-            this.txtContCRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCRupture_toxic1.Location = new System.Drawing.Point(767, 76);
-            this.txtContCRupture_toxic1.Name = "txtContCRupture_toxic1";
-            this.txtContCRupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContCRupture_toxic1.TabIndex = 14;
-            // 
-            // label378
-            // 
-            this.label378.AutoSize = true;
-            this.label378.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label378.Location = new System.Drawing.Point(467, 22);
-            this.label378.Name = "label378";
-            this.label378.Size = new System.Drawing.Size(59, 15);
-            this.label378.TabIndex = 2;
-            this.label378.Text = "Medium";
-            // 
-            // txtLDToxicRupture_toxic1
-            // 
-            this.txtLDToxicRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicRupture_toxic1.Location = new System.Drawing.Point(767, 50);
-            this.txtLDToxicRupture_toxic1.Name = "txtLDToxicRupture_toxic1";
-            this.txtLDToxicRupture_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicRupture_toxic1.TabIndex = 9;
-            // 
-            // label379
-            // 
-            this.label379.AutoSize = true;
-            this.label379.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label379.Location = new System.Drawing.Point(646, 22);
-            this.label379.Name = "label379";
-            this.label379.Size = new System.Drawing.Size(44, 15);
-            this.label379.TabIndex = 3;
-            this.label379.Text = "Large";
-            // 
-            // txtToxicCALarge_toxic1
-            // 
-            this.txtToxicCALarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCALarge_toxic1.Location = new System.Drawing.Point(599, 226);
-            this.txtToxicCALarge_toxic1.Name = "txtToxicCALarge_toxic1";
-            this.txtToxicCALarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCALarge_toxic1.TabIndex = 43;
-            // 
-            // txtContDLarge_toxic1
-            // 
-            this.txtContDLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDLarge_toxic1.Location = new System.Drawing.Point(599, 101);
-            this.txtContDLarge_toxic1.Name = "txtContDLarge_toxic1";
-            this.txtContDLarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContDLarge_toxic1.TabIndex = 18;
-            // 
-            // txtContCLarge_toxic1
-            // 
-            this.txtContCLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCLarge_toxic1.Location = new System.Drawing.Point(599, 76);
-            this.txtContCLarge_toxic1.Name = "txtContCLarge_toxic1";
-            this.txtContCLarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContCLarge_toxic1.TabIndex = 13;
-            // 
-            // txtToxicCAMedium_toxic1
-            // 
-            this.txtToxicCAMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCAMedium_toxic1.Location = new System.Drawing.Point(431, 225);
-            this.txtToxicCAMedium_toxic1.Name = "txtToxicCAMedium_toxic1";
-            this.txtToxicCAMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCAMedium_toxic1.TabIndex = 42;
-            // 
-            // txtMassLarge_toxic1
-            // 
-            this.txtMassLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassLarge_toxic1.Location = new System.Drawing.Point(599, 201);
-            this.txtMassLarge_toxic1.Name = "txtMassLarge_toxic1";
-            this.txtMassLarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassLarge_toxic1.TabIndex = 38;
-            // 
-            // txtContELarge_toxic1
-            // 
-            this.txtContELarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContELarge_toxic1.Location = new System.Drawing.Point(599, 126);
-            this.txtContELarge_toxic1.Name = "txtContELarge_toxic1";
-            this.txtContELarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContELarge_toxic1.TabIndex = 23;
-            // 
-            // txtLDToxicLarge_toxic1
-            // 
-            this.txtLDToxicLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicLarge_toxic1.Location = new System.Drawing.Point(599, 50);
-            this.txtLDToxicLarge_toxic1.Name = "txtLDToxicLarge_toxic1";
-            this.txtLDToxicLarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicLarge_toxic1.TabIndex = 8;
-            // 
-            // txtMassMedium_toxic1
-            // 
-            this.txtMassMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassMedium_toxic1.Location = new System.Drawing.Point(431, 200);
-            this.txtMassMedium_toxic1.Name = "txtMassMedium_toxic1";
-            this.txtMassMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassMedium_toxic1.TabIndex = 37;
-            // 
-            // txtContDMedium_toxic1
-            // 
-            this.txtContDMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDMedium_toxic1.Location = new System.Drawing.Point(431, 100);
-            this.txtContDMedium_toxic1.Name = "txtContDMedium_toxic1";
-            this.txtContDMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContDMedium_toxic1.TabIndex = 17;
-            // 
-            // txtMassRateMedium_toxic1
-            // 
-            this.txtMassRateMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateMedium_toxic1.Location = new System.Drawing.Point(431, 175);
-            this.txtMassRateMedium_toxic1.Name = "txtMassRateMedium_toxic1";
-            this.txtMassRateMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateMedium_toxic1.TabIndex = 32;
-            // 
-            // txtMassRateLarge_toxic1
-            // 
-            this.txtMassRateLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateLarge_toxic1.Location = new System.Drawing.Point(599, 176);
-            this.txtMassRateLarge_toxic1.Name = "txtMassRateLarge_toxic1";
-            this.txtMassRateLarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateLarge_toxic1.TabIndex = 33;
-            // 
-            // txtContFLarge_toxic1
-            // 
-            this.txtContFLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFLarge_toxic1.Location = new System.Drawing.Point(599, 151);
-            this.txtContFLarge_toxic1.Name = "txtContFLarge_toxic1";
-            this.txtContFLarge_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContFLarge_toxic1.TabIndex = 28;
-            // 
-            // txtContEMedium_toxic1
-            // 
-            this.txtContEMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContEMedium_toxic1.Location = new System.Drawing.Point(431, 125);
-            this.txtContEMedium_toxic1.Name = "txtContEMedium_toxic1";
-            this.txtContEMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContEMedium_toxic1.TabIndex = 22;
-            // 
-            // txtContFMedium_toxic1
-            // 
-            this.txtContFMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFMedium_toxic1.Location = new System.Drawing.Point(431, 150);
-            this.txtContFMedium_toxic1.Name = "txtContFMedium_toxic1";
-            this.txtContFMedium_toxic1.Size = new System.Drawing.Size(133, 20);
-            this.txtContFMedium_toxic1.TabIndex = 27;
-            // 
-            // tabToxic2
-            // 
-            this.tabToxic2.Controls.Add(this.txtFlammalbePICA_toxic2);
-            this.tabToxic2.Controls.Add(this.label380);
-            this.tabToxic2.Controls.Add(this.label381);
-            this.tabToxic2.Controls.Add(this.label382);
-            this.tabToxic2.Controls.Add(this.label383);
-            this.tabToxic2.Controls.Add(this.label384);
-            this.tabToxic2.Controls.Add(this.label385);
-            this.tabToxic2.Controls.Add(this.label386);
-            this.tabToxic2.Controls.Add(this.label387);
-            this.tabToxic2.Controls.Add(this.label388);
-            this.tabToxic2.Controls.Add(this.txtContDRupture_toxic2);
-            this.tabToxic2.Controls.Add(this.label389);
-            this.tabToxic2.Controls.Add(this.txtContERupture_toxic2);
-            this.tabToxic2.Controls.Add(this.txtToxicCASmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContFRupture_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassSmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassRateRupture_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassRateSmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassRupture_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContFSmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtToxicCARupture_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContCSmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContESmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtLDToxicSmall_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContDSmall_toxic2);
-            this.tabToxic2.Controls.Add(this.label390);
-            this.tabToxic2.Controls.Add(this.txtLDToxicMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.label391);
-            this.tabToxic2.Controls.Add(this.txtContCMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContCRupture_toxic2);
-            this.tabToxic2.Controls.Add(this.label392);
-            this.tabToxic2.Controls.Add(this.txtLDToxicRupture_toxic2);
-            this.tabToxic2.Controls.Add(this.label393);
-            this.tabToxic2.Controls.Add(this.txtToxicCALarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContDLarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContCLarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtToxicCAMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassLarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContELarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtLDToxicLarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContDMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassRateMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.txtMassRateLarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContFLarge_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContEMedium_toxic2);
-            this.tabToxic2.Controls.Add(this.txtContFMedium_toxic2);
-            this.tabToxic2.Name = "tabToxic2";
-            this.tabToxic2.Size = new System.Drawing.Size(954, 293);
-            this.tabToxic2.Text = "tabToxic2";
-            // 
-            // txtFlammalbePICA_toxic2
-            // 
-            this.txtFlammalbePICA_toxic2.Location = new System.Drawing.Point(348, 263);
-            this.txtFlammalbePICA_toxic2.Name = "txtFlammalbePICA_toxic2";
-            this.txtFlammalbePICA_toxic2.Size = new System.Drawing.Size(270, 21);
-            this.txtFlammalbePICA_toxic2.TabIndex = 46;
-            // 
-            // label380
-            // 
-            this.label380.AutoSize = true;
-            this.label380.Location = new System.Drawing.Point(12, 271);
-            this.label380.Name = "label380";
-            this.label380.Size = new System.Drawing.Size(227, 13);
-            this.label380.TabIndex = 45;
-            this.label380.Text = "Flammable Personal Injury Consequence Area";
-            // 
-            // label381
-            // 
-            this.label381.AutoSize = true;
-            this.label381.Location = new System.Drawing.Point(9, 233);
-            this.label381.Name = "label381";
-            this.label381.Size = new System.Drawing.Size(49, 13);
-            this.label381.TabIndex = 40;
-            this.label381.Text = "Toxic CA";
-            // 
-            // label382
-            // 
-            this.label382.AutoSize = true;
-            this.label382.Location = new System.Drawing.Point(9, 208);
-            this.label382.Name = "label382";
-            this.label382.Size = new System.Drawing.Size(100, 13);
-            this.label382.TabIndex = 35;
-            this.label382.Text = "Toxic Release mass";
-            // 
-            // label383
-            // 
-            this.label383.AutoSize = true;
-            this.label383.Location = new System.Drawing.Point(9, 183);
-            this.label383.Name = "label383";
-            this.label383.Size = new System.Drawing.Size(123, 13);
-            this.label383.TabIndex = 30;
-            this.label383.Text = "Toxic Release mass rate";
-            // 
-            // label384
-            // 
-            this.label384.AutoSize = true;
-            this.label384.Location = new System.Drawing.Point(9, 158);
-            this.label384.Name = "label384";
-            this.label384.Size = new System.Drawing.Size(60, 13);
-            this.label384.TabIndex = 25;
-            this.label384.Text = "Constant F";
-            // 
-            // label385
-            // 
-            this.label385.AutoSize = true;
-            this.label385.Location = new System.Drawing.Point(9, 133);
-            this.label385.Name = "label385";
-            this.label385.Size = new System.Drawing.Size(60, 13);
-            this.label385.TabIndex = 20;
-            this.label385.Text = "Constant E";
-            // 
-            // label386
-            // 
-            this.label386.AutoSize = true;
-            this.label386.Location = new System.Drawing.Point(9, 108);
-            this.label386.Name = "label386";
-            this.label386.Size = new System.Drawing.Size(61, 13);
-            this.label386.TabIndex = 15;
-            this.label386.Text = "Constant D";
-            // 
-            // label387
-            // 
-            this.label387.AutoSize = true;
-            this.label387.Location = new System.Drawing.Point(9, 83);
-            this.label387.Name = "label387";
-            this.label387.Size = new System.Drawing.Size(61, 13);
-            this.label387.TabIndex = 10;
-            this.label387.Text = "Constant C";
-            // 
-            // label388
-            // 
-            this.label388.AutoSize = true;
-            this.label388.Location = new System.Drawing.Point(9, 57);
-            this.label388.Name = "label388";
-            this.label388.Size = new System.Drawing.Size(101, 13);
-            this.label388.TabIndex = 5;
-            this.label388.Text = "Toxic Leak Duration";
-            // 
-            // txtContDRupture_toxic2
-            // 
-            this.txtContDRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDRupture_toxic2.Location = new System.Drawing.Point(768, 102);
-            this.txtContDRupture_toxic2.Name = "txtContDRupture_toxic2";
-            this.txtContDRupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContDRupture_toxic2.TabIndex = 19;
-            // 
-            // label389
-            // 
-            this.label389.AutoSize = true;
-            this.label389.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label389.Location = new System.Drawing.Point(9, 24);
-            this.label389.Name = "label389";
-            this.label389.Size = new System.Drawing.Size(122, 15);
-            this.label389.TabIndex = 0;
-            this.label389.Text = "Release hole size";
-            // 
-            // txtContERupture_toxic2
-            // 
-            this.txtContERupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContERupture_toxic2.Location = new System.Drawing.Point(768, 127);
-            this.txtContERupture_toxic2.Name = "txtContERupture_toxic2";
-            this.txtContERupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContERupture_toxic2.TabIndex = 24;
-            // 
-            // txtToxicCASmall_toxic2
-            // 
-            this.txtToxicCASmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCASmall_toxic2.Location = new System.Drawing.Point(263, 226);
-            this.txtToxicCASmall_toxic2.Name = "txtToxicCASmall_toxic2";
-            this.txtToxicCASmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCASmall_toxic2.TabIndex = 41;
-            // 
-            // txtContFRupture_toxic2
-            // 
-            this.txtContFRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFRupture_toxic2.Location = new System.Drawing.Point(768, 152);
-            this.txtContFRupture_toxic2.Name = "txtContFRupture_toxic2";
-            this.txtContFRupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContFRupture_toxic2.TabIndex = 29;
-            // 
-            // txtMassSmall_toxic2
-            // 
-            this.txtMassSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassSmall_toxic2.Location = new System.Drawing.Point(263, 201);
-            this.txtMassSmall_toxic2.Name = "txtMassSmall_toxic2";
-            this.txtMassSmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassSmall_toxic2.TabIndex = 36;
-            // 
-            // txtMassRateRupture_toxic2
-            // 
-            this.txtMassRateRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateRupture_toxic2.Location = new System.Drawing.Point(768, 177);
-            this.txtMassRateRupture_toxic2.Name = "txtMassRateRupture_toxic2";
-            this.txtMassRateRupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateRupture_toxic2.TabIndex = 34;
-            // 
-            // txtMassRateSmall_toxic2
-            // 
-            this.txtMassRateSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateSmall_toxic2.Location = new System.Drawing.Point(263, 176);
-            this.txtMassRateSmall_toxic2.Name = "txtMassRateSmall_toxic2";
-            this.txtMassRateSmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateSmall_toxic2.TabIndex = 31;
-            // 
-            // txtMassRupture_toxic2
-            // 
-            this.txtMassRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRupture_toxic2.Location = new System.Drawing.Point(768, 202);
-            this.txtMassRupture_toxic2.Name = "txtMassRupture_toxic2";
-            this.txtMassRupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRupture_toxic2.TabIndex = 39;
-            // 
-            // txtContFSmall_toxic2
-            // 
-            this.txtContFSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFSmall_toxic2.Location = new System.Drawing.Point(263, 151);
-            this.txtContFSmall_toxic2.Name = "txtContFSmall_toxic2";
-            this.txtContFSmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContFSmall_toxic2.TabIndex = 26;
-            // 
-            // txtToxicCARupture_toxic2
-            // 
-            this.txtToxicCARupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCARupture_toxic2.Location = new System.Drawing.Point(768, 227);
-            this.txtToxicCARupture_toxic2.Name = "txtToxicCARupture_toxic2";
-            this.txtToxicCARupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCARupture_toxic2.TabIndex = 44;
-            // 
-            // txtContCSmall_toxic2
-            // 
-            this.txtContCSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCSmall_toxic2.Location = new System.Drawing.Point(263, 76);
-            this.txtContCSmall_toxic2.Name = "txtContCSmall_toxic2";
-            this.txtContCSmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContCSmall_toxic2.TabIndex = 11;
-            // 
-            // txtContESmall_toxic2
-            // 
-            this.txtContESmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContESmall_toxic2.Location = new System.Drawing.Point(263, 126);
-            this.txtContESmall_toxic2.Name = "txtContESmall_toxic2";
-            this.txtContESmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContESmall_toxic2.TabIndex = 21;
-            // 
-            // txtLDToxicSmall_toxic2
-            // 
-            this.txtLDToxicSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicSmall_toxic2.Location = new System.Drawing.Point(263, 50);
-            this.txtLDToxicSmall_toxic2.Name = "txtLDToxicSmall_toxic2";
-            this.txtLDToxicSmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicSmall_toxic2.TabIndex = 6;
-            // 
-            // txtContDSmall_toxic2
-            // 
-            this.txtContDSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDSmall_toxic2.Location = new System.Drawing.Point(263, 101);
-            this.txtContDSmall_toxic2.Name = "txtContDSmall_toxic2";
-            this.txtContDSmall_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContDSmall_toxic2.TabIndex = 16;
-            // 
-            // label390
-            // 
-            this.label390.AutoSize = true;
-            this.label390.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label390.Location = new System.Drawing.Point(816, 23);
-            this.label390.Name = "label390";
-            this.label390.Size = new System.Drawing.Size(58, 15);
-            this.label390.TabIndex = 4;
-            this.label390.Text = "Rupture";
-            // 
-            // txtLDToxicMedium_toxic2
-            // 
-            this.txtLDToxicMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicMedium_toxic2.Location = new System.Drawing.Point(431, 50);
-            this.txtLDToxicMedium_toxic2.Name = "txtLDToxicMedium_toxic2";
-            this.txtLDToxicMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicMedium_toxic2.TabIndex = 7;
-            // 
-            // label391
-            // 
-            this.label391.AutoSize = true;
-            this.label391.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label391.Location = new System.Drawing.Point(298, 23);
-            this.label391.Name = "label391";
-            this.label391.Size = new System.Drawing.Size(44, 15);
-            this.label391.TabIndex = 1;
-            this.label391.Text = "Small";
-            // 
-            // txtContCMedium_toxic2
-            // 
-            this.txtContCMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMedium_toxic2.Location = new System.Drawing.Point(431, 76);
-            this.txtContCMedium_toxic2.Name = "txtContCMedium_toxic2";
-            this.txtContCMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMedium_toxic2.TabIndex = 12;
-            // 
-            // txtContCRupture_toxic2
-            // 
-            this.txtContCRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCRupture_toxic2.Location = new System.Drawing.Point(768, 77);
-            this.txtContCRupture_toxic2.Name = "txtContCRupture_toxic2";
-            this.txtContCRupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContCRupture_toxic2.TabIndex = 14;
-            // 
-            // label392
-            // 
-            this.label392.AutoSize = true;
-            this.label392.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label392.Location = new System.Drawing.Point(467, 23);
-            this.label392.Name = "label392";
-            this.label392.Size = new System.Drawing.Size(59, 15);
-            this.label392.TabIndex = 2;
-            this.label392.Text = "Medium";
-            // 
-            // txtLDToxicRupture_toxic2
-            // 
-            this.txtLDToxicRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicRupture_toxic2.Location = new System.Drawing.Point(768, 51);
-            this.txtLDToxicRupture_toxic2.Name = "txtLDToxicRupture_toxic2";
-            this.txtLDToxicRupture_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicRupture_toxic2.TabIndex = 9;
-            // 
-            // label393
-            // 
-            this.label393.AutoSize = true;
-            this.label393.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label393.Location = new System.Drawing.Point(646, 23);
-            this.label393.Name = "label393";
-            this.label393.Size = new System.Drawing.Size(44, 15);
-            this.label393.TabIndex = 3;
-            this.label393.Text = "Large";
-            // 
-            // txtToxicCALarge_toxic2
-            // 
-            this.txtToxicCALarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCALarge_toxic2.Location = new System.Drawing.Point(599, 227);
-            this.txtToxicCALarge_toxic2.Name = "txtToxicCALarge_toxic2";
-            this.txtToxicCALarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCALarge_toxic2.TabIndex = 43;
-            // 
-            // txtContDLarge_toxic2
-            // 
-            this.txtContDLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDLarge_toxic2.Location = new System.Drawing.Point(599, 102);
-            this.txtContDLarge_toxic2.Name = "txtContDLarge_toxic2";
-            this.txtContDLarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContDLarge_toxic2.TabIndex = 18;
-            // 
-            // txtContCLarge_toxic2
-            // 
-            this.txtContCLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCLarge_toxic2.Location = new System.Drawing.Point(599, 77);
-            this.txtContCLarge_toxic2.Name = "txtContCLarge_toxic2";
-            this.txtContCLarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContCLarge_toxic2.TabIndex = 13;
-            // 
-            // txtToxicCAMedium_toxic2
-            // 
-            this.txtToxicCAMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicCAMedium_toxic2.Location = new System.Drawing.Point(431, 226);
-            this.txtToxicCAMedium_toxic2.Name = "txtToxicCAMedium_toxic2";
-            this.txtToxicCAMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtToxicCAMedium_toxic2.TabIndex = 42;
-            this.txtToxicCAMedium_toxic2.TextChanged += new System.EventHandler(this.textBox280_TextChanged);
-            // 
-            // txtMassLarge_toxic2
-            // 
-            this.txtMassLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassLarge_toxic2.Location = new System.Drawing.Point(599, 202);
-            this.txtMassLarge_toxic2.Name = "txtMassLarge_toxic2";
-            this.txtMassLarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassLarge_toxic2.TabIndex = 38;
-            // 
-            // txtContELarge_toxic2
-            // 
-            this.txtContELarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContELarge_toxic2.Location = new System.Drawing.Point(599, 127);
-            this.txtContELarge_toxic2.Name = "txtContELarge_toxic2";
-            this.txtContELarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContELarge_toxic2.TabIndex = 23;
-            // 
-            // txtLDToxicLarge_toxic2
-            // 
-            this.txtLDToxicLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtLDToxicLarge_toxic2.Location = new System.Drawing.Point(599, 51);
-            this.txtLDToxicLarge_toxic2.Name = "txtLDToxicLarge_toxic2";
-            this.txtLDToxicLarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtLDToxicLarge_toxic2.TabIndex = 8;
-            // 
-            // txtMassMedium_toxic2
-            // 
-            this.txtMassMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassMedium_toxic2.Location = new System.Drawing.Point(431, 201);
-            this.txtMassMedium_toxic2.Name = "txtMassMedium_toxic2";
-            this.txtMassMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassMedium_toxic2.TabIndex = 37;
-            // 
-            // txtContDMedium_toxic2
-            // 
-            this.txtContDMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContDMedium_toxic2.Location = new System.Drawing.Point(431, 101);
-            this.txtContDMedium_toxic2.Name = "txtContDMedium_toxic2";
-            this.txtContDMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContDMedium_toxic2.TabIndex = 17;
-            // 
-            // txtMassRateMedium_toxic2
-            // 
-            this.txtMassRateMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateMedium_toxic2.Location = new System.Drawing.Point(431, 176);
-            this.txtMassRateMedium_toxic2.Name = "txtMassRateMedium_toxic2";
-            this.txtMassRateMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateMedium_toxic2.TabIndex = 32;
-            // 
-            // txtMassRateLarge_toxic2
-            // 
-            this.txtMassRateLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtMassRateLarge_toxic2.Location = new System.Drawing.Point(599, 177);
-            this.txtMassRateLarge_toxic2.Name = "txtMassRateLarge_toxic2";
-            this.txtMassRateLarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtMassRateLarge_toxic2.TabIndex = 33;
-            // 
-            // txtContFLarge_toxic2
-            // 
-            this.txtContFLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFLarge_toxic2.Location = new System.Drawing.Point(599, 152);
-            this.txtContFLarge_toxic2.Name = "txtContFLarge_toxic2";
-            this.txtContFLarge_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContFLarge_toxic2.TabIndex = 28;
-            // 
-            // txtContEMedium_toxic2
-            // 
-            this.txtContEMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContEMedium_toxic2.Location = new System.Drawing.Point(431, 126);
-            this.txtContEMedium_toxic2.Name = "txtContEMedium_toxic2";
-            this.txtContEMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContEMedium_toxic2.TabIndex = 22;
-            // 
-            // txtContFMedium_toxic2
-            // 
-            this.txtContFMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContFMedium_toxic2.Location = new System.Drawing.Point(431, 151);
-            this.txtContFMedium_toxic2.Name = "txtContFMedium_toxic2";
-            this.txtContFMedium_toxic2.Size = new System.Drawing.Size(133, 20);
-            this.txtContFMedium_toxic2.TabIndex = 27;
-            // 
-            // lblTCA
-            // 
-            this.lblTCA.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lblTCA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblTCA.ForeColor = System.Drawing.Color.White;
-            this.lblTCA.Location = new System.Drawing.Point(0, 0);
-            this.lblTCA.Name = "lblTCA";
-            this.lblTCA.Size = new System.Drawing.Size(956, 21);
-            this.lblTCA.TabIndex = 0;
-            this.lblTCA.Text = "▼ Toxic Consequence Area";
-            this.lblTCA.Click += new System.EventHandler(this.lblTCA_Click);
-            // 
             // panelCAP
             // 
             this.panelCAP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -4737,2374 +7320,6 @@
             this.lblCAP.TabIndex = 0;
             this.lblCAP.Text = "▼ Consequence Analysis Properties";
             this.lblCAP.Click += new System.EventHandler(this.lblCAP_Click);
-            // 
-            // panelFCA
-            // 
-            this.panelFCA.Controls.Add(this.tabFlammable);
-            this.panelFCA.Controls.Add(this.lblFCA);
-            this.panelFCA.Location = new System.Drawing.Point(3, 976);
-            this.panelFCA.Name = "panelFCA";
-            this.panelFCA.Size = new System.Drawing.Size(956, 826);
-            this.panelFCA.TabIndex = 4;
-            // 
-            // tabFlammable
-            // 
-            this.tabFlammable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabFlammable.Location = new System.Drawing.Point(0, 21);
-            this.tabFlammable.Name = "tabFlammable";
-            this.tabFlammable.SelectedTabPage = this.tabmodel;
-            this.tabFlammable.Size = new System.Drawing.Size(956, 805);
-            this.tabFlammable.TabIndex = 1;
-            this.tabFlammable.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.tabmodel,
-            this.tabtoxic});
-            // 
-            // tabmodel
-            // 
-            this.tabmodel.Controls.Add(this.label408);
-            this.tabmodel.Controls.Add(this.label407);
-            this.tabmodel.Controls.Add(this.label434);
-            this.tabmodel.Controls.Add(this.label433);
-            this.tabmodel.Controls.Add(this.label432);
-            this.tabmodel.Controls.Add(this.label431);
-            this.tabmodel.Controls.Add(this.label430);
-            this.tabmodel.Controls.Add(this.label429);
-            this.tabmodel.Controls.Add(this.label428);
-            this.tabmodel.Controls.Add(this.label427);
-            this.tabmodel.Controls.Add(this.label426);
-            this.tabmodel.Controls.Add(this.label425);
-            this.tabmodel.Controls.Add(this.label424);
-            this.tabmodel.Controls.Add(this.label423);
-            this.tabmodel.Controls.Add(this.label421);
-            this.tabmodel.Controls.Add(this.label420);
-            this.tabmodel.Controls.Add(this.label419);
-            this.tabmodel.Controls.Add(this.txtFlammablePICA_model);
-            this.tabmodel.Controls.Add(this.txtFlammableCDCA_model);
-            this.tabmodel.Controls.Add(this.label260);
-            this.tabmodel.Controls.Add(this.label299);
-            this.tabmodel.Controls.Add(this.label300);
-            this.tabmodel.Controls.Add(this.label301);
-            this.tabmodel.Controls.Add(this.label302);
-            this.tabmodel.Controls.Add(this.label303);
-            this.tabmodel.Controls.Add(this.label304);
-            this.tabmodel.Controls.Add(this.txtAITBlendINJRupture_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAINLSmall_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAILSmall_model);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAILSmall_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendCMDSmall_model);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAILRupture_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendINJSmall_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAINLRupture_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAILRupture_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendCMDRupture_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendINJMedium_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAILLarge_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendCMDLarge_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendCMDMedium_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAINLLarge_model);
-            this.tabmodel.Controls.Add(this.txtAITBlendINJLarge_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAILMedium_model);
-            this.tabmodel.Controls.Add(this.txtBlendINJAINLMedium_model);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAILLarge_model);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAILMedium_model);
-            this.tabmodel.Controls.Add(this.label305);
-            this.tabmodel.Controls.Add(this.label306);
-            this.tabmodel.Controls.Add(this.label307);
-            this.tabmodel.Controls.Add(this.label308);
-            this.tabmodel.Controls.Add(this.label309);
-            this.tabmodel.Controls.Add(this.label310);
-            this.tabmodel.Controls.Add(this.label311);
-            this.tabmodel.Controls.Add(this.label312);
-            this.tabmodel.Controls.Add(this.label313);
-            this.tabmodel.Controls.Add(this.label314);
-            this.tabmodel.Controls.Add(this.label315);
-            this.tabmodel.Controls.Add(this.txtContCMDAILRupture_model);
-            this.tabmodel.Controls.Add(this.label316);
-            this.tabmodel.Controls.Add(this.label317);
-            this.tabmodel.Controls.Add(this.txtInstCMDAINLRupture_model);
-            this.tabmodel.Controls.Add(this.label318);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAINLRupture_model);
-            this.tabmodel.Controls.Add(this.txtBInstAILINJ_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAINLSmall_model);
-            this.tabmodel.Controls.Add(this.txtBInstAINLINJ_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAILRupture_model);
-            this.tabmodel.Controls.Add(this.txtBContAILINJ_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAILSmall_model);
-            this.tabmodel.Controls.Add(this.txtBContAINLINJ_model);
-            this.tabmodel.Controls.Add(this.txtContINJAILSmall_model);
-            this.tabmodel.Controls.Add(this.txtBInstAILCMD_model);
-            this.tabmodel.Controls.Add(this.txtContINJAINLRupture_model);
-            this.tabmodel.Controls.Add(this.txtBInstAINLCMD_model);
-            this.tabmodel.Controls.Add(this.txtBlendFactorSmall_model);
-            this.tabmodel.Controls.Add(this.txtBContAILCMD_model);
-            this.tabmodel.Controls.Add(this.txtContINJAINLSmall_model);
-            this.tabmodel.Controls.Add(this.txtBContAINLCMD_model);
-            this.tabmodel.Controls.Add(this.txtContINJAILRupture_model);
-            this.tabmodel.Controls.Add(this.txtAInstAILINJ_model);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAINLSmall_model);
-            this.tabmodel.Controls.Add(this.txtAInstAINLINJ_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAILSmall_model);
-            this.tabmodel.Controls.Add(this.txtAContAILINJ_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAINLRupture_model);
-            this.tabmodel.Controls.Add(this.txtAContAINLINJ_model);
-            this.tabmodel.Controls.Add(this.txtContCMDAINLSmall_model);
-            this.tabmodel.Controls.Add(this.txtAInstAILCMD_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAINLSmall_model);
-            this.tabmodel.Controls.Add(this.txtAInstAINLCMD_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAILRupture_model);
-            this.tabmodel.Controls.Add(this.txtAContAILCMD_model);
-            this.tabmodel.Controls.Add(this.txtEneffSmall_model);
-            this.tabmodel.Controls.Add(this.txtAContAINLCMD_model);
-            this.tabmodel.Controls.Add(this.txtContCMDAILSmall_model);
-            this.tabmodel.Controls.Add(this.label319);
-            this.tabmodel.Controls.Add(this.txtBlendFactorRupture_model);
-            this.tabmodel.Controls.Add(this.label320);
-            this.tabmodel.Controls.Add(this.label321);
-            this.tabmodel.Controls.Add(this.label322);
-            this.tabmodel.Controls.Add(this.txtEneffMedium_model);
-            this.tabmodel.Controls.Add(this.label323);
-            this.tabmodel.Controls.Add(this.label324);
-            this.tabmodel.Controls.Add(this.label325);
-            this.tabmodel.Controls.Add(this.txtContCMDAINLMedium_model);
-            this.tabmodel.Controls.Add(this.label326);
-            this.tabmodel.Controls.Add(this.txtContCMDAINLRupture_model);
-            this.tabmodel.Controls.Add(this.label327);
-            this.tabmodel.Controls.Add(this.label328);
-            this.tabmodel.Controls.Add(this.label329);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAINLMedium_model);
-            this.tabmodel.Controls.Add(this.label330);
-            this.tabmodel.Controls.Add(this.txtEneffRupture_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAILLarge_model);
-            this.tabmodel.Controls.Add(this.label331);
-            this.tabmodel.Controls.Add(this.txtBlendFactorLarge_model);
-            this.tabmodel.Controls.Add(this.txtBlendFactorMedium_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAINLLarge_model);
-            this.tabmodel.Controls.Add(this.txtContCMDAILLarge_model);
-            this.tabmodel.Controls.Add(this.txtBlendCMDAINLLarge_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAILMedium_model);
-            this.tabmodel.Controls.Add(this.txtContCMDAINLLarge_model);
-            this.tabmodel.Controls.Add(this.txtInstINJAINLMedium_model);
-            this.tabmodel.Controls.Add(this.txtContINJAILLarge_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAINLLarge_model);
-            this.tabmodel.Controls.Add(this.txtEneffLarge_model);
-            this.tabmodel.Controls.Add(this.txtContINJAILMedium_model);
-            this.tabmodel.Controls.Add(this.txtContCMDAILMedium_model);
-            this.tabmodel.Controls.Add(this.txtContINJAINLMedium_model);
-            this.tabmodel.Controls.Add(this.txtContINJAINLLarge_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAILLarge_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAINLMedium_model);
-            this.tabmodel.Controls.Add(this.txtInstCMDAILMedium_model);
-            this.tabmodel.Name = "tabmodel";
-            this.tabmodel.Size = new System.Drawing.Size(954, 780);
-            this.tabmodel.Text = "tabmodel";
-            // 
-            // label408
-            // 
-            this.label408.AutoSize = true;
-            this.label408.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label408.Location = new System.Drawing.Point(645, 746);
-            this.label408.Name = "label408";
-            this.label408.Size = new System.Drawing.Size(18, 13);
-            this.label408.TabIndex = 301;
-            this.label408.Text = "m²";
-            // 
-            // label407
-            // 
-            this.label407.AutoSize = true;
-            this.label407.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label407.Location = new System.Drawing.Point(645, 713);
-            this.label407.Name = "label407";
-            this.label407.Size = new System.Drawing.Size(18, 13);
-            this.label407.TabIndex = 300;
-            this.label407.Text = "m²";
-            // 
-            // label434
-            // 
-            this.label434.AutoSize = true;
-            this.label434.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label434.Location = new System.Drawing.Point(891, 674);
-            this.label434.Name = "label434";
-            this.label434.Size = new System.Drawing.Size(18, 13);
-            this.label434.TabIndex = 299;
-            this.label434.Text = "m²";
-            // 
-            // label433
-            // 
-            this.label433.AutoSize = true;
-            this.label433.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label433.Location = new System.Drawing.Point(891, 650);
-            this.label433.Name = "label433";
-            this.label433.Size = new System.Drawing.Size(18, 13);
-            this.label433.TabIndex = 298;
-            this.label433.Text = "m²";
-            // 
-            // label432
-            // 
-            this.label432.AutoSize = true;
-            this.label432.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label432.Location = new System.Drawing.Point(891, 625);
-            this.label432.Name = "label432";
-            this.label432.Size = new System.Drawing.Size(18, 13);
-            this.label432.TabIndex = 297;
-            this.label432.Text = "m²";
-            // 
-            // label431
-            // 
-            this.label431.AutoSize = true;
-            this.label431.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label431.Location = new System.Drawing.Point(891, 600);
-            this.label431.Name = "label431";
-            this.label431.Size = new System.Drawing.Size(18, 13);
-            this.label431.TabIndex = 296;
-            this.label431.Text = "m²";
-            // 
-            // label430
-            // 
-            this.label430.AutoSize = true;
-            this.label430.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label430.Location = new System.Drawing.Point(891, 575);
-            this.label430.Name = "label430";
-            this.label430.Size = new System.Drawing.Size(18, 13);
-            this.label430.TabIndex = 295;
-            this.label430.Text = "m²";
-            // 
-            // label429
-            // 
-            this.label429.AutoSize = true;
-            this.label429.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label429.Location = new System.Drawing.Point(891, 549);
-            this.label429.Name = "label429";
-            this.label429.Size = new System.Drawing.Size(18, 13);
-            this.label429.TabIndex = 294;
-            this.label429.Text = "m²";
-            // 
-            // label428
-            // 
-            this.label428.AutoSize = true;
-            this.label428.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label428.Location = new System.Drawing.Point(891, 496);
-            this.label428.Name = "label428";
-            this.label428.Size = new System.Drawing.Size(18, 13);
-            this.label428.TabIndex = 293;
-            this.label428.Text = "m²";
-            // 
-            // label427
-            // 
-            this.label427.AutoSize = true;
-            this.label427.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label427.Location = new System.Drawing.Point(891, 470);
-            this.label427.Name = "label427";
-            this.label427.Size = new System.Drawing.Size(18, 13);
-            this.label427.TabIndex = 292;
-            this.label427.Text = "m²";
-            // 
-            // label426
-            // 
-            this.label426.AutoSize = true;
-            this.label426.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label426.Location = new System.Drawing.Point(891, 446);
-            this.label426.Name = "label426";
-            this.label426.Size = new System.Drawing.Size(18, 13);
-            this.label426.TabIndex = 291;
-            this.label426.Text = "m²";
-            // 
-            // label425
-            // 
-            this.label425.AutoSize = true;
-            this.label425.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label425.Location = new System.Drawing.Point(891, 420);
-            this.label425.Name = "label425";
-            this.label425.Size = new System.Drawing.Size(18, 13);
-            this.label425.TabIndex = 290;
-            this.label425.Text = "m²";
-            // 
-            // label424
-            // 
-            this.label424.AutoSize = true;
-            this.label424.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label424.Location = new System.Drawing.Point(891, 395);
-            this.label424.Name = "label424";
-            this.label424.Size = new System.Drawing.Size(18, 13);
-            this.label424.TabIndex = 289;
-            this.label424.Text = "m²";
-            // 
-            // label423
-            // 
-            this.label423.AutoSize = true;
-            this.label423.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label423.Location = new System.Drawing.Point(891, 371);
-            this.label423.Name = "label423";
-            this.label423.Size = new System.Drawing.Size(18, 13);
-            this.label423.TabIndex = 288;
-            this.label423.Text = "m²";
-            // 
-            // label421
-            // 
-            this.label421.AutoSize = true;
-            this.label421.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label421.Location = new System.Drawing.Point(891, 346);
-            this.label421.Name = "label421";
-            this.label421.Size = new System.Drawing.Size(18, 13);
-            this.label421.TabIndex = 287;
-            this.label421.Text = "m²";
-            // 
-            // label420
-            // 
-            this.label420.AutoSize = true;
-            this.label420.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label420.Location = new System.Drawing.Point(891, 325);
-            this.label420.Name = "label420";
-            this.label420.Size = new System.Drawing.Size(18, 13);
-            this.label420.TabIndex = 286;
-            this.label420.Text = "m²";
-            // 
-            // label419
-            // 
-            this.label419.AutoSize = true;
-            this.label419.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label419.Location = new System.Drawing.Point(886, 298);
-            this.label419.Name = "label419";
-            this.label419.Size = new System.Drawing.Size(43, 13);
-            this.label419.TabIndex = 285;
-            this.label419.Text = "minutes";
-            // 
-            // txtFlammablePICA_model
-            // 
-            this.txtFlammablePICA_model.Location = new System.Drawing.Point(363, 743);
-            this.txtFlammablePICA_model.Name = "txtFlammablePICA_model";
-            this.txtFlammablePICA_model.Size = new System.Drawing.Size(270, 21);
-            this.txtFlammablePICA_model.TabIndex = 275;
-            // 
-            // txtFlammableCDCA_model
-            // 
-            this.txtFlammableCDCA_model.Location = new System.Drawing.Point(363, 710);
-            this.txtFlammableCDCA_model.Name = "txtFlammableCDCA_model";
-            this.txtFlammableCDCA_model.Size = new System.Drawing.Size(270, 21);
-            this.txtFlammableCDCA_model.TabIndex = 274;
-            // 
-            // label260
-            // 
-            this.label260.AutoSize = true;
-            this.label260.Location = new System.Drawing.Point(27, 751);
-            this.label260.Name = "label260";
-            this.label260.Size = new System.Drawing.Size(227, 13);
-            this.label260.TabIndex = 273;
-            this.label260.Text = "Flammable Personal Injury Consequence Area";
-            // 
-            // label299
-            // 
-            this.label299.AutoSize = true;
-            this.label299.Location = new System.Drawing.Point(27, 718);
-            this.label299.Name = "label299";
-            this.label299.Size = new System.Drawing.Size(251, 13);
-            this.label299.TabIndex = 272;
-            this.label299.Text = "Flammable Component Damage Consequence Area";
-            // 
-            // label300
-            // 
-            this.label300.AutoSize = true;
-            this.label300.Location = new System.Drawing.Point(27, 677);
-            this.label300.Name = "label300";
-            this.label300.Size = new System.Drawing.Size(102, 13);
-            this.label300.TabIndex = 271;
-            this.label300.Text = "AIT Blended-INJ CA";
-            // 
-            // label301
-            // 
-            this.label301.AutoSize = true;
-            this.label301.Location = new System.Drawing.Point(27, 652);
-            this.label301.Name = "label301";
-            this.label301.Size = new System.Drawing.Size(108, 13);
-            this.label301.TabIndex = 270;
-            this.label301.Text = "AIT Blended-CMD CA";
-            // 
-            // label302
-            // 
-            this.label302.AutoSize = true;
-            this.label302.Location = new System.Drawing.Point(27, 627);
-            this.label302.Name = "label302";
-            this.label302.Size = new System.Drawing.Size(102, 13);
-            this.label302.TabIndex = 269;
-            this.label302.Text = "Blended-INJ-AIL CA";
-            // 
-            // label303
-            // 
-            this.label303.AutoSize = true;
-            this.label303.Location = new System.Drawing.Point(27, 602);
-            this.label303.Name = "label303";
-            this.label303.Size = new System.Drawing.Size(109, 13);
-            this.label303.TabIndex = 268;
-            this.label303.Text = "Blended-INJ-AINL CA";
-            // 
-            // label304
-            // 
-            this.label304.AutoSize = true;
-            this.label304.Location = new System.Drawing.Point(27, 577);
-            this.label304.Name = "label304";
-            this.label304.Size = new System.Drawing.Size(108, 13);
-            this.label304.TabIndex = 267;
-            this.label304.Text = "Blended-CMD-AIL CA";
-            // 
-            // txtAITBlendINJRupture_model
-            // 
-            this.txtAITBlendINJRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJRupture_model.Location = new System.Drawing.Point(747, 671);
-            this.txtAITBlendINJRupture_model.Name = "txtAITBlendINJRupture_model";
-            this.txtAITBlendINJRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJRupture_model.TabIndex = 262;
-            // 
-            // txtBlendINJAINLSmall_model
-            // 
-            this.txtBlendINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLSmall_model.Location = new System.Drawing.Point(243, 595);
-            this.txtBlendINJAINLSmall_model.Name = "txtBlendINJAINLSmall_model";
-            this.txtBlendINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLSmall_model.TabIndex = 250;
-            // 
-            // txtBlendINJAILSmall_model
-            // 
-            this.txtBlendINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILSmall_model.Location = new System.Drawing.Point(243, 620);
-            this.txtBlendINJAILSmall_model.Name = "txtBlendINJAILSmall_model";
-            this.txtBlendINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILSmall_model.TabIndex = 249;
-            // 
-            // txtBlendCMDAILSmall_model
-            // 
-            this.txtBlendCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILSmall_model.Location = new System.Drawing.Point(243, 570);
-            this.txtBlendCMDAILSmall_model.Name = "txtBlendCMDAILSmall_model";
-            this.txtBlendCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILSmall_model.TabIndex = 251;
-            // 
-            // txtAITBlendCMDSmall_model
-            // 
-            this.txtAITBlendCMDSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDSmall_model.Location = new System.Drawing.Point(243, 645);
-            this.txtAITBlendCMDSmall_model.Name = "txtAITBlendCMDSmall_model";
-            this.txtAITBlendCMDSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDSmall_model.TabIndex = 248;
-            // 
-            // txtBlendCMDAILRupture_model
-            // 
-            this.txtBlendCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILRupture_model.Location = new System.Drawing.Point(747, 571);
-            this.txtBlendCMDAILRupture_model.Name = "txtBlendCMDAILRupture_model";
-            this.txtBlendCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILRupture_model.TabIndex = 266;
-            // 
-            // txtAITBlendINJSmall_model
-            // 
-            this.txtAITBlendINJSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJSmall_model.Location = new System.Drawing.Point(243, 670);
-            this.txtAITBlendINJSmall_model.Name = "txtAITBlendINJSmall_model";
-            this.txtAITBlendINJSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJSmall_model.TabIndex = 247;
-            // 
-            // txtBlendINJAINLRupture_model
-            // 
-            this.txtBlendINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLRupture_model.Location = new System.Drawing.Point(747, 596);
-            this.txtBlendINJAINLRupture_model.Name = "txtBlendINJAINLRupture_model";
-            this.txtBlendINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLRupture_model.TabIndex = 265;
-            // 
-            // txtBlendINJAILRupture_model
-            // 
-            this.txtBlendINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILRupture_model.Location = new System.Drawing.Point(747, 621);
-            this.txtBlendINJAILRupture_model.Name = "txtBlendINJAILRupture_model";
-            this.txtBlendINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILRupture_model.TabIndex = 264;
-            // 
-            // txtAITBlendCMDRupture_model
-            // 
-            this.txtAITBlendCMDRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDRupture_model.Location = new System.Drawing.Point(747, 646);
-            this.txtAITBlendCMDRupture_model.Name = "txtAITBlendCMDRupture_model";
-            this.txtAITBlendCMDRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDRupture_model.TabIndex = 263;
-            // 
-            // txtAITBlendINJMedium_model
-            // 
-            this.txtAITBlendINJMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJMedium_model.Location = new System.Drawing.Point(411, 670);
-            this.txtAITBlendINJMedium_model.Name = "txtAITBlendINJMedium_model";
-            this.txtAITBlendINJMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJMedium_model.TabIndex = 252;
-            // 
-            // txtBlendINJAILLarge_model
-            // 
-            this.txtBlendINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILLarge_model.Location = new System.Drawing.Point(579, 621);
-            this.txtBlendINJAILLarge_model.Name = "txtBlendINJAILLarge_model";
-            this.txtBlendINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILLarge_model.TabIndex = 259;
-            // 
-            // txtAITBlendCMDLarge_model
-            // 
-            this.txtAITBlendCMDLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDLarge_model.Location = new System.Drawing.Point(579, 646);
-            this.txtAITBlendCMDLarge_model.Name = "txtAITBlendCMDLarge_model";
-            this.txtAITBlendCMDLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDLarge_model.TabIndex = 258;
-            // 
-            // txtAITBlendCMDMedium_model
-            // 
-            this.txtAITBlendCMDMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDMedium_model.Location = new System.Drawing.Point(411, 645);
-            this.txtAITBlendCMDMedium_model.Name = "txtAITBlendCMDMedium_model";
-            this.txtAITBlendCMDMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDMedium_model.TabIndex = 253;
-            // 
-            // txtBlendINJAINLLarge_model
-            // 
-            this.txtBlendINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLLarge_model.Location = new System.Drawing.Point(579, 596);
-            this.txtBlendINJAINLLarge_model.Name = "txtBlendINJAINLLarge_model";
-            this.txtBlendINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLLarge_model.TabIndex = 260;
-            // 
-            // txtAITBlendINJLarge_model
-            // 
-            this.txtAITBlendINJLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJLarge_model.Location = new System.Drawing.Point(579, 671);
-            this.txtAITBlendINJLarge_model.Name = "txtAITBlendINJLarge_model";
-            this.txtAITBlendINJLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJLarge_model.TabIndex = 257;
-            // 
-            // txtBlendINJAILMedium_model
-            // 
-            this.txtBlendINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILMedium_model.Location = new System.Drawing.Point(411, 620);
-            this.txtBlendINJAILMedium_model.Name = "txtBlendINJAILMedium_model";
-            this.txtBlendINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILMedium_model.TabIndex = 254;
-            // 
-            // txtBlendINJAINLMedium_model
-            // 
-            this.txtBlendINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLMedium_model.Location = new System.Drawing.Point(411, 595);
-            this.txtBlendINJAINLMedium_model.Name = "txtBlendINJAINLMedium_model";
-            this.txtBlendINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLMedium_model.TabIndex = 255;
-            // 
-            // txtBlendCMDAILLarge_model
-            // 
-            this.txtBlendCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILLarge_model.Location = new System.Drawing.Point(579, 571);
-            this.txtBlendCMDAILLarge_model.Name = "txtBlendCMDAILLarge_model";
-            this.txtBlendCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILLarge_model.TabIndex = 261;
-            // 
-            // txtBlendCMDAILMedium_model
-            // 
-            this.txtBlendCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILMedium_model.Location = new System.Drawing.Point(411, 570);
-            this.txtBlendCMDAILMedium_model.Name = "txtBlendCMDAILMedium_model";
-            this.txtBlendCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILMedium_model.TabIndex = 256;
-            // 
-            // label305
-            // 
-            this.label305.AutoSize = true;
-            this.label305.Location = new System.Drawing.Point(27, 552);
-            this.label305.Name = "label305";
-            this.label305.Size = new System.Drawing.Size(115, 13);
-            this.label305.TabIndex = 246;
-            this.label305.Text = "Blended-CMD-AINL CA";
-            // 
-            // label306
-            // 
-            this.label306.AutoSize = true;
-            this.label306.Location = new System.Drawing.Point(27, 527);
-            this.label306.Name = "label306";
-            this.label306.Size = new System.Drawing.Size(126, 13);
-            this.label306.TabIndex = 245;
-            this.label306.Text = "Blending Factor, Fact_IC";
-            // 
-            // label307
-            // 
-            this.label307.AutoSize = true;
-            this.label307.Location = new System.Drawing.Point(27, 502);
-            this.label307.Name = "label307";
-            this.label307.Size = new System.Drawing.Size(87, 13);
-            this.label307.TabIndex = 244;
-            this.label307.Text = "INST-INJ-AIL CA";
-            // 
-            // label308
-            // 
-            this.label308.AutoSize = true;
-            this.label308.Location = new System.Drawing.Point(27, 477);
-            this.label308.Name = "label308";
-            this.label308.Size = new System.Drawing.Size(94, 13);
-            this.label308.TabIndex = 243;
-            this.label308.Text = "INST-INJ-AINL CA";
-            // 
-            // label309
-            // 
-            this.label309.AutoSize = true;
-            this.label309.Location = new System.Drawing.Point(27, 452);
-            this.label309.Name = "label309";
-            this.label309.Size = new System.Drawing.Size(92, 13);
-            this.label309.TabIndex = 242;
-            this.label309.Text = "CONT-INJ-AIL CA";
-            // 
-            // label310
-            // 
-            this.label310.AutoSize = true;
-            this.label310.Location = new System.Drawing.Point(27, 427);
-            this.label310.Name = "label310";
-            this.label310.Size = new System.Drawing.Size(99, 13);
-            this.label310.TabIndex = 241;
-            this.label310.Text = "CONT-INJ-AINL CA";
-            // 
-            // label311
-            // 
-            this.label311.AutoSize = true;
-            this.label311.Location = new System.Drawing.Point(27, 402);
-            this.label311.Name = "label311";
-            this.label311.Size = new System.Drawing.Size(93, 13);
-            this.label311.TabIndex = 240;
-            this.label311.Text = "INST-CMD-AIL CA";
-            // 
-            // label312
-            // 
-            this.label312.AutoSize = true;
-            this.label312.Location = new System.Drawing.Point(27, 377);
-            this.label312.Name = "label312";
-            this.label312.Size = new System.Drawing.Size(100, 13);
-            this.label312.TabIndex = 239;
-            this.label312.Text = "INST-CMD-AINL CA";
-            // 
-            // label313
-            // 
-            this.label313.AutoSize = true;
-            this.label313.Location = new System.Drawing.Point(27, 352);
-            this.label313.Name = "label313";
-            this.label313.Size = new System.Drawing.Size(98, 13);
-            this.label313.TabIndex = 238;
-            this.label313.Text = "CONT-CMD-AIL CA";
-            // 
-            // label314
-            // 
-            this.label314.AutoSize = true;
-            this.label314.Location = new System.Drawing.Point(27, 327);
-            this.label314.Name = "label314";
-            this.label314.Size = new System.Drawing.Size(105, 13);
-            this.label314.TabIndex = 237;
-            this.label314.Text = "CONT-CMD-AINL CA";
-            // 
-            // label315
-            // 
-            this.label315.AutoSize = true;
-            this.label315.Location = new System.Drawing.Point(27, 301);
-            this.label315.Name = "label315";
-            this.label315.Size = new System.Drawing.Size(177, 13);
-            this.label315.TabIndex = 236;
-            this.label315.Text = "Energy Efficiency Correction Factor";
-            // 
-            // txtContCMDAILRupture_model
-            // 
-            this.txtContCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILRupture_model.Location = new System.Drawing.Point(747, 346);
-            this.txtContCMDAILRupture_model.Name = "txtContCMDAILRupture_model";
-            this.txtContCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILRupture_model.TabIndex = 235;
-            // 
-            // label316
-            // 
-            this.label316.AutoSize = true;
-            this.label316.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label316.Location = new System.Drawing.Point(27, 268);
-            this.label316.Name = "label316";
-            this.label316.Size = new System.Drawing.Size(122, 15);
-            this.label316.TabIndex = 187;
-            this.label316.Text = "Release hole size";
-            // 
-            // label317
-            // 
-            this.label317.AutoSize = true;
-            this.label317.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label317.Location = new System.Drawing.Point(488, 23);
-            this.label317.Name = "label317";
-            this.label317.Size = new System.Drawing.Size(18, 18);
-            this.label317.TabIndex = 186;
-            this.label317.Text = "B";
-            // 
-            // txtInstCMDAINLRupture_model
-            // 
-            this.txtInstCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLRupture_model.Location = new System.Drawing.Point(747, 371);
-            this.txtInstCMDAINLRupture_model.Name = "txtInstCMDAINLRupture_model";
-            this.txtInstCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLRupture_model.TabIndex = 234;
-            // 
-            // label318
-            // 
-            this.label318.AutoSize = true;
-            this.label318.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label318.Location = new System.Drawing.Point(387, 23);
-            this.label318.Name = "label318";
-            this.label318.Size = new System.Drawing.Size(18, 18);
-            this.label318.TabIndex = 185;
-            this.label318.Text = "A";
-            // 
-            // txtBlendCMDAINLRupture_model
-            // 
-            this.txtBlendCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLRupture_model.Location = new System.Drawing.Point(747, 546);
-            this.txtBlendCMDAINLRupture_model.Name = "txtBlendCMDAINLRupture_model";
-            this.txtBlendCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLRupture_model.TabIndex = 227;
-            // 
-            // txtBInstAILINJ_model
-            // 
-            this.txtBInstAILINJ_model.Location = new System.Drawing.Point(453, 218);
-            this.txtBInstAILINJ_model.Name = "txtBInstAILINJ_model";
-            this.txtBInstAILINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAILINJ_model.TabIndex = 184;
-            // 
-            // txtInstINJAINLSmall_model
-            // 
-            this.txtInstINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLSmall_model.Location = new System.Drawing.Point(243, 470);
-            this.txtInstINJAINLSmall_model.Name = "txtInstINJAINLSmall_model";
-            this.txtInstINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLSmall_model.TabIndex = 197;
-            // 
-            // txtBInstAINLINJ_model
-            // 
-            this.txtBInstAINLINJ_model.Location = new System.Drawing.Point(453, 194);
-            this.txtBInstAINLINJ_model.Name = "txtBInstAINLINJ_model";
-            this.txtBInstAINLINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAINLINJ_model.TabIndex = 183;
-            // 
-            // txtInstCMDAILRupture_model
-            // 
-            this.txtInstCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILRupture_model.Location = new System.Drawing.Point(747, 396);
-            this.txtInstCMDAILRupture_model.Name = "txtInstCMDAILRupture_model";
-            this.txtInstCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILRupture_model.TabIndex = 233;
-            // 
-            // txtBContAILINJ_model
-            // 
-            this.txtBContAILINJ_model.Location = new System.Drawing.Point(453, 170);
-            this.txtBContAILINJ_model.Name = "txtBContAILINJ_model";
-            this.txtBContAILINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAILINJ_model.TabIndex = 182;
-            // 
-            // txtInstINJAILSmall_model
-            // 
-            this.txtInstINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILSmall_model.Location = new System.Drawing.Point(243, 495);
-            this.txtInstINJAILSmall_model.Name = "txtInstINJAILSmall_model";
-            this.txtInstINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILSmall_model.TabIndex = 196;
-            // 
-            // txtBContAINLINJ_model
-            // 
-            this.txtBContAINLINJ_model.Location = new System.Drawing.Point(453, 146);
-            this.txtBContAINLINJ_model.Name = "txtBContAINLINJ_model";
-            this.txtBContAINLINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAINLINJ_model.TabIndex = 181;
-            // 
-            // txtContINJAILSmall_model
-            // 
-            this.txtContINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILSmall_model.Location = new System.Drawing.Point(243, 445);
-            this.txtContINJAILSmall_model.Name = "txtContINJAILSmall_model";
-            this.txtContINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILSmall_model.TabIndex = 198;
-            // 
-            // txtBInstAILCMD_model
-            // 
-            this.txtBInstAILCMD_model.Location = new System.Drawing.Point(453, 122);
-            this.txtBInstAILCMD_model.Name = "txtBInstAILCMD_model";
-            this.txtBInstAILCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAILCMD_model.TabIndex = 180;
-            // 
-            // txtContINJAINLRupture_model
-            // 
-            this.txtContINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLRupture_model.Location = new System.Drawing.Point(747, 421);
-            this.txtContINJAINLRupture_model.Name = "txtContINJAINLRupture_model";
-            this.txtContINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLRupture_model.TabIndex = 232;
-            // 
-            // txtBInstAINLCMD_model
-            // 
-            this.txtBInstAINLCMD_model.Location = new System.Drawing.Point(453, 98);
-            this.txtBInstAINLCMD_model.Name = "txtBInstAINLCMD_model";
-            this.txtBInstAINLCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAINLCMD_model.TabIndex = 179;
-            // 
-            // txtBlendFactorSmall_model
-            // 
-            this.txtBlendFactorSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorSmall_model.Location = new System.Drawing.Point(243, 520);
-            this.txtBlendFactorSmall_model.Name = "txtBlendFactorSmall_model";
-            this.txtBlendFactorSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorSmall_model.TabIndex = 195;
-            // 
-            // txtBContAILCMD_model
-            // 
-            this.txtBContAILCMD_model.Location = new System.Drawing.Point(453, 74);
-            this.txtBContAILCMD_model.Name = "txtBContAILCMD_model";
-            this.txtBContAILCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAILCMD_model.TabIndex = 178;
-            // 
-            // txtContINJAINLSmall_model
-            // 
-            this.txtContINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLSmall_model.Location = new System.Drawing.Point(243, 420);
-            this.txtContINJAINLSmall_model.Name = "txtContINJAINLSmall_model";
-            this.txtContINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLSmall_model.TabIndex = 199;
-            // 
-            // txtBContAINLCMD_model
-            // 
-            this.txtBContAINLCMD_model.Location = new System.Drawing.Point(453, 50);
-            this.txtBContAINLCMD_model.Name = "txtBContAINLCMD_model";
-            this.txtBContAINLCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAINLCMD_model.TabIndex = 177;
-            // 
-            // txtContINJAILRupture_model
-            // 
-            this.txtContINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILRupture_model.Location = new System.Drawing.Point(747, 446);
-            this.txtContINJAILRupture_model.Name = "txtContINJAILRupture_model";
-            this.txtContINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILRupture_model.TabIndex = 231;
-            // 
-            // txtAInstAILINJ_model
-            // 
-            this.txtAInstAILINJ_model.Location = new System.Drawing.Point(349, 218);
-            this.txtAInstAILINJ_model.Name = "txtAInstAILINJ_model";
-            this.txtAInstAILINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAILINJ_model.TabIndex = 176;
-            // 
-            // txtBlendCMDAINLSmall_model
-            // 
-            this.txtBlendCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLSmall_model.Location = new System.Drawing.Point(243, 545);
-            this.txtBlendCMDAINLSmall_model.Name = "txtBlendCMDAINLSmall_model";
-            this.txtBlendCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLSmall_model.TabIndex = 194;
-            // 
-            // txtAInstAINLINJ_model
-            // 
-            this.txtAInstAINLINJ_model.Location = new System.Drawing.Point(349, 194);
-            this.txtAInstAINLINJ_model.Name = "txtAInstAINLINJ_model";
-            this.txtAInstAINLINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAINLINJ_model.TabIndex = 175;
-            // 
-            // txtInstCMDAILSmall_model
-            // 
-            this.txtInstCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILSmall_model.Location = new System.Drawing.Point(243, 395);
-            this.txtInstCMDAILSmall_model.Name = "txtInstCMDAILSmall_model";
-            this.txtInstCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILSmall_model.TabIndex = 200;
-            // 
-            // txtAContAILINJ_model
-            // 
-            this.txtAContAILINJ_model.Location = new System.Drawing.Point(349, 170);
-            this.txtAContAILINJ_model.Name = "txtAContAILINJ_model";
-            this.txtAContAILINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAILINJ_model.TabIndex = 174;
-            // 
-            // txtInstINJAINLRupture_model
-            // 
-            this.txtInstINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLRupture_model.Location = new System.Drawing.Point(747, 471);
-            this.txtInstINJAINLRupture_model.Name = "txtInstINJAINLRupture_model";
-            this.txtInstINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLRupture_model.TabIndex = 230;
-            // 
-            // txtAContAINLINJ_model
-            // 
-            this.txtAContAINLINJ_model.Location = new System.Drawing.Point(349, 146);
-            this.txtAContAINLINJ_model.Name = "txtAContAINLINJ_model";
-            this.txtAContAINLINJ_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAINLINJ_model.TabIndex = 173;
-            // 
-            // txtContCMDAINLSmall_model
-            // 
-            this.txtContCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLSmall_model.Location = new System.Drawing.Point(243, 320);
-            this.txtContCMDAINLSmall_model.Name = "txtContCMDAINLSmall_model";
-            this.txtContCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLSmall_model.TabIndex = 193;
-            // 
-            // txtAInstAILCMD_model
-            // 
-            this.txtAInstAILCMD_model.Location = new System.Drawing.Point(349, 122);
-            this.txtAInstAILCMD_model.Name = "txtAInstAILCMD_model";
-            this.txtAInstAILCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAILCMD_model.TabIndex = 172;
-            // 
-            // txtInstCMDAINLSmall_model
-            // 
-            this.txtInstCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLSmall_model.Location = new System.Drawing.Point(243, 370);
-            this.txtInstCMDAINLSmall_model.Name = "txtInstCMDAINLSmall_model";
-            this.txtInstCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLSmall_model.TabIndex = 201;
-            // 
-            // txtAInstAINLCMD_model
-            // 
-            this.txtAInstAINLCMD_model.Location = new System.Drawing.Point(349, 98);
-            this.txtAInstAINLCMD_model.Name = "txtAInstAINLCMD_model";
-            this.txtAInstAINLCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAINLCMD_model.TabIndex = 171;
-            // 
-            // txtInstINJAILRupture_model
-            // 
-            this.txtInstINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILRupture_model.Location = new System.Drawing.Point(747, 496);
-            this.txtInstINJAILRupture_model.Name = "txtInstINJAILRupture_model";
-            this.txtInstINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILRupture_model.TabIndex = 229;
-            // 
-            // txtAContAILCMD_model
-            // 
-            this.txtAContAILCMD_model.Location = new System.Drawing.Point(349, 74);
-            this.txtAContAILCMD_model.Name = "txtAContAILCMD_model";
-            this.txtAContAILCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAILCMD_model.TabIndex = 170;
-            // 
-            // txtEneffSmall_model
-            // 
-            this.txtEneffSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffSmall_model.Location = new System.Drawing.Point(243, 294);
-            this.txtEneffSmall_model.Name = "txtEneffSmall_model";
-            this.txtEneffSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffSmall_model.TabIndex = 192;
-            // 
-            // txtAContAINLCMD_model
-            // 
-            this.txtAContAINLCMD_model.Location = new System.Drawing.Point(349, 50);
-            this.txtAContAINLCMD_model.Name = "txtAContAINLCMD_model";
-            this.txtAContAINLCMD_model.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAINLCMD_model.TabIndex = 169;
-            // 
-            // txtContCMDAILSmall_model
-            // 
-            this.txtContCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILSmall_model.Location = new System.Drawing.Point(243, 345);
-            this.txtContCMDAILSmall_model.Name = "txtContCMDAILSmall_model";
-            this.txtContCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILSmall_model.TabIndex = 202;
-            // 
-            // label319
-            // 
-            this.label319.AutoSize = true;
-            this.label319.Location = new System.Drawing.Point(27, 226);
-            this.label319.Name = "label319";
-            this.label319.Size = new System.Drawing.Size(233, 13);
-            this.label319.TabIndex = 168;
-            this.label319.Text = "Instantaneous Release-Auto Ignition Likely-INJ";
-            // 
-            // txtBlendFactorRupture_model
-            // 
-            this.txtBlendFactorRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorRupture_model.Location = new System.Drawing.Point(747, 521);
-            this.txtBlendFactorRupture_model.Name = "txtBlendFactorRupture_model";
-            this.txtBlendFactorRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorRupture_model.TabIndex = 228;
-            // 
-            // label320
-            // 
-            this.label320.AutoSize = true;
-            this.label320.Location = new System.Drawing.Point(27, 202);
-            this.label320.Name = "label320";
-            this.label320.Size = new System.Drawing.Size(253, 13);
-            this.label320.TabIndex = 167;
-            this.label320.Text = "Instantaneous Release-Auto Ignition Not Likely-INJ";
-            // 
-            // label321
-            // 
-            this.label321.AutoSize = true;
-            this.label321.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label321.Location = new System.Drawing.Point(795, 267);
-            this.label321.Name = "label321";
-            this.label321.Size = new System.Drawing.Size(58, 15);
-            this.label321.TabIndex = 191;
-            this.label321.Text = "Rupture";
-            // 
-            // label322
-            // 
-            this.label322.AutoSize = true;
-            this.label322.Location = new System.Drawing.Point(27, 178);
-            this.label322.Name = "label322";
-            this.label322.Size = new System.Drawing.Size(211, 13);
-            this.label322.TabIndex = 166;
-            this.label322.Text = "Continous Release-Auto Ignition Likely-INJ";
-            // 
-            // txtEneffMedium_model
-            // 
-            this.txtEneffMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffMedium_model.Location = new System.Drawing.Point(411, 294);
-            this.txtEneffMedium_model.Name = "txtEneffMedium_model";
-            this.txtEneffMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffMedium_model.TabIndex = 203;
-            // 
-            // label323
-            // 
-            this.label323.AutoSize = true;
-            this.label323.Location = new System.Drawing.Point(27, 154);
-            this.label323.Name = "label323";
-            this.label323.Size = new System.Drawing.Size(231, 13);
-            this.label323.TabIndex = 165;
-            this.label323.Text = "Continous Release-Auto Ignition Not Likely-INJ";
-            // 
-            // label324
-            // 
-            this.label324.AutoSize = true;
-            this.label324.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label324.Location = new System.Drawing.Point(278, 267);
-            this.label324.Name = "label324";
-            this.label324.Size = new System.Drawing.Size(44, 15);
-            this.label324.TabIndex = 190;
-            this.label324.Text = "Small";
-            // 
-            // label325
-            // 
-            this.label325.AutoSize = true;
-            this.label325.Location = new System.Drawing.Point(27, 130);
-            this.label325.Name = "label325";
-            this.label325.Size = new System.Drawing.Size(239, 13);
-            this.label325.TabIndex = 164;
-            this.label325.Text = "Instantaneous Release-Auto Ignition Likely-CMD";
-            // 
-            // txtContCMDAINLMedium_model
-            // 
-            this.txtContCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLMedium_model.Location = new System.Drawing.Point(411, 320);
-            this.txtContCMDAINLMedium_model.Name = "txtContCMDAINLMedium_model";
-            this.txtContCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLMedium_model.TabIndex = 204;
-            // 
-            // label326
-            // 
-            this.label326.AutoSize = true;
-            this.label326.Location = new System.Drawing.Point(27, 106);
-            this.label326.Name = "label326";
-            this.label326.Size = new System.Drawing.Size(259, 13);
-            this.label326.TabIndex = 163;
-            this.label326.Text = "Instantaneous Release-Auto Ignition Not Likely-CMD";
-            // 
-            // txtContCMDAINLRupture_model
-            // 
-            this.txtContCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLRupture_model.Location = new System.Drawing.Point(747, 321);
-            this.txtContCMDAINLRupture_model.Name = "txtContCMDAINLRupture_model";
-            this.txtContCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLRupture_model.TabIndex = 226;
-            // 
-            // label327
-            // 
-            this.label327.AutoSize = true;
-            this.label327.Location = new System.Drawing.Point(27, 82);
-            this.label327.Name = "label327";
-            this.label327.Size = new System.Drawing.Size(217, 13);
-            this.label327.TabIndex = 162;
-            this.label327.Text = "Continous Release-Auto Ignition Likely-CMD";
-            // 
-            // label328
-            // 
-            this.label328.AutoSize = true;
-            this.label328.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label328.Location = new System.Drawing.Point(447, 267);
-            this.label328.Name = "label328";
-            this.label328.Size = new System.Drawing.Size(59, 15);
-            this.label328.TabIndex = 189;
-            this.label328.Text = "Medium";
-            // 
-            // label329
-            // 
-            this.label329.AutoSize = true;
-            this.label329.Location = new System.Drawing.Point(27, 58);
-            this.label329.Name = "label329";
-            this.label329.Size = new System.Drawing.Size(237, 13);
-            this.label329.TabIndex = 161;
-            this.label329.Text = "Continous Release-Auto Ignition Not Likely-CMD";
-            // 
-            // txtBlendCMDAINLMedium_model
-            // 
-            this.txtBlendCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLMedium_model.Location = new System.Drawing.Point(411, 545);
-            this.txtBlendCMDAINLMedium_model.Name = "txtBlendCMDAINLMedium_model";
-            this.txtBlendCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLMedium_model.TabIndex = 205;
-            // 
-            // label330
-            // 
-            this.label330.AutoSize = true;
-            this.label330.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label330.Location = new System.Drawing.Point(27, 28);
-            this.label330.Name = "label330";
-            this.label330.Size = new System.Drawing.Size(192, 15);
-            this.label330.TabIndex = 160;
-            this.label330.Text = "Release equations constants";
-            // 
-            // txtEneffRupture_model
-            // 
-            this.txtEneffRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffRupture_model.Location = new System.Drawing.Point(747, 295);
-            this.txtEneffRupture_model.Name = "txtEneffRupture_model";
-            this.txtEneffRupture_model.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffRupture_model.TabIndex = 225;
-            // 
-            // txtInstINJAILLarge_model
-            // 
-            this.txtInstINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILLarge_model.Location = new System.Drawing.Point(579, 496);
-            this.txtInstINJAILLarge_model.Name = "txtInstINJAILLarge_model";
-            this.txtInstINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILLarge_model.TabIndex = 218;
-            // 
-            // label331
-            // 
-            this.label331.AutoSize = true;
-            this.label331.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label331.Location = new System.Drawing.Point(626, 267);
-            this.label331.Name = "label331";
-            this.label331.Size = new System.Drawing.Size(44, 15);
-            this.label331.TabIndex = 188;
-            this.label331.Text = "Large";
-            // 
-            // txtBlendFactorLarge_model
-            // 
-            this.txtBlendFactorLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorLarge_model.Location = new System.Drawing.Point(579, 521);
-            this.txtBlendFactorLarge_model.Name = "txtBlendFactorLarge_model";
-            this.txtBlendFactorLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorLarge_model.TabIndex = 217;
-            // 
-            // txtBlendFactorMedium_model
-            // 
-            this.txtBlendFactorMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorMedium_model.Location = new System.Drawing.Point(411, 520);
-            this.txtBlendFactorMedium_model.Name = "txtBlendFactorMedium_model";
-            this.txtBlendFactorMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorMedium_model.TabIndex = 206;
-            // 
-            // txtInstINJAINLLarge_model
-            // 
-            this.txtInstINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLLarge_model.Location = new System.Drawing.Point(579, 471);
-            this.txtInstINJAINLLarge_model.Name = "txtInstINJAINLLarge_model";
-            this.txtInstINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLLarge_model.TabIndex = 219;
-            // 
-            // txtContCMDAILLarge_model
-            // 
-            this.txtContCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILLarge_model.Location = new System.Drawing.Point(579, 346);
-            this.txtContCMDAILLarge_model.Name = "txtContCMDAILLarge_model";
-            this.txtContCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILLarge_model.TabIndex = 224;
-            // 
-            // txtBlendCMDAINLLarge_model
-            // 
-            this.txtBlendCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLLarge_model.Location = new System.Drawing.Point(579, 546);
-            this.txtBlendCMDAINLLarge_model.Name = "txtBlendCMDAINLLarge_model";
-            this.txtBlendCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLLarge_model.TabIndex = 216;
-            // 
-            // txtInstINJAILMedium_model
-            // 
-            this.txtInstINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILMedium_model.Location = new System.Drawing.Point(411, 495);
-            this.txtInstINJAILMedium_model.Name = "txtInstINJAILMedium_model";
-            this.txtInstINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILMedium_model.TabIndex = 207;
-            // 
-            // txtContCMDAINLLarge_model
-            // 
-            this.txtContCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLLarge_model.Location = new System.Drawing.Point(579, 321);
-            this.txtContCMDAINLLarge_model.Name = "txtContCMDAINLLarge_model";
-            this.txtContCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLLarge_model.TabIndex = 215;
-            // 
-            // txtInstINJAINLMedium_model
-            // 
-            this.txtInstINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLMedium_model.Location = new System.Drawing.Point(411, 470);
-            this.txtInstINJAINLMedium_model.Name = "txtInstINJAINLMedium_model";
-            this.txtInstINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLMedium_model.TabIndex = 208;
-            // 
-            // txtContINJAILLarge_model
-            // 
-            this.txtContINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILLarge_model.Location = new System.Drawing.Point(579, 446);
-            this.txtContINJAILLarge_model.Name = "txtContINJAILLarge_model";
-            this.txtContINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILLarge_model.TabIndex = 220;
-            // 
-            // txtInstCMDAINLLarge_model
-            // 
-            this.txtInstCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLLarge_model.Location = new System.Drawing.Point(579, 371);
-            this.txtInstCMDAINLLarge_model.Name = "txtInstCMDAINLLarge_model";
-            this.txtInstCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLLarge_model.TabIndex = 223;
-            // 
-            // txtEneffLarge_model
-            // 
-            this.txtEneffLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffLarge_model.Location = new System.Drawing.Point(579, 295);
-            this.txtEneffLarge_model.Name = "txtEneffLarge_model";
-            this.txtEneffLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffLarge_model.TabIndex = 214;
-            // 
-            // txtContINJAILMedium_model
-            // 
-            this.txtContINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILMedium_model.Location = new System.Drawing.Point(411, 445);
-            this.txtContINJAILMedium_model.Name = "txtContINJAILMedium_model";
-            this.txtContINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILMedium_model.TabIndex = 209;
-            // 
-            // txtContCMDAILMedium_model
-            // 
-            this.txtContCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILMedium_model.Location = new System.Drawing.Point(411, 345);
-            this.txtContCMDAILMedium_model.Name = "txtContCMDAILMedium_model";
-            this.txtContCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILMedium_model.TabIndex = 213;
-            // 
-            // txtContINJAINLMedium_model
-            // 
-            this.txtContINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLMedium_model.Location = new System.Drawing.Point(411, 420);
-            this.txtContINJAINLMedium_model.Name = "txtContINJAINLMedium_model";
-            this.txtContINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLMedium_model.TabIndex = 210;
-            // 
-            // txtContINJAINLLarge_model
-            // 
-            this.txtContINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLLarge_model.Location = new System.Drawing.Point(579, 421);
-            this.txtContINJAINLLarge_model.Name = "txtContINJAINLLarge_model";
-            this.txtContINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLLarge_model.TabIndex = 221;
-            // 
-            // txtInstCMDAILLarge_model
-            // 
-            this.txtInstCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILLarge_model.Location = new System.Drawing.Point(579, 396);
-            this.txtInstCMDAILLarge_model.Name = "txtInstCMDAILLarge_model";
-            this.txtInstCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILLarge_model.TabIndex = 222;
-            // 
-            // txtInstCMDAINLMedium_model
-            // 
-            this.txtInstCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLMedium_model.Location = new System.Drawing.Point(411, 370);
-            this.txtInstCMDAINLMedium_model.Name = "txtInstCMDAINLMedium_model";
-            this.txtInstCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLMedium_model.TabIndex = 212;
-            // 
-            // txtInstCMDAILMedium_model
-            // 
-            this.txtInstCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILMedium_model.Location = new System.Drawing.Point(411, 395);
-            this.txtInstCMDAILMedium_model.Name = "txtInstCMDAILMedium_model";
-            this.txtInstCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILMedium_model.TabIndex = 211;
-            // 
-            // tabtoxic
-            // 
-            this.tabtoxic.Controls.Add(this.txtFlammablePICA_toxic);
-            this.tabtoxic.Controls.Add(this.txtFlammableCDCA_toxic);
-            this.tabtoxic.Controls.Add(this.label332);
-            this.tabtoxic.Controls.Add(this.label333);
-            this.tabtoxic.Controls.Add(this.label334);
-            this.tabtoxic.Controls.Add(this.label335);
-            this.tabtoxic.Controls.Add(this.label336);
-            this.tabtoxic.Controls.Add(this.label337);
-            this.tabtoxic.Controls.Add(this.label338);
-            this.tabtoxic.Controls.Add(this.txtAITBlendINJRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAINLSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAILSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAILSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendCMDSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAILRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendINJSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAINLRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAILRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendCMDRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendINJMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAILLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendCMDLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendCMDMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAINLLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtAITBlendINJLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAILMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendINJAINLMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAILLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAILMedium_toxic);
-            this.tabtoxic.Controls.Add(this.label339);
-            this.tabtoxic.Controls.Add(this.label340);
-            this.tabtoxic.Controls.Add(this.label341);
-            this.tabtoxic.Controls.Add(this.label342);
-            this.tabtoxic.Controls.Add(this.label343);
-            this.tabtoxic.Controls.Add(this.label344);
-            this.tabtoxic.Controls.Add(this.label345);
-            this.tabtoxic.Controls.Add(this.label346);
-            this.tabtoxic.Controls.Add(this.label347);
-            this.tabtoxic.Controls.Add(this.label348);
-            this.tabtoxic.Controls.Add(this.label349);
-            this.tabtoxic.Controls.Add(this.txtContCMDAILRupture_toxic);
-            this.tabtoxic.Controls.Add(this.label350);
-            this.tabtoxic.Controls.Add(this.label351);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAINLRupture_toxic);
-            this.tabtoxic.Controls.Add(this.label352);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtBInstAILINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAINLSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBInstAINLINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAILRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtBContAILINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAILSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBContAINLINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAILSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBInstAILCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAINLRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtBInstAINLCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendFactorSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBContAILCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAINLSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtBContAINLCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAILRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtAInstAILINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtAInstAINLINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAILSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtAContAILINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAINLRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtAContAINLINJ_toxic);
-            this.tabtoxic.Controls.Add(this.txtContCMDAINLSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtAInstAILCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAINLSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtAInstAINLCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAILRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtAContAILCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtEneffSmall_toxic);
-            this.tabtoxic.Controls.Add(this.txtAContAINLCMD_toxic);
-            this.tabtoxic.Controls.Add(this.txtContCMDAILSmall_toxic);
-            this.tabtoxic.Controls.Add(this.label353);
-            this.tabtoxic.Controls.Add(this.txtBlendFactorRupture_toxic);
-            this.tabtoxic.Controls.Add(this.label354);
-            this.tabtoxic.Controls.Add(this.label355);
-            this.tabtoxic.Controls.Add(this.label356);
-            this.tabtoxic.Controls.Add(this.txtEneffMedium_toxic);
-            this.tabtoxic.Controls.Add(this.label357);
-            this.tabtoxic.Controls.Add(this.label358);
-            this.tabtoxic.Controls.Add(this.label359);
-            this.tabtoxic.Controls.Add(this.txtContCMDAINLMedium_toxic);
-            this.tabtoxic.Controls.Add(this.label360);
-            this.tabtoxic.Controls.Add(this.txtContCMDAINLRupture_toxic);
-            this.tabtoxic.Controls.Add(this.label361);
-            this.tabtoxic.Controls.Add(this.label362);
-            this.tabtoxic.Controls.Add(this.label363);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLMedium_toxic);
-            this.tabtoxic.Controls.Add(this.label364);
-            this.tabtoxic.Controls.Add(this.txtEneffRupture_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAILLarge_toxic);
-            this.tabtoxic.Controls.Add(this.label365);
-            this.tabtoxic.Controls.Add(this.txtBlendFactorLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendFactorMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAINLLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtContCMDAILLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtBlendCMDAINLLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAILMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtContCMDAINLLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstINJAINLMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAILLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAINLLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtEneffLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAILMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtContCMDAILMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAINLMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtContINJAINLLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAILLarge_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAINLMedium_toxic);
-            this.tabtoxic.Controls.Add(this.txtInstCMDAILMedium_toxic);
-            this.tabtoxic.Name = "tabtoxic";
-            this.tabtoxic.Size = new System.Drawing.Size(954, 780);
-            this.tabtoxic.Text = "tabtoxic";
-            // 
-            // txtFlammablePICA_toxic
-            // 
-            this.txtFlammablePICA_toxic.Location = new System.Drawing.Point(363, 743);
-            this.txtFlammablePICA_toxic.Name = "txtFlammablePICA_toxic";
-            this.txtFlammablePICA_toxic.Size = new System.Drawing.Size(270, 21);
-            this.txtFlammablePICA_toxic.TabIndex = 275;
-            // 
-            // txtFlammableCDCA_toxic
-            // 
-            this.txtFlammableCDCA_toxic.Location = new System.Drawing.Point(363, 710);
-            this.txtFlammableCDCA_toxic.Name = "txtFlammableCDCA_toxic";
-            this.txtFlammableCDCA_toxic.Size = new System.Drawing.Size(270, 21);
-            this.txtFlammableCDCA_toxic.TabIndex = 274;
-            // 
-            // label332
-            // 
-            this.label332.AutoSize = true;
-            this.label332.Location = new System.Drawing.Point(27, 751);
-            this.label332.Name = "label332";
-            this.label332.Size = new System.Drawing.Size(227, 13);
-            this.label332.TabIndex = 273;
-            this.label332.Text = "Flammable Personal Injury Consequence Area";
-            // 
-            // label333
-            // 
-            this.label333.AutoSize = true;
-            this.label333.Location = new System.Drawing.Point(27, 718);
-            this.label333.Name = "label333";
-            this.label333.Size = new System.Drawing.Size(251, 13);
-            this.label333.TabIndex = 272;
-            this.label333.Text = "Flammable Component Damage Consequence Area";
-            // 
-            // label334
-            // 
-            this.label334.AutoSize = true;
-            this.label334.Location = new System.Drawing.Point(27, 677);
-            this.label334.Name = "label334";
-            this.label334.Size = new System.Drawing.Size(102, 13);
-            this.label334.TabIndex = 271;
-            this.label334.Text = "AIT Blended-INJ CA";
-            // 
-            // label335
-            // 
-            this.label335.AutoSize = true;
-            this.label335.Location = new System.Drawing.Point(27, 652);
-            this.label335.Name = "label335";
-            this.label335.Size = new System.Drawing.Size(108, 13);
-            this.label335.TabIndex = 270;
-            this.label335.Text = "AIT Blended-CMD CA";
-            // 
-            // label336
-            // 
-            this.label336.AutoSize = true;
-            this.label336.Location = new System.Drawing.Point(27, 627);
-            this.label336.Name = "label336";
-            this.label336.Size = new System.Drawing.Size(102, 13);
-            this.label336.TabIndex = 269;
-            this.label336.Text = "Blended-INJ-AIL CA";
-            // 
-            // label337
-            // 
-            this.label337.AutoSize = true;
-            this.label337.Location = new System.Drawing.Point(27, 602);
-            this.label337.Name = "label337";
-            this.label337.Size = new System.Drawing.Size(109, 13);
-            this.label337.TabIndex = 268;
-            this.label337.Text = "Blended-INJ-AINL CA";
-            // 
-            // label338
-            // 
-            this.label338.AutoSize = true;
-            this.label338.Location = new System.Drawing.Point(27, 577);
-            this.label338.Name = "label338";
-            this.label338.Size = new System.Drawing.Size(108, 13);
-            this.label338.TabIndex = 267;
-            this.label338.Text = "Blended-CMD-AIL CA";
-            // 
-            // txtAITBlendINJRupture_toxic
-            // 
-            this.txtAITBlendINJRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJRupture_toxic.Location = new System.Drawing.Point(785, 671);
-            this.txtAITBlendINJRupture_toxic.Name = "txtAITBlendINJRupture_toxic";
-            this.txtAITBlendINJRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJRupture_toxic.TabIndex = 262;
-            // 
-            // txtBlendINJAINLSmall_toxic
-            // 
-            this.txtBlendINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLSmall_toxic.Location = new System.Drawing.Point(281, 595);
-            this.txtBlendINJAINLSmall_toxic.Name = "txtBlendINJAINLSmall_toxic";
-            this.txtBlendINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLSmall_toxic.TabIndex = 250;
-            // 
-            // txtBlendINJAILSmall_toxic
-            // 
-            this.txtBlendINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILSmall_toxic.Location = new System.Drawing.Point(281, 620);
-            this.txtBlendINJAILSmall_toxic.Name = "txtBlendINJAILSmall_toxic";
-            this.txtBlendINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILSmall_toxic.TabIndex = 249;
-            // 
-            // txtBlendCMDAILSmall_toxic
-            // 
-            this.txtBlendCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILSmall_toxic.Location = new System.Drawing.Point(281, 570);
-            this.txtBlendCMDAILSmall_toxic.Name = "txtBlendCMDAILSmall_toxic";
-            this.txtBlendCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILSmall_toxic.TabIndex = 251;
-            // 
-            // txtAITBlendCMDSmall_toxic
-            // 
-            this.txtAITBlendCMDSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDSmall_toxic.Location = new System.Drawing.Point(281, 645);
-            this.txtAITBlendCMDSmall_toxic.Name = "txtAITBlendCMDSmall_toxic";
-            this.txtAITBlendCMDSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDSmall_toxic.TabIndex = 248;
-            // 
-            // txtBlendCMDAILRupture_toxic
-            // 
-            this.txtBlendCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILRupture_toxic.Location = new System.Drawing.Point(785, 571);
-            this.txtBlendCMDAILRupture_toxic.Name = "txtBlendCMDAILRupture_toxic";
-            this.txtBlendCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILRupture_toxic.TabIndex = 266;
-            // 
-            // txtAITBlendINJSmall_toxic
-            // 
-            this.txtAITBlendINJSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJSmall_toxic.Location = new System.Drawing.Point(281, 670);
-            this.txtAITBlendINJSmall_toxic.Name = "txtAITBlendINJSmall_toxic";
-            this.txtAITBlendINJSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJSmall_toxic.TabIndex = 247;
-            // 
-            // txtBlendINJAINLRupture_toxic
-            // 
-            this.txtBlendINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLRupture_toxic.Location = new System.Drawing.Point(785, 596);
-            this.txtBlendINJAINLRupture_toxic.Name = "txtBlendINJAINLRupture_toxic";
-            this.txtBlendINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLRupture_toxic.TabIndex = 265;
-            // 
-            // txtBlendINJAILRupture_toxic
-            // 
-            this.txtBlendINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILRupture_toxic.Location = new System.Drawing.Point(785, 621);
-            this.txtBlendINJAILRupture_toxic.Name = "txtBlendINJAILRupture_toxic";
-            this.txtBlendINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILRupture_toxic.TabIndex = 264;
-            // 
-            // txtAITBlendCMDRupture_toxic
-            // 
-            this.txtAITBlendCMDRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDRupture_toxic.Location = new System.Drawing.Point(785, 646);
-            this.txtAITBlendCMDRupture_toxic.Name = "txtAITBlendCMDRupture_toxic";
-            this.txtAITBlendCMDRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDRupture_toxic.TabIndex = 263;
-            // 
-            // txtAITBlendINJMedium_toxic
-            // 
-            this.txtAITBlendINJMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJMedium_toxic.Location = new System.Drawing.Point(449, 670);
-            this.txtAITBlendINJMedium_toxic.Name = "txtAITBlendINJMedium_toxic";
-            this.txtAITBlendINJMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJMedium_toxic.TabIndex = 252;
-            // 
-            // txtBlendINJAILLarge_toxic
-            // 
-            this.txtBlendINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILLarge_toxic.Location = new System.Drawing.Point(617, 621);
-            this.txtBlendINJAILLarge_toxic.Name = "txtBlendINJAILLarge_toxic";
-            this.txtBlendINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILLarge_toxic.TabIndex = 259;
-            // 
-            // txtAITBlendCMDLarge_toxic
-            // 
-            this.txtAITBlendCMDLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDLarge_toxic.Location = new System.Drawing.Point(617, 646);
-            this.txtAITBlendCMDLarge_toxic.Name = "txtAITBlendCMDLarge_toxic";
-            this.txtAITBlendCMDLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDLarge_toxic.TabIndex = 258;
-            // 
-            // txtAITBlendCMDMedium_toxic
-            // 
-            this.txtAITBlendCMDMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendCMDMedium_toxic.Location = new System.Drawing.Point(449, 645);
-            this.txtAITBlendCMDMedium_toxic.Name = "txtAITBlendCMDMedium_toxic";
-            this.txtAITBlendCMDMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendCMDMedium_toxic.TabIndex = 253;
-            // 
-            // txtBlendINJAINLLarge_toxic
-            // 
-            this.txtBlendINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLLarge_toxic.Location = new System.Drawing.Point(617, 596);
-            this.txtBlendINJAINLLarge_toxic.Name = "txtBlendINJAINLLarge_toxic";
-            this.txtBlendINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLLarge_toxic.TabIndex = 260;
-            // 
-            // txtAITBlendINJLarge_toxic
-            // 
-            this.txtAITBlendINJLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtAITBlendINJLarge_toxic.Location = new System.Drawing.Point(617, 671);
-            this.txtAITBlendINJLarge_toxic.Name = "txtAITBlendINJLarge_toxic";
-            this.txtAITBlendINJLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtAITBlendINJLarge_toxic.TabIndex = 257;
-            // 
-            // txtBlendINJAILMedium_toxic
-            // 
-            this.txtBlendINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAILMedium_toxic.Location = new System.Drawing.Point(449, 620);
-            this.txtBlendINJAILMedium_toxic.Name = "txtBlendINJAILMedium_toxic";
-            this.txtBlendINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAILMedium_toxic.TabIndex = 254;
-            // 
-            // txtBlendINJAINLMedium_toxic
-            // 
-            this.txtBlendINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendINJAINLMedium_toxic.Location = new System.Drawing.Point(449, 595);
-            this.txtBlendINJAINLMedium_toxic.Name = "txtBlendINJAINLMedium_toxic";
-            this.txtBlendINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendINJAINLMedium_toxic.TabIndex = 255;
-            // 
-            // txtBlendCMDAILLarge_toxic
-            // 
-            this.txtBlendCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILLarge_toxic.Location = new System.Drawing.Point(617, 571);
-            this.txtBlendCMDAILLarge_toxic.Name = "txtBlendCMDAILLarge_toxic";
-            this.txtBlendCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILLarge_toxic.TabIndex = 261;
-            // 
-            // txtBlendCMDAILMedium_toxic
-            // 
-            this.txtBlendCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAILMedium_toxic.Location = new System.Drawing.Point(449, 570);
-            this.txtBlendCMDAILMedium_toxic.Name = "txtBlendCMDAILMedium_toxic";
-            this.txtBlendCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAILMedium_toxic.TabIndex = 256;
-            // 
-            // label339
-            // 
-            this.label339.AutoSize = true;
-            this.label339.Location = new System.Drawing.Point(27, 552);
-            this.label339.Name = "label339";
-            this.label339.Size = new System.Drawing.Size(115, 13);
-            this.label339.TabIndex = 246;
-            this.label339.Text = "Blended-CMD-AINL CA";
-            // 
-            // label340
-            // 
-            this.label340.AutoSize = true;
-            this.label340.Location = new System.Drawing.Point(27, 527);
-            this.label340.Name = "label340";
-            this.label340.Size = new System.Drawing.Size(126, 13);
-            this.label340.TabIndex = 245;
-            this.label340.Text = "Blending Factor, Fact_IC";
-            // 
-            // label341
-            // 
-            this.label341.AutoSize = true;
-            this.label341.Location = new System.Drawing.Point(27, 502);
-            this.label341.Name = "label341";
-            this.label341.Size = new System.Drawing.Size(87, 13);
-            this.label341.TabIndex = 244;
-            this.label341.Text = "INST-INJ-AIL CA";
-            // 
-            // label342
-            // 
-            this.label342.AutoSize = true;
-            this.label342.Location = new System.Drawing.Point(27, 477);
-            this.label342.Name = "label342";
-            this.label342.Size = new System.Drawing.Size(94, 13);
-            this.label342.TabIndex = 243;
-            this.label342.Text = "INST-INJ-AINL CA";
-            // 
-            // label343
-            // 
-            this.label343.AutoSize = true;
-            this.label343.Location = new System.Drawing.Point(27, 452);
-            this.label343.Name = "label343";
-            this.label343.Size = new System.Drawing.Size(92, 13);
-            this.label343.TabIndex = 242;
-            this.label343.Text = "CONT-INJ-AIL CA";
-            // 
-            // label344
-            // 
-            this.label344.AutoSize = true;
-            this.label344.Location = new System.Drawing.Point(27, 427);
-            this.label344.Name = "label344";
-            this.label344.Size = new System.Drawing.Size(99, 13);
-            this.label344.TabIndex = 241;
-            this.label344.Text = "CONT-INJ-AINL CA";
-            // 
-            // label345
-            // 
-            this.label345.AutoSize = true;
-            this.label345.Location = new System.Drawing.Point(27, 402);
-            this.label345.Name = "label345";
-            this.label345.Size = new System.Drawing.Size(93, 13);
-            this.label345.TabIndex = 240;
-            this.label345.Text = "INST-CMD-AIL CA";
-            // 
-            // label346
-            // 
-            this.label346.AutoSize = true;
-            this.label346.Location = new System.Drawing.Point(27, 377);
-            this.label346.Name = "label346";
-            this.label346.Size = new System.Drawing.Size(100, 13);
-            this.label346.TabIndex = 239;
-            this.label346.Text = "INST-CMD-AINL CA";
-            // 
-            // label347
-            // 
-            this.label347.AutoSize = true;
-            this.label347.Location = new System.Drawing.Point(27, 352);
-            this.label347.Name = "label347";
-            this.label347.Size = new System.Drawing.Size(98, 13);
-            this.label347.TabIndex = 238;
-            this.label347.Text = "CONT-CMD-AIL CA";
-            // 
-            // label348
-            // 
-            this.label348.AutoSize = true;
-            this.label348.Location = new System.Drawing.Point(27, 327);
-            this.label348.Name = "label348";
-            this.label348.Size = new System.Drawing.Size(105, 13);
-            this.label348.TabIndex = 237;
-            this.label348.Text = "CONT-CMD-AINL CA";
-            // 
-            // label349
-            // 
-            this.label349.AutoSize = true;
-            this.label349.Location = new System.Drawing.Point(27, 301);
-            this.label349.Name = "label349";
-            this.label349.Size = new System.Drawing.Size(177, 13);
-            this.label349.TabIndex = 236;
-            this.label349.Text = "Energy Efficiency Correction Factor";
-            // 
-            // txtContCMDAILRupture_toxic
-            // 
-            this.txtContCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILRupture_toxic.Location = new System.Drawing.Point(785, 346);
-            this.txtContCMDAILRupture_toxic.Name = "txtContCMDAILRupture_toxic";
-            this.txtContCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILRupture_toxic.TabIndex = 235;
-            // 
-            // label350
-            // 
-            this.label350.AutoSize = true;
-            this.label350.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label350.Location = new System.Drawing.Point(27, 268);
-            this.label350.Name = "label350";
-            this.label350.Size = new System.Drawing.Size(122, 15);
-            this.label350.TabIndex = 187;
-            this.label350.Text = "Release hole size";
-            // 
-            // label351
-            // 
-            this.label351.AutoSize = true;
-            this.label351.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label351.Location = new System.Drawing.Point(488, 23);
-            this.label351.Name = "label351";
-            this.label351.Size = new System.Drawing.Size(18, 18);
-            this.label351.TabIndex = 186;
-            this.label351.Text = "B";
-            // 
-            // txtInstCMDAINLRupture_toxic
-            // 
-            this.txtInstCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLRupture_toxic.Location = new System.Drawing.Point(785, 371);
-            this.txtInstCMDAINLRupture_toxic.Name = "txtInstCMDAINLRupture_toxic";
-            this.txtInstCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLRupture_toxic.TabIndex = 234;
-            // 
-            // label352
-            // 
-            this.label352.AutoSize = true;
-            this.label352.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label352.Location = new System.Drawing.Point(387, 23);
-            this.label352.Name = "label352";
-            this.label352.Size = new System.Drawing.Size(18, 18);
-            this.label352.TabIndex = 185;
-            this.label352.Text = "A";
-            // 
-            // txtBlendCMDAINLRupture_toxic
-            // 
-            this.txtBlendCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLRupture_toxic.Location = new System.Drawing.Point(785, 546);
-            this.txtBlendCMDAINLRupture_toxic.Name = "txtBlendCMDAINLRupture_toxic";
-            this.txtBlendCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLRupture_toxic.TabIndex = 227;
-            // 
-            // txtBInstAILINJ_toxic
-            // 
-            this.txtBInstAILINJ_toxic.Location = new System.Drawing.Point(453, 218);
-            this.txtBInstAILINJ_toxic.Name = "txtBInstAILINJ_toxic";
-            this.txtBInstAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAILINJ_toxic.TabIndex = 184;
-            // 
-            // txtInstINJAINLSmall_toxic
-            // 
-            this.txtInstINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLSmall_toxic.Location = new System.Drawing.Point(281, 470);
-            this.txtInstINJAINLSmall_toxic.Name = "txtInstINJAINLSmall_toxic";
-            this.txtInstINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLSmall_toxic.TabIndex = 197;
-            // 
-            // txtBInstAINLINJ_toxic
-            // 
-            this.txtBInstAINLINJ_toxic.Location = new System.Drawing.Point(453, 194);
-            this.txtBInstAINLINJ_toxic.Name = "txtBInstAINLINJ_toxic";
-            this.txtBInstAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAINLINJ_toxic.TabIndex = 183;
-            // 
-            // txtInstCMDAILRupture_toxic
-            // 
-            this.txtInstCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILRupture_toxic.Location = new System.Drawing.Point(785, 396);
-            this.txtInstCMDAILRupture_toxic.Name = "txtInstCMDAILRupture_toxic";
-            this.txtInstCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILRupture_toxic.TabIndex = 233;
-            // 
-            // txtBContAILINJ_toxic
-            // 
-            this.txtBContAILINJ_toxic.Location = new System.Drawing.Point(453, 170);
-            this.txtBContAILINJ_toxic.Name = "txtBContAILINJ_toxic";
-            this.txtBContAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAILINJ_toxic.TabIndex = 182;
-            // 
-            // txtInstINJAILSmall_toxic
-            // 
-            this.txtInstINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILSmall_toxic.Location = new System.Drawing.Point(281, 495);
-            this.txtInstINJAILSmall_toxic.Name = "txtInstINJAILSmall_toxic";
-            this.txtInstINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILSmall_toxic.TabIndex = 196;
-            // 
-            // txtBContAINLINJ_toxic
-            // 
-            this.txtBContAINLINJ_toxic.Location = new System.Drawing.Point(453, 146);
-            this.txtBContAINLINJ_toxic.Name = "txtBContAINLINJ_toxic";
-            this.txtBContAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAINLINJ_toxic.TabIndex = 181;
-            // 
-            // txtContINJAILSmall_toxic
-            // 
-            this.txtContINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILSmall_toxic.Location = new System.Drawing.Point(281, 445);
-            this.txtContINJAILSmall_toxic.Name = "txtContINJAILSmall_toxic";
-            this.txtContINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILSmall_toxic.TabIndex = 198;
-            // 
-            // txtBInstAILCMD_toxic
-            // 
-            this.txtBInstAILCMD_toxic.Location = new System.Drawing.Point(453, 122);
-            this.txtBInstAILCMD_toxic.Name = "txtBInstAILCMD_toxic";
-            this.txtBInstAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAILCMD_toxic.TabIndex = 180;
-            // 
-            // txtContINJAINLRupture_toxic
-            // 
-            this.txtContINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLRupture_toxic.Location = new System.Drawing.Point(785, 421);
-            this.txtContINJAINLRupture_toxic.Name = "txtContINJAINLRupture_toxic";
-            this.txtContINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLRupture_toxic.TabIndex = 232;
-            // 
-            // txtBInstAINLCMD_toxic
-            // 
-            this.txtBInstAINLCMD_toxic.Location = new System.Drawing.Point(453, 98);
-            this.txtBInstAINLCMD_toxic.Name = "txtBInstAINLCMD_toxic";
-            this.txtBInstAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBInstAINLCMD_toxic.TabIndex = 179;
-            // 
-            // txtBlendFactorSmall_toxic
-            // 
-            this.txtBlendFactorSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorSmall_toxic.Location = new System.Drawing.Point(281, 520);
-            this.txtBlendFactorSmall_toxic.Name = "txtBlendFactorSmall_toxic";
-            this.txtBlendFactorSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorSmall_toxic.TabIndex = 195;
-            // 
-            // txtBContAILCMD_toxic
-            // 
-            this.txtBContAILCMD_toxic.Location = new System.Drawing.Point(453, 74);
-            this.txtBContAILCMD_toxic.Name = "txtBContAILCMD_toxic";
-            this.txtBContAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAILCMD_toxic.TabIndex = 178;
-            // 
-            // txtContINJAINLSmall_toxic
-            // 
-            this.txtContINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLSmall_toxic.Location = new System.Drawing.Point(281, 420);
-            this.txtContINJAINLSmall_toxic.Name = "txtContINJAINLSmall_toxic";
-            this.txtContINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLSmall_toxic.TabIndex = 199;
-            // 
-            // txtBContAINLCMD_toxic
-            // 
-            this.txtBContAINLCMD_toxic.Location = new System.Drawing.Point(453, 50);
-            this.txtBContAINLCMD_toxic.Name = "txtBContAINLCMD_toxic";
-            this.txtBContAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtBContAINLCMD_toxic.TabIndex = 177;
-            // 
-            // txtContINJAILRupture_toxic
-            // 
-            this.txtContINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILRupture_toxic.Location = new System.Drawing.Point(785, 446);
-            this.txtContINJAILRupture_toxic.Name = "txtContINJAILRupture_toxic";
-            this.txtContINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILRupture_toxic.TabIndex = 231;
-            // 
-            // txtAInstAILINJ_toxic
-            // 
-            this.txtAInstAILINJ_toxic.Location = new System.Drawing.Point(349, 218);
-            this.txtAInstAILINJ_toxic.Name = "txtAInstAILINJ_toxic";
-            this.txtAInstAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAILINJ_toxic.TabIndex = 176;
-            // 
-            // txtBlendCMDAINLSmall_toxic
-            // 
-            this.txtBlendCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLSmall_toxic.Location = new System.Drawing.Point(281, 545);
-            this.txtBlendCMDAINLSmall_toxic.Name = "txtBlendCMDAINLSmall_toxic";
-            this.txtBlendCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLSmall_toxic.TabIndex = 194;
-            // 
-            // txtAInstAINLINJ_toxic
-            // 
-            this.txtAInstAINLINJ_toxic.Location = new System.Drawing.Point(349, 194);
-            this.txtAInstAINLINJ_toxic.Name = "txtAInstAINLINJ_toxic";
-            this.txtAInstAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAINLINJ_toxic.TabIndex = 175;
-            // 
-            // txtInstCMDAILSmall_toxic
-            // 
-            this.txtInstCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILSmall_toxic.Location = new System.Drawing.Point(281, 395);
-            this.txtInstCMDAILSmall_toxic.Name = "txtInstCMDAILSmall_toxic";
-            this.txtInstCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILSmall_toxic.TabIndex = 200;
-            // 
-            // txtAContAILINJ_toxic
-            // 
-            this.txtAContAILINJ_toxic.Location = new System.Drawing.Point(349, 170);
-            this.txtAContAILINJ_toxic.Name = "txtAContAILINJ_toxic";
-            this.txtAContAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAILINJ_toxic.TabIndex = 174;
-            // 
-            // txtInstINJAINLRupture_toxic
-            // 
-            this.txtInstINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLRupture_toxic.Location = new System.Drawing.Point(785, 471);
-            this.txtInstINJAINLRupture_toxic.Name = "txtInstINJAINLRupture_toxic";
-            this.txtInstINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLRupture_toxic.TabIndex = 230;
-            // 
-            // txtAContAINLINJ_toxic
-            // 
-            this.txtAContAINLINJ_toxic.Location = new System.Drawing.Point(349, 146);
-            this.txtAContAINLINJ_toxic.Name = "txtAContAINLINJ_toxic";
-            this.txtAContAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAINLINJ_toxic.TabIndex = 173;
-            // 
-            // txtContCMDAINLSmall_toxic
-            // 
-            this.txtContCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLSmall_toxic.Location = new System.Drawing.Point(281, 320);
-            this.txtContCMDAINLSmall_toxic.Name = "txtContCMDAINLSmall_toxic";
-            this.txtContCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLSmall_toxic.TabIndex = 193;
-            // 
-            // txtAInstAILCMD_toxic
-            // 
-            this.txtAInstAILCMD_toxic.Location = new System.Drawing.Point(349, 122);
-            this.txtAInstAILCMD_toxic.Name = "txtAInstAILCMD_toxic";
-            this.txtAInstAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAILCMD_toxic.TabIndex = 172;
-            // 
-            // txtInstCMDAINLSmall_toxic
-            // 
-            this.txtInstCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLSmall_toxic.Location = new System.Drawing.Point(281, 370);
-            this.txtInstCMDAINLSmall_toxic.Name = "txtInstCMDAINLSmall_toxic";
-            this.txtInstCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLSmall_toxic.TabIndex = 201;
-            // 
-            // txtAInstAINLCMD_toxic
-            // 
-            this.txtAInstAINLCMD_toxic.Location = new System.Drawing.Point(349, 98);
-            this.txtAInstAINLCMD_toxic.Name = "txtAInstAINLCMD_toxic";
-            this.txtAInstAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAInstAINLCMD_toxic.TabIndex = 171;
-            // 
-            // txtInstINJAILRupture_toxic
-            // 
-            this.txtInstINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILRupture_toxic.Location = new System.Drawing.Point(785, 496);
-            this.txtInstINJAILRupture_toxic.Name = "txtInstINJAILRupture_toxic";
-            this.txtInstINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILRupture_toxic.TabIndex = 229;
-            // 
-            // txtAContAILCMD_toxic
-            // 
-            this.txtAContAILCMD_toxic.Location = new System.Drawing.Point(349, 74);
-            this.txtAContAILCMD_toxic.Name = "txtAContAILCMD_toxic";
-            this.txtAContAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAILCMD_toxic.TabIndex = 170;
-            // 
-            // txtEneffSmall_toxic
-            // 
-            this.txtEneffSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffSmall_toxic.Location = new System.Drawing.Point(281, 294);
-            this.txtEneffSmall_toxic.Name = "txtEneffSmall_toxic";
-            this.txtEneffSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffSmall_toxic.TabIndex = 192;
-            // 
-            // txtAContAINLCMD_toxic
-            // 
-            this.txtAContAINLCMD_toxic.Location = new System.Drawing.Point(349, 50);
-            this.txtAContAINLCMD_toxic.Name = "txtAContAINLCMD_toxic";
-            this.txtAContAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
-            this.txtAContAINLCMD_toxic.TabIndex = 169;
-            // 
-            // txtContCMDAILSmall_toxic
-            // 
-            this.txtContCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILSmall_toxic.Location = new System.Drawing.Point(281, 345);
-            this.txtContCMDAILSmall_toxic.Name = "txtContCMDAILSmall_toxic";
-            this.txtContCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILSmall_toxic.TabIndex = 202;
-            // 
-            // label353
-            // 
-            this.label353.AutoSize = true;
-            this.label353.Location = new System.Drawing.Point(27, 226);
-            this.label353.Name = "label353";
-            this.label353.Size = new System.Drawing.Size(233, 13);
-            this.label353.TabIndex = 168;
-            this.label353.Text = "Instantaneous Release-Auto Ignition Likely-INJ";
-            // 
-            // txtBlendFactorRupture_toxic
-            // 
-            this.txtBlendFactorRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorRupture_toxic.Location = new System.Drawing.Point(785, 521);
-            this.txtBlendFactorRupture_toxic.Name = "txtBlendFactorRupture_toxic";
-            this.txtBlendFactorRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorRupture_toxic.TabIndex = 228;
-            // 
-            // label354
-            // 
-            this.label354.AutoSize = true;
-            this.label354.Location = new System.Drawing.Point(27, 202);
-            this.label354.Name = "label354";
-            this.label354.Size = new System.Drawing.Size(253, 13);
-            this.label354.TabIndex = 167;
-            this.label354.Text = "Instantaneous Release-Auto Ignition Not Likely-INJ";
-            // 
-            // label355
-            // 
-            this.label355.AutoSize = true;
-            this.label355.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label355.Location = new System.Drawing.Point(833, 267);
-            this.label355.Name = "label355";
-            this.label355.Size = new System.Drawing.Size(58, 15);
-            this.label355.TabIndex = 191;
-            this.label355.Text = "Rupture";
-            // 
-            // label356
-            // 
-            this.label356.AutoSize = true;
-            this.label356.Location = new System.Drawing.Point(27, 178);
-            this.label356.Name = "label356";
-            this.label356.Size = new System.Drawing.Size(211, 13);
-            this.label356.TabIndex = 166;
-            this.label356.Text = "Continous Release-Auto Ignition Likely-INJ";
-            // 
-            // txtEneffMedium_toxic
-            // 
-            this.txtEneffMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffMedium_toxic.Location = new System.Drawing.Point(449, 294);
-            this.txtEneffMedium_toxic.Name = "txtEneffMedium_toxic";
-            this.txtEneffMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffMedium_toxic.TabIndex = 203;
-            // 
-            // label357
-            // 
-            this.label357.AutoSize = true;
-            this.label357.Location = new System.Drawing.Point(27, 154);
-            this.label357.Name = "label357";
-            this.label357.Size = new System.Drawing.Size(231, 13);
-            this.label357.TabIndex = 165;
-            this.label357.Text = "Continous Release-Auto Ignition Not Likely-INJ";
-            // 
-            // label358
-            // 
-            this.label358.AutoSize = true;
-            this.label358.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label358.Location = new System.Drawing.Point(316, 267);
-            this.label358.Name = "label358";
-            this.label358.Size = new System.Drawing.Size(44, 15);
-            this.label358.TabIndex = 190;
-            this.label358.Text = "Small";
-            // 
-            // label359
-            // 
-            this.label359.AutoSize = true;
-            this.label359.Location = new System.Drawing.Point(27, 130);
-            this.label359.Name = "label359";
-            this.label359.Size = new System.Drawing.Size(239, 13);
-            this.label359.TabIndex = 164;
-            this.label359.Text = "Instantaneous Release-Auto Ignition Likely-CMD";
-            // 
-            // txtContCMDAINLMedium_toxic
-            // 
-            this.txtContCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLMedium_toxic.Location = new System.Drawing.Point(449, 320);
-            this.txtContCMDAINLMedium_toxic.Name = "txtContCMDAINLMedium_toxic";
-            this.txtContCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLMedium_toxic.TabIndex = 204;
-            // 
-            // label360
-            // 
-            this.label360.AutoSize = true;
-            this.label360.Location = new System.Drawing.Point(27, 106);
-            this.label360.Name = "label360";
-            this.label360.Size = new System.Drawing.Size(259, 13);
-            this.label360.TabIndex = 163;
-            this.label360.Text = "Instantaneous Release-Auto Ignition Not Likely-CMD";
-            // 
-            // txtContCMDAINLRupture_toxic
-            // 
-            this.txtContCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLRupture_toxic.Location = new System.Drawing.Point(785, 321);
-            this.txtContCMDAINLRupture_toxic.Name = "txtContCMDAINLRupture_toxic";
-            this.txtContCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLRupture_toxic.TabIndex = 226;
-            // 
-            // label361
-            // 
-            this.label361.AutoSize = true;
-            this.label361.Location = new System.Drawing.Point(27, 82);
-            this.label361.Name = "label361";
-            this.label361.Size = new System.Drawing.Size(217, 13);
-            this.label361.TabIndex = 162;
-            this.label361.Text = "Continous Release-Auto Ignition Likely-CMD";
-            // 
-            // label362
-            // 
-            this.label362.AutoSize = true;
-            this.label362.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label362.Location = new System.Drawing.Point(485, 267);
-            this.label362.Name = "label362";
-            this.label362.Size = new System.Drawing.Size(59, 15);
-            this.label362.TabIndex = 189;
-            this.label362.Text = "Medium";
-            // 
-            // label363
-            // 
-            this.label363.AutoSize = true;
-            this.label363.Location = new System.Drawing.Point(27, 58);
-            this.label363.Name = "label363";
-            this.label363.Size = new System.Drawing.Size(237, 13);
-            this.label363.TabIndex = 161;
-            this.label363.Text = "Continous Release-Auto Ignition Not Likely-CMD";
-            // 
-            // txtBlendCMDAINLMedium_toxic
-            // 
-            this.txtBlendCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLMedium_toxic.Location = new System.Drawing.Point(449, 545);
-            this.txtBlendCMDAINLMedium_toxic.Name = "txtBlendCMDAINLMedium_toxic";
-            this.txtBlendCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLMedium_toxic.TabIndex = 205;
-            // 
-            // label364
-            // 
-            this.label364.AutoSize = true;
-            this.label364.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label364.Location = new System.Drawing.Point(27, 28);
-            this.label364.Name = "label364";
-            this.label364.Size = new System.Drawing.Size(192, 15);
-            this.label364.TabIndex = 160;
-            this.label364.Text = "Release equations constants";
-            // 
-            // txtEneffRupture_toxic
-            // 
-            this.txtEneffRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffRupture_toxic.Location = new System.Drawing.Point(785, 295);
-            this.txtEneffRupture_toxic.Name = "txtEneffRupture_toxic";
-            this.txtEneffRupture_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffRupture_toxic.TabIndex = 225;
-            // 
-            // txtInstINJAILLarge_toxic
-            // 
-            this.txtInstINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILLarge_toxic.Location = new System.Drawing.Point(617, 496);
-            this.txtInstINJAILLarge_toxic.Name = "txtInstINJAILLarge_toxic";
-            this.txtInstINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILLarge_toxic.TabIndex = 218;
-            // 
-            // label365
-            // 
-            this.label365.AutoSize = true;
-            this.label365.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label365.Location = new System.Drawing.Point(664, 267);
-            this.label365.Name = "label365";
-            this.label365.Size = new System.Drawing.Size(44, 15);
-            this.label365.TabIndex = 188;
-            this.label365.Text = "Large";
-            // 
-            // txtBlendFactorLarge_toxic
-            // 
-            this.txtBlendFactorLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorLarge_toxic.Location = new System.Drawing.Point(617, 521);
-            this.txtBlendFactorLarge_toxic.Name = "txtBlendFactorLarge_toxic";
-            this.txtBlendFactorLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorLarge_toxic.TabIndex = 217;
-            // 
-            // txtBlendFactorMedium_toxic
-            // 
-            this.txtBlendFactorMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendFactorMedium_toxic.Location = new System.Drawing.Point(449, 520);
-            this.txtBlendFactorMedium_toxic.Name = "txtBlendFactorMedium_toxic";
-            this.txtBlendFactorMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendFactorMedium_toxic.TabIndex = 206;
-            // 
-            // txtInstINJAINLLarge_toxic
-            // 
-            this.txtInstINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLLarge_toxic.Location = new System.Drawing.Point(617, 471);
-            this.txtInstINJAINLLarge_toxic.Name = "txtInstINJAINLLarge_toxic";
-            this.txtInstINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLLarge_toxic.TabIndex = 219;
-            // 
-            // txtContCMDAILLarge_toxic
-            // 
-            this.txtContCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILLarge_toxic.Location = new System.Drawing.Point(617, 346);
-            this.txtContCMDAILLarge_toxic.Name = "txtContCMDAILLarge_toxic";
-            this.txtContCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILLarge_toxic.TabIndex = 224;
-            // 
-            // txtBlendCMDAINLLarge_toxic
-            // 
-            this.txtBlendCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtBlendCMDAINLLarge_toxic.Location = new System.Drawing.Point(617, 546);
-            this.txtBlendCMDAINLLarge_toxic.Name = "txtBlendCMDAINLLarge_toxic";
-            this.txtBlendCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtBlendCMDAINLLarge_toxic.TabIndex = 216;
-            // 
-            // txtInstINJAILMedium_toxic
-            // 
-            this.txtInstINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAILMedium_toxic.Location = new System.Drawing.Point(449, 495);
-            this.txtInstINJAILMedium_toxic.Name = "txtInstINJAILMedium_toxic";
-            this.txtInstINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAILMedium_toxic.TabIndex = 207;
-            // 
-            // txtContCMDAINLLarge_toxic
-            // 
-            this.txtContCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAINLLarge_toxic.Location = new System.Drawing.Point(617, 321);
-            this.txtContCMDAINLLarge_toxic.Name = "txtContCMDAINLLarge_toxic";
-            this.txtContCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAINLLarge_toxic.TabIndex = 215;
-            // 
-            // txtInstINJAINLMedium_toxic
-            // 
-            this.txtInstINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstINJAINLMedium_toxic.Location = new System.Drawing.Point(449, 470);
-            this.txtInstINJAINLMedium_toxic.Name = "txtInstINJAINLMedium_toxic";
-            this.txtInstINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstINJAINLMedium_toxic.TabIndex = 208;
-            // 
-            // txtContINJAILLarge_toxic
-            // 
-            this.txtContINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILLarge_toxic.Location = new System.Drawing.Point(617, 446);
-            this.txtContINJAILLarge_toxic.Name = "txtContINJAILLarge_toxic";
-            this.txtContINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILLarge_toxic.TabIndex = 220;
-            // 
-            // txtInstCMDAINLLarge_toxic
-            // 
-            this.txtInstCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLLarge_toxic.Location = new System.Drawing.Point(617, 371);
-            this.txtInstCMDAINLLarge_toxic.Name = "txtInstCMDAINLLarge_toxic";
-            this.txtInstCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLLarge_toxic.TabIndex = 223;
-            // 
-            // txtEneffLarge_toxic
-            // 
-            this.txtEneffLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtEneffLarge_toxic.Location = new System.Drawing.Point(617, 295);
-            this.txtEneffLarge_toxic.Name = "txtEneffLarge_toxic";
-            this.txtEneffLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtEneffLarge_toxic.TabIndex = 214;
-            // 
-            // txtContINJAILMedium_toxic
-            // 
-            this.txtContINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAILMedium_toxic.Location = new System.Drawing.Point(449, 445);
-            this.txtContINJAILMedium_toxic.Name = "txtContINJAILMedium_toxic";
-            this.txtContINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAILMedium_toxic.TabIndex = 209;
-            // 
-            // txtContCMDAILMedium_toxic
-            // 
-            this.txtContCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContCMDAILMedium_toxic.Location = new System.Drawing.Point(449, 345);
-            this.txtContCMDAILMedium_toxic.Name = "txtContCMDAILMedium_toxic";
-            this.txtContCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContCMDAILMedium_toxic.TabIndex = 213;
-            // 
-            // txtContINJAINLMedium_toxic
-            // 
-            this.txtContINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLMedium_toxic.Location = new System.Drawing.Point(449, 420);
-            this.txtContINJAINLMedium_toxic.Name = "txtContINJAINLMedium_toxic";
-            this.txtContINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLMedium_toxic.TabIndex = 210;
-            // 
-            // txtContINJAINLLarge_toxic
-            // 
-            this.txtContINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtContINJAINLLarge_toxic.Location = new System.Drawing.Point(617, 421);
-            this.txtContINJAINLLarge_toxic.Name = "txtContINJAINLLarge_toxic";
-            this.txtContINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtContINJAINLLarge_toxic.TabIndex = 221;
-            // 
-            // txtInstCMDAILLarge_toxic
-            // 
-            this.txtInstCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILLarge_toxic.Location = new System.Drawing.Point(617, 396);
-            this.txtInstCMDAILLarge_toxic.Name = "txtInstCMDAILLarge_toxic";
-            this.txtInstCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILLarge_toxic.TabIndex = 222;
-            // 
-            // txtInstCMDAINLMedium_toxic
-            // 
-            this.txtInstCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAINLMedium_toxic.Location = new System.Drawing.Point(449, 370);
-            this.txtInstCMDAINLMedium_toxic.Name = "txtInstCMDAINLMedium_toxic";
-            this.txtInstCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAINLMedium_toxic.TabIndex = 212;
-            // 
-            // txtInstCMDAILMedium_toxic
-            // 
-            this.txtInstCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtInstCMDAILMedium_toxic.Location = new System.Drawing.Point(449, 395);
-            this.txtInstCMDAILMedium_toxic.Name = "txtInstCMDAILMedium_toxic";
-            this.txtInstCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
-            this.txtInstCMDAILMedium_toxic.TabIndex = 211;
-            // 
-            // lblFCA
-            // 
-            this.lblFCA.BackColor = System.Drawing.SystemColors.Highlight;
-            this.lblFCA.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblFCA.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblFCA.ForeColor = System.Drawing.Color.White;
-            this.lblFCA.Location = new System.Drawing.Point(0, 0);
-            this.lblFCA.Name = "lblFCA";
-            this.lblFCA.Size = new System.Drawing.Size(956, 21);
-            this.lblFCA.TabIndex = 0;
-            this.lblFCA.Text = "▼ Flammable Consequence Area";
             // 
             // panelInflu
             // 
@@ -7594,7 +7809,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(961, 2673);
+            this.tabCA.Size = new System.Drawing.Size(961, 2675);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -8007,7 +8222,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(961, 2673);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 2675);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -8079,7 +8294,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox7.Size = new System.Drawing.Size(961, 2675);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -8747,7 +8962,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(961, 2673);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 2675);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -8759,7 +8974,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox6.Size = new System.Drawing.Size(961, 2675);
             this.groupBox6.TabIndex = 3;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -9664,7 +9879,7 @@
             // 
             this.tabCATankShell.Controls.Add(this.groupBox8);
             this.tabCATankShell.Name = "tabCATankShell";
-            this.tabCATankShell.Size = new System.Drawing.Size(961, 2673);
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 2675);
             this.tabCATankShell.Text = "Financial COF";
             // 
             // groupBox8
@@ -9680,7 +9895,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox8.Size = new System.Drawing.Size(961, 2675);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -12186,7 +12401,7 @@
             // 
             this.tabCATankRoof.Controls.Add(this.groupBox9);
             this.tabCATankRoof.Name = "tabCATankRoof";
-            this.tabCATankRoof.Size = new System.Drawing.Size(961, 2673);
+            this.tabCATankRoof.Size = new System.Drawing.Size(961, 2675);
             this.tabCATankRoof.Text = "Financial COF";
             // 
             // groupBox9
@@ -12197,7 +12412,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox9.Size = new System.Drawing.Size(961, 2675);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -12473,7 +12688,7 @@
             // 
             this.tabCAnormal.Controls.Add(this.groupBox10);
             this.tabCAnormal.Name = "tabCAnormal";
-            this.tabCAnormal.Size = new System.Drawing.Size(961, 2673);
+            this.tabCAnormal.Size = new System.Drawing.Size(961, 2675);
             this.tabCAnormal.Text = "Financial COF";
             // 
             // groupBox10
@@ -13190,7 +13405,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "UCRiskFactor";
-            this.Size = new System.Drawing.Size(969, 2718);
+            this.Size = new System.Drawing.Size(969, 2720);
             this.Load += new System.EventHandler(this.UCRiskFactor_Load_1);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabRisk)).EndInit();
@@ -13252,8 +13467,6 @@
             this.panelLF1.PerformLayout();
             this.TabArea.ResumeLayout(false);
             this.groupBoxIV.ResumeLayout(false);
-            this.panelRHP.ResumeLayout(false);
-            this.panelRHP.PerformLayout();
             this.panelNonTF.ResumeLayout(false);
             this.panelNonTF.PerformLayout();
             this.panelTCA.ResumeLayout(false);
@@ -13263,15 +13476,17 @@
             this.tabToxic1.PerformLayout();
             this.tabToxic2.ResumeLayout(false);
             this.tabToxic2.PerformLayout();
-            this.panelCAP.ResumeLayout(false);
-            this.panelCAP.PerformLayout();
             this.panelFCA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabFlammable)).EndInit();
-            this.tabFlammable.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlFlammable)).EndInit();
+            this.tabControlFlammable.ResumeLayout(false);
             this.tabmodel.ResumeLayout(false);
             this.tabmodel.PerformLayout();
             this.tabtoxic.ResumeLayout(false);
             this.tabtoxic.PerformLayout();
+            this.panelRHP.ResumeLayout(false);
+            this.panelRHP.PerformLayout();
+            this.panelCAP.ResumeLayout(false);
+            this.panelCAP.PerformLayout();
             this.panelInflu.ResumeLayout(false);
             this.panelInflu.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -14148,9 +14363,6 @@
         private System.Windows.Forms.Label label296;
         private System.Windows.Forms.Label label297;
         private System.Windows.Forms.Label label298;
-        private System.Windows.Forms.Panel panelTCA;
-        private DevExpress.XtraTab.XtraTabControl tabControlToxic;
-        private DevExpress.XtraTab.XtraTabPage tabToxic1;
         private System.Windows.Forms.TextBox txtFlammalbePICA_toxic1;
         private System.Windows.Forms.Label label366;
         private System.Windows.Forms.Label label367;
@@ -14198,62 +14410,6 @@
         private System.Windows.Forms.TextBox txtContFLarge_toxic1;
         private System.Windows.Forms.TextBox txtContEMedium_toxic1;
         private System.Windows.Forms.TextBox txtContFMedium_toxic1;
-        private DevExpress.XtraTab.XtraTabPage tabToxic2;
-        private System.Windows.Forms.TextBox txtFlammalbePICA_toxic2;
-        private System.Windows.Forms.Label label380;
-        private System.Windows.Forms.Label label381;
-        private System.Windows.Forms.Label label382;
-        private System.Windows.Forms.Label label383;
-        private System.Windows.Forms.Label label384;
-        private System.Windows.Forms.Label label385;
-        private System.Windows.Forms.Label label386;
-        private System.Windows.Forms.Label label387;
-        private System.Windows.Forms.Label label388;
-        private System.Windows.Forms.TextBox txtContDRupture_toxic2;
-        private System.Windows.Forms.Label label389;
-        private System.Windows.Forms.TextBox txtContERupture_toxic2;
-        private System.Windows.Forms.TextBox txtToxicCASmall_toxic2;
-        private System.Windows.Forms.TextBox txtContFRupture_toxic2;
-        private System.Windows.Forms.TextBox txtMassSmall_toxic2;
-        private System.Windows.Forms.TextBox txtMassRateRupture_toxic2;
-        private System.Windows.Forms.TextBox txtMassRateSmall_toxic2;
-        private System.Windows.Forms.TextBox txtMassRupture_toxic2;
-        private System.Windows.Forms.TextBox txtContFSmall_toxic2;
-        private System.Windows.Forms.TextBox txtToxicCARupture_toxic2;
-        private System.Windows.Forms.TextBox txtContCSmall_toxic2;
-        private System.Windows.Forms.TextBox txtContESmall_toxic2;
-        private System.Windows.Forms.TextBox txtLDToxicSmall_toxic2;
-        private System.Windows.Forms.TextBox txtContDSmall_toxic2;
-        private System.Windows.Forms.Label label390;
-        private System.Windows.Forms.TextBox txtLDToxicMedium_toxic2;
-        private System.Windows.Forms.Label label391;
-        private System.Windows.Forms.TextBox txtContCMedium_toxic2;
-        private System.Windows.Forms.TextBox txtContCRupture_toxic2;
-        private System.Windows.Forms.Label label392;
-        private System.Windows.Forms.TextBox txtLDToxicRupture_toxic2;
-        private System.Windows.Forms.Label label393;
-        private System.Windows.Forms.TextBox txtToxicCALarge_toxic2;
-        private System.Windows.Forms.TextBox txtContDLarge_toxic2;
-        private System.Windows.Forms.TextBox txtContCLarge_toxic2;
-        private System.Windows.Forms.TextBox txtToxicCAMedium_toxic2;
-        private System.Windows.Forms.TextBox txtMassLarge_toxic2;
-        private System.Windows.Forms.TextBox txtContELarge_toxic2;
-        private System.Windows.Forms.TextBox txtLDToxicLarge_toxic2;
-        private System.Windows.Forms.TextBox txtMassMedium_toxic2;
-        private System.Windows.Forms.TextBox txtContDMedium_toxic2;
-        private System.Windows.Forms.TextBox txtMassRateMedium_toxic2;
-        private System.Windows.Forms.TextBox txtMassRateLarge_toxic2;
-        private System.Windows.Forms.TextBox txtContFLarge_toxic2;
-        private System.Windows.Forms.TextBox txtContEMedium_toxic2;
-        private System.Windows.Forms.TextBox txtContFMedium_toxic2;
-        private System.Windows.Forms.Label lblTCA;
-        private System.Windows.Forms.Panel panelFCA;
-        private DevExpress.XtraTab.XtraTabControl tabFlammable;
-        private DevExpress.XtraTab.XtraTabPage tabmodel;
-        private System.Windows.Forms.TextBox txtFlammablePICA_model;
-        private System.Windows.Forms.TextBox txtFlammableCDCA_model;
-        private System.Windows.Forms.Label label260;
-        private System.Windows.Forms.Label label299;
         private System.Windows.Forms.Label label300;
         private System.Windows.Forms.Label label301;
         private System.Windows.Forms.Label label302;
@@ -14366,124 +14522,6 @@
         private System.Windows.Forms.TextBox txtInstCMDAILLarge_model;
         private System.Windows.Forms.TextBox txtInstCMDAINLMedium_model;
         private System.Windows.Forms.TextBox txtInstCMDAILMedium_model;
-        private DevExpress.XtraTab.XtraTabPage tabtoxic;
-        private System.Windows.Forms.TextBox txtFlammablePICA_toxic;
-        private System.Windows.Forms.TextBox txtFlammableCDCA_toxic;
-        private System.Windows.Forms.Label label332;
-        private System.Windows.Forms.Label label333;
-        private System.Windows.Forms.Label label334;
-        private System.Windows.Forms.Label label335;
-        private System.Windows.Forms.Label label336;
-        private System.Windows.Forms.Label label337;
-        private System.Windows.Forms.Label label338;
-        private System.Windows.Forms.TextBox txtAITBlendINJRupture_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAINLSmall_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAILSmall_toxic;
-        private System.Windows.Forms.TextBox txtBlendCMDAILSmall_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendCMDSmall_toxic;
-        private System.Windows.Forms.TextBox txtBlendCMDAILRupture_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendINJSmall_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAINLRupture_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAILRupture_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendCMDRupture_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendINJMedium_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAILLarge_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendCMDLarge_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendCMDMedium_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAINLLarge_toxic;
-        private System.Windows.Forms.TextBox txtAITBlendINJLarge_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAILMedium_toxic;
-        private System.Windows.Forms.TextBox txtBlendINJAINLMedium_toxic;
-        private System.Windows.Forms.TextBox txtBlendCMDAILLarge_toxic;
-        private System.Windows.Forms.TextBox txtBlendCMDAILMedium_toxic;
-        private System.Windows.Forms.Label label339;
-        private System.Windows.Forms.Label label340;
-        private System.Windows.Forms.Label label341;
-        private System.Windows.Forms.Label label342;
-        private System.Windows.Forms.Label label343;
-        private System.Windows.Forms.Label label344;
-        private System.Windows.Forms.Label label345;
-        private System.Windows.Forms.Label label346;
-        private System.Windows.Forms.Label label347;
-        private System.Windows.Forms.Label label348;
-        private System.Windows.Forms.Label label349;
-        private System.Windows.Forms.TextBox txtContCMDAILRupture_toxic;
-        private System.Windows.Forms.Label label350;
-        private System.Windows.Forms.Label label351;
-        private System.Windows.Forms.TextBox txtInstCMDAINLRupture_toxic;
-        private System.Windows.Forms.Label label352;
-        private System.Windows.Forms.TextBox txtBlendCMDAINLRupture_toxic;
-        private System.Windows.Forms.TextBox txtBInstAILINJ_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAINLSmall_toxic;
-        private System.Windows.Forms.TextBox txtBInstAINLINJ_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAILRupture_toxic;
-        private System.Windows.Forms.TextBox txtBContAILINJ_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAILSmall_toxic;
-        private System.Windows.Forms.TextBox txtBContAINLINJ_toxic;
-        private System.Windows.Forms.TextBox txtContINJAILSmall_toxic;
-        private System.Windows.Forms.TextBox txtBInstAILCMD_toxic;
-        private System.Windows.Forms.TextBox txtContINJAINLRupture_toxic;
-        private System.Windows.Forms.TextBox txtBInstAINLCMD_toxic;
-        private System.Windows.Forms.TextBox txtBlendFactorSmall_toxic;
-        private System.Windows.Forms.TextBox txtBContAILCMD_toxic;
-        private System.Windows.Forms.TextBox txtContINJAINLSmall_toxic;
-        private System.Windows.Forms.TextBox txtBContAINLCMD_toxic;
-        private System.Windows.Forms.TextBox txtContINJAILRupture_toxic;
-        private System.Windows.Forms.TextBox txtAInstAILINJ_toxic;
-        private System.Windows.Forms.TextBox txtBlendCMDAINLSmall_toxic;
-        private System.Windows.Forms.TextBox txtAInstAINLINJ_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAILSmall_toxic;
-        private System.Windows.Forms.TextBox txtAContAILINJ_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAINLRupture_toxic;
-        private System.Windows.Forms.TextBox txtAContAINLINJ_toxic;
-        private System.Windows.Forms.TextBox txtContCMDAINLSmall_toxic;
-        private System.Windows.Forms.TextBox txtAInstAILCMD_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAINLSmall_toxic;
-        private System.Windows.Forms.TextBox txtAInstAINLCMD_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAILRupture_toxic;
-        private System.Windows.Forms.TextBox txtAContAILCMD_toxic;
-        private System.Windows.Forms.TextBox txtEneffSmall_toxic;
-        private System.Windows.Forms.TextBox txtAContAINLCMD_toxic;
-        private System.Windows.Forms.TextBox txtContCMDAILSmall_toxic;
-        private System.Windows.Forms.Label label353;
-        private System.Windows.Forms.TextBox txtBlendFactorRupture_toxic;
-        private System.Windows.Forms.Label label354;
-        private System.Windows.Forms.Label label355;
-        private System.Windows.Forms.Label label356;
-        private System.Windows.Forms.TextBox txtEneffMedium_toxic;
-        private System.Windows.Forms.Label label357;
-        private System.Windows.Forms.Label label358;
-        private System.Windows.Forms.Label label359;
-        private System.Windows.Forms.TextBox txtContCMDAINLMedium_toxic;
-        private System.Windows.Forms.Label label360;
-        private System.Windows.Forms.TextBox txtContCMDAINLRupture_toxic;
-        private System.Windows.Forms.Label label361;
-        private System.Windows.Forms.Label label362;
-        private System.Windows.Forms.Label label363;
-        private System.Windows.Forms.TextBox txtBlendCMDAINLMedium_toxic;
-        private System.Windows.Forms.Label label364;
-        private System.Windows.Forms.TextBox txtEneffRupture_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAILLarge_toxic;
-        private System.Windows.Forms.Label label365;
-        private System.Windows.Forms.TextBox txtBlendFactorLarge_toxic;
-        private System.Windows.Forms.TextBox txtBlendFactorMedium_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAINLLarge_toxic;
-        private System.Windows.Forms.TextBox txtContCMDAILLarge_toxic;
-        private System.Windows.Forms.TextBox txtBlendCMDAINLLarge_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAILMedium_toxic;
-        private System.Windows.Forms.TextBox txtContCMDAINLLarge_toxic;
-        private System.Windows.Forms.TextBox txtInstINJAINLMedium_toxic;
-        private System.Windows.Forms.TextBox txtContINJAILLarge_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAINLLarge_toxic;
-        private System.Windows.Forms.TextBox txtEneffLarge_toxic;
-        private System.Windows.Forms.TextBox txtContINJAILMedium_toxic;
-        private System.Windows.Forms.TextBox txtContCMDAILMedium_toxic;
-        private System.Windows.Forms.TextBox txtContINJAINLMedium_toxic;
-        private System.Windows.Forms.TextBox txtContINJAINLLarge_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAILLarge_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAINLMedium_toxic;
-        private System.Windows.Forms.TextBox txtInstCMDAILMedium_toxic;
-        private System.Windows.Forms.Label lblFCA;
         private DevExpress.XtraEditors.ImageComboBoxEdit cbMitigationSystem;
         private DevExpress.XtraEditors.ImageComboBoxEdit cbIsolationSystem;
         private DevExpress.XtraEditors.ImageComboBoxEdit cbDetectionSystem;
@@ -14493,7 +14531,6 @@
         private System.Windows.Forms.Label label137;
         private System.Windows.Forms.Label label138;
         private System.Windows.Forms.Label label139;
-        private System.Windows.Forms.Panel panelNonTF;
         private System.Windows.Forms.Label label406;
         private System.Windows.Forms.Label label405;
         private System.Windows.Forms.Label label404;
@@ -14520,7 +14557,6 @@
         private System.Windows.Forms.TextBox txtCONT_CA3;
         private System.Windows.Forms.TextBox txtBlend_CA2;
         private System.Windows.Forms.TextBox txtNonFlammableNonToxicCon;
-        private System.Windows.Forms.Label label422;
         private System.Windows.Forms.Label label418;
         private System.Windows.Forms.Label label417;
         private System.Windows.Forms.Label label416;
@@ -14551,8 +14587,6 @@
         private System.Windows.Forms.Label label439;
         private System.Windows.Forms.Label label438;
         private System.Windows.Forms.Label label437;
-        private System.Windows.Forms.Label label408;
-        private System.Windows.Forms.Label label407;
         private System.Windows.Forms.Label label435;
         private System.Windows.Forms.Label label436;
         private DevExpress.XtraTab.XtraTabPage tabCAnormal;
@@ -14624,5 +14658,204 @@
         private System.Windows.Forms.Label label458;
         private System.Windows.Forms.Label label457;
         private System.Windows.Forms.Label label456;
+        private System.Windows.Forms.Panel panelFCA;
+        private DevExpress.XtraTab.XtraTabControl tabControlFlammable;
+        private DevExpress.XtraTab.XtraTabPage tabmodel;
+        private System.Windows.Forms.TextBox txtFlammablePICA_model;
+        private System.Windows.Forms.TextBox txtFlammableCDCA_model;
+        private System.Windows.Forms.Label label299;
+        private System.Windows.Forms.Label label260;
+        private DevExpress.XtraTab.XtraTabPage tabtoxic;
+        private System.Windows.Forms.Label lblFCA;
+        private System.Windows.Forms.TextBox txtFlammablePICA_toxic;
+        private System.Windows.Forms.TextBox txtFlammableCDCA_toxic;
+        private System.Windows.Forms.Label label332;
+        private System.Windows.Forms.Label label333;
+        private System.Windows.Forms.TextBox txtAContAILCMD_toxic;
+        private System.Windows.Forms.Label label334;
+        private System.Windows.Forms.Label label335;
+        private System.Windows.Forms.Label label336;
+        private System.Windows.Forms.Label label337;
+        private System.Windows.Forms.Label label338;
+        private System.Windows.Forms.Label label339;
+        private System.Windows.Forms.Label label340;
+        private System.Windows.Forms.Label label341;
+        private System.Windows.Forms.Label label342;
+        private System.Windows.Forms.Label label343;
+        private System.Windows.Forms.Label label344;
+        private System.Windows.Forms.Label label345;
+        private System.Windows.Forms.Label label346;
+        private System.Windows.Forms.Label label347;
+        private System.Windows.Forms.Label label348;
+        private System.Windows.Forms.Label label349;
+        private System.Windows.Forms.Label label350;
+        private System.Windows.Forms.Label label351;
+        private System.Windows.Forms.TextBox txtAContAINLCMD_toxic;
+        private System.Windows.Forms.Label label352;
+        private System.Windows.Forms.TextBox txtAInstAINLCMD_toxic;
+        private System.Windows.Forms.Label label353;
+        private System.Windows.Forms.TextBox txtAInstAILCMD_toxic;
+        private System.Windows.Forms.Label label354;
+        private System.Windows.Forms.TextBox txtAContAINLINJ_toxic;
+        private System.Windows.Forms.Label label355;
+        private System.Windows.Forms.TextBox txtAContAILINJ_toxic;
+        private System.Windows.Forms.Label label356;
+        private System.Windows.Forms.TextBox txtAInstAINLINJ_toxic;
+        private System.Windows.Forms.Label label357;
+        private System.Windows.Forms.TextBox txtAInstAILINJ_toxic;
+        private System.Windows.Forms.TextBox txtBContAINLCMD_toxic;
+        private System.Windows.Forms.TextBox txtBContAILCMD_toxic;
+        private System.Windows.Forms.TextBox txtBInstAINLCMD_toxic;
+        private System.Windows.Forms.TextBox txtBInstAILCMD_toxic;
+        private System.Windows.Forms.Label label358;
+        private System.Windows.Forms.TextBox txtBContAINLINJ_toxic;
+        private System.Windows.Forms.Label label359;
+        private System.Windows.Forms.TextBox txtBContAILINJ_toxic;
+        private System.Windows.Forms.Label label360;
+        private System.Windows.Forms.TextBox txtBInstAINLINJ_toxic;
+        private System.Windows.Forms.Label label361;
+        private System.Windows.Forms.TextBox txtBInstAILINJ_toxic;
+        private System.Windows.Forms.Label label362;
+        private System.Windows.Forms.Label label363;
+        private System.Windows.Forms.TextBox txtAITBlendINJRupture_toxic;
+        private System.Windows.Forms.Label label364;
+        private System.Windows.Forms.TextBox txtBlendINJAINLSmall_toxic;
+        private System.Windows.Forms.Label label365;
+        private System.Windows.Forms.TextBox txtBlendINJAILSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAILMedium_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAILSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAINLMedium_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendCMDSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAILLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAILRupture_toxic;
+        private System.Windows.Forms.TextBox txtContINJAINLLarge_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendINJSmall_toxic;
+        private System.Windows.Forms.TextBox txtContINJAINLMedium_toxic;
+        private System.Windows.Forms.TextBox txtBlendINJAINLRupture_toxic;
+        private System.Windows.Forms.TextBox txtContCMDAILMedium_toxic;
+        private System.Windows.Forms.TextBox txtBlendINJAILRupture_toxic;
+        private System.Windows.Forms.TextBox txtContINJAILMedium_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendCMDRupture_toxic;
+        private System.Windows.Forms.TextBox txtEneffLarge_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendINJMedium_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAINLLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendINJAILLarge_toxic;
+        private System.Windows.Forms.TextBox txtContINJAILLarge_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendCMDLarge_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAINLMedium_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendCMDMedium_toxic;
+        private System.Windows.Forms.TextBox txtContCMDAINLLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendINJAINLLarge_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAILMedium_toxic;
+        private System.Windows.Forms.TextBox txtAITBlendINJLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAINLLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendINJAILMedium_toxic;
+        private System.Windows.Forms.TextBox txtContCMDAILLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendINJAINLMedium_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAINLLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAILLarge_toxic;
+        private System.Windows.Forms.TextBox txtBlendFactorMedium_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAILMedium_toxic;
+        private System.Windows.Forms.TextBox txtBlendFactorLarge_toxic;
+        private System.Windows.Forms.Label label407;
+        private System.Windows.Forms.Label label408;
+        private System.Windows.Forms.Label label461;
+        private System.Windows.Forms.TextBox txtInstINJAILLarge_toxic;
+        private System.Windows.Forms.Label label462;
+        private System.Windows.Forms.TextBox txtEneffRupture_toxic;
+        private System.Windows.Forms.Label label478;
+        private System.Windows.Forms.TextBox txtBlendCMDAINLMedium_toxic;
+        private System.Windows.Forms.Label label480;
+        private System.Windows.Forms.Label label481;
+        private System.Windows.Forms.Label label482;
+        private System.Windows.Forms.TextBox txtContCMDAINLRupture_toxic;
+        private System.Windows.Forms.Label label483;
+        private System.Windows.Forms.TextBox txtContCMDAINLMedium_toxic;
+        private System.Windows.Forms.Label label484;
+        private System.Windows.Forms.Label label485;
+        private System.Windows.Forms.Label label486;
+        private System.Windows.Forms.TextBox txtEneffMedium_toxic;
+        private System.Windows.Forms.Label label487;
+        private System.Windows.Forms.Label label488;
+        private System.Windows.Forms.Label label489;
+        private System.Windows.Forms.TextBox txtBlendFactorRupture_toxic;
+        private System.Windows.Forms.TextBox txtContCMDAILRupture_toxic;
+        private System.Windows.Forms.TextBox txtContCMDAILSmall_toxic;
+        private System.Windows.Forms.TextBox txtEneffSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAINLRupture_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAILRupture_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAINLRupture_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAINLSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAINLSmall_toxic;
+        private System.Windows.Forms.TextBox txtContCMDAINLSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAILRupture_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAINLRupture_toxic;
+        private System.Windows.Forms.TextBox txtInstINJAILSmall_toxic;
+        private System.Windows.Forms.TextBox txtInstCMDAILSmall_toxic;
+        private System.Windows.Forms.TextBox txtContINJAILSmall_toxic;
+        private System.Windows.Forms.TextBox txtBlendCMDAINLSmall_toxic;
+        private System.Windows.Forms.TextBox txtContINJAINLRupture_toxic;
+        private System.Windows.Forms.TextBox txtContINJAILRupture_toxic;
+        private System.Windows.Forms.TextBox txtBlendFactorSmall_toxic;
+        private System.Windows.Forms.TextBox txtContINJAINLSmall_toxic;
+        private System.Windows.Forms.Panel panelTCA;
+        private System.Windows.Forms.Label lblTCA;
+        private DevExpress.XtraTab.XtraTabControl tabControlToxic;
+        private DevExpress.XtraTab.XtraTabPage tabToxic1;
+        private DevExpress.XtraTab.XtraTabPage tabToxic2;
+        private System.Windows.Forms.Label label380;
+        private System.Windows.Forms.Label label381;
+        private System.Windows.Forms.Label label382;
+        private System.Windows.Forms.TextBox txtContFMedium_toxic2;
+        private System.Windows.Forms.Label label383;
+        private System.Windows.Forms.TextBox txtContEMedium_toxic2;
+        private System.Windows.Forms.Label label384;
+        private System.Windows.Forms.TextBox txtContFLarge_toxic2;
+        private System.Windows.Forms.Label label385;
+        private System.Windows.Forms.TextBox txtMassRateLarge_toxic2;
+        private System.Windows.Forms.TextBox txtFlammalbePICA_toxic2;
+        private System.Windows.Forms.TextBox txtMassRateMedium_toxic2;
+        private System.Windows.Forms.Label label386;
+        private System.Windows.Forms.TextBox txtContDMedium_toxic2;
+        private System.Windows.Forms.Label label387;
+        private System.Windows.Forms.TextBox txtMassMedium_toxic2;
+        private System.Windows.Forms.Label label388;
+        private System.Windows.Forms.TextBox txtLDToxicLarge_toxic2;
+        private System.Windows.Forms.Label label389;
+        private System.Windows.Forms.TextBox txtContELarge_toxic2;
+        private System.Windows.Forms.Label label390;
+        private System.Windows.Forms.TextBox txtMassLarge_toxic2;
+        private System.Windows.Forms.Label label391;
+        private System.Windows.Forms.TextBox txtToxicCAMedium_toxic2;
+        private System.Windows.Forms.Label label392;
+        private System.Windows.Forms.TextBox txtContCLarge_toxic2;
+        private System.Windows.Forms.Label label393;
+        private System.Windows.Forms.TextBox txtContDLarge_toxic2;
+        private System.Windows.Forms.Label label490;
+        private System.Windows.Forms.TextBox txtToxicCALarge_toxic2;
+        private System.Windows.Forms.TextBox txtContDRupture_toxic2;
+        private System.Windows.Forms.Label label491;
+        private System.Windows.Forms.TextBox txtLDToxicRupture_toxic2;
+        private System.Windows.Forms.TextBox txtContERupture_toxic2;
+        private System.Windows.Forms.Label label492;
+        private System.Windows.Forms.TextBox txtToxicCASmall_toxic2;
+        private System.Windows.Forms.TextBox txtContCRupture_toxic2;
+        private System.Windows.Forms.TextBox txtContFRupture_toxic2;
+        private System.Windows.Forms.TextBox txtContCMedium_toxic2;
+        private System.Windows.Forms.TextBox txtMassSmall_toxic2;
+        private System.Windows.Forms.Label label493;
+        private System.Windows.Forms.TextBox txtMassRateRupture_toxic2;
+        private System.Windows.Forms.TextBox txtLDToxicMedium_toxic2;
+        private System.Windows.Forms.TextBox txtMassRateSmall_toxic2;
+        private System.Windows.Forms.Label label494;
+        private System.Windows.Forms.TextBox txtMassRupture_toxic2;
+        private System.Windows.Forms.TextBox txtContDSmall_toxic2;
+        private System.Windows.Forms.TextBox txtContFSmall_toxic2;
+        private System.Windows.Forms.TextBox txtLDToxicSmall_toxic2;
+        private System.Windows.Forms.TextBox txtToxicCARupture_toxic2;
+        private System.Windows.Forms.TextBox txtContESmall_toxic2;
+        private System.Windows.Forms.TextBox txtContCSmall_toxic2;
+        private System.Windows.Forms.Panel panelNonTF;
+        private System.Windows.Forms.Label lblNonTF;
     }
 }

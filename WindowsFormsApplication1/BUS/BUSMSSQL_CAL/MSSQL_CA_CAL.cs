@@ -224,7 +224,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return 0;
         }
-        public float W_n(int i) //done
+        public float W_n(int i) //done thieu th gas
         {
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float W_n;

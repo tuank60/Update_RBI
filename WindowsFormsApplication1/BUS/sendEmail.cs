@@ -23,7 +23,7 @@ namespace RBI.BUS
             client.Timeout = 10000;
             client.Credentials = login;
             msg = new MailMessage { From = new MailAddress("anhvu01011994@gmail.com", "VuNA", Encoding.UTF8) };
-            msg.To.Add(new MailAddress("kimanh.bn2795@gmail.com"));
+            msg.To.Add(new MailAddress("nguyenvudat1998@gmail.com"));
             msg.Subject = "RBI Completed Calculator";
             String body = "Dữ liệu của bạn đã được tính toán xong. File kết quả ở địa chỉ sau: ";
 
