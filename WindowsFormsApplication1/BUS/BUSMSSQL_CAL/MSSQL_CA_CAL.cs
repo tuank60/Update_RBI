@@ -251,14 +251,16 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 {
                     float x = (float)(((k * m_w * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
 
-                    W_n = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    float t = (float)Math.Round((((0.931 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    W_n = (float)Math.Round((t / 2),5);
                     return W_n;
                 }
                 if (STORED_PRESSURE <= p_trans)
                 {
                     float x = (float)Math.Round((m_w * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
 
-                    W_n = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    float t = (float)Math.Round((((0.931 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    W_n = (float)Math.Round((t / 2), 5);
                     return W_n;
                 }
                 
@@ -323,13 +325,15 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 if (STORED_PRESSURE > p_trans)
                 {
                     float x = (float)(((k * mw * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
-                    W_max8 = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    float t = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    W_max8 = (float)Math.Round((t / 2), 5);
                     return W_max8;
                 }
                 if (STORED_PRESSURE <= p_trans)
                 {
                     float x = (float)Math.Round((mw * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
-                    W_max8 = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    float t = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
+                    W_max8 = (float)Math.Round((t / 2), 5);
                     return W_max8;
                 }
             }

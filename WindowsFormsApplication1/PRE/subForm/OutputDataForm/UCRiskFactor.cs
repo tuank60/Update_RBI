@@ -224,8 +224,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             }
             txtNBP.Text = rwcfc.NBP.ToString();
             txtK.Text = rwcfc.k.ToString();
-            //txtAmbientState.Text = rwcfc.ambient.ToString();
-            //txtReleasePhase.Text = rwcfc.ReleasePhase.ToString();
+            txtAmbientState.Text = rwcfc.ambient.ToString();
+            txtReleasePhase.Text = rwcfc.ReleasePhase.ToString();
             txtRMRF.Text = rwcfc.fact_di.ToString();
             txtCARF.Text = rwcfc.fact_mit.ToString();
         }
@@ -1323,26 +1323,26 @@ namespace RBI.PRE.subForm.OutputDataForm
                 else if(CA_CAL_TOX.FLUID=="AlCl3" || CA_CAL_TOX.FLUID=="CO" || CA_CAL_TOX.FLUID=="HCl" || CA_CAL_TOX.FLUID =="Nitric Acid" ||
                         CA_CAL_TOX.FLUID=="NO2" || CA_CAL_TOX.FLUID=="Phosgene" || CA_CAL_TOX.FLUID =="TDI" || CA_CAL_TOX.FLUID=="EE" || CA_CAL_TOX.FLUID=="EO" || CA_CAL_TOX.FLUID == "PO")
                 {
-                    txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),CA_CAL_TOX.FLUID, 1).c.ToString();
-                    txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).c.ToString();
-                    txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).c.ToString();
-                    txtContCRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).c.ToString();
-                    txtContDSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).d.ToString();
-                    txtContDMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),CA_CAL_TOX.FLUID, 2).d.ToString();
-                    txtContDLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).d.ToString();
-                    txtContDRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).d.ToString();
-                    txtContESmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 1).e.ToString();
-                    txtContEMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).e.ToString();
-                    txtContELarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).e.ToString();
-                    txtContERupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).e.ToString();
-                    txtContFSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 1).f.ToString();
-                    txtContFMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 2).f.ToString();
-                    txtContFLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).f.ToString();
-                    txtContFRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).f.ToString();
-                    txtToxicCASmall_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 1).ToString();
-                    txtToxicCAMedium_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 2).ToString();
-                    txtToxicCALarge_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 3).ToString();
-                    txtToxicCARupture_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 4).ToString();
+                    txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),CA_CAL_TOX.FLUID, 1).c.ToString();
+                    txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).c.ToString();
+                    txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).c.ToString();
+                    txtContCRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).c.ToString();
+                    txtContDSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).d.ToString();
+                    txtContDMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),CA_CAL_TOX.FLUID, 2).d.ToString();
+                    txtContDLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).d.ToString();
+                    txtContDRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).d.ToString();
+                    txtContESmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 1).e.ToString();
+                    txtContEMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).e.ToString();
+                    txtContELarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).e.ToString();
+                    txtContERupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).e.ToString();
+                    txtContFSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 1).f.ToString();
+                    txtContFMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 2).f.ToString();
+                    txtContFLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).f.ToString();
+                    txtContFRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).f.ToString();
+                    txtToxicCASmall_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 1).ToString();
+                    txtToxicCAMedium_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
+                    txtToxicCALarge_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
+                    txtToxicCARupture_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
                     txtFlammalbePICA_toxic1.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
                 }
                 else
@@ -1376,26 +1376,26 @@ namespace RBI.PRE.subForm.OutputDataForm
                 else if (CA_CAL_TOX.FLUID_TOXIC == "AlCl3" || CA_CAL_TOX.FLUID_TOXIC == "CO" || CA_CAL_TOX.FLUID_TOXIC == "HCl" || CA_CAL_TOX.FLUID_TOXIC == "Nitric Acid" ||
                         CA_CAL_TOX.FLUID_TOXIC == "NO2" || CA_CAL_TOX.FLUID_TOXIC == "Phosgene" || CA_CAL_TOX.FLUID_TOXIC == "TDI" || CA_CAL_TOX.FLUID_TOXIC == "EE" || CA_CAL_TOX.FLUID_TOXIC == "EO" || CA_CAL_TOX.FLUID_TOXIC == "PO")
                 {
-                    txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
-                    txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
-                    txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
-                    txtContCRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).c.ToString();
-                    txtContDSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).d.ToString();
-                    txtContDMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).d.ToString();
-                    txtContDLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).d.ToString();
-                    txtContDRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).d.ToString();
-                    txtContESmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).e.ToString();
-                    txtContEMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).e.ToString();
-                    txtContELarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).e.ToString();
-                    txtContERupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).e.ToString();
-                    txtContFSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).f.ToString();
-                    txtContFMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).f.ToString();
-                    txtContFLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).f.ToString();
-                    txtContFRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).f.ToString();
-                    txtToxicCASmall_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 1).ToString();
-                    txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 2).ToString();
-                    txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 3).ToString();
-                    txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 4).ToString();
+                    txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
+                    txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
+                    txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
+                    txtContCRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).c.ToString();
+                    txtContDSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).d.ToString();
+                    txtContDMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).d.ToString();
+                    txtContDLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).d.ToString();
+                    txtContDRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).d.ToString();
+                    txtContESmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).e.ToString();
+                    txtContEMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).e.ToString();
+                    txtContELarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).e.ToString();
+                    txtContERupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).e.ToString();
+                    txtContFSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).f.ToString();
+                    txtContFMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).f.ToString();
+                    txtContFLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).f.ToString();
+                    txtContFRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).f.ToString();
+                    txtToxicCASmall_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 1).ToString();
+                    txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
+                    txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
+                    txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
                     txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
                 }
                 else

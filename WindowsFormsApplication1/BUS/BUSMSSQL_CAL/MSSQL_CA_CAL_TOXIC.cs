@@ -240,7 +240,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
             RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
             float ld = toxic_leak_duration(n);
-            //Console.WriteLine("releasephase= " + ReleasePhase);
             if (ReleasePhase == "Gas")
                 TOXIC_PHASE = "Gas";
             else
@@ -281,7 +280,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
             {
                 RELEASE_DURATION = "60";
             }
-            //Console.WriteLine("ld= " + ld);
             TOXIC_513 obj = DAL_CAL.GET_TBL_513(toxicName, ReleasePhase, RELEASE_DURATION );
             return obj;
         }
@@ -392,7 +390,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             float cainjtox = ca_inj_tox(releasetype1, releasetype2, releasetype3, releasetype4, ToxicName, releasephase);
             //Console.WriteLine("ca_inj_tox= " + cainjtox);
             float cainjnfnt = CA_CAL_FLA.ca_inj_nfnt();
-            Console.WriteLine("ca_inj_nfnt= " + cainjnfnt);
+            //Console.WriteLine("ca_inj_nfnt= " + cainjnfnt);
             return Math.Max(Math.Max(cainjflame, cainjtox), cainjnfnt);
         }
         public float ca_consequence(string releasetype1, string releasetype2, string releasetype3, string releasetype4, string ToxicName, string releasephase)

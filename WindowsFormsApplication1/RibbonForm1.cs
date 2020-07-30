@@ -595,6 +595,7 @@ namespace RBI
             RW_FULL_COF_HOLE_SIZE rwfchs = new RW_FULL_COF_HOLE_SIZE();
             RW_FULL_COF_INPUT rwFcinput = new RW_FULL_COF_INPUT();
             RW_FULL_FINALCOF rwffinal = new RW_FULL_FINALCOF();
+            RW_FULL_COF_FLUID rwfcf = new RW_FULL_COF_FLUID();
             /*-----------------Tìm đuôi Proposal có giá trị lớn nhất-------------------*/
             List<string> lstProposalName = busAssessment.AllName();
             List<int> number = new List<int>();
@@ -663,6 +664,8 @@ namespace RBI
             rwExtTemp.ID = ID;
             rwfchs.ID = ID;
             rwFcinput.ID = ID;
+            rwffinal.ID = ID;
+            rwfcf.ID = ID;
             rwCoat.ExternalCoatingDate = DateTime.Now;
             busEquipment.add(rwEq);
             busComponent.add(rwCom);
@@ -673,6 +676,8 @@ namespace RBI
             hsbus.add(rwfchs);
             busFcinput.add(rwFcinput);
             busfinal.add(rwffinal);
+            busrwfcf.add(rwfcf);
+            busFullPoF.add(rwFullPoF);
             int[] eq_comID = busAssessment.getEquipmentID_ComponentID(ID);
             COMPONENT_MASTER componentMaster = busComponentMaster.getData(eq_comID[1]);
 
@@ -2218,6 +2223,7 @@ namespace RBI
             fullPOF.PoFAP1 = fullPOF.PoFAP1 > 1 ? 1 : fullPOF.PoFAP1;
             fullPOF.PoFAP2 = fullPOF.PoFAP2 > 1 ? 1 : fullPOF.PoFAP2;
             fullPOF.PoFAP3 = fullPOF.PoFAP3 > 1 ? 1 : fullPOF.PoFAP3;
+            //sfullPOF.CoFValue=
             full_pof = fullPOF;
             inspl.ComponentID = componentID;
             inspl.ApiComponentType = API_ComponentType_Name;
@@ -3936,6 +3942,7 @@ namespace RBI
         RW_FULL_COF_TANK_BUS busFullCofTank = new RW_FULL_COF_TANK_BUS();
         RW_FULL_COF_INPUT_BUS busFcinput = new RW_FULL_COF_INPUT_BUS();
         RW_FULL_FINALCOF_BUS busfinal = new RW_FULL_FINALCOF_BUS();
+        RW_FULL_COF_FLUID_BUS busrwfcf = new RW_FULL_COF_FLUID_BUS();
         //</BUS>
         #endregion
         #region Unit String

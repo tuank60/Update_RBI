@@ -38,7 +38,7 @@ namespace RBI.DAL.MSSQL
                         ",[fact_mit]" +
                         ",[fact_AIT]" +
                         ",[g]" +
-                        ",[h])" +
+                        ",[h]" +
                         ",[ambient])" +
                         "VALUES" +
                         "('" + ID + "'" +
@@ -61,7 +61,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + fact_mit + "'" +
                         ",'" + fact_AIT + "'" +
                         ",'" + g + "'" +
-                        ",'" + h + "')" +
+                        ",'" + h + "'" +
                         ",'" + ambient + "')";
             try
             {

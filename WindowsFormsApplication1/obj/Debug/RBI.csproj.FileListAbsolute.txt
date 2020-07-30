@@ -2981,3 +2981,5 @@ C:\Users\khact\Desktop\2272020\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI
 C:\Users\khact\Desktop\2272020\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.csproj.CopyComplete
 C:\Users\khact\Desktop\2272020\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.exe
 C:\Users\khact\Desktop\2272020\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.pdb
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\rbi.mdf
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\bin\Debug\rbi_log.ldf

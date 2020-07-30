@@ -24,7 +24,7 @@ namespace RBI.DAL.MSSQL
                         ",[EquipmentOutageMultiplier]" +
                         ",[LossProductCost]" +
                         ",[PopDen]" +
-                        ",[InjCost])" +
+                        ",[InjCost]" +
                         ",[EnviCost])" +
                         "VALUES" +
                         "('" + ID + "'" +
@@ -32,7 +32,7 @@ namespace RBI.DAL.MSSQL
                         ",'" + EquipmentOutageMultiplier + "'" +
                         ",'" + LossProductCost + "'" +
                         ",'" + PopDen + "'" +
-                        ",'" + InjCost + "')" +
+                        ",'" + InjCost + "'" +
                         ",'" + EnviCost + "')" +
                         " ";
             try
@@ -40,7 +40,7 @@ namespace RBI.DAL.MSSQL
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = sql;
-                Console.WriteLine("sql= " + sql);
+                //Console.WriteLine("sql= " + sql);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception e)
@@ -173,7 +173,7 @@ namespace RBI.DAL.MSSQL
                         ",[EquipmentOutageMultiplier]" +
                         ",[LossProductCost]" +
                         ",[PopDen]" +
-                        ",[InjCost])" +
+                        ",[InjCost]" +
                         ",[EnviCost])" +
                           "From [dbo].[RW_FULL_FINALCOF]  ";
             try
