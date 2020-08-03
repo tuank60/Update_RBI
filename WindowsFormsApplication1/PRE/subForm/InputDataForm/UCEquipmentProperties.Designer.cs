@@ -80,6 +80,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.lblVolume = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.btnSMF = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.pnlBrittleFactureDF.SuspendLayout();
             this.pnlStressCorrosionCracking.SuspendLayout();
@@ -504,6 +505,7 @@
             // pnlGenericProperties
             // 
             this.pnlGenericProperties.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlGenericProperties.Controls.Add(this.btnSMF);
             this.pnlGenericProperties.Controls.Add(this.lblGenericProperties);
             this.pnlGenericProperties.Controls.Add(this.cbOnlineMonitoring);
             this.pnlGenericProperties.Controls.Add(this.label13);
@@ -705,6 +707,17 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "System Management Factor";
             // 
+            // btnSMF
+            // 
+            this.btnSMF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSMF.Location = new System.Drawing.Point(504, 102);
+            this.btnSMF.Name = "btnSMF";
+            this.btnSMF.Size = new System.Drawing.Size(75, 22);
+            this.btnSMF.TabIndex = 23;
+            this.btnSMF.Text = "Help";
+            this.btnSMF.UseVisualStyleBackColor = true;
+            this.btnSMF.Click += new System.EventHandler(this.btnSMF_Click);
+            // 
             // UCEquipmentProperties
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -787,5 +800,6 @@
         private System.Windows.Forms.Label lblExternalDF;
         private System.Windows.Forms.Label lblBrittleFractureDF;
         private System.Windows.Forms.Label lblStressCorrosionCrackingDF;
+        private System.Windows.Forms.Button btnSMF;
     }
 }

@@ -457,5 +457,13 @@ namespace RBI.PRE.subForm.InputDataForm
             pnlBrittleFactureDF.Height = 21;
         }
         #endregion
+        #region He so con nguoi
+        private void btnSMF_Click(object sender, EventArgs e)
+        {
+            frmManageFactor mf = new frmManageFactor();
+            mf.ShowDialog();
+            //this.Show();
+        }
+        #endregion
     }
 }

@@ -26,7 +26,7 @@
     <PublisherName>cortek</PublisherName>
     <SuiteName>cortek</SuiteName>
     <ApplicationRevision>6</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -475,6 +475,12 @@
     <Compile Include="PRE\subForm\frmModelFluid.Designer.cs">
       <DependentUpon>frmModelFluid.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmCreateInspectionPlan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -498,6 +504,12 @@
     </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmInspectionSummary.Designer.cs">
       <DependentUpon>frmInspectionSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmManageFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\InputDataForm\frmManageFactor.Designer.cs">
+      <DependentUpon>frmManageFactor.cs</DependentUpon>
     </Compile>
     <Compile Include="PRE\subForm\InputDataForm\frmReport.cs">
       <SubType>Form</SubType>
@@ -791,6 +803,9 @@
     <EmbeddedResource Include="PRE\subForm\frmModelFluid.resx">
       <DependentUpon>frmModelFluid.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\InputDataForm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmCreateInspectionPlan.resx">
       <DependentUpon>frmCreateInspectionPlan.cs</DependentUpon>
     </EmbeddedResource>
@@ -802,6 +817,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmInspectionSummary.resx">
       <DependentUpon>frmInspectionSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\InputDataForm\frmManageFactor.resx">
+      <DependentUpon>frmManageFactor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
@@ -1077,13 +1095,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icons-Land-Points-Of-Interest-Factory-Yellow.ico" />
-    <Content Include="rbi.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="rbi_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>rbi.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="rbi.mdf">

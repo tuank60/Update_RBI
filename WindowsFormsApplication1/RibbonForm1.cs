@@ -2236,7 +2236,7 @@ namespace RBI
             inspl.DFTotal = dftotal;
             calDM = cal;
             //lưu kết quả vào bảng RW_DAMAGE_MECHANISM
-
+ 
             //lưu kết quả vào bảng RW_FULL_POF
             if (busFullPoF.checkExistPoF(fullPOF.ID))
                 busFullPoF.edit(fullPOF);
