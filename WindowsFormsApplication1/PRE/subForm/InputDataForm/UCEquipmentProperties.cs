@@ -462,7 +462,7 @@ namespace RBI.PRE.subForm.InputDataForm
         {
             frmManageFactor mf = new frmManageFactor();
             mf.ShowDialog();
-            //this.Show();
+            numSystemManagementFactor.Value = (int)mf.Fms;
         }
         #endregion
     }

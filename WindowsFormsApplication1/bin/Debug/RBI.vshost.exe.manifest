@@ -2047,14 +2047,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RBI.exe" size="3490776">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RBI.exe" size="3617752">
       <assemblyIdentity name="RBI" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>b0CDXSYEtm8ScR51H+j/HW9Xp1qJhr5hq4vBqpDrh6c=</dsig:DigestValue>
+        <dsig:DigestValue>S/Uxoe3GzhLtaK+v3HguyZ8HC2CkISUcMHAlHtdQWoQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
