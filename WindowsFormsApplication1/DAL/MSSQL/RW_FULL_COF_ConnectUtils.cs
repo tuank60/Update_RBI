@@ -103,6 +103,76 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
+        public Boolean checkExistCoF(int ID)
+        {
+            Boolean IsExist = false;
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "select * from rbi.dbo.RW_FULL_COF where ID = '"+ID+"'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows) IsExist = true;
+                        
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return IsExist;
+         }
+        public float getCoFValue(int ID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            float CoFValue = 0;
+            String sql = "Select [CoFValue] from rbi.dbo.RW_FULL_COF where ID = '" + ID + "'";
+            //Console.WriteLine(sql);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+               
+                            if (!reader.IsDBNull(0))
+                            {
+                                CoFValue = (float)reader.GetDouble(0);
+                            }
+                        }
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return CoFValue;
+        }
         // get datasource
         public List<RW_FULL_COF> getDataSource()
         {

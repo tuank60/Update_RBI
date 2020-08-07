@@ -12,7 +12,7 @@ using RBI.BUS.BUSMSSQL;
 using RBI.Object;
 using RBI.BUS.BUSMSSQL_CAL;
 using RBI.DAL.MSSQL_CAL;
-
+using DevExpress.XtraSplashScreen;
 
 namespace RBI.PRE.subForm.OutputDataForm
 {
@@ -32,6 +32,8 @@ namespace RBI.PRE.subForm.OutputDataForm
                                         "Foam spray system",
                                         "Fire water monitor only",
                                         "None"};
+        private RW_FULL_COF_BUS rw_full_COF_bus = null;
+        private RW_FULL_COF rw_full_COF = null;
         private int IDProposal;
         public UCRiskFactor()
         {
@@ -1013,7 +1015,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtTCAWSIOFOP.Text = ffcof.InjCost.ToString();
             txtECUP.Text = ffcof.EnviCost.ToString();
         }
-        private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        private void LoadDataForControlInTabCANomal()
         {
             MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
             MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
@@ -1046,9 +1048,9 @@ namespace RBI.PRE.subForm.OutputDataForm
             CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
             CA_CAL_TOX.FLUID_PHASE = st.StoragePhase;
             CA_CAL_FIN.FLUID_PHASE = st.StoragePhase;
-            CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic)/100;
+            CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
             CA_CAL_TOX.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
-            CA_CAL_FIN.TOXIC_PERCENT= (st.ReleaseFluidPercentToxic) / 100;
+            CA_CAL_FIN.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
             CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
             CA_CAL_TOX.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
             CA_CAL_FIN.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
@@ -1066,457 +1068,531 @@ namespace RBI.PRE.subForm.OutputDataForm
             CA_CAL_FIN.EQUIPMENT_COST = fin.ComponentDamageCosts;
             CA_CAL_FIN.ENVIRON_COST = fin.EnviCost;
             String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
-            //CA_CAL_FLA.fact_mit=
+            txtMaterialcostfactor.Text = mater.CostFactor.ToString();
+            switch (CA_CAL_FIN.FLUID)
+            {
+                case "C6-C8":
+                    txtFoFE.Text = "0.9";
+                    break;
+                case "Acid":
+                    txtFoFE.Text = "0.9";
+                    break;
+                case "C9-C12":
+                    txtFoFE.Text = "0.5";
+                    break;
+                case "C13-C16":
+                    txtFoFE.Text = "0.1";
+                    break;
+                case "C17-C25":
+                    txtFoFE.Text = "0.05";
+                    break;
+                case "C25+":
+                    txtFoFE.Text = "0.02";
+                    break;
+                case "Nitric Acid":
+                    txtFoFE.Text = "0.8";
+                    break;
+                case "NO2":
+                case "EE":
+                    txtFoFE.Text = "0.75";
+                    break;
+                case "TDI":
+                    txtFoFE.Text = "0.15";
+                    break;
+                case "Styrene":
+                    txtFoFE.Text = "0.6";
+                    break;
+                case "EEA":
+                    txtFoFE.Text = "0.65";
+                    break;
+                case "EG":
+                    txtFoFE.Text = "0.45";
+                    break;
+                default:
+                    txtFoFE.Text = "0";
+                    break;
+            }
+            txtGFF_small.Text = api.GFFSmall.ToString();
+            txtGFF_medium.Text = api.GFFMedium.ToString();
+            txtGFF_large.Text = api.GFFLarge.ToString();
+            txtGFF_rupture.Text = api.GFFRupture.ToString();
+            txtCost_small.Text = api.HoleCostSmall.ToString();
+            txtCost_medium.Text = api.HoleCostMedium.ToString();
+            txtCost_large.Text = api.HoleCostLarge.ToString();
+            txtCost_rupture.Text = api.HoleCostRupture.ToString();
+            txtOutage_small.Text = api.OutageSmall.ToString();
+            txtOutage_medium.Text = api.OutageMedium.ToString();
+            txtOutage_large.Text = api.OutageLarge.ToString();
+            txtOutage_rupture.Text = api.OutageRupture.ToString();
+            txtFinancialcomdamage.Text = CA_CAL_FIN.fc_cmd().ToString();
+            txtFinancialdamageSurround.Text = CA_CAL_FIN.fc_affa().ToString();
+            txtNoofSurroundingEquip.Text = CA_CAL_FIN.outage_affa().ToString();
+            txtFinancialConsequenceLostProduct.Text = CA_CAL_FIN.fc_prod().ToString();
+            txtFinancialConsequenceSerious.Text = CA_CAL_FIN.fc_inj(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FIN.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+            txtEnvironmentalCost.Text = CA_CAL_FIN.fc_environ().ToString();
+            txtNoofDowntimeRepairSpecific.Text = CA_CAL_FIN.outage_cmd().ToString();
+            float a = CA_CAL_FIN.fc(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FIN.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE());
+            txtFCoF.Text = a.ToString();
+            if (a <= 10000)
+            {
+                txtCoFC.Text = "A";
+            }
+            if (a > 10000 && a <= 100000)
+            {
+                txtCoFC.Text = "B";
+            }
+            if (a > 100000 && a <= 1000000)
+            {
+                txtCoFC.Text = "C";
+            }
+            if (a > 1000000 && a <= 10000000)
+            {
+                txtCoFC.Text = "D";
+            }
+            if (a > 10000000)
+            {
+                txtCoFC.Text = "E";
+            }
+            //luu vao bang RW_FULL_COF
 
+
+            rw_full_COF_bus = new RW_FULL_COF_BUS();
+            rw_full_COF = new RW_FULL_COF();
+            rw_full_COF.ID = id;
+            rw_full_COF.CoFValue = float.Parse(txtFCoF.Text);
+            rw_full_COF.CoFCategory = txtCoFC.Text;
+            rw_full_COF.CoFMatrixValue = 0;
+            if (rw_full_COF_bus.checkExistCoF(id))
+            {
+                rw_full_COF_bus.edit(rw_full_COF);
+            }
+            else rw_full_COF_bus.add(rw_full_COF);
+        }
+        private void LoadDataForControlInTabArea()
+        {
+            MSSQL_CA_CAL CA_CAL = new MSSQL_CA_CAL();
+            MSSQL_CA_CAL_FLAMMABLE CA_CAL_FLA = new MSSQL_CA_CAL_FLAMMABLE();
+            MSSQL_CA_CAL_TOXIC CA_CAL_TOX = new MSSQL_CA_CAL_TOXIC();
+            MSSQL_CA_CAL_FINAL CA_CAL_FIN = new MSSQL_CA_CAL_FINAL();
+            RW_STREAM_BUS busst = new RW_STREAM_BUS();
+            RW_STREAM st = busst.getData(IDProposal);
+            RW_ASSESSMENT_BUS busass = new RW_ASSESSMENT_BUS();
+            //int componentID = ass.ComponentID;
+            //Console.WriteLine("id com= " + componentID);
+            COMPONENT_MASTER_BUS buscom = new COMPONENT_MASTER_BUS();
+            COMPONENT_MASTER com = buscom.getData(busass.getComponentID(IDProposal));
+            //Console.WriteLine("id pro= " + IDProposal);
+            int apicomponentID = com.APIComponentTypeID;
+            //Console.WriteLine("apicom id= " + apicomponentID);
+            API_COMPONENT_TYPE_BUS busapi = new API_COMPONENT_TYPE_BUS();
+            API_COMPONENT_TYPE api = busapi.getDatabyID(apicomponentID);
+            RW_FULL_COF_HOLE_SIZE_BUS bushole = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE hole = bushole.getData(IDProposal);
+            RW_MATERIAL_BUS busmater = new RW_MATERIAL_BUS();
+            RW_MATERIAL mater = busmater.getData(IDProposal);
+            RW_FULL_FINALCOF_BUS busfin = new RW_FULL_FINALCOF_BUS();
+            RW_FULL_FINALCOF fin = busfin.getData(IDProposal);
+            CA_CAL_FLA.FLUID = st.TankFluidName;
+            CA_CAL_TOX.FLUID = st.TankFluidName;
+            CA_CAL_FIN.FLUID = st.TankFluidName;
+            CA_CAL_FLA.FLUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_TOX.FLUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_FIN.FLUID_TOXIC = st.ToxicFluidName;
+            CA_CAL_FLA.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_TOX.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_FIN.FLUID_PHASE = st.StoragePhase;
+            CA_CAL_FLA.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+            CA_CAL_TOX.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+            CA_CAL_FIN.TOXIC_PERCENT = (st.ReleaseFluidPercentToxic) / 100;
+            CA_CAL_FLA.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+            CA_CAL_TOX.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+            CA_CAL_FIN.API_COMPONENT_TYPE_NAME = api.APIComponentTypeName;
+            CA_CAL_FLA.IDProposal = IDProposal;
+            CA_CAL_TOX.IDProposal = IDProposal;
+            CA_CAL_FIN.IDProposal = IDProposal;
+            CA_CAL_FLA.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
+            CA_CAL_FLA.STORE_TEMP = st.MaxOperatingTemperature;
+            CA_CAL_FIN.STORE_TEMP = st.MaxOperatingTemperature;
+            CA_CAL_FIN.MATERIAL_COST = mater.CostFactor;
+            CA_CAL_FIN.INJURE_COST = fin.InjCost;
+            CA_CAL_FIN.PERSON_DENSITY = fin.PopDen;
+            CA_CAL_FIN.PRODUCTION_COST = fin.LossProductCost;
+            CA_CAL_FIN.Outage_mul = fin.EquipmentOutageMultiplier;
+            CA_CAL_FIN.EQUIPMENT_COST = fin.ComponentDamageCosts;
+            CA_CAL_FIN.ENVIRON_COST = fin.EnviCost;
+            String ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
+            if (CA_CAL_FLA.FLUID == "C1-C2" || CA_CAL_FLA.FLUID == "C3-C4" || CA_CAL_FLA.FLUID == "C5" || CA_CAL_FLA.FLUID == "C6-C8" || CA_CAL_FLA.FLUID == "C9-C12" || CA_CAL_FLA.FLUID == "C13-C-16" ||
+                    CA_CAL_FLA.FLUID == "C17-C25" || CA_CAL_FLA.FLUID == "C25+" || CA_CAL_FLA.FLUID == "H2" || CA_CAL_FLA.FLUID == "H2S" || CA_CAL_FLA.FLUID == "CO" || CA_CAL_FLA.FLUID == "DEE" ||
+                    CA_CAL_FLA.FLUID == "Methanol" || CA_CAL_FLA.FLUID == "PO" || CA_CAL_FLA.FLUID == "Aromatics" || CA_CAL_FLA.FLUID == "Styrene" || CA_CAL_FLA.FLUID == "EEA" || CA_CAL_FLA.FLUID == "EE" ||
+                    CA_CAL_FLA.FLUID == "EG" || CA_CAL_FLA.FLUID == "EO" || CA_CAL_FLA.FLUID == "Pyrophoric" || CA_CAL_FLA.FLUID == "Ammonia" || CA_CAL_FLA.FLUID == "Chlorine")
+            {
+                tabControlFlammable.Name = CA_CAL_FLA.FLUID;
+                txtAContAINLCMD_model.Text = CA_CAL_FLA.a_cmd(1).ToString();
+                txtAContAILCMD_model.Text = CA_CAL_FLA.a_cmd(2).ToString();
+                txtAInstAINLCMD_model.Text = CA_CAL_FLA.a_cmd(3).ToString();
+                txtAInstAILCMD_model.Text = CA_CAL_FLA.a_cmd(4).ToString();
+                txtBContAINLCMD_model.Text = CA_CAL_FLA.b_cmd(1).ToString();
+                txtBContAILCMD_model.Text = CA_CAL_FLA.b_cmd(2).ToString();
+                txtBInstAINLCMD_model.Text = CA_CAL_FLA.b_cmd(3).ToString();
+                txtBInstAILCMD_model.Text = CA_CAL_FLA.b_cmd(4).ToString();
+                txtAContAINLINJ_model.Text = CA_CAL_FLA.a_inj(1).ToString();
+                txtAContAILINJ_model.Text = CA_CAL_FLA.a_inj(2).ToString();
+                txtAInstAINLINJ_model.Text = CA_CAL_FLA.a_inj(3).ToString();
+                txtAInstAILINJ_model.Text = CA_CAL_FLA.a_inj(4).ToString();
+                txtBContAINLINJ_model.Text = CA_CAL_FLA.b_inj(1).ToString();
+                txtBContAILINJ_model.Text = CA_CAL_FLA.b_inj(2).ToString();
+                txtBInstAINLINJ_model.Text = CA_CAL_FLA.b_inj(3).ToString();
+                txtBInstAILINJ_model.Text = CA_CAL_FLA.b_inj(4).ToString();
+
+                txtEneffSmall_model.Text = CA_CAL_FLA.eneff_n(1).ToString();
+                txtEneffMedium_model.Text = CA_CAL_FLA.eneff_n(2).ToString();
+                txtEneffLarge_model.Text = CA_CAL_FLA.eneff_n(3).ToString();
+                txtEneffRupture_model.Text = CA_CAL_FLA.eneff_n(4).ToString();
+
+                txtContCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 1).ToString();
+                txtContCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 2).ToString();
+                txtContCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 3).ToString();
+                txtContCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 4).ToString();
+                txtContCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 1).ToString();
+                txtContCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 2).ToString();
+                txtContCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 3).ToString();
+                txtContCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 4).ToString();
+                txtInstCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 1).ToString();
+                txtInstCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 2).ToString();
+                txtInstCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 3).ToString();
+                txtInstCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 4).ToString();
+                txtInstCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 1).ToString();
+                txtInstCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 2).ToString();
+                txtInstCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 3).ToString();
+                txtInstCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 4).ToString();
+                txtContINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_cont(1, 1).ToString();
+                txtContINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_cont(1, 2).ToString();
+                txtContINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_cont(1, 3).ToString();
+                txtContINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_cont(1, 4).ToString();
+                txtContINJAILSmall_model.Text = CA_CAL_FLA.ca_injn_cont(2, 1).ToString();
+                txtContINJAILMedium_model.Text = CA_CAL_FLA.ca_injn_cont(2, 2).ToString();
+                txtContINJAILLarge_model.Text = CA_CAL_FLA.ca_injn_cont(2, 3).ToString();
+                txtContINJAILRupture_model.Text = CA_CAL_FLA.ca_injn_cont(2, 4).ToString();
+                txtInstINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_inst(3, 1).ToString();
+                txtInstINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_inst(3, 2).ToString();
+                txtInstINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_inst(3, 3).ToString();
+                txtInstINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_inst(3, 4).ToString();
+                txtInstINJAILSmall_model.Text = CA_CAL_FLA.ca_injn_inst(4, 1).ToString();
+                txtInstINJAILMedium_model.Text = CA_CAL_FLA.ca_injn_inst(4, 2).ToString();
+                txtInstINJAILLarge_model.Text = CA_CAL_FLA.ca_injn_inst(4, 3).ToString();
+                txtInstINJAILRupture_model.Text = CA_CAL_FLA.ca_injn_inst(4, 4).ToString();
+
+                txtBlendFactorSmall_model.Text = CA_CAL_FLA.fact_n_ic(1).ToString();
+                txtBlendFactorMedium_model.Text = CA_CAL_FLA.fact_n_ic(2).ToString();
+                txtBlendFactorLarge_model.Text = CA_CAL_FLA.fact_n_ic(3).ToString();
+                txtBlendFactorRupture_model.Text = CA_CAL_FLA.fact_n_ic(4).ToString();
+                txtBlendCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_ainl(1).ToString();
+                txtBlendCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_ainl(2).ToString();
+                txtBlendCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_ainl(3).ToString();
+                txtBlendCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_ainl(4).ToString();
+                txtBlendCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_ail(1).ToString();
+                txtBlendCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_ail(2).ToString();
+                txtBlendCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_ail(3).ToString();
+                txtBlendCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_ail(4).ToString();
+                txtBlendINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_ainl(1).ToString();
+                txtBlendINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_ainl(2).ToString();
+                txtBlendINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_ainl(3).ToString();
+                txtBlendINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_ainl(4).ToString();
+                txtBlendINJAILSmall_model.Text = CA_CAL_FLA.ca_inji_ail(1).ToString();
+                txtBlendINJAILMedium_model.Text = CA_CAL_FLA.ca_inji_ail(2).ToString();
+                txtBlendINJAILLarge_model.Text = CA_CAL_FLA.ca_inji_ail(3).ToString();
+                txtBlendINJAILRupture_model.Text = CA_CAL_FLA.ca_inji_ail(4).ToString();
+                txtAITBlendCMDSmall_model.Text = CA_CAL_FLA.ca_cmdn_ait(1).ToString();
+                txtAITBlendCMDMedium_model.Text = CA_CAL_FLA.ca_cmdn_ait(2).ToString();
+                txtAITBlendCMDLarge_model.Text = CA_CAL_FLA.ca_cmdn_ait(3).ToString();
+                txtAITBlendCMDRupture_model.Text = CA_CAL_FLA.ca_cmdn_ait(4).ToString();
+                txtAITBlendINJSmall_model.Text = CA_CAL_FLA.ca_injn_ait(1).ToString();
+                txtAITBlendINJMedium_model.Text = CA_CAL_FLA.ca_injn_ait(2).ToString();
+                txtAITBlendINJLarge_model.Text = CA_CAL_FLA.ca_injn_ait(3).ToString();
+                txtAITBlendINJRupture_model.Text = CA_CAL_FLA.ca_injn_ait(4).ToString();
+                txtFlammableCDCA_model.Text = CA_CAL_FLA.ca_cmd_flame().ToString();
+                txtFlammablePICA_model.Text = CA_CAL_FLA.ca_inj_flame().ToString();
+
+            }
+
+            else
+            {
+                panelFCA.Visible = false;
+            }
+
+
+            // Toxic             
+
+            if (CA_CAL_FLA.FLUID_TOXIC == "H2S" || CA_CAL_FLA.FLUID_TOXIC == "CO" || CA_CAL_FLA.FLUID_TOXIC == "PO" || CA_CAL_FLA.FLUID_TOXIC == "EE" || CA_CAL_FLA.FLUID_TOXIC == "EO" || CA_CAL_FLA.FLUID_TOXIC == "Pyrophoric")
+            {
+                tabtoxic.Name = CA_CAL_FLA.FLUID_TOXIC;
+                txtAContAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(1).ToString();
+                txtAContAILCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(2).ToString();
+                txtAInstAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(3).ToString();
+                txtAInstAILCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(4).ToString();
+                txtBContAINLCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(1).ToString();
+                txtBContAILCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(2).ToString();
+                txtBInstAINLCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(3).ToString();
+                txtBInstAILCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(4).ToString();
+                txtAContAINLINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(1).ToString();
+                txtAContAILINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(2).ToString();
+                txtAInstAINLINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(3).ToString();
+                txtAInstAILINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(4).ToString();
+                txtBContAINLINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(1).ToString();
+                txtBContAILINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(2).ToString();
+                txtBInstAINLINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(3).ToString();
+                txtBInstAILINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(4).ToString();
+
+                txtEneffSmall_toxic.Text = CA_CAL_FLA.eneff_n(1).ToString();
+                txtEneffMedium_toxic.Text = CA_CAL_FLA.eneff_n(2).ToString();
+                txtEneffLarge_toxic.Text = CA_CAL_FLA.eneff_n(3).ToString();
+                txtEneffRupture_toxic.Text = CA_CAL_FLA.eneff_n(4).ToString();
+
+                txtContCMDAINLSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 1).ToString();
+                txtContCMDAINLMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 2).ToString();
+                txtContCMDAINLLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 3).ToString();
+                txtContCMDAINLRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 4).ToString();
+                txtContCMDAILSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 1).ToString();
+                txtContCMDAILMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 2).ToString();
+                txtContCMDAILLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 3).ToString();
+                txtContCMDAILRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 4).ToString();
+                txtInstCMDAINLSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 1).ToString();
+                txtInstCMDAINLMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 2).ToString();
+                txtInstCMDAINLLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 3).ToString();
+                txtInstCMDAINLRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 4).ToString();
+                txtInstCMDAILSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 1).ToString();
+                txtInstCMDAILMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 2).ToString();
+                txtInstCMDAILLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 3).ToString();
+                txtInstCMDAILRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 4).ToString();
+                txtContINJAINLSmall_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 1).ToString();
+                txtContINJAINLMedium_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 2).ToString();
+                txtContINJAINLLarge_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 3).ToString();
+                txtContINJAINLRupture_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 4).ToString();
+                txtContINJAILSmall_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 1).ToString();
+                txtContINJAILMedium_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 2).ToString();
+                txtContINJAILLarge_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 3).ToString();
+                txtContINJAILRupture_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 4).ToString();
+                txtInstINJAINLSmall_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 1).ToString();
+                txtInstINJAINLMedium_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 2).ToString();
+                txtInstINJAINLLarge_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 3).ToString();
+                txtInstINJAINLRupture_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 4).ToString();
+                txtInstINJAILSmall_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 1).ToString();
+                txtInstINJAILMedium_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 2).ToString();
+                txtInstINJAILLarge_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 3).ToString();
+                txtInstINJAILRupture_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 4).ToString();
+
+                txtBlendFactorSmall_toxic.Text = CA_CAL_FLA.fact_n_ic(1).ToString();
+                txtBlendFactorMedium_toxic.Text = CA_CAL_FLA.fact_n_ic(2).ToString();
+                txtBlendFactorLarge_toxic.Text = CA_CAL_FLA.fact_n_ic(3).ToString();
+                txtBlendFactorRupture_toxic.Text = CA_CAL_FLA.fact_n_ic(4).ToString();
+                txtBlendCMDAINLSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(1).ToString();
+                txtBlendCMDAINLMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(2).ToString();
+                txtBlendCMDAINLLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(3).ToString();
+                txtBlendCMDAINLRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(4).ToString();
+                txtBlendCMDAILSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(1).ToString();
+                txtBlendCMDAILMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(2).ToString();
+                txtBlendCMDAILLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(3).ToString();
+                txtBlendCMDAILRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(4).ToString();
+                txtBlendINJAINLSmall_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(1).ToString();
+                txtBlendINJAINLMedium_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(2).ToString();
+                txtBlendINJAINLLarge_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(3).ToString();
+                txtBlendINJAINLRupture_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(4).ToString();
+                txtBlendINJAILSmall_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(1).ToString();
+                txtBlendINJAILMedium_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(2).ToString();
+                txtBlendINJAILLarge_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(3).ToString();
+                txtBlendINJAILRupture_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(4).ToString();
+                txtAITBlendCMDSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(1).ToString();
+                txtAITBlendCMDMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(2).ToString();
+                txtAITBlendCMDLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(3).ToString();
+                txtAITBlendCMDRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(4).ToString();
+                txtAITBlendINJSmall_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(1).ToString();
+                txtAITBlendINJMedium_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(2).ToString();
+                txtAITBlendINJLarge_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(3).ToString();
+                txtAITBlendINJRupture_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(4).ToString();
+                txtFlammableCDCA_toxic.Text = CA_CAL_FLA.ca_cmd_flame_toxic().ToString();
+                txtFlammablePICA_toxic.Text = CA_CAL_FLA.ca_inj_flame_toxic().ToString();
+            }
+            else
+            {
+                tabtoxic.PageVisible = false;
+            }
+
+            //Toxic Consequence
+            txtLDToxicSmall_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(1).ToString();
+            txtLDToxicMedium_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(2).ToString();
+            txtLDToxicLarge_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(3).ToString();
+            txtLDToxicRupture_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(4).ToString();
+            txtLDToxicSmall_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(1).ToString();
+            txtLDToxicMedium_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(2).ToString();
+            txtLDToxicLarge_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(3).ToString();
+            txtLDToxicRupture_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(4).ToString();
+            txtMassRateSmall_toxic1.Text = CA_CAL_TOX.rate_tox_n(1).ToString();
+            txtMassRateMedium_toxic1.Text = CA_CAL_TOX.rate_tox_n(2).ToString();
+            txtMassRateLarge_toxic1.Text = CA_CAL_TOX.rate_tox_n(3).ToString();
+            txtMassRateRupture_toxic1.Text = CA_CAL_TOX.rate_tox_n(4).ToString();
+            txtMassSmall_toxic1.Text = CA_CAL_TOX.mass_tox_n(1).ToString();
+            txtMassMedium_toxic1.Text = CA_CAL_TOX.mass_tox_n(2).ToString();
+            txtMassLarge_toxic1.Text = CA_CAL_TOX.mass_tox_n(3).ToString();
+            txtMassRupture_toxic1.Text = CA_CAL_TOX.mass_tox_n(4).ToString();
+            txtMassRateSmall_toxic2.Text = CA_CAL_TOX.rate_tox_n(1).ToString();
+            txtMassRateMedium_toxic2.Text = CA_CAL_TOX.rate_tox_n(2).ToString();
+            txtMassRateLarge_toxic2.Text = CA_CAL_TOX.rate_tox_n(3).ToString();
+            txtMassRateRupture_toxic2.Text = CA_CAL_TOX.rate_tox_n(4).ToString();
+            txtMassSmall_toxic2.Text = CA_CAL_TOX.mass_tox_n(1).ToString();
+            txtMassMedium_toxic2.Text = CA_CAL_TOX.mass_tox_n(2).ToString();
+            txtMassLarge_toxic2.Text = CA_CAL_TOX.mass_tox_n(3).ToString();
+            txtMassRupture_toxic2.Text = CA_CAL_TOX.mass_tox_n(4).ToString();
+
+
+            if (CA_CAL_TOX.FLUID == "HFAcid" || CA_CAL_TOX.FLUID == "H2S" || CA_CAL_TOX.FLUID == "Ammonia" || CA_CAL_TOX.FLUID == "Chlorine")
+            {
+                txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).c.ToString();
+                txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).c.ToString();
+                txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).c.ToString();
+                txtContCRupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).c.ToString();
+                txtContDSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).d.ToString();
+                txtContDMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).d.ToString();
+                txtContDLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).d.ToString();
+                txtContDRupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).d.ToString();
+                txtContESmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).e.ToString();
+                txtContEMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).e.ToString();
+                txtContELarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).e.ToString();
+                txtContERupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).e.ToString();
+                txtContFSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).f.ToString();
+                txtContFMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).f.ToString();
+                txtContFLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).f.ToString();
+                txtContFRupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).f.ToString();
+                txtToxicCASmall_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 1).ToString();
+                txtToxicCAMedium_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 2).ToString();
+                txtToxicCALarge_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 3).ToString();
+                txtToxicCARupture_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 4).ToString();
+                txtFlammalbePICA_toxic1.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
+            }
+            else if (CA_CAL_TOX.FLUID == "AlCl3" || CA_CAL_TOX.FLUID == "CO" || CA_CAL_TOX.FLUID == "HCl" || CA_CAL_TOX.FLUID == "Nitric Acid" ||
+                    CA_CAL_TOX.FLUID == "NO2" || CA_CAL_TOX.FLUID == "Phosgene" || CA_CAL_TOX.FLUID == "TDI" || CA_CAL_TOX.FLUID == "EE" || CA_CAL_TOX.FLUID == "EO" || CA_CAL_TOX.FLUID == "PO")
+            {
+                txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).c.ToString();
+                txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).c.ToString();
+                txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 3).c.ToString();
+                txtContCRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).c.ToString();
+                txtContDSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).d.ToString();
+                txtContDMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).d.ToString();
+                txtContDLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 3).d.ToString();
+                txtContDRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).d.ToString();
+                txtContESmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).e.ToString();
+                txtContEMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).e.ToString();
+                txtContELarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 3).e.ToString();
+                txtContERupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).e.ToString();
+                txtContFSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).f.ToString();
+                txtContFMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).f.ToString();
+                txtContFLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 3).f.ToString();
+                txtContFRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).f.ToString();
+                txtToxicCASmall_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 1).ToString();
+                txtToxicCAMedium_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
+                txtToxicCALarge_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
+                txtToxicCARupture_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
+                txtFlammalbePICA_toxic1.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
+            }
+            else
+            {
+                tabToxic1.PageVisible = false;
+            }
+            if (CA_CAL_TOX.FLUID_TOXIC == "HFAcid" || CA_CAL_TOX.FLUID_TOXIC == "H2S" || CA_CAL_TOX.FLUID_TOXIC == "Ammonia" || CA_CAL_TOX.FLUID_TOXIC == "Chlorine")
+            {
+                txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
+                txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
+                txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
+                txtContCRupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).c.ToString();
+                txtContDSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).d.ToString();
+                txtContDMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).d.ToString();
+                txtContDLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).d.ToString();
+                txtContDRupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).d.ToString();
+                txtContESmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).e.ToString();
+                txtContEMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).e.ToString();
+                txtContELarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).e.ToString();
+                txtContERupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).e.ToString();
+                txtContFSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).f.ToString();
+                txtContFMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).f.ToString();
+                txtContFLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).f.ToString();
+                txtContFRupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).f.ToString();
+                txtToxicCASmall_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 1).ToString();
+                txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 2).ToString();
+                txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 3).ToString();
+                txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 4).ToString();
+                txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+            }
+            else if (CA_CAL_TOX.FLUID_TOXIC == "AlCl3" || CA_CAL_TOX.FLUID_TOXIC == "CO" || CA_CAL_TOX.FLUID_TOXIC == "HCl" || CA_CAL_TOX.FLUID_TOXIC == "Nitric Acid" ||
+                    CA_CAL_TOX.FLUID_TOXIC == "NO2" || CA_CAL_TOX.FLUID_TOXIC == "Phosgene" || CA_CAL_TOX.FLUID_TOXIC == "TDI" || CA_CAL_TOX.FLUID_TOXIC == "EE" || CA_CAL_TOX.FLUID_TOXIC == "EO" || CA_CAL_TOX.FLUID_TOXIC == "PO")
+            {
+                txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
+                txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
+                txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
+                txtContCRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).c.ToString();
+                txtContDSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).d.ToString();
+                txtContDMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).d.ToString();
+                txtContDLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).d.ToString();
+                txtContDRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).d.ToString();
+                txtContESmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).e.ToString();
+                txtContEMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).e.ToString();
+                txtContELarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).e.ToString();
+                txtContERupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).e.ToString();
+                txtContFSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).f.ToString();
+                txtContFMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).f.ToString();
+                txtContFLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).f.ToString();
+                txtContFRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).f.ToString();
+                txtToxicCASmall_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 1).ToString();
+                txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
+                txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
+                txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
+                txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+            }
+            else
+            {
+                tabToxic2.PageVisible = false;
+            }
+
+
+            //Non F Non T
+            if (CA_CAL_FLA.FLUID == "Water" || CA_CAL_FLA.FLUID == "Steam" || CA_CAL_FLA.FLUID == "Water" || CA_CAL_FLA.FLUID == "Acid" || CA_CAL_FLA.FLUID == "Caustic")
+            {
+                txtCONT_CA1.Text = CA_CAL_FLA.ca_injn_contnfnt(1).ToString();
+                txtCONT_CA2.Text = CA_CAL_FLA.ca_injn_contnfnt(2).ToString();
+                txtCONT_CA3.Text = CA_CAL_FLA.ca_injn_contnfnt(3).ToString();
+                txtCONT_CA4.Text = CA_CAL_FLA.ca_injn_contnfnt(4).ToString();
+                txtINST_CA1.Text = CA_CAL_FLA.ca_injn_instnfnt(1).ToString();
+                txtINST_CA2.Text = CA_CAL_FLA.ca_injn_instnfnt(2).ToString();
+                txtINST_CA3.Text = CA_CAL_FLA.ca_injn_instnfnt(3).ToString();
+                txtINST_CA4.Text = CA_CAL_FLA.ca_injn_instnfnt(4).ToString();
+                txtBlend_CA1.Text = CA_CAL_FLA.fact_n_icnfnt(1).ToString();
+                txtBlend_CA2.Text = CA_CAL_FLA.fact_n_icnfnt(2).ToString();
+                txtBlend_CA3.Text = CA_CAL_FLA.fact_n_icnfnt(3).ToString();
+                txtBlend_CA4.Text = CA_CAL_FLA.fact_n_icnfnt(4).ToString();
+                txtNonFlammableNonToxicCon.Text = CA_CAL_FLA.ca_inj_nfnt().ToString();
+            }
+            else
+            {
+                panelNonTF.Visible = false;
+            }
+            txtCA1.Text = CA_CAL_TOX.ca_consequence(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+            txtCA2.Text = "E";
+        }
+        private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        {
             if (tabRisk.SelectedTabPage.Name == "TabArea")
             #region tabarea
             {
                 showDataTabArea(id);
+                LoadDataForControlInTabArea();
                 //Model
-                if (CA_CAL_FLA.FLUID == "C1-C2" || CA_CAL_FLA.FLUID == "C3-C4" || CA_CAL_FLA.FLUID == "C5" || CA_CAL_FLA.FLUID == "C6-C8" || CA_CAL_FLA.FLUID == "C9-C12" || CA_CAL_FLA.FLUID == "C13-C-16" ||
-                    CA_CAL_FLA.FLUID == "C17-C25" || CA_CAL_FLA.FLUID == "C25+" || CA_CAL_FLA.FLUID == "H2" || CA_CAL_FLA.FLUID == "H2S" || CA_CAL_FLA.FLUID == "CO" || CA_CAL_FLA.FLUID == "DEE" ||
-                    CA_CAL_FLA.FLUID == "Methanol" || CA_CAL_FLA.FLUID == "PO" || CA_CAL_FLA.FLUID == "Aromatics" || CA_CAL_FLA.FLUID == "Styrene" || CA_CAL_FLA.FLUID == "EEA" || CA_CAL_FLA.FLUID == "EE" ||
-                    CA_CAL_FLA.FLUID == "EG" || CA_CAL_FLA.FLUID == "EO" || CA_CAL_FLA.FLUID == "Pyrophoric" || CA_CAL_FLA.FLUID == "Ammonia" || CA_CAL_FLA.FLUID == "Chlorine")
-                {
-                    tabControlFlammable.Name = CA_CAL_FLA.FLUID;
-                    txtAContAINLCMD_model.Text = CA_CAL_FLA.a_cmd(1).ToString();
-                    txtAContAILCMD_model.Text = CA_CAL_FLA.a_cmd(2).ToString();
-                    txtAInstAINLCMD_model.Text = CA_CAL_FLA.a_cmd(3).ToString();
-                    txtAInstAILCMD_model.Text = CA_CAL_FLA.a_cmd(4).ToString();
-                    txtBContAINLCMD_model.Text = CA_CAL_FLA.b_cmd(1).ToString();
-                    txtBContAILCMD_model.Text = CA_CAL_FLA.b_cmd(2).ToString();
-                    txtBInstAINLCMD_model.Text = CA_CAL_FLA.b_cmd(3).ToString();
-                    txtBInstAILCMD_model.Text = CA_CAL_FLA.b_cmd(4).ToString();
-                    txtAContAINLINJ_model.Text = CA_CAL_FLA.a_inj(1).ToString();
-                    txtAContAILINJ_model.Text = CA_CAL_FLA.a_inj(2).ToString();
-                    txtAInstAINLINJ_model.Text = CA_CAL_FLA.a_inj(3).ToString();
-                    txtAInstAILINJ_model.Text = CA_CAL_FLA.a_inj(4).ToString();
-                    txtBContAINLINJ_model.Text = CA_CAL_FLA.b_inj(1).ToString();
-                    txtBContAILINJ_model.Text = CA_CAL_FLA.b_inj(2).ToString();
-                    txtBInstAINLINJ_model.Text = CA_CAL_FLA.b_inj(3).ToString();
-                    txtBInstAILINJ_model.Text = CA_CAL_FLA.b_inj(4).ToString();
-
-                    txtEneffSmall_model.Text = CA_CAL_FLA.eneff_n(1).ToString();
-                    txtEneffMedium_model.Text = CA_CAL_FLA.eneff_n(2).ToString();
-                    txtEneffLarge_model.Text = CA_CAL_FLA.eneff_n(3).ToString();
-                    txtEneffRupture_model.Text = CA_CAL_FLA.eneff_n(4).ToString();
-
-                    txtContCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 1).ToString();
-                    txtContCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 2).ToString();
-                    txtContCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 3).ToString();
-                    txtContCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_cont(1, 4).ToString();
-                    txtContCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 1).ToString();
-                    txtContCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 2).ToString();
-                    txtContCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 3).ToString();
-                    txtContCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_cont(2, 4).ToString();
-                    txtInstCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 1).ToString();
-                    txtInstCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 2).ToString();
-                    txtInstCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 3).ToString();
-                    txtInstCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_inst(3, 4).ToString();
-                    txtInstCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 1).ToString();
-                    txtInstCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 2).ToString();
-                    txtInstCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 3).ToString();
-                    txtInstCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_inst(4, 4).ToString();
-                    txtContINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_cont(1, 1).ToString();
-                    txtContINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_cont(1, 2).ToString();
-                    txtContINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_cont(1, 3).ToString();
-                    txtContINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_cont(1, 4).ToString();
-                    txtContINJAILSmall_model.Text = CA_CAL_FLA.ca_injn_cont(2, 1).ToString();
-                    txtContINJAILMedium_model.Text = CA_CAL_FLA.ca_injn_cont(2, 2).ToString();
-                    txtContINJAILLarge_model.Text = CA_CAL_FLA.ca_injn_cont(2, 3).ToString();
-                    txtContINJAILRupture_model.Text = CA_CAL_FLA.ca_injn_cont(2, 4).ToString();
-                    txtInstINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_inst(3, 1).ToString();
-                    txtInstINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_inst(3, 2).ToString();
-                    txtInstINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_inst(3, 3).ToString();
-                    txtInstINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_inst(3, 4).ToString();
-                    txtInstINJAILSmall_model.Text = CA_CAL_FLA.ca_injn_inst(4, 1).ToString();
-                    txtInstINJAILMedium_model.Text = CA_CAL_FLA.ca_injn_inst(4, 2).ToString();
-                    txtInstINJAILLarge_model.Text = CA_CAL_FLA.ca_injn_inst(4, 3).ToString();
-                    txtInstINJAILRupture_model.Text = CA_CAL_FLA.ca_injn_inst(4, 4).ToString();
-
-                    txtBlendFactorSmall_model.Text = CA_CAL_FLA.fact_n_ic(1).ToString();
-                    txtBlendFactorMedium_model.Text = CA_CAL_FLA.fact_n_ic(2).ToString();
-                    txtBlendFactorLarge_model.Text = CA_CAL_FLA.fact_n_ic(3).ToString();
-                    txtBlendFactorRupture_model.Text = CA_CAL_FLA.fact_n_ic(4).ToString();
-                    txtBlendCMDAINLSmall_model.Text = CA_CAL_FLA.ca_cmdn_ainl(1).ToString();
-                    txtBlendCMDAINLMedium_model.Text = CA_CAL_FLA.ca_cmdn_ainl(2).ToString();
-                    txtBlendCMDAINLLarge_model.Text = CA_CAL_FLA.ca_cmdn_ainl(3).ToString();
-                    txtBlendCMDAINLRupture_model.Text = CA_CAL_FLA.ca_cmdn_ainl(4).ToString();
-                    txtBlendCMDAILSmall_model.Text = CA_CAL_FLA.ca_cmdn_ail(1).ToString();
-                    txtBlendCMDAILMedium_model.Text = CA_CAL_FLA.ca_cmdn_ail(2).ToString();
-                    txtBlendCMDAILLarge_model.Text = CA_CAL_FLA.ca_cmdn_ail(3).ToString();
-                    txtBlendCMDAILRupture_model.Text = CA_CAL_FLA.ca_cmdn_ail(4).ToString();
-                    txtBlendINJAINLSmall_model.Text = CA_CAL_FLA.ca_injn_ainl(1).ToString();
-                    txtBlendINJAINLMedium_model.Text = CA_CAL_FLA.ca_injn_ainl(2).ToString();
-                    txtBlendINJAINLLarge_model.Text = CA_CAL_FLA.ca_injn_ainl(3).ToString();
-                    txtBlendINJAINLRupture_model.Text = CA_CAL_FLA.ca_injn_ainl(4).ToString();
-                    txtBlendINJAILSmall_model.Text = CA_CAL_FLA.ca_inji_ail(1).ToString();
-                    txtBlendINJAILMedium_model.Text = CA_CAL_FLA.ca_inji_ail(2).ToString();
-                    txtBlendINJAILLarge_model.Text = CA_CAL_FLA.ca_inji_ail(3).ToString();
-                    txtBlendINJAILRupture_model.Text = CA_CAL_FLA.ca_inji_ail(4).ToString();
-                    txtAITBlendCMDSmall_model.Text = CA_CAL_FLA.ca_cmdn_ait(1).ToString();
-                    txtAITBlendCMDMedium_model.Text = CA_CAL_FLA.ca_cmdn_ait(2).ToString();
-                    txtAITBlendCMDLarge_model.Text = CA_CAL_FLA.ca_cmdn_ait(3).ToString();
-                    txtAITBlendCMDRupture_model.Text = CA_CAL_FLA.ca_cmdn_ait(4).ToString();
-                    txtAITBlendINJSmall_model.Text = CA_CAL_FLA.ca_injn_ait(1).ToString();
-                    txtAITBlendINJMedium_model.Text = CA_CAL_FLA.ca_injn_ait(2).ToString();
-                    txtAITBlendINJLarge_model.Text = CA_CAL_FLA.ca_injn_ait(3).ToString();
-                    txtAITBlendINJRupture_model.Text = CA_CAL_FLA.ca_injn_ait(4).ToString();
-                    txtFlammableCDCA_model.Text = CA_CAL_FLA.ca_cmd_flame().ToString();
-                    txtFlammablePICA_model.Text = CA_CAL_FLA.ca_inj_flame().ToString();
-                    
-                }
-
-                else
-                {
-                    panelFCA.Visible = false;
-                }
-
-
-                    // Toxic             
-
-                if (CA_CAL_FLA.FLUID_TOXIC == "H2S" || CA_CAL_FLA.FLUID_TOXIC == "CO" || CA_CAL_FLA.FLUID_TOXIC == "PO" || CA_CAL_FLA.FLUID_TOXIC == "EE" || CA_CAL_FLA.FLUID_TOXIC == "EO" || CA_CAL_FLA.FLUID_TOXIC == "Pyrophoric")
-                {
-                    tabtoxic.Name = CA_CAL_FLA.FLUID_TOXIC;
-                    txtAContAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(1).ToString();
-                    txtAContAILCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(2).ToString();
-                    txtAInstAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(3).ToString();
-                    txtAInstAILCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(4).ToString();
-                    txtBContAINLCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(1).ToString();
-                    txtBContAILCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(2).ToString();
-                    txtBInstAINLCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(3).ToString();
-                    txtBInstAILCMD_toxic.Text = CA_CAL_FLA.b_cmd_toxic(4).ToString();
-                    txtAContAINLINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(1).ToString();
-                    txtAContAILINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(2).ToString();
-                    txtAInstAINLINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(3).ToString();
-                    txtAInstAILINJ_toxic.Text = CA_CAL_FLA.a_inj_toxic(4).ToString();
-                    txtBContAINLINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(1).ToString();
-                    txtBContAILINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(2).ToString();
-                    txtBInstAINLINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(3).ToString();
-                    txtBInstAILINJ_toxic.Text = CA_CAL_FLA.b_inj_toxic(4).ToString();
-
-                    txtEneffSmall_toxic.Text = CA_CAL_FLA.eneff_n(1).ToString();
-                    txtEneffMedium_toxic.Text = CA_CAL_FLA.eneff_n(2).ToString();
-                    txtEneffLarge_toxic.Text = CA_CAL_FLA.eneff_n(3).ToString();
-                    txtEneffRupture_toxic.Text = CA_CAL_FLA.eneff_n(4).ToString();
-
-                    txtContCMDAINLSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 1).ToString();
-                    txtContCMDAINLMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 2).ToString();
-                    txtContCMDAINLLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 3).ToString();
-                    txtContCMDAINLRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(1, 4).ToString();
-                    txtContCMDAILSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 1).ToString();
-                    txtContCMDAILMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 2).ToString();
-                    txtContCMDAILLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 3).ToString();
-                    txtContCMDAILRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_cont_toxic(2, 4).ToString();
-                    txtInstCMDAINLSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 1).ToString();
-                    txtInstCMDAINLMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 2).ToString();
-                    txtInstCMDAINLLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 3).ToString();
-                    txtInstCMDAINLRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(3, 4).ToString();
-                    txtInstCMDAILSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 1).ToString();
-                    txtInstCMDAILMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 2).ToString();
-                    txtInstCMDAILLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 3).ToString();
-                    txtInstCMDAILRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_inst_toxic(4, 4).ToString();
-                    txtContINJAINLSmall_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 1).ToString();
-                    txtContINJAINLMedium_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 2).ToString();
-                    txtContINJAINLLarge_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 3).ToString();
-                    txtContINJAINLRupture_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(1, 4).ToString();
-                    txtContINJAILSmall_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 1).ToString();
-                    txtContINJAILMedium_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 2).ToString();
-                    txtContINJAILLarge_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 3).ToString();
-                    txtContINJAILRupture_toxic.Text = CA_CAL_FLA.ca_injn_cont_toxic(2, 4).ToString();
-                    txtInstINJAINLSmall_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 1).ToString();
-                    txtInstINJAINLMedium_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 2).ToString();
-                    txtInstINJAINLLarge_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 3).ToString();
-                    txtInstINJAINLRupture_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(3, 4).ToString();
-                    txtInstINJAILSmall_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 1).ToString();
-                    txtInstINJAILMedium_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 2).ToString();
-                    txtInstINJAILLarge_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 3).ToString();
-                    txtInstINJAILRupture_toxic.Text = CA_CAL_FLA.ca_injn_inst_toxic(4, 4).ToString();
-
-                    txtBlendFactorSmall_toxic.Text = CA_CAL_FLA.fact_n_ic(1).ToString();
-                    txtBlendFactorMedium_toxic.Text = CA_CAL_FLA.fact_n_ic(2).ToString();
-                    txtBlendFactorLarge_toxic.Text = CA_CAL_FLA.fact_n_ic(3).ToString();
-                    txtBlendFactorRupture_toxic.Text = CA_CAL_FLA.fact_n_ic(4).ToString();
-                    txtBlendCMDAINLSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(1).ToString();
-                    txtBlendCMDAINLMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(2).ToString();
-                    txtBlendCMDAINLLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(3).ToString();
-                    txtBlendCMDAINLRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_ainl_toxic(4).ToString();
-                    txtBlendCMDAILSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(1).ToString();
-                    txtBlendCMDAILMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(2).ToString();
-                    txtBlendCMDAILLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(3).ToString();
-                    txtBlendCMDAILRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_ail_toxic(4).ToString();
-                    txtBlendINJAINLSmall_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(1).ToString();
-                    txtBlendINJAINLMedium_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(2).ToString();
-                    txtBlendINJAINLLarge_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(3).ToString();
-                    txtBlendINJAINLRupture_toxic.Text = CA_CAL_FLA.ca_injn_ainl_toxic(4).ToString();
-                    txtBlendINJAILSmall_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(1).ToString();
-                    txtBlendINJAILMedium_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(2).ToString();
-                    txtBlendINJAILLarge_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(3).ToString();
-                    txtBlendINJAILRupture_toxic.Text = CA_CAL_FLA.ca_inji_ail_toxic(4).ToString();
-                    txtAITBlendCMDSmall_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(1).ToString();
-                    txtAITBlendCMDMedium_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(2).ToString();
-                    txtAITBlendCMDLarge_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(3).ToString();
-                    txtAITBlendCMDRupture_toxic.Text = CA_CAL_FLA.ca_cmdn_ait_toxic(4).ToString();
-                    txtAITBlendINJSmall_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(1).ToString();
-                    txtAITBlendINJMedium_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(2).ToString();
-                    txtAITBlendINJLarge_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(3).ToString();
-                    txtAITBlendINJRupture_toxic.Text = CA_CAL_FLA.ca_injn_ait_toxic(4).ToString();
-                    txtFlammableCDCA_toxic.Text = CA_CAL_FLA.ca_cmd_flame_toxic().ToString();
-                    txtFlammablePICA_toxic.Text = CA_CAL_FLA.ca_inj_flame_toxic().ToString();
-                }
-                else
-                {
-                    tabtoxic.PageVisible = false;
-                }
-
-                //Toxic Consequence
-                txtLDToxicSmall_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(1).ToString();
-                txtLDToxicMedium_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(2).ToString();
-                txtLDToxicLarge_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(3).ToString();
-                txtLDToxicRupture_toxic1.Text = CA_CAL_TOX.toxic_leak_duration(4).ToString();
-                txtLDToxicSmall_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(1).ToString();
-                txtLDToxicMedium_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(2).ToString();
-                txtLDToxicLarge_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(3).ToString();
-                txtLDToxicRupture_toxic2.Text = CA_CAL_TOX.toxic_leak_duration(4).ToString();
-                txtMassRateSmall_toxic1.Text = CA_CAL_TOX.rate_tox_n(1).ToString();
-                txtMassRateMedium_toxic1.Text = CA_CAL_TOX.rate_tox_n(2).ToString();
-                txtMassRateLarge_toxic1.Text = CA_CAL_TOX.rate_tox_n(3).ToString();
-                txtMassRateRupture_toxic1.Text = CA_CAL_TOX.rate_tox_n(4).ToString();
-                txtMassSmall_toxic1.Text = CA_CAL_TOX.mass_tox_n(1).ToString();
-                txtMassMedium_toxic1.Text = CA_CAL_TOX.mass_tox_n(2).ToString();
-                txtMassLarge_toxic1.Text = CA_CAL_TOX.mass_tox_n(3).ToString();
-                txtMassRupture_toxic1.Text = CA_CAL_TOX.mass_tox_n(4).ToString();
-                txtMassRateSmall_toxic2.Text = CA_CAL_TOX.rate_tox_n(1).ToString();
-                txtMassRateMedium_toxic2.Text = CA_CAL_TOX.rate_tox_n(2).ToString();
-                txtMassRateLarge_toxic2.Text = CA_CAL_TOX.rate_tox_n(3).ToString();
-                txtMassRateRupture_toxic2.Text = CA_CAL_TOX.rate_tox_n(4).ToString();
-                txtMassSmall_toxic2.Text = CA_CAL_TOX.mass_tox_n(1).ToString();
-                txtMassMedium_toxic2.Text = CA_CAL_TOX.mass_tox_n(2).ToString();
-                txtMassLarge_toxic2.Text = CA_CAL_TOX.mass_tox_n(3).ToString();
-                txtMassRupture_toxic2.Text = CA_CAL_TOX.mass_tox_n(4).ToString();
-
-
-                if (CA_CAL_TOX.FLUID == "HFAcid" || CA_CAL_TOX.FLUID == "H2S" || CA_CAL_TOX.FLUID == "Ammonia" || CA_CAL_TOX.FLUID == "Chlorine")
-                {
-                    txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).c.ToString();
-                    txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).c.ToString();
-                    txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).c.ToString();
-                    txtContCRupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).c.ToString();
-                    txtContDSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).d.ToString();
-                    txtContDMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).d.ToString();
-                    txtContDLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).d.ToString();
-                    txtContDRupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).d.ToString();
-                    txtContESmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).e.ToString();
-                    txtContEMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).e.ToString();
-                    txtContELarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).e.ToString();
-                    txtContERupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).e.ToString();
-                    txtContFSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).f.ToString();
-                    txtContFMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).f.ToString();
-                    txtContFLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).f.ToString();
-                    txtContFRupture_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID, 4).f.ToString();
-                    txtToxicCASmall_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(),1).ToString();
-                    txtToxicCAMedium_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 2).ToString();
-                    txtToxicCALarge_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 3).ToString();
-                    txtToxicCARupture_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE(), 4).ToString();
-                    txtFlammalbePICA_toxic1.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
-                }
-                else if(CA_CAL_TOX.FLUID=="AlCl3" || CA_CAL_TOX.FLUID=="CO" || CA_CAL_TOX.FLUID=="HCl" || CA_CAL_TOX.FLUID =="Nitric Acid" ||
-                        CA_CAL_TOX.FLUID=="NO2" || CA_CAL_TOX.FLUID=="Phosgene" || CA_CAL_TOX.FLUID =="TDI" || CA_CAL_TOX.FLUID=="EE" || CA_CAL_TOX.FLUID=="EO" || CA_CAL_TOX.FLUID == "PO")
-                {
-                    txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),CA_CAL_TOX.FLUID, 1).c.ToString();
-                    txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).c.ToString();
-                    txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).c.ToString();
-                    txtContCRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).c.ToString();
-                    txtContDSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).d.ToString();
-                    txtContDMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),CA_CAL_TOX.FLUID, 2).d.ToString();
-                    txtContDLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).d.ToString();
-                    txtContDRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).d.ToString();
-                    txtContESmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 1).e.ToString();
-                    txtContEMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).e.ToString();
-                    txtContELarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).e.ToString();
-                    txtContERupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).e.ToString();
-                    txtContFSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 1).f.ToString();
-                    txtContFMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 2).f.ToString();
-                    txtContFLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(),  CA_CAL_TOX.FLUID, 3).f.ToString();
-                    txtContFRupture_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 4).f.ToString();
-                    txtToxicCASmall_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 1).ToString();
-                    txtToxicCAMedium_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
-                    txtToxicCALarge_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
-                    txtToxicCARupture_toxic1.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
-                    txtFlammalbePICA_toxic1.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID, CA_CAL.GET_RELEASE_PHASE()).ToString();
-                }
-                else
-                {
-                    tabToxic1.PageVisible = false;
-                }
-                if (CA_CAL_TOX.FLUID_TOXIC == "HFAcid" || CA_CAL_TOX.FLUID_TOXIC == "H2S" || CA_CAL_TOX.FLUID_TOXIC == "Ammonia" || CA_CAL_TOX.FLUID_TOXIC == "Chlorine")
-                {
-                    txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
-                    txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
-                    txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
-                    txtContCRupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).c.ToString();
-                    txtContDSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).d.ToString();
-                    txtContDMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).d.ToString();
-                    txtContDLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).d.ToString();
-                    txtContDRupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).d.ToString();
-                    txtContESmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).e.ToString();
-                    txtContEMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).e.ToString();
-                    txtContELarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).e.ToString();
-                    txtContERupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).e.ToString();
-                    txtContFSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).f.ToString();
-                    txtContFMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).f.ToString();
-                    txtContFLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).f.ToString();
-                    txtContFRupture_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, 4).f.ToString();
-                    txtToxicCASmall_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 1).ToString();
-                    txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 2).ToString();
-                    txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 3).ToString();
-                    txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE(), 4).ToString();
-                    txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
-                }
-                else if (CA_CAL_TOX.FLUID_TOXIC == "AlCl3" || CA_CAL_TOX.FLUID_TOXIC == "CO" || CA_CAL_TOX.FLUID_TOXIC == "HCl" || CA_CAL_TOX.FLUID_TOXIC == "Nitric Acid" ||
-                        CA_CAL_TOX.FLUID_TOXIC == "NO2" || CA_CAL_TOX.FLUID_TOXIC == "Phosgene" || CA_CAL_TOX.FLUID_TOXIC == "TDI" || CA_CAL_TOX.FLUID_TOXIC == "EE" || CA_CAL_TOX.FLUID_TOXIC == "EO" || CA_CAL_TOX.FLUID_TOXIC == "PO")
-                {
-                    txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
-                    txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
-                    txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
-                    txtContCRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).c.ToString();
-                    txtContDSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).d.ToString();
-                    txtContDMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).d.ToString();
-                    txtContDLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).d.ToString();
-                    txtContDRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).d.ToString();
-                    txtContESmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).e.ToString();
-                    txtContEMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).e.ToString();
-                    txtContELarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).e.ToString();
-                    txtContERupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).e.ToString();
-                    txtContFSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).f.ToString();
-                    txtContFMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).f.ToString();
-                    txtContFLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).f.ToString();
-                    txtContFRupture_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 4).f.ToString();
-                    txtToxicCASmall_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 1).ToString();
-                    txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
-                    txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
-                    txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
-                    txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
-                }
-                else
-                {
-                    tabToxic2.PageVisible = false;
-                }
-
-
-                //Non F Non T
-                if (CA_CAL_FLA.FLUID == "Water" || CA_CAL_FLA.FLUID == "Steam" || CA_CAL_FLA.FLUID == "Water" || CA_CAL_FLA.FLUID == "Acid" || CA_CAL_FLA.FLUID == "Caustic")
-                {
-                    txtCONT_CA1.Text = CA_CAL_FLA.ca_injn_contnfnt(1).ToString();
-                    txtCONT_CA2.Text = CA_CAL_FLA.ca_injn_contnfnt(2).ToString();
-                    txtCONT_CA3.Text = CA_CAL_FLA.ca_injn_contnfnt(3).ToString();
-                    txtCONT_CA4.Text = CA_CAL_FLA.ca_injn_contnfnt(4).ToString();
-                    txtINST_CA1.Text = CA_CAL_FLA.ca_injn_instnfnt(1).ToString();
-                    txtINST_CA2.Text = CA_CAL_FLA.ca_injn_instnfnt(2).ToString();
-                    txtINST_CA3.Text = CA_CAL_FLA.ca_injn_instnfnt(3).ToString();
-                    txtINST_CA4.Text = CA_CAL_FLA.ca_injn_instnfnt(4).ToString();
-                    txtBlend_CA1.Text = CA_CAL_FLA.fact_n_icnfnt(1).ToString();
-                    txtBlend_CA2.Text = CA_CAL_FLA.fact_n_icnfnt(2).ToString();
-                    txtBlend_CA3.Text = CA_CAL_FLA.fact_n_icnfnt(3).ToString();
-                    txtBlend_CA4.Text = CA_CAL_FLA.fact_n_icnfnt(4).ToString();
-                    txtNonFlammableNonToxicCon.Text = CA_CAL_FLA.ca_inj_nfnt().ToString();
-                }
-                else
-                {
-                    panelNonTF.Visible = false;
-                }
-                txtCA1.Text = CA_CAL_TOX.ca_consequence(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
-                txtCA2.Text = "E";
+                
             }
             #endregion
             if (tabRisk.SelectedTabPage.Name == "tabCAnormal")
             {
+                
                 showDataFinalCoF(id);
-                txtMaterialcostfactor.Text = mater.CostFactor.ToString();
-                switch (CA_CAL_FIN.FLUID)
-                {
-                    case "C6-C8":
-                        txtFoFE.Text = "0.9";
-                        break;
-                    case "Acid":
-                        txtFoFE.Text = "0.9";
-                        break;
-                    case "C9-C12":
-                        txtFoFE.Text = "0.5";
-                        break;
-                    case "C13-C16":
-                        txtFoFE.Text = "0.1";
-                        break;
-                    case "C17-C25":
-                        txtFoFE.Text = "0.05";
-                        break;
-                    case "C25+":
-                        txtFoFE.Text = "0.02";
-                        break;
-                    case "Nitric Acid":
-                        txtFoFE.Text = "0.8";
-                        break;
-                    case "NO2":
-                    case "EE":
-                        txtFoFE.Text = "0.75";
-                        break;
-                    case "TDI":
-                        txtFoFE.Text = "0.15";
-                        break;
-                    case "Styrene":
-                        txtFoFE.Text = "0.6";
-                        break;
-                    case "EEA":
-                        txtFoFE.Text = "0.65";
-                        break;
-                    case "EG":
-                        txtFoFE.Text = "0.45";
-                        break;
-                    default:
-                        txtFoFE.Text = "0";
-                        break;
-                }
-                txtGFF_small.Text = api.GFFSmall.ToString();
-                txtGFF_medium.Text = api.GFFMedium.ToString();
-                txtGFF_large.Text = api.GFFLarge.ToString();
-                txtGFF_rupture.Text = api.GFFRupture.ToString();
-                txtCost_small.Text = api.HoleCostSmall.ToString();
-                txtCost_medium.Text = api.HoleCostMedium.ToString();
-                txtCost_large.Text = api.HoleCostLarge.ToString();
-                txtCost_rupture.Text = api.HoleCostRupture.ToString();
-                txtOutage_small.Text = api.OutageSmall.ToString();
-                txtOutage_medium.Text = api.OutageMedium.ToString();
-                txtOutage_large.Text = api.OutageLarge.ToString();
-                txtOutage_rupture.Text = api.OutageRupture.ToString();
-                txtFinancialcomdamage.Text = CA_CAL_FIN.fc_cmd().ToString();
-                txtFinancialdamageSurround.Text = CA_CAL_FIN.fc_affa().ToString();
-                txtNoofSurroundingEquip.Text = CA_CAL_FIN.outage_affa().ToString();
-                txtFinancialConsequenceLostProduct.Text = CA_CAL_FIN.fc_prod().ToString();
-                txtFinancialConsequenceSerious.Text = CA_CAL_FIN.fc_inj(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FIN.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
-                txtEnvironmentalCost.Text = CA_CAL_FIN.fc_environ().ToString();
-                txtNoofDowntimeRepairSpecific.Text = CA_CAL_FIN.outage_cmd().ToString();
-                float a = CA_CAL_FIN.fc(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_FIN.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE());
-                txtFCoF.Text = a.ToString();
-                if (a <= 10000)
-                {
-                    txtCoFC.Text = "A";
-                }
-                if(a>10000 && a <= 100000)
-                {
-                    txtCoFC.Text = "B";
-                }
-                if(a>100000 && a<= 1000000)
-                {
-                    txtCoFC.Text = "C";
-                }
-                if(a>1000000 && a <= 10000000)
-                {
-                    txtCoFC.Text = "D";
-                }
-                if (a > 10000000)
-                {
-                    txtCoFC.Text = "E";
-                }
+                LoadDataForControlInTabCANomal();
+                 
             }
             
         }
@@ -1655,22 +1731,22 @@ namespace RBI.PRE.subForm.OutputDataForm
 
         private void txtFM_TextChanged(object sender, EventArgs e)
         {
-            getData(id);
+           // getData(id);
         }
 
         private void cbDetectionSystem_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            getData(id);
+           // getData(id);
         }
 
         private void cbIsolationSystem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            getData(id);
+           // getData(id);
         }
 
         private void cbMitigationSystem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            getData(id);
+           // getData(id);
         }
 
         private void textBox280_TextChanged(object sender, EventArgs e)
@@ -1680,34 +1756,48 @@ namespace RBI.PRE.subForm.OutputDataForm
 
         private void txtPURCFC_TextChanged(object sender, EventArgs e)
         {
-            getDataFINALCOF(id);
+            
         }
 
         private void txtEOM_TextChanged(object sender, EventArgs e)
         {
-            getDataFINALCOF(id);
+           // getDataFINALCOF(id);
         }
 
         private void txtLoPC_TextChanged(object sender, EventArgs e)
         {
-            getDataFINALCOF(id);
+           // getDataFINALCOF(id);
         }
 
         private void txtTuPDoDoE_TextChanged(object sender, EventArgs e)
         {
-            getDataFINALCOF(id);
+           // getDataFINALCOF(id);
         }
 
         private void txtTCAWSIOFOP_TextChanged(object sender, EventArgs e)
         {
-            getDataFINALCOF(id);
+           // getDataFINALCOF(id);
         }
 
         private void txtECUP_TextChanged(object sender, EventArgs e)
         {
-            getDataFINALCOF(id);
+           // getDataFINALCOF(id);
         }
 
-        
+        private void btnUpdateNomal_Click(object sender, EventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(WaitForm2));
+            getDataFINALCOF(id);
+            LoadDataForControlInTabCANomal();
+            SplashScreenManager.CloseForm();
+        }
+
+        private void btnUpdateArea_Click(object sender, EventArgs e)
+        {
+            SplashScreenManager.ShowForm(typeof(WaitForm2));
+            getData(id);
+            LoadDataForControlInTabArea();
+            SplashScreenManager.CloseForm();
+        }  
     }
 }

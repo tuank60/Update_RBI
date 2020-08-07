@@ -27,5 +27,13 @@ namespace RBI.BUS.BUSMSSQL
         {
             return DAL.getDataSource();
         }
+        public float  getCoFValue(int ID)
+        {
+            return DAL.getCoFValue(ID);
+        }
+        public Boolean checkExistCoF (int ID)
+        {
+            return DAL.checkExistCoF(ID);
+        }
     }
 }

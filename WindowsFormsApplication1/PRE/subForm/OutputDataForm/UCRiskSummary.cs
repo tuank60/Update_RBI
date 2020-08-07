@@ -28,7 +28,10 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_POF_BUS busPoF = new RW_FULL_POF_BUS();
             float[] DF = busPoF.getDF(ID);
             RW_FULL_FCOF_BUS busCoF = new RW_FULL_FCOF_BUS();
-            float CoF = busCoF.getFCoFValue(ID);
+            RW_FULL_COF_BUS rw_full_COF_bus = new RW_FULL_COF_BUS();
+            //RW_FULL_COF rw_full_COF = new RW_FULL_COF();
+
+            float CoF = rw_full_COF_bus.getCoFValue(ID);
             int width = picRiskSummary.Width - 16;
             int height = picRiskSummary.Height - 16;
             int x = width / 5;
@@ -37,8 +40,9 @@ namespace RBI.PRE.subForm.OutputDataForm
             g = Graphics.FromImage(this.picRiskSummary.Image);
             //tô màu
             SolidBrush red = new SolidBrush(Color.Red);
+            
             Rectangle recRed1 = new Rectangle(x * 3 + 2, 8, x * 2 - 4, y);
-            Rectangle recRed2 = new Rectangle(x * 4, y, x - 2, y * 2 + 2);
+            Rectangle recRed2 = new Rectangle(x * 4, 8+y-2, x - 2, y * 2 - 4);
             g.FillRectangle(red, recRed1);
             g.FillRectangle(red, recRed2);
             SolidBrush orange = new SolidBrush(Color.Orange);
@@ -50,9 +54,17 @@ namespace RBI.PRE.subForm.OutputDataForm
             g.FillRectangle(orange, recOrange2);
             g.FillRectangle(orange, recOrange3);
             g.FillRectangle(orange, recOrange4);
-            SolidBrush green = new SolidBrush(Color.Green);
-            Rectangle recGreen = new Rectangle(8, y * 2 + 5, x * 2 - 5, y * 3 - 8);
-            g.FillRectangle(green, recGreen);
+            SolidBrush lightGreen = new SolidBrush(Color.LightGreen);
+            Rectangle recLightGreen1 = new Rectangle(8, y * 2 + 5, x * 2 - 5, y - 2);
+            Rectangle recLightGreen2 = new Rectangle(x+5, y * 3, x-2 , y);
+            g.FillRectangle(lightGreen, recLightGreen1);
+            g.FillRectangle(lightGreen, recLightGreen2);
+            //
+            SolidBrush limeGreen = new SolidBrush(Color.LimeGreen);
+            Rectangle recLimeGreen1 = new Rectangle(8, y * 3 + 1, x - 2, 2 * y - 2);
+            Rectangle recLimeGreen2 = new Rectangle(x, y * 4 + 1, x+4 ,  y-2 );
+            g.FillRectangle(limeGreen, recLimeGreen1);
+            g.FillRectangle(limeGreen, recLimeGreen2);
             SolidBrush yellow = new SolidBrush(Color.Yellow);
             Rectangle recYellow1 = new Rectangle(8, y + 6, x * 2 - 4, y - 2);
             Rectangle recYellow2 = new Rectangle(x * 2 + 4, y * 2 + 4, x - 2, y * 3 - 6);
@@ -60,73 +72,91 @@ namespace RBI.PRE.subForm.OutputDataForm
             g.FillRectangle(yellow, recYellow1);
             g.FillRectangle(yellow, recYellow2);
             g.FillRectangle(yellow, recYellow3);
-            Pen gridPen = new Pen(Color.Black, 2);
+            Pen gridPen = new Pen(Color.Gray, 2);
             //vẽ cột đứng
             for (int i = 8; i < width; i += x - 2)
             {
                 g.DrawLine(gridPen, i, 8, i, height - 2);
             }
             //vẽ dòng ngang
+        
             for (int i = 8; i < height; i += y - 2)
             {
                 g.DrawLine(gridPen, 8, i, width - 2, i);
             }
-            float[] coordinatesPoF = { 0, 0, 0 };
-            float coordinatesCoF = 0;
+            double[] coordinatesPoF = { 0, 0, 0 };
+            double coordinatesCoF = CoF;
             //float[] DF = { 1, 500, 5000 };
             for (int i = 0; i < 3; i++)
             {
-                if (DF[i] <= 2)
+                if (DF[i] <= 3.00000006)
                 {
-                    coordinatesPoF[i] = 4 * y + (y - DF[i] * y / 2) - 8;
+                    coordinatesPoF[i] = 8+5*(y-2);
                 }
-                else if (DF[i] <= 20)
+                else if (DF[i] <= 3.0000006)
                 {
-                    coordinatesPoF[i] = 3 * y + (y - y * DF[i] / 20) - 8;
+                    coordinatesPoF[i] = 8 + 5 * (y - 2) + ((3.0000006 - 3.00000006) / (y - 2)) * (coordinatesPoF[i] - 3.00000006);
                 }
-                else if (DF[i] <= 100)
+                else if (DF[i] <= 3.000006)
                 {
-                    coordinatesPoF[i] = 2 * y + (y - y * DF[i] / 100) - 8;
+                    coordinatesPoF[i] = 8 + 4 * (y - 2) + ((3.000006 - 3.0000006) / (y - 2)) * (coordinatesPoF[i] - 3.0000006);
                 }
-                else if (DF[i] <= 1000)
+                else if (DF[i] <= 3.00006)
                 {
-                    coordinatesPoF[i] = y + (y - y * DF[i] / 1000) - 8;
+                    coordinatesPoF[i] = 8 + 3 * (y - 2) + ((3.00006 - 3.000006) / (y - 2)) * (coordinatesPoF[i] - 3.000006);
+                }
+                else if (DF[i] <= 3.0006)
+                {
+                    coordinatesPoF[i] = 8 + 2 * (y - 2) + ((3.0006 - 3.00006) / (y - 2)) * (coordinatesPoF[i] - 3.00006);
+                    //int df = (int)DF[i];
+                    //string a = df.ToString();
+                    //coordinatesPoF[i] = y - y * DF[i] / (float)Math.Pow(10,a.Length);
+                }
+                else if (DF[i] <= 3.006)
+                {
+                    coordinatesPoF[i] = 8 + 1 * (y - 2) + ((3.006 - 3.0006) / (y - 2)) * (coordinatesPoF[i] - 3.0006);
                 }
                 else
                 {
-                    int df = (int)DF[i];
-                    string a = df.ToString();
-                    coordinatesPoF[i] = y - y * DF[i] / (float)Math.Pow(10,a.Length);
+                    coordinatesPoF[i] = 8;
                 }
             }
-            if (CoF <= 10000)
+            if (CoF <= 1000)
             {
-                coordinatesCoF = x * CoF / 10000;
+                coordinatesCoF = 8;
+            }
+            else if (CoF <= 10000)
+            {
+                coordinatesCoF = 8 + ((10000 - 1000) / (x - 2)) * (CoF - 1000); 
             }
             else if (CoF <= 100000)
             {
-                float FC = CoF / 10;
-                coordinatesCoF = x + FC * x / 10000;
+
+                coordinatesCoF = 8 + 1 * (x - 2) + ((100000 - 10000) / (x - 2)) * (CoF - 10000); 
             }
             else if (CoF <= 1000000)
             {
-                float FC = CoF / 100;
-                coordinatesCoF = 2 * x + FC * x / 10000;
+
+                coordinatesCoF = 8 + 2 * (x - 2) + ((1000000 - 100000) / (x - 2)) * (CoF - 100000); 
             }
             else if (CoF <= 10000000)
             {
-                float FC = CoF / 1000;
-                coordinatesCoF = 3 * x + FC * x / 10000;
+                coordinatesCoF = 8 + 3 * (x - 2) + ((10000000 - 1000000) / (x - 2)) * (CoF - 1000000); 
             }
+            else if (CoF <= 100000000)
+	        {
+                coordinatesCoF = 8 + 4 * (x - 2) + ((100000000 - 10000000) / (x - 2)) * (CoF - 10000000);
+	        }
             else
             {
-                float FC = CoF / 10000;
-                coordinatesCoF = 4 * x + FC * x / 10000 - 16;
+                coordinatesCoF = 8 * x + 5*(x-2);
             }          
             Image[] image = { Resource1.Triangle_icon, Resource1.Square_icon, Resource1.Circle_icon };
+            //Console.WriteLine(FLT_Mi)
+              //g.DrawImage()
             for (int i = 0; i < 3; i++)
             {
-                g.DrawImage(image[i], coordinatesCoF, coordinatesPoF[i]);
+               // g.DrawImage(image[i], (float)coordinatesCoF, (float)coordinatesPoF[i]);
             }
         }
     }
