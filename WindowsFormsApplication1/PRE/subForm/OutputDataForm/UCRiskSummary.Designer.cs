@@ -31,11 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCRiskSummary));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -43,13 +47,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picRiskSummary = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.picChuThich = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picRiskSummary = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRiskSummary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picChuThich)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRiskSummary)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,6 +72,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.picChuThich);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label11);
@@ -82,10 +91,57 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.picRiskSummary);
-            this.panel1.Location = new System.Drawing.Point(6, 21);
+            this.panel1.Location = new System.Drawing.Point(6, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(712, 407);
+            this.panel1.Size = new System.Drawing.Size(731, 388);
             this.panel1.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Location = new System.Drawing.Point(641, 62);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(30, 15);
+            this.textBox3.TabIndex = 7;
+            this.textBox3.Text = "AP3";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(641, 34);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(30, 15);
+            this.textBox2.TabIndex = 6;
+            this.textBox2.Text = "AP2";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Location = new System.Drawing.Point(641, 6);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(30, 15);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "AP1";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(503, 338);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 16);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "$100M";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(77, 2);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(59, 16);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "3.06E-01";
             // 
             // label6
             // 
@@ -127,21 +183,11 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "$10K";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(77, 2);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 16);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "3.06E-01";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(77, 56);
+            this.label10.Location = new System.Drawing.Point(77, 60);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(59, 16);
             this.label10.TabIndex = 2;
@@ -151,7 +197,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(77, 116);
+            this.label9.Location = new System.Drawing.Point(77, 121);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(59, 16);
             this.label9.TabIndex = 2;
@@ -161,7 +207,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(77, 177);
+            this.label13.Location = new System.Drawing.Point(77, 184);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 16);
             this.label13.TabIndex = 2;
@@ -207,24 +253,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Consequence";
             // 
-            // picRiskSummary
+            // picChuThich
             // 
-            this.picRiskSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picRiskSummary.Location = new System.Drawing.Point(166, 3);
-            this.picRiskSummary.Name = "picRiskSummary";
-            this.picRiskSummary.Size = new System.Drawing.Size(396, 332);
-            this.picRiskSummary.TabIndex = 0;
-            this.picRiskSummary.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(503, 338);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 16);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "$100M";
+            this.picChuThich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picChuThich.Location = new System.Drawing.Point(593, 3);
+            this.picChuThich.Name = "picChuThich";
+            this.picChuThich.Size = new System.Drawing.Size(87, 82);
+            this.picChuThich.TabIndex = 0;
+            this.picChuThich.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -234,6 +270,15 @@
             this.pictureBox1.Size = new System.Drawing.Size(29, 214);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // picRiskSummary
+            // 
+            this.picRiskSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picRiskSummary.Location = new System.Drawing.Point(166, 3);
+            this.picRiskSummary.Name = "picRiskSummary";
+            this.picRiskSummary.Size = new System.Drawing.Size(396, 332);
+            this.picRiskSummary.TabIndex = 0;
+            this.picRiskSummary.TabStop = false;
             // 
             // UCRiskSummary
             // 
@@ -245,8 +290,9 @@
             this.groupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picRiskSummary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picChuThich)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picRiskSummary)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,5 +316,9 @@
         private System.Windows.Forms.PictureBox picRiskSummary;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picChuThich;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

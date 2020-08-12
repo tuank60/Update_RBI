@@ -73,6 +73,16 @@ namespace RBI {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lup {
+            get {
+                object obj = ResourceManager.GetObject("lup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Square_icon {
             get {
                 object obj = ResourceManager.GetObject("Square_icon", resourceCulture);
@@ -86,6 +96,16 @@ namespace RBI {
         internal static System.Drawing.Bitmap Triangle_icon {
             get {
                 object obj = ResourceManager.GetObject("Triangle_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Triangle2_icon {
+            get {
+                object obj = ResourceManager.GetObject("Triangle2-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

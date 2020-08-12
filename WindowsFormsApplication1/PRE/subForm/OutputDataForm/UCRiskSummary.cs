@@ -95,26 +95,27 @@ namespace RBI.PRE.subForm.OutputDataForm
                 }
                 else if (DF[i] <= 3.0000006)
                 {
-                    coordinatesPoF[i] = 8 + 5 * (y - 2) + ((3.0000006 - 3.00000006) / (y - 2)) * (coordinatesPoF[i] - 3.00000006);
+                    coordinatesPoF[i] = (y - 2) / (3.0000006 - 3.00000006) * (DF[i] - 3.00000006) + 8 + 5 * (y - 2);
+                       // 8 + 5 * (y - 2) + ((3.0000006 - 3.00000006) / (y - 2)) * (coordinatesPoF[i] - 3.00000006);
                 }
                 else if (DF[i] <= 3.000006)
                 {
-                    coordinatesPoF[i] = 8 + 4 * (y - 2) + ((3.000006 - 3.0000006) / (y - 2)) * (coordinatesPoF[i] - 3.0000006);
+                    coordinatesPoF[i] = (y - 2) / (3.000006 - 3.0000006) * (DF[i] - 3.0000006) + 8 + 4 * (y - 2);
                 }
                 else if (DF[i] <= 3.00006)
                 {
-                    coordinatesPoF[i] = 8 + 3 * (y - 2) + ((3.00006 - 3.000006) / (y - 2)) * (coordinatesPoF[i] - 3.000006);
+                    coordinatesPoF[i] = (y - 2) / (3.00006 - 3.000006) * (DF[i] - 3.000006) + 8 + 3 * (y - 2);
                 }
                 else if (DF[i] <= 3.0006)
                 {
-                    coordinatesPoF[i] = 8 + 2 * (y - 2) + ((3.0006 - 3.00006) / (y - 2)) * (coordinatesPoF[i] - 3.00006);
+                    coordinatesPoF[i] = (y - 2) / (3.0006 - 3.00006) * (DF[i] - 3.00006) + 8 + 2 * (y - 2);
                     //int df = (int)DF[i];
                     //string a = df.ToString();
                     //coordinatesPoF[i] = y - y * DF[i] / (float)Math.Pow(10,a.Length);
                 }
                 else if (DF[i] <= 3.006)
                 {
-                    coordinatesPoF[i] = 8 + 1 * (y - 2) + ((3.006 - 3.0006) / (y - 2)) * (coordinatesPoF[i] - 3.0006);
+                    coordinatesPoF[i] = (y - 2) / (3.006 - 3.0006) * (DF[i] - 3.0006) + 8 + 1 * (y - 2);
                 }
                 else
                 {
@@ -127,37 +128,49 @@ namespace RBI.PRE.subForm.OutputDataForm
             }
             else if (CoF <= 10000)
             {
-                coordinatesCoF = 8 + ((10000 - 1000) / (x - 2)) * (CoF - 1000); 
+                coordinatesCoF = 8 + (x - 2)/(10000 - 1000) * (CoF - 1000); 
             }
             else if (CoF <= 100000)
             {
 
-                coordinatesCoF = 8 + 1 * (x - 2) + ((100000 - 10000) / (x - 2)) * (CoF - 10000); 
+                coordinatesCoF = 8 + 1 * (x - 2) + (x - 2)/(100000 - 10000)  * (CoF - 10000); 
             }
             else if (CoF <= 1000000)
             {
 
-                coordinatesCoF = 8 + 2 * (x - 2) + ((1000000 - 100000) / (x - 2)) * (CoF - 100000); 
+                coordinatesCoF = 8 + 2 * (x - 2) + ( (x - 2)/(1000000 - 100000) ) * (CoF - 100000); 
             }
             else if (CoF <= 10000000)
             {
-                coordinatesCoF = 8 + 3 * (x - 2) + ((10000000 - 1000000) / (x - 2)) * (CoF - 1000000); 
+                coordinatesCoF = 8 + 3 * (x - 2) + ((x - 2)/(10000000 - 1000000)) * (CoF - 1000000); 
             }
             else if (CoF <= 100000000)
 	        {
-                coordinatesCoF = 8 + 4 * (x - 2) + ((100000000 - 10000000) / (x - 2)) * (CoF - 10000000);
+                coordinatesCoF = 8 + 4 * (x - 2) + ( (x - 2)/(100000000 - 10000000) ) * (CoF - 10000000);
 	        }
             else
             {
                 coordinatesCoF = 8 * x + 5*(x-2);
-            }          
-            Image[] image = { Resource1.Triangle_icon, Resource1.Square_icon, Resource1.Circle_icon };
-            //Console.WriteLine(FLT_Mi)
-              //g.DrawImage()
+            }
+            Image[] image = { Resource1.Square_icon, Resource1.Circle_icon, Resource1.Triangle2_icon};
             for (int i = 0; i < 3; i++)
             {
-               // g.DrawImage(image[i], (float)coordinatesCoF, (float)coordinatesPoF[i]);
+                g.DrawImage(image[i], (float)coordinatesCoF, (float)coordinatesPoF[i]);
             }
+            //chu thich
+            picChuThich.Image = new Bitmap(picChuThich.Width-1, picChuThich.Height-1);
+            Graphics g1 = Graphics.FromImage(this.picChuThich.Image);
+            //this.picChuThich.Image.setco
+           // Icon my = new Icon(Resource1.Square_icon);
+           // Resource1.Square_icon.SetPixel
+            //Resource1.Square_icon.SetPixel(4,2,Color.Red);
+            //Point p=
+           //g1.DrawImage()
+            //image[0].
+            g1.DrawImage(Resource1.Square_icon,5,2);
+            g1.DrawImage(Resource1.Triangle2_icon,5,58);
+            g1.DrawImage(Resource1.Circle_icon, 5, 30);
+
         }
     }
 }

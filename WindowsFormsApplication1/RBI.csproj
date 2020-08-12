@@ -1095,6 +1095,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icons-Land-Points-Of-Interest-Factory-Yellow.ico" />
+    <None Include="ICON\risk summary point\Triangle2-icon.png" />
+    <None Include="ICON\risk summary point\lup.png" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="rbi.mdf">
