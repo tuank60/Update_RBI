@@ -468,6 +468,11 @@ namespace RBI.PRE.subForm.OutputDataForm
             tbCostOfBusinessInterruption.Text = caTank.Business_Cost.ToString();
             tbTotalConsequence.Text = caTank.Consequence.ToString();
             tbConsequenceCategory.Text = caTank.ConsequenceCategory;
+
+            RW_FULL_COF_TANK_BUS COFBus = new RW_FULL_COF_TANK_BUS();
+            RW_FULL_COF_TANK obj = COFBus.getData(ID);
+            txtEquipMulBottom.Text = obj.EquipOutageMultiplier.ToString();
+            txtCostProdBottom.Text = obj.ProdCost.ToString();
         }
         
         private void initData_InputTank(int ID)
@@ -1798,6 +1803,17 @@ namespace RBI.PRE.subForm.OutputDataForm
             getData(id);
             LoadDataForControlInTabArea();
             SplashScreenManager.CloseForm();
-        }  
+        }
+
+        private void btnInputBottom_Click(object sender, EventArgs e)
+        {
+            RW_FULL_COF_TANK inputTankBottom = new RW_FULL_COF_TANK();
+            inputTankBottom.ID = IDProposal;
+            inputTankBottom.EquipOutageMultiplier = txtEquipMulBottom.Text != "" ? float.Parse(txtEquipMulBottom.Text) : 0;
+            inputTankBottom.ProdCost = txtCostProdBottom.Text != "" ? float.Parse(txtCostProdBottom.Text) : 0;
+            RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
+            busCA_Tank.edit(inputTankBottom);
+            MessageBox.Show("Update Input", "Coterk RBI");
+        }
     }
 }

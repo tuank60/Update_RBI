@@ -461,6 +461,7 @@
     <Compile Include="Object\EquipmentTemp.cs" />
     <Compile Include="Object\FullPlantObject.cs" />
     <Compile Include="Object\InspectionPlant.cs" />
+    <Compile Include="Object\ObjectMSSQL_CAL\ConversionFactorsForCOF.cs" />
     <Compile Include="Object\ObjectMSSQL_CAL\TOXIC_511_512.cs" />
     <Compile Include="Object\ObjectMSSQL_CAL\TOXIC_513.cs" />
     <Compile Include="Object\paramaterDF.cs" />

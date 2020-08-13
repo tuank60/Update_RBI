@@ -1355,25 +1355,20 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (!PREVENTION_BARRIER) newFLUID_HEIGHT = FLUID_HEIGHT;
             double ps = (Math.Pow(d_n(n), 1.8)) / (0.21 * Math.Pow(newFLUID_HEIGHT, 0.4));
             
-             if (k_h_prod() > (DAL_CAL.GET_TBL_3B21(34)) * Math.Pow(d_n(n), 2))
+             if (k_h_prod() > (ConversionFactorsForCOF._C34 * Math.Pow(d_n(n), 2)))
              {
                  return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * d_n(n) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh());
              }
                 
-             else if (k_h_prod() <= (DAL_CAL.GET_TBL_3B21(37)) * Math.Pow(ps, 1 / 0.74))
+             else if (k_h_prod() <= (ConversionFactorsForCOF._C37 * Math.Pow(ps, 1 / 0.74)))
              {
-
-                //newFLUID_HEIGHT = 0.0762f;
                 return (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh());
              }
-
              else
              {
-                
-                double m = DAL_CAL.GET_TBL_3B21(40) - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
+                double m = ConversionFactorsForCOF._C40 - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
                 //m = m / 3;
                  ps = (DAL_CAL.GET_TBL_3B21(39) * 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
-                 //Console.WriteLine("th sau 2, n=" +n+" "+ (float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
                  return ((float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
                  
              }

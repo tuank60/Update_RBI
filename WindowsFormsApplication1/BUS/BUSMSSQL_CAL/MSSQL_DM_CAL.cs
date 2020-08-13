@@ -313,7 +313,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float getTmin()
         {
             float t = 0;
-            if (APIComponentType == "TANKBOTTOM")
+            if (APIComponentType == "0TANKBOTTOM")
             {
                 t = ProtectedBarrier ? 2.54f : 1.27f; //mm
             }
@@ -330,7 +330,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         
         public float Art_THIN(float agetk)
         {
-            if (APIComponentType == "TANKBOTTOM")
+            if (APIComponentType == "0TANKBOTTOM")
             {
                 float x = Math.Max((1 - (NomalThick - (CorrosionRate * agetk)) / (getTmin() + CA)), 0);
                 //Console.WriteLine("Art: " + x);
@@ -436,6 +436,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         } 
         public float API_ART(float a)
         {
+            return a; // test lại theo Cloud 12/8/2020
             float art = 0;
             float[] data = { 0.05f, 0.1f, 0.15f, 0.2f, 0.25f, 0.3f, 0.35f, 0.4f, 0.45f, 0.5f, 0.55f, 0.6f, 0.65f, 0.7f, 0.75f, 0.8f, 0.85f, 0.9f, 0.95f, 1f };
             if (a < (data[0] + data[1]) / 2)
@@ -505,7 +506,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             if (EFF_THIN == null || EFF_THIN == "")
                 EFF_THIN = "E";
-            if (APIComponentType == "TANKBOTTOM")
+            if (APIComponentType == "0TANKBOTTOM")
             {
                 if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 1390;
@@ -1570,7 +1571,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             return Coat_adj;
         } 
-        public float DF_EXTERNAL_CORROSION(float age)
+        public float DF_EXTERNAL_CORROSION(float age) //test lại theo Cloud 12/8/2020
         {
            // if (EXTERNAL_EXPOSED_FLUID_MIST || ((CARBON_ALLOY && !(MAX_OP_TEMP < -12 || MIN_OP_TEMP > 177))))
             {
@@ -1778,7 +1779,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         {
             if (CUI_INSP_EFF == null || CUI_INSP_EFF == "" || CUI_INSP_NUM == 0)
                 CUI_INSP_EFF = "E";
-            if (APIComponentType == "TANKBOTTOM")
+            if (APIComponentType == "0TANKBOTTOM")
             {
                 if (NomalThick == 0 || CurrentThick == 0 || WeldJointEfficiency == 0 || (YieldStrength == 0 && TensileStrength == 0))
                     return 1390;
