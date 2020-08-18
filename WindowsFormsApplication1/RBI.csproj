@@ -674,6 +674,42 @@
     <Compile Include="PRE\subForm\InputDataForm\UCMaterialTank.Designer.cs">
       <DependentUpon>UCMaterialTank.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\frmDamageFactor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\frmDamageFactor.Designer.cs">
+      <DependentUpon>frmDamageFactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.Designer.cs">
+      <DependentUpon>UCBrittleFracture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCCausticCracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCCausticCracking.Designer.cs">
+      <DependentUpon>UCCausticCracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.Designer.cs">
+      <DependentUpon>UCExternalCorrosion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalLiningDegradation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalLiningDegradation.Designer.cs">
+      <DependentUpon>UCInternalLiningDegradation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalThinning.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalThinning.Designer.cs">
+      <DependentUpon>UCInternalThinning.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -902,6 +938,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\InputDataForm\UCMaterialTank.resx">
       <DependentUpon>UCMaterialTank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\frmDamageFactor.resx">
+      <DependentUpon>frmDamageFactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.resx">
+      <DependentUpon>UCBrittleFracture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCCausticCracking.resx">
+      <DependentUpon>UCCausticCracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.resx">
+      <DependentUpon>UCExternalCorrosion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalLiningDegradation.resx">
+      <DependentUpon>UCInternalLiningDegradation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalThinning.resx">
+      <DependentUpon>UCInternalThinning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.resx">
       <DependentUpon>UCCorrosionRateTank.cs</DependentUpon>
