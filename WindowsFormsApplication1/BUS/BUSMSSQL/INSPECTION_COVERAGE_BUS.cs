@@ -24,6 +24,10 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.delete(obj.ID);
         }
+        public void deletebyComponentID(int ComponentID)
+        {
+            DAL.deletebyComponentID(ComponentID);
+        }
         public void deletebyPlanID(int PlanID)//xoa du lieu tu PlanID
         {
             DAL.deletebyPlanID(PlanID);
@@ -39,6 +43,10 @@ namespace RBI.BUS.BUSMSSQL
         public List<int> getIDbyPlanID(int PlanID)
         {
             return DAL.getIDbyPlanID(PlanID);//HaiK61
+        }
+        public List<int> getIDbyComponentID(int ComponentID)
+        {
+            return DAL.getIDbyComponentID(ComponentID);
         }
         public int getPlanIDbyID(int ID)
         {

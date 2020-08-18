@@ -20,9 +20,9 @@ namespace RBI.BUS.BUSMSSQL
         {
             DAL.edit(obj.PlanID, obj.InspPlanName, obj.InspPlanDate, obj.Remarks);
         }
-        public void delete(INSPECTION_PLAN obj)
+        public void delete(int PlanID)
         {
-            DAL.delete(obj.PlanID);
+            DAL.delete(PlanID);
         }
         public List<INSPECTION_PLAN> getDataSource()
         {

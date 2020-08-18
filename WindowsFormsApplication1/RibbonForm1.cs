@@ -717,6 +717,7 @@ namespace RBI
              * RW_FULL_POF
              * RW_STREAM
              * RW_FULL_FCOF
+             * 
              */
             DialogResult da = MessageBox.Show("Do you want to delete record?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (da == DialogResult.Yes)
@@ -750,7 +751,17 @@ namespace RBI
             }
             else return;
         }
-
+        private void deleteInspectionPlan(int id)//ham nay dung de xoa cac bang lien quan den inspectionPlan:
+        {
+            List<int> CoverageID = busInsCoverage.getIDbyComponentID(id);
+            foreach (int i in CoverageID)
+            {
+                busInsDeTech.deletebyCoverageID(i);
+                busInsCoverageDetail.deletebyCoverageID(i);
+                busInsCoverage.deletebyComponentID(i);
+            }
+                
+        }
         private void deleteComponent(object sender, EventArgs e)
         {
             /*Cần xóa dữ liệu ở các bảng:
@@ -768,6 +779,7 @@ namespace RBI
              * RW_STREAM
              * RW_FULL_FCOF
              * COMPONENT_MASTER
+            
              */
             List<int> lstAssessmentID = busComponentMaster.GetAllIDbyComponentID(IDNodeTreeList);
             DialogResult da = MessageBox.Show("Do you want to delete component?\nAll Record of Component will be loss", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -812,7 +824,12 @@ namespace RBI
                     busStream.delete(id);
                     busFullFCoF.delete(id);
                     busAssessment.delete(id);
+                  
                 }
+                
+                //delete inspection plan
+                deleteInspectionPlan(IDNodeTreeList);
+                //
                 busComponentMaster.delete(IDNodeTreeList);
                 initDataforTreeList();
                 treeListProject.ExpandToLevel(treeListProject.FocusedNode.Level);
@@ -887,6 +904,7 @@ namespace RBI
                         busFullFCoF.delete(id);
                         busAssessment.delete(id);
                     }
+                    deleteInspectionPlan(compID);
                     busComponentMaster.delete(compID);
                 }
                 busEquipmentMaster.delete(IDNodeTreeList);
@@ -956,6 +974,7 @@ namespace RBI
                             busFullFCoF.delete(id);
                             busAssessment.delete(id);
                         }
+                        deleteInspectionPlan(compID);
                         busComponentMaster.delete(compID);
                     }
                     busEquipmentMaster.delete(eqID);
@@ -1059,6 +1078,7 @@ namespace RBI
                                 busFullFCoF.delete(id);
                                 busAssessment.delete(id);
                             }
+                            deleteInspectionPlan(compID);
                             busComponentMaster.delete(compID);
                         }
                         busEquipmentMaster.delete(EqID);
@@ -3933,6 +3953,9 @@ namespace RBI
         RW_CORROSION_RATE_TANK_BUS busCorrosionRate = new RW_CORROSION_RATE_TANK_BUS();
         RW_INPUT_CA_LEVEL_1_BUS busInputCALevel1 = new RW_INPUT_CA_LEVEL_1_BUS();
         RW_INPUT_CA_TANK_BUS busInputCATank = new RW_INPUT_CA_TANK_BUS();
+        INSPECTION_COVERAGE_BUS busInsCoverage = new INSPECTION_COVERAGE_BUS();
+        INSPECTION_COVERAGE_DETAIL_BUS busInsCoverageDetail = new INSPECTION_COVERAGE_DETAIL_BUS();
+        INSPECTION_DETAIL_TECHNIQUE_BUS busInsDeTech = new INSPECTION_DETAIL_TECHNIQUE_BUS();
         //RW_CA_LEVEL_1_BUS busCALevel1 = new RW_CA_LEVEL_1_BUS();
         RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
         RW_CA_TANK_BUS busCATank = new RW_CA_TANK_BUS();

@@ -40,10 +40,20 @@ namespace RBI.PRE.subForm.InputDataForm
                 //int rowSelected = gridView1.FocusedRowHandle;DataRow row = gridView1.GetFocusedDataRow();
                 // lấy dòng đang chọn
                 int _id = (int) gridView1.GetRowCellValue(gridView1.FocusedRowHandle, ColInvisiblePlanID);
-                INSPECTION_PLAN ip = new INSPECTION_PLAN();
-                ip.PlanID = _id;
+               
                 INSPECTION_PLAN_BUS busisp = new INSPECTION_PLAN_BUS();
-                busisp.delete(ip);
+                INSPECTION_COVERAGE_BUS busInSpecCovBus = new INSPECTION_COVERAGE_BUS();
+                INSPECTION_COVERAGE_DETAIL_BUS busInSpecCovDeBus = new INSPECTION_COVERAGE_DETAIL_BUS();
+                INSPECTION_DETAIL_TECHNIQUE_BUS busInSpecDeTech = new INSPECTION_DETAIL_TECHNIQUE_BUS();
+                List<int> CoverageID = busInSpecCovBus.getIDbyPlanID(_id);
+                foreach (int i in CoverageID)
+                {
+                    busInSpecDeTech.deletebyCoverageID(i);
+                    busInSpecCovDeBus.deletebyCoverageID(i);
+                    busInSpecCovBus.deletebyComponentID(i);
+                }
+                //busInSpecCovBus.deletebyPlanID(_id);
+                busisp.delete(_id);
                 Display();
             }
         }

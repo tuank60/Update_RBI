@@ -126,6 +126,30 @@ namespace RBI.DAL.MSSQL
                 conn.Dispose();
             }
         }
+        public void deletebyComponentID(int ComponentID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            String sql = "USE [rbi] " +
+                        "DELETE FROM [dbo].[INSPECTION_COVERAGE]" +
+                        "WHERE [ComponentID] = '" + ComponentID + "' ";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "DELETE FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+        }
         public List<INSPECTION_COVERAGE> getDataSource()
         {
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
@@ -229,6 +253,43 @@ namespace RBI.DAL.MSSQL
                             }
                             list.Add(obj);
                         }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.ToString(), "GET DATA FAIL!");
+            }
+            finally
+            {
+                conn.Close();
+                conn.Dispose();
+            }
+            return list;
+        }
+        public List<int> getIDbyComponentID(int ComponentID)
+        {
+            SqlConnection conn = MSSQLDBUtils.GetDBConnection();
+            conn.Open();
+            List<int> list = new List<int>();
+            int ID = -1;
+            String sql = "Use [rbi]" +
+                        "SELECT [ID]" +
+                        "From [dbo].[INSPECTION_COVERAGE] where ComponentID = '" + ComponentID + "'";
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = sql;
+                using (DbDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            ID = reader.GetInt32(0);
+                        }
+                        list.Add(ID);
                     }
                 }
             }
