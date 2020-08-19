@@ -17,5 +17,10 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -680,6 +680,12 @@
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\frmDamageFactor.Designer.cs">
       <DependentUpon>frmDamageFactor.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCAmineStressCorrosionCracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCAmineStressCorrosionCracking.Designer.cs">
+      <DependentUpon>UCAmineStressCorrosionCracking.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -698,6 +704,12 @@
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.Designer.cs">
       <DependentUpon>UCExternalCorrosion.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCHydrogenStressCracking%28HSC-HF%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCHydrogenStressCracking%28HSC-HF%29.Designer.cs">
+      <DependentUpon>UCHydrogenStressCracking%28HSC-HF%29.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalLiningDegradation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -709,6 +721,36 @@
     </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalThinning.Designer.cs">
       <DependentUpon>UCInternalThinning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCPolythionicAcidCracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCPolythionicAcidCracking.Designer.cs">
+      <DependentUpon>UCPolythionicAcidCracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCSulphideStressCracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCSulphideStressCracking.Designer.cs">
+      <DependentUpon>UCSulphideStressCracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCVibration_Induced_Mechanical_Fatigue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCVibration_Induced_Mechanical_Fatigue.Designer.cs">
+      <DependentUpon>UCVibration_Induced_Mechanical_Fatigue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UC_HF_Produced_HIC_SOHIC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UC_HF_Produced_HIC_SOHIC.Designer.cs">
+      <DependentUpon>UC_HF_Produced_HIC_SOHIC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UC_HIC_SOHIC_H2S.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UC_HIC_SOHIC_H2S.Designer.cs">
+      <DependentUpon>UC_HIC_SOHIC_H2S.cs</DependentUpon>
     </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.cs">
       <SubType>UserControl</SubType>
@@ -942,6 +984,9 @@
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\frmDamageFactor.resx">
       <DependentUpon>frmDamageFactor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCAmineStressCorrosionCracking.resx">
+      <DependentUpon>UCAmineStressCorrosionCracking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.resx">
       <DependentUpon>UCBrittleFracture.cs</DependentUpon>
     </EmbeddedResource>
@@ -951,11 +996,29 @@
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.resx">
       <DependentUpon>UCExternalCorrosion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCHydrogenStressCracking%28HSC-HF%29.resx">
+      <DependentUpon>UCHydrogenStressCracking%28HSC-HF%29.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalLiningDegradation.resx">
       <DependentUpon>UCInternalLiningDegradation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCInternalThinning.resx">
       <DependentUpon>UCInternalThinning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCPolythionicAcidCracking.resx">
+      <DependentUpon>UCPolythionicAcidCracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCSulphideStressCracking.resx">
+      <DependentUpon>UCSulphideStressCracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCVibration_Induced_Mechanical_Fatigue.resx">
+      <DependentUpon>UCVibration_Induced_Mechanical_Fatigue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UC_HF_Produced_HIC_SOHIC.resx">
+      <DependentUpon>UC_HF_Produced_HIC_SOHIC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UC_HIC_SOHIC_H2S.resx">
+      <DependentUpon>UC_HIC_SOHIC_H2S.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\UCCorrosionRateTank.resx">
       <DependentUpon>UCCorrosionRateTank.cs</DependentUpon>
@@ -1014,6 +1077,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RibbonForm1.resx">
       <DependentUpon>RibbonForm1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
