@@ -82,6 +82,7 @@ namespace RBI.DAL.MSSQL
         }
         public void edit(int ID, double Cp, double k, double GFFTotal, double Kv_n, String ReleasePhase, double W_max8, double Cd, double Ptrans, double NBP, double Density, double MW, double R, double Ps, double Ts, double Patm, double fact_di, double fact_mit, double fact_AIT, double g, double h, String ambient)
         {
+            if (float.IsNaN((float)W_max8)) W_max8 = 0;
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +

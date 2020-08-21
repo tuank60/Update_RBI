@@ -430,6 +430,18 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtBusInterRoof.Text = caTank.Business_Cost.ToString();
             txtTotalConsequenceRoof.Text = caTank.Consequence.ToString();
             txtConsequenceCategoryRoof.Text = caTank.ConsequenceCategory;
+            //luu vao bang RW_FULL_COF_BUS de ve riskmatrix
+            rw_full_COF_bus = new RW_FULL_COF_BUS();
+            rw_full_COF = new RW_FULL_COF();
+            rw_full_COF.ID = id;
+            rw_full_COF.CoFValue = float.Parse(txtTotalConsequenceRoof.Text);
+            rw_full_COF.CoFCategory = txtConsequenceCategoryRoof.Text;
+            rw_full_COF.CoFMatrixValue = 0;
+            if (rw_full_COF_bus.checkExistCoF(id))
+            {
+                rw_full_COF_bus.edit(rw_full_COF);
+            }
+            else rw_full_COF_bus.add(rw_full_COF);
         }
  
         private void initData_Tank(int ID)
@@ -473,6 +485,18 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_COF_TANK obj = COFBus.getData(ID);
             txtEquipMulBottom.Text = obj.EquipOutageMultiplier.ToString();
             txtCostProdBottom.Text = obj.ProdCost.ToString();
+            //luu vao bang RW_FULL_COF_BUS de ve riskmatrix
+            rw_full_COF_bus = new RW_FULL_COF_BUS();
+            rw_full_COF = new RW_FULL_COF();
+            rw_full_COF.ID = id;
+            rw_full_COF.CoFValue = float.Parse(tbTotalConsequence.Text);
+            rw_full_COF.CoFCategory = tbConsequenceCategory.Text;
+            rw_full_COF.CoFMatrixValue = 0;
+            if (rw_full_COF_bus.checkExistCoF(id))
+            {
+                rw_full_COF_bus.edit(rw_full_COF);
+            }
+            else rw_full_COF_bus.add(rw_full_COF);
         }
         
         private void initData_InputTank(int ID)
@@ -573,7 +597,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             //tbDamageSurroundEquipmentShell.Text = cần bổ sung base 
             //tbCostOfBusinessInterruptionShell.Text = caTank.Business_Cost.ToString();
             //tbCostAssociatedPersonInjury.Text = cần bổ sung base 
-
+            
             #endregion
         }
 
@@ -1165,6 +1189,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             rw_full_COF = new RW_FULL_COF();
             rw_full_COF.ID = id;
             rw_full_COF.CoFValue = float.Parse(txtFCoF.Text);
+            if (float.IsNaN(rw_full_COF.CoFValue)) rw_full_COF.CoFValue = 0;
             rw_full_COF.CoFCategory = txtCoFC.Text;
             rw_full_COF.CoFMatrixValue = 0;
             if (rw_full_COF_bus.checkExistCoF(id))
@@ -1731,6 +1756,18 @@ namespace RBI.PRE.subForm.OutputDataForm
             float FC = (float)(CA.fc_affa_tank() + CA.fc_prod_tank() + CA.fc_inj_tank()+ CA.FC_leak_environ() + CA.FC_rupture_environ() + CA.fc_cmd());
             txtTotalConsequenceShell.Text = FC.ToString();
             txtConsequenceCategoryShell.Text = CA.FC_Category(FC);
+            //luu vao bang RW_FULL_COF_BUS de ve riskmatrix
+            rw_full_COF_bus = new RW_FULL_COF_BUS();
+            rw_full_COF = new RW_FULL_COF();
+            rw_full_COF.ID = id;
+            rw_full_COF.CoFValue = float.Parse(txtTotalConsequenceShell.Text);
+            rw_full_COF.CoFCategory = txtConsequenceCategoryShell.Text;
+            rw_full_COF.CoFMatrixValue = 0;
+            if (rw_full_COF_bus.checkExistCoF(id))
+            {
+                rw_full_COF_bus.edit(rw_full_COF);
+            }
+            else rw_full_COF_bus.add(rw_full_COF);
 
         }
 

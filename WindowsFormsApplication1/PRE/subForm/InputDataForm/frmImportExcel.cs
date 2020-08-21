@@ -249,7 +249,14 @@ namespace RBI.PRE.subForm.InputDataForm
                 else
                     busComMaster.add(comM);
             }
-
+            //haiK61
+            //
+            RW_FULL_COF_HOLE_SIZE_BUS hsbus = new RW_FULL_COF_HOLE_SIZE_BUS();
+            RW_FULL_COF_HOLE_SIZE rwfholesize = new RW_FULL_COF_HOLE_SIZE();
+            //
+            RW_FULL_COF_FLUID_BUS rwFullCoFFluidBus = new RW_FULL_COF_FLUID_BUS();
+            RW_FULL_COF_FLUID rwFullCoFFluid = new RW_FULL_COF_FLUID();
+            //
             List<RW_ASSESSMENT> listRW_Assessment = busExcelProcess.getAssessment();
             List<int> editExcel = new List<int>();
             List<int> addExcel = new List<int>();
@@ -266,6 +273,13 @@ namespace RBI.PRE.subForm.InputDataForm
                             rwAss.ID = ID_checkAddbyExcel[i][1];
                             editExcel.Add(rwAss.ID);
                             busAss.edit(rwAss);
+                            //
+                            //
+                            rwFullCoFFluid.ID = rwAss.ID;
+                            rwFullCoFFluidBus.edit(rwFullCoFFluid);
+                            //
+                            rwfholesize.ID = rwAss.ID;
+                            hsbus.edit(rwfholesize);
                         }
                     }
                 }
@@ -274,6 +288,14 @@ namespace RBI.PRE.subForm.InputDataForm
                     rwAss.AddByExcel = 1;
                     busAss.add(rwAss);
                     int assID = busAss.getLastID();
+                    //
+                    //
+                    rwFullCoFFluid.ID = assID;
+                    rwFullCoFFluidBus.add(rwFullCoFFluid);
+                    //
+                    rwfholesize.ID = assID;
+                    hsbus.add(rwfholesize);
+                    //
                     addExcel.Add(assID);
                     RW_INPUT_CA_LEVEL_1 inputCA = new RW_INPUT_CA_LEVEL_1();
                     inputCA.ID = assID;

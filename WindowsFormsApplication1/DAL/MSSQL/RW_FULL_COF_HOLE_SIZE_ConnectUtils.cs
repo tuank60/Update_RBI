@@ -149,6 +149,45 @@ namespace RBI.DAL.MSSQL
                         double mass_add_1, double mass_add_2, double mass_add_3, double mass_add_4, double mass_avail_1, double mass_avail_2, double mass_avail_3, double mass_avail_4, double rate_1, double rate_2, double rate_3, double rate_4, double ld_1, double ld_2, double ld_3, double ld_4, double mass_1, double mass_2, double mass_3, double mass_4,
                         double eneff_1, double eneff_2, double eneff_3, double eneff_4, double factIC_1, double factIC_2, double factIC_3, double factIC_4, String ReleaseType_1, String ReleaseType_2, String ReleaseType_3, String ReleaseType_4)
         {
+            if (float.IsNaN((float)W1)) W1 = 0;
+            if (float.IsNaN((float)W2)) W2 = 0;
+            if (float.IsNaN((float)W3)) W3 = 0;
+            if (float.IsNaN((float)W4)) W4 = 0;
+            if (float.IsNaN((float)t_n1)) t_n1 = 0;
+            if (float.IsNaN((float)t_n2)) t_n2 = 0;
+            if (float.IsNaN((float)t_n3)) t_n3 = 0;
+            if (float.IsNaN((float)t_n4)) t_n4 = 0;
+            if (float.IsNaN((float)mass_add_1)) mass_add_1 = 0;
+            if (float.IsNaN((float)mass_add_3)) mass_add_3 = 0;
+            if (float.IsNaN((float)mass_add_4)) mass_add_4 = 0;
+            if (float.IsNaN((float)mass_add_2)) mass_add_2 = 0;
+            if (float.IsNaN((float)mass_avail_1)) mass_avail_1 = 0;
+            if (float.IsNaN((float)mass_avail_2)) mass_avail_2 = 0;
+            if (float.IsNaN((float)mass_avail_3)) mass_avail_3 = 0;
+            if (float.IsNaN((float)mass_avail_4)) mass_avail_4 = 0;
+            if (float.IsNaN((float)rate_1)) rate_1 = 0;
+            if (float.IsNaN((float)rate_2)) rate_2 = 0;
+            if (float.IsNaN((float)rate_3)) rate_3= 0;
+            if (float.IsNaN((float)rate_4)) rate_4 = 0;
+            if (float.IsNaN((float)ld_1)) ld_1 = 0;
+            if (float.IsNaN((float)ld_2)) ld_2 = 0;
+            if (float.IsNaN((float)ld_3)) ld_3 = 0;
+            if (float.IsNaN((float)ld_4)) ld_4 = 0;
+            if (float.IsNaN((float)mass_1)) mass_1 = 0;
+            if (float.IsNaN((float)mass_2)) mass_2 = 0;
+            if (float.IsNaN((float)mass_3)) mass_3 = 0;
+            if (float.IsNaN((float)mass_4)) mass_4 = 0;
+            if (float.IsNaN((float)eneff_1)) eneff_1 = 0;
+            if (float.IsNaN((float)eneff_2)) eneff_2 = 0;
+            if (float.IsNaN((float)eneff_3)) eneff_3 = 0;
+            if (float.IsNaN((float)eneff_4)) eneff_4 = 0;
+            if (float.IsNaN((float)factIC_1)) factIC_1 = 0;
+            if (float.IsNaN((float)factIC_2)) factIC_2 = 0;
+            if (float.IsNaN((float)factIC_3)) factIC_3 = 0;
+            if (float.IsNaN((float)factIC_4)) factIC_4 = 0;
+
+
+
             SqlConnection conn = MSSQLDBUtils.GetDBConnection();
             conn.Open();
             String sql = "USE [rbi]" +

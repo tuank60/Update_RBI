@@ -30,7 +30,12 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_FCOF_BUS busCoF = new RW_FULL_FCOF_BUS();
             RW_FULL_COF_BUS rw_full_COF_bus = new RW_FULL_COF_BUS();
             //RW_FULL_COF rw_full_COF = new RW_FULL_COF();
-
+            //RW_ASSESSMENT_BUS rwAssBus = new RW_ASSESSMENT_BUS();
+            //EQUIPMENT_MASTER_BUS eqipMasBus = new EQUIPMENT_MASTER_BUS();
+            
+            //float CoF = 0;
+            //if (eqipMasBus.getEquipmentTypeID(rwAssBus.getEquipmentID(ID)) != 11)//la thiet bi thuong
+            //     CoF = rw_full_COF_bus.getCoFValue(ID);
             float CoF = rw_full_COF_bus.getCoFValue(ID);
             int width = picRiskSummary.Width - 16;
             int height = picRiskSummary.Height - 16;
@@ -91,7 +96,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 if (DF[i] <= 3.00000006)
                 {
-                    coordinatesPoF[i] = 8+5*(y-2);
+                    coordinatesPoF[i] = 8+5*(y-2)-10;
                 }
                 else if (DF[i] <= 3.0000006)
                 {
@@ -124,7 +129,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             }
             if (CoF <= 1000)
             {
-                coordinatesCoF = 8;
+                coordinatesCoF = 8+2;
             }
             else if (CoF <= 10000)
             {
@@ -150,9 +155,10 @@ namespace RBI.PRE.subForm.OutputDataForm
 	        }
             else
             {
-                coordinatesCoF = 8 * x + 5*(x-2);
+                coordinatesCoF = 8 * x + 5*(x-2)-2;
             }
             Image[] image = { Resource1.Square_icon, Resource1.Circle_icon, Resource1.Triangle2_icon};
+            //coordinatesPoF[1] = 8;
             for (int i = 0; i < 3; i++)
             {
                 g.DrawImage(image[i], (float)coordinatesCoF, (float)coordinatesPoF[i]);

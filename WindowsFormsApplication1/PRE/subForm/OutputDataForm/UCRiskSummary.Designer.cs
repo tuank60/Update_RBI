@@ -34,7 +34,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.picChuThich = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,8 +49,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picChuThich = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picRiskSummary = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -123,6 +123,15 @@
             this.textBox1.TabIndex = 5;
             this.textBox1.Text = "AP1";
             // 
+            // picChuThich
+            // 
+            this.picChuThich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picChuThich.Location = new System.Drawing.Point(593, 3);
+            this.picChuThich.Name = "picChuThich";
+            this.picChuThich.Size = new System.Drawing.Size(87, 82);
+            this.picChuThich.TabIndex = 0;
+            this.picChuThich.TabStop = false;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -132,6 +141,15 @@
             this.label12.Size = new System.Drawing.Size(47, 16);
             this.label12.TabIndex = 4;
             this.label12.Text = "$100M";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(29, 214);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // label11
             // 
@@ -253,28 +271,10 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Consequence";
             // 
-            // picChuThich
-            // 
-            this.picChuThich.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picChuThich.Location = new System.Drawing.Point(593, 3);
-            this.picChuThich.Name = "picChuThich";
-            this.picChuThich.Size = new System.Drawing.Size(87, 82);
-            this.picChuThich.TabIndex = 0;
-            this.picChuThich.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 214);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // picRiskSummary
             // 
             this.picRiskSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picRiskSummary.Location = new System.Drawing.Point(166, 3);
+            this.picRiskSummary.Location = new System.Drawing.Point(166, 2);
             this.picRiskSummary.Name = "picRiskSummary";
             this.picRiskSummary.Size = new System.Drawing.Size(396, 332);
             this.picRiskSummary.TabIndex = 0;

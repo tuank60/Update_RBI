@@ -272,7 +272,10 @@ namespace RBI.PRE.subForm.InputDataForm
                 }
             }
 
-            //Rw Assessment
+            //Rw Assessment va RW_FULL_COF_FLUID
+            //haiK61
+            RW_FULL_COF_FLUID_BUS rwFullCoFFluidBus = new RW_FULL_COF_FLUID_BUS();
+            RW_FULL_COF_FLUID rwFullCoFFluid = new RW_FULL_COF_FLUID();
             List<RW_ASSESSMENT> lstAssessment = busExcel.getAssessment();
             List<int> editExcel = new List<int>();
             List<int> addExcel = new List<int>();
@@ -288,6 +291,11 @@ namespace RBI.PRE.subForm.InputDataForm
                             ass.ID = ID_checkAddbyExcel[i][1];
                             editExcel.Add(ass.ID);
                             busAss.edit(ass);
+                            //
+                            rwFullCoFFluid.ID = ass.ID;
+                            rwFullCoFFluidBus.edit(rwFullCoFFluid);
+                            //luu bang RW_FULL_COF_FLUID_BUS 
+                            
                         }
                     }
                 }
@@ -295,7 +303,12 @@ namespace RBI.PRE.subForm.InputDataForm
                 {
                     ass.AddByExcel = 1;
                     busAss.add(ass);
+                   
                     int assID = busAss.getLastID();
+                    //
+                    rwFullCoFFluid.ID = assID;
+                    rwFullCoFFluidBus.add(rwFullCoFFluid);
+                    //
                     addExcel.Add(assID);
                     RW_INPUT_CA_TANK inputCATank = new RW_INPUT_CA_TANK();
                     inputCATank.ID = assID;
