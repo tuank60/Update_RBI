@@ -3747,3 +3747,16 @@ D:\rbi code\app\19.8\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.exe.licen
 D:\rbi code\app\19.8\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.TrustInfo.xml
 D:\rbi code\app\19.8\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.exe.manifest
 D:\rbi code\app\19.8\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.application
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.frmDamageFactor.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCAmineStressCorrosionCracking.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCBrittleFracture.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCCausticCracking.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCExternalCorrosion.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCHydrogenStressCracking_HSC_HF_.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCInternalLiningDegradation.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCInternalThinning.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCPolythionicAcidCracking.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCSulphideStressCracking.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UCVibration_Induced_Mechanical_Fatigue.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UC_HF_Produced_HIC_SOHIC.resources
+C:\Users\Dat\Desktop\Update_RBI\WindowsFormsApplication1\obj\Debug\RBI.PRE.subForm.OutputDataForm.OutputPOF.UC_HIC_SOHIC_H2S.resources

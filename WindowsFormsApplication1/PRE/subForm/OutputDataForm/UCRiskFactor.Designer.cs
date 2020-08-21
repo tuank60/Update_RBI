@@ -1486,7 +1486,7 @@
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 2675);
+            this.tabPoF.Size = new System.Drawing.Size(961, 2673);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -2227,7 +2227,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 2675);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 2673);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -2488,7 +2488,7 @@
             this.TabArea.Controls.Add(this.groupBoxIV);
             this.TabArea.Controls.Add(this.groupBox3);
             this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(961, 2675);
+            this.TabArea.Size = new System.Drawing.Size(961, 2673);
             this.TabArea.Text = "Area-based CoF";
             // 
             // groupBoxIV
@@ -2598,6 +2598,7 @@
             this.txtNonFlammableNonToxicCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNonFlammableNonToxicCon.Location = new System.Drawing.Point(368, 144);
             this.txtNonFlammableNonToxicCon.Name = "txtNonFlammableNonToxicCon";
+            this.txtNonFlammableNonToxicCon.ReadOnly = true;
             this.txtNonFlammableNonToxicCon.Size = new System.Drawing.Size(229, 20);
             this.txtNonFlammableNonToxicCon.TabIndex = 25;
             // 
@@ -2616,6 +2617,7 @@
             this.txtBlend_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlend_CA2.Location = new System.Drawing.Point(408, 118);
             this.txtBlend_CA2.Name = "txtBlend_CA2";
+            this.txtBlend_CA2.ReadOnly = true;
             this.txtBlend_CA2.Size = new System.Drawing.Size(133, 20);
             this.txtBlend_CA2.TabIndex = 20;
             // 
@@ -2633,6 +2635,7 @@
             this.txtCONT_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCONT_CA3.Location = new System.Drawing.Point(576, 67);
             this.txtCONT_CA3.Name = "txtCONT_CA3";
+            this.txtCONT_CA3.ReadOnly = true;
             this.txtCONT_CA3.Size = new System.Drawing.Size(133, 20);
             this.txtCONT_CA3.TabIndex = 9;
             // 
@@ -2650,6 +2653,7 @@
             this.txtINST_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtINST_CA3.Location = new System.Drawing.Point(576, 93);
             this.txtINST_CA3.Name = "txtINST_CA3";
+            this.txtINST_CA3.ReadOnly = true;
             this.txtINST_CA3.Size = new System.Drawing.Size(133, 20);
             this.txtINST_CA3.TabIndex = 15;
             // 
@@ -2667,6 +2671,7 @@
             this.txtBlend_CA3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlend_CA3.Location = new System.Drawing.Point(576, 118);
             this.txtBlend_CA3.Name = "txtBlend_CA3";
+            this.txtBlend_CA3.ReadOnly = true;
             this.txtBlend_CA3.Size = new System.Drawing.Size(133, 20);
             this.txtBlend_CA3.TabIndex = 21;
             // 
@@ -2694,6 +2699,7 @@
             this.txtBlend_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlend_CA4.Location = new System.Drawing.Point(745, 118);
             this.txtBlend_CA4.Name = "txtBlend_CA4";
+            this.txtBlend_CA4.ReadOnly = true;
             this.txtBlend_CA4.Size = new System.Drawing.Size(133, 20);
             this.txtBlend_CA4.TabIndex = 22;
             // 
@@ -2702,6 +2708,7 @@
             this.txtCONT_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCONT_CA4.Location = new System.Drawing.Point(745, 67);
             this.txtCONT_CA4.Name = "txtCONT_CA4";
+            this.txtCONT_CA4.ReadOnly = true;
             this.txtCONT_CA4.Size = new System.Drawing.Size(133, 20);
             this.txtCONT_CA4.TabIndex = 10;
             // 
@@ -2730,6 +2737,7 @@
             this.txtINST_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtINST_CA1.Location = new System.Drawing.Point(240, 93);
             this.txtINST_CA1.Name = "txtINST_CA1";
+            this.txtINST_CA1.ReadOnly = true;
             this.txtINST_CA1.Size = new System.Drawing.Size(133, 20);
             this.txtINST_CA1.TabIndex = 13;
             // 
@@ -2738,6 +2746,7 @@
             this.txtINST_CA4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtINST_CA4.Location = new System.Drawing.Point(745, 93);
             this.txtINST_CA4.Name = "txtINST_CA4";
+            this.txtINST_CA4.ReadOnly = true;
             this.txtINST_CA4.Size = new System.Drawing.Size(133, 20);
             this.txtINST_CA4.TabIndex = 16;
             // 
@@ -2746,6 +2755,7 @@
             this.txtCONT_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCONT_CA1.Location = new System.Drawing.Point(240, 67);
             this.txtCONT_CA1.Name = "txtCONT_CA1";
+            this.txtCONT_CA1.ReadOnly = true;
             this.txtCONT_CA1.Size = new System.Drawing.Size(133, 20);
             this.txtCONT_CA1.TabIndex = 7;
             // 
@@ -2754,6 +2764,7 @@
             this.txtINST_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtINST_CA2.Location = new System.Drawing.Point(408, 93);
             this.txtINST_CA2.Name = "txtINST_CA2";
+            this.txtINST_CA2.ReadOnly = true;
             this.txtINST_CA2.Size = new System.Drawing.Size(133, 20);
             this.txtINST_CA2.TabIndex = 14;
             // 
@@ -2762,6 +2773,7 @@
             this.txtBlend_CA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlend_CA1.Location = new System.Drawing.Point(240, 118);
             this.txtBlend_CA1.Name = "txtBlend_CA1";
+            this.txtBlend_CA1.ReadOnly = true;
             this.txtBlend_CA1.Size = new System.Drawing.Size(133, 20);
             this.txtBlend_CA1.TabIndex = 19;
             // 
@@ -2770,6 +2782,7 @@
             this.txtCONT_CA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCONT_CA2.Location = new System.Drawing.Point(408, 67);
             this.txtCONT_CA2.Name = "txtCONT_CA2";
+            this.txtCONT_CA2.ReadOnly = true;
             this.txtCONT_CA2.Size = new System.Drawing.Size(133, 20);
             this.txtCONT_CA2.TabIndex = 8;
             // 
@@ -2859,7 +2872,7 @@
             this.tabToxic1.Controls.Add(this.txtContESmall_toxic1);
             this.tabToxic1.Controls.Add(this.txtContCSmall_toxic1);
             this.tabToxic1.Name = "tabToxic1";
-            this.tabToxic1.Size = new System.Drawing.Size(934, 286);
+            this.tabToxic1.Size = new System.Drawing.Size(934, 284);
             this.tabToxic1.Text = "tabToxic1";
             // 
             // label441
@@ -2897,6 +2910,7 @@
             this.txtContFMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFMedium_toxic1.Location = new System.Drawing.Point(431, 145);
             this.txtContFMedium_toxic1.Name = "txtContFMedium_toxic1";
+            this.txtContFMedium_toxic1.ReadOnly = true;
             this.txtContFMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContFMedium_toxic1.TabIndex = 27;
             // 
@@ -2915,6 +2929,7 @@
             this.txtContEMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContEMedium_toxic1.Location = new System.Drawing.Point(431, 120);
             this.txtContEMedium_toxic1.Name = "txtContEMedium_toxic1";
+            this.txtContEMedium_toxic1.ReadOnly = true;
             this.txtContEMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContEMedium_toxic1.TabIndex = 22;
             // 
@@ -2933,6 +2948,7 @@
             this.txtContFLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFLarge_toxic1.Location = new System.Drawing.Point(599, 146);
             this.txtContFLarge_toxic1.Name = "txtContFLarge_toxic1";
+            this.txtContFLarge_toxic1.ReadOnly = true;
             this.txtContFLarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContFLarge_toxic1.TabIndex = 28;
             // 
@@ -2951,6 +2967,7 @@
             this.txtMassRateLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateLarge_toxic1.Location = new System.Drawing.Point(599, 171);
             this.txtMassRateLarge_toxic1.Name = "txtMassRateLarge_toxic1";
+            this.txtMassRateLarge_toxic1.ReadOnly = true;
             this.txtMassRateLarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateLarge_toxic1.TabIndex = 33;
             // 
@@ -2958,6 +2975,7 @@
             // 
             this.txtFlammalbePICA_toxic1.Location = new System.Drawing.Point(348, 257);
             this.txtFlammalbePICA_toxic1.Name = "txtFlammalbePICA_toxic1";
+            this.txtFlammalbePICA_toxic1.ReadOnly = true;
             this.txtFlammalbePICA_toxic1.Size = new System.Drawing.Size(270, 21);
             this.txtFlammalbePICA_toxic1.TabIndex = 46;
             // 
@@ -2966,6 +2984,7 @@
             this.txtMassRateMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateMedium_toxic1.Location = new System.Drawing.Point(431, 170);
             this.txtMassRateMedium_toxic1.Name = "txtMassRateMedium_toxic1";
+            this.txtMassRateMedium_toxic1.ReadOnly = true;
             this.txtMassRateMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateMedium_toxic1.TabIndex = 32;
             // 
@@ -2983,6 +3002,7 @@
             this.txtContDMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDMedium_toxic1.Location = new System.Drawing.Point(431, 95);
             this.txtContDMedium_toxic1.Name = "txtContDMedium_toxic1";
+            this.txtContDMedium_toxic1.ReadOnly = true;
             this.txtContDMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContDMedium_toxic1.TabIndex = 17;
             // 
@@ -3000,6 +3020,7 @@
             this.txtMassMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassMedium_toxic1.Location = new System.Drawing.Point(431, 195);
             this.txtMassMedium_toxic1.Name = "txtMassMedium_toxic1";
+            this.txtMassMedium_toxic1.ReadOnly = true;
             this.txtMassMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassMedium_toxic1.TabIndex = 37;
             // 
@@ -3017,6 +3038,7 @@
             this.txtLDToxicLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicLarge_toxic1.Location = new System.Drawing.Point(599, 45);
             this.txtLDToxicLarge_toxic1.Name = "txtLDToxicLarge_toxic1";
+            this.txtLDToxicLarge_toxic1.ReadOnly = true;
             this.txtLDToxicLarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicLarge_toxic1.TabIndex = 8;
             // 
@@ -3034,6 +3056,7 @@
             this.txtContELarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContELarge_toxic1.Location = new System.Drawing.Point(599, 121);
             this.txtContELarge_toxic1.Name = "txtContELarge_toxic1";
+            this.txtContELarge_toxic1.ReadOnly = true;
             this.txtContELarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContELarge_toxic1.TabIndex = 23;
             // 
@@ -3051,6 +3074,7 @@
             this.txtMassLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassLarge_toxic1.Location = new System.Drawing.Point(599, 196);
             this.txtMassLarge_toxic1.Name = "txtMassLarge_toxic1";
+            this.txtMassLarge_toxic1.ReadOnly = true;
             this.txtMassLarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassLarge_toxic1.TabIndex = 38;
             // 
@@ -3068,6 +3092,7 @@
             this.txtToxicCAMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCAMedium_toxic1.Location = new System.Drawing.Point(431, 220);
             this.txtToxicCAMedium_toxic1.Name = "txtToxicCAMedium_toxic1";
+            this.txtToxicCAMedium_toxic1.ReadOnly = true;
             this.txtToxicCAMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCAMedium_toxic1.TabIndex = 42;
             // 
@@ -3085,6 +3110,7 @@
             this.txtContCLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCLarge_toxic1.Location = new System.Drawing.Point(599, 71);
             this.txtContCLarge_toxic1.Name = "txtContCLarge_toxic1";
+            this.txtContCLarge_toxic1.ReadOnly = true;
             this.txtContCLarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContCLarge_toxic1.TabIndex = 13;
             // 
@@ -3102,6 +3128,7 @@
             this.txtContDLarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDLarge_toxic1.Location = new System.Drawing.Point(599, 96);
             this.txtContDLarge_toxic1.Name = "txtContDLarge_toxic1";
+            this.txtContDLarge_toxic1.ReadOnly = true;
             this.txtContDLarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContDLarge_toxic1.TabIndex = 18;
             // 
@@ -3119,6 +3146,7 @@
             this.txtToxicCALarge_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCALarge_toxic1.Location = new System.Drawing.Point(599, 221);
             this.txtToxicCALarge_toxic1.Name = "txtToxicCALarge_toxic1";
+            this.txtToxicCALarge_toxic1.ReadOnly = true;
             this.txtToxicCALarge_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCALarge_toxic1.TabIndex = 43;
             // 
@@ -3127,6 +3155,7 @@
             this.txtContDRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDRupture_toxic1.Location = new System.Drawing.Point(767, 96);
             this.txtContDRupture_toxic1.Name = "txtContDRupture_toxic1";
+            this.txtContDRupture_toxic1.ReadOnly = true;
             this.txtContDRupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContDRupture_toxic1.TabIndex = 19;
             // 
@@ -3145,6 +3174,7 @@
             this.txtLDToxicRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicRupture_toxic1.Location = new System.Drawing.Point(767, 45);
             this.txtLDToxicRupture_toxic1.Name = "txtLDToxicRupture_toxic1";
+            this.txtLDToxicRupture_toxic1.ReadOnly = true;
             this.txtLDToxicRupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicRupture_toxic1.TabIndex = 9;
             // 
@@ -3153,6 +3183,7 @@
             this.txtContERupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContERupture_toxic1.Location = new System.Drawing.Point(767, 121);
             this.txtContERupture_toxic1.Name = "txtContERupture_toxic1";
+            this.txtContERupture_toxic1.ReadOnly = true;
             this.txtContERupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContERupture_toxic1.TabIndex = 24;
             // 
@@ -3171,6 +3202,7 @@
             this.txtToxicCASmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCASmall_toxic1.Location = new System.Drawing.Point(263, 220);
             this.txtToxicCASmall_toxic1.Name = "txtToxicCASmall_toxic1";
+            this.txtToxicCASmall_toxic1.ReadOnly = true;
             this.txtToxicCASmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCASmall_toxic1.TabIndex = 41;
             // 
@@ -3179,6 +3211,7 @@
             this.txtContCRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCRupture_toxic1.Location = new System.Drawing.Point(767, 71);
             this.txtContCRupture_toxic1.Name = "txtContCRupture_toxic1";
+            this.txtContCRupture_toxic1.ReadOnly = true;
             this.txtContCRupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContCRupture_toxic1.TabIndex = 14;
             // 
@@ -3187,6 +3220,7 @@
             this.txtContFRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFRupture_toxic1.Location = new System.Drawing.Point(767, 146);
             this.txtContFRupture_toxic1.Name = "txtContFRupture_toxic1";
+            this.txtContFRupture_toxic1.ReadOnly = true;
             this.txtContFRupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContFRupture_toxic1.TabIndex = 29;
             // 
@@ -3195,6 +3229,7 @@
             this.txtContCMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMedium_toxic1.Location = new System.Drawing.Point(431, 70);
             this.txtContCMedium_toxic1.Name = "txtContCMedium_toxic1";
+            this.txtContCMedium_toxic1.ReadOnly = true;
             this.txtContCMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContCMedium_toxic1.TabIndex = 12;
             // 
@@ -3203,6 +3238,7 @@
             this.txtMassSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassSmall_toxic1.Location = new System.Drawing.Point(263, 195);
             this.txtMassSmall_toxic1.Name = "txtMassSmall_toxic1";
+            this.txtMassSmall_toxic1.ReadOnly = true;
             this.txtMassSmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassSmall_toxic1.TabIndex = 36;
             // 
@@ -3221,6 +3257,7 @@
             this.txtMassRateRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateRupture_toxic1.Location = new System.Drawing.Point(767, 171);
             this.txtMassRateRupture_toxic1.Name = "txtMassRateRupture_toxic1";
+            this.txtMassRateRupture_toxic1.ReadOnly = true;
             this.txtMassRateRupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateRupture_toxic1.TabIndex = 34;
             // 
@@ -3229,6 +3266,7 @@
             this.txtLDToxicMedium_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicMedium_toxic1.Location = new System.Drawing.Point(431, 44);
             this.txtLDToxicMedium_toxic1.Name = "txtLDToxicMedium_toxic1";
+            this.txtLDToxicMedium_toxic1.ReadOnly = true;
             this.txtLDToxicMedium_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicMedium_toxic1.TabIndex = 7;
             // 
@@ -3237,6 +3275,7 @@
             this.txtMassRateSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateSmall_toxic1.Location = new System.Drawing.Point(263, 170);
             this.txtMassRateSmall_toxic1.Name = "txtMassRateSmall_toxic1";
+            this.txtMassRateSmall_toxic1.ReadOnly = true;
             this.txtMassRateSmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateSmall_toxic1.TabIndex = 31;
             // 
@@ -3255,6 +3294,7 @@
             this.txtMassRupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRupture_toxic1.Location = new System.Drawing.Point(767, 196);
             this.txtMassRupture_toxic1.Name = "txtMassRupture_toxic1";
+            this.txtMassRupture_toxic1.ReadOnly = true;
             this.txtMassRupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtMassRupture_toxic1.TabIndex = 39;
             // 
@@ -3263,6 +3303,7 @@
             this.txtContDSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDSmall_toxic1.Location = new System.Drawing.Point(263, 95);
             this.txtContDSmall_toxic1.Name = "txtContDSmall_toxic1";
+            this.txtContDSmall_toxic1.ReadOnly = true;
             this.txtContDSmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContDSmall_toxic1.TabIndex = 16;
             // 
@@ -3271,6 +3312,7 @@
             this.txtContFSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFSmall_toxic1.Location = new System.Drawing.Point(263, 145);
             this.txtContFSmall_toxic1.Name = "txtContFSmall_toxic1";
+            this.txtContFSmall_toxic1.ReadOnly = true;
             this.txtContFSmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContFSmall_toxic1.TabIndex = 26;
             // 
@@ -3279,6 +3321,7 @@
             this.txtLDToxicSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicSmall_toxic1.Location = new System.Drawing.Point(263, 44);
             this.txtLDToxicSmall_toxic1.Name = "txtLDToxicSmall_toxic1";
+            this.txtLDToxicSmall_toxic1.ReadOnly = true;
             this.txtLDToxicSmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicSmall_toxic1.TabIndex = 6;
             // 
@@ -3287,6 +3330,7 @@
             this.txtToxicCARupture_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCARupture_toxic1.Location = new System.Drawing.Point(767, 221);
             this.txtToxicCARupture_toxic1.Name = "txtToxicCARupture_toxic1";
+            this.txtToxicCARupture_toxic1.ReadOnly = true;
             this.txtToxicCARupture_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCARupture_toxic1.TabIndex = 44;
             // 
@@ -3295,6 +3339,7 @@
             this.txtContESmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContESmall_toxic1.Location = new System.Drawing.Point(263, 120);
             this.txtContESmall_toxic1.Name = "txtContESmall_toxic1";
+            this.txtContESmall_toxic1.ReadOnly = true;
             this.txtContESmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContESmall_toxic1.TabIndex = 21;
             // 
@@ -3303,6 +3348,7 @@
             this.txtContCSmall_toxic1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCSmall_toxic1.Location = new System.Drawing.Point(263, 70);
             this.txtContCSmall_toxic1.Name = "txtContCSmall_toxic1";
+            this.txtContCSmall_toxic1.ReadOnly = true;
             this.txtContCSmall_toxic1.Size = new System.Drawing.Size(133, 20);
             this.txtContCSmall_toxic1.TabIndex = 11;
             // 
@@ -3361,7 +3407,7 @@
             this.tabToxic2.Controls.Add(this.txtContESmall_toxic2);
             this.tabToxic2.Controls.Add(this.txtContCSmall_toxic2);
             this.tabToxic2.Name = "tabToxic2";
-            this.tabToxic2.Size = new System.Drawing.Size(934, 286);
+            this.tabToxic2.Size = new System.Drawing.Size(934, 284);
             this.tabToxic2.Text = "tabToxic2";
             // 
             // label380
@@ -3399,6 +3445,7 @@
             this.txtContFMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFMedium_toxic2.Location = new System.Drawing.Point(431, 145);
             this.txtContFMedium_toxic2.Name = "txtContFMedium_toxic2";
+            this.txtContFMedium_toxic2.ReadOnly = true;
             this.txtContFMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContFMedium_toxic2.TabIndex = 326;
             // 
@@ -3417,6 +3464,7 @@
             this.txtContEMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContEMedium_toxic2.Location = new System.Drawing.Point(431, 120);
             this.txtContEMedium_toxic2.Name = "txtContEMedium_toxic2";
+            this.txtContEMedium_toxic2.ReadOnly = true;
             this.txtContEMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContEMedium_toxic2.TabIndex = 321;
             // 
@@ -3435,6 +3483,7 @@
             this.txtContFLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFLarge_toxic2.Location = new System.Drawing.Point(599, 146);
             this.txtContFLarge_toxic2.Name = "txtContFLarge_toxic2";
+            this.txtContFLarge_toxic2.ReadOnly = true;
             this.txtContFLarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContFLarge_toxic2.TabIndex = 327;
             // 
@@ -3453,6 +3502,7 @@
             this.txtMassRateLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateLarge_toxic2.Location = new System.Drawing.Point(599, 171);
             this.txtMassRateLarge_toxic2.Name = "txtMassRateLarge_toxic2";
+            this.txtMassRateLarge_toxic2.ReadOnly = true;
             this.txtMassRateLarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateLarge_toxic2.TabIndex = 332;
             // 
@@ -3460,6 +3510,7 @@
             // 
             this.txtFlammalbePICA_toxic2.Location = new System.Drawing.Point(348, 257);
             this.txtFlammalbePICA_toxic2.Name = "txtFlammalbePICA_toxic2";
+            this.txtFlammalbePICA_toxic2.ReadOnly = true;
             this.txtFlammalbePICA_toxic2.Size = new System.Drawing.Size(270, 21);
             this.txtFlammalbePICA_toxic2.TabIndex = 345;
             // 
@@ -3468,6 +3519,7 @@
             this.txtMassRateMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateMedium_toxic2.Location = new System.Drawing.Point(431, 170);
             this.txtMassRateMedium_toxic2.Name = "txtMassRateMedium_toxic2";
+            this.txtMassRateMedium_toxic2.ReadOnly = true;
             this.txtMassRateMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateMedium_toxic2.TabIndex = 331;
             // 
@@ -3485,6 +3537,7 @@
             this.txtContDMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDMedium_toxic2.Location = new System.Drawing.Point(431, 95);
             this.txtContDMedium_toxic2.Name = "txtContDMedium_toxic2";
+            this.txtContDMedium_toxic2.ReadOnly = true;
             this.txtContDMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContDMedium_toxic2.TabIndex = 316;
             // 
@@ -3502,6 +3555,7 @@
             this.txtMassMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassMedium_toxic2.Location = new System.Drawing.Point(431, 195);
             this.txtMassMedium_toxic2.Name = "txtMassMedium_toxic2";
+            this.txtMassMedium_toxic2.ReadOnly = true;
             this.txtMassMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassMedium_toxic2.TabIndex = 336;
             // 
@@ -3519,6 +3573,7 @@
             this.txtLDToxicLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicLarge_toxic2.Location = new System.Drawing.Point(599, 45);
             this.txtLDToxicLarge_toxic2.Name = "txtLDToxicLarge_toxic2";
+            this.txtLDToxicLarge_toxic2.ReadOnly = true;
             this.txtLDToxicLarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicLarge_toxic2.TabIndex = 307;
             // 
@@ -3536,6 +3591,7 @@
             this.txtContELarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContELarge_toxic2.Location = new System.Drawing.Point(599, 121);
             this.txtContELarge_toxic2.Name = "txtContELarge_toxic2";
+            this.txtContELarge_toxic2.ReadOnly = true;
             this.txtContELarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContELarge_toxic2.TabIndex = 322;
             // 
@@ -3553,6 +3609,7 @@
             this.txtMassLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassLarge_toxic2.Location = new System.Drawing.Point(599, 196);
             this.txtMassLarge_toxic2.Name = "txtMassLarge_toxic2";
+            this.txtMassLarge_toxic2.ReadOnly = true;
             this.txtMassLarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassLarge_toxic2.TabIndex = 337;
             // 
@@ -3570,6 +3627,7 @@
             this.txtToxicCAMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCAMedium_toxic2.Location = new System.Drawing.Point(431, 220);
             this.txtToxicCAMedium_toxic2.Name = "txtToxicCAMedium_toxic2";
+            this.txtToxicCAMedium_toxic2.ReadOnly = true;
             this.txtToxicCAMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCAMedium_toxic2.TabIndex = 341;
             // 
@@ -3587,6 +3645,7 @@
             this.txtContCLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCLarge_toxic2.Location = new System.Drawing.Point(599, 71);
             this.txtContCLarge_toxic2.Name = "txtContCLarge_toxic2";
+            this.txtContCLarge_toxic2.ReadOnly = true;
             this.txtContCLarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContCLarge_toxic2.TabIndex = 312;
             // 
@@ -3604,6 +3663,7 @@
             this.txtContDLarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDLarge_toxic2.Location = new System.Drawing.Point(599, 96);
             this.txtContDLarge_toxic2.Name = "txtContDLarge_toxic2";
+            this.txtContDLarge_toxic2.ReadOnly = true;
             this.txtContDLarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContDLarge_toxic2.TabIndex = 317;
             // 
@@ -3621,6 +3681,7 @@
             this.txtToxicCALarge_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCALarge_toxic2.Location = new System.Drawing.Point(599, 221);
             this.txtToxicCALarge_toxic2.Name = "txtToxicCALarge_toxic2";
+            this.txtToxicCALarge_toxic2.ReadOnly = true;
             this.txtToxicCALarge_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCALarge_toxic2.TabIndex = 342;
             // 
@@ -3629,6 +3690,7 @@
             this.txtContDRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDRupture_toxic2.Location = new System.Drawing.Point(767, 96);
             this.txtContDRupture_toxic2.Name = "txtContDRupture_toxic2";
+            this.txtContDRupture_toxic2.ReadOnly = true;
             this.txtContDRupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContDRupture_toxic2.TabIndex = 318;
             // 
@@ -3647,6 +3709,7 @@
             this.txtLDToxicRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicRupture_toxic2.Location = new System.Drawing.Point(767, 45);
             this.txtLDToxicRupture_toxic2.Name = "txtLDToxicRupture_toxic2";
+            this.txtLDToxicRupture_toxic2.ReadOnly = true;
             this.txtLDToxicRupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicRupture_toxic2.TabIndex = 308;
             // 
@@ -3655,6 +3718,7 @@
             this.txtContERupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContERupture_toxic2.Location = new System.Drawing.Point(767, 121);
             this.txtContERupture_toxic2.Name = "txtContERupture_toxic2";
+            this.txtContERupture_toxic2.ReadOnly = true;
             this.txtContERupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContERupture_toxic2.TabIndex = 323;
             // 
@@ -3673,6 +3737,7 @@
             this.txtToxicCASmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCASmall_toxic2.Location = new System.Drawing.Point(263, 220);
             this.txtToxicCASmall_toxic2.Name = "txtToxicCASmall_toxic2";
+            this.txtToxicCASmall_toxic2.ReadOnly = true;
             this.txtToxicCASmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCASmall_toxic2.TabIndex = 340;
             // 
@@ -3681,6 +3746,7 @@
             this.txtContCRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCRupture_toxic2.Location = new System.Drawing.Point(767, 71);
             this.txtContCRupture_toxic2.Name = "txtContCRupture_toxic2";
+            this.txtContCRupture_toxic2.ReadOnly = true;
             this.txtContCRupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContCRupture_toxic2.TabIndex = 313;
             // 
@@ -3689,6 +3755,7 @@
             this.txtContFRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFRupture_toxic2.Location = new System.Drawing.Point(767, 146);
             this.txtContFRupture_toxic2.Name = "txtContFRupture_toxic2";
+            this.txtContFRupture_toxic2.ReadOnly = true;
             this.txtContFRupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContFRupture_toxic2.TabIndex = 328;
             // 
@@ -3697,6 +3764,7 @@
             this.txtContCMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMedium_toxic2.Location = new System.Drawing.Point(431, 70);
             this.txtContCMedium_toxic2.Name = "txtContCMedium_toxic2";
+            this.txtContCMedium_toxic2.ReadOnly = true;
             this.txtContCMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContCMedium_toxic2.TabIndex = 311;
             // 
@@ -3705,6 +3773,7 @@
             this.txtMassSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassSmall_toxic2.Location = new System.Drawing.Point(263, 195);
             this.txtMassSmall_toxic2.Name = "txtMassSmall_toxic2";
+            this.txtMassSmall_toxic2.ReadOnly = true;
             this.txtMassSmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassSmall_toxic2.TabIndex = 335;
             // 
@@ -3723,6 +3792,7 @@
             this.txtMassRateRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateRupture_toxic2.Location = new System.Drawing.Point(767, 171);
             this.txtMassRateRupture_toxic2.Name = "txtMassRateRupture_toxic2";
+            this.txtMassRateRupture_toxic2.ReadOnly = true;
             this.txtMassRateRupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateRupture_toxic2.TabIndex = 333;
             // 
@@ -3731,6 +3801,7 @@
             this.txtLDToxicMedium_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicMedium_toxic2.Location = new System.Drawing.Point(431, 44);
             this.txtLDToxicMedium_toxic2.Name = "txtLDToxicMedium_toxic2";
+            this.txtLDToxicMedium_toxic2.ReadOnly = true;
             this.txtLDToxicMedium_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicMedium_toxic2.TabIndex = 306;
             // 
@@ -3739,6 +3810,7 @@
             this.txtMassRateSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRateSmall_toxic2.Location = new System.Drawing.Point(263, 170);
             this.txtMassRateSmall_toxic2.Name = "txtMassRateSmall_toxic2";
+            this.txtMassRateSmall_toxic2.ReadOnly = true;
             this.txtMassRateSmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassRateSmall_toxic2.TabIndex = 330;
             // 
@@ -3757,6 +3829,7 @@
             this.txtMassRupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassRupture_toxic2.Location = new System.Drawing.Point(767, 196);
             this.txtMassRupture_toxic2.Name = "txtMassRupture_toxic2";
+            this.txtMassRupture_toxic2.ReadOnly = true;
             this.txtMassRupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtMassRupture_toxic2.TabIndex = 338;
             // 
@@ -3765,6 +3838,7 @@
             this.txtContDSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContDSmall_toxic2.Location = new System.Drawing.Point(263, 95);
             this.txtContDSmall_toxic2.Name = "txtContDSmall_toxic2";
+            this.txtContDSmall_toxic2.ReadOnly = true;
             this.txtContDSmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContDSmall_toxic2.TabIndex = 315;
             // 
@@ -3773,6 +3847,7 @@
             this.txtContFSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContFSmall_toxic2.Location = new System.Drawing.Point(263, 145);
             this.txtContFSmall_toxic2.Name = "txtContFSmall_toxic2";
+            this.txtContFSmall_toxic2.ReadOnly = true;
             this.txtContFSmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContFSmall_toxic2.TabIndex = 325;
             // 
@@ -3781,6 +3856,7 @@
             this.txtLDToxicSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLDToxicSmall_toxic2.Location = new System.Drawing.Point(263, 44);
             this.txtLDToxicSmall_toxic2.Name = "txtLDToxicSmall_toxic2";
+            this.txtLDToxicSmall_toxic2.ReadOnly = true;
             this.txtLDToxicSmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtLDToxicSmall_toxic2.TabIndex = 305;
             // 
@@ -3789,6 +3865,7 @@
             this.txtToxicCARupture_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicCARupture_toxic2.Location = new System.Drawing.Point(767, 221);
             this.txtToxicCARupture_toxic2.Name = "txtToxicCARupture_toxic2";
+            this.txtToxicCARupture_toxic2.ReadOnly = true;
             this.txtToxicCARupture_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtToxicCARupture_toxic2.TabIndex = 343;
             // 
@@ -3797,6 +3874,7 @@
             this.txtContESmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContESmall_toxic2.Location = new System.Drawing.Point(263, 120);
             this.txtContESmall_toxic2.Name = "txtContESmall_toxic2";
+            this.txtContESmall_toxic2.ReadOnly = true;
             this.txtContESmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContESmall_toxic2.TabIndex = 320;
             // 
@@ -3805,6 +3883,7 @@
             this.txtContCSmall_toxic2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCSmall_toxic2.Location = new System.Drawing.Point(263, 70);
             this.txtContCSmall_toxic2.Name = "txtContCSmall_toxic2";
+            this.txtContCSmall_toxic2.ReadOnly = true;
             this.txtContCSmall_toxic2.Size = new System.Drawing.Size(133, 20);
             this.txtContCSmall_toxic2.TabIndex = 310;
             // 
@@ -3974,7 +4053,7 @@
             this.tabmodel.Controls.Add(this.txtBlendFactorSmall_model);
             this.tabmodel.Controls.Add(this.txtContINJAINLSmall_model);
             this.tabmodel.Name = "tabmodel";
-            this.tabmodel.Size = new System.Drawing.Size(935, 775);
+            this.tabmodel.Size = new System.Drawing.Size(935, 773);
             this.tabmodel.Text = "tabmodel";
             // 
             // txtFlammablePICA_model
@@ -3982,6 +4061,7 @@
             this.txtFlammablePICA_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFlammablePICA_model.Location = new System.Drawing.Point(306, 737);
             this.txtFlammablePICA_model.Name = "txtFlammablePICA_model";
+            this.txtFlammablePICA_model.ReadOnly = true;
             this.txtFlammablePICA_model.Size = new System.Drawing.Size(301, 20);
             this.txtFlammablePICA_model.TabIndex = 303;
             // 
@@ -3990,6 +4070,7 @@
             this.txtFlammableCDCA_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFlammableCDCA_model.Location = new System.Drawing.Point(306, 703);
             this.txtFlammableCDCA_model.Name = "txtFlammableCDCA_model";
+            this.txtFlammableCDCA_model.ReadOnly = true;
             this.txtFlammableCDCA_model.Size = new System.Drawing.Size(301, 20);
             this.txtFlammableCDCA_model.TabIndex = 302;
             // 
@@ -4015,6 +4096,7 @@
             // 
             this.txtAContAILCMD_model.Location = new System.Drawing.Point(337, 61);
             this.txtAContAILCMD_model.Name = "txtAContAILCMD_model";
+            this.txtAContAILCMD_model.ReadOnly = true;
             this.txtAContAILCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtAContAILCMD_model.TabIndex = 170;
             // 
@@ -4194,6 +4276,7 @@
             // 
             this.txtAContAINLCMD_model.Location = new System.Drawing.Point(337, 37);
             this.txtAContAINLCMD_model.Name = "txtAContAINLCMD_model";
+            this.txtAContAINLCMD_model.ReadOnly = true;
             this.txtAContAINLCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtAContAINLCMD_model.TabIndex = 169;
             // 
@@ -4211,6 +4294,7 @@
             // 
             this.txtAInstAINLCMD_model.Location = new System.Drawing.Point(337, 85);
             this.txtAInstAINLCMD_model.Name = "txtAInstAINLCMD_model";
+            this.txtAInstAINLCMD_model.ReadOnly = true;
             this.txtAInstAINLCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAINLCMD_model.TabIndex = 171;
             // 
@@ -4228,6 +4312,7 @@
             // 
             this.txtAInstAILCMD_model.Location = new System.Drawing.Point(337, 109);
             this.txtAInstAILCMD_model.Name = "txtAInstAILCMD_model";
+            this.txtAInstAILCMD_model.ReadOnly = true;
             this.txtAInstAILCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAILCMD_model.TabIndex = 172;
             // 
@@ -4245,6 +4330,7 @@
             // 
             this.txtAContAINLINJ_model.Location = new System.Drawing.Point(337, 133);
             this.txtAContAINLINJ_model.Name = "txtAContAINLINJ_model";
+            this.txtAContAINLINJ_model.ReadOnly = true;
             this.txtAContAINLINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtAContAINLINJ_model.TabIndex = 173;
             // 
@@ -4262,6 +4348,7 @@
             // 
             this.txtAContAILINJ_model.Location = new System.Drawing.Point(337, 157);
             this.txtAContAILINJ_model.Name = "txtAContAILINJ_model";
+            this.txtAContAILINJ_model.ReadOnly = true;
             this.txtAContAILINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtAContAILINJ_model.TabIndex = 174;
             // 
@@ -4279,6 +4366,7 @@
             // 
             this.txtAInstAINLINJ_model.Location = new System.Drawing.Point(337, 181);
             this.txtAInstAINLINJ_model.Name = "txtAInstAINLINJ_model";
+            this.txtAInstAINLINJ_model.ReadOnly = true;
             this.txtAInstAINLINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAINLINJ_model.TabIndex = 175;
             // 
@@ -4296,6 +4384,7 @@
             // 
             this.txtAInstAILINJ_model.Location = new System.Drawing.Point(337, 205);
             this.txtAInstAILINJ_model.Name = "txtAInstAILINJ_model";
+            this.txtAInstAILINJ_model.ReadOnly = true;
             this.txtAInstAILINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAILINJ_model.TabIndex = 176;
             // 
@@ -4303,6 +4392,7 @@
             // 
             this.txtBContAINLCMD_model.Location = new System.Drawing.Point(441, 37);
             this.txtBContAINLCMD_model.Name = "txtBContAINLCMD_model";
+            this.txtBContAINLCMD_model.ReadOnly = true;
             this.txtBContAINLCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtBContAINLCMD_model.TabIndex = 177;
             // 
@@ -4310,6 +4400,7 @@
             // 
             this.txtBContAILCMD_model.Location = new System.Drawing.Point(441, 61);
             this.txtBContAILCMD_model.Name = "txtBContAILCMD_model";
+            this.txtBContAILCMD_model.ReadOnly = true;
             this.txtBContAILCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtBContAILCMD_model.TabIndex = 178;
             // 
@@ -4317,6 +4408,7 @@
             // 
             this.txtBInstAINLCMD_model.Location = new System.Drawing.Point(441, 85);
             this.txtBInstAINLCMD_model.Name = "txtBInstAINLCMD_model";
+            this.txtBInstAINLCMD_model.ReadOnly = true;
             this.txtBInstAINLCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAINLCMD_model.TabIndex = 179;
             // 
@@ -4324,6 +4416,7 @@
             // 
             this.txtBInstAILCMD_model.Location = new System.Drawing.Point(441, 109);
             this.txtBInstAILCMD_model.Name = "txtBInstAILCMD_model";
+            this.txtBInstAILCMD_model.ReadOnly = true;
             this.txtBInstAILCMD_model.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAILCMD_model.TabIndex = 180;
             // 
@@ -4340,6 +4433,7 @@
             // 
             this.txtBContAINLINJ_model.Location = new System.Drawing.Point(441, 133);
             this.txtBContAINLINJ_model.Name = "txtBContAINLINJ_model";
+            this.txtBContAINLINJ_model.ReadOnly = true;
             this.txtBContAINLINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtBContAINLINJ_model.TabIndex = 181;
             // 
@@ -4356,6 +4450,7 @@
             // 
             this.txtBContAILINJ_model.Location = new System.Drawing.Point(441, 157);
             this.txtBContAILINJ_model.Name = "txtBContAILINJ_model";
+            this.txtBContAILINJ_model.ReadOnly = true;
             this.txtBContAILINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtBContAILINJ_model.TabIndex = 182;
             // 
@@ -4372,6 +4467,7 @@
             // 
             this.txtBInstAINLINJ_model.Location = new System.Drawing.Point(441, 181);
             this.txtBInstAINLINJ_model.Name = "txtBInstAINLINJ_model";
+            this.txtBInstAINLINJ_model.ReadOnly = true;
             this.txtBInstAINLINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAINLINJ_model.TabIndex = 183;
             // 
@@ -4388,6 +4484,7 @@
             // 
             this.txtBInstAILINJ_model.Location = new System.Drawing.Point(441, 205);
             this.txtBInstAILINJ_model.Name = "txtBInstAILINJ_model";
+            this.txtBInstAILINJ_model.ReadOnly = true;
             this.txtBInstAILINJ_model.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAILINJ_model.TabIndex = 184;
             // 
@@ -4415,6 +4512,7 @@
             this.txtAITBlendINJRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJRupture_model.Location = new System.Drawing.Point(736, 656);
             this.txtAITBlendINJRupture_model.Name = "txtAITBlendINJRupture_model";
+            this.txtAITBlendINJRupture_model.ReadOnly = true;
             this.txtAITBlendINJRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJRupture_model.TabIndex = 262;
             // 
@@ -4433,6 +4531,7 @@
             this.txtBlendINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLSmall_model.Location = new System.Drawing.Point(232, 580);
             this.txtBlendINJAINLSmall_model.Name = "txtBlendINJAINLSmall_model";
+            this.txtBlendINJAINLSmall_model.ReadOnly = true;
             this.txtBlendINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLSmall_model.TabIndex = 250;
             // 
@@ -4451,6 +4550,7 @@
             this.txtBlendINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILSmall_model.Location = new System.Drawing.Point(232, 605);
             this.txtBlendINJAILSmall_model.Name = "txtBlendINJAILSmall_model";
+            this.txtBlendINJAILSmall_model.ReadOnly = true;
             this.txtBlendINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILSmall_model.TabIndex = 249;
             // 
@@ -4459,6 +4559,7 @@
             this.txtInstCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILMedium_model.Location = new System.Drawing.Point(400, 380);
             this.txtInstCMDAILMedium_model.Name = "txtInstCMDAILMedium_model";
+            this.txtInstCMDAILMedium_model.ReadOnly = true;
             this.txtInstCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILMedium_model.TabIndex = 211;
             // 
@@ -4467,6 +4568,7 @@
             this.txtBlendCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILSmall_model.Location = new System.Drawing.Point(232, 555);
             this.txtBlendCMDAILSmall_model.Name = "txtBlendCMDAILSmall_model";
+            this.txtBlendCMDAILSmall_model.ReadOnly = true;
             this.txtBlendCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILSmall_model.TabIndex = 251;
             // 
@@ -4475,6 +4577,7 @@
             this.txtInstCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLMedium_model.Location = new System.Drawing.Point(400, 355);
             this.txtInstCMDAINLMedium_model.Name = "txtInstCMDAINLMedium_model";
+            this.txtInstCMDAINLMedium_model.ReadOnly = true;
             this.txtInstCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLMedium_model.TabIndex = 212;
             // 
@@ -4483,6 +4586,7 @@
             this.txtAITBlendCMDSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDSmall_model.Location = new System.Drawing.Point(232, 630);
             this.txtAITBlendCMDSmall_model.Name = "txtAITBlendCMDSmall_model";
+            this.txtAITBlendCMDSmall_model.ReadOnly = true;
             this.txtAITBlendCMDSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDSmall_model.TabIndex = 248;
             // 
@@ -4491,6 +4595,7 @@
             this.txtInstCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILLarge_model.Location = new System.Drawing.Point(568, 381);
             this.txtInstCMDAILLarge_model.Name = "txtInstCMDAILLarge_model";
+            this.txtInstCMDAILLarge_model.ReadOnly = true;
             this.txtInstCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILLarge_model.TabIndex = 222;
             // 
@@ -4499,6 +4604,7 @@
             this.txtBlendCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILRupture_model.Location = new System.Drawing.Point(736, 556);
             this.txtBlendCMDAILRupture_model.Name = "txtBlendCMDAILRupture_model";
+            this.txtBlendCMDAILRupture_model.ReadOnly = true;
             this.txtBlendCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILRupture_model.TabIndex = 266;
             // 
@@ -4507,6 +4613,7 @@
             this.txtContINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLLarge_model.Location = new System.Drawing.Point(568, 406);
             this.txtContINJAINLLarge_model.Name = "txtContINJAINLLarge_model";
+            this.txtContINJAINLLarge_model.ReadOnly = true;
             this.txtContINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLLarge_model.TabIndex = 221;
             // 
@@ -4515,6 +4622,7 @@
             this.txtAITBlendINJSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJSmall_model.Location = new System.Drawing.Point(232, 655);
             this.txtAITBlendINJSmall_model.Name = "txtAITBlendINJSmall_model";
+            this.txtAITBlendINJSmall_model.ReadOnly = true;
             this.txtAITBlendINJSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJSmall_model.TabIndex = 247;
             // 
@@ -4523,6 +4631,7 @@
             this.txtContINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLMedium_model.Location = new System.Drawing.Point(400, 405);
             this.txtContINJAINLMedium_model.Name = "txtContINJAINLMedium_model";
+            this.txtContINJAINLMedium_model.ReadOnly = true;
             this.txtContINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLMedium_model.TabIndex = 210;
             // 
@@ -4531,6 +4640,7 @@
             this.txtBlendINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLRupture_model.Location = new System.Drawing.Point(736, 581);
             this.txtBlendINJAINLRupture_model.Name = "txtBlendINJAINLRupture_model";
+            this.txtBlendINJAINLRupture_model.ReadOnly = true;
             this.txtBlendINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLRupture_model.TabIndex = 265;
             // 
@@ -4539,6 +4649,7 @@
             this.txtContCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILMedium_model.Location = new System.Drawing.Point(400, 330);
             this.txtContCMDAILMedium_model.Name = "txtContCMDAILMedium_model";
+            this.txtContCMDAILMedium_model.ReadOnly = true;
             this.txtContCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILMedium_model.TabIndex = 213;
             // 
@@ -4547,6 +4658,7 @@
             this.txtBlendINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILRupture_model.Location = new System.Drawing.Point(736, 606);
             this.txtBlendINJAILRupture_model.Name = "txtBlendINJAILRupture_model";
+            this.txtBlendINJAILRupture_model.ReadOnly = true;
             this.txtBlendINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILRupture_model.TabIndex = 264;
             // 
@@ -4555,6 +4667,7 @@
             this.txtContINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILMedium_model.Location = new System.Drawing.Point(400, 430);
             this.txtContINJAILMedium_model.Name = "txtContINJAILMedium_model";
+            this.txtContINJAILMedium_model.ReadOnly = true;
             this.txtContINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILMedium_model.TabIndex = 209;
             // 
@@ -4563,6 +4676,7 @@
             this.txtAITBlendCMDRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDRupture_model.Location = new System.Drawing.Point(736, 631);
             this.txtAITBlendCMDRupture_model.Name = "txtAITBlendCMDRupture_model";
+            this.txtAITBlendCMDRupture_model.ReadOnly = true;
             this.txtAITBlendCMDRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDRupture_model.TabIndex = 263;
             // 
@@ -4571,6 +4685,7 @@
             this.txtEneffLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffLarge_model.Location = new System.Drawing.Point(568, 280);
             this.txtEneffLarge_model.Name = "txtEneffLarge_model";
+            this.txtEneffLarge_model.ReadOnly = true;
             this.txtEneffLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtEneffLarge_model.TabIndex = 214;
             // 
@@ -4579,6 +4694,7 @@
             this.txtAITBlendINJMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJMedium_model.Location = new System.Drawing.Point(400, 655);
             this.txtAITBlendINJMedium_model.Name = "txtAITBlendINJMedium_model";
+            this.txtAITBlendINJMedium_model.ReadOnly = true;
             this.txtAITBlendINJMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJMedium_model.TabIndex = 252;
             // 
@@ -4587,6 +4703,7 @@
             this.txtInstCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLLarge_model.Location = new System.Drawing.Point(568, 356);
             this.txtInstCMDAINLLarge_model.Name = "txtInstCMDAINLLarge_model";
+            this.txtInstCMDAINLLarge_model.ReadOnly = true;
             this.txtInstCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLLarge_model.TabIndex = 223;
             // 
@@ -4595,6 +4712,7 @@
             this.txtBlendINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILLarge_model.Location = new System.Drawing.Point(568, 606);
             this.txtBlendINJAILLarge_model.Name = "txtBlendINJAILLarge_model";
+            this.txtBlendINJAILLarge_model.ReadOnly = true;
             this.txtBlendINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILLarge_model.TabIndex = 259;
             // 
@@ -4603,6 +4721,7 @@
             this.txtContINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILLarge_model.Location = new System.Drawing.Point(568, 431);
             this.txtContINJAILLarge_model.Name = "txtContINJAILLarge_model";
+            this.txtContINJAILLarge_model.ReadOnly = true;
             this.txtContINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILLarge_model.TabIndex = 220;
             // 
@@ -4611,6 +4730,7 @@
             this.txtAITBlendCMDLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDLarge_model.Location = new System.Drawing.Point(568, 631);
             this.txtAITBlendCMDLarge_model.Name = "txtAITBlendCMDLarge_model";
+            this.txtAITBlendCMDLarge_model.ReadOnly = true;
             this.txtAITBlendCMDLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDLarge_model.TabIndex = 258;
             // 
@@ -4619,6 +4739,7 @@
             this.txtInstINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLMedium_model.Location = new System.Drawing.Point(400, 455);
             this.txtInstINJAINLMedium_model.Name = "txtInstINJAINLMedium_model";
+            this.txtInstINJAINLMedium_model.ReadOnly = true;
             this.txtInstINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLMedium_model.TabIndex = 208;
             // 
@@ -4627,6 +4748,7 @@
             this.txtAITBlendCMDMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDMedium_model.Location = new System.Drawing.Point(400, 630);
             this.txtAITBlendCMDMedium_model.Name = "txtAITBlendCMDMedium_model";
+            this.txtAITBlendCMDMedium_model.ReadOnly = true;
             this.txtAITBlendCMDMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDMedium_model.TabIndex = 253;
             // 
@@ -4635,6 +4757,7 @@
             this.txtContCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLLarge_model.Location = new System.Drawing.Point(568, 306);
             this.txtContCMDAINLLarge_model.Name = "txtContCMDAINLLarge_model";
+            this.txtContCMDAINLLarge_model.ReadOnly = true;
             this.txtContCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLLarge_model.TabIndex = 215;
             // 
@@ -4643,6 +4766,7 @@
             this.txtBlendINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLLarge_model.Location = new System.Drawing.Point(568, 581);
             this.txtBlendINJAINLLarge_model.Name = "txtBlendINJAINLLarge_model";
+            this.txtBlendINJAINLLarge_model.ReadOnly = true;
             this.txtBlendINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLLarge_model.TabIndex = 260;
             // 
@@ -4651,6 +4775,7 @@
             this.txtInstINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILMedium_model.Location = new System.Drawing.Point(400, 480);
             this.txtInstINJAILMedium_model.Name = "txtInstINJAILMedium_model";
+            this.txtInstINJAILMedium_model.ReadOnly = true;
             this.txtInstINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILMedium_model.TabIndex = 207;
             // 
@@ -4659,6 +4784,7 @@
             this.txtAITBlendINJLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJLarge_model.Location = new System.Drawing.Point(568, 656);
             this.txtAITBlendINJLarge_model.Name = "txtAITBlendINJLarge_model";
+            this.txtAITBlendINJLarge_model.ReadOnly = true;
             this.txtAITBlendINJLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJLarge_model.TabIndex = 257;
             // 
@@ -4667,6 +4793,7 @@
             this.txtBlendCMDAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLLarge_model.Location = new System.Drawing.Point(568, 531);
             this.txtBlendCMDAINLLarge_model.Name = "txtBlendCMDAINLLarge_model";
+            this.txtBlendCMDAINLLarge_model.ReadOnly = true;
             this.txtBlendCMDAINLLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLLarge_model.TabIndex = 216;
             // 
@@ -4675,6 +4802,7 @@
             this.txtBlendINJAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILMedium_model.Location = new System.Drawing.Point(400, 605);
             this.txtBlendINJAILMedium_model.Name = "txtBlendINJAILMedium_model";
+            this.txtBlendINJAILMedium_model.ReadOnly = true;
             this.txtBlendINJAILMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILMedium_model.TabIndex = 254;
             // 
@@ -4683,6 +4811,7 @@
             this.txtContCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILLarge_model.Location = new System.Drawing.Point(568, 331);
             this.txtContCMDAILLarge_model.Name = "txtContCMDAILLarge_model";
+            this.txtContCMDAILLarge_model.ReadOnly = true;
             this.txtContCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILLarge_model.TabIndex = 224;
             // 
@@ -4691,6 +4820,7 @@
             this.txtBlendINJAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLMedium_model.Location = new System.Drawing.Point(400, 580);
             this.txtBlendINJAINLMedium_model.Name = "txtBlendINJAINLMedium_model";
+            this.txtBlendINJAINLMedium_model.ReadOnly = true;
             this.txtBlendINJAINLMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLMedium_model.TabIndex = 255;
             // 
@@ -4699,6 +4829,7 @@
             this.txtInstINJAINLLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLLarge_model.Location = new System.Drawing.Point(568, 456);
             this.txtInstINJAINLLarge_model.Name = "txtInstINJAINLLarge_model";
+            this.txtInstINJAINLLarge_model.ReadOnly = true;
             this.txtInstINJAINLLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLLarge_model.TabIndex = 219;
             // 
@@ -4707,6 +4838,7 @@
             this.txtBlendCMDAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILLarge_model.Location = new System.Drawing.Point(568, 556);
             this.txtBlendCMDAILLarge_model.Name = "txtBlendCMDAILLarge_model";
+            this.txtBlendCMDAILLarge_model.ReadOnly = true;
             this.txtBlendCMDAILLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILLarge_model.TabIndex = 261;
             // 
@@ -4715,6 +4847,7 @@
             this.txtBlendFactorMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorMedium_model.Location = new System.Drawing.Point(400, 505);
             this.txtBlendFactorMedium_model.Name = "txtBlendFactorMedium_model";
+            this.txtBlendFactorMedium_model.ReadOnly = true;
             this.txtBlendFactorMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorMedium_model.TabIndex = 206;
             // 
@@ -4723,6 +4856,7 @@
             this.txtBlendCMDAILMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILMedium_model.Location = new System.Drawing.Point(400, 555);
             this.txtBlendCMDAILMedium_model.Name = "txtBlendCMDAILMedium_model";
+            this.txtBlendCMDAILMedium_model.ReadOnly = true;
             this.txtBlendCMDAILMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILMedium_model.TabIndex = 256;
             // 
@@ -4731,6 +4865,7 @@
             this.txtBlendFactorLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorLarge_model.Location = new System.Drawing.Point(568, 506);
             this.txtBlendFactorLarge_model.Name = "txtBlendFactorLarge_model";
+            this.txtBlendFactorLarge_model.ReadOnly = true;
             this.txtBlendFactorLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorLarge_model.TabIndex = 217;
             // 
@@ -4767,6 +4902,7 @@
             this.txtInstINJAILLarge_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILLarge_model.Location = new System.Drawing.Point(568, 481);
             this.txtInstINJAILLarge_model.Name = "txtInstINJAILLarge_model";
+            this.txtInstINJAILLarge_model.ReadOnly = true;
             this.txtInstINJAILLarge_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILLarge_model.TabIndex = 218;
             // 
@@ -4784,6 +4920,7 @@
             this.txtEneffRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffRupture_model.Location = new System.Drawing.Point(736, 280);
             this.txtEneffRupture_model.Name = "txtEneffRupture_model";
+            this.txtEneffRupture_model.ReadOnly = true;
             this.txtEneffRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtEneffRupture_model.TabIndex = 225;
             // 
@@ -4801,6 +4938,7 @@
             this.txtBlendCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLMedium_model.Location = new System.Drawing.Point(400, 530);
             this.txtBlendCMDAINLMedium_model.Name = "txtBlendCMDAINLMedium_model";
+            this.txtBlendCMDAINLMedium_model.ReadOnly = true;
             this.txtBlendCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLMedium_model.TabIndex = 205;
             // 
@@ -4837,6 +4975,7 @@
             this.txtContCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLRupture_model.Location = new System.Drawing.Point(736, 306);
             this.txtContCMDAINLRupture_model.Name = "txtContCMDAINLRupture_model";
+            this.txtContCMDAINLRupture_model.ReadOnly = true;
             this.txtContCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLRupture_model.TabIndex = 226;
             // 
@@ -4854,6 +4993,7 @@
             this.txtContCMDAINLMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLMedium_model.Location = new System.Drawing.Point(400, 305);
             this.txtContCMDAINLMedium_model.Name = "txtContCMDAINLMedium_model";
+            this.txtContCMDAINLMedium_model.ReadOnly = true;
             this.txtContCMDAINLMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLMedium_model.TabIndex = 204;
             // 
@@ -4890,6 +5030,7 @@
             this.txtEneffMedium_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffMedium_model.Location = new System.Drawing.Point(400, 279);
             this.txtEneffMedium_model.Name = "txtEneffMedium_model";
+            this.txtEneffMedium_model.ReadOnly = true;
             this.txtEneffMedium_model.Size = new System.Drawing.Size(133, 20);
             this.txtEneffMedium_model.TabIndex = 203;
             // 
@@ -4926,6 +5067,7 @@
             this.txtBlendFactorRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorRupture_model.Location = new System.Drawing.Point(736, 506);
             this.txtBlendFactorRupture_model.Name = "txtBlendFactorRupture_model";
+            this.txtBlendFactorRupture_model.ReadOnly = true;
             this.txtBlendFactorRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorRupture_model.TabIndex = 228;
             // 
@@ -4934,6 +5076,7 @@
             this.txtContCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILRupture_model.Location = new System.Drawing.Point(736, 331);
             this.txtContCMDAILRupture_model.Name = "txtContCMDAILRupture_model";
+            this.txtContCMDAILRupture_model.ReadOnly = true;
             this.txtContCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILRupture_model.TabIndex = 235;
             // 
@@ -4942,6 +5085,7 @@
             this.txtContCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILSmall_model.Location = new System.Drawing.Point(232, 330);
             this.txtContCMDAILSmall_model.Name = "txtContCMDAILSmall_model";
+            this.txtContCMDAILSmall_model.ReadOnly = true;
             this.txtContCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILSmall_model.TabIndex = 202;
             // 
@@ -4950,6 +5094,7 @@
             this.txtEneffSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffSmall_model.Location = new System.Drawing.Point(232, 279);
             this.txtEneffSmall_model.Name = "txtEneffSmall_model";
+            this.txtEneffSmall_model.ReadOnly = true;
             this.txtEneffSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtEneffSmall_model.TabIndex = 192;
             // 
@@ -4958,6 +5103,7 @@
             this.txtInstCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLRupture_model.Location = new System.Drawing.Point(736, 356);
             this.txtInstCMDAINLRupture_model.Name = "txtInstCMDAINLRupture_model";
+            this.txtInstCMDAINLRupture_model.ReadOnly = true;
             this.txtInstCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLRupture_model.TabIndex = 234;
             // 
@@ -4966,6 +5112,7 @@
             this.txtInstINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILRupture_model.Location = new System.Drawing.Point(736, 481);
             this.txtInstINJAILRupture_model.Name = "txtInstINJAILRupture_model";
+            this.txtInstINJAILRupture_model.ReadOnly = true;
             this.txtInstINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILRupture_model.TabIndex = 229;
             // 
@@ -4974,6 +5121,7 @@
             this.txtBlendCMDAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLRupture_model.Location = new System.Drawing.Point(736, 531);
             this.txtBlendCMDAINLRupture_model.Name = "txtBlendCMDAINLRupture_model";
+            this.txtBlendCMDAINLRupture_model.ReadOnly = true;
             this.txtBlendCMDAINLRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLRupture_model.TabIndex = 227;
             // 
@@ -4982,6 +5130,7 @@
             this.txtInstCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLSmall_model.Location = new System.Drawing.Point(232, 355);
             this.txtInstCMDAINLSmall_model.Name = "txtInstCMDAINLSmall_model";
+            this.txtInstCMDAINLSmall_model.ReadOnly = true;
             this.txtInstCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLSmall_model.TabIndex = 201;
             // 
@@ -4990,6 +5139,7 @@
             this.txtInstINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLSmall_model.Location = new System.Drawing.Point(232, 455);
             this.txtInstINJAINLSmall_model.Name = "txtInstINJAINLSmall_model";
+            this.txtInstINJAINLSmall_model.ReadOnly = true;
             this.txtInstINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLSmall_model.TabIndex = 197;
             // 
@@ -4998,6 +5148,7 @@
             this.txtContCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLSmall_model.Location = new System.Drawing.Point(232, 305);
             this.txtContCMDAINLSmall_model.Name = "txtContCMDAINLSmall_model";
+            this.txtContCMDAINLSmall_model.ReadOnly = true;
             this.txtContCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLSmall_model.TabIndex = 193;
             // 
@@ -5006,6 +5157,7 @@
             this.txtInstCMDAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILRupture_model.Location = new System.Drawing.Point(736, 381);
             this.txtInstCMDAILRupture_model.Name = "txtInstCMDAILRupture_model";
+            this.txtInstCMDAILRupture_model.ReadOnly = true;
             this.txtInstCMDAILRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILRupture_model.TabIndex = 233;
             // 
@@ -5014,6 +5166,7 @@
             this.txtInstINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLRupture_model.Location = new System.Drawing.Point(736, 456);
             this.txtInstINJAINLRupture_model.Name = "txtInstINJAINLRupture_model";
+            this.txtInstINJAINLRupture_model.ReadOnly = true;
             this.txtInstINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLRupture_model.TabIndex = 230;
             // 
@@ -5022,6 +5175,7 @@
             this.txtInstINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILSmall_model.Location = new System.Drawing.Point(232, 480);
             this.txtInstINJAILSmall_model.Name = "txtInstINJAILSmall_model";
+            this.txtInstINJAILSmall_model.ReadOnly = true;
             this.txtInstINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILSmall_model.TabIndex = 196;
             // 
@@ -5030,6 +5184,7 @@
             this.txtInstCMDAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILSmall_model.Location = new System.Drawing.Point(232, 380);
             this.txtInstCMDAILSmall_model.Name = "txtInstCMDAILSmall_model";
+            this.txtInstCMDAILSmall_model.ReadOnly = true;
             this.txtInstCMDAILSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILSmall_model.TabIndex = 200;
             // 
@@ -5038,6 +5193,7 @@
             this.txtContINJAILSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILSmall_model.Location = new System.Drawing.Point(232, 430);
             this.txtContINJAILSmall_model.Name = "txtContINJAILSmall_model";
+            this.txtContINJAILSmall_model.ReadOnly = true;
             this.txtContINJAILSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILSmall_model.TabIndex = 198;
             // 
@@ -5046,6 +5202,7 @@
             this.txtBlendCMDAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLSmall_model.Location = new System.Drawing.Point(232, 530);
             this.txtBlendCMDAINLSmall_model.Name = "txtBlendCMDAINLSmall_model";
+            this.txtBlendCMDAINLSmall_model.ReadOnly = true;
             this.txtBlendCMDAINLSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLSmall_model.TabIndex = 194;
             // 
@@ -5054,6 +5211,7 @@
             this.txtContINJAINLRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLRupture_model.Location = new System.Drawing.Point(736, 406);
             this.txtContINJAINLRupture_model.Name = "txtContINJAINLRupture_model";
+            this.txtContINJAINLRupture_model.ReadOnly = true;
             this.txtContINJAINLRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLRupture_model.TabIndex = 232;
             // 
@@ -5062,6 +5220,7 @@
             this.txtContINJAILRupture_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILRupture_model.Location = new System.Drawing.Point(736, 431);
             this.txtContINJAILRupture_model.Name = "txtContINJAILRupture_model";
+            this.txtContINJAILRupture_model.ReadOnly = true;
             this.txtContINJAILRupture_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILRupture_model.TabIndex = 231;
             // 
@@ -5070,6 +5229,7 @@
             this.txtBlendFactorSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorSmall_model.Location = new System.Drawing.Point(232, 505);
             this.txtBlendFactorSmall_model.Name = "txtBlendFactorSmall_model";
+            this.txtBlendFactorSmall_model.ReadOnly = true;
             this.txtBlendFactorSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorSmall_model.TabIndex = 195;
             // 
@@ -5078,6 +5238,7 @@
             this.txtContINJAINLSmall_model.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLSmall_model.Location = new System.Drawing.Point(232, 405);
             this.txtContINJAINLSmall_model.Name = "txtContINJAINLSmall_model";
+            this.txtContINJAINLSmall_model.ReadOnly = true;
             this.txtContINJAINLSmall_model.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLSmall_model.TabIndex = 199;
             // 
@@ -5215,7 +5376,7 @@
             this.tabtoxic.Controls.Add(this.txtBlendFactorSmall_toxic);
             this.tabtoxic.Controls.Add(this.txtContINJAINLSmall_toxic);
             this.tabtoxic.Name = "tabtoxic";
-            this.tabtoxic.Size = new System.Drawing.Size(935, 775);
+            this.tabtoxic.Size = new System.Drawing.Size(935, 773);
             this.tabtoxic.Text = "tabtoxic";
             // 
             // txtFlammablePICA_toxic
@@ -5223,6 +5384,7 @@
             this.txtFlammablePICA_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFlammablePICA_toxic.Location = new System.Drawing.Point(306, 737);
             this.txtFlammablePICA_toxic.Name = "txtFlammablePICA_toxic";
+            this.txtFlammablePICA_toxic.ReadOnly = true;
             this.txtFlammablePICA_toxic.Size = new System.Drawing.Size(301, 20);
             this.txtFlammablePICA_toxic.TabIndex = 434;
             // 
@@ -5231,6 +5393,7 @@
             this.txtFlammableCDCA_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFlammableCDCA_toxic.Location = new System.Drawing.Point(306, 703);
             this.txtFlammableCDCA_toxic.Name = "txtFlammableCDCA_toxic";
+            this.txtFlammableCDCA_toxic.ReadOnly = true;
             this.txtFlammableCDCA_toxic.Size = new System.Drawing.Size(301, 20);
             this.txtFlammableCDCA_toxic.TabIndex = 433;
             // 
@@ -5256,6 +5419,7 @@
             // 
             this.txtAContAILCMD_toxic.Location = new System.Drawing.Point(337, 61);
             this.txtAContAILCMD_toxic.Name = "txtAContAILCMD_toxic";
+            this.txtAContAILCMD_toxic.ReadOnly = true;
             this.txtAContAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAContAILCMD_toxic.TabIndex = 314;
             // 
@@ -5435,6 +5599,7 @@
             // 
             this.txtAContAINLCMD_toxic.Location = new System.Drawing.Point(337, 37);
             this.txtAContAINLCMD_toxic.Name = "txtAContAINLCMD_toxic";
+            this.txtAContAINLCMD_toxic.ReadOnly = true;
             this.txtAContAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAContAINLCMD_toxic.TabIndex = 313;
             // 
@@ -5452,6 +5617,7 @@
             // 
             this.txtAInstAINLCMD_toxic.Location = new System.Drawing.Point(337, 85);
             this.txtAInstAINLCMD_toxic.Name = "txtAInstAINLCMD_toxic";
+            this.txtAInstAINLCMD_toxic.ReadOnly = true;
             this.txtAInstAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAINLCMD_toxic.TabIndex = 315;
             // 
@@ -5469,6 +5635,7 @@
             // 
             this.txtAInstAILCMD_toxic.Location = new System.Drawing.Point(337, 109);
             this.txtAInstAILCMD_toxic.Name = "txtAInstAILCMD_toxic";
+            this.txtAInstAILCMD_toxic.ReadOnly = true;
             this.txtAInstAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAILCMD_toxic.TabIndex = 316;
             // 
@@ -5486,6 +5653,7 @@
             // 
             this.txtAContAINLINJ_toxic.Location = new System.Drawing.Point(337, 133);
             this.txtAContAINLINJ_toxic.Name = "txtAContAINLINJ_toxic";
+            this.txtAContAINLINJ_toxic.ReadOnly = true;
             this.txtAContAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAContAINLINJ_toxic.TabIndex = 317;
             // 
@@ -5503,6 +5671,7 @@
             // 
             this.txtAContAILINJ_toxic.Location = new System.Drawing.Point(337, 157);
             this.txtAContAILINJ_toxic.Name = "txtAContAILINJ_toxic";
+            this.txtAContAILINJ_toxic.ReadOnly = true;
             this.txtAContAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAContAILINJ_toxic.TabIndex = 318;
             // 
@@ -5520,6 +5689,7 @@
             // 
             this.txtAInstAINLINJ_toxic.Location = new System.Drawing.Point(337, 181);
             this.txtAInstAINLINJ_toxic.Name = "txtAInstAINLINJ_toxic";
+            this.txtAInstAINLINJ_toxic.ReadOnly = true;
             this.txtAInstAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAINLINJ_toxic.TabIndex = 319;
             // 
@@ -5537,6 +5707,7 @@
             // 
             this.txtAInstAILINJ_toxic.Location = new System.Drawing.Point(337, 205);
             this.txtAInstAILINJ_toxic.Name = "txtAInstAILINJ_toxic";
+            this.txtAInstAILINJ_toxic.ReadOnly = true;
             this.txtAInstAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtAInstAILINJ_toxic.TabIndex = 320;
             // 
@@ -5544,6 +5715,7 @@
             // 
             this.txtBContAINLCMD_toxic.Location = new System.Drawing.Point(441, 37);
             this.txtBContAINLCMD_toxic.Name = "txtBContAINLCMD_toxic";
+            this.txtBContAINLCMD_toxic.ReadOnly = true;
             this.txtBContAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBContAINLCMD_toxic.TabIndex = 321;
             // 
@@ -5551,6 +5723,7 @@
             // 
             this.txtBContAILCMD_toxic.Location = new System.Drawing.Point(441, 61);
             this.txtBContAILCMD_toxic.Name = "txtBContAILCMD_toxic";
+            this.txtBContAILCMD_toxic.ReadOnly = true;
             this.txtBContAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBContAILCMD_toxic.TabIndex = 322;
             // 
@@ -5558,6 +5731,7 @@
             // 
             this.txtBInstAINLCMD_toxic.Location = new System.Drawing.Point(441, 85);
             this.txtBInstAINLCMD_toxic.Name = "txtBInstAINLCMD_toxic";
+            this.txtBInstAINLCMD_toxic.ReadOnly = true;
             this.txtBInstAINLCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAINLCMD_toxic.TabIndex = 323;
             // 
@@ -5565,6 +5739,7 @@
             // 
             this.txtBInstAILCMD_toxic.Location = new System.Drawing.Point(441, 109);
             this.txtBInstAILCMD_toxic.Name = "txtBInstAILCMD_toxic";
+            this.txtBInstAILCMD_toxic.ReadOnly = true;
             this.txtBInstAILCMD_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAILCMD_toxic.TabIndex = 324;
             // 
@@ -5581,6 +5756,7 @@
             // 
             this.txtBContAINLINJ_toxic.Location = new System.Drawing.Point(441, 133);
             this.txtBContAINLINJ_toxic.Name = "txtBContAINLINJ_toxic";
+            this.txtBContAINLINJ_toxic.ReadOnly = true;
             this.txtBContAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBContAINLINJ_toxic.TabIndex = 325;
             // 
@@ -5597,6 +5773,7 @@
             // 
             this.txtBContAILINJ_toxic.Location = new System.Drawing.Point(441, 157);
             this.txtBContAILINJ_toxic.Name = "txtBContAILINJ_toxic";
+            this.txtBContAILINJ_toxic.ReadOnly = true;
             this.txtBContAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBContAILINJ_toxic.TabIndex = 326;
             // 
@@ -5613,6 +5790,7 @@
             // 
             this.txtBInstAINLINJ_toxic.Location = new System.Drawing.Point(441, 181);
             this.txtBInstAINLINJ_toxic.Name = "txtBInstAINLINJ_toxic";
+            this.txtBInstAINLINJ_toxic.ReadOnly = true;
             this.txtBInstAINLINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAINLINJ_toxic.TabIndex = 327;
             // 
@@ -5629,6 +5807,7 @@
             // 
             this.txtBInstAILINJ_toxic.Location = new System.Drawing.Point(441, 205);
             this.txtBInstAILINJ_toxic.Name = "txtBInstAILINJ_toxic";
+            this.txtBInstAILINJ_toxic.ReadOnly = true;
             this.txtBInstAILINJ_toxic.Size = new System.Drawing.Size(100, 21);
             this.txtBInstAILINJ_toxic.TabIndex = 328;
             // 
@@ -5656,6 +5835,7 @@
             this.txtAITBlendINJRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJRupture_toxic.Location = new System.Drawing.Point(736, 656);
             this.txtAITBlendINJRupture_toxic.Name = "txtAITBlendINJRupture_toxic";
+            this.txtAITBlendINJRupture_toxic.ReadOnly = true;
             this.txtAITBlendINJRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJRupture_toxic.TabIndex = 406;
             // 
@@ -5674,6 +5854,7 @@
             this.txtBlendINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLSmall_toxic.Location = new System.Drawing.Point(232, 580);
             this.txtBlendINJAINLSmall_toxic.Name = "txtBlendINJAINLSmall_toxic";
+            this.txtBlendINJAINLSmall_toxic.ReadOnly = true;
             this.txtBlendINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLSmall_toxic.TabIndex = 394;
             // 
@@ -5692,6 +5873,7 @@
             this.txtBlendINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILSmall_toxic.Location = new System.Drawing.Point(232, 605);
             this.txtBlendINJAILSmall_toxic.Name = "txtBlendINJAILSmall_toxic";
+            this.txtBlendINJAILSmall_toxic.ReadOnly = true;
             this.txtBlendINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILSmall_toxic.TabIndex = 393;
             // 
@@ -5700,6 +5882,7 @@
             this.txtInstCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILMedium_toxic.Location = new System.Drawing.Point(400, 380);
             this.txtInstCMDAILMedium_toxic.Name = "txtInstCMDAILMedium_toxic";
+            this.txtInstCMDAILMedium_toxic.ReadOnly = true;
             this.txtInstCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILMedium_toxic.TabIndex = 355;
             // 
@@ -5708,6 +5891,7 @@
             this.txtBlendCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILSmall_toxic.Location = new System.Drawing.Point(232, 555);
             this.txtBlendCMDAILSmall_toxic.Name = "txtBlendCMDAILSmall_toxic";
+            this.txtBlendCMDAILSmall_toxic.ReadOnly = true;
             this.txtBlendCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILSmall_toxic.TabIndex = 395;
             // 
@@ -5716,6 +5900,7 @@
             this.txtInstCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLMedium_toxic.Location = new System.Drawing.Point(400, 355);
             this.txtInstCMDAINLMedium_toxic.Name = "txtInstCMDAINLMedium_toxic";
+            this.txtInstCMDAINLMedium_toxic.ReadOnly = true;
             this.txtInstCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLMedium_toxic.TabIndex = 356;
             // 
@@ -5724,6 +5909,7 @@
             this.txtAITBlendCMDSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDSmall_toxic.Location = new System.Drawing.Point(232, 630);
             this.txtAITBlendCMDSmall_toxic.Name = "txtAITBlendCMDSmall_toxic";
+            this.txtAITBlendCMDSmall_toxic.ReadOnly = true;
             this.txtAITBlendCMDSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDSmall_toxic.TabIndex = 392;
             // 
@@ -5732,6 +5918,7 @@
             this.txtInstCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILLarge_toxic.Location = new System.Drawing.Point(568, 381);
             this.txtInstCMDAILLarge_toxic.Name = "txtInstCMDAILLarge_toxic";
+            this.txtInstCMDAILLarge_toxic.ReadOnly = true;
             this.txtInstCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILLarge_toxic.TabIndex = 366;
             // 
@@ -5740,6 +5927,7 @@
             this.txtBlendCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILRupture_toxic.Location = new System.Drawing.Point(736, 556);
             this.txtBlendCMDAILRupture_toxic.Name = "txtBlendCMDAILRupture_toxic";
+            this.txtBlendCMDAILRupture_toxic.ReadOnly = true;
             this.txtBlendCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILRupture_toxic.TabIndex = 410;
             // 
@@ -5748,6 +5936,7 @@
             this.txtContINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLLarge_toxic.Location = new System.Drawing.Point(568, 406);
             this.txtContINJAINLLarge_toxic.Name = "txtContINJAINLLarge_toxic";
+            this.txtContINJAINLLarge_toxic.ReadOnly = true;
             this.txtContINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLLarge_toxic.TabIndex = 365;
             // 
@@ -5756,6 +5945,7 @@
             this.txtAITBlendINJSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJSmall_toxic.Location = new System.Drawing.Point(232, 655);
             this.txtAITBlendINJSmall_toxic.Name = "txtAITBlendINJSmall_toxic";
+            this.txtAITBlendINJSmall_toxic.ReadOnly = true;
             this.txtAITBlendINJSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJSmall_toxic.TabIndex = 391;
             // 
@@ -5764,6 +5954,7 @@
             this.txtContINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLMedium_toxic.Location = new System.Drawing.Point(400, 405);
             this.txtContINJAINLMedium_toxic.Name = "txtContINJAINLMedium_toxic";
+            this.txtContINJAINLMedium_toxic.ReadOnly = true;
             this.txtContINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLMedium_toxic.TabIndex = 354;
             // 
@@ -5772,6 +5963,7 @@
             this.txtBlendINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLRupture_toxic.Location = new System.Drawing.Point(736, 581);
             this.txtBlendINJAINLRupture_toxic.Name = "txtBlendINJAINLRupture_toxic";
+            this.txtBlendINJAINLRupture_toxic.ReadOnly = true;
             this.txtBlendINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLRupture_toxic.TabIndex = 409;
             // 
@@ -5780,6 +5972,7 @@
             this.txtContCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILMedium_toxic.Location = new System.Drawing.Point(400, 330);
             this.txtContCMDAILMedium_toxic.Name = "txtContCMDAILMedium_toxic";
+            this.txtContCMDAILMedium_toxic.ReadOnly = true;
             this.txtContCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILMedium_toxic.TabIndex = 357;
             // 
@@ -5788,6 +5981,7 @@
             this.txtBlendINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILRupture_toxic.Location = new System.Drawing.Point(736, 606);
             this.txtBlendINJAILRupture_toxic.Name = "txtBlendINJAILRupture_toxic";
+            this.txtBlendINJAILRupture_toxic.ReadOnly = true;
             this.txtBlendINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILRupture_toxic.TabIndex = 408;
             // 
@@ -5796,6 +5990,7 @@
             this.txtContINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILMedium_toxic.Location = new System.Drawing.Point(400, 430);
             this.txtContINJAILMedium_toxic.Name = "txtContINJAILMedium_toxic";
+            this.txtContINJAILMedium_toxic.ReadOnly = true;
             this.txtContINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILMedium_toxic.TabIndex = 353;
             // 
@@ -5804,6 +5999,7 @@
             this.txtAITBlendCMDRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDRupture_toxic.Location = new System.Drawing.Point(736, 631);
             this.txtAITBlendCMDRupture_toxic.Name = "txtAITBlendCMDRupture_toxic";
+            this.txtAITBlendCMDRupture_toxic.ReadOnly = true;
             this.txtAITBlendCMDRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDRupture_toxic.TabIndex = 407;
             // 
@@ -5812,6 +6008,7 @@
             this.txtEneffLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffLarge_toxic.Location = new System.Drawing.Point(568, 280);
             this.txtEneffLarge_toxic.Name = "txtEneffLarge_toxic";
+            this.txtEneffLarge_toxic.ReadOnly = true;
             this.txtEneffLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtEneffLarge_toxic.TabIndex = 358;
             // 
@@ -5820,6 +6017,7 @@
             this.txtAITBlendINJMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJMedium_toxic.Location = new System.Drawing.Point(400, 655);
             this.txtAITBlendINJMedium_toxic.Name = "txtAITBlendINJMedium_toxic";
+            this.txtAITBlendINJMedium_toxic.ReadOnly = true;
             this.txtAITBlendINJMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJMedium_toxic.TabIndex = 396;
             // 
@@ -5828,6 +6026,7 @@
             this.txtInstCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLLarge_toxic.Location = new System.Drawing.Point(568, 356);
             this.txtInstCMDAINLLarge_toxic.Name = "txtInstCMDAINLLarge_toxic";
+            this.txtInstCMDAINLLarge_toxic.ReadOnly = true;
             this.txtInstCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLLarge_toxic.TabIndex = 367;
             // 
@@ -5836,6 +6035,7 @@
             this.txtBlendINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILLarge_toxic.Location = new System.Drawing.Point(568, 606);
             this.txtBlendINJAILLarge_toxic.Name = "txtBlendINJAILLarge_toxic";
+            this.txtBlendINJAILLarge_toxic.ReadOnly = true;
             this.txtBlendINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILLarge_toxic.TabIndex = 403;
             // 
@@ -5844,6 +6044,7 @@
             this.txtContINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILLarge_toxic.Location = new System.Drawing.Point(568, 431);
             this.txtContINJAILLarge_toxic.Name = "txtContINJAILLarge_toxic";
+            this.txtContINJAILLarge_toxic.ReadOnly = true;
             this.txtContINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILLarge_toxic.TabIndex = 364;
             // 
@@ -5852,6 +6053,7 @@
             this.txtAITBlendCMDLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDLarge_toxic.Location = new System.Drawing.Point(568, 631);
             this.txtAITBlendCMDLarge_toxic.Name = "txtAITBlendCMDLarge_toxic";
+            this.txtAITBlendCMDLarge_toxic.ReadOnly = true;
             this.txtAITBlendCMDLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDLarge_toxic.TabIndex = 402;
             // 
@@ -5860,6 +6062,7 @@
             this.txtInstINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLMedium_toxic.Location = new System.Drawing.Point(400, 455);
             this.txtInstINJAINLMedium_toxic.Name = "txtInstINJAINLMedium_toxic";
+            this.txtInstINJAINLMedium_toxic.ReadOnly = true;
             this.txtInstINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLMedium_toxic.TabIndex = 352;
             // 
@@ -5868,6 +6071,7 @@
             this.txtAITBlendCMDMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendCMDMedium_toxic.Location = new System.Drawing.Point(400, 630);
             this.txtAITBlendCMDMedium_toxic.Name = "txtAITBlendCMDMedium_toxic";
+            this.txtAITBlendCMDMedium_toxic.ReadOnly = true;
             this.txtAITBlendCMDMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendCMDMedium_toxic.TabIndex = 397;
             // 
@@ -5876,6 +6080,7 @@
             this.txtContCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLLarge_toxic.Location = new System.Drawing.Point(568, 306);
             this.txtContCMDAINLLarge_toxic.Name = "txtContCMDAINLLarge_toxic";
+            this.txtContCMDAINLLarge_toxic.ReadOnly = true;
             this.txtContCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLLarge_toxic.TabIndex = 359;
             // 
@@ -5884,6 +6089,7 @@
             this.txtBlendINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLLarge_toxic.Location = new System.Drawing.Point(568, 581);
             this.txtBlendINJAINLLarge_toxic.Name = "txtBlendINJAINLLarge_toxic";
+            this.txtBlendINJAINLLarge_toxic.ReadOnly = true;
             this.txtBlendINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLLarge_toxic.TabIndex = 404;
             // 
@@ -5892,6 +6098,7 @@
             this.txtInstINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILMedium_toxic.Location = new System.Drawing.Point(400, 480);
             this.txtInstINJAILMedium_toxic.Name = "txtInstINJAILMedium_toxic";
+            this.txtInstINJAILMedium_toxic.ReadOnly = true;
             this.txtInstINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILMedium_toxic.TabIndex = 351;
             // 
@@ -5900,6 +6107,7 @@
             this.txtAITBlendINJLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAITBlendINJLarge_toxic.Location = new System.Drawing.Point(568, 656);
             this.txtAITBlendINJLarge_toxic.Name = "txtAITBlendINJLarge_toxic";
+            this.txtAITBlendINJLarge_toxic.ReadOnly = true;
             this.txtAITBlendINJLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtAITBlendINJLarge_toxic.TabIndex = 401;
             // 
@@ -5908,6 +6116,7 @@
             this.txtBlendCMDAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLLarge_toxic.Location = new System.Drawing.Point(568, 531);
             this.txtBlendCMDAINLLarge_toxic.Name = "txtBlendCMDAINLLarge_toxic";
+            this.txtBlendCMDAINLLarge_toxic.ReadOnly = true;
             this.txtBlendCMDAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLLarge_toxic.TabIndex = 360;
             // 
@@ -5916,6 +6125,7 @@
             this.txtBlendINJAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAILMedium_toxic.Location = new System.Drawing.Point(400, 605);
             this.txtBlendINJAILMedium_toxic.Name = "txtBlendINJAILMedium_toxic";
+            this.txtBlendINJAILMedium_toxic.ReadOnly = true;
             this.txtBlendINJAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAILMedium_toxic.TabIndex = 398;
             // 
@@ -5924,6 +6134,7 @@
             this.txtContCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILLarge_toxic.Location = new System.Drawing.Point(568, 331);
             this.txtContCMDAILLarge_toxic.Name = "txtContCMDAILLarge_toxic";
+            this.txtContCMDAILLarge_toxic.ReadOnly = true;
             this.txtContCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILLarge_toxic.TabIndex = 368;
             // 
@@ -5932,6 +6143,7 @@
             this.txtBlendINJAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendINJAINLMedium_toxic.Location = new System.Drawing.Point(400, 580);
             this.txtBlendINJAINLMedium_toxic.Name = "txtBlendINJAINLMedium_toxic";
+            this.txtBlendINJAINLMedium_toxic.ReadOnly = true;
             this.txtBlendINJAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendINJAINLMedium_toxic.TabIndex = 399;
             // 
@@ -5940,6 +6152,7 @@
             this.txtInstINJAINLLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLLarge_toxic.Location = new System.Drawing.Point(568, 456);
             this.txtInstINJAINLLarge_toxic.Name = "txtInstINJAINLLarge_toxic";
+            this.txtInstINJAINLLarge_toxic.ReadOnly = true;
             this.txtInstINJAINLLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLLarge_toxic.TabIndex = 363;
             // 
@@ -5948,6 +6161,7 @@
             this.txtBlendCMDAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILLarge_toxic.Location = new System.Drawing.Point(568, 556);
             this.txtBlendCMDAILLarge_toxic.Name = "txtBlendCMDAILLarge_toxic";
+            this.txtBlendCMDAILLarge_toxic.ReadOnly = true;
             this.txtBlendCMDAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILLarge_toxic.TabIndex = 405;
             // 
@@ -5956,6 +6170,7 @@
             this.txtBlendFactorMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorMedium_toxic.Location = new System.Drawing.Point(400, 505);
             this.txtBlendFactorMedium_toxic.Name = "txtBlendFactorMedium_toxic";
+            this.txtBlendFactorMedium_toxic.ReadOnly = true;
             this.txtBlendFactorMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorMedium_toxic.TabIndex = 350;
             // 
@@ -5964,6 +6179,7 @@
             this.txtBlendCMDAILMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAILMedium_toxic.Location = new System.Drawing.Point(400, 555);
             this.txtBlendCMDAILMedium_toxic.Name = "txtBlendCMDAILMedium_toxic";
+            this.txtBlendCMDAILMedium_toxic.ReadOnly = true;
             this.txtBlendCMDAILMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAILMedium_toxic.TabIndex = 400;
             // 
@@ -5972,6 +6188,7 @@
             this.txtBlendFactorLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorLarge_toxic.Location = new System.Drawing.Point(568, 506);
             this.txtBlendFactorLarge_toxic.Name = "txtBlendFactorLarge_toxic";
+            this.txtBlendFactorLarge_toxic.ReadOnly = true;
             this.txtBlendFactorLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorLarge_toxic.TabIndex = 361;
             // 
@@ -6008,6 +6225,7 @@
             this.txtInstINJAILLarge_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILLarge_toxic.Location = new System.Drawing.Point(568, 481);
             this.txtInstINJAILLarge_toxic.Name = "txtInstINJAILLarge_toxic";
+            this.txtInstINJAILLarge_toxic.ReadOnly = true;
             this.txtInstINJAILLarge_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILLarge_toxic.TabIndex = 362;
             // 
@@ -6025,6 +6243,7 @@
             this.txtEneffRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffRupture_toxic.Location = new System.Drawing.Point(736, 280);
             this.txtEneffRupture_toxic.Name = "txtEneffRupture_toxic";
+            this.txtEneffRupture_toxic.ReadOnly = true;
             this.txtEneffRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtEneffRupture_toxic.TabIndex = 369;
             // 
@@ -6042,6 +6261,7 @@
             this.txtBlendCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLMedium_toxic.Location = new System.Drawing.Point(400, 530);
             this.txtBlendCMDAINLMedium_toxic.Name = "txtBlendCMDAINLMedium_toxic";
+            this.txtBlendCMDAINLMedium_toxic.ReadOnly = true;
             this.txtBlendCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLMedium_toxic.TabIndex = 349;
             // 
@@ -6078,6 +6298,7 @@
             this.txtContCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLRupture_toxic.Location = new System.Drawing.Point(736, 306);
             this.txtContCMDAINLRupture_toxic.Name = "txtContCMDAINLRupture_toxic";
+            this.txtContCMDAINLRupture_toxic.ReadOnly = true;
             this.txtContCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLRupture_toxic.TabIndex = 370;
             // 
@@ -6095,6 +6316,7 @@
             this.txtContCMDAINLMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLMedium_toxic.Location = new System.Drawing.Point(400, 305);
             this.txtContCMDAINLMedium_toxic.Name = "txtContCMDAINLMedium_toxic";
+            this.txtContCMDAINLMedium_toxic.ReadOnly = true;
             this.txtContCMDAINLMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLMedium_toxic.TabIndex = 348;
             // 
@@ -6131,6 +6353,7 @@
             this.txtEneffMedium_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffMedium_toxic.Location = new System.Drawing.Point(400, 279);
             this.txtEneffMedium_toxic.Name = "txtEneffMedium_toxic";
+            this.txtEneffMedium_toxic.ReadOnly = true;
             this.txtEneffMedium_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtEneffMedium_toxic.TabIndex = 347;
             // 
@@ -6167,6 +6390,7 @@
             this.txtBlendFactorRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorRupture_toxic.Location = new System.Drawing.Point(736, 506);
             this.txtBlendFactorRupture_toxic.Name = "txtBlendFactorRupture_toxic";
+            this.txtBlendFactorRupture_toxic.ReadOnly = true;
             this.txtBlendFactorRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorRupture_toxic.TabIndex = 372;
             // 
@@ -6175,6 +6399,7 @@
             this.txtContCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILRupture_toxic.Location = new System.Drawing.Point(736, 331);
             this.txtContCMDAILRupture_toxic.Name = "txtContCMDAILRupture_toxic";
+            this.txtContCMDAILRupture_toxic.ReadOnly = true;
             this.txtContCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILRupture_toxic.TabIndex = 379;
             // 
@@ -6183,6 +6408,7 @@
             this.txtContCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAILSmall_toxic.Location = new System.Drawing.Point(232, 330);
             this.txtContCMDAILSmall_toxic.Name = "txtContCMDAILSmall_toxic";
+            this.txtContCMDAILSmall_toxic.ReadOnly = true;
             this.txtContCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAILSmall_toxic.TabIndex = 346;
             // 
@@ -6191,6 +6417,7 @@
             this.txtEneffSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEneffSmall_toxic.Location = new System.Drawing.Point(232, 279);
             this.txtEneffSmall_toxic.Name = "txtEneffSmall_toxic";
+            this.txtEneffSmall_toxic.ReadOnly = true;
             this.txtEneffSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtEneffSmall_toxic.TabIndex = 336;
             // 
@@ -6199,6 +6426,7 @@
             this.txtInstCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLRupture_toxic.Location = new System.Drawing.Point(736, 356);
             this.txtInstCMDAINLRupture_toxic.Name = "txtInstCMDAINLRupture_toxic";
+            this.txtInstCMDAINLRupture_toxic.ReadOnly = true;
             this.txtInstCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLRupture_toxic.TabIndex = 378;
             // 
@@ -6207,6 +6435,7 @@
             this.txtInstINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILRupture_toxic.Location = new System.Drawing.Point(736, 481);
             this.txtInstINJAILRupture_toxic.Name = "txtInstINJAILRupture_toxic";
+            this.txtInstINJAILRupture_toxic.ReadOnly = true;
             this.txtInstINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILRupture_toxic.TabIndex = 373;
             // 
@@ -6215,6 +6444,7 @@
             this.txtBlendCMDAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLRupture_toxic.Location = new System.Drawing.Point(736, 531);
             this.txtBlendCMDAINLRupture_toxic.Name = "txtBlendCMDAINLRupture_toxic";
+            this.txtBlendCMDAINLRupture_toxic.ReadOnly = true;
             this.txtBlendCMDAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLRupture_toxic.TabIndex = 371;
             // 
@@ -6223,6 +6453,7 @@
             this.txtInstCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAINLSmall_toxic.Location = new System.Drawing.Point(232, 355);
             this.txtInstCMDAINLSmall_toxic.Name = "txtInstCMDAINLSmall_toxic";
+            this.txtInstCMDAINLSmall_toxic.ReadOnly = true;
             this.txtInstCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAINLSmall_toxic.TabIndex = 345;
             // 
@@ -6231,6 +6462,7 @@
             this.txtInstINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLSmall_toxic.Location = new System.Drawing.Point(232, 455);
             this.txtInstINJAINLSmall_toxic.Name = "txtInstINJAINLSmall_toxic";
+            this.txtInstINJAINLSmall_toxic.ReadOnly = true;
             this.txtInstINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLSmall_toxic.TabIndex = 341;
             // 
@@ -6239,6 +6471,7 @@
             this.txtContCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContCMDAINLSmall_toxic.Location = new System.Drawing.Point(232, 305);
             this.txtContCMDAINLSmall_toxic.Name = "txtContCMDAINLSmall_toxic";
+            this.txtContCMDAINLSmall_toxic.ReadOnly = true;
             this.txtContCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContCMDAINLSmall_toxic.TabIndex = 337;
             // 
@@ -6247,6 +6480,7 @@
             this.txtInstCMDAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILRupture_toxic.Location = new System.Drawing.Point(736, 381);
             this.txtInstCMDAILRupture_toxic.Name = "txtInstCMDAILRupture_toxic";
+            this.txtInstCMDAILRupture_toxic.ReadOnly = true;
             this.txtInstCMDAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILRupture_toxic.TabIndex = 377;
             // 
@@ -6255,6 +6489,7 @@
             this.txtInstINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAINLRupture_toxic.Location = new System.Drawing.Point(736, 456);
             this.txtInstINJAINLRupture_toxic.Name = "txtInstINJAINLRupture_toxic";
+            this.txtInstINJAINLRupture_toxic.ReadOnly = true;
             this.txtInstINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAINLRupture_toxic.TabIndex = 374;
             // 
@@ -6263,6 +6498,7 @@
             this.txtInstINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstINJAILSmall_toxic.Location = new System.Drawing.Point(232, 480);
             this.txtInstINJAILSmall_toxic.Name = "txtInstINJAILSmall_toxic";
+            this.txtInstINJAILSmall_toxic.ReadOnly = true;
             this.txtInstINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstINJAILSmall_toxic.TabIndex = 340;
             // 
@@ -6271,6 +6507,7 @@
             this.txtInstCMDAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtInstCMDAILSmall_toxic.Location = new System.Drawing.Point(232, 380);
             this.txtInstCMDAILSmall_toxic.Name = "txtInstCMDAILSmall_toxic";
+            this.txtInstCMDAILSmall_toxic.ReadOnly = true;
             this.txtInstCMDAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtInstCMDAILSmall_toxic.TabIndex = 344;
             // 
@@ -6279,6 +6516,7 @@
             this.txtContINJAILSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILSmall_toxic.Location = new System.Drawing.Point(232, 430);
             this.txtContINJAILSmall_toxic.Name = "txtContINJAILSmall_toxic";
+            this.txtContINJAILSmall_toxic.ReadOnly = true;
             this.txtContINJAILSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILSmall_toxic.TabIndex = 342;
             // 
@@ -6287,6 +6525,7 @@
             this.txtBlendCMDAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendCMDAINLSmall_toxic.Location = new System.Drawing.Point(232, 530);
             this.txtBlendCMDAINLSmall_toxic.Name = "txtBlendCMDAINLSmall_toxic";
+            this.txtBlendCMDAINLSmall_toxic.ReadOnly = true;
             this.txtBlendCMDAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendCMDAINLSmall_toxic.TabIndex = 338;
             // 
@@ -6295,6 +6534,7 @@
             this.txtContINJAINLRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLRupture_toxic.Location = new System.Drawing.Point(736, 406);
             this.txtContINJAINLRupture_toxic.Name = "txtContINJAINLRupture_toxic";
+            this.txtContINJAINLRupture_toxic.ReadOnly = true;
             this.txtContINJAINLRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLRupture_toxic.TabIndex = 376;
             // 
@@ -6303,6 +6543,7 @@
             this.txtContINJAILRupture_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAILRupture_toxic.Location = new System.Drawing.Point(736, 431);
             this.txtContINJAILRupture_toxic.Name = "txtContINJAILRupture_toxic";
+            this.txtContINJAILRupture_toxic.ReadOnly = true;
             this.txtContINJAILRupture_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAILRupture_toxic.TabIndex = 375;
             // 
@@ -6311,6 +6552,7 @@
             this.txtBlendFactorSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtBlendFactorSmall_toxic.Location = new System.Drawing.Point(232, 505);
             this.txtBlendFactorSmall_toxic.Name = "txtBlendFactorSmall_toxic";
+            this.txtBlendFactorSmall_toxic.ReadOnly = true;
             this.txtBlendFactorSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtBlendFactorSmall_toxic.TabIndex = 339;
             // 
@@ -6319,6 +6561,7 @@
             this.txtContINJAINLSmall_toxic.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtContINJAINLSmall_toxic.Location = new System.Drawing.Point(232, 405);
             this.txtContINJAINLSmall_toxic.Name = "txtContINJAINLSmall_toxic";
+            this.txtContINJAINLSmall_toxic.ReadOnly = true;
             this.txtContINJAINLSmall_toxic.Size = new System.Drawing.Size(133, 20);
             this.txtContINJAINLSmall_toxic.TabIndex = 343;
             // 
@@ -6517,6 +6760,7 @@
             this.txtGffRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGffRupture.Location = new System.Drawing.Point(740, 113);
             this.txtGffRupture.Name = "txtGffRupture";
+            this.txtGffRupture.ReadOnly = true;
             this.txtGffRupture.Size = new System.Drawing.Size(133, 20);
             this.txtGffRupture.TabIndex = 71;
             // 
@@ -6525,6 +6769,7 @@
             this.txtMassAddRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAddRupture.Location = new System.Drawing.Point(740, 138);
             this.txtMassAddRupture.Name = "txtMassAddRupture";
+            this.txtMassAddRupture.ReadOnly = true;
             this.txtMassAddRupture.Size = new System.Drawing.Size(133, 20);
             this.txtMassAddRupture.TabIndex = 70;
             // 
@@ -6533,6 +6778,7 @@
             this.txtMassAvailRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAvailRupture.Location = new System.Drawing.Point(740, 163);
             this.txtMassAvailRupture.Name = "txtMassAvailRupture";
+            this.txtMassAvailRupture.ReadOnly = true;
             this.txtMassAvailRupture.Size = new System.Drawing.Size(133, 20);
             this.txtMassAvailRupture.TabIndex = 69;
             // 
@@ -6541,6 +6787,7 @@
             this.txtTnRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTnRupture.Location = new System.Drawing.Point(740, 188);
             this.txtTnRupture.Name = "txtTnRupture";
+            this.txtTnRupture.ReadOnly = true;
             this.txtTnRupture.Size = new System.Drawing.Size(133, 20);
             this.txtTnRupture.TabIndex = 68;
             // 
@@ -6549,6 +6796,7 @@
             this.txtReleaseTypeRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseTypeRupture.Location = new System.Drawing.Point(740, 213);
             this.txtReleaseTypeRupture.Name = "txtReleaseTypeRupture";
+            this.txtReleaseTypeRupture.ReadOnly = true;
             this.txtReleaseTypeRupture.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseTypeRupture.TabIndex = 67;
             // 
@@ -6557,6 +6805,7 @@
             this.txtLdMaxRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdMaxRupture.Location = new System.Drawing.Point(740, 238);
             this.txtLdMaxRupture.Name = "txtLdMaxRupture";
+            this.txtLdMaxRupture.ReadOnly = true;
             this.txtLdMaxRupture.Size = new System.Drawing.Size(133, 20);
             this.txtLdMaxRupture.TabIndex = 66;
             // 
@@ -6565,6 +6814,7 @@
             this.txtRatenRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtRatenRupture.Location = new System.Drawing.Point(740, 263);
             this.txtRatenRupture.Name = "txtRatenRupture";
+            this.txtRatenRupture.ReadOnly = true;
             this.txtRatenRupture.Size = new System.Drawing.Size(133, 20);
             this.txtRatenRupture.TabIndex = 65;
             // 
@@ -6573,6 +6823,7 @@
             this.txtLdRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdRupture.Location = new System.Drawing.Point(740, 288);
             this.txtLdRupture.Name = "txtLdRupture";
+            this.txtLdRupture.ReadOnly = true;
             this.txtLdRupture.Size = new System.Drawing.Size(133, 20);
             this.txtLdRupture.TabIndex = 64;
             // 
@@ -6581,6 +6832,7 @@
             this.txtReleaseMassRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseMassRupture.Location = new System.Drawing.Point(740, 313);
             this.txtReleaseMassRupture.Name = "txtReleaseMassRupture";
+            this.txtReleaseMassRupture.ReadOnly = true;
             this.txtReleaseMassRupture.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseMassRupture.TabIndex = 63;
             // 
@@ -6589,6 +6841,7 @@
             this.txtReleaseRateRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseRateRupture.Location = new System.Drawing.Point(740, 88);
             this.txtReleaseRateRupture.Name = "txtReleaseRateRupture";
+            this.txtReleaseRateRupture.ReadOnly = true;
             this.txtReleaseRateRupture.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseRateRupture.TabIndex = 62;
             // 
@@ -6597,6 +6850,7 @@
             this.txtHoleSizeAreaRupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtHoleSizeAreaRupture.Location = new System.Drawing.Point(740, 62);
             this.txtHoleSizeAreaRupture.Name = "txtHoleSizeAreaRupture";
+            this.txtHoleSizeAreaRupture.ReadOnly = true;
             this.txtHoleSizeAreaRupture.Size = new System.Drawing.Size(133, 20);
             this.txtHoleSizeAreaRupture.TabIndex = 61;
             // 
@@ -6605,6 +6859,7 @@
             this.txtGffLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGffLarge.Location = new System.Drawing.Point(585, 113);
             this.txtGffLarge.Name = "txtGffLarge";
+            this.txtGffLarge.ReadOnly = true;
             this.txtGffLarge.Size = new System.Drawing.Size(133, 20);
             this.txtGffLarge.TabIndex = 60;
             // 
@@ -6613,6 +6868,7 @@
             this.txtMassAddLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAddLarge.Location = new System.Drawing.Point(585, 138);
             this.txtMassAddLarge.Name = "txtMassAddLarge";
+            this.txtMassAddLarge.ReadOnly = true;
             this.txtMassAddLarge.Size = new System.Drawing.Size(133, 20);
             this.txtMassAddLarge.TabIndex = 59;
             // 
@@ -6621,6 +6877,7 @@
             this.txtMassAvailLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAvailLarge.Location = new System.Drawing.Point(585, 163);
             this.txtMassAvailLarge.Name = "txtMassAvailLarge";
+            this.txtMassAvailLarge.ReadOnly = true;
             this.txtMassAvailLarge.Size = new System.Drawing.Size(133, 20);
             this.txtMassAvailLarge.TabIndex = 58;
             // 
@@ -6629,6 +6886,7 @@
             this.txtTnLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTnLarge.Location = new System.Drawing.Point(585, 188);
             this.txtTnLarge.Name = "txtTnLarge";
+            this.txtTnLarge.ReadOnly = true;
             this.txtTnLarge.Size = new System.Drawing.Size(133, 20);
             this.txtTnLarge.TabIndex = 57;
             // 
@@ -6637,6 +6895,7 @@
             this.txtReleaseTypeLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseTypeLarge.Location = new System.Drawing.Point(585, 213);
             this.txtReleaseTypeLarge.Name = "txtReleaseTypeLarge";
+            this.txtReleaseTypeLarge.ReadOnly = true;
             this.txtReleaseTypeLarge.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseTypeLarge.TabIndex = 56;
             // 
@@ -6645,6 +6904,7 @@
             this.txtLdMaxLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdMaxLarge.Location = new System.Drawing.Point(585, 238);
             this.txtLdMaxLarge.Name = "txtLdMaxLarge";
+            this.txtLdMaxLarge.ReadOnly = true;
             this.txtLdMaxLarge.Size = new System.Drawing.Size(133, 20);
             this.txtLdMaxLarge.TabIndex = 55;
             // 
@@ -6653,6 +6913,7 @@
             this.txtRatenLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtRatenLarge.Location = new System.Drawing.Point(585, 263);
             this.txtRatenLarge.Name = "txtRatenLarge";
+            this.txtRatenLarge.ReadOnly = true;
             this.txtRatenLarge.Size = new System.Drawing.Size(133, 20);
             this.txtRatenLarge.TabIndex = 54;
             // 
@@ -6661,6 +6922,7 @@
             this.txtLdLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdLarge.Location = new System.Drawing.Point(585, 288);
             this.txtLdLarge.Name = "txtLdLarge";
+            this.txtLdLarge.ReadOnly = true;
             this.txtLdLarge.Size = new System.Drawing.Size(133, 20);
             this.txtLdLarge.TabIndex = 53;
             // 
@@ -6669,6 +6931,7 @@
             this.txtReleaseMassLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseMassLarge.Location = new System.Drawing.Point(585, 313);
             this.txtReleaseMassLarge.Name = "txtReleaseMassLarge";
+            this.txtReleaseMassLarge.ReadOnly = true;
             this.txtReleaseMassLarge.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseMassLarge.TabIndex = 52;
             // 
@@ -6677,6 +6940,7 @@
             this.txtReleaseRateLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseRateLarge.Location = new System.Drawing.Point(585, 88);
             this.txtReleaseRateLarge.Name = "txtReleaseRateLarge";
+            this.txtReleaseRateLarge.ReadOnly = true;
             this.txtReleaseRateLarge.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseRateLarge.TabIndex = 51;
             // 
@@ -6685,6 +6949,7 @@
             this.txtHoleSizeAreaLarge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtHoleSizeAreaLarge.Location = new System.Drawing.Point(585, 62);
             this.txtHoleSizeAreaLarge.Name = "txtHoleSizeAreaLarge";
+            this.txtHoleSizeAreaLarge.ReadOnly = true;
             this.txtHoleSizeAreaLarge.Size = new System.Drawing.Size(133, 20);
             this.txtHoleSizeAreaLarge.TabIndex = 50;
             // 
@@ -6693,6 +6958,7 @@
             this.txtGffMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGffMedium.Location = new System.Drawing.Point(431, 112);
             this.txtGffMedium.Name = "txtGffMedium";
+            this.txtGffMedium.ReadOnly = true;
             this.txtGffMedium.Size = new System.Drawing.Size(133, 20);
             this.txtGffMedium.TabIndex = 49;
             // 
@@ -6701,6 +6967,7 @@
             this.txtMassAddMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAddMedium.Location = new System.Drawing.Point(431, 137);
             this.txtMassAddMedium.Name = "txtMassAddMedium";
+            this.txtMassAddMedium.ReadOnly = true;
             this.txtMassAddMedium.Size = new System.Drawing.Size(133, 20);
             this.txtMassAddMedium.TabIndex = 48;
             // 
@@ -6709,6 +6976,7 @@
             this.txtMassAvailMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAvailMedium.Location = new System.Drawing.Point(431, 162);
             this.txtMassAvailMedium.Name = "txtMassAvailMedium";
+            this.txtMassAvailMedium.ReadOnly = true;
             this.txtMassAvailMedium.Size = new System.Drawing.Size(133, 20);
             this.txtMassAvailMedium.TabIndex = 47;
             // 
@@ -6717,6 +6985,7 @@
             this.txtTnMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTnMedium.Location = new System.Drawing.Point(431, 187);
             this.txtTnMedium.Name = "txtTnMedium";
+            this.txtTnMedium.ReadOnly = true;
             this.txtTnMedium.Size = new System.Drawing.Size(133, 20);
             this.txtTnMedium.TabIndex = 46;
             // 
@@ -6725,6 +6994,7 @@
             this.txtReleaseTypeMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseTypeMedium.Location = new System.Drawing.Point(431, 212);
             this.txtReleaseTypeMedium.Name = "txtReleaseTypeMedium";
+            this.txtReleaseTypeMedium.ReadOnly = true;
             this.txtReleaseTypeMedium.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseTypeMedium.TabIndex = 45;
             // 
@@ -6733,6 +7003,7 @@
             this.txtLdMaxMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdMaxMedium.Location = new System.Drawing.Point(431, 237);
             this.txtLdMaxMedium.Name = "txtLdMaxMedium";
+            this.txtLdMaxMedium.ReadOnly = true;
             this.txtLdMaxMedium.Size = new System.Drawing.Size(133, 20);
             this.txtLdMaxMedium.TabIndex = 44;
             // 
@@ -6741,6 +7012,7 @@
             this.txtRatenMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtRatenMedium.Location = new System.Drawing.Point(431, 262);
             this.txtRatenMedium.Name = "txtRatenMedium";
+            this.txtRatenMedium.ReadOnly = true;
             this.txtRatenMedium.Size = new System.Drawing.Size(133, 20);
             this.txtRatenMedium.TabIndex = 43;
             // 
@@ -6749,6 +7021,7 @@
             this.txtLdMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdMedium.Location = new System.Drawing.Point(431, 287);
             this.txtLdMedium.Name = "txtLdMedium";
+            this.txtLdMedium.ReadOnly = true;
             this.txtLdMedium.Size = new System.Drawing.Size(133, 20);
             this.txtLdMedium.TabIndex = 42;
             // 
@@ -6757,6 +7030,7 @@
             this.txtReleaseMassMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseMassMedium.Location = new System.Drawing.Point(431, 312);
             this.txtReleaseMassMedium.Name = "txtReleaseMassMedium";
+            this.txtReleaseMassMedium.ReadOnly = true;
             this.txtReleaseMassMedium.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseMassMedium.TabIndex = 41;
             // 
@@ -6765,6 +7039,7 @@
             this.txtReleaseRateMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseRateMedium.Location = new System.Drawing.Point(431, 87);
             this.txtReleaseRateMedium.Name = "txtReleaseRateMedium";
+            this.txtReleaseRateMedium.ReadOnly = true;
             this.txtReleaseRateMedium.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseRateMedium.TabIndex = 40;
             // 
@@ -6773,6 +7048,7 @@
             this.txtHoleSizeAreaMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtHoleSizeAreaMedium.Location = new System.Drawing.Point(431, 61);
             this.txtHoleSizeAreaMedium.Name = "txtHoleSizeAreaMedium";
+            this.txtHoleSizeAreaMedium.ReadOnly = true;
             this.txtHoleSizeAreaMedium.Size = new System.Drawing.Size(133, 20);
             this.txtHoleSizeAreaMedium.TabIndex = 39;
             // 
@@ -6781,6 +7057,7 @@
             this.txtGffSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGffSmall.Location = new System.Drawing.Point(278, 112);
             this.txtGffSmall.Name = "txtGffSmall";
+            this.txtGffSmall.ReadOnly = true;
             this.txtGffSmall.Size = new System.Drawing.Size(133, 20);
             this.txtGffSmall.TabIndex = 38;
             // 
@@ -6789,6 +7066,7 @@
             this.txtMassAddSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAddSmall.Location = new System.Drawing.Point(278, 137);
             this.txtMassAddSmall.Name = "txtMassAddSmall";
+            this.txtMassAddSmall.ReadOnly = true;
             this.txtMassAddSmall.Size = new System.Drawing.Size(133, 20);
             this.txtMassAddSmall.TabIndex = 37;
             // 
@@ -6797,6 +7075,7 @@
             this.txtMassAvailSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMassAvailSmall.Location = new System.Drawing.Point(278, 162);
             this.txtMassAvailSmall.Name = "txtMassAvailSmall";
+            this.txtMassAvailSmall.ReadOnly = true;
             this.txtMassAvailSmall.Size = new System.Drawing.Size(133, 20);
             this.txtMassAvailSmall.TabIndex = 36;
             // 
@@ -6805,6 +7084,7 @@
             this.txtTnSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTnSmall.Location = new System.Drawing.Point(278, 187);
             this.txtTnSmall.Name = "txtTnSmall";
+            this.txtTnSmall.ReadOnly = true;
             this.txtTnSmall.Size = new System.Drawing.Size(133, 20);
             this.txtTnSmall.TabIndex = 35;
             // 
@@ -6813,6 +7093,7 @@
             this.txtReleaseTypeSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseTypeSmall.Location = new System.Drawing.Point(278, 212);
             this.txtReleaseTypeSmall.Name = "txtReleaseTypeSmall";
+            this.txtReleaseTypeSmall.ReadOnly = true;
             this.txtReleaseTypeSmall.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseTypeSmall.TabIndex = 34;
             // 
@@ -6821,6 +7102,7 @@
             this.txtLdMaxSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdMaxSmall.Location = new System.Drawing.Point(278, 237);
             this.txtLdMaxSmall.Name = "txtLdMaxSmall";
+            this.txtLdMaxSmall.ReadOnly = true;
             this.txtLdMaxSmall.Size = new System.Drawing.Size(133, 20);
             this.txtLdMaxSmall.TabIndex = 33;
             // 
@@ -6829,6 +7111,7 @@
             this.txtRatenSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtRatenSmall.Location = new System.Drawing.Point(278, 262);
             this.txtRatenSmall.Name = "txtRatenSmall";
+            this.txtRatenSmall.ReadOnly = true;
             this.txtRatenSmall.Size = new System.Drawing.Size(133, 20);
             this.txtRatenSmall.TabIndex = 32;
             // 
@@ -6837,6 +7120,7 @@
             this.txtLdSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLdSmall.Location = new System.Drawing.Point(278, 287);
             this.txtLdSmall.Name = "txtLdSmall";
+            this.txtLdSmall.ReadOnly = true;
             this.txtLdSmall.Size = new System.Drawing.Size(133, 20);
             this.txtLdSmall.TabIndex = 31;
             // 
@@ -6845,6 +7129,7 @@
             this.txtReleaseMassSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseMassSmall.Location = new System.Drawing.Point(278, 312);
             this.txtReleaseMassSmall.Name = "txtReleaseMassSmall";
+            this.txtReleaseMassSmall.ReadOnly = true;
             this.txtReleaseMassSmall.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseMassSmall.TabIndex = 30;
             // 
@@ -6853,6 +7138,7 @@
             this.txtReleaseRateSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleaseRateSmall.Location = new System.Drawing.Point(278, 87);
             this.txtReleaseRateSmall.Name = "txtReleaseRateSmall";
+            this.txtReleaseRateSmall.ReadOnly = true;
             this.txtReleaseRateSmall.Size = new System.Drawing.Size(133, 20);
             this.txtReleaseRateSmall.TabIndex = 29;
             // 
@@ -6861,6 +7147,7 @@
             this.txtHoleSizeAreaSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtHoleSizeAreaSmall.Location = new System.Drawing.Point(278, 61);
             this.txtHoleSizeAreaSmall.Name = "txtHoleSizeAreaSmall";
+            this.txtHoleSizeAreaSmall.ReadOnly = true;
             this.txtHoleSizeAreaSmall.Size = new System.Drawing.Size(133, 20);
             this.txtHoleSizeAreaSmall.TabIndex = 28;
             // 
@@ -7109,6 +7396,7 @@
             this.txtRMRF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtRMRF.Location = new System.Drawing.Point(244, 310);
             this.txtRMRF.Name = "txtRMRF";
+            this.txtRMRF.ReadOnly = true;
             this.txtRMRF.Size = new System.Drawing.Size(174, 20);
             this.txtRMRF.TabIndex = 27;
             // 
@@ -7117,6 +7405,7 @@
             this.txtCARF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCARF.Location = new System.Drawing.Point(244, 335);
             this.txtCARF.Name = "txtCARF";
+            this.txtCARF.ReadOnly = true;
             this.txtCARF.Size = new System.Drawing.Size(174, 20);
             this.txtCARF.TabIndex = 26;
             // 
@@ -7125,6 +7414,7 @@
             this.txtLiquidDensity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLiquidDensity.Location = new System.Drawing.Point(244, 85);
             this.txtLiquidDensity.Name = "txtLiquidDensity";
+            this.txtLiquidDensity.ReadOnly = true;
             this.txtLiquidDensity.Size = new System.Drawing.Size(174, 20);
             this.txtLiquidDensity.TabIndex = 25;
             // 
@@ -7133,6 +7423,7 @@
             this.txtVapourDensity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtVapourDensity.Location = new System.Drawing.Point(244, 110);
             this.txtVapourDensity.Name = "txtVapourDensity";
+            this.txtVapourDensity.ReadOnly = true;
             this.txtVapourDensity.Size = new System.Drawing.Size(174, 20);
             this.txtVapourDensity.TabIndex = 24;
             // 
@@ -7141,6 +7432,7 @@
             this.txtMW.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMW.Location = new System.Drawing.Point(244, 135);
             this.txtMW.Name = "txtMW";
+            this.txtMW.ReadOnly = true;
             this.txtMW.Size = new System.Drawing.Size(174, 20);
             this.txtMW.TabIndex = 23;
             // 
@@ -7149,6 +7441,7 @@
             this.txtAIT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAIT.Location = new System.Drawing.Point(244, 160);
             this.txtAIT.Name = "txtAIT";
+            this.txtAIT.ReadOnly = true;
             this.txtAIT.Size = new System.Drawing.Size(174, 20);
             this.txtAIT.TabIndex = 22;
             // 
@@ -7157,6 +7450,7 @@
             this.txtNBP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNBP.Location = new System.Drawing.Point(244, 185);
             this.txtNBP.Name = "txtNBP";
+            this.txtNBP.ReadOnly = true;
             this.txtNBP.Size = new System.Drawing.Size(174, 20);
             this.txtNBP.TabIndex = 21;
             // 
@@ -7165,6 +7459,7 @@
             this.txtCp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCp.Location = new System.Drawing.Point(244, 210);
             this.txtCp.Name = "txtCp";
+            this.txtCp.ReadOnly = true;
             this.txtCp.Size = new System.Drawing.Size(174, 20);
             this.txtCp.TabIndex = 20;
             // 
@@ -7173,6 +7468,7 @@
             this.txtK.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtK.Location = new System.Drawing.Point(244, 235);
             this.txtK.Name = "txtK";
+            this.txtK.ReadOnly = true;
             this.txtK.Size = new System.Drawing.Size(174, 20);
             this.txtK.TabIndex = 19;
             // 
@@ -7181,6 +7477,7 @@
             this.txtAmbientState.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAmbientState.Location = new System.Drawing.Point(244, 260);
             this.txtAmbientState.Name = "txtAmbientState";
+            this.txtAmbientState.ReadOnly = true;
             this.txtAmbientState.Size = new System.Drawing.Size(174, 20);
             this.txtAmbientState.TabIndex = 18;
             // 
@@ -7189,6 +7486,7 @@
             this.txtReleasePhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtReleasePhase.Location = new System.Drawing.Point(244, 285);
             this.txtReleasePhase.Name = "txtReleasePhase";
+            this.txtReleasePhase.ReadOnly = true;
             this.txtReleasePhase.Size = new System.Drawing.Size(174, 20);
             this.txtReleasePhase.TabIndex = 17;
             // 
@@ -7197,6 +7495,7 @@
             this.txtToxicFluidType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtToxicFluidType.Location = new System.Drawing.Point(244, 60);
             this.txtToxicFluidType.Name = "txtToxicFluidType";
+            this.txtToxicFluidType.ReadOnly = true;
             this.txtToxicFluidType.Size = new System.Drawing.Size(174, 20);
             this.txtToxicFluidType.TabIndex = 16;
             // 
@@ -7205,6 +7504,7 @@
             this.txtModelFluidType.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtModelFluidType.Location = new System.Drawing.Point(244, 34);
             this.txtModelFluidType.Name = "txtModelFluidType";
+            this.txtModelFluidType.ReadOnly = true;
             this.txtModelFluidType.Size = new System.Drawing.Size(174, 20);
             this.txtModelFluidType.TabIndex = 15;
             // 
@@ -7392,6 +7692,7 @@
             this.txtComponent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtComponent.Location = new System.Drawing.Point(664, 56);
             this.txtComponent.Name = "txtComponent";
+            this.txtComponent.ReadOnly = true;
             this.txtComponent.Size = new System.Drawing.Size(170, 20);
             this.txtComponent.TabIndex = 24;
             // 
@@ -7400,6 +7701,7 @@
             this.txtTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTF.Location = new System.Drawing.Point(664, 82);
             this.txtTF.Name = "txtTF";
+            this.txtTF.ReadOnly = true;
             this.txtTF.Size = new System.Drawing.Size(170, 20);
             this.txtTF.TabIndex = 23;
             // 
@@ -7408,6 +7710,7 @@
             this.txtPhase.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtPhase.Location = new System.Drawing.Point(664, 106);
             this.txtPhase.Name = "txtPhase";
+            this.txtPhase.ReadOnly = true;
             this.txtPhase.Size = new System.Drawing.Size(170, 20);
             this.txtPhase.TabIndex = 22;
             // 
@@ -7417,6 +7720,7 @@
             this.txtDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtDia.Location = new System.Drawing.Point(664, 31);
             this.txtDia.Name = "txtDia";
+            this.txtDia.ReadOnly = true;
             this.txtDia.Size = new System.Drawing.Size(170, 20);
             this.txtDia.TabIndex = 21;
             // 
@@ -7494,6 +7798,7 @@
             this.txtLL.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtLL.Location = new System.Drawing.Point(243, 56);
             this.txtLL.Name = "txtLL";
+            this.txtLL.ReadOnly = true;
             this.txtLL.Size = new System.Drawing.Size(171, 20);
             this.txtLL.TabIndex = 12;
             // 
@@ -7502,6 +7807,7 @@
             this.txtMF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMF.Location = new System.Drawing.Point(243, 82);
             this.txtMF.Name = "txtMF";
+            this.txtMF.ReadOnly = true;
             this.txtMF.Size = new System.Drawing.Size(171, 20);
             this.txtMF.TabIndex = 11;
             // 
@@ -7510,6 +7816,7 @@
             this.txtTFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtTFP.Location = new System.Drawing.Point(243, 106);
             this.txtTFP.Name = "txtTFP";
+            this.txtTFP.ReadOnly = true;
             this.txtTFP.Size = new System.Drawing.Size(171, 20);
             this.txtTFP.TabIndex = 10;
             // 
@@ -7519,6 +7826,7 @@
             this.txtMOT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMOT.Location = new System.Drawing.Point(277, 134);
             this.txtMOT.Name = "txtMOT";
+            this.txtMOT.ReadOnly = true;
             this.txtMOT.Size = new System.Drawing.Size(84, 20);
             this.txtMOT.TabIndex = 9;
             // 
@@ -7528,6 +7836,7 @@
             this.txtMOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMOP.Location = new System.Drawing.Point(277, 159);
             this.txtMOP.Name = "txtMOP";
+            this.txtMOP.ReadOnly = true;
             this.txtMOP.Size = new System.Drawing.Size(84, 20);
             this.txtMOP.TabIndex = 8;
             // 
@@ -7536,6 +7845,7 @@
             this.txtACT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtACT.Location = new System.Drawing.Point(243, 31);
             this.txtACT.Name = "txtACT";
+            this.txtACT.ReadOnly = true;
             this.txtACT.Size = new System.Drawing.Size(171, 20);
             this.txtACT.TabIndex = 7;
             // 
@@ -7639,6 +7949,7 @@
             this.txtCA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCA2.Location = new System.Drawing.Point(363, 55);
             this.txtCA2.Name = "txtCA2";
+            this.txtCA2.ReadOnly = true;
             this.txtCA2.Size = new System.Drawing.Size(177, 20);
             this.txtCA2.TabIndex = 5;
             // 
@@ -7657,6 +7968,7 @@
             this.txtCA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCA1.Location = new System.Drawing.Point(363, 31);
             this.txtCA1.Name = "txtCA1";
+            this.txtCA1.ReadOnly = true;
             this.txtCA1.Size = new System.Drawing.Size(177, 20);
             this.txtCA1.TabIndex = 3;
             // 
@@ -7830,7 +8142,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(961, 2675);
+            this.tabCA.Size = new System.Drawing.Size(961, 2673);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -8243,7 +8555,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(961, 2675);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 2673);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -8315,7 +8627,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(961, 2675);
+            this.groupBox7.Size = new System.Drawing.Size(961, 2673);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -8983,7 +9295,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(961, 2675);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 2673);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -8996,7 +9308,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(961, 2675);
+            this.groupBox6.Size = new System.Drawing.Size(961, 2673);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -9972,7 +10284,7 @@
             // 
             this.tabCATankShell.Controls.Add(this.groupBox8);
             this.tabCATankShell.Name = "tabCATankShell";
-            this.tabCATankShell.Size = new System.Drawing.Size(961, 2675);
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 2673);
             this.tabCATankShell.Text = "Financial COF";
             // 
             // groupBox8
@@ -9988,7 +10300,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(961, 2675);
+            this.groupBox8.Size = new System.Drawing.Size(961, 2673);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -12494,7 +12806,7 @@
             // 
             this.tabCATankRoof.Controls.Add(this.groupBox9);
             this.tabCATankRoof.Name = "tabCATankRoof";
-            this.tabCATankRoof.Size = new System.Drawing.Size(961, 2675);
+            this.tabCATankRoof.Size = new System.Drawing.Size(961, 2673);
             this.tabCATankRoof.Text = "Financial COF";
             // 
             // groupBox9
@@ -12505,7 +12817,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(961, 2675);
+            this.groupBox9.Size = new System.Drawing.Size(961, 2673);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -12781,7 +13093,7 @@
             // 
             this.tabCAnormal.Controls.Add(this.groupBox10);
             this.tabCAnormal.Name = "tabCAnormal";
-            this.tabCAnormal.Size = new System.Drawing.Size(961, 2675);
+            this.tabCAnormal.Size = new System.Drawing.Size(961, 2673);
             this.tabCAnormal.Text = "Financial COF";
             // 
             // groupBox10
@@ -12850,6 +13162,7 @@
             this.txtFoFE.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFoFE.Location = new System.Drawing.Point(383, 70);
             this.txtFoFE.Name = "txtFoFE";
+            this.txtFoFE.ReadOnly = true;
             this.txtFoFE.Size = new System.Drawing.Size(133, 20);
             this.txtFoFE.TabIndex = 76;
             // 
@@ -12858,6 +13171,7 @@
             this.txtMaterialcostfactor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtMaterialcostfactor.Location = new System.Drawing.Point(383, 41);
             this.txtMaterialcostfactor.Name = "txtMaterialcostfactor";
+            this.txtMaterialcostfactor.ReadOnly = true;
             this.txtMaterialcostfactor.Size = new System.Drawing.Size(133, 20);
             this.txtMaterialcostfactor.TabIndex = 75;
             // 
@@ -12893,6 +13207,7 @@
             this.txtOutage_rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtOutage_rupture.Location = new System.Drawing.Point(803, 209);
             this.txtOutage_rupture.Name = "txtOutage_rupture";
+            this.txtOutage_rupture.ReadOnly = true;
             this.txtOutage_rupture.Size = new System.Drawing.Size(133, 20);
             this.txtOutage_rupture.TabIndex = 71;
             // 
@@ -12901,6 +13216,7 @@
             this.txtCost_rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCost_rupture.Location = new System.Drawing.Point(803, 184);
             this.txtCost_rupture.Name = "txtCost_rupture";
+            this.txtCost_rupture.ReadOnly = true;
             this.txtCost_rupture.Size = new System.Drawing.Size(133, 20);
             this.txtCost_rupture.TabIndex = 62;
             // 
@@ -12909,6 +13225,7 @@
             this.txtGFF_rupture.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGFF_rupture.Location = new System.Drawing.Point(803, 158);
             this.txtGFF_rupture.Name = "txtGFF_rupture";
+            this.txtGFF_rupture.ReadOnly = true;
             this.txtGFF_rupture.Size = new System.Drawing.Size(133, 20);
             this.txtGFF_rupture.TabIndex = 61;
             // 
@@ -12917,6 +13234,7 @@
             this.txtOutage_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtOutage_large.Location = new System.Drawing.Point(663, 209);
             this.txtOutage_large.Name = "txtOutage_large";
+            this.txtOutage_large.ReadOnly = true;
             this.txtOutage_large.Size = new System.Drawing.Size(133, 20);
             this.txtOutage_large.TabIndex = 60;
             // 
@@ -12925,6 +13243,7 @@
             this.txtCost_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCost_large.Location = new System.Drawing.Point(663, 184);
             this.txtCost_large.Name = "txtCost_large";
+            this.txtCost_large.ReadOnly = true;
             this.txtCost_large.Size = new System.Drawing.Size(133, 20);
             this.txtCost_large.TabIndex = 51;
             // 
@@ -12933,6 +13252,7 @@
             this.txtGFF_large.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGFF_large.Location = new System.Drawing.Point(663, 158);
             this.txtGFF_large.Name = "txtGFF_large";
+            this.txtGFF_large.ReadOnly = true;
             this.txtGFF_large.Size = new System.Drawing.Size(133, 20);
             this.txtGFF_large.TabIndex = 50;
             // 
@@ -12941,6 +13261,7 @@
             this.txtOutage_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtOutage_medium.Location = new System.Drawing.Point(523, 209);
             this.txtOutage_medium.Name = "txtOutage_medium";
+            this.txtOutage_medium.ReadOnly = true;
             this.txtOutage_medium.Size = new System.Drawing.Size(133, 20);
             this.txtOutage_medium.TabIndex = 49;
             // 
@@ -12949,6 +13270,7 @@
             this.txtCost_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCost_medium.Location = new System.Drawing.Point(523, 184);
             this.txtCost_medium.Name = "txtCost_medium";
+            this.txtCost_medium.ReadOnly = true;
             this.txtCost_medium.Size = new System.Drawing.Size(133, 20);
             this.txtCost_medium.TabIndex = 40;
             // 
@@ -12957,6 +13279,7 @@
             this.txtGFF_medium.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGFF_medium.Location = new System.Drawing.Point(523, 158);
             this.txtGFF_medium.Name = "txtGFF_medium";
+            this.txtGFF_medium.ReadOnly = true;
             this.txtGFF_medium.Size = new System.Drawing.Size(133, 20);
             this.txtGFF_medium.TabIndex = 39;
             // 
@@ -12965,6 +13288,7 @@
             this.txtOutage_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtOutage_small.Location = new System.Drawing.Point(383, 208);
             this.txtOutage_small.Name = "txtOutage_small";
+            this.txtOutage_small.ReadOnly = true;
             this.txtOutage_small.Size = new System.Drawing.Size(133, 20);
             this.txtOutage_small.TabIndex = 38;
             // 
@@ -12973,6 +13297,7 @@
             this.txtFinancialcomdamage.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFinancialcomdamage.Location = new System.Drawing.Point(383, 233);
             this.txtFinancialcomdamage.Name = "txtFinancialcomdamage";
+            this.txtFinancialcomdamage.ReadOnly = true;
             this.txtFinancialcomdamage.Size = new System.Drawing.Size(133, 20);
             this.txtFinancialcomdamage.TabIndex = 37;
             // 
@@ -12981,6 +13306,7 @@
             this.txtFinancialdamageSurround.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFinancialdamageSurround.Location = new System.Drawing.Point(383, 258);
             this.txtFinancialdamageSurround.Name = "txtFinancialdamageSurround";
+            this.txtFinancialdamageSurround.ReadOnly = true;
             this.txtFinancialdamageSurround.Size = new System.Drawing.Size(133, 20);
             this.txtFinancialdamageSurround.TabIndex = 36;
             // 
@@ -12989,6 +13315,7 @@
             this.txtNoofSurroundingEquip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNoofSurroundingEquip.Location = new System.Drawing.Point(383, 283);
             this.txtNoofSurroundingEquip.Name = "txtNoofSurroundingEquip";
+            this.txtNoofSurroundingEquip.ReadOnly = true;
             this.txtNoofSurroundingEquip.Size = new System.Drawing.Size(133, 20);
             this.txtNoofSurroundingEquip.TabIndex = 35;
             // 
@@ -12997,6 +13324,7 @@
             this.txtFinancialConsequenceLostProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFinancialConsequenceLostProduct.Location = new System.Drawing.Point(383, 308);
             this.txtFinancialConsequenceLostProduct.Name = "txtFinancialConsequenceLostProduct";
+            this.txtFinancialConsequenceLostProduct.ReadOnly = true;
             this.txtFinancialConsequenceLostProduct.Size = new System.Drawing.Size(133, 20);
             this.txtFinancialConsequenceLostProduct.TabIndex = 34;
             // 
@@ -13005,6 +13333,7 @@
             this.txtFinancialConsequenceSerious.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFinancialConsequenceSerious.Location = new System.Drawing.Point(383, 333);
             this.txtFinancialConsequenceSerious.Name = "txtFinancialConsequenceSerious";
+            this.txtFinancialConsequenceSerious.ReadOnly = true;
             this.txtFinancialConsequenceSerious.Size = new System.Drawing.Size(133, 20);
             this.txtFinancialConsequenceSerious.TabIndex = 33;
             // 
@@ -13013,6 +13342,7 @@
             this.txtEnvironmentalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEnvironmentalCost.Location = new System.Drawing.Point(383, 358);
             this.txtEnvironmentalCost.Name = "txtEnvironmentalCost";
+            this.txtEnvironmentalCost.ReadOnly = true;
             this.txtEnvironmentalCost.Size = new System.Drawing.Size(133, 20);
             this.txtEnvironmentalCost.TabIndex = 32;
             // 
@@ -13021,6 +13351,7 @@
             this.txtNoofDowntimeRepairSpecific.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtNoofDowntimeRepairSpecific.Location = new System.Drawing.Point(383, 383);
             this.txtNoofDowntimeRepairSpecific.Name = "txtNoofDowntimeRepairSpecific";
+            this.txtNoofDowntimeRepairSpecific.ReadOnly = true;
             this.txtNoofDowntimeRepairSpecific.Size = new System.Drawing.Size(133, 20);
             this.txtNoofDowntimeRepairSpecific.TabIndex = 31;
             // 
@@ -13029,6 +13360,7 @@
             this.txtCost_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCost_small.Location = new System.Drawing.Point(383, 183);
             this.txtCost_small.Name = "txtCost_small";
+            this.txtCost_small.ReadOnly = true;
             this.txtCost_small.Size = new System.Drawing.Size(133, 20);
             this.txtCost_small.TabIndex = 29;
             // 
@@ -13037,6 +13369,7 @@
             this.txtGFF_small.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtGFF_small.Location = new System.Drawing.Point(383, 157);
             this.txtGFF_small.Name = "txtGFF_small";
+            this.txtGFF_small.ReadOnly = true;
             this.txtGFF_small.Size = new System.Drawing.Size(133, 20);
             this.txtGFF_small.TabIndex = 28;
             // 
@@ -13218,6 +13551,7 @@
             this.txtCoFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCoFC.Location = new System.Drawing.Point(363, 55);
             this.txtCoFC.Name = "txtCoFC";
+            this.txtCoFC.ReadOnly = true;
             this.txtCoFC.Size = new System.Drawing.Size(177, 20);
             this.txtCoFC.TabIndex = 5;
             // 
@@ -13236,6 +13570,7 @@
             this.txtFCoF.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtFCoF.Location = new System.Drawing.Point(363, 31);
             this.txtFCoF.Name = "txtFCoF";
+            this.txtFCoF.ReadOnly = true;
             this.txtFCoF.Size = new System.Drawing.Size(177, 20);
             this.txtFCoF.TabIndex = 3;
             // 

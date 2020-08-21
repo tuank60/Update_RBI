@@ -580,7 +580,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             RW_STREAM st = busst.getData(IDProposal);
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
             float fact_ait = 0;
-            float ait = 273+(float)Math.Round((data[9] - 32) / 1.8, 2);
+            float ait = (float)Math.Round((data[9] - 32) / 1.8, 2);
             if ((STORE_TEMP + (DAL_CAL.GET_TBL_3B21(7))) <= ait)
                 fact_ait = 0;
             else if ((STORE_TEMP - (DAL_CAL.GET_TBL_3B21(7))) >= ait)
@@ -866,6 +866,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
 
         }
+        //public String ca_cmd_flame_cat()
+        //{
+        //    String cat = "";
+
+        //}
         public float ca_inj_flame()
         {
             API_COMPONENT_TYPE obj = GET_DATA_API_COM();

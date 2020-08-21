@@ -196,8 +196,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_COF_FLUID rwcfc = busrwcfc.getData(IDProposal);
             CA_CAL.FLUID = st.TankFluidName;
             CA_CAL_FLA.FLUID_TOXIC = st.ToxicFluidName;
-            String data = DAL_CAL.GET_FLUID_TYPE(CA_CAL.FLUID);
-            String data1 = DAL_CAL.GET_FLUID_TYPE(CA_CAL_FLA.FLUID_TOXIC);
+            String data = String.IsNullOrEmpty(DAL_CAL.GET_FLUID_TYPE(CA_CAL.FLUID)) ? " " : DAL_CAL.GET_FLUID_TYPE(CA_CAL.FLUID);
+            String data1 = String.IsNullOrEmpty(DAL_CAL.GET_FLUID_TYPE(CA_CAL_FLA.FLUID_TOXIC)) ? " " : DAL_CAL.GET_FLUID_TYPE(CA_CAL_FLA.FLUID_TOXIC);
             float[] data3 = DAL_CAL.GET_TBL_52(CA_CAL.FLUID);
             txtACT.Text = api.APIComponentTypeName.ToString();
             txtLL.Text = st.LiquidLevel.ToString();
@@ -209,8 +209,8 @@ namespace RBI.PRE.subForm.OutputDataForm
             txtPhase.Text = st.StoragePhase.ToString();
             txtMOT.Text = st.MaxOperatingTemperature.ToString();
             txtMOP.Text = ((st.MaxOperatingPressure)*1000).ToString();
-            //txtModelFluidType.Text = data.ToString();
-            //txtToxicFluidType.Text = data1.ToString();
+            txtModelFluidType.Text = data.ToString();
+            txtToxicFluidType.Text = data1.ToString();
             txtCp.Text = rwcfc.Cp.ToString();
             txtLiquidDensity.Text = rwcfc.Density.ToString();
             //txtVapourDensity.Text
@@ -1256,7 +1256,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                     CA_CAL_FLA.FLUID == "Methanol" || CA_CAL_FLA.FLUID == "PO" || CA_CAL_FLA.FLUID == "Aromatics" || CA_CAL_FLA.FLUID == "Styrene" || CA_CAL_FLA.FLUID == "EEA" || CA_CAL_FLA.FLUID == "EE" ||
                     CA_CAL_FLA.FLUID == "EG" || CA_CAL_FLA.FLUID == "EO" || CA_CAL_FLA.FLUID == "Pyrophoric" || CA_CAL_FLA.FLUID == "Ammonia" || CA_CAL_FLA.FLUID == "Chlorine")
             {
-                tabControlFlammable.Name = CA_CAL_FLA.FLUID;
+                tabmodel.Text = CA_CAL_FLA.FLUID;
                 txtAContAINLCMD_model.Text = CA_CAL_FLA.a_cmd(1).ToString();
                 txtAContAILCMD_model.Text = CA_CAL_FLA.a_cmd(2).ToString();
                 txtAInstAINLCMD_model.Text = CA_CAL_FLA.a_cmd(3).ToString();
@@ -1347,7 +1347,7 @@ namespace RBI.PRE.subForm.OutputDataForm
 
             else
             {
-                panelFCA.Visible = false;
+                tabmodel.PageVisible = false;
             }
 
 
@@ -1355,7 +1355,7 @@ namespace RBI.PRE.subForm.OutputDataForm
 
             if (CA_CAL_FLA.FLUID_TOXIC == "H2S" || CA_CAL_FLA.FLUID_TOXIC == "CO" || CA_CAL_FLA.FLUID_TOXIC == "PO" || CA_CAL_FLA.FLUID_TOXIC == "EE" || CA_CAL_FLA.FLUID_TOXIC == "EO" || CA_CAL_FLA.FLUID_TOXIC == "Pyrophoric")
             {
-                tabtoxic.Name = CA_CAL_FLA.FLUID_TOXIC;
+                tabtoxic.Text = CA_CAL_FLA.FLUID_TOXIC;
                 txtAContAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(1).ToString();
                 txtAContAILCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(2).ToString();
                 txtAInstAINLCMD_toxic.Text = CA_CAL_FLA.a_cmd_toxic(3).ToString();
@@ -1476,6 +1476,7 @@ namespace RBI.PRE.subForm.OutputDataForm
 
             if (CA_CAL_TOX.FLUID == "HFAcid" || CA_CAL_TOX.FLUID == "H2S" || CA_CAL_TOX.FLUID == "Ammonia" || CA_CAL_TOX.FLUID == "Chlorine")
             {
+                tabToxic1.Text = CA_CAL_TOX.FLUID;
                 txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID, 1).c.ToString();
                 txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID, 2).c.ToString();
                 txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID, 3).c.ToString();
@@ -1501,6 +1502,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             else if (CA_CAL_TOX.FLUID == "AlCl3" || CA_CAL_TOX.FLUID == "CO" || CA_CAL_TOX.FLUID == "HCl" || CA_CAL_TOX.FLUID == "Nitric Acid" ||
                     CA_CAL_TOX.FLUID == "NO2" || CA_CAL_TOX.FLUID == "Phosgene" || CA_CAL_TOX.FLUID == "TDI" || CA_CAL_TOX.FLUID == "EE" || CA_CAL_TOX.FLUID == "EO" || CA_CAL_TOX.FLUID == "PO")
             {
+                tabToxic1.Text = CA_CAL_TOX.FLUID;
                 txtContCSmall_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 1).c.ToString();
                 txtContCMedium_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 2).c.ToString();
                 txtContCLarge_toxic1.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID, 3).c.ToString();
@@ -1529,6 +1531,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             }
             if (CA_CAL_TOX.FLUID_TOXIC == "HFAcid" || CA_CAL_TOX.FLUID_TOXIC == "H2S" || CA_CAL_TOX.FLUID_TOXIC == "Ammonia" || CA_CAL_TOX.FLUID_TOXIC == "Chlorine")
             {
+                tabToxic2.Text = CA_CAL_TOX.FLUID_TOXIC;
                 txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_1, CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
                 txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
                 txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
@@ -1554,6 +1557,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             else if (CA_CAL_TOX.FLUID_TOXIC == "AlCl3" || CA_CAL_TOX.FLUID_TOXIC == "CO" || CA_CAL_TOX.FLUID_TOXIC == "HCl" || CA_CAL_TOX.FLUID_TOXIC == "Nitric Acid" ||
                     CA_CAL_TOX.FLUID_TOXIC == "NO2" || CA_CAL_TOX.FLUID_TOXIC == "Phosgene" || CA_CAL_TOX.FLUID_TOXIC == "TDI" || CA_CAL_TOX.FLUID_TOXIC == "EE" || CA_CAL_TOX.FLUID_TOXIC == "EO" || CA_CAL_TOX.FLUID_TOXIC == "PO")
             {
+                tabToxic2.Text = CA_CAL_TOX.FLUID_TOXIC;
                 txtContCSmall_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 1).c.ToString();
                 txtContCMedium_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 2).c.ToString();
                 txtContCLarge_toxic2.Text = CA_CAL_TOX.getToxic513(CA_CAL_TOX.GET_RELEASE_PHASE(), CA_CAL_TOX.FLUID_TOXIC, 3).c.ToString();
@@ -1603,8 +1607,25 @@ namespace RBI.PRE.subForm.OutputDataForm
             {
                 panelNonTF.Visible = false;
             }
-            txtCA1.Text = CA_CAL_TOX.ca_consequence(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
-            txtCA2.Text = "E";
+            float cdcd_model = float.Parse(String.IsNullOrEmpty(txtFlammableCDCA_model.Text) ? "0" : txtFlammableCDCA_model.Text);
+            float pica_model = float.Parse(String.IsNullOrEmpty(txtFlammablePICA_model.Text) ? "0" : txtFlammablePICA_model.Text);
+            float cdcd_toxic = float.Parse(String.IsNullOrEmpty(txtFlammableCDCA_toxic.Text) ? "0" : txtFlammableCDCA_toxic.Text);
+            float pica_toxic = float.Parse(String.IsNullOrEmpty(txtFlammablePICA_toxic.Text) ? "0" : txtFlammablePICA_toxic.Text);
+            float pica_toxic1 =float.Parse(String.IsNullOrEmpty(txtFlammalbePICA_toxic1.Text) ? "0" : txtFlammalbePICA_toxic1.Text);
+            float pica_toxic2 = float.Parse(String.IsNullOrEmpty(txtFlammalbePICA_toxic2.Text) ? "0" : txtFlammalbePICA_toxic2.Text);
+            float nfnt = float.Parse(String.IsNullOrEmpty(txtNonFlammableNonToxicCon.Text) ? "0" : txtNonFlammableNonToxicCon.Text);
+            float max1 = Math.Max(cdcd_model, pica_model);
+            float max2 = Math.Max(cdcd_toxic, pica_toxic);
+            float max3 = Math.Max(pica_toxic1, pica_toxic2);
+            float max4 = Math.Max(max1, Math.Max(max2, max3));
+            float ca = Math.Max(max4, nfnt);
+            txtCA1.Text = ca.ToString();
+            if (ca <= 9.29) txtCA2.Text = "A";
+            else if (ca > 9.29 && ca <= 92.9) txtCA2.Text = "B";
+            else if (ca > 92.9 && ca <= 929) txtCA2.Text = "C";
+            else if (ca > 929 && ca <= 9290) txtCA2.Text = "D";
+            else if (ca > 9290) txtCA2.Text = "E";
+
         }
         private void tabRisk_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {

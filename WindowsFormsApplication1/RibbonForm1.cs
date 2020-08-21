@@ -2423,108 +2423,108 @@ namespace RBI
             rwci.ID = IDProposal;
             CA_CAL_FLA.IDProposal = IDProposal;
             //hole size area
-            rwfholesize.A1 = CA_CAL.a_n(1);
-            rwfholesize.A2 = CA_CAL.a_n(2);
-            rwfholesize.A3 = CA_CAL.a_n(3);
-            rwfholesize.A4 = CA_CAL.a_n(4);
+            rwfholesize.A1 = float.IsNaN(CA_CAL.a_n(1)) ? 0 : CA_CAL.a_n(1);
+            rwfholesize.A2 = float.IsNaN(CA_CAL.a_n(2)) ? 0 : CA_CAL.a_n(2);
+            rwfholesize.A3 = float.IsNaN(CA_CAL.a_n(3)) ? 0 : CA_CAL.a_n(3);
+            rwfholesize.A4 = float.IsNaN(CA_CAL.a_n(4)) ? 0 : CA_CAL.a_n(4);
 
             //release rate
-            CA_CAL.STORED_PRESSURE = st.MaxOperatingPressure*1000;
+            CA_CAL.STORED_PRESSURE = st.MaxOperatingPressure * 1000;
             CA_CAL.ATMOSPHERIC_PRESSURE = 101.325f;
             CA_CAL.STORED_TEMP = st.MaxOperatingTemperature;
             rwfcf.Cp = CA_CAL.C_P();
-            rwfcf.k=(float)Math.Max((double)(rwfcf.Cp / (rwfcf.Cp - 8.314f)), (double)1.01);
+            rwfcf.k = (float)Math.Max((double)(rwfcf.Cp / (rwfcf.Cp - 8.314f)), (double)1.01);
             CA_CAL.RELEASE_PHASE = CA_CAL.GET_RELEASE_PHASE();
-            rwfholesize.W1 = CA_CAL.W_n(1);
-            rwfholesize.W2 = CA_CAL.W_n(2);
-            rwfholesize.W3 = CA_CAL.W_n(3);
-            rwfholesize.W4 = CA_CAL.W_n(4);
+            rwfholesize.W1 = float.IsNaN(CA_CAL.W_n(1)) ? 0 : CA_CAL.W_n(1);
+            rwfholesize.W2 = float.IsNaN(CA_CAL.W_n(2)) ? 0 : CA_CAL.W_n(2);
+            rwfholesize.W3 = float.IsNaN(CA_CAL.W_n(3)) ? 0 : CA_CAL.W_n(3);
+            rwfholesize.W4 = float.IsNaN(CA_CAL.W_n(4)) ? 0 : CA_CAL.W_n(4);
 
             //GFF
-            rwfholesize.GFF_small = CA_CAL.GFF(1);
-            rwfholesize.GFF_medium = CA_CAL.GFF(2);
-            rwfholesize.GFF_large = CA_CAL.GFF(3);
-            rwfholesize.GFF_rupture = CA_CAL.GFF(4);
-            rwfcf.GFFTotal = (float)( rwfholesize.GFF_small + rwfholesize.GFF_medium + rwfholesize.GFF_large + rwfholesize.GFF_rupture);
+            rwfholesize.GFF_small = float.IsNaN(CA_CAL.GFF(1)) ? 0 : CA_CAL.GFF(1);
+            rwfholesize.GFF_medium = float.IsNaN(CA_CAL.GFF(2)) ? 0 : CA_CAL.GFF(2);
+            rwfholesize.GFF_large = float.IsNaN(CA_CAL.GFF(3)) ? 0 : CA_CAL.GFF(3);
+            rwfholesize.GFF_rupture = float.IsNaN(CA_CAL.GFF(4)) ? 0 : CA_CAL.GFF(4);
+            rwfcf.GFFTotal = (float)(rwfholesize.GFF_small + rwfholesize.GFF_medium + rwfholesize.GFF_large + rwfholesize.GFF_rupture);
             rwfcf.Kv_n = 1;
-            rwfcf.ReleasePhase = CA_CAL.GET_RELEASE_PHASE();
+            rwfcf.ReleasePhase = String.IsNullOrEmpty(CA_CAL.GET_RELEASE_PHASE()) ? " " : CA_CAL.GET_RELEASE_PHASE();
             rwfcf.Cd = 0.9f;
-            rwfcf.Ptrans= (float)Math.Round(101.325f * Math.Pow(((rwfcf.k + 1) / 2), (rwfcf.k / (rwfcf.k - 1))), 5);
-            rwfcf.NBP = (float)((CA_CAL.GET_NBP()-32))/1.8f;
+            rwfcf.Ptrans = (float)Math.Round(101.325f * Math.Pow(((rwfcf.k + 1) / 2), (rwfcf.k / (rwfcf.k - 1))), 5);
+            rwfcf.NBP = (float)((CA_CAL.GET_NBP() - 32)) / 1.8f;
             float[] data = DAL_CAL.GET_TBL_52(CA_CAL.FLUID);
             rwfcf.MW = data[0];
-            rwfcf.Density = data[1]*16.02f;
+            rwfcf.Density = data[1] * 16.02f;
             rwfcf.R = 8.134f;
             rwfcf.Ps = CA_CAL.STORED_PRESSURE;
             rwfcf.Ts = CA_CAL.STORED_TEMP;
             rwfcf.Patm = 101.325f;
-            rwfcf.fact_di = CA_CAL.fact_di();
-            rwfcf.fact_mit = CA_CAL_FLA.fact_mit();
-            rwfcf.fact_AIT = CA_CAL_FLA.fact_ait();
-            rwfcf.ambient = CA_CAL.GET_AMBIENT();
+            rwfcf.fact_di = float.IsNaN(CA_CAL.fact_di()) ? 0 : CA_CAL.fact_di();
+            rwfcf.fact_mit = float.IsNaN(CA_CAL_FLA.fact_mit()) ? 0 : CA_CAL_FLA.fact_mit();
+            rwfcf.fact_AIT = float.IsNaN(CA_CAL_FLA.fact_ait()) ? 0 : CA_CAL_FLA.fact_ait();
+            rwfcf.ambient = String.IsNullOrEmpty(CA_CAL.GET_AMBIENT()) ? " " : CA_CAL.GET_AMBIENT();
             //rwfcf.g = (float)(2696 - (3.1754999999999995f * (590 - 101.325f))) + (1.474f * Math.Pow(0.145f * (590 - 101.325f), 2));
 
             //FLUID INVENTORY AVAIABLE
             CA_CAL.MASS_INVERT = fullcofinput.mass_inv;
             CA_CAL.MASS_COMPONENT = fullcofinput.mass_comp;
-            rwfcf.W_max8 = CA_CAL.W_max8();
-            rwfholesize.mass_add_1 = CA_CAL.mass_addn(1);
-            rwfholesize.mass_add_2 = CA_CAL.mass_addn(2);
-            rwfholesize.mass_add_3 = CA_CAL.mass_addn(3);
-            rwfholesize.mass_add_4 = CA_CAL.mass_addn(4);
+            rwfcf.W_max8 = float.IsNaN(CA_CAL.W_max8()) ? 0 : CA_CAL.W_max8();
+            rwfholesize.mass_add_1 = float.IsNaN(CA_CAL.mass_addn(1)) ? 0 : CA_CAL.mass_addn(1);
+            rwfholesize.mass_add_2 = float.IsNaN(CA_CAL.mass_addn(2)) ? 0 : CA_CAL.mass_addn(2);
+            rwfholesize.mass_add_3 = float.IsNaN(CA_CAL.mass_addn(3)) ? 0 : CA_CAL.mass_addn(3);
+            rwfholesize.mass_add_4 = float.IsNaN(CA_CAL.mass_addn(4)) ? 0 : CA_CAL.mass_addn(4);
 
             //Mass Available
-            rwfholesize.mass_avail_1 = CA_CAL.mass_availn(1);
-            rwfholesize.mass_avail_2 = CA_CAL.mass_availn(2);
-            rwfholesize.mass_avail_3 = CA_CAL.mass_availn(3);
-            rwfholesize.mass_avail_4 = CA_CAL.mass_availn(4);
+            rwfholesize.mass_avail_1 = float.IsNaN(CA_CAL.mass_availn(1)) ? 0 : CA_CAL.mass_availn(1);
+            rwfholesize.mass_avail_2 = float.IsNaN(CA_CAL.mass_availn(2)) ? 0 : CA_CAL.mass_availn(2);
+            rwfholesize.mass_avail_3 = float.IsNaN(CA_CAL.mass_availn(3)) ? 0 : CA_CAL.mass_availn(3);
+            rwfholesize.mass_avail_4 = float.IsNaN(CA_CAL.mass_availn(4)) ? 0 : CA_CAL.mass_availn(4);
 
             //time required to release
-            rwfholesize.t_n1 = CA_CAL.t_n(1);
-            rwfholesize.t_n2 = CA_CAL.t_n(2);
-            rwfholesize.t_n3 = CA_CAL.t_n(3);
-            rwfholesize.t_n4 = CA_CAL.t_n(4);
+            rwfholesize.t_n1 = float.IsNaN(CA_CAL.t_n(1)) ? 0 : CA_CAL.t_n(1);
+            rwfholesize.t_n2 = float.IsNaN(CA_CAL.t_n(2)) ? 0 : CA_CAL.t_n(2);
+            rwfholesize.t_n3 = float.IsNaN(CA_CAL.t_n(2)) ? 0 : CA_CAL.t_n(3);
+            rwfholesize.t_n4 = float.IsNaN(CA_CAL.t_n(3)) ? 0 : CA_CAL.t_n(4);
 
             //Release Type
-            rwfholesize.ReleaseType_1 = CA_CAL.releaseType(1);
-            rwfholesize.ReleaseType_2 = CA_CAL.releaseType(2);
-            rwfholesize.ReleaseType_3 = CA_CAL.releaseType(3);
-            rwfholesize.ReleaseType_4 = CA_CAL.releaseType(4);
+            rwfholesize.ReleaseType_1 = String.IsNullOrEmpty(CA_CAL.releaseType(1)) ? "NotApplicable" : CA_CAL.releaseType(1);
+            rwfholesize.ReleaseType_2 = String.IsNullOrEmpty(CA_CAL.releaseType(2)) ? "NotApplicable" : CA_CAL.releaseType(2);
+            rwfholesize.ReleaseType_3 = String.IsNullOrEmpty(CA_CAL.releaseType(3)) ? "NotApplicable" : CA_CAL.releaseType(3);
+            rwfholesize.ReleaseType_4 = String.IsNullOrEmpty(CA_CAL.releaseType(4)) ? "NotApplicable" : CA_CAL.releaseType(4);
 
             //Max Leak Duration
             CA_CAL.DETECTION_TYPE = fullcofinput.DetectionType;
             CA_CAL.ISULATION_TYPE = fullcofinput.IsolationType;
 
-            rwfcf.fact_di = CA_CAL.fact_di();
-            rwfholesize.ld_max_1 = CA_CAL.ld_n_max(1);
-            rwfholesize.ld_max_2 = CA_CAL.ld_n_max(2);
-            rwfholesize.ld_max_3 = CA_CAL.ld_n_max(3);
-            rwfholesize.ld_max_4 = CA_CAL.ld_n_max(4);
+            rwfcf.fact_di = float.IsNaN(CA_CAL.fact_di()) ? 0 : CA_CAL.fact_di();
+            rwfholesize.ld_max_1 = float.IsNaN(CA_CAL.ld_n_max(1)) ? 0 : CA_CAL.ld_n_max(1);
+            rwfholesize.ld_max_2 = float.IsNaN(CA_CAL.ld_n_max(2)) ? 0 : CA_CAL.ld_n_max(2);
+            rwfholesize.ld_max_3 = float.IsNaN(CA_CAL.ld_n_max(3)) ? 0 : CA_CAL.ld_n_max(3);
+            rwfholesize.ld_max_4 = float.IsNaN(CA_CAL.ld_n_max(4)) ? 0 : CA_CAL.ld_n_max(4);
 
-            rwfholesize.rate_1 = CA_CAL.rate_n(1);
-            rwfholesize.rate_2 = CA_CAL.rate_n(2);
-            rwfholesize.rate_3 = CA_CAL.rate_n(3);
-            rwfholesize.rate_4 = CA_CAL.rate_n(4);
+            rwfholesize.rate_1 = float.IsNaN(CA_CAL.rate_n(1)) ? 0 : CA_CAL.rate_n(1);
+            rwfholesize.rate_2 = float.IsNaN(CA_CAL.rate_n(2)) ? 0 : CA_CAL.rate_n(2);
+            rwfholesize.rate_3 = float.IsNaN(CA_CAL.rate_n(3)) ? 0 : CA_CAL.rate_n(3);
+            rwfholesize.rate_4 = float.IsNaN(CA_CAL.rate_n(4)) ? 0 : CA_CAL.rate_n(4);
 
-            rwfholesize.ld_1 = CA_CAL.ld_n(1);
-            rwfholesize.ld_2 = CA_CAL.ld_n(2);
-            rwfholesize.ld_3 = CA_CAL.ld_n(3);
-            rwfholesize.ld_4 = CA_CAL.ld_n(4);
+            rwfholesize.ld_1 = float.IsNaN(CA_CAL.ld_n(1)) ? 0 : CA_CAL.ld_n(1);
+            rwfholesize.ld_2 = float.IsNaN(CA_CAL.ld_n(2)) ? 0 : CA_CAL.ld_n(2);
+            rwfholesize.ld_3 = float.IsNaN(CA_CAL.ld_n(3)) ? 0 : CA_CAL.ld_n(3);
+            rwfholesize.ld_4 = float.IsNaN(CA_CAL.ld_n(4)) ? 0 : CA_CAL.ld_n(4);
 
-            rwfholesize.mass_1 = CA_CAL.mass_n(1);
-            rwfholesize.mass_2 = CA_CAL.mass_n(2);
-            rwfholesize.mass_3 = CA_CAL.mass_n(3);
-            rwfholesize.mass_4 = CA_CAL.mass_n(4);
+            rwfholesize.mass_1 = float.IsNaN(CA_CAL.mass_n(1)) ? 0 : CA_CAL.mass_n(1);
+            rwfholesize.mass_2 = float.IsNaN(CA_CAL.mass_n(2)) ? 0 : CA_CAL.mass_n(2);
+            rwfholesize.mass_3 = float.IsNaN(CA_CAL.mass_n(3)) ? 0 : CA_CAL.mass_n(3);
+            rwfholesize.mass_4 = float.IsNaN(CA_CAL.mass_n(4)) ? 0 : CA_CAL.mass_n(4);
 
-            rwfholesize.eneff_1 = CA_CAL.eneff_n(1);
-            rwfholesize.eneff_2 = CA_CAL.eneff_n(2);
-            rwfholesize.eneff_3 = CA_CAL.eneff_n(3);
-            rwfholesize.eneff_4 = CA_CAL.eneff_n(4);
+            rwfholesize.eneff_1 = float.IsNaN(CA_CAL.eneff_n(1)) ? 0 : CA_CAL.eneff_n(1);
+            rwfholesize.eneff_2 = float.IsNaN(CA_CAL.eneff_n(2)) ? 0 : CA_CAL.eneff_n(2);
+            rwfholesize.eneff_3 = float.IsNaN(CA_CAL.eneff_n(3)) ? 0 : CA_CAL.eneff_n(3);
+            rwfholesize.eneff_4 = float.IsNaN(CA_CAL.eneff_n(4)) ? 0 : CA_CAL.eneff_n(4);
 
-            rwfholesize.factIC_1 = CA_CAL.fact_n_ic(1);
-            rwfholesize.factIC_2 = CA_CAL.fact_n_ic(2);
-            rwfholesize.factIC_3 = CA_CAL.fact_n_ic(3);
-            rwfholesize.factIC_4 = CA_CAL.fact_n_ic(4);
+            rwfholesize.factIC_1 = float.IsNaN(CA_CAL.fact_n_ic(1)) ? 0 : CA_CAL.fact_n_ic(1);
+            rwfholesize.factIC_2 = float.IsNaN(CA_CAL.fact_n_ic(2)) ? 0 : CA_CAL.fact_n_ic(2);
+            rwfholesize.factIC_3 = float.IsNaN(CA_CAL.fact_n_ic(3)) ? 0 : CA_CAL.fact_n_ic(3);
+            rwfholesize.factIC_4 = float.IsNaN(CA_CAL.fact_n_ic(4)) ? 0 : CA_CAL.fact_n_ic(4);
 
             if (busrwfcf.checkExistCoFFLUID(rwfcf.ID))
                 busrwfcf.edit(rwfcf);
@@ -2552,7 +2552,7 @@ namespace RBI
             //<calculate CA>
             //RW_CA_LEVEL_1 caLvl1 = new RW_CA_LEVEL_1();
             //caLvl1.ID = caInput.ID;
-            
+
             //caLvl1.fact_di = CA_CAL.fact_di();
             //caLvl1.fact_mit = CA_CAL.fact_mit();
             //caLvl1.fact_ait = CA_CAL.fact_ait();
