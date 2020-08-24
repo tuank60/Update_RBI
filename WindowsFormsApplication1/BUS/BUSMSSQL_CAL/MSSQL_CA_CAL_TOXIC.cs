@@ -109,9 +109,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
             }
             else if (n==4)
             {
-                float ld1 = Math.Min(3600, (hole.mass_4 / hole.W4));
-                float ld2 = Math.Min((hole.mass_4 / hole.W4), 60 * hole.ld_max_4);
-                ld = Math.Min(ld1, ld2);
+                double ld1 = (float)Math.Min(3600, Math.Round((hole.mass_4 / hole.W4),5));
+                double ld2 = (float)Math.Min((hole.mass_4 / hole.W4), 60 * hole.ld_max_4);
+                ld = (float)Math.Min(ld1, ld2);
             }
             
             return ld;

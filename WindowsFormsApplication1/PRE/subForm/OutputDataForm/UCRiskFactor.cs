@@ -1578,7 +1578,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 txtToxicCAMedium_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_2, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 2).ToString();
                 txtToxicCALarge_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_3, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 3).ToString();
                 txtToxicCARupture_toxic2.Text = CA_CAL_TOX.ca_injn_tox(hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE(), 4).ToString();
-                txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL.GET_RELEASE_PHASE()).ToString();
+                txtFlammalbePICA_toxic2.Text = CA_CAL_TOX.ca_inj_tox(hole.ReleaseType_1, hole.ReleaseType_2, hole.ReleaseType_3, hole.ReleaseType_4, CA_CAL_TOX.FLUID_TOXIC, CA_CAL_TOX.GET_RELEASE_PHASE()).ToString();
             }
             else
             {

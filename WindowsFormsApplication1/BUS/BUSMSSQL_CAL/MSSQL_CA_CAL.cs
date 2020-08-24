@@ -197,7 +197,6 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float a_n(int i) //done
         {
             float a_n = (float)Math.Round(Math.PI * Math.Pow(d_n(i), 2) / 4, 5);
-
             return a_n;
         }
         public float C_P() //done
@@ -205,8 +204,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
             float[] data = DAL_CAL.GET_TBL_52(FLUID);
 
-            float CP_C2 = (float)Math.Round(Math.Pow((data[6] / (STORED_TEMP+273.15)) / (Math.Sinh(data[6] / (STORED_TEMP+273.15))), 2), 10);
-            float CP_E2 = (float)Math.Round(Math.Pow((data[8] / (STORED_TEMP+273.15)) / (Math.Cosh(data[8] / (STORED_TEMP+273.15))), 2), 10);
+            float CP_C2 = (float)Math.Round(Math.Pow((data[6] / (STORED_TEMP+273.15)) / (Math.Sinh(data[6] / (STORED_TEMP+273.15))), 2), 5);
+            float CP_E2 = (float)Math.Round(Math.Pow((data[8] / (STORED_TEMP+273.15)) / (Math.Cosh(data[8] / (STORED_TEMP+273.15))), 2), 5);
             if (STORED_TEMP != 0)
             {
                 if (data[3] == 1)
@@ -249,18 +248,16 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
                 if (STORED_PRESSURE > p_trans)
                 {
-                    float x = (float)(((k * m_w * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
+                    float x = (float)(((k * m_w * gc) / (R * (STORED_TEMP+273.15))) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
 
-                    float t = (float)Math.Round((((0.931 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
-                    W_n = (float)Math.Round((t / 2),5);
+                    W_n = (float)Math.Round(((0.0009 * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
                     return W_n;
                 }
                 if (STORED_PRESSURE <= p_trans)
                 {
-                    float x = (float)Math.Round((m_w * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
+                    float x = (float)Math.Round((m_w * gc / (R * (STORED_TEMP+273.15))) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
 
-                    float t = (float)Math.Round((((0.931 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
-                    W_n = (float)Math.Round((t / 2), 5);
+                    W_n = (float)Math.Round(((0.0009 * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
                     return W_n;
                 }
                 
@@ -324,16 +321,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
 
                 if (STORED_PRESSURE > p_trans)
                 {
-                    float x = (float)(((k * mw * gc) / (R * STORED_TEMP)) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
-                    float t = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
-                    W_max8 = (float)Math.Round((t / 2), 5);
+                    float x = (float)(((k * mw * gc) / (R * (STORED_TEMP+273.15))) * Math.Pow((2 / (k + 1)), ((k + 1) / (k - 1))));
+                    W_max8 = (float)Math.Round(((0.0009 * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
                     return W_max8;
                 }
                 if (STORED_PRESSURE <= p_trans)
                 {
-                    float x = (float)Math.Round((mw * gc / (R * STORED_TEMP)) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
-                    float t = (float)Math.Round((((0.9 / (DAL_CAL.GET_TBL_3B21(2))) * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
-                    W_max8 = (float)Math.Round((t / 2), 5);
+                    float x = (float)Math.Round((mw * gc / (R * (STORED_TEMP+273.15))) * ((2 * k) / (k - 1)) * Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, 2 / k) * (1 - Math.Pow(ATMOSPHERIC_PRESSURE / STORED_PRESSURE, (k - 1) / k)), 5);
+                    W_max8 = (float)Math.Round(((0.0009 * an) * STORED_PRESSURE) * Math.Sqrt(Math.Abs(x)), 5);
                     return W_max8;
                 }
             }
@@ -406,7 +401,9 @@ namespace RBI.BUS.BUSMSSQL_CAL
         }
         public float ld_n_max(int n)
         {
-            float ld_max = 0;
+            float massavail = mass_availn(n);
+            float rate = rate_n(n);
+            double ld_max = 0;
             float dn = d_n(n);
             if (DETECTION_TYPE == "A" && ISULATION_TYPE == "A")
             {
@@ -417,7 +414,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 5;
                 else
-                    ld_max = 0.00442f;
+                    ld_max = Math.Round((massavail/rate)/60,5);
             }
             else if (DETECTION_TYPE == "A" && ISULATION_TYPE == "B")
             {
@@ -428,7 +425,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 10;
                 else
-                    ld_max = 0.00414f;
+                    ld_max = Math.Round((massavail / rate) / 60, 5);
             }
             else if (DETECTION_TYPE == "A" && ISULATION_TYPE == "C")
             {
@@ -439,7 +436,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.00368f;
+                    ld_max = Math.Round((massavail / rate) / 60, 5);
             }
             else if ((ISULATION_TYPE == "A" || ISULATION_TYPE == "B") && DETECTION_TYPE == "B")
             {
@@ -450,7 +447,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.0039f;
+                    ld_max = Math.Round((massavail / rate) / 60, 5);
             }
             else if (DETECTION_TYPE == "B" && ISULATION_TYPE == "C")
             {
@@ -461,7 +458,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.0039f;
+                    ld_max = Math.Round((massavail / rate) / 60, 5);
             }
             else if (DETECTION_TYPE == "C" && (ISULATION_TYPE == "A" || ISULATION_TYPE == "B" || ISULATION_TYPE == "C"))
             {
@@ -472,11 +469,11 @@ namespace RBI.BUS.BUSMSSQL_CAL
                 else if (dn == 102)
                     ld_max = 20;
                 else
-                    ld_max = 0.00331f;
+                    ld_max = Math.Round((massavail / rate) / 60, 5);
             }
             else
                 ld_max = 0;
-            return ld_max;
+            return (float)ld_max;
         }
         public float rate_n(int n)
         {
@@ -495,7 +492,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
             if (ldmax != 0)
                 return (float)Math.Min(mass_availn(n) / rate_n(n), 60 * ldmax);
             else
-                return (float)(mass_availn(n) / rate_n(n));
+                return (float)Math.Round((mass_availn(n) / rate_n(n)),5);
         }
         public float mass_n(int n)
         {
