@@ -154,6 +154,8 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     frac_evap = 0.8f;
                     break;
                 case "NO2":
+                    frac_evap = 0.75f;
+                    break;
                 case "EE":
                     frac_evap = 0.75f;
                     break;
@@ -170,7 +172,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     frac_evap = 0.45f;
                     break;
                 default:
-                    frac_evap = 0;
+                    frac_evap = 1;
                     break;
             }
             float[] data = DAL_CAL.GET_TBL_52(FLUID);

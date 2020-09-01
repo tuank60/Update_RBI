@@ -50,7 +50,7 @@ namespace RBI.PRE.subForm.OutputDataForm
             addItemDetectionSystem();
             addItemIsolationSystem();
             addItemMitigation();
-            initinput();
+            //initinput();
             initOutputCA();
             //ShowDataOutputCA(ID);
             //initData_Shell(ID);
@@ -343,7 +343,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 tabCAShell.PageVisible = false;
                 tabCATankBottom.PageVisible = false;
                 TabArea.PageVisible = false;
-                tabCAShell.PageVisible = true;
+                tabCAShell.PageVisible = false;
                 tabCATankShell.PageVisible = true;
                 tabCATankRoof.PageVisible = false;
                 initData_InputTank(ID);
@@ -375,6 +375,7 @@ namespace RBI.PRE.subForm.OutputDataForm
                 initData_InputTank(ID);
                 initData_Roof(ID);
                 tabCAnormal.PageVisible = false;
+                //tab.
             }
             else
             {
@@ -382,10 +383,11 @@ namespace RBI.PRE.subForm.OutputDataForm
                 ShowDataOutputCA(ID);
                 tabCATankBottom.PageVisible = false;
                 tabCAShell.PageVisible = false;
-                tabCA.PageVisible = true;
+                tabCA.PageVisible = false;
                 tabCATankShell.PageVisible = false;
                 tabCAnormal.PageVisible = true;
                 tabCATankRoof.PageVisible = false;
+                initinput();
                 initAreabaseCOF(ID);
             }
         }
@@ -1872,6 +1874,11 @@ namespace RBI.PRE.subForm.OutputDataForm
             RW_FULL_COF_TANK_BUS busCA_Tank = new RW_FULL_COF_TANK_BUS();
             busCA_Tank.edit(inputTankBottom);
             MessageBox.Show("Update Input", "Coterk RBI");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

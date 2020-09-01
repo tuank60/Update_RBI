@@ -224,7 +224,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
         public float b_inj(int select)
         {
             float[] data = DAL_CAL.GET_TBL_59(FLUID);
-            float[] b_inj = { 0, 0, 0, 0 };//{ data[1], data[3], data[5], data[7], data[9], data[11], data[13], data[15] };
+            float[] b_inj = { 0, 0, 0, 0 };
             if (GET_RELEASE_PHASE() == "Gas")
             {
                 b_inj[0] = data[1];

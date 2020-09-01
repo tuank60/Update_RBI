@@ -1202,6 +1202,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.xtraUserControl11 = new RBI.XtraUserControl1();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabRisk)).BeginInit();
             this.tabRisk.SuspendLayout();
@@ -1486,7 +1487,7 @@
             // 
             this.tabPoF.Controls.Add(this.Fully);
             this.tabPoF.Name = "tabPoF";
-            this.tabPoF.Size = new System.Drawing.Size(961, 2673);
+            this.tabPoF.Size = new System.Drawing.Size(961, 2675);
             this.tabPoF.Text = "Probability of Failure";
             // 
             // Fully
@@ -1502,6 +1503,7 @@
             // 
             // pnlDamageFactors
             // 
+            this.pnlDamageFactors.Controls.Add(this.button2);
             this.pnlDamageFactors.Controls.Add(this.button1);
             this.pnlDamageFactors.Controls.Add(this.label73);
             this.pnlDamageFactors.Controls.Add(this.txtRLI);
@@ -2227,7 +2229,7 @@
             // 
             this.xtraSemiPoF.Controls.Add(this.groupBox2);
             this.xtraSemiPoF.Name = "xtraSemiPoF";
-            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 2673);
+            this.xtraSemiPoF.Size = new System.Drawing.Size(961, 2675);
             this.xtraSemiPoF.Text = "Semi-Quantitative PoF ";
             // 
             // groupBox2
@@ -2488,7 +2490,7 @@
             this.TabArea.Controls.Add(this.groupBoxIV);
             this.TabArea.Controls.Add(this.groupBox3);
             this.TabArea.Name = "TabArea";
-            this.TabArea.Size = new System.Drawing.Size(961, 2673);
+            this.TabArea.Size = new System.Drawing.Size(961, 2675);
             this.TabArea.Text = "Area-based CoF";
             // 
             // groupBoxIV
@@ -2872,7 +2874,7 @@
             this.tabToxic1.Controls.Add(this.txtContESmall_toxic1);
             this.tabToxic1.Controls.Add(this.txtContCSmall_toxic1);
             this.tabToxic1.Name = "tabToxic1";
-            this.tabToxic1.Size = new System.Drawing.Size(934, 284);
+            this.tabToxic1.Size = new System.Drawing.Size(934, 286);
             this.tabToxic1.Text = "tabToxic1";
             // 
             // label441
@@ -3407,7 +3409,7 @@
             this.tabToxic2.Controls.Add(this.txtContESmall_toxic2);
             this.tabToxic2.Controls.Add(this.txtContCSmall_toxic2);
             this.tabToxic2.Name = "tabToxic2";
-            this.tabToxic2.Size = new System.Drawing.Size(934, 284);
+            this.tabToxic2.Size = new System.Drawing.Size(934, 286);
             this.tabToxic2.Text = "tabToxic2";
             // 
             // label380
@@ -4053,7 +4055,7 @@
             this.tabmodel.Controls.Add(this.txtBlendFactorSmall_model);
             this.tabmodel.Controls.Add(this.txtContINJAINLSmall_model);
             this.tabmodel.Name = "tabmodel";
-            this.tabmodel.Size = new System.Drawing.Size(935, 773);
+            this.tabmodel.Size = new System.Drawing.Size(935, 775);
             this.tabmodel.Text = "tabmodel";
             // 
             // txtFlammablePICA_model
@@ -5376,7 +5378,7 @@
             this.tabtoxic.Controls.Add(this.txtBlendFactorSmall_toxic);
             this.tabtoxic.Controls.Add(this.txtContINJAINLSmall_toxic);
             this.tabtoxic.Name = "tabtoxic";
-            this.tabtoxic.Size = new System.Drawing.Size(935, 773);
+            this.tabtoxic.Size = new System.Drawing.Size(935, 775);
             this.tabtoxic.Text = "tabtoxic";
             // 
             // txtFlammablePICA_toxic
@@ -8142,7 +8144,7 @@
             this.tabCA.Controls.Add(this.groupBox5);
             this.tabCA.Controls.Add(this.groupBox4);
             this.tabCA.Name = "tabCA";
-            this.tabCA.Size = new System.Drawing.Size(961, 2673);
+            this.tabCA.Size = new System.Drawing.Size(961, 2675);
             this.tabCA.Text = "Consequence Area";
             // 
             // groupBox5
@@ -8555,7 +8557,7 @@
             // 
             this.tabCAShell.Controls.Add(this.groupBox7);
             this.tabCAShell.Name = "tabCAShell";
-            this.tabCAShell.Size = new System.Drawing.Size(961, 2673);
+            this.tabCAShell.Size = new System.Drawing.Size(961, 2675);
             this.tabCAShell.Text = "Consequence Area";
             // 
             // groupBox7
@@ -8627,7 +8629,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox7.Location = new System.Drawing.Point(0, 0);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox7.Size = new System.Drawing.Size(961, 2675);
             this.groupBox7.TabIndex = 4;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -9295,7 +9297,7 @@
             // 
             this.tabCATankBottom.Controls.Add(this.groupBox6);
             this.tabCATankBottom.Name = "tabCATankBottom";
-            this.tabCATankBottom.Size = new System.Drawing.Size(961, 2673);
+            this.tabCATankBottom.Size = new System.Drawing.Size(961, 2675);
             this.tabCATankBottom.Text = "Financial COF";
             // 
             // groupBox6
@@ -9308,7 +9310,7 @@
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox6.Location = new System.Drawing.Point(0, 0);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox6.Size = new System.Drawing.Size(961, 2675);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -10284,7 +10286,7 @@
             // 
             this.tabCATankShell.Controls.Add(this.groupBox8);
             this.tabCATankShell.Name = "tabCATankShell";
-            this.tabCATankShell.Size = new System.Drawing.Size(961, 2673);
+            this.tabCATankShell.Size = new System.Drawing.Size(961, 2675);
             this.tabCATankShell.Text = "Financial COF";
             // 
             // groupBox8
@@ -10300,7 +10302,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox8.Location = new System.Drawing.Point(0, 0);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox8.Size = new System.Drawing.Size(961, 2675);
             this.groupBox8.TabIndex = 0;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -12806,7 +12808,7 @@
             // 
             this.tabCATankRoof.Controls.Add(this.groupBox9);
             this.tabCATankRoof.Name = "tabCATankRoof";
-            this.tabCATankRoof.Size = new System.Drawing.Size(961, 2673);
+            this.tabCATankRoof.Size = new System.Drawing.Size(961, 2675);
             this.tabCATankRoof.Text = "Financial COF";
             // 
             // groupBox9
@@ -12817,7 +12819,7 @@
             this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox9.Location = new System.Drawing.Point(0, 0);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(961, 2673);
+            this.groupBox9.Size = new System.Drawing.Size(961, 2675);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Fully-Quantitative Financial Consequence of Failure and Category";
@@ -13093,7 +13095,7 @@
             // 
             this.tabCAnormal.Controls.Add(this.groupBox10);
             this.tabCAnormal.Name = "tabCAnormal";
-            this.tabCAnormal.Size = new System.Drawing.Size(961, 2673);
+            this.tabCAnormal.Size = new System.Drawing.Size(961, 2675);
             this.tabCAnormal.Text = "Financial COF";
             // 
             // groupBox10
@@ -13838,6 +13840,16 @@
             this.xtraUserControl11.Name = "xtraUserControl11";
             this.xtraUserControl11.Size = new System.Drawing.Size(150, 150);
             this.xtraUserControl11.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(627, 54);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 123;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // UCRiskFactor
             // 
@@ -15308,5 +15320,6 @@
         private System.Windows.Forms.Label label422;
         private System.Windows.Forms.Label label495;
         private System.Windows.Forms.Label label496;
+        private System.Windows.Forms.Button button2;
     }
 }
