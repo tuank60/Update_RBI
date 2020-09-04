@@ -10,15 +10,14 @@
 "External Corrosion", done
 "Brittle Fracture", done
 "Vibration-Induced Mechanical Fatigue" done 
+"External Chloride Stress Corrosion Cracking",      done 
+ "Chloride Stress Corrosion Cracking Under Insulation",  done
+"Carbonate Stress Corrosion Cracking", done
+"Chloride Stress Corrosion Cracking", done
 
 chưa có
 "Temper Embrittlement", 
 "885F Embrittlement", 
  "Sigma Phase Embrittlement",                        
- 
-"Carbonate Stress Corrosion Cracking",
-"Chloride Stress Corrosion Cracking", 
 "Corrosion Under Insulation",
-"External Chloride Stress Corrosion Cracking",                               
- "Chloride Stress Corrosion Cracking Under Insulation", 
 "High Temperature Hydrogen Attack",

@@ -13,6 +13,7 @@ using RBI.Object;
 using RBI.BUS.BUSMSSQL_CAL;
 using RBI.DAL.MSSQL_CAL;
 using DevExpress.XtraSplashScreen;
+using RBI.PRE.subForm.OutputDataForm.OutputPOF;
 
 namespace RBI.PRE.subForm.OutputDataForm
 {
@@ -1878,7 +1879,9 @@ namespace RBI.PRE.subForm.OutputDataForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("555");
+            frmDamageFactor frm = new frmDamageFactor();
+            frm.ShowDialog();
         }
     }
 }

@@ -16,5 +16,9 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
         {
             InitializeComponent();
         }
+        public UC_HF_Produced_HIC_SOHIC(int ID)
+        {
+            InitializeComponent();
+        }
     }
 }

@@ -692,17 +692,41 @@
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.Designer.cs">
       <DependentUpon>UCBrittleFracture.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCCarbonateCracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCCarbonateCracking.Designer.cs">
+      <DependentUpon>UCCarbonateCracking.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCCausticCracking.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCCausticCracking.Designer.cs">
       <DependentUpon>UCCausticCracking.cs</DependentUpon>
     </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCChlorideCracking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCChlorideCracking.Designer.cs">
+      <DependentUpon>UCChlorideCracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCLSCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCLSCC.Designer.cs">
+      <DependentUpon>UCExternalCLSCC.cs</DependentUpon>
+    </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.Designer.cs">
       <DependentUpon>UCExternalCorrosion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCUI_CLSCC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCUI_CLSCC.Designer.cs">
+      <DependentUpon>UCExternalCUI_CLSCC.cs</DependentUpon>
     </Compile>
     <Compile Include="PRE\subForm\OutputDataForm\OutputPOF\UCHydrogenStressCracking%28HSC-HF%29.cs">
       <SubType>UserControl</SubType>
@@ -990,11 +1014,23 @@
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCBrittleFracture.resx">
       <DependentUpon>UCBrittleFracture.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCCarbonateCracking.resx">
+      <DependentUpon>UCCarbonateCracking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCCausticCracking.resx">
       <DependentUpon>UCCausticCracking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCChlorideCracking.resx">
+      <DependentUpon>UCChlorideCracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCLSCC.resx">
+      <DependentUpon>UCExternalCLSCC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCorrosion.resx">
       <DependentUpon>UCExternalCorrosion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCExternalCUI_CLSCC.resx">
+      <DependentUpon>UCExternalCUI_CLSCC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRE\subForm\OutputDataForm\OutputPOF\UCHydrogenStressCracking%28HSC-HF%29.resx">
       <DependentUpon>UCHydrogenStressCracking%28HSC-HF%29.cs</DependentUpon>
@@ -1220,22 +1256,22 @@
   <ItemGroup>
     <PublishFile Include="rbi.mdf">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="rbi_log.ldf">
       <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
