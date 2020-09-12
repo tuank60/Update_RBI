@@ -1880,7 +1880,7 @@ namespace RBI.PRE.subForm.OutputDataForm
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show("555");
-            frmDamageFactor frm = new frmDamageFactor();
+            frmDamageFactor frm = new frmDamageFactor(id,"");
             frm.ShowDialog();
         }
     }

@@ -74,47 +74,50 @@
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(36, 9);
+            this.pictureEdit1.Location = new System.Drawing.Point(40, 12);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.InitialImageOptions.Image = global::RBI.Properties.Resources.Icons_Land_Points_Of_Interest_Factory_Yellow;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(71, 62);
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Properties.ZoomPercent = 1D;
+            this.pictureEdit1.Size = new System.Drawing.Size(56, 61);
             this.pictureEdit1.TabIndex = 8;
             // 
             // txtAssName
             // 
-            this.txtAssName.Location = new System.Drawing.Point(711, 62);
+            this.txtAssName.Location = new System.Drawing.Point(618, 62);
             this.txtAssName.Name = "txtAssName";
             this.txtAssName.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.txtAssName.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtAssName.Properties.Appearance.Options.UseBackColor = true;
             this.txtAssName.Properties.Appearance.Options.UseFont = true;
             this.txtAssName.Properties.ReadOnly = true;
-            this.txtAssName.Size = new System.Drawing.Size(100, 22);
+            this.txtAssName.Size = new System.Drawing.Size(193, 22);
             this.txtAssName.TabIndex = 7;
             // 
             // txtCompoNumber
             // 
-            this.txtCompoNumber.Location = new System.Drawing.Point(711, 34);
+            this.txtCompoNumber.Location = new System.Drawing.Point(618, 34);
             this.txtCompoNumber.Name = "txtCompoNumber";
             this.txtCompoNumber.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.txtCompoNumber.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtCompoNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtCompoNumber.Properties.Appearance.Options.UseFont = true;
             this.txtCompoNumber.Properties.ReadOnly = true;
-            this.txtCompoNumber.Size = new System.Drawing.Size(100, 22);
+            this.txtCompoNumber.Size = new System.Drawing.Size(193, 22);
             this.txtCompoNumber.TabIndex = 6;
             // 
             // txtEquipNumber
             // 
-            this.txtEquipNumber.Location = new System.Drawing.Point(711, 6);
+            this.txtEquipNumber.Location = new System.Drawing.Point(618, 6);
             this.txtEquipNumber.Name = "txtEquipNumber";
             this.txtEquipNumber.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
             this.txtEquipNumber.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtEquipNumber.Properties.Appearance.Options.UseBackColor = true;
             this.txtEquipNumber.Properties.Appearance.Options.UseFont = true;
             this.txtEquipNumber.Properties.ReadOnly = true;
-            this.txtEquipNumber.Size = new System.Drawing.Size(100, 22);
+            this.txtEquipNumber.Size = new System.Drawing.Size(193, 22);
             this.txtEquipNumber.TabIndex = 5;
             // 
             // label12
@@ -150,19 +153,20 @@
             // lbSubHeader
             // 
             this.lbSubHeader.AutoSize = true;
-            this.lbSubHeader.Location = new System.Drawing.Point(125, 36);
+            this.lbSubHeader.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.lbSubHeader.Location = new System.Drawing.Point(126, 43);
             this.lbSubHeader.Name = "lbSubHeader";
-            this.lbSubHeader.Size = new System.Drawing.Size(23, 13);
+            this.lbSubHeader.Size = new System.Drawing.Size(24, 17);
             this.lbSubHeader.TabIndex = 1;
             this.lbSubHeader.Text = "....";
             // 
             // lbHeader
             // 
             this.lbHeader.AutoSize = true;
-            this.lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHeader.Location = new System.Drawing.Point(125, 12);
             this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(115, 16);
+            this.lbHeader.Size = new System.Drawing.Size(152, 24);
             this.lbHeader.TabIndex = 0;
             this.lbHeader.Text = "Damage Factor";
             // 
@@ -172,7 +176,7 @@
             this.panel3.Controls.Add(this.btnTemporaryCalculate);
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 422);
+            this.panel3.Location = new System.Drawing.Point(0, 529);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(847, 28);
             this.panel3.TabIndex = 2;
@@ -205,7 +209,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 95);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(847, 327);
+            this.panel2.Size = new System.Drawing.Size(847, 434);
             this.panel2.TabIndex = 3;
             // 
             // flowLayoutPanel1
@@ -214,7 +218,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(847, 327);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(847, 434);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // frmDamageFactor
@@ -222,7 +226,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(847, 450);
+            this.ClientSize = new System.Drawing.Size(847, 557);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

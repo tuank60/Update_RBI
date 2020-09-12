@@ -34,13 +34,17 @@
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.label1 = new System.Windows.Forms.Label();
             this.label295 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label296 = new System.Windows.Forms.Label();
             this.txtCO3 = new DevExpress.XtraEditors.TextEdit();
             this.txtComDate = new DevExpress.XtraEditors.TextEdit();
             this.txtInspecDate = new DevExpress.XtraEditors.TextEdit();
             this.txtHighEffective = new DevExpress.XtraEditors.TextEdit();
+            this.txtPHWT = new DevExpress.XtraEditors.TextEdit();
             this.txtNumInspection = new DevExpress.XtraEditors.TextEdit();
+            this.txtCrack = new DevExpress.XtraEditors.TextEdit();
             this.txtAssDate = new DevExpress.XtraEditors.TextEdit();
             this.txtPH = new DevExpress.XtraEditors.TextEdit();
             this.txtPeridod = new DevExpress.XtraEditors.TextEdit();
@@ -86,7 +90,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtComDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInspecDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHighEffective.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPHWT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumInspection.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCrack.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeridod.Properties)).BeginInit();
@@ -149,13 +155,17 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.Controls.Add(this.label1);
             this.groupControl1.Controls.Add(this.label295);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.label296);
             this.groupControl1.Controls.Add(this.txtCO3);
             this.groupControl1.Controls.Add(this.txtComDate);
             this.groupControl1.Controls.Add(this.txtInspecDate);
             this.groupControl1.Controls.Add(this.txtHighEffective);
+            this.groupControl1.Controls.Add(this.txtPHWT);
             this.groupControl1.Controls.Add(this.txtNumInspection);
+            this.groupControl1.Controls.Add(this.txtCrack);
             this.groupControl1.Controls.Add(this.txtAssDate);
             this.groupControl1.Controls.Add(this.txtPH);
             this.groupControl1.Controls.Add(this.txtPeridod);
@@ -191,6 +201,26 @@
             this.label295.Size = new System.Drawing.Size(130, 15);
             this.label295.TabIndex = 62;
             this.label295.Text = "Number of Inspections";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(16, 289);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "PHWT";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(16, 264);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 15);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Precence of Cracks";
             // 
             // label10
             // 
@@ -256,6 +286,17 @@
             this.txtHighEffective.Size = new System.Drawing.Size(100, 22);
             this.txtHighEffective.TabIndex = 68;
             // 
+            // txtPHWT
+            // 
+            this.txtPHWT.Location = new System.Drawing.Point(211, 288);
+            this.txtPHWT.Name = "txtPHWT";
+            this.txtPHWT.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtPHWT.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtPHWT.Properties.Appearance.Options.UseBackColor = true;
+            this.txtPHWT.Properties.Appearance.Options.UseFont = true;
+            this.txtPHWT.Size = new System.Drawing.Size(100, 22);
+            this.txtPHWT.TabIndex = 60;
+            // 
             // txtNumInspection
             // 
             this.txtNumInspection.Location = new System.Drawing.Point(211, 179);
@@ -266,6 +307,17 @@
             this.txtNumInspection.Properties.Appearance.Options.UseFont = true;
             this.txtNumInspection.Size = new System.Drawing.Size(100, 22);
             this.txtNumInspection.TabIndex = 49;
+            // 
+            // txtCrack
+            // 
+            this.txtCrack.Location = new System.Drawing.Point(211, 263);
+            this.txtCrack.Name = "txtCrack";
+            this.txtCrack.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCrack.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtCrack.Properties.Appearance.Options.UseBackColor = true;
+            this.txtCrack.Properties.Appearance.Options.UseFont = true;
+            this.txtCrack.Size = new System.Drawing.Size(100, 22);
+            this.txtCrack.TabIndex = 60;
             // 
             // txtAssDate
             // 
@@ -666,7 +718,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtComDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtInspecDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHighEffective.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPHWT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumInspection.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCrack.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAssDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPeridod.Properties)).EndInit();
@@ -741,5 +795,9 @@
         private System.Windows.Forms.Label label13;
         private DevExpress.XtraEditors.TextEdit txtSusceptibility;
         private DevExpress.XtraEditors.TextEdit txtSVI;
+        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.TextEdit txtCrack;
+        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.TextEdit txtPHWT;
     }
 }

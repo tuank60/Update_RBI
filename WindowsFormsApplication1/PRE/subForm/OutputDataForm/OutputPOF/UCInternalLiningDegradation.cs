@@ -37,6 +37,7 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
         {
             int IDProposal = ID;
             RW_ASSESSMENT rW_ASSESSMENT = new RW_ASSESSMENT();
+            EQUIPMENT_MASTER_BUS equipmentMasterBus = new EQUIPMENT_MASTER_BUS();
             RW_COATING_BUS coatBus = new RW_COATING_BUS();
             RW_EQUIPMENT_BUS eqBus = new RW_EQUIPMENT_BUS();
             RW_COATING coat = new RW_COATING();
@@ -44,7 +45,7 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
             RW_ASSESSMENT_BUS busAssessment = new RW_ASSESSMENT_BUS();
             RW_INSPECTION_HISTORY_BUS busInspectionHistory = new RW_INSPECTION_HISTORY_BUS();
             //TimeSpan year = busAssessment.getAssessmentDate(IDProposal) - busInspectionHistory.getLastInsp(componentID, DM_ID[1], busEquipmentMaster.getComissionDate(equipmentID));
-            
+            //equipmentMasterBus.getComissionDate(equipmentID)
             int temp = 6;
             txtAssDate.Text = Convert.ToString(busAssessment.getAssessmentDate(IDProposal));
             txtPeriod.Text = Convert.ToString(rW_ASSESSMENT.RiskAnalysisPeriod);

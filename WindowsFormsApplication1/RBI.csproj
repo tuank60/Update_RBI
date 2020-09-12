@@ -263,12 +263,14 @@
     <Compile Include="BUS\BUSMSSQL\USER_PERMISSION_LIST_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_TOXIC.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_UNITS.cs" />
+    <Compile Include="BUS\BUSMSSQL_CAL\CAL_DM_CARBONATE_CRACKING.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\Corrosion_Rate.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL_FINAL.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL_FLAMMABLE.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL_TOXIC.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_DM_CAL.cs" />
+    <Compile Include="BUS\BUSMSSQL_CAL\Table\Table6_3.cs" />
     <Compile Include="BUS\BUSXML\ReadXML.cs" />
     <Compile Include="BUS\sendEmail.cs" />
     <Compile Include="DAL\ExcelConnect.cs" />
@@ -1256,22 +1258,22 @@
   <ItemGroup>
     <PublishFile Include="rbi.mdf">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
     <PublishFile Include="rbi_log.ldf">
       <Visible>False</Visible>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
   </ItemGroup>
