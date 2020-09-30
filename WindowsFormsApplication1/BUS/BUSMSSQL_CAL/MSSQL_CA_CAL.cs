@@ -163,7 +163,7 @@ namespace RBI.BUS.BUSMSSQL_CAL
                     dn = 0;
                 else if (i == 3)
                     dn = 0;
-                else if (i == 4 && PREVENTION_BARRIER)
+                else if (i == 4 )//&& PREVENTION_BARRIER)
                     dn = 250 * TANK_DIAMETER * 0.001f;//doi don vi ra m cho TANK_DIAMETER
                 else
                     dn = 0;
@@ -1282,10 +1282,14 @@ namespace RBI.BUS.BUSMSSQL_CAL
        
 
         //STEP 1: Determine Release Rate and Volum
-        private int n_rh()
+        private int n_rh(int n) //n =1,2,3,4
         {
+            if (n == 4)
+                return 1;
+            else
            //Console.WriteLine("TANK_DIAMETER=" + TANK_DIAMETER + " " + (int)Math.Round(Math.Pow(TANK_DIAMETER / DAL_CAL.GET_TBL_3B21(36), 2), 0));
             return Math.Max((int)Math.Round(Math.Pow(TANK_DIAMETER * 0.001f / DAL_CAL.GET_TBL_3B21(36), 2), 0), 1);
+            //return Math.Max((int)Math.Round(Math.Pow(TANK_DIAMETER * 0.001f / ConversionFactorsForCOF._C36, 2),0), 1);
         }
         private float[] k_h_bottom()
         {
@@ -1354,20 +1358,27 @@ namespace RBI.BUS.BUSMSSQL_CAL
             
              if (k_h_prod() > (ConversionFactorsForCOF._C34 * Math.Pow(d_n(n), 2)))
              {
-                 return (float)(DAL_CAL.GET_TBL_3B21(33) * Math.PI * d_n(n) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh());
+                //return 5;
+                 return (float)(ConversionFactorsForCOF._C33 * Math.PI * d_n(n) * Math.Sqrt(2 * 9.81 * newFLUID_HEIGHT) * n_rh(n));
              }
                 
              else if (k_h_prod() <= (ConversionFactorsForCOF._C37 * Math.Pow(ps, 1 / 0.74)))
              {
-                return (float)(DAL_CAL.GET_TBL_3B21(35) * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh());
+                //return 2;
+                return (float)(ConversionFactorsForCOF._C35 * 0.21 * Math.Pow(d_n(n), 0.2) * Math.Pow(newFLUID_HEIGHT, 0.9) * Math.Pow(k_h_prod(), 0.74) * n_rh(n));
              }
              else
              {
+                //return 3.33f;
                 double m = ConversionFactorsForCOF._C40 - 0.4324 * Math.Log10(d_n(n)) + 0.5405 * Math.Log10(newFLUID_HEIGHT);
+                double d0 = (0.74 * Math.Pow(((ConversionFactorsForCOF._C39 * 2.0 * Math.Log10(d_n(n))) - (Math.Log10(100))/ m), m));
+                double d = ((2.0 * Math.Log10(d_n(n))) + (0.5 * Math.Log10(newFLUID_HEIGHT))) - d0;
+                //return (float)(ConversionFactorsForCOF._C38 * Math.Pow(10, d));
+                
                 //m = m / 3;
-                 ps = (DAL_CAL.GET_TBL_3B21(39) * 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
-                 return ((float)(DAL_CAL.GET_TBL_3B21(38) * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
-                 
+                 ps = (ConversionFactorsForCOF._C39 * 2 * Math.Log10(d_n(n)) - Math.Log10(k_h_prod())) / m;
+                 float test = ((float)(ConversionFactorsForCOF._C38 * Math.Pow(10, 2 * Math.Log10(d_n(n)) + 0.5 * Math.Log10(newFLUID_HEIGHT) - 0.74 * (Math.Pow(ps, m)))));
+                return test;
              }
         }
         public float t_ld_tank_bottom()

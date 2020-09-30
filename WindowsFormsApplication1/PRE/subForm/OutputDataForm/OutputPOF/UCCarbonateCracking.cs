@@ -142,10 +142,5 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
         {
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Calculate();
-        }
     }
 }

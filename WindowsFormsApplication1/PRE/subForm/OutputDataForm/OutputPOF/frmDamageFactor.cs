@@ -20,6 +20,7 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
         private Control uc { get; set; }
         private string _nameUC {get; set;}
         public UCCarbonateCracking test { get; private set; }
+        public UCSulphideStressCracking ucSulphide { get; private set; }
 
         private int _idProposal;
 
