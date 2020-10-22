@@ -19,7 +19,7 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
     {
         private Control uc { get; set; }
         private string _nameUC {get; set;}
-        public UCCarbonateCracking test { get; private set; }
+        public UCCarbonateCracking _ucCarbonate { get; private set; }
         public UCSulphideStressCracking ucSulphide { get; private set; }
 
         private int _idProposal;
@@ -192,7 +192,7 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
                 uc.Parent = flowLayoutPanel1;
                 uc.Show();
                 uc.Dock = DockStyle.Top;
-                test = uc;
+                _ucCarbonate = uc;
             }
             
             //sidePanel1.Controls.Add( new UCInternalLiningDegradation());
@@ -268,7 +268,7 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
             }
             else
             {
-                test.Calculate();
+                _ucCarbonate.Calculate();
                 MessageBox.Show("FAIL");
             }
 

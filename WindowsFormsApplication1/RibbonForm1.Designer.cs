@@ -223,6 +223,7 @@
             this.ribbonPage3});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemMarqueeProgressBar1});
+            this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbon.Size = new System.Drawing.Size(1084, 147);
             this.ribbon.StatusBar = this.ribStatusbar;
             this.ribbon.Click += new System.EventHandler(this.ribbon_Click);

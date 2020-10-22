@@ -16,5 +16,10 @@ namespace RBI.PRE.subForm.OutputDataForm.OutputPOF
         {
             InitializeComponent();
         }
+
+        private void txtToxicReleaseMassD1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

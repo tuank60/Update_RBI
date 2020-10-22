@@ -263,7 +263,9 @@
     <Compile Include="BUS\BUSMSSQL\USER_PERMISSION_LIST_BUS.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_TOXIC.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\BUS_UNITS.cs" />
+    <Compile Include="BUS\BUSMSSQL_CAL\CAL_DM_CAL_AMINE.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\CAL_DM_CARBONATE_CRACKING.cs" />
+    <Compile Include="BUS\BUSMSSQL_CAL\CAL_DM_EXTERN_CUI_CLSCC.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\CAL_DM_SCC_CRACKING.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\Corrosion_Rate.cs" />
     <Compile Include="BUS\BUSMSSQL_CAL\MSSQL_CA_CAL.cs" />

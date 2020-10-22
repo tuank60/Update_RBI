@@ -32,80 +32,80 @@
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
             this.panelRight = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit12 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit35 = new DevExpress.XtraEditors.TextEdit();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtToxicReleaseMassD1 = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.textEdit10 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit34 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.txtDinD1 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit9 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit33 = new DevExpress.XtraEditors.TextEdit();
             this.txtToxicCAD1 = new DevExpress.XtraEditors.TextEdit();
-            this.txtToxicLeakDurationD1 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAssDate = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.txtCinD1 = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             this.label294 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.label295 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label296 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label297 = new System.Windows.Forms.Label();
             this.label298 = new System.Windows.Forms.Label();
             this.panelLeft = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textEdit21 = new DevExpress.XtraEditors.TextEdit();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textEdit22 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit23 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.textEdit32 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit29 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit26 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit20 = new DevExpress.XtraEditors.TextEdit();
             this.label17 = new System.Windows.Forms.Label();
+            this.textEdit31 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit28 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit25 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit19 = new DevExpress.XtraEditors.TextEdit();
             this.label18 = new System.Windows.Forms.Label();
+            this.textEdit30 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit27 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit24 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit15 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit16 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit17 = new DevExpress.XtraEditors.TextEdit();
             this.textEdit18 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit23 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit22 = new DevExpress.XtraEditors.TextEdit();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textEdit21 = new DevExpress.XtraEditors.TextEdit();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit24 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit25 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit26 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit27 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit28 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit29 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit30 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit31 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit32 = new DevExpress.XtraEditors.TextEdit();
-            this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit33 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit34 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit35 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textEdit8 = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             this.splitContainerControl1.SuspendLayout();
@@ -113,49 +113,49 @@
             this.panelRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit35.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit34.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDinD1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit33.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAssDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCinD1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelLeft)).BeginInit();
             this.panelLeft.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit32.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit29.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit26.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit31.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit28.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit30.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit27.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit26.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit27.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit28.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit29.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit30.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit31.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit32.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit33.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit34.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit35.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -218,7 +218,7 @@
             this.groupControl1.Controls.Add(this.textEdit33);
             this.groupControl1.Controls.Add(this.txtToxicCAD1);
             this.groupControl1.Controls.Add(this.textEdit5);
-            this.groupControl1.Controls.Add(this.txtToxicLeakDurationD1);
+            this.groupControl1.Controls.Add(this.txtAssDate);
             this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.txtCinD1);
             this.groupControl1.Controls.Add(this.label12);
@@ -242,6 +242,26 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Assessment Data Input";
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label11.Location = new System.Drawing.Point(16, 494);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(172, 15);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Minimum Required Thickness";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(16, 550);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(162, 30);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Maintenance in Accordance \r\nwith API STD 653";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -261,6 +281,17 @@
             this.label2.Size = new System.Drawing.Size(119, 15);
             this.label2.TabIndex = 37;
             this.label2.Text = "Corrosion Allowance";
+            // 
+            // textEdit8
+            // 
+            this.textEdit8.Location = new System.Drawing.Point(253, 522);
+            this.textEdit8.Name = "textEdit8";
+            this.textEdit8.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit8.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit8.Properties.Appearance.Options.UseFont = true;
+            this.textEdit8.Size = new System.Drawing.Size(100, 22);
+            this.textEdit8.TabIndex = 36;
             // 
             // textEdit12
             // 
@@ -284,6 +315,27 @@
             this.textEdit7.Size = new System.Drawing.Size(100, 22);
             this.textEdit7.TabIndex = 36;
             // 
+            // textEdit35
+            // 
+            this.textEdit35.Location = new System.Drawing.Point(253, 204);
+            this.textEdit35.Name = "textEdit35";
+            this.textEdit35.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit35.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit35.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit35.Properties.Appearance.Options.UseFont = true;
+            this.textEdit35.Size = new System.Drawing.Size(100, 22);
+            this.textEdit35.TabIndex = 36;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(16, 522);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 15);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Structural Thickness";
+            // 
             // txtToxicReleaseMassD1
             // 
             this.txtToxicReleaseMassD1.Location = new System.Drawing.Point(253, 59);
@@ -294,6 +346,7 @@
             this.txtToxicReleaseMassD1.Properties.Appearance.Options.UseFont = true;
             this.txtToxicReleaseMassD1.Size = new System.Drawing.Size(100, 22);
             this.txtToxicReleaseMassD1.TabIndex = 36;
+            this.txtToxicReleaseMassD1.EditValueChanged += new System.EventHandler(this.txtToxicReleaseMassD1_EditValueChanged);
             // 
             // label7
             // 
@@ -315,6 +368,28 @@
             this.textEdit10.Properties.Appearance.Options.UseFont = true;
             this.textEdit10.Size = new System.Drawing.Size(201, 22);
             this.textEdit10.TabIndex = 40;
+            // 
+            // textEdit34
+            // 
+            this.textEdit34.Location = new System.Drawing.Point(253, 260);
+            this.textEdit34.Name = "textEdit34";
+            this.textEdit34.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit34.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit34.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit34.Properties.Appearance.Options.UseFont = true;
+            this.textEdit34.Size = new System.Drawing.Size(100, 22);
+            this.textEdit34.TabIndex = 40;
+            // 
+            // textEdit6
+            // 
+            this.textEdit6.Location = new System.Drawing.Point(253, 550);
+            this.textEdit6.Name = "textEdit6";
+            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit6.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit6.Properties.Appearance.Options.UseFont = true;
+            this.textEdit6.Size = new System.Drawing.Size(100, 22);
+            this.textEdit6.TabIndex = 38;
             // 
             // txtDinD1
             // 
@@ -338,6 +413,17 @@
             this.textEdit2.Size = new System.Drawing.Size(100, 22);
             this.textEdit2.TabIndex = 38;
             // 
+            // textEdit3
+            // 
+            this.textEdit3.Location = new System.Drawing.Point(253, 494);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit3.Properties.Appearance.Options.UseFont = true;
+            this.textEdit3.Size = new System.Drawing.Size(100, 22);
+            this.textEdit3.TabIndex = 34;
+            // 
             // textEdit9
             // 
             this.textEdit9.Location = new System.Drawing.Point(152, 356);
@@ -360,6 +446,17 @@
             this.textEdit4.Size = new System.Drawing.Size(100, 22);
             this.textEdit4.TabIndex = 34;
             // 
+            // textEdit33
+            // 
+            this.textEdit33.Location = new System.Drawing.Point(253, 291);
+            this.textEdit33.Name = "textEdit33";
+            this.textEdit33.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit33.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit33.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit33.Properties.Appearance.Options.UseFont = true;
+            this.textEdit33.Size = new System.Drawing.Size(100, 22);
+            this.textEdit33.TabIndex = 42;
+            // 
             // txtToxicCAD1
             // 
             this.txtToxicCAD1.Location = new System.Drawing.Point(253, 146);
@@ -371,16 +468,38 @@
             this.txtToxicCAD1.Size = new System.Drawing.Size(100, 22);
             this.txtToxicCAD1.TabIndex = 42;
             // 
-            // txtToxicLeakDurationD1
+            // textEdit5
             // 
-            this.txtToxicLeakDurationD1.Location = new System.Drawing.Point(253, 31);
-            this.txtToxicLeakDurationD1.Name = "txtToxicLeakDurationD1";
-            this.txtToxicLeakDurationD1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.txtToxicLeakDurationD1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtToxicLeakDurationD1.Properties.Appearance.Options.UseBackColor = true;
-            this.txtToxicLeakDurationD1.Properties.Appearance.Options.UseFont = true;
-            this.txtToxicLeakDurationD1.Size = new System.Drawing.Size(100, 22);
-            this.txtToxicLeakDurationD1.TabIndex = 34;
+            this.textEdit5.Location = new System.Drawing.Point(253, 176);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit5.Properties.Appearance.Options.UseFont = true;
+            this.textEdit5.Size = new System.Drawing.Size(100, 22);
+            this.textEdit5.TabIndex = 34;
+            // 
+            // txtAssDate
+            // 
+            this.txtAssDate.Location = new System.Drawing.Point(253, 27);
+            this.txtAssDate.Name = "txtAssDate";
+            this.txtAssDate.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.txtAssDate.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtAssDate.Properties.Appearance.Options.UseBackColor = true;
+            this.txtAssDate.Properties.Appearance.Options.UseFont = true;
+            this.txtAssDate.Size = new System.Drawing.Size(100, 22);
+            this.txtAssDate.TabIndex = 34;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(253, 232);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Size = new System.Drawing.Size(100, 22);
+            this.textEdit1.TabIndex = 38;
             // 
             // txtCinD1
             // 
@@ -403,6 +522,16 @@
             this.label12.TabIndex = 43;
             this.label12.Text = "Commission Date";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label31.Location = new System.Drawing.Point(16, 207);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(132, 15);
+            this.label31.TabIndex = 35;
+            this.label31.Text = "Current Corrosion Rate";
+            // 
             // label294
             // 
             this.label294.AutoSize = true;
@@ -422,6 +551,16 @@
             this.label10.Size = new System.Drawing.Size(130, 15);
             this.label10.TabIndex = 39;
             this.label10.Text = "Adjustment Settlement";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label30.Location = new System.Drawing.Point(16, 263);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(116, 15);
+            this.label30.TabIndex = 39;
+            this.label30.Text = "Welded Component";
             // 
             // label295
             // 
@@ -452,6 +591,16 @@
             this.label3.Size = new System.Drawing.Size(0, 15);
             this.label3.TabIndex = 41;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label15.Location = new System.Drawing.Point(16, 291);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(231, 15);
+            this.label15.TabIndex = 41;
+            this.label15.Text = "Level of Confidence in Corrosion Sources";
+            // 
             // label296
             // 
             this.label296.AutoSize = true;
@@ -461,6 +610,26 @@
             this.label296.Size = new System.Drawing.Size(132, 15);
             this.label296.TabIndex = 41;
             this.label296.Text = "Current Corrosion Rate";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(16, 179);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 15);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Minimum Measured Thickness";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(16, 235);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 15);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Minimum Structural Thickness Governs";
             // 
             // label297
             // 
@@ -491,6 +660,99 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(495, 600);
             this.panelLeft.TabIndex = 0;
+            // 
+            // groupControl3
+            // 
+            this.groupControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.groupControl3.Appearance.Options.UseFont = true;
+            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.groupControl3.AppearanceCaption.Options.UseFont = true;
+            this.groupControl3.Controls.Add(this.label25);
+            this.groupControl3.Controls.Add(this.label22);
+            this.groupControl3.Controls.Add(this.label24);
+            this.groupControl3.Controls.Add(this.textEdit21);
+            this.groupControl3.Controls.Add(this.label23);
+            this.groupControl3.Controls.Add(this.textEdit22);
+            this.groupControl3.Controls.Add(this.textEdit23);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupControl3.Location = new System.Drawing.Point(2, 344);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(491, 149);
+            this.groupControl3.TabIndex = 1;
+            this.groupControl3.Text = "Damage Factor";
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Gray;
+            this.label25.Location = new System.Drawing.Point(248, 56);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(101, 27);
+            this.label25.TabIndex = 41;
+            this.label25.Text = "months";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label22.Location = new System.Drawing.Point(14, 26);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(144, 15);
+            this.label22.TabIndex = 39;
+            this.label22.Text = "Thinning Damage Facror";
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Gray;
+            this.label24.Location = new System.Drawing.Point(139, 56);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(101, 27);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "months";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textEdit21
+            // 
+            this.textEdit21.Location = new System.Drawing.Point(33, 86);
+            this.textEdit21.Name = "textEdit21";
+            this.textEdit21.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit21.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit21.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit21.Properties.Appearance.Options.UseFont = true;
+            this.textEdit21.Size = new System.Drawing.Size(100, 22);
+            this.textEdit21.TabIndex = 40;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.Gray;
+            this.label23.Location = new System.Drawing.Point(32, 56);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(101, 27);
+            this.label23.TabIndex = 41;
+            this.label23.Text = "months";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textEdit22
+            // 
+            this.textEdit22.Location = new System.Drawing.Point(140, 86);
+            this.textEdit22.Name = "textEdit22";
+            this.textEdit22.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit22.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit22.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit22.Properties.Appearance.Options.UseFont = true;
+            this.textEdit22.Size = new System.Drawing.Size(100, 22);
+            this.textEdit22.TabIndex = 40;
+            // 
+            // textEdit23
+            // 
+            this.textEdit23.Location = new System.Drawing.Point(249, 86);
+            this.textEdit23.Name = "textEdit23";
+            this.textEdit23.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit23.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit23.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit23.Properties.Appearance.Options.UseFont = true;
+            this.textEdit23.Size = new System.Drawing.Size(100, 22);
+            this.textEdit23.TabIndex = 40;
             // 
             // groupControl2
             // 
@@ -570,6 +832,39 @@
             this.label16.TabIndex = 33;
             this.label16.Text = "Damage Factor Adjustment \r\nfor Injection Points";
             // 
+            // textEdit32
+            // 
+            this.textEdit32.Location = new System.Drawing.Point(385, 293);
+            this.textEdit32.Name = "textEdit32";
+            this.textEdit32.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit32.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit32.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit32.Properties.Appearance.Options.UseFont = true;
+            this.textEdit32.Size = new System.Drawing.Size(100, 22);
+            this.textEdit32.TabIndex = 40;
+            // 
+            // textEdit29
+            // 
+            this.textEdit29.Location = new System.Drawing.Point(385, 265);
+            this.textEdit29.Name = "textEdit29";
+            this.textEdit29.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit29.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit29.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit29.Properties.Appearance.Options.UseFont = true;
+            this.textEdit29.Size = new System.Drawing.Size(100, 22);
+            this.textEdit29.TabIndex = 40;
+            // 
+            // textEdit26
+            // 
+            this.textEdit26.Location = new System.Drawing.Point(385, 237);
+            this.textEdit26.Name = "textEdit26";
+            this.textEdit26.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit26.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit26.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit26.Properties.Appearance.Options.UseFont = true;
+            this.textEdit26.Size = new System.Drawing.Size(100, 22);
+            this.textEdit26.TabIndex = 40;
+            // 
             // textEdit20
             // 
             this.textEdit20.Location = new System.Drawing.Point(385, 209);
@@ -591,6 +886,39 @@
             this.label17.TabIndex = 39;
             this.label17.Text = "Damage Factor Adjustment \r\nfor online Monitoring";
             // 
+            // textEdit31
+            // 
+            this.textEdit31.Location = new System.Drawing.Point(285, 293);
+            this.textEdit31.Name = "textEdit31";
+            this.textEdit31.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit31.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit31.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit31.Properties.Appearance.Options.UseFont = true;
+            this.textEdit31.Size = new System.Drawing.Size(100, 22);
+            this.textEdit31.TabIndex = 40;
+            // 
+            // textEdit28
+            // 
+            this.textEdit28.Location = new System.Drawing.Point(285, 265);
+            this.textEdit28.Name = "textEdit28";
+            this.textEdit28.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit28.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit28.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit28.Properties.Appearance.Options.UseFont = true;
+            this.textEdit28.Size = new System.Drawing.Size(100, 22);
+            this.textEdit28.TabIndex = 40;
+            // 
+            // textEdit25
+            // 
+            this.textEdit25.Location = new System.Drawing.Point(285, 237);
+            this.textEdit25.Name = "textEdit25";
+            this.textEdit25.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit25.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit25.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit25.Properties.Appearance.Options.UseFont = true;
+            this.textEdit25.Size = new System.Drawing.Size(100, 22);
+            this.textEdit25.TabIndex = 40;
+            // 
             // textEdit19
             // 
             this.textEdit19.Location = new System.Drawing.Point(285, 209);
@@ -611,6 +939,39 @@
             this.label18.Size = new System.Drawing.Size(159, 30);
             this.label18.TabIndex = 35;
             this.label18.Text = "Damage Factor Adjustment \r\nfor Dead Legs";
+            // 
+            // textEdit30
+            // 
+            this.textEdit30.Location = new System.Drawing.Point(188, 293);
+            this.textEdit30.Name = "textEdit30";
+            this.textEdit30.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit30.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit30.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit30.Properties.Appearance.Options.UseFont = true;
+            this.textEdit30.Size = new System.Drawing.Size(100, 22);
+            this.textEdit30.TabIndex = 40;
+            // 
+            // textEdit27
+            // 
+            this.textEdit27.Location = new System.Drawing.Point(188, 265);
+            this.textEdit27.Name = "textEdit27";
+            this.textEdit27.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit27.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit27.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit27.Properties.Appearance.Options.UseFont = true;
+            this.textEdit27.Size = new System.Drawing.Size(100, 22);
+            this.textEdit27.TabIndex = 40;
+            // 
+            // textEdit24
+            // 
+            this.textEdit24.Location = new System.Drawing.Point(188, 237);
+            this.textEdit24.Name = "textEdit24";
+            this.textEdit24.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
+            this.textEdit24.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textEdit24.Properties.Appearance.Options.UseBackColor = true;
+            this.textEdit24.Properties.Appearance.Options.UseFont = true;
+            this.textEdit24.Size = new System.Drawing.Size(100, 22);
+            this.textEdit24.TabIndex = 40;
             // 
             // textEdit15
             // 
@@ -656,197 +1017,15 @@
             this.textEdit18.Size = new System.Drawing.Size(100, 22);
             this.textEdit18.TabIndex = 36;
             // 
-            // textEdit23
+            // label27
             // 
-            this.textEdit23.Location = new System.Drawing.Point(249, 86);
-            this.textEdit23.Name = "textEdit23";
-            this.textEdit23.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit23.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit23.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit23.Properties.Appearance.Options.UseFont = true;
-            this.textEdit23.Size = new System.Drawing.Size(100, 22);
-            this.textEdit23.TabIndex = 40;
-            // 
-            // textEdit22
-            // 
-            this.textEdit22.Location = new System.Drawing.Point(140, 86);
-            this.textEdit22.Name = "textEdit22";
-            this.textEdit22.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit22.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit22.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit22.Properties.Appearance.Options.UseFont = true;
-            this.textEdit22.Size = new System.Drawing.Size(100, 22);
-            this.textEdit22.TabIndex = 40;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.Gray;
-            this.label23.Location = new System.Drawing.Point(32, 56);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(101, 27);
-            this.label23.TabIndex = 41;
-            this.label23.Text = "months";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textEdit21
-            // 
-            this.textEdit21.Location = new System.Drawing.Point(33, 86);
-            this.textEdit21.Name = "textEdit21";
-            this.textEdit21.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit21.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit21.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit21.Properties.Appearance.Options.UseFont = true;
-            this.textEdit21.Size = new System.Drawing.Size(100, 22);
-            this.textEdit21.TabIndex = 40;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.Gray;
-            this.label24.Location = new System.Drawing.Point(139, 56);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(101, 27);
-            this.label24.TabIndex = 41;
-            this.label24.Text = "months";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label22.Location = new System.Drawing.Point(14, 26);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(144, 15);
-            this.label22.TabIndex = 39;
-            this.label22.Text = "Thinning Damage Facror";
-            // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.Color.Gray;
-            this.label25.Location = new System.Drawing.Point(248, 56);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(101, 27);
-            this.label25.TabIndex = 41;
-            this.label25.Text = "months";
-            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupControl3
-            // 
-            this.groupControl3.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.groupControl3.Appearance.Options.UseFont = true;
-            this.groupControl3.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.groupControl3.AppearanceCaption.Options.UseFont = true;
-            this.groupControl3.Controls.Add(this.label25);
-            this.groupControl3.Controls.Add(this.label22);
-            this.groupControl3.Controls.Add(this.label24);
-            this.groupControl3.Controls.Add(this.textEdit21);
-            this.groupControl3.Controls.Add(this.label23);
-            this.groupControl3.Controls.Add(this.textEdit22);
-            this.groupControl3.Controls.Add(this.textEdit23);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupControl3.Location = new System.Drawing.Point(2, 344);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(491, 149);
-            this.groupControl3.TabIndex = 1;
-            this.groupControl3.Text = "Damage Factor";
-            // 
-            // textEdit24
-            // 
-            this.textEdit24.Location = new System.Drawing.Point(188, 237);
-            this.textEdit24.Name = "textEdit24";
-            this.textEdit24.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit24.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit24.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit24.Properties.Appearance.Options.UseFont = true;
-            this.textEdit24.Size = new System.Drawing.Size(100, 22);
-            this.textEdit24.TabIndex = 40;
-            // 
-            // textEdit25
-            // 
-            this.textEdit25.Location = new System.Drawing.Point(285, 237);
-            this.textEdit25.Name = "textEdit25";
-            this.textEdit25.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit25.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit25.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit25.Properties.Appearance.Options.UseFont = true;
-            this.textEdit25.Size = new System.Drawing.Size(100, 22);
-            this.textEdit25.TabIndex = 40;
-            // 
-            // textEdit26
-            // 
-            this.textEdit26.Location = new System.Drawing.Point(385, 237);
-            this.textEdit26.Name = "textEdit26";
-            this.textEdit26.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit26.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit26.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit26.Properties.Appearance.Options.UseFont = true;
-            this.textEdit26.Size = new System.Drawing.Size(100, 22);
-            this.textEdit26.TabIndex = 40;
-            // 
-            // textEdit27
-            // 
-            this.textEdit27.Location = new System.Drawing.Point(188, 265);
-            this.textEdit27.Name = "textEdit27";
-            this.textEdit27.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit27.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit27.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit27.Properties.Appearance.Options.UseFont = true;
-            this.textEdit27.Size = new System.Drawing.Size(100, 22);
-            this.textEdit27.TabIndex = 40;
-            // 
-            // textEdit28
-            // 
-            this.textEdit28.Location = new System.Drawing.Point(285, 265);
-            this.textEdit28.Name = "textEdit28";
-            this.textEdit28.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit28.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit28.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit28.Properties.Appearance.Options.UseFont = true;
-            this.textEdit28.Size = new System.Drawing.Size(100, 22);
-            this.textEdit28.TabIndex = 40;
-            // 
-            // textEdit29
-            // 
-            this.textEdit29.Location = new System.Drawing.Point(385, 265);
-            this.textEdit29.Name = "textEdit29";
-            this.textEdit29.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit29.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit29.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit29.Properties.Appearance.Options.UseFont = true;
-            this.textEdit29.Size = new System.Drawing.Size(100, 22);
-            this.textEdit29.TabIndex = 40;
-            // 
-            // textEdit30
-            // 
-            this.textEdit30.Location = new System.Drawing.Point(188, 293);
-            this.textEdit30.Name = "textEdit30";
-            this.textEdit30.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit30.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit30.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit30.Properties.Appearance.Options.UseFont = true;
-            this.textEdit30.Size = new System.Drawing.Size(100, 22);
-            this.textEdit30.TabIndex = 40;
-            // 
-            // textEdit31
-            // 
-            this.textEdit31.Location = new System.Drawing.Point(285, 293);
-            this.textEdit31.Name = "textEdit31";
-            this.textEdit31.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit31.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit31.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit31.Properties.Appearance.Options.UseFont = true;
-            this.textEdit31.Size = new System.Drawing.Size(100, 22);
-            this.textEdit31.TabIndex = 40;
-            // 
-            // textEdit32
-            // 
-            this.textEdit32.Location = new System.Drawing.Point(385, 293);
-            this.textEdit32.Name = "textEdit32";
-            this.textEdit32.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit32.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit32.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit32.Properties.Appearance.Options.UseFont = true;
-            this.textEdit32.Size = new System.Drawing.Size(100, 22);
-            this.textEdit32.TabIndex = 40;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label27.Location = new System.Drawing.Point(3, 212);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(121, 15);
+            this.label27.TabIndex = 33;
+            this.label27.Text = "Years in Service, Age";
             // 
             // label26
             // 
@@ -857,16 +1036,6 @@
             this.label26.Size = new System.Drawing.Size(114, 15);
             this.label26.TabIndex = 37;
             this.label26.Text = "Wall Loss Franction";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label27.Location = new System.Drawing.Point(3, 212);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(121, 15);
-            this.label27.TabIndex = 33;
-            this.label27.Text = "Years in Service, Age";
             // 
             // label28
             // 
@@ -888,174 +1057,6 @@
             this.label29.TabIndex = 35;
             this.label29.Text = "Years Since Last Inspection";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(16, 235);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 15);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Minimum Structural Thickness Governs";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(16, 179);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 15);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Minimum Measured Thickness";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label15.Location = new System.Drawing.Point(16, 291);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(231, 15);
-            this.label15.TabIndex = 41;
-            this.label15.Text = "Level of Confidence in Corrosion Sources";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label30.Location = new System.Drawing.Point(16, 263);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(116, 15);
-            this.label30.TabIndex = 39;
-            this.label30.Text = "Welded Component";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label31.Location = new System.Drawing.Point(16, 207);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(132, 15);
-            this.label31.TabIndex = 35;
-            this.label31.Text = "Current Corrosion Rate";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(253, 232);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(100, 22);
-            this.textEdit1.TabIndex = 38;
-            // 
-            // textEdit5
-            // 
-            this.textEdit5.Location = new System.Drawing.Point(253, 176);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit5.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit5.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit5.Properties.Appearance.Options.UseFont = true;
-            this.textEdit5.Size = new System.Drawing.Size(100, 22);
-            this.textEdit5.TabIndex = 34;
-            // 
-            // textEdit33
-            // 
-            this.textEdit33.Location = new System.Drawing.Point(253, 291);
-            this.textEdit33.Name = "textEdit33";
-            this.textEdit33.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit33.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit33.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit33.Properties.Appearance.Options.UseFont = true;
-            this.textEdit33.Size = new System.Drawing.Size(100, 22);
-            this.textEdit33.TabIndex = 42;
-            // 
-            // textEdit34
-            // 
-            this.textEdit34.Location = new System.Drawing.Point(253, 260);
-            this.textEdit34.Name = "textEdit34";
-            this.textEdit34.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit34.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit34.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit34.Properties.Appearance.Options.UseFont = true;
-            this.textEdit34.Size = new System.Drawing.Size(100, 22);
-            this.textEdit34.TabIndex = 40;
-            // 
-            // textEdit35
-            // 
-            this.textEdit35.Location = new System.Drawing.Point(253, 204);
-            this.textEdit35.Name = "textEdit35";
-            this.textEdit35.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit35.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit35.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit35.Properties.Appearance.Options.UseFont = true;
-            this.textEdit35.Size = new System.Drawing.Size(100, 22);
-            this.textEdit35.TabIndex = 36;
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Location = new System.Drawing.Point(253, 494);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit3.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(100, 22);
-            this.textEdit3.TabIndex = 34;
-            // 
-            // textEdit6
-            // 
-            this.textEdit6.Location = new System.Drawing.Point(253, 550);
-            this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit6.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit6.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit6.Properties.Appearance.Options.UseFont = true;
-            this.textEdit6.Size = new System.Drawing.Size(100, 22);
-            this.textEdit6.TabIndex = 38;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(16, 522);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 15);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Structural Thickness";
-            // 
-            // textEdit8
-            // 
-            this.textEdit8.Location = new System.Drawing.Point(253, 522);
-            this.textEdit8.Name = "textEdit8";
-            this.textEdit8.Properties.Appearance.BackColor = System.Drawing.SystemColors.Control;
-            this.textEdit8.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textEdit8.Properties.Appearance.Options.UseBackColor = true;
-            this.textEdit8.Properties.Appearance.Options.UseFont = true;
-            this.textEdit8.Size = new System.Drawing.Size(100, 22);
-            this.textEdit8.TabIndex = 36;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(16, 550);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 30);
-            this.label8.TabIndex = 37;
-            this.label8.Text = "Maintenance in Accordance \r\nwith API STD 653";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label11.Location = new System.Drawing.Point(16, 494);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(172, 15);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Minimum Required Thickness";
-            // 
             // UCInternalThinning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1071,51 +1072,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit12.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit35.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToxicReleaseMassD1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit34.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDinD1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit9.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit33.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtToxicCAD1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtToxicLeakDurationD1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAssDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCinD1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelLeft)).EndInit();
             this.panelLeft.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            this.groupControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit32.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit29.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit26.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit20.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit31.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit28.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit19.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit30.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit27.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit15.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit16.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit17.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit18.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit23.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit22.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit21.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            this.groupControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit24.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit25.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit26.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit27.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit28.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit29.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit30.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit31.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit32.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit33.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit34.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit35.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit8.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1130,7 +1131,7 @@
         private DevExpress.XtraEditors.TextEdit txtToxicReleaseMassD1;
         private DevExpress.XtraEditors.TextEdit txtDinD1;
         private DevExpress.XtraEditors.TextEdit txtToxicCAD1;
-        private DevExpress.XtraEditors.TextEdit txtToxicLeakDurationD1;
+        private DevExpress.XtraEditors.TextEdit txtAssDate;
         private DevExpress.XtraEditors.TextEdit txtCinD1;
         private System.Windows.Forms.Label label294;
         private System.Windows.Forms.Label label295;
